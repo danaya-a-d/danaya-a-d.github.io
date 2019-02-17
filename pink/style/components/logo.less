@@ -1,0 +1,30 @@
+.logo {
+  &--mobile {
+    display: block;
+  }
+  &--tablet, &--desktop {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .logo {
+    &--mobile, &--desktop {
+      display: none;
+    }
+    &--tablet {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .logo {
+    &--mobile, &--tablet {
+      display: none;
+    }
+    &--desktop {
+      display: block;
+    }
+  }
+}

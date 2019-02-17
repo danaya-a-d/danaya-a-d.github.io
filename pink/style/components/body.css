@@ -1,0 +1,14 @@
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: "open_sansregular", Arial, sans-serif;
+  font-style: normal;
+  line-height: 24px;
+  color: #283645;
+  background-color: #F2F2F2;
+}
+* {
+  outline: none;
+}

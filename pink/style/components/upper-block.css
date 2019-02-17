@@ -1,0 +1,19 @@
+.upper-block {
+  background-color: #25313F;
+  background-image: url("../img/back.png");
+  background-position: top -60px center;
+  background-size: 230%;
+}
+.upper-block__wrapper {
+  display: flex;
+  height: 733px;
+}
+.upper-block--hand {
+  background-color: #25313F;
+  background-image: url("../img/hand.png");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top center;
+}
+.upper-block__title {
+  display: none;
+}

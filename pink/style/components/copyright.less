@@ -1,0 +1,29 @@
+.copyright {
+  display: flex;
+  &__text {
+    margin: 0;
+    margin-top: 5px;
+    margin-right: 10px;
+    font-family: open_sansregular, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+  }
+  &__link {
+    color: #D22856;
+    transition: all 0.3s ease;
+    &:hover, &:focus {
+      color: rgba(40, 54, 69, 1);
+    }
+    &:active {
+      color: rgba(40, 54, 69, 0.3);;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .copyright {
+    &__text {
+      font-size: 18px;
+    }
+  }
+}

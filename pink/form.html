@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конкурс</title>
+    <link rel="stylesheet" href="style/normalize.css">
+    <link rel="stylesheet" href="style/style.min.css">
+</head>
+<body>
+
+<svg style="display: none">
+    <symbol id="logo-mobile">
+        <path d="M0 1.45A1.29 1.29 0 0 1 1.26.16h7.18c5.08 0 8.43 2.71 8.43 7.15v.06c0 4.86-4.05 7.38-8.85 7.38H2.54v6.82a1.29 1.29 0 0 1-1.28 1.29A1.29 1.29 0 0 1 0 21.57zm8.11 11c3.74 0 6.19-2 6.19-5v-.04c0-3.22-2.42-4.9-6.06-4.9h-5.7v9.92zM21.73 1.29a1.27 1.27 0 1 1 2.54 0v20.28a1.27 1.27 0 1 1-2.54 0V1.29zM30.87 1.32A1.28 1.28 0 0 1 32.13.06h.35a1.57 1.57 0 0 1 1.29.74l13.68 17.45v-17a1.24 1.24 0 1 1 2.48 0V21.6a1.14 1.14 0 0 1-1.16 1.19h-.13a1.76 1.76 0 0 1-1.32-.79l-14-17.87V21.6a1.24 1.24 0 1 1-2.48 0zM56.3 1.29a1.27 1.27 0 1 1 2.54 0v12.33L71.69.45a1.43 1.43 0 0 1 1-.45 1.27 1.27 0 0 1 1.22 1.26 1.25 1.25 0 0 1-.42.9l-8 7.92 8.56 10.56a1.39 1.39 0 0 1 .36.93 1.31 1.31 0 0 1-1.29 1.29 1.22 1.22 0 0 1-1-.58l-8.4-10.46-4.86 4.86v4.89a1.28 1.28 0 1 1-2.55 0V1.29z"></path>
+    </symbol>
+    <symbol id="logo-tablet">
+        <path d="M71.87 18.66a1.29 1.29 0 0 1 1.26-1.29h7.18c5.09 0 8.44 2.71 8.44 7.15v.06c0 4.86-4.06 7.38-8.86 7.38h-5.47v6.82a1.28 1.28 0 1 1-2.55 0V18.66zm8.12 11c3.73 0 6.18-2 6.18-5v-.06c0-3.22-2.41-4.89-6-4.89h-5.7v9.91zM93.6 18.5a1.28 1.28 0 1 1 2.55 0v20.28a1.28 1.28 0 1 1-2.55 0zM102.74 18.53a1.28 1.28 0 0 1 1.26-1.25h.35a1.55 1.55 0 0 1 1.29.74l13.69 17.45v-17a1.24 1.24 0 1 1 2.48 0v20.35a1.14 1.14 0 0 1-1.16 1.18h-.13a1.71 1.71 0 0 1-1.32-.78l-14-17.86v17.46a1.26 1.26 0 0 1-1.2 1.25 1.24 1.24 0 0 1-1.22-1.25V18.53zM128.17 18.5a1.28 1.28 0 1 1 2.55 0v12.33l12.84-13.17a1.48 1.48 0 0 1 1-.45 1.28 1.28 0 0 1 1.23 1.26 1.29 1.29 0 0 1-.42.9l-8 7.92L146 37.85a1.44 1.44 0 0 1 .35.94 1.31 1.31 0 0 1-1.35 1.28 1.24 1.24 0 0 1-1-.58L135.58 29l-4.86 4.86v4.9a1.27 1.27 0 1 1-2.54 0V18.5zM60.46 28L55.29 6.65C54.93 4.3 52.69 0 46.69 0a1.5 1.5 0 0 0 0 3c4.85 0 5.57 3.73 5.64 4.14l4.76 19.7H55a12 12 0 0 0-23.85 0h-1.8a12 12 0 0 0-23.86 0H3.42l4.77-19.7C8.25 6.73 9 3 13.83 3a1.5 1.5 0 0 0 0-3c-6 0-8.24 4.3-8.6 6.65L.05 28a1.42 1.42 0 0 0 1.43 1.82h4a12 12 0 0 0 23.85 0h1.81a12 12 0 0 0 23.86 0h4A1.41 1.41 0 0 0 60.46 28zm-34.15 1.84a9 9 0 0 1-17.92-1.5 9.29 9.29 0 0 1 .13-1.5 9 9 0 0 1 17.79 0 8.29 8.29 0 0 1 .14 1.5 8.12 8.12 0 0 1-.14 1.5zm25.68 0a9 9 0 0 1-17.93-1.5 9.3 9.3 0 0 1 .14-1.5 9 9 0 0 1 17.79 0 9.3 9.3 0 0 1 .14 1.5 9.09 9.09 0 0 1-.13 1.5z"></path>
+    </symbol>
+    <symbol id="logo-desktop">
+        <path d="M71.87 18.66a1.29 1.29 0 0 1 1.26-1.29h7.18c5.09 0 8.44 2.71 8.44 7.15v.06c0 4.86-4.06 7.38-8.86 7.38h-5.47v6.82a1.28 1.28 0 1 1-2.55 0V18.66zm8.12 11c3.73 0 6.18-2 6.18-5v-.06c0-3.22-2.41-4.89-6-4.89h-5.7v9.91zM93.6 18.5a1.28 1.28 0 1 1 2.55 0v20.28a1.28 1.28 0 1 1-2.55 0zM102.74 18.53a1.28 1.28 0 0 1 1.26-1.25h.35a1.55 1.55 0 0 1 1.29.74l13.69 17.45v-17a1.24 1.24 0 1 1 2.48 0v20.35a1.14 1.14 0 0 1-1.16 1.18h-.13a1.71 1.71 0 0 1-1.32-.78l-14-17.86v17.46a1.26 1.26 0 0 1-1.2 1.25 1.24 1.24 0 0 1-1.22-1.25V18.53zM128.17 18.5a1.28 1.28 0 1 1 2.55 0v12.33l12.84-13.17a1.48 1.48 0 0 1 1-.45 1.28 1.28 0 0 1 1.23 1.26 1.29 1.29 0 0 1-.42.9l-8 7.92L146 37.85a1.44 1.44 0 0 1 .35.94 1.31 1.31 0 0 1-1.35 1.28 1.24 1.24 0 0 1-1-.58L135.58 29l-4.86 4.86v4.9a1.27 1.27 0 1 1-2.54 0V18.5z"></path>
+        <path d="M98.5 9.87a3.63 3.63 0 0 1-3.63-3.62 3.62 3.62 0 0 1-3.62 3.62 3.63 3.63 0 0 1 3.62 3.63 3.64 3.64 0 0 1 3.63-3.63z"
+              fill="#d22856"></path>
+        <path d="M43.09 19.31h.73a2.48 2.48 0 0 0-2.13-1.23 2 2 0 0 1-1.89-1.35 12.09 12.09 0 0 0-2.09.82h.19a2 2 0 0 1 2 2 2.83 2.83 0 0 1 0 .29 8.8 8.8 0 0 1 3.19-.53z"></path>
+        <path d="M60.46 28L55.29 6.65C54.93 4.3 52.69 0 46.69 0a1.5 1.5 0 0 0 0 3c4.85 0 5.57 3.73 5.64 4.14l4.76 19.7H55a12 12 0 0 0-5.3-8.52 2.5 2.5 0 0 0-1.53 2.3 2.06 2.06 0 0 1 0 .26 9.21 9.21 0 0 1 4 7.47 9.3 9.3 0 0 1-.14 1.5 9 9 0 0 1-17.79 0 9.3 9.3 0 0 1-.14-1.5 9.34 9.34 0 0 1 .95-4 2 2 0 0 1-1.86-2 .71.71 0 0 0-.19-.49 11.84 11.84 0 0 0-1.79 5h-1.86a12 12 0 0 0-23.86 0H3.42L8.19 7.14C8.25 6.73 9 3 13.83 3a1.5 1.5 0 0 0 0-3c-6 0-8.24 4.3-8.6 6.65L.05 28a1.42 1.42 0 0 0 1.43 1.82h4a12.65 12.65 0 0 0 .38 1.83.75.75 0 0 0 .1-.36 2 2 0 0 1 2-2 1.85 1.85 0 0 1 .48.07 9.1 9.1 0 0 1-.07-1.05 9.29 9.29 0 0 1 .13-1.5 9 9 0 0 1 17.8 0 9.29 9.29 0 0 1 .13 1.5 9.06 9.06 0 0 1-9 9A9 9 0 0 1 12 35.58a2 2 0 0 1-1.3.49.75.75 0 0 0-.74.75 2 2 0 0 1-.18.81 11.91 11.91 0 0 0 7.61 2.74 12 12 0 0 0 11.96-10.52h1.81a12 12 0 0 0 23.86 0h4A1.41 1.41 0 0 0 60.46 28z"></path>
+        <path d="M50.69 16.12a4.49 4.49 0 0 1-4.5-4.49 4.5 4.5 0 0 1-4.5 4.49 4.51 4.51 0 0 1 4.5 4.5 4.5 4.5 0 0 1 4.5-4.5zM37.9 19.63a2.75 2.75 0 0 1-2.75-2.75 2.75 2.75 0 0 1-2.74 2.75 2.74 2.74 0 0 1 2.74 2.74 2.75 2.75 0 0 1 2.75-2.74zM10.73 34.07A2.75 2.75 0 0 1 8 31.32a2.75 2.75 0 0 1-2.74 2.75A2.75 2.75 0 0 1 8 36.82a2.75 2.75 0 0 1 2.73-2.75z"
+              fill="#d22856"></path>
+    </symbol>
+    <symbol id="logo-tablet-footer">
+        <path d="M71.87 18.66a1.29 1.29 0 0 1 1.26-1.29h7.18c5.09 0 8.44 2.71 8.44 7.15v.06c0 4.86-4.06 7.38-8.86 7.38h-5.47v6.82a1.28 1.28 0 1 1-2.55 0V18.66zm8.12 11c3.73 0 6.18-2 6.18-5v-.06c0-3.22-2.41-4.89-6-4.89h-5.7v9.91zM93.6 18.5a1.28 1.28 0 1 1 2.55 0v20.28a1.28 1.28 0 1 1-2.55 0zM102.74 18.53a1.28 1.28 0 0 1 1.26-1.25h.35a1.55 1.55 0 0 1 1.29.74l13.69 17.45v-17a1.24 1.24 0 1 1 2.48 0v20.35a1.14 1.14 0 0 1-1.16 1.18h-.13a1.71 1.71 0 0 1-1.32-.78l-14-17.86v17.46a1.26 1.26 0 0 1-1.2 1.25 1.24 1.24 0 0 1-1.22-1.25V18.53zM128.17 18.5a1.28 1.28 0 1 1 2.55 0v12.33l12.84-13.17a1.48 1.48 0 0 1 1-.45 1.28 1.28 0 0 1 1.23 1.26 1.29 1.29 0 0 1-.42.9l-8 7.92L146 37.85a1.44 1.44 0 0 1 .35.94 1.31 1.31 0 0 1-1.35 1.28 1.21 1.21 0 0 1-1-.58L135.59 29l-4.87 4.86v4.9a1.27 1.27 0 1 1-2.54 0V18.5z"></path>
+        <path d="M60.46 28L55.29 6.65C54.93 4.3 52.69 0 46.69 0a1.5 1.5 0 0 0 0 3c4.85 0 5.57 3.73 5.64 4.14l4.76 19.7H55a12 12 0 0 0-23.85 0h-1.8a12 12 0 0 0-23.86 0H3.42l4.77-19.7C8.25 6.73 9 3 13.83 3a1.5 1.5 0 0 0 0-3c-6 0-8.24 4.3-8.6 6.65L.05 28a1.42 1.42 0 0 0 1.43 1.82h4a12 12 0 0 0 23.85 0h1.81a12 12 0 0 0 23.86 0h4A1.41 1.41 0 0 0 60.46 28zm-34.15 1.84a9 9 0 0 1-17.92-1.5 9.29 9.29 0 0 1 .13-1.5 9 9 0 0 1 17.79 0 8.29 8.29 0 0 1 .14 1.5 8.12 8.12 0 0 1-.14 1.5zm25.68 0a9 9 0 0 1-17.93-1.5 9.3 9.3 0 0 1 .14-1.5 9 9 0 0 1 17.79 0 9.3 9.3 0 0 1 .14 1.5 9.09 9.09 0 0 1-.13 1.5z"
+              fill="#d22856"></path>
+    </symbol>
+    <symbol id="logo-desktop-footer">
+        <path d="M71.87 18.66a1.29 1.29 0 0 1 1.26-1.29h7.18c5.09 0 8.44 2.71 8.44 7.15v.06c0 4.86-4.06 7.38-8.86 7.38h-5.47v6.82a1.28 1.28 0 1 1-2.55 0V18.66zm8.12 11c3.73 0 6.18-2 6.18-5v-.06c0-3.22-2.41-4.89-6-4.89h-5.7v9.91zM93.6 18.5a1.28 1.28 0 1 1 2.55 0v20.28a1.28 1.28 0 1 1-2.55 0zM102.74 18.53a1.28 1.28 0 0 1 1.26-1.25h.35a1.55 1.55 0 0 1 1.29.74l13.69 17.45v-17a1.24 1.24 0 1 1 2.48 0v20.35a1.14 1.14 0 0 1-1.16 1.18h-.13a1.71 1.71 0 0 1-1.32-.78l-14-17.86v17.46a1.26 1.26 0 0 1-1.2 1.25 1.24 1.24 0 0 1-1.22-1.25V18.53zM128.17 18.5a1.28 1.28 0 1 1 2.55 0v12.33l12.84-13.17a1.48 1.48 0 0 1 1-.45 1.28 1.28 0 0 1 1.23 1.26 1.29 1.29 0 0 1-.42.9l-8 7.92L146 37.85a1.44 1.44 0 0 1 .35.94 1.31 1.31 0 0 1-1.35 1.28 1.21 1.21 0 0 1-1-.58L135.59 29l-4.87 4.86v4.9a1.27 1.27 0 1 1-2.54 0V18.5z"></path>
+        <path d="M98.5 9.87a3.63 3.63 0 0 1-3.63-3.62 3.62 3.62 0 0 1-3.62 3.62 3.63 3.63 0 0 1 3.62 3.63 3.64 3.64 0 0 1 3.63-3.63zM43.09 19.31h.73a2.48 2.48 0 0 0-2.13-1.23 2 2 0 0 1-1.89-1.35 12.09 12.09 0 0 0-2.09.82h.19a2 2 0 0 1 2 2 2.83 2.83 0 0 1 0 .29 8.8 8.8 0 0 1 3.19-.53z"
+              fill="#d22856"></path>
+        <path d="M60.46 28L55.29 6.65C54.93 4.3 52.69 0 46.69 0a1.5 1.5 0 0 0 0 3c4.85 0 5.57 3.73 5.64 4.14l4.76 19.7H55a12 12 0 0 0-5.3-8.52 2.5 2.5 0 0 0-1.53 2.3 2.06 2.06 0 0 1 0 .26 9.21 9.21 0 0 1 4 7.47 9.3 9.3 0 0 1-.14 1.5 9 9 0 0 1-17.79 0 9.3 9.3 0 0 1-.14-1.5 9.34 9.34 0 0 1 .95-4 2 2 0 0 1-1.86-2 .71.71 0 0 0-.19-.49 11.84 11.84 0 0 0-1.79 5h-1.86a12 12 0 0 0-23.86 0H3.42L8.19 7.14C8.25 6.73 9 3 13.83 3a1.5 1.5 0 0 0 0-3c-6 0-8.24 4.3-8.6 6.65L.05 28a1.42 1.42 0 0 0 1.43 1.82h4a12.65 12.65 0 0 0 .38 1.83.75.75 0 0 0 .1-.36 2 2 0 0 1 2-2 2.42 2.42 0 0 1 .48.06 8.79 8.79 0 0 1-.07-1 9.29 9.29 0 0 1 .13-1.5 9 9 0 0 1 17.8 0 9.29 9.29 0 0 1 .13 1.5A9 9 0 0 1 12 35.58a2 2 0 0 1-1.3.49.75.75 0 0 0-.74.75 2 2 0 0 1-.18.81 11.91 11.91 0 0 0 7.61 2.74 12 12 0 0 0 11.96-10.52h1.81a12 12 0 0 0 23.86 0h4A1.41 1.41 0 0 0 60.46 28z"
+              fill="#d22856"></path>
+        <path d="M50.69 16.12a4.49 4.49 0 0 1-4.5-4.49 4.5 4.5 0 0 1-4.5 4.49 4.51 4.51 0 0 1 4.5 4.5 4.5 4.5 0 0 1 4.5-4.5zM37.9 19.63a2.75 2.75 0 0 1-2.75-2.75 2.75 2.75 0 0 1-2.74 2.75 2.74 2.74 0 0 1 2.74 2.74 2.75 2.75 0 0 1 2.75-2.74zM10.73 34.07A2.75 2.75 0 0 1 8 31.32a2.75 2.75 0 0 1-2.74 2.75A2.75 2.75 0 0 1 8 36.82a2.75 2.75 0 0 1 2.73-2.75z"></path>
+    </symbol>
+    <symbol id="copyright">
+        <path d="M78 .59L77.19.5.5 8.54v140.57l76.69 45.63 76.69-45.63V8.54zm65.85 142.82l-66.66 39.66-66.66-39.66V85.79l66.38 39.51.11 7.16-45.54-27.1-.06 7 45.71 27.47.11 7.35L31.54 120l-.06 7 45.71 27.47 46.15-27.61v-7h0V97.1l20.56-12.28zm0-66.06l-18.29 10.74-8.42 5L77 69.17l-.06 7 34.31 20.41-.3.18-.74.43-4.88 2.81L77 83.16l-.06 7 22.36 13.3-5.3 3.48-.12.07L77 97.06l-.06 7L88 110.54l-11.29 6.78-66-39.26 66.11-39.75h0zm0-7l-67-39.51h0L10.53 70.31V17.58l66.66-7 66.66 7z"
+              stroke="#231f20" stroke-miterlimit="10" fill="currentColor"></path>
+    </symbol>
+    <symbol id="twitter">
+        <path d="M11.28.15A3.31 3.31 0 0 1 15 1.3c.69-.22 1.37-.47 2.07-.69a2.27 2.27 0 0 1-.88 1.73 1.62 1.62 0 0 0 1.34-.48 2.89 2.89 0 0 1-1.61 2c-.24 6.59-3.27 11-10.38 10.82h-.49c-.42 0-4.29-.45-5-1.84a6.64 6.64 0 0 0 4.84-1.15c-1-.3-2.77-.47-3.07-2.88A2.13 2.13 0 0 0 3 8.9C1.76 8.07.38 7.37.46 5.22a2 2 0 0 0 1.38.46C1.12 5.44-.19 2.4.92.84c1.87 1.81 3.85 3.52 7.37 3.69C8.51 2.29 9.46.79 11.28.15z"
+              data-name="W6EeEF" fill="currentColor"></path>
+    </symbol>
+    <symbol id="facebook">
+        <path d="M6.27 3.36h2.4V0H5.8C2.66.18 1.54 2.39 2 6.12H0v3.51h2v9.31h3.8V9.63h2.85V6.12H5.79c-.02-1.05-.04-2.41.48-2.76z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol id="youtube">
+        <path d="M1.78 13.78A1.14 1.14 0 0 1 0 12.67V1.29A1.14 1.14 0 0 1 1.78.18l12.13 5.93c1 .48 1 1.26 0 1.74z"
+              fill="currentColor"></path>
+    </symbol>
+    <symbol id="heart">
+        <path d="M8.75 1.47a2.33 2.33 0 0 1 2.33 2.33 2 2 0 0 1-.52 1.4l-4.32 4.94c-1.77-2-4-4.6-4.25-4.86A2.33 2.33 0 0 1 3.8 1.47a2.32 2.32 0 0 1 1.89.92.77.77 0 0 0 .57.3.76.76 0 0 0 .59-.28 2.43 2.43 0 0 1 1.9-.94z"></path>
+        <path d="M11.08 3.8a2.33 2.33 0 0 0-2.33-2.33 2.43 2.43 0 0 0-1.9.94.76.76 0 0 1-.59.28.77.77 0 0 1-.57-.3A2.35 2.35 0 0 0 1.47 3.8 2.33 2.33 0 0 0 2 5.26c.21.26 2.48 2.84 4.25 4.86l4.31-4.92a2 2 0 0 0 .52-1.4zM8.75 0a3.8 3.8 0 0 1 3.8 3.8 3.48 3.48 0 0 1-.9 2.38l-4.86 5.56a.73.73 0 0 1-1.1 0C1.89 7.42 1 6.44.83 6.17A3.86 3.86 0 0 1 0 3.8 3.83 3.83 0 0 1 6.29.9 3.82 3.82 0 0 1 8.75 0z"
+              fill="#D22856"></path>
+    </symbol>
+    <symbol id="crop">
+        <path d="M0 0h48v48H0z" fill="none"></path>
+        <path d="M34 30h4V14a4 4 0 0 0-4-4H18v4h16zm-20 4V2h-4v8H2v4h8v20a4 4 0 0 0 4 4h20v8h4v-8h8v-4z"></path>
+    </symbol>
+    <symbol id="fill">
+        <path d="M0 0h48v48H0z" fill="none"></path>
+        <path d="M33.12 17.88L15.24 0l-2.83 2.83 4.76 4.76L6.88 17.88a3 3 0 0 0 0 4.24l11 11a3 3 0 0 0 4.24 0l11-11a3 3 0 0 0 0-4.24zM10.41 20L20 10.42 29.59 20zM38 23s-4 4.33-4 7a4 4 0 0 0 8 0c0-2.67-4-7-4-7zM0 40h48v3H0z"></path>
+    </symbol>
+    <symbol id="contrast">
+        <path d="M16 4A12 12 0 1 1 4 16 12 12 0 0 1 16 4m0-4a16 16 0 1 0 16 16A16 16 0 0 0 16 0z"></path>
+        <path d="M16 24.29a8.52 8.52 0 0 0 0-17"></path>
+    </symbol>
+</svg>
+
+<header class="page-header">
+    <div class="page-header__wrapper">
+        <a class="page-header__logo logo" href="#">
+            <svg class="logo--mobile" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 74.43 22.86" width="75">
+                <use xlink:href="#logo-mobile"></use>
+            </svg>
+
+            <svg class="logo--tablet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.3 40.38" width="147">
+                <use xlink:href="#logo-tablet"></use>
+            </svg>
+
+            <svg class="logo--desktop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.3 40.37" width="147">
+                <use xlink:href="#logo-desktop"></use>
+            </svg>
+        </a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+            <button class="main-nav__toggle" type="button">
+                <span class="visually-hidden">Открыть меню</span>
+            </button>
+            <div class="main-nav__wrapper">
+                <ul class="main-nav__list site-list">
+                    <li class="site-list__item"><a href="index.html">Главная</a></li>
+                    <li class="site-list__item"><a href="photo.html">Фотографии</a></li>
+                    <li class="site-list__item site-list__item--active"><a>Конкурс</a></li>
+                    <li class="site-list__item"><a href="#">HTML Academy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="upper-block upper-block--inner">
+        <h1 class="upper-block__title">Конкурс на самое безбашенное путешествие с Пинк</h1>
+    </section>
+
+    <section class="questionary">
+        <h2 class="visually-hidden">Форма для конкурса</h2>
+        <p class="questionary__slogan description-slogan">
+            Поделитесь своей историей и получите шанс выиграть ценный приз —
+            1000 миль на вашу бонусную карту! <span>Пожалуйста, заполните форму ниже:</span>
+        </p>
+
+        <form class="questionary__form main-form" action="https://echo.htmlacademy.ru" method="post">
+            <div class="main-form__container main-form__container--name">
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend visually-hidden">О Вас</legend>
+                    <p class="main-form__line main-form__line--name">
+                        <label class="main-form__label main-form__label--pink" for="surname">Фамилия:</label>
+                        <input class="main-form__input main-form__input--name" id="surname" name="surname"
+                               placeholder="Укажите фамилию *"
+                               type="text" required>
+                    </p>
+
+                    <p class="main-form__line main-form__line--name">
+                        <label class="main-form__label main-form__label--pink" for="name">Имя:</label>
+                        <input class="main-form__input main-form__input--name" id="name" name="name"
+                               placeholder="Введите ваше имя *"
+                               type="text" required>
+                    </p>
+
+                    <p class="main-form__line main-form__line--name">
+                        <label class="main-form__label main-form__label--pink" for="patronymic">Отчество:</label>
+                        <input class="main-form__input main-form__input--name" id="patronymic" name="patronymic"
+                               type="text"
+                               placeholder="Ну и отчество тоже">
+                    </p>
+                </fieldset>
+            </div>
+
+            <div class="main-form__container main-form__container--achievements">
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend">Ваши безбашенные<br> достижения в путешествии</legend>
+                    <div class="fieldset-container">
+                        <p class="main-form__line">
+                            <label class="main-form__label main-form__label--checkbox" for="selfie">
+                                <span class="main-form__label-title">Сделал селфи с акулой</span>
+                                <input class="visually-hidden" id="selfie" name="selfie" type="checkbox">
+                                <span class="main-form__checkbox-indicator"></span>
+                            </label>
+                        </p>
+                        <p class="main-form__line">
+                            <label class="main-form__label main-form__label--checkbox" for="burned">
+                                <span class="main-form__label-title">Обгорел на пляже</span>
+                                <input class="visually-hidden" id="burned" name="burned" type="checkbox">
+                                <span class="main-form__checkbox-indicator"></span>
+                            </label>
+                        </p>
+                        <p class="main-form__line">
+                            <label class="main-form__label main-form__label--checkbox" for="chuck_norris">
+                                <span class="main-form__label-title">Видел Чака Норриса</span>
+                                <input class="visually-hidden" id="chuck_norris" name="chuck_norris" type="checkbox">
+                                <span class="main-form__checkbox-indicator"></span>
+                            </label>
+                        </p>
+                        <p class="main-form__line">
+                            <label class="main-form__label main-form__label--checkbox" for="souvenirs">
+                                <input class="visually-hidden" id="souvenirs" name="souvenirs" type="checkbox">
+                                <span class="main-form__checkbox-indicator"></span>
+                                <span class="main-form__label-title">Накупил сувениров</span>
+
+                            </label>
+                        </p>
+                        <p class="main-form__line">
+                            <label class="main-form__label main-form__label--checkbox" for="tower">
+                                <span class="main-form__label-title">Удержал башню</span>
+                                <input class="visually-hidden" id="tower" name="tower" type="checkbox">
+                                <span class="main-form__checkbox-indicator"></span>
+                            </label>
+                        </p>
+                        <p class="main-form__line">
+                            <label class="main-form__label main-form__label--checkbox" for="hotel">
+                                <span class="main-form__label-title">Разгромил отель</span>
+                                <input class="visually-hidden" id="hotel" name="hotel" type="checkbox">
+                                <span class="main-form__checkbox-indicator"></span>
+                            </label>
+                        </p>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="main-form__container main-form__container--contacts">
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend main-form__legend--contact">Контактная информация</legend>
+                    <div class="fieldset-container">
+                        <p class="main-form__line">
+                            <label class="main-form__label main-form__label--pink" for="phone">Номер телефона</label>
+                            <input class="main-form__input main-form__input--phone" id="phone" name="phone"
+                                   placeholder="Номер, пожалуйста" type="text">
+                        </p>
+                        <p class="main-form__line main-form__line--last">
+                            <label class="main-form__label main-form__label--pink" for="email">Адрес почты</label>
+                            <input class="main-form__input main-form__input--email" id="email" name="email"
+                                   placeholder="Введите почту *" type="email" required>
+                        </p>
+                    </div>
+                </fieldset>
+            </div>
+
+
+            <div class="main-form__container main-form__container--app">
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend">С каким приложением<br> путешествовали?</legend>
+                    <p class="main-form__line">
+                        <label class="main-form__label main-form__label--radio" for="iOS">
+                            <span class="main-form__label-title">Pink для iOS</span>
+                            <input class="visually-hidden" id="iOS" name="os" type="radio" value="iOS">
+                            <span class="main-form__radio-indicator"></span>
+                        </label>
+                    </p>
+                    <p class="main-form__line">
+                        <label class="main-form__label main-form__label--radio" for="android">
+                            <span class="main-form__label-title">Pink на Android</span>
+                            <input class="visually-hidden" id="android" name="os" type="radio" value="android">
+                            <span class="main-form__radio-indicator"></span>
+                        </label>
+                    </p>
+                    <p class="main-form__line">
+                        <label class="main-form__label main-form__label--radio" for="windows">
+                            <span class="main-form__label-title">Windows Phone</span>
+                            <input class="visually-hidden" id="windows" name="os" type="radio" value="windows">
+                            <span class="main-form__radio-indicator"></span>
+                        </label>
+                    </p>
+                </fieldset>
+            </div>
+
+            <div class="main-form__container main-form__container--emotions">
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend">Опишите свои эмоции</legend>
+                    <label for="emotion"></label>
+                    <textarea class="main-form__textarea" id="emotion"
+                              placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                </fieldset>
+            </div>
+            <button class="main-form__button button button--green">Отправить форму</button>
+            <small class="main-form__stats">
+                <sup>*</sup> — обязательные <span>для заполнения</span> поля
+            </small>
+        </form>
+    </section>
+</main>
+
+<footer class="page-footer page-footer--index">
+    <div class="page-footer__wrapper">
+        <a class="page-footer__logo logo" href="#">
+            <svg class="logo--tablet" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.3 40.38" width="147">
+                <use xlink:href="#logo-tablet-footer"></use>
+            </svg>
+
+            <svg class="logo--desktop" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 146.3 40.37" width="147">
+                <use xlink:href="#logo-desktop-footer"></use>
+            </svg>
+        </a>
+
+        <div class="page-footer__social social">
+            <ul class="social__list">
+                <li class="social__item">
+                    <a class="social__link social__link--twitter" href="https://vk.com/">
+                        <span class="visually-hidden">Мы в Твиттере</span>
+                        <svg width="18" height="14" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17.5 14.66">
+                            <use xlink:href="#twitter"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" href="https://facebook.com/">
+                        <span class="visually-hidden">Мы в Фейсбуке</span>
+                        <svg width="20" height="19" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 8.67 18.94">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <li class="social__item">
+                    <a class="social__link social__link--youtube" href="https://instagram.com/">
+                        <span class="visually-hidden">Мы в Ютубе</span>
+                        <svg width="15" height="13" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.64 13.96">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="page-footer__copyright copyright">
+            <p class="copyright__text">Разработано</p>
+            <a class="copyright__link" href="#">
+                <span class="visually-hidden">HTML Academy</span>
+                <svg height="34" width="27" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 154.38 195.33">
+                    <use xlink:href="#copyright"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+<script src="script/script.min.js"></script>
+</body>
+</html>

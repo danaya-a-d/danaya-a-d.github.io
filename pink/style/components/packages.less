@@ -1,0 +1,30 @@
+.packages {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 66px;
+  padding-bottom: 45px;
+  &__table {
+    min-width: 840px;
+    margin-bottom: 41px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .packages {
+    padding-top: 33px;
+    &__toggles {
+      display: none;
+    }
+    &__table {
+      min-width: 620px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .packages {
+    padding-top: 37px;
+  }
+}

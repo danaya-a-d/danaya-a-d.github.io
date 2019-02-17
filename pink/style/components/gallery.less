@@ -1,0 +1,96 @@
+.gallery {
+  padding-top: 45px;
+  background-color: white;
+  &__list {
+    .reset-list;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
+  &__item {
+    width: 100%;
+    margin-bottom: 21px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__panorama {
+    position: relative;
+    width: 100%;
+    margin-top: 49px;
+    margin-bottom: 21px;
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    &::before {
+      position: absolute;
+      content: "Панорама дня";
+      top: 0;
+      right: 20px;
+      height: 36px;
+      min-width: 140px;
+
+      font-family: open_sansbold, Arial, sans-serif;
+      font-size: 12px;
+      line-height: 35px;
+      text-transform: uppercase;
+      text-align: center;
+
+      color: white;
+      background-color: #D22856;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .gallery {
+    padding-top: 93px;
+    &__panorama {
+      margin-top: 75px;
+      margin-bottom: 19px;
+      &::before {
+        top: 57px;
+        right: 20px;
+      }
+    }
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    &__item {
+      flex-shrink: 0;
+      width: 48.4%;
+      margin-bottom: 19px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .gallery {
+    &__panorama {
+      margin-top: 87px;
+      margin-bottom: 0;
+      &::before {
+        top: 54px;
+        right: 130px;
+      }
+    }
+    &__list {
+      max-width: 940px;
+      margin: 0 auto;
+    }
+    &__item {
+      width: 32%;
+      margin-top: 50px;
+      margin-bottom: 3px;
+    }
+  }
+}

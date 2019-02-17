@@ -1,0 +1,73 @@
+.button {
+  display: inline-block;
+  min-height: 55px;
+  box-sizing: border-box;
+  padding: 15px 0;
+  font-family: "open_sansbold", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+  color: white;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: transparent;
+  border: 3px solid white;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.button:hover,
+.button:focus {
+  background-color: white;
+  color: #D22856;
+}
+.button:active {
+  color: rgba(210, 40, 86, 0.3);
+}
+.button--green {
+  padding: 23px 0;
+  text-transform: uppercase;
+  border-radius: 7px;
+  background-color: #2AAB6D;
+}
+.button--green:hover,
+.button--green:focus {
+  background-color: #1C9B5E;
+  color: white;
+}
+.button--green:active {
+  background-color: #1C9B5E;
+  color: rgba(255, 255, 255, 0.3);
+}
+.button--green:disabled {
+  background-color: #E5E5E5;
+  color: white;
+}
+.button--pink {
+  color: #D22856;
+  border-color: #D22856;
+}
+.button--pink:hover,
+.button--pink:focus {
+  color: white;
+  background-color: #D22856;
+}
+.button--pink:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #D22856;
+}
+.button--gray {
+  color: #283645;
+  border-color: #283645;
+  opacity: 0.1;
+}
+.button--gray:hover,
+.button--gray:focus {
+  color: #283645;
+  opacity: 0.3;
+}
+.button--gray:active {
+  color: rgba(255, 255, 255, 0.3);
+  background-color: #283645;
+  opacity: 0.3;
+}

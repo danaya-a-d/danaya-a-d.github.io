@@ -1,0 +1,37 @@
+.slider-toggle {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+}
+.slider-toggle__btn {
+  box-sizing: content-box;
+  background-clip: padding-box;
+  display: block;
+  width: 6px;
+  height: 6px;
+  margin: 0;
+  margin-right: 14px;
+  padding: 0;
+  background-color: rgba(40, 54, 69, 0.3);
+  border: 3px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.slider-toggle__btn:hover,
+.slider-toggle__btn:focus {
+  background-color: rgba(40, 54, 69, 0.6);
+}
+.slider-toggle__btn:active {
+  background-color: rgba(40, 54, 69, 0.1);
+}
+.slider-toggle__btn--active {
+  background-color: transparent;
+  border: 3px solid #283645;
+}
+.slider-toggle__btn--active:hover,
+.slider-toggle__btn--active:focus,
+.slider-toggle__btn--active:active {
+  background-color: transparent;
+}

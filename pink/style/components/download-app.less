@@ -1,0 +1,99 @@
+.download-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  height: 271px;
+  width: 100%;
+  padding-top: 29px;
+  padding-bottom: 26px;
+  margin-top: auto;
+  background-color: #1D2631;
+  color: white;
+  &__title {
+    display: none;
+  }
+  &__list {
+    .reset-list;
+    display: flex;
+  }
+  &__item {
+    margin-right: 17px;
+    margin-left: 17px;
+  }
+  &__link {
+    display: inline-block;
+    width: 46px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    &--ios {
+      background-image: url("../img/apple-logo.svg");
+    }
+    &--android {
+      background-image: url("../img/android-logo.svg");
+    }
+    &--windows {
+      background-image: url("../img/microsoft-logo.svg");
+    }
+    &:focus {
+      outline: 1px dotted gray;
+    }
+  }
+  &__description {
+    font-family: "open_sanslight", Arial, sans-serif;
+    font-size: 14px;
+    width: 280px;
+    text-align: center;
+  }
+  &__button {
+    width: 275px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .download-app {
+    justify-content: space-between;
+    margin-bottom: 100px;
+    margin-right: auto;
+    padding-bottom: 10px;
+    min-height: 450px;
+    width: 322px;
+    background-color: transparent;
+    &__title {
+      display: inline-block;
+      max-width: 300px;
+      margin: 0;
+      padding: 0 130px;
+      font-family: "open_sanslight", Arial, sans-serif;
+      font-size: 40px;
+      font-weight: lighter;
+      line-height: 45px;
+      text-align: center;
+    }
+    &__description {
+      font-size: 18px;
+      width: 350px;
+    }
+    &__button {
+      width: 294px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .download-app {
+    height: 565px;
+    padding-bottom: 22px;
+    margin-left: 100px;
+    &__title {
+      font-size: 50px;
+      line-height: 60px;
+    }
+    &__button {
+      font-size: 21px;
+    }
+  }
+}

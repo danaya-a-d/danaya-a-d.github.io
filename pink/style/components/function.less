@@ -1,0 +1,143 @@
+.function {
+  padding-top: 49px;
+  &__block {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 280px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__container {
+    width: 280px;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 10px;
+    font-family: "open_sansbold", Arial, sans-serif;
+    font-size: inherit;
+    color: black;
+  }
+  &__description {
+    //width: 280px;
+    margin: 0;
+    margin-bottom: 36px;
+    font-size: 14px;
+  }
+  &__image {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    &--smile {
+      flex-shrink: 0;
+      order: 3;
+      height: 277px;
+      width: 156px;
+      background-image: url("../img/Iphone3.png");
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .function {
+    position: relative;
+    padding-top: 10px;
+    z-index: 2;
+    &__block {
+      flex-direction: row;
+      width: 620px;
+      min-height: 125px;
+      justify-content: flex-end;
+    }
+    &__container {
+      width: 310px;
+      order: 2;
+      text-align: left;
+    }
+    &__title {
+      padding-left: 24px;
+    }
+    &__description {
+      margin-bottom: 40px;
+      padding-left: 24px;
+    }
+    &__image {
+      &--smile {
+        top: -360px;
+        left: -5px;
+        position: absolute;
+        order: 1;
+        height: 480px;
+        width: 268px;
+        margin-left: 25px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .function {
+    display: flex;
+    width: 965px;
+    margin: 0 auto;
+    &__block {
+      position: relative;
+      flex-direction: column;
+      justify-content: flex-start;
+      margin-top: -172px;
+      &:hover {
+        .function__image {
+          height: 380px;
+          top: -78px;
+          cursor: pointer;
+        }
+        .function__container {
+          margin-top: -23px;
+        }
+      }
+    }
+    &__container {
+      width: 240px;
+      margin-top: 55px;
+      text-align: center;
+    }
+    &__title {
+      padding: 0;
+      font-size: 30px;
+      line-height: 30px;
+    }
+    &__description {
+      padding: 0;
+      margin-top: 24px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+    &__image {
+      position: relative;
+      height: 302px;
+      width: 187px;
+      top: auto;
+      left: auto;
+      margin: 0;
+      &--gray {
+        background-image: url("../img/Iphone1.png");
+      }
+      &--pink {
+        background-image: url("../img/Iphone2.png");
+      }
+      &::after {
+        position: absolute;
+        content: "";
+        height: 7px;
+        width: 270px;
+        bottom: 0;
+        right: calc(50% - 130px);  // Половина ширины
+        background-image: url("../img/shadow.png");
+      }
+      //&:hover {
+      //  height: 380px;
+      //  top: -78px;
+      //}
+    }
+  }
+}

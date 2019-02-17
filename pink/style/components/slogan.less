@@ -1,0 +1,42 @@
+.slogan {
+  width: 100%;
+  min-height: 210px;
+  padding-top: 40px;
+  font-family: "open_sanslight", Arial, sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  background-color: white;
+
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+  &__text {
+    width: 230px;
+    margin: 0 auto;
+    padding-bottom: 26px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .slogan {
+    min-height: 250px;
+    padding-top: 50px;
+    font-size: 40px;
+    line-height: 45px;
+    &__text {
+      width: auto;
+      padding-bottom: 4px;
+      &--answer {
+        width: 500px;
+      }
+    }
+  }
+}
+@media (min-width: @desktop-width) {
+  .slogan {
+    min-height: 417px;
+    padding-top: 68px;
+    font-size: 50px;
+    line-height: 58px;
+  }
+}

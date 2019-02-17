@@ -1,0 +1,103 @@
+.effect {
+  display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .effect {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    margin-top: -25px;
+    padding-top: 59px;
+    padding-bottom: 67px;
+    &__block {
+      flex-shrink: 0;
+      width: 295px;
+    }
+    &__title {
+      width: 58%;
+      margin: 0;
+      margin-top: 40px;
+      font-family: open_sansbold, Arial, sans-serif;
+      font-size: 30px;
+      line-height: 36px;
+    }
+    &__description {
+      margin: 0;
+      margin-top: 9px;
+      font-size: 14px;
+    }
+    &__link {
+      display: inline-block;
+      margin-top: 10px;
+      color: #D22856;
+      font-size: 14px;
+    }
+    &__image {
+      position: relative;
+      flex-shrink: 0;
+      width: 239px;
+      height: 277px;
+      margin-right: 70px;
+      margin-left: 35px;
+      background-image: url("../img/timer.svg");
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: contain;
+      &::after {
+        position: absolute;
+        content: "24";
+        width: 175px;
+        height: 175px;
+        border: 14px solid;
+        border-radius: 50%;
+        top: 55px;
+        left: 18px;
+        text-align: center;
+        font-family: "open_sansbold", Arial,sans-serif;
+        font-size: 96px;
+        line-height: 170px;
+        color: #D22856;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .effect {
+    padding-top: 50px;
+    background-color: #F2F2F2;
+    &__block {
+      width: 600px;
+      margin-top: 52px;
+    }
+    &__description {
+      margin-top: 22px;
+      font-size: 19px;
+      line-height: 30px;
+    }
+    &__link {
+      font-size: 18px;
+      line-height: 30px;
+      margin-top: 30px;
+      &:focus {
+        outline: 1px dotted gray;
+      }
+    }
+    &__image {
+      width: 296px;
+      height: 346px;
+      &::after {
+        width: 218px;
+        height: 218px;
+        border: 18px solid;
+        top: 68px;
+        left: 20.5px;
+        font-size: 120px;
+        line-height: 210px;
+      }
+    }
+  }
+}
+

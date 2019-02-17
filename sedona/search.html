@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Поиск</title>
+    <link rel="stylesheet" type="text/css" href="style/normalize.css">
+    <link rel="stylesheet" type="text/css" href="style/style.min.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+<body class="inner-page">
+<header class="main-header">
+    <div class="container-fix">
+        <nav class="main-header-navigation">
+            <ul class="main-header-list">
+                <li><a href="#">Информация</a></li>
+                <li><a href="#">Фото и видео</a></li>
+                <li><a href="index.html" class="main-header-logo">
+                    <img src="img/main-logo.png" width="138" height="70" alt="Логотип «Sedona»">
+                </a></li>
+                <li><a href="#">Карта штата</a></li>
+                <li><a class="current-page">Гостиницы</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container main">
+    <div class="container-fix">
+        <h1 class="visually-hidden">Поиск по гостиницам</h1>
+        <section class="search">
+            <h2 class="visually-hidden">Параметры поиска</h2>
+            <form class="search-form">
+                <div class="search-form-block info">
+                    <h3>Инфраструктура:</h3>
+                    <p>
+                        <label for="pool">
+                            <input class="visually-hidden" id="pool" type="checkbox">
+                            <span class="checkbox-indicator"></span>
+                            <span class="checkbox-title">Бассейн</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="parking">
+                            <input class="visually-hidden" id="parking" type="checkbox">
+                            <span class="checkbox-indicator"></span>
+                            <span class="checkbox-title">Парковка</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="wi-fi">
+                            <input class="visually-hidden" id="wi-fi" type="checkbox">
+                            <span class="checkbox-indicator"></span>
+                            <span class="checkbox-title">WI-FI</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="search-form-block home">
+                    <h3>Тип жилья:</h3>
+                    <p>
+                        <label for="hotel">
+                            <input class="visually-hidden" id="hotel" type="checkbox">
+                            <span class="checkbox-indicator"></span>
+                            <span class="checkbox-title">Гостиница</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="motel">
+                            <input class="visually-hidden" id="motel" type="checkbox">
+                            <span class="checkbox-indicator"></span>
+                            <span class="checkbox-title">Мотель</span>
+                        </label>
+                    </p>
+                    <p>
+                        <label for="apartments">
+                            <input class="visually-hidden" id="apartments" type="checkbox">
+                            <span class="checkbox-indicator"></span>
+                            <span class="checkbox-title">Апартаменты</span>
+                        </label>
+                    </p>
+                </div>
+                <div class="search-form-block price">
+                    <h3>Стоимость в сутки (Р):</h3>
+                    <p class="search-form-slider">
+                        <label class="visually-hidden" for="min-price">От</label>
+                        <label class="visually-hidden" for="max-price">До</label>
+                        <span class="search-form-slider-container">
+                            <input id="min-price" type="text" value="0" name="min_price"
+                            ><input id="max-price" type="text" value="3000" name="max_price">
+                        </span>
+                    </p>
+                    <p>
+                        <label class="visually-hidden" for="price">Диапазон цен</label>
+                        <input id="price" type="range">
+                    </p>
+                    <button class="button transparent" type="submit">Показать</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="results">
+            <h2 class="visually-hidden">Результаты поиска</h2>
+            <div class="results-sort">
+                <p class="results-sort-found">Найдено: 3</p>
+                <h3>Сортировка:</h3>
+                <ul class="results-sort-list">
+                    <li><a>По цене</a></li>
+                    <li><a>По типу</a></li>
+                    <li><a>По рейтингу</a></li>
+                </ul>
+                <ul class="results-sort-order">
+                    <li><a class="results-down">В обратном порядке</a></li>
+                    <li><a class="results-up">По порядку</a></li>
+                </ul>
+            </div>
+
+            <div class="results-hotels">
+                <ul class="results-list">
+                    <li class="results-list-item">
+                        <img class="results-img" src="img/photo_1.png" width="135" height="90" alt="Amara Resort & Spa">
+                        <div class="results-about-container">
+                            <h3><a href="#">Amara Resort & Spa</a></h3>
+                            <div class="item-about">
+                                <span class="item-category">Гостиница</span>
+                                <span class="item-price">От 4000 Р.</span>
+                            </div>
+                            <p>
+                                <a class="button blue" href="#">Подробнее</a>
+                                <a class="button brown" href="#">Забронировать</a>
+                            </p>
+                        </div>
+                        <div class="results-rate-container">
+                        <span class="item-stars">
+                            <img src="img/star.svg" alt="star">
+                            <img src="img/star.svg" alt="star">
+                            <img src="img/star.svg" alt="star">
+                            <img src="img/star.svg" alt="star">
+                        </span>
+                            <span class="item-rate">Рейтинг: 8,5</span>
+                        </div>
+                    </li>
+
+                    <li class="results-list-item">
+                        <img class="results-img" src="img/photo_2.png" width="135" height="90" alt="Amara Resort & Spa">
+                        <div class="results-about-container">
+                            <h3><a href="#">Desert Quail Inn</a></h3>
+                            <div class="item-about">
+                                <span class="item-category">Мотель</span>
+                                <span class="item-price">От 3000 Р.</span>
+                            </div>
+                            <p>
+                                <a class="button blue" href="#">Подробнее</a>
+                                <a class="button brown" href="#">Забронировать</a>
+                            </p>
+                        </div>
+                        <div class="results-rate-container">
+                        <span class="item-stars">
+                            <img src="img/star.svg" alt="star">
+                            <img src="img/star.svg" alt="star">
+                            <img src="img/star.svg" alt="star">
+                        </span>
+                            <span class="item-rate">Рейтинг: 8,9</span>
+                        </div>
+                    </li>
+
+                    <li class="results-list-item">
+                        <img class="results-img" src="img/photo_3.png" width="135" height="90" alt="Amara Resort & Spa">
+                        <div class="results-about-container">
+                            <h3><a href="#">Villas at Poco Diablo</a></h3>
+                            <div class="item-about">
+                                <span class="item-category">Апартаменты</span>
+                                <span class="item-price">От 2000 Р.</span>
+                            </div>
+                            <p>
+                                <a class="button blue" href="#">Подробнее</a>
+                                <a class="button brown" href="#">Забронировать</a>
+                            </p>
+                        </div>
+                        <div class="results-rate-container">
+                        <span class="item-stars">
+                            <img src="img/star.svg" alt="star">
+                            <img src="img/star.svg" alt="star">
+                        </span>
+                            <span class="item-rate">Рейтинг: 9,2</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</main>
+
+<footer class="main-footer">
+    <div class="container-fix">
+        <div class="main-footer-visit">
+            #visitsedona
+        </div>
+        <div class="main-footer-social">
+            <ul>
+                <li><a class="social-button" href="#">
+                    <span class="visually-hidden">Твитер</span>
+                    <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="17px" height="15px" viewBox="0 0 17 15" enable-background="new 0 0 17 15" xml:space="preserve">
+<g id="W6EeEF_1_">
+	<g>
+		<path fill="#FFFFFF" d="M10.95,0.144c1.685-0.496,2.984,0.27,3.577,1.179c0.673-0.231,1.331-0.481,2.011-0.708
+			c-0.004,0.861-0.522,1.513-0.857,1.768c0.685,0.17,1.304-0.491,1.304-0.491c-0.169,1-1.006,1.788-1.563,2.024
+			c-0.231,6.75-3.175,11.217-10.077,11.082c-0.522,0,0.075,0-0.446,0c-0.41,0-4.164-0.46-4.898-1.887
+			c2.271,0.196,3.893-0.422,4.693-1.177c-0.96-0.3-2.679-0.477-2.979-2.95C2.064,9.09,2.279,9.212,2.905,9.103
+			C1.705,8.247,0.374,7.53,0.448,5.33c0.285,0.328,1.067,0.536,1.34,0.472c-0.703-0.241-1.97-3.36-0.894-4.952
+			c1.818,1.854,3.735,3.606,7.152,3.773C8.254,2.33,9.183,0.793,10.95,0.144z"></path>
+	</g>
+</g>
+</svg>
+                </a></li>
+                <li><a class="social-button" href="#">
+                    <span class="visually-hidden">Фейсбук</span>
+                    <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12px" height="22px" viewBox="0 0 12 22" enable-background="new 0 0 12 22" xml:space="preserve">
+<path fill="#FFFFFF" d="M12,4V0H8C5.791,0,4,1.791,4,4v4H0v4h4v10h4V12h4V8H8V4H12z"></path>
+</svg>
+                </a></li>
+                <li><a class="social-button" href="#">
+                    <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="20px" height="16px" viewBox="0 0 20 16" enable-background="new 0 0 20 16" xml:space="preserve">
+<path fill="#FFFFFF" d="M17,0H3C1.35,0,0,1.35,0,3v10c0,1.65,1.35,3,3,3h14c1.65,0,3-1.35,3-3V3C20,1.35,18.65,0,17,0z
+	 M6.027,11.998V4.002L15.014,8L6.027,11.998z"></path>
+</svg>
+                </a></li>
+            </ul>
+        </div>
+        <div class="main-footer-copyright">
+
+            <a class="author-button" href="#">
+                Website by
+            </a>
+        </div>
+    </div>
+</footer>
+
+<script src="js/main.min.js"></script>
+</body>
+</html>
