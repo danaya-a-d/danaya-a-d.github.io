@@ -1706,7 +1706,7 @@ a.pagination--current {
         -ms-flex-pack: start;
             justify-content: flex-start;
   }
-  .main-page {
+  body {
     overflow-x: hidden;
   }
   .main-footer__copy {
