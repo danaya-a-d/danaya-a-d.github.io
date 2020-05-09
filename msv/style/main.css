@@ -2081,7 +2081,16 @@ a.pagination--current {
   .main_form__form--lower .main_form__button {
     margin-left: 0px;
   }
+  .stick-nav {
+    padding-top: 0px;
+  }
+  .stick-nav__item {
+    line-height: 22px;
+  }
   .my-dots {
     left: 27%;
+  }
+  .stick-nav__sub-list {
+    margin-top: 0;
   }
 }
