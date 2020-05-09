@@ -1569,12 +1569,12 @@ a.pagination--current {
 .button-upp {
   display: none;
   position: fixed;
-  bottom: 100px;
+  bottom: 80px;
   right: 63px;
   margin: 0;
   padding: 0;
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
           box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   border-radius: 50%;
@@ -1595,9 +1595,9 @@ a.pagination--current {
       -ms-flex-align: center;
           align-items: center;
   background: url("../img/icons/left-arrow.svg") no-repeat top center;
-  top: 30px;
+  top: 14px;
   left: 0;
-  height: 30px;
+  height: 20px;
   width: 100%;
   -webkit-transform: rotate(90deg);
       -ms-transform: rotate(90deg);
@@ -1743,13 +1743,13 @@ a.pagination--current {
             justify-content: center !important;
   }
   .button-upp {
-    bottom: 100px;
+    bottom: 50px;
     right: 5px;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 50px;
   }
   .button-upp:after {
-    top: 22px;
+    top: 14px;
     height: 23px;
   }
 }
@@ -1797,8 +1797,13 @@ a.pagination--current {
     margin-bottom: 0;
   }
   .button-upp {
+    width: 70px;
+    height: 70px;
     bottom: 50px;
     left: calc(50% - 35px);
+  }
+  .button-upp::after {
+    top: 24px;
   }
   .knowledge {
     margin-bottom: 30px;
@@ -2057,7 +2062,7 @@ a.pagination--current {
     background-size: cover;
   }
 }
-@media (max-width: 350px) {
+@media (max-width: 380px) {
   .stick-nav__sub-list li {
     padding-bottom: 0px;
     font-size: 12px;
@@ -2082,7 +2087,8 @@ a.pagination--current {
     margin-left: 0px;
   }
   .stick-nav {
-    padding-top: 0px;
+    padding-top: 3px;
+    padding-bottom: 5px;
   }
   .stick-nav__item {
     line-height: 22px;
@@ -2092,5 +2098,15 @@ a.pagination--current {
   }
   .stick-nav__sub-list {
     margin-top: 0;
+  }
+}
+
+
+@media (max-width: 380px) {
+  .header-stick__block-1, .header-stick__block-2 {
+    margin-top: 5px;
+  }
+  .stick-nav {
+    top: calc(100% - 49px);
   }
 }
