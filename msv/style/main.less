@@ -1534,7 +1534,6 @@ a.pagination--current {
   .lessons, .price, .advantages {
     background: none;
   }
-
 }
 
 //
@@ -1566,20 +1565,39 @@ a.pagination--current {
 }
 
 @media (max-width: 1130px) {
+  .main-footer {
+    section {
+      align-content: center;
+      height: auto;
+    }
+  }
+
+  .main-footer__wrapper {
+    justify-content: flex-start;
+  }
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .main-page {
+    overflow-x: hidden !important;
+  }
+
   .main-footer__copy {
     padding-left: 10px;
   }
 
   .main-header__wrapper {
-    justify-content: center !important;
+    justify-content: center;
   }
 
   .main-footer__about {
-    justify-content: center !important;
+    justify-content: center;
   }
 
   .main-footer__contacts {
-    justify-content: center !important;
+    justify-content: center;
     margin-top: 5px !important;
     .phone {
       margin-left: 90px;
@@ -1607,6 +1625,14 @@ a.pagination--current {
 }
 
 @media (max-width: 700px) {
+  .main-footer__about {
+    //justify-content: center !important;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
   .greeting__description {
     width: 70%;
   }
