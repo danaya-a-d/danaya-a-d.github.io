@@ -336,4 +336,41 @@ window.addEventListener('DOMContentLoaded', function (event) {
             _loop2(_i);
         }
     }
+
+
+    var contacts_btn = document.querySelectorAll('.contacts_btn');
+    var modal_write_us = document.querySelector('.modal');
+    var overlay = document.querySelector('.modal__overlay');
+    var modal_write_us_close = document.querySelector('.modal-close');
+
+    for (var p =0; p<contacts_btn.length; p++) {
+
+        // Открытие окна обратной связи
+        if (contacts_btn[p] !== null) {
+            contacts_btn[p].addEventListener('click', function (event) {
+                //Отмена действия по умолчанию
+                event.preventDefault();
+                if (modal_write_us.classList.contains('modal-hidden')) {
+                    modal_write_us.classList.remove('modal-hidden');
+                    modal_write_us.classList.add('modal-show');
+                    overlay.classList.remove('modal-hidden');
+                }
+            });
+        }
+        //Закрытие окна обратной связи при клике на крестик
+        modal_write_us_close.addEventListener('click', function (event) {
+            if (!modal_write_us.classList.contains('modal-hidden')) {
+                modal_write_us.classList.add('modal-hidden');
+                overlay.classList.add('modal-hidden');
+            }
+        });
+
+        //Закрытие при клике на оверлей
+        overlay.addEventListener('click', function (event) {
+            if (modal_write_us !== null && !modal_write_us.classList.contains('modal-hidden')) {
+                modal_write_us.classList.add('modal-hidden');
+            }
+            overlay.classList.add('modal-hidden');
+        });
+    }
 });
