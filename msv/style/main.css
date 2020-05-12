@@ -2505,7 +2505,7 @@ a.pagination--current {
         background: none;
         background-color: #D6438F;
     }
-    .main_form__title, .main_form__description, .main_form__input, .main_form__label, .main_form__button {
+    .modal .main_form__title, .modal .main_form__description, .modal .main_form__input, .modal .main_form__label, .modal .main_form__button {
         margin-left: 0;
     }
 }
