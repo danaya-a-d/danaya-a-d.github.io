@@ -30,7 +30,7 @@
 
             <div class="main-header__block">
                 <a class="phone" href="tel:+88002347227">8 800 234 7227</a>
-                <a class="main-header__button button">Запись на онлайн занятия</a>
+                <a class="main-header__button contacts_btn button">Запись на онлайн занятия</a>
             </div>
         </div>
 
@@ -52,7 +52,7 @@
 
         <div class="header-stick__block-2">
             <a class="phone" href="tel:+88002347227">8 800 234 7227</a>
-            <a class="header-stick__button button">Запись на онлайн занятия</a>
+            <a class="header-stick__button contacts_btn button">Запись на онлайн занятия</a>
         </div>
 
 
@@ -402,7 +402,7 @@
         <section class="main-footer__contacts">
             <a class="phone" href="tel:+88002347227">8 800 234 7227</a>
             <div class="main-footer__btn-list">
-                <a class="main-footer__button button">Запись на онлайн занятия</a>
+                <a class="main-footer__button contacts_btn button">Запись на онлайн занятия</a>
                 <a class="main-footer__button button button--red">Авторские методики</a>
                 <a class="main-footer__button button button--red">Франшиза</a>
             </div>
@@ -416,6 +416,36 @@
     </div>
 
 </footer>
+
+<section class="modal modal-hidden">
+    <form class="main_form__form main_form__form" method="post" action="">
+        <p class="main_form__title main_form__title--lower title">Записаться на онлайн занятия</p>
+
+        <label class="visually-hidden" for="first_name-3">Ваше имя</label>
+        <input class="main_form__input main_form__input--name" id="first_name-3" name="first_name" type="text"
+               placeholder="Ваше имя">
+
+        <label class="visually-hidden" for="phone-3">Ваш телефон</label>
+        <input class="main_form__input main_form__input--phone phone_mask" id="phone-3" name="phone" type="tel"
+               placeholder="Ваш телефон">
+        <button class="main_form__button main_form__button button button--send" type="submit">
+            Записаться на онлайн занятия
+        </button>
+
+        <label class="main_form__label">
+            <input class="visually-hidden" type="checkbox" name="agree" value="yes">
+            <span class="main_form__indicator"></span>
+            <span class="main_form__title-label">Даю согласие на обработку персональных данных</span>
+        </label>
+    </form>
+
+    <button type="button" class="modal-close" id="modal-map-close">
+        <span class="visually-hidden">Закрыть</span>
+    </button>
+</section>
+
+<div class="modal__overlay modal-hidden"></div>
+
 <script src="script/main2.js"></script>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" type="text/javascript"></script>
