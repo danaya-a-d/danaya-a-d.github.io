@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Торты на заказ</title>
+    <link rel="stylesheet" type="text/css" href="style/main.min.css">
+  </head>
+  <body>
+    <div style="display:none"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><symbol id="icon-cake" viewBox="0 0 138.1 82.5"><image width="185" height="111" transform="translate(.44) scale(.74)" xlink:href="data:image/png;base64,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" style="isolation:isolate"/><path d="M19.18 28.5h-2.75L18 26.81c3.77-4.14 4.36-8.78 1.37-10.74a5 5 0 0 0-6.7 1.39c-1.33 2.11.64 3.39 2.55 1.67 1.12-1 1.76-1.17 2.36-.57 1.33 1.33.08 4.52-3.14 8-1.63 1.77-3 3.61-3 4.08s1.83.85 5.25.85c4.75 0 5.25-.14 5.25-1.5s-.5-1.49-2.76-1.49zM35.07 25a2.47 2.47 0 0 1-1.13-2.22c0-1.3-.42-1.8-1.5-1.8s-1.5.5-1.5 1.88-.39 1.87-1.59 1.87c-1.46 0-1.5-.13-.51-1.69.59-.92 1.83-2.95 2.77-4.5l1.7-2.81h-1.75c-1.35 0-2.47 1.18-4.93 5.17a32.24 32.24 0 0 0-3.19 6c0 .5 1.52.83 3.75.83 3.5 0 3.75.13 3.75 1.88 0 1.37.4 1.87 1.5 1.87s1.5-.5 1.5-1.87c0-1.17.43-1.88 1.13-1.88a1.13 1.13 0 0 0 1.12-1.15A1.87 1.87 0 0 0 35.07 25zm61.83.6c-2.09.29-2.9 3-1.43 4.8s3.76 1.16 4.66-1.28c.69-1.85-1.13-3.8-3.23-3.5zm20.78 14.81C114.85 36.87 106.17 30 104.5 30a5.17 5.17 0 0 0-1.88 1c-1.92 1.4-1 3.6 2.24 5.35 7 3.74 14.82 15.22 17.9 26.09 1.07 3.78 1.46 4.31 3.1 4.31a2.57 2.57 0 0 0 2.34-1.2c1.33-3.47-4.64-17.72-10.52-25.12zM96.9 25.62c-2.09.29-2.9 3-1.43 4.8s3.76 1.16 4.66-1.28c.69-1.87-1.13-3.82-3.23-3.52zm20.78 14.81C114.85 36.87 106.17 30 104.5 30a5.17 5.17 0 0 0-1.88 1c-1.92 1.4-1 3.6 2.24 5.35 7 3.74 14.82 15.22 17.9 26.09 1.07 3.78 1.46 4.31 3.1 4.31a2.57 2.57 0 0 0 2.34-1.2c1.33-3.47-4.64-17.72-10.52-25.12zm0 0C114.85 36.87 106.17 30 104.5 30a5.17 5.17 0 0 0-1.88 1c-1.92 1.4-1 3.6 2.24 5.35 7 3.74 14.82 15.22 17.9 26.09 1.07 3.78 1.46 4.31 3.1 4.31a2.57 2.57 0 0 0 2.34-1.2c1.33-3.47-4.64-17.72-10.52-25.12zM96.9 25.62c-2.09.29-2.9 3-1.43 4.8s3.76 1.16 4.66-1.28c.69-1.87-1.13-3.82-3.23-3.52zM19.18 28.5h-2.75L18 26.81c3.77-4.14 4.36-8.78 1.37-10.74a5 5 0 0 0-6.7 1.39c-1.33 2.11.64 3.39 2.55 1.67 1.12-1 1.76-1.17 2.36-.57 1.33 1.33.08 4.52-3.14 8-1.63 1.77-3 3.61-3 4.08s1.83.85 5.25.85c4.75 0 5.25-.14 5.25-1.5s-.5-1.49-2.76-1.49zM35.07 25a2.47 2.47 0 0 1-1.13-2.22c0-1.3-.42-1.8-1.5-1.8s-1.5.5-1.5 1.88-.39 1.87-1.59 1.87c-1.46 0-1.5-.13-.51-1.69.59-.92 1.83-2.95 2.77-4.5l1.7-2.81h-1.75c-1.35 0-2.47 1.18-4.93 5.17a32.24 32.24 0 0 0-3.19 6c0 .5 1.52.83 3.75.83 3.5 0 3.75.13 3.75 1.88 0 1.37.4 1.87 1.5 1.87s1.5-.5 1.5-1.87c0-1.17.43-1.88 1.13-1.88a1.13 1.13 0 0 0 1.12-1.15A1.87 1.87 0 0 0 35.07 25zm-15.89 3.5h-2.75L18 26.81c3.77-4.14 4.36-8.78 1.37-10.74a5 5 0 0 0-6.7 1.39c-1.33 2.11.64 3.39 2.55 1.67 1.12-1 1.76-1.17 2.36-.57 1.33 1.33.08 4.52-3.14 8-1.63 1.77-3 3.61-3 4.08s1.83.85 5.25.85c4.75 0 5.25-.14 5.25-1.5s-.5-1.49-2.76-1.49zM35.07 25a2.47 2.47 0 0 1-1.13-2.22c0-1.3-.42-1.8-1.5-1.8s-1.5.5-1.5 1.88-.39 1.87-1.59 1.87c-1.46 0-1.5-.13-.51-1.69.59-.92 1.83-2.95 2.77-4.5l1.7-2.81h-1.75c-1.35 0-2.47 1.18-4.93 5.17a32.24 32.24 0 0 0-3.19 6c0 .5 1.52.83 3.75.83 3.5 0 3.75.13 3.75 1.88 0 1.37.4 1.87 1.5 1.87s1.5-.5 1.5-1.87c0-1.17.43-1.88 1.13-1.88a1.13 1.13 0 0 0 1.12-1.15A1.87 1.87 0 0 0 35.07 25z" fill="currentColor"/><path d="M137.84 74c-1.28-13-7.08-28.42-14.3-37.94-9.2-12.14-25.19-20.84-41-22.33-4.84-.45-5.06-.56-5-2.43a6.69 6.69 0 0 1 1.13-3.41c1.55-2 1.37-4.16-.53-6.18S73.7-.48 71.4 1.38a5.52 5.52 0 0 0-.46 7.48c2.7 3 1.75 3.63-6.69 4.58A84.88 84.88 0 0 0 52 15.69L47.61 17 46 13.55A26.66 26.66 0 0 0 34.78 2.08C31.87.65 30.11.38 23.82.38s-8 .27-10.67 1.69A23.29 23.29 0 0 0 2.48 12.92a24.32 24.32 0 0 0 0 21.41 22.55 22.55 0 0 0 10.8 10.81l3.16 1.54-1.78 4.42a78.25 78.25 0 0 0-5.24 22.47c-.42 6.17-.36 6.51 1.33 7.69S18 82.5 73.86 82.5h61.33l1.59-1.59c1.43-1.43 1.54-2.1 1.06-6.91zM6.73 31.88c-2.2-4.19-2.19-12.31 0-16.56a20.56 20.56 0 0 1 11.55-9.65c4.89-1.45 6.9-1.46 11.59-.07 17.38 5.19 17.38 30.86 0 36.05-4.8 1.43-7.41 1.36-12.29-.33a19.86 19.86 0 0 1-10.85-9.44zm91.71 43.87h-51V67L51 68.79a11 11 0 0 0 7.42 1.46c4.69-.45 7.12-1.66 12.31-6.09 2.2-1.88 4.4-3.41 4.88-3.41s2.93 1.82 5.43 4c5.23 4.67 8.59 6 13.74 5.52l3.66-.27zm0-20c0 7.58 0 7.77-1.91 8.62-4.14 1.89-7.88.68-12.34-4-3.12-3.28-6-4.88-8.64-4.88s-4.39 1-9 5a28.52 28.52 0 0 1-5.86 4c-3.83 1.46-7 .54-10.79-3.15-2.31-2.23-2.44-2.63-2.44-7.83V48h51zM67.32 38a8.62 8.62 0 0 1-5.27-5.86c-.48-1.94-.42-2 1.63-1.39 4.71 1.42 6.07 2.64 7.33 6.61.62 1.93-.3 2.09-3.69.64zm11.33-1.52A3.18 3.18 0 0 1 80.27 35c1-.38 1-.19-.18 1.07-1.63 1.75-2 1.87-1.44.41zm39.7 40.82h-14.58V60.74c0-9.1-.23-16.87-.46-17.25s-5.63-.69-12-.69h-11.6l2.71-2.48c2.28-2.09 2.77-3.1 3.09-6.37s.14-4-.91-4.36c-1.7-.66-6.91 1-8.62 2.67-1.33 1.33-1.4 1.32-2.37-.48-2.16-4-14-8.1-15.74-5.4-2.14 3.39.84 11.8 5.21 14.71l2.52 1.67-11.52.24-11.51.21-.21 17.06-.2 17.06H14.25l.51-4.69a83.64 83.64 0 0 1 5.38-20.69l1.92-4.45 4.63-.3A23 23 0 0 0 48 26.71c.48-4.68.76-4.89 9.22-6.78A64.66 64.66 0 0 1 80 18.74c15.26 1.83 24.59 6.11 34.25 15.72a54.89 54.89 0 0 1 14.36 22.81c1.7 4.81 4.32 16.52 4.32 19.33 0 .4-6.55.65-14.58.65z" fill="currentColor"/></symbol><symbol id="icon-components" viewBox="0 0 518 518"><path fill="currentColor" d="M440 78a255.91 255.91 0 0 0-362 0 255.91 255.91 0 0 0 0 362 255.91 255.91 0 0 0 362 0 255.91 255.91 0 0 0 0-362zm-10.7 351.3A240.84 240.84 0 0 1 88.7 88.7a240.84 240.84 0 0 1 340.6 340.6z" stroke="currentColor" stroke-miterlimit="10" stroke-width="6"/><path fill="currentColor" d="M453.8 176l-13.8 6.4a208.58 208.58 0 0 1 19.6 88.9h15.2a222.76 222.76 0 0 0-21-95.3zm-42.3-65.9A224.22 224.22 0 0 0 252 44v15.2a209.32 209.32 0 0 1 148.8 61.6 213.15 213.15 0 0 1 33.1 42.8l13.1-7.7a230.42 230.42 0 0 0-35.5-45.8z" stroke="currentColor" stroke-miterlimit="10" stroke-width="6"/><path fill="currentColor" d="M342.6 312.2h-8.7c-15 0-43 2.8-61.2 21a53.12 53.12 0 0 0-6.4 7.8v-41.4h.9c15 0 43-2.7 61.2-21 25-25 20.8-68.1 20.7-69.9a7.43 7.43 0 0 0-6.5-6.5h-8.7c-15 0-43 2.8-61.2 21a53.12 53.12 0 0 0-6.4 7.8v-19c8.2-7.3 32.1-31.8 32.1-61.7 0-35.3-33.4-62.9-34.8-64a7.24 7.24 0 0 0-9.2 0c-1.5 1.2-34.8 28.8-34.8 64 0 29.9 24 54.3 32.1 61.7v18.6a59.79 59.79 0 0 0-6.4-7.9c-18.3-18.3-46.2-21-61.2-21h-8.7a7.43 7.43 0 0 0-6.5 6.5c0 1.8-4.3 44.9 20.7 69.9 18.3 18.3 46.2 21 61.2 21h.9v41a50.67 50.67 0 0 0-6.5-7.4c-18.3-18.3-46.2-21-61.2-21h-8.7a7.43 7.43 0 0 0-6.5 6.5c0 1.8-4.3 44.9 20.7 69.9 18.3 18.3 46.2 21 61.2 21h.9v59.6a7.3 7.3 0 0 0 14.6 0v-59.1h.8c15 0 43-2.7 61.2-21 25-25 20.8-68.1 20.7-69.9a7 7 0 0 0-6.3-6.5zM200 268.4c-15.1-15.1-16.8-40.3-16.8-51.9h.9c10.3 0 35.8 1.6 51 16.8s16.8 40.3 16.8 51.9c-9.9.2-36.3-1.2-51.9-16.8zM251.9 395c-9.9.2-36.3-1.2-51.9-16.8-15.1-15.1-16.8-40.3-16.8-51.9 10 0 36.4 1.2 51.9 16.8s16.9 40.4 16.8 51.9zm7.4-196h0c-8.4-8.2-24.9-27.2-24.9-48.6s16.6-40.3 24.8-48.5c8.3 8.2 24.8 27.2 24.8 48.5s-16.4 40.4-24.7 48.6zm24 34.2l-.4.1c15.1-15.1 40.7-16.8 51-16.8h.9c0 11.6-1.5 36.4-16.8 51.9s-41.9 17-51.9 16.8c.3-11.9 2-36.8 17.2-52zm35.1 145.1c-15.2 15.5-40.6 16.8-51 16.8h-.9c0-11.7 1.7-36.8 16.8-51.9l-.1-.1c15.1-15.1 40.7-16.8 51-16.8h.9c0 11.6-1.5 36.5-16.7 52z" stroke="currentColor" stroke-miterlimit="10" stroke-width="5"/></symbol><symbol id="icon-delivery" viewBox="0 0 55 54.03"><path d="M52.07 24.91h-1.35v26.21a2.92 2.92 0 0 1-2.93 2.91H7.21a2.92 2.92 0 0 1-2.93-2.91V24.91H2.93A2.92 2.92 0 0 1 0 22.03v-6.94a2.93 2.93 0 0 1 2.93-2.92h7.63a7.46 7.46 0 0 1-2-5.09V6.7A6.82 6.82 0 0 1 12.12.92a7.11 7.11 0 0 1 7 0l3.47 1.94a12.13 12.13 0 0 1 4.91 5.17 12.13 12.13 0 0 1 4.93-5.21L35.9.92a7.11 7.11 0 0 1 7 0 6.82 6.82 0 0 1 3.56 5.78v.38a7.46 7.46 0 0 1-2 5.09h7.63A2.93 2.93 0 0 1 55 15.09v6.94a2.92 2.92 0 0 1-2.93 2.88zM33 28.6h4.66a1.22 1.22 0 1 1 0 2.43H33V51.6h14.79a.48.48 0 0 0 .49-.48V24.91H33zM6.72 51.12a.48.48 0 0 0 .49.48H22V31.03h-5a1.22 1.22 0 1 1 0-2.43h5v-3.69H6.72zM2.93 14.6a.49.49 0 0 0-.49.49v6.94a.49.49 0 0 0 .49.49H22V14.6zm18.44-9.57l-3.47-2a4.67 4.67 0 0 0-4.58 0A4.46 4.46 0 0 0 11 6.78v.3a5.11 5.11 0 0 0 5.13 5.09h10.08a9.58 9.58 0 0 0-4.84-7.14zm3.07 9.62v37h6.12v-37zM44 6.78a4.46 4.46 0 0 0-2.32-3.75 4.67 4.67 0 0 0-4.58 0l-3.47 2a9.58 9.58 0 0 0-4.84 7.19h10.08A5.11 5.11 0 0 0 44 7.08zm8.56 8.31a.49.49 0 0 0-.49-.49H33v7.89h19.07a.49.49 0 0 0 .49-.49zm-41.4 15.94H11a1.22 1.22 0 1 1 0-2.43h.12a1.22 1.22 0 1 1 0 2.43zm32.42 0h-.12a1.22 1.22 0 1 1 0-2.43h.12a1.22 1.22 0 1 1 0 2.43z" fill="currentColor" fill-rule="evenodd"/></symbol><symbol id="icon-instagram" viewBox="0 0 512.15 512.25"><path fill="currentColor" d="M373.83.13h-235.4C62.23.13.13 62.23.13 138.43v235.3c0 76.3 62.1 138.4 138.3 138.4h235.3c76.3 0 138.3-62.1 138.3-138.3v-235.4c.1-76.2-62-138.3-138.2-138.3zm96.9 373.7a97.09 97.09 0 0 1-97 97h-235.3a97.09 97.09 0 0 1-97-97v-235.4a97.09 97.09 0 0 1 97-97h235.3a97.09 97.09 0 0 1 97 97z" stroke="#000" stroke-miterlimit="10" stroke-width=".25"/><path fill="currentColor" d="M370.73 238.23a113.34 113.34 0 0 0-32.4-64.3 114.58 114.58 0 0 0-64.3-32.4 112 112 0 0 0-33.7 0 114.82 114.82 0 0 0 16.6 228.4 109.41 109.41 0 0 0 17.1-1.3 114.75 114.75 0 0 0 96.7-130.4zm-102.8 89.5a73.441 73.441 0 0 1-21.5-145.3 73.3 73.3 0 0 1 21.6 0 73.43 73.43 0 0 1-.1 145.3zm132.2-215.6a20.7 20.7 0 0 0-35.3 14.6 20.42 20.42 0 0 0 6.1 14.6 20.7 20.7 0 0 0 35.3-14.6 20.42 20.42 0 0 0-6.1-14.6z"/></symbol><symbol id="icon-twitter" viewBox="0 0 44.05 36.86"><path d="M42.87 4.22a2.85 2.85 0 0 0-1-3 2.79 2.79 0 0 0-1.72-.64A2.9 2.9 0 0 0 38.7 1a13 13 0 0 1-2.78 1.24 10.71 10.71 0 0 0-17.13 7.02A19.64 19.64 0 0 1 7.7 2.49a2.82 2.82 0 0 0-2.19-1.05h-.22a2.84 2.84 0 0 0-2.23 1.4 10.69 10.69 0 0 0-1.45 5.39 10.84 10.84 0 0 0 .64 3.69 2.88 2.88 0 0 0-.71 1.89 10.86 10.86 0 0 0 2.83 7.33 2.77 2.77 0 0 0 .06 1.48 10.64 10.64 0 0 0 3.18 4.82 13.29 13.29 0 0 1-2.9.32 13.56 13.56 0 0 1-1.55-.09h-.33a2.84 2.84 0 0 0-1.53 5.2 25.17 25.17 0 0 0 13.6 4C30.56 36.86 40 24.26 40.14 12a18.58 18.58 0 0 0 3.34-3.73 2.79 2.79 0 0 0 .57-1.71 2.83 2.83 0 0 0-1.18-2.34zm-5.59 6.38v1C37.3 22 29.38 34 14.9 34a22.27 22.27 0 0 1-12.07-3.52 16.79 16.79 0 0 0 1.88.11 15.82 15.82 0 0 0 9.78-3.37 7.89 7.89 0 0 1-7.36-5.47 7.29 7.29 0 0 0 1.48.15 7.91 7.91 0 0 0 2.08-.28 7.88 7.88 0 0 1-6.32-7.72v-.1a7.84 7.84 0 0 0 3.57 1A7.89 7.89 0 0 1 5.5 4.27a22.33 22.33 0 0 0 16.23 8.22 7.5 7.5 0 0 1-.2-1.79 7.88 7.88 0 0 1 13.62-5.39 15.62 15.62 0 0 0 5-1.91 7.92 7.92 0 0 1-3.47 4.36 15.52 15.52 0 0 0 4.52-1.24 15.84 15.84 0 0 1-3.92 4.08z" fill="currentColor"/></symbol><symbol id="icon-vk" viewBox="0 0 520.03 306.6"><path fill="currentColor" d="M493.25 233.2c-11.1-13.3-23.7-25.3-35.9-36.8-4.3-4.1-8.7-8.2-13-12.4h0c-5.7-5.6-8.5-9.6-8.8-12.5s1.7-7.2 6.2-13.5c6.8-9.5 14-19 21-28.2 6.2-8.2 12.6-16.6 18.8-25.1l1.4-1.9c12-16.6 24.4-33.8 31-54.7 1.9-6 3.9-14.9-.9-22.7s-13.6-10.1-19.8-11.2a51.88 51.88 0 0 0-8.6-.6l-77.8-.1c-13.5-.2-22.8 6.2-27.9 19-4.1 10.2-8.9 22.1-14.4 33.3-10.7 21.7-24.2 46.7-43.8 67.5l-.9.9c-1.3 1.4-3.5 3.8-4.6 4.3-2.1-1.3-4.6-9-4.5-13v-.3l-.1-89.9a6.6 6.6 0 0 0-.1-1.4c-1.7-12.8-5.1-25.7-25.4-29.7a13.55 13.55 0 0 0-2-.2h-80.9c-15.2 0-23.3 7-29.7 14.5-1.9 2.2-6.8 8.1-4.3 15.2s10.2 8.7 12.7 9.2c8.8 1.7 13.4 6.7 14.8 16.2 2.8 18.5 3.1 38.3 1.1 62.3-.6 6.4-1.6 11.3-3.4 15.4a12.55 12.55 0 0 1-1.2 2.2 10.1 10.1 0 0 1-2.2-1.2c-6.2-4.2-10.9-10.8-15.4-17.2-18-25.5-33.2-53.6-46.4-86-5.4-13.3-15.6-20.7-28.7-20.9-24.9-.4-48-.4-70.5 0-10.6.2-18 3.5-22.1 9.9s-3.9 14.6.4 24.3c31.2 69.4 59.5 119.8 91.8 163.6 22.8 30.8 45.7 52.2 72.1 67.4 27.8 15.9 59.1 23.7 95.4 23.7q6.15 0 12.6-.3c22.4-1 31.5-9.9 32.5-31.8.6-11.5 1.8-20.9 6.3-29 1.2-2.3 2.7-3.8 3.8-4.1s3.3.4 5.6 1.9a61.17 61.17 0 0 1 10.9 9.8c3 3.3 6.1 6.8 9.1 10.1 6.3 7.1 12.9 14.4 19.8 21.4 15.5 15.8 33.5 23.1 53.3 21.6h71.9A23.94 23.94 0 0 0 512 289.7c5-8.9 4.9-20.2-.2-30.1-5.35-10.1-12.35-19-18.55-26.4zm1 46.8c-1 1.7-2.2 2.1-2.8 2.1h-72c-14 1.2-25.9-3.8-37.5-15.5-6.5-6.7-12.9-13.8-19.1-20.7-3-3.4-6.1-6.9-9.3-10.3a78.65 78.65 0 0 0-14.9-13.1c-9.2-6-16.9-5.8-21.7-4.6s-11.5 4.6-16.7 14c-6.7 12.2-8.2 25.4-8.8 37.9-.3 7.6-1.6 9.6-2.2 10.1-.7.7-3.1 1.8-10.9 2.2-37.8 1.8-69.5-5-96.9-20.7-23.9-13.7-44.8-33.3-65.8-61.8-31.4-42.5-59-91.8-89.6-159.8a14.33 14.33 0 0 1-1.5-4.8 15 15 0 0 1 5-.6c22.2-.4 45.1-.4 69.8 0 3.4.1 7.2 1.1 10.1 8.2 13.8 33.9 29.7 63.3 48.6 90.1 5 7.1 11.3 15.9 20.5 22.2 8.4 5.8 15.3 5.5 19.5 4.3s10.2-4.7 14.2-14.1c2.6-6.1 4.1-12.9 4.9-21.6 2.2-25.7 1.8-47-1.2-67.1-2.1-14.4-9.6-24.8-21.3-30.1a15.78 15.78 0 0 1 7.7-1.5h79.9c4.5 1 5.4 2.2 5.7 2.6 1.3 1.7 2 5.8 2.5 9l.1 89.1c-.2 8.5 4 27.5 18.1 32.7.1 0 .2.1.4.1 12.9 4.2 21.4-4.9 25.9-9.8l.8-.9c21.5-22.8 36-49.5 47.3-72.5 5.9-11.9 10.9-24.2 15.1-34.8 2.1-5.3 4-6.2 8.6-6.1h.2l77.9.1a28.56 28.56 0 0 1 5.2.3 16 16 0 0 1 5.7 1.7c.1.6 0 2.3-1.1 5.8C489 59.9 478.05 75 466.55 91l-1.4 1.9c-6 8.3-12.4 16.7-18.5 24.8-7.1 9.3-14.4 19-21.3 28.7-14.8 20.7-13.5 34.4 5 52.4q6.6 6.45 13.2 12.6c12.3 11.6 23.9 22.6 34.2 35 5.4 6.5 11.6 14.4 16 23 2.3 4.4 1.7 8.5.5 10.6z" stroke="currentColor" stroke-miterlimit="10" stroke-width="8"/></symbol></svg></div>
+    <header class="main-header">
+      <div class="main-header__wrapper"><a class="main-header__logo logo">Cakes</a>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <button class="main-nav__toggle" type="button"><span class="visually-hidden">Меню</span></button>
+          <ul class="main-nav__list site-list">
+            <li class="site-list__item"><a class="site-list__link" href="#our-cakes">Наши торты</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#individual">Индивидуальный заказ</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#feedbacks">Отзывы</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#about-us">О нас</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#how-order">Как заказать</a></li>
+            <li class="site-list__item"><a class="site-list__link" href="#contacts">Контакты</a></li>
+          </ul>
+        </nav><span class="main-header__phone main-phone">+7 906 899 92 96</span>
+      </div>
+    </header>
+    <main class="main-page">
+      <section class="upper-block">
+        <div class="upper-block__wrapper">
+          <h1 class="upper-block__title main-title main-title--big">Торты<br> на заказ</h1>
+          <h2 class="upper-block__sub-title main-subtitle">Ручная работа</h2>
+          <ul class="upper-block__list">
+            <li class="upper-block__item">
+              <svg class="upper-block__item-img" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-components"></use>
+              </svg><span>Натуральные ингредиенты</span>
+            </li>
+            <li class="upper-block__item">
+              <svg class="upper-block__item-img" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="#icon-delivery"></use>
+              </svg><span>Доставка бесплатно при заказе от 2000 рублей*</span>
+            </li>
+          </ul><a class="upper-block__button button" href="#">Выбрать торт</a>
+        </div>
+      </section>
+      <section class="our-cakes" id="our-cakes">
+        <h2 class="our-cakes__title main-title">Наши торты</h2>
+        <ul class="our-cakes__list">
+          <li class="our-cakes__item"><a class="our-cakes__link" href="#">
+              <h3 class="our-cakes__category">Классические</h3><span class="our-cakes__count">24 вида</span>
+              <picture>
+                <source type="image/webp" media="(min-width: 767)" srcset="img/классические-tablet.webp 1x, img/классические-tablet@2x.webp 2x">
+                <source media="(min-width: 767px)" srcset="img/классические-tablet.png 1x, img/классические-tablet@2x.png 2x"><img class="our-cakes__photo" alt="Классические" src="img/классические.png" srcset="img/классические@2x.png 2x">
+              </picture></a></li>
+          <li class="our-cakes__item"><a class="our-cakes__link" href="#">
+              <h3 class="our-cakes__category">Муссовые</h3><span class="our-cakes__count">12 видов</span>
+              <picture>
+                <source type="image/webp" media="(min-width: 767)" srcset="img/муссовые-tablet.webp 1x, img/муссовые-tablet@2x.webp 2x">
+                <source media="(min-width: 767px)" srcset="img/муссовые-tablet.png 1x, img/муссовые-tablet@2x.png 2x"><img class="our-cakes__photo" alt="Муссовые" src="img/муссовые.png" srcset="img/муссовые@2x.png 2x">
+              </picture></a></li>
+          <li class="our-cakes__item"><a class="our-cakes__link" href="#">
+              <h3 class="our-cakes__category">Свадебные</h3><span class="our-cakes__count">20 видов</span>
+              <picture>
+                <source type="image/webp" media="(min-width: 767)" srcset="img/свадебные-tablet.webp 1x, img/свадебные-tablet@2x.webp 2x">
+                <source media="(min-width: 767px)" srcset="img/свадебные-tablet.png 1x, img/свадебные-tablet@2x.png 2x"><img class="our-cakes__photo" alt="Свадебные" src="img/свадебные.png" srcset="img/свадебные@2x.png 2x">
+              </picture></a></li>
+          <li class="our-cakes__item"><a class="our-cakes__link" href="#">
+              <h3 class="our-cakes__category">Мужчинам</h3><span class="our-cakes__count">12 видов</span>
+              <picture>
+                <source type="image/webp" media="(min-width: 767)" srcset="img/мужчинам-tablet.webp 1x, img/мужчинам-tablet@2x.webp 2x">
+                <source media="(min-width: 767px)" srcset="img/мужчинам-tablet.png 1x, img/мужчинам-tablet@2x.png 2x"><img class="our-cakes__photo" alt="Мужчинам" src="img/мужчинам.png" srcset="img/мужчинам@2x.png 2x">
+              </picture></a></li>
+          <li class="our-cakes__item"><a class="our-cakes__link" href="#">
+              <h3 class="our-cakes__category">Женщинам</h3><span class="our-cakes__count">16 видов</span>
+              <picture>
+                <source type="image/webp" media="(min-width: 767)" srcset="img/женщинам-tablet.webp 1x, img/женщинам-tablet@2x.webp 2x">
+                <source media="(min-width: 767px)" srcset="img/женщинам-tablet.png 1x, img/женщинам-tablet@2x.png 2x"><img class="our-cakes__photo" alt="Женщинам" src="img/женщинам.png" srcset="img/женщинам@2x.png 2x">
+              </picture></a></li>
+          <li class="our-cakes__item"><a class="our-cakes__link" href="#">
+              <h3 class="our-cakes__category">Детские</h3><span class="our-cakes__count">18 видов</span>
+              <picture>
+                <source type="image/webp" media="(min-width: 767)" srcset="img/детские-tablet.webp 1x, img/детские-tablet@2x.webp 2x">
+                <source media="(min-width: 767px)" srcset="img/детские-tablet.png 1x, img/детские-tablet@2x.png 2x"><img class="our-cakes__photo" alt="Детские" src="img/детские.png" srcset="img/детские@2x.png 2x">
+              </picture></a></li>
+        </ul>
+      </section>
+      <section class="individual" id="individual">
+        <h2 class="individual__title main-title">Индивидуальный<br> заказ</h2>
+        <h3 class="individual__sub-title main-subtitle">Соберите торт в 3 шага</h3>
+        <ol class="individual__list">
+          <li class="individual__item individual__item--filling">
+            <h3 class="individual__item-title">Выберите начинку</h3>
+            <ul class="individual__filling-list">
+              <li class="individual__filling-item">
+                <div class="individual__filling-container">
+                  <h4 class="individual__filling-title">Шоколадный ганаш</h4>
+                  <p class="individual__filling-description">Ароматный шоколадный бисквит, густой шоколадный крем – самый шоколадный из всех возможных десертов!</p>
+                  <p class="individual__filling-price">1000 руб/кг</p>
+                  <button class="individual__filling-btn button" type="button">Выбрать</button><span class="individual__filling-count">1/3</span>
+                </div>
+                <picture>
+                  <source type="image/webp" media="(min-width: 767px)" srcset="img/ганаш-desktop.webp 1x, img/ганаш-desktop@2x.webp 2x">
+                  <source media="(min-width: 767px)" srcset="img/ганаш-desktop.png 1x, img/ганаш-desktop@2x.png 2x"><img class="individual__filling-photo" alt="Шоколадный ганаш" src="img/ганаш.png" srcset="img/ганаш@2x.png 2x">
+                </picture>
+              </li>
+              <li class="individual__filling-item visually-hidden">
+                <h4 class="individual__filling-title">Йогуртовая начинка</h4>
+                <p class="individual__filling-description">Йогуртовая начинка для торта входит в список самых вкусных, предназначенных для торта!</p>
+                <p class="individual__filling-price">2000 руб/кг</p>
+                <picture class="a">
+                  <source type="image/webp" media="(min-width: 1365px)" srcset="img/ганаш-desktop.webp 1x, img/ганаш-desktop@2x.webp 2x">
+                  <source media="(min-width: 1365px)" srcset="img/ганаш-desktop.png 1x, img/ганаш-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 767)" srcset="img/ганаш-tablet.webp 1x, img/ганаш-tablet@2x.webp 2x">
+                  <source media="(min-width: 767px)" srcset="img/ганаш-tablet.png 1x, img/ганаш-tablet@2x.png 2x"><img class="individual__filling-photo" alt="Йогуртовая начинка" src="img/ганаш.png" srcset="img/ганаш@2x.png 2x">
+                </picture><span class="individual__filling-count">2/3</span>
+                <button class="individual__filling-btn button" type="button">Выбрать</button>
+              </li>
+              <li class="individual__filling-item visually-hidden">
+                <h4 class="individual__filling-title">Красный бархат</h4>
+                <p class="individual__filling-description">начинка имеющая непревзойденный и очень нежный вкус с содержанием кусочков свежей клубники!</p>
+                <p class="individual__filling-price">2500 руб/кг</p>
+                <picture>
+                  <source type="image/webp" media="(min-width: 1365px)" srcset="img/ганаш-desktop.webp 1x, img/ганаш-desktop@2x.webp 2x">
+                  <source media="(min-width: 1365px)" srcset="img/ганаш-desktop.png 1x, img/ганаш-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 767)" srcset="img/ганаш-tablet.webp 1x, img/ганаш-tablet@2x.webp 2x">
+                  <source media="(min-width: 767px)" srcset="img/ганаш-tablet.png 1x, img/ганаш-tablet@2x.png 2x"><img class="individual__filling-photo" alt="Красный бархат" src="img/ганаш.png" srcset="img/ганаш@2x.png 2x">
+                </picture><span class="individual__filling-count">3/3</span>
+                <button class="individual__filling-btn button" type="button">Выбрать</button>
+              </li>
+            </ul>
+            <ul class="switch individual__filling-switch">
+              <li class="switch__item">
+                <button class="switch__button switch__button--left individual__filling-switch-l" type="button"><span class="visually-hidden">Назад</span></button>
+              </li>
+              <li class="switch__item">
+                <button class="switch__button switch__button--right individual__filling-switch-r" type="button"><span class="visually-hidden">Вперед</span></button>
+              </li>
+            </ul>
+            <ul class="toggle individual__filling-toggles">
+              <li class="toggle__item">
+                <button class="toggle__button toggle__button--active individual__filling-toggle"><span class="visually-hidden">1</span></button>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__filling-toggle"><span class="visually-hidden">2</span></button>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__filling-toggle"><span class="visually-hidden">3</span></button>
+              </li>
+            </ul>
+          </li>
+          <li class="individual__item individual__item--size">
+            <h3 class="individual__item-title">Размер</h3>
+            <ul class="individual__size-list">
+              <li class="individual__size-item">
+                <div class="individual__size-container">
+                  <svg class="individual__size-item-img individual__size-item-img--one" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 77 77">
+                    <circle cx="50%" cy="50%" r="48%" fill="none" stroke="#2d2829" stroke-linecap="round" stroke-dasharray="0.001 13%"></circle>
+                  </svg><span class="individual__size-item-weight">1 кг</span>
+                </div>
+                <div class="individual__size-desContainer"><span class="individual__size-item-diameter">17-18 см</span><span class="individual__size-item-peoples">(1 кг - 6 персон)</span></div>
+                <button class="individual__size-btn button" type="button">Выбрать</button>
+              </li>
+              <li class="individual__size-item individual__size-item--nonactive">
+                <div class="individual__size-container">
+                  <svg class="individual__size-item-img individual__size-item-img--two" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 106 106" width="106" height="106">
+                    <circle cx="50%" cy="50%" r="48%" fill="none" stroke="#2d2829" stroke-linecap="round" stroke-dasharray="0.001 10%"></circle>
+                  </svg><span class="individual__size-item-weight">2 кг</span>
+                </div>
+                <div class="individual__size-desContainer"><span class="individual__size-item-diameter">23-14 см</span><span class="individual__size-item-peoples">(10-12 персон)</span></div>
+                <button class="individual__size-btn button" type="button">Выбрать</button>
+              </li>
+              <li class="individual__size-item individual__size-item--nonactive">
+                <div class="individual__size-container">
+                  <svg class="individual__size-item-img individual__size-item-img--five" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 121 121" width="121" height="121">
+                    <circle cx="50%" cy="50%" r="48%" fill="none" stroke="#2d2829" stroke-linecap="round" stroke-dasharray="0.001 8%"></circle>
+                    <circle cx="50%" cy="50%" r="34%" fill="none" stroke="#2d2829" stroke-linecap="round" stroke-dasharray="0.001 8%"></circle>
+                  </svg><span class="individual__size-item-weight">5 кг</span>
+                </div>
+                <div class="individual__size-desContainer"><span class="individual__size-item-diameter">Два яруса 25 и 20 см</span><span class="individual__size-item-peoples">(15-20 персон)</span></div>
+                <button class="individual__size-btn button" type="button">Выбрать</button>
+              </li>
+              <li class="individual__size-item individual__size-item--nonactive">
+                <div class="individual__size-container">
+                  <svg class="individual__size-item-img individual__size-item-img--eight" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 142 142" width="142" height="142">
+                    <circle cx="50%" cy="50%" r="48%" fill="none" stroke="#2d2829" stroke-linecap="round" stroke-dasharray="0.001 7%"></circle>
+                    <circle cx="50%" cy="50%" r="32%" fill="none" stroke="#2d2829" stroke-linecap="round" stroke-dasharray="0.001 6.5%"></circle>
+                    <circle cx="50%" cy="50%" r="22%" fill="none" stroke="#2d2829" stroke-linecap="round" stroke-dasharray="0.001 6%"></circle>
+                  </svg><span class="individual__size-item-weight">8 кг</span>
+                </div>
+                <div class="individual__size-desContainer"><span class="individual__size-item-diameter">Три яруса 30,25 и 18 см</span><span class="individual__size-item-peoples">(25-30 персон)</span></div>
+                <button class="individual__size-btn button" type="button">Выбрать</button>
+              </li>
+            </ul>
+            <ul class="toggle individual__size-toggles">
+              <li class="toggle__item">
+                <button class="toggle__button individual__size-toggle toggle__button--active"></button><span class="visually-hidden">1</span>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__size-toggle"></button><span class="visually-hidden">2</span>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__size-toggle"></button><span class="visually-hidden">3</span>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__size-toggle"></button><span class="visually-hidden">4</span>
+              </li>
+            </ul>
+          </li>
+          <li class="individual__item individual__item--design">
+            <h3 class="individual__item-title">Оформление</h3>
+            <ul class="individual__design-list">
+              <li class="individual__design-item visually-hidden">
+                <h4 class="individual__design-title">Ягодное ассорти</h4>
+                <p class="individual__design-price">700 руб/кг</p>
+                <picture>
+                  <source type="image/webp" media="(min-width: 767)" srcset="img/ягоды-tablet.webp 1x, img/ягоды-tablet@2x.webp 2x">
+                  <source media="(min-width: 767px)" srcset="img/ягоды-tablet.png 1x, img/ягоды-tablet@2x.png 2x"><img class="individual__design-photo" alt="Ягодное ассорти" src="img/ягоды.png" srcset="img/маршмэллоу@2x.png 2x">
+                </picture><span class="individual__design-count">1/4</span>
+                <button class="individual__design-btn button" type="button">Выбрать</button>
+              </li>
+              <li class="individual__design-item">
+                <h4 class="individual__design-title">Маршмэллоу</h4>
+                <p class="individual__design-price">600 руб/кг</p>
+                <picture>
+                  <source type="image/webp" media="(min-width: 767)" srcset="img/маршмэллоу-tablet.webp 1x, img/маршмэллоу-tablet@2x.webp 2x">
+                  <source media="(min-width: 767px)" srcset="img/маршмэллоу-tablet.png 1x, img/маршмэллоу-tablet@2x.png 2x"><img class="individual__design-photo" alt="Маршмэллоу" src="img/маршмэллоу.png" srcset="img/маршмэллоу@2x.png 2x">
+                </picture><span class="individual__design-count">2/4</span>
+                <button class="individual__design-btn button" type="button">Выбрать</button>
+              </li>
+            </ul>
+            <ul class="switch individual__design-switch">
+              <li class="switch__item">
+                <button class="switch__button switch__button--left individual__design-switch-l" type="button"></button><span class="visually-hidden">Назад</span>
+              </li>
+              <li class="switch__item">
+                <button class="switch__button switch__button--right individual__design-switch-r" type="button"></button><span class="visually-hidden">Вперед</span>
+              </li>
+            </ul>
+            <ul class="toggle individual__design-toggles">
+              <li class="toggle__item">
+                <button class="toggle__button individual__design-toggle toggle__button--active"></button><span class="visually-hidden">1</span>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__design-toggle"></button><span class="visually-hidden">2</span>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__design-toggle"></button><span class="visually-hidden">3</span>
+              </li>
+              <li class="toggle__item">
+                <button class="toggle__button individual__design-toggle"></button><span class="visually-hidden">4</span>
+              </li>
+            </ul>
+          </li>
+        </ol>
+        <section class="order">
+          <h3 class="order__title main-title">Ваш выбор</h3>
+          <form class="order__form" action="https://echo.htmlacademy.ru" method="post">
+            <p class="order__container">
+              <label class="order__label" for="filling">Начинка</label>
+              <input class="order__input" id="filling" name="filling">
+            </p>
+            <p class="order__container">
+              <label class="order__label" for="size">Размер</label>
+              <input class="order__input" id="size" name="size">
+            </p>
+            <p class="order__container">
+              <label class="order__label" for="design">Оформление</label>
+              <input class="order__input" id="design" name="design">
+            </p>
+            <button class="order__button button" type="submit">Заказать торт</button>
+          </form>
+        </section>
+      </section>
+      <section class="feedbacks" id="feedbacks">
+        <h2 class="feedbacks__title main-title">Отзывы</h2>
+        <ul class="feedbacks__list">
+          <li class="feedbacks__item">
+            <picture><img class="feedbacks__photo" src="img/user-photo.png" srcset="img/user-photo@2x.png 2x" alt="Фото автора отзыва"></picture>
+            <div class="feedbacks__wrapper">
+              <p class="feedbacks__name">Мария</p>
+              <p class="feedbacks__age">юрист, 33 года</p>
+              <p class="feedbacks__text">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
+                <button class="feedbacks__read-more" type="button">Развернуть</button>
+              </p><span class="feedbacks__count">1/3</span>
+            </div>
+          </li>
+          <li class="feedbacks__item visually-hidden">
+            <picture><img class="feedbacks__photo" src="img/user-photo.png" srcset="img/user-photo@2x.png 2x" alt="Фото автора отзыва"></picture>
+            <div class="feedbacks__wrapper">
+              <p class="feedbacks__name">Прасковья</p>
+              <p class="feedbacks__age">актриса, 21 год</p>
+              <p class="feedbacks__text">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
+                <button class="feedbacks__read-more" type="button">Развернуть</button>
+              </p><span class="feedbacks__count">1/3</span>
+            </div>
+          </li>
+          <li class="feedbacks__item visually-hidden">
+            <picture><img class="feedbacks__photo" src="img/user-photo.png" srcset="img/user-photo@2x.png 2x" alt="Фото автора отзыва"></picture>
+            <div class="feedbacks__wrapper">
+              <p class="feedbacks__name">Александра</p>
+              <p class="feedbacks__age">учитель, 40 лет</p>
+              <p class="feedbacks__text">Заказывала торт брауни на юбилей мужа. Гости были в восторге! Отдельное спасибо за своевременную доставку! Теперь будем заказывать торты только у вас для наших семейных праздников:)
+                <button class="feedbacks__read-more" type="button">Развернуть</button>
+              </p><span class="feedbacks__count">1/3</span>
+            </div>
+          </li>
+        </ul>
+        <ul class="switch feedbacks__switch">
+          <li class="switch__item">
+            <button class="switch__button switch__button--left feedbacks__switch-l" type="button"></button><span class="visually-hidden">Назад</span>
+          </li>
+          <li class="switch__item">
+            <button class="switch__button switch__button--right feedbacks__switch-r" type="button"></button><span class="visually-hidden">Вперед</span>
+          </li>
+        </ul>
+        <ul class="toggle feedbacks__toggles">
+          <li class="toggle__item">
+            <button class="toggle__button feedbacks__toggle toggle__button--active"></button><span class="visually-hidden">1</span>
+          </li>
+          <li class="toggle__item">
+            <button class="toggle__button feedbacks__toggle"></button><span class="visually-hidden">2</span>
+          </li>
+          <li class="toggle__item">
+            <button class="toggle__button feedbacks__toggle"></button><span class="visually-hidden">3</span>
+          </li>
+          <li class="toggle__item">
+            <button class="toggle__button feedbacks__toggle"></button><span class="visually-hidden">4</span>
+          </li>
+        </ul>
+      </section>
+      <section class="about-us" id="about-us">
+        <h2 class="about-us__title main-title">О нас</h2>
+        <div class="about-us__container">
+          <div class="about-us__text-container">
+            <h3 class="about-us__sub-title main-subtitle">О кондитере</h3><strong class="about-us__slogan">Кондитер – как призвание</strong>
+            <p class="about-us__text">Павел — профессиональный повар в различных гастрономических областях, но однажды его сердце покорило кондитерское искусство. <br>С ранних лет он увлекался утонченным мастерством и обратился к своим талантам как кондитер.</p><strong class="about-us__slogan">Принцип – натуральные ингредиенты</strong>
+            <p class="about-us__text">Сегодня Павел радует изделиями не только близких, но и тех, кто предпочитает качественную продукцию для торжества, а главным принципом является выбор натуральных ингредиентов.</p>
+          </div>
+          <ul class="about-us__list social-list">
+            <li class="about-us__list-item social-list__item "><a href="#">
+                <svg class="social-list__item-img social-list__item-img--vk" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg><span class="visually-hidden">Инстаграм</span></a></li>
+            <li class="about-us__list-item social-list__item"><a href="#">
+                <svg class="social-list__item-img social-list__item-img--instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use xlink:href="#icon-vk"></use>
+                </svg><span class="visually-hidden">Вконтакте</span></a></li>
+            <li class="about-us__list-item social-list__item social-list__item"><a href="#">
+                <svg class="social-list__item-img social-list__item-img--twitter" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use xlink:href="#icon-twitter"></use>
+                </svg><span class="visually-hidden">Твиттер</span></a></li>
+          </ul>
+          <picture><img class="about-us__photo" src="img/author-photo.png" srcset="img/author-photo@2x.png 2x" alt="Фото кондитера"></picture>
+        </div>
+        <blockquote class="about-us__quote">Я за простые рецепты. В Италии это называют cucina povera: когда обычные ингредиенты превращаются в божественное блюдо.</blockquote>
+      </section>
+      <section class="advantages">
+        <h2 class="advantages__title main-title">Наши преимущества</h2>
+        <h3 class="advantages__sub-title main-subtitle">Почему нас выбирают?</h3>
+        <ul class="advantages__list">
+          <li class="advantages__item">
+            <svg class="advantages__img advantages__img--first" xmlns="http://www.w3.org/2000/svg" width="60" height="60">
+              <use xlink:href="#icon-components"></use>
+            </svg><span class="advantages__text-container"><strong class="advantages__slogan">Без искусственных добавок</strong>
+              <p class="advantages__text">Работаем  с натуральными ингредиентами и свежими продуктами</p></span>
+          </li>
+          <li class="advantages__item"><img class="advantages__img advantages__img--last" src="../img/icon-cake.png"><span class="advantages__text-container"><strong class="advantages__slogan">Свежий торт в день торжества</strong>
+              <p class="advantages__text">Торты изготавливаются в течение суток до отправки</p></span></li>
+        </ul>
+      </section>
+      <section class="care">
+        <div class="care__container">
+          <h2 class="care__title main-title">Забота о клиентах</h2>
+          <h3 class="care__sub-title main-subtitle">Для нас важно</h3>
+          <p class="care__text">Нам важно чтобы каждый торт был безупречным, как внутри, так и снаружи, чтобы он был создан исключительно для вас и для вашего события.</p>
+        </div>
+      </section>
+      <section class="how-order" id="how-order">
+        <h2 class="how-order__title main-title">Как заказать</h2>
+        <ol class="how-order__list">
+          <li class="how-order__item">
+            <h3 class="how-order__item-title">Срок заказа</h3>
+            <p class="how-order__item-text">Размещать заказы желательно за 2-3 дня. На выходные заказы лучше размещать минимум за неделю.</p>
+          </li>
+          <li class="how-order__item">
+            <h3 class="how-order__item-title">Доставка по городу</h3>
+            <p class="how-order__item-text">Доставка в пределах города 200 рубей , при заказе на сумму более 2000 доставка бесплатно.</p>
+          </li>
+          <li class="how-order__item">
+            <h3 class="how-order__item-title">Доставка за городом</h3>
+            <p class="how-order__item-text">Доставка за пределами города рассчитывается индивидуально.</p>
+          </li>
+        </ol>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="contacts__container">
+          <h2 class="contacts__title main-title">Контакты</h2>
+          <h3 class="contacts__sub-title main-subtitle">Остались вопросы?</h3>
+          <form class="contacts__form">
+            <fieldset class="contacts__fieldset">
+              <legend class="contacts__description">Заполните форму ниже и наш кондитер свяжется с Вами</legend>
+              <label class="visually-hidden" for="email">Ваше имя</label>
+              <input class="contacts__field contacts__field--input" id="name" type="text" name="name" placeholder="Ваше имя" required>
+              <label class="visually-hidden" for="email">Ваш email адрес</label>
+              <input class="contacts__field contacts__field--input" id="email" type="email" name="email" placeholder="Email адрес" required>
+              <label class="visually-hidden" for="email">Ваше имя</label>
+              <textarea class="contacts__field contacts__field--textarea" placeholder="Ваш вопрос"></textarea>
+              <button class="contacts__button button" type="submit">Отправить</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="contacts__extra">
+          <p class="contacts__item">Или позвоните по телефону:<br> +7 906 899 92 96</p>
+          <p class="contacts__item">Наша почта : bakerybypavel@mail.ru</p>
+          <p class="contacts__item">Мы в соц. сетях:</p>
+          <ul class="contacts__list social-list">
+            <li class="social-list__item contacts__social-item"><a href="#"><span class="visually-hidden">Инстаграм</span>
+                <svg class="contacts__img" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use xlink:href="#icon-instagram"></use>
+                </svg></a></li>
+            <li class="social-list__item contacts__social-item"><a href="#"><span class="visually-hidden">Вконтакте</span>
+                <svg class="contacts__img contacts__img--vk" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                  <use xlink:href="#icon-vk"></use>
+                </svg></a></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer class="main-footer">
+      <div class="main-footer__wrapper"><a class="main-footer__logo logo">Cakes</a>
+        <ul class="main-footer__list">
+          <li class="main-footer__item"><a class="site-list__link" href="#our-cakes">Наши торты</a></li>
+          <li class="main-footer__item"><a class="site-list__link" href="#individual">Индивидуальный заказ</a></li>
+          <li class="main-footer__item"><a class="site-list__link" href="#feedbacks">Отзывы</a></li>
+          <li class="main-footer__item"><a class="site-list__link" href="#about-us">О нас</a></li>
+          <li class="main-footer__item"><a class="site-list__link" href="#how-order">Как заказать</a></li>
+          <li class="main-footer__item"><a class="site-list__link" href="#contacts">Контакты</a></li>
+        </ul><span class="main-footer__phone main-phone">+7 906 899 92 96</span>
+        <ul class="main-footer__social-list social-list">
+          <li class="social-list__item social-list__item--vk"><a href="#"><span class="visually-hidden">Инстаграм</span>
+              <svg class="main-footer__img main-footer__img--instagram" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <use xlink:href="#icon-instagram"></use>
+              </svg></a></li>
+          <li class="social-list__item social-list__item--inst"><a href="#"><span class="visually-hidden">Вконтакте</span>
+              <svg class="main-footer__img main-footer__img--vk" xmlns="http://www.w3.org/2000/svg" width="20" height="20">
+                <use xlink:href="#icon-vk"></use>
+              </svg></a></li>
+        </ul><span class="copyright">&copy;  2018 Cakes</span>
+      </div>
+    </footer>
+    <script src="script/libs.min.js"></script>
+    <script src="script/main.js"></script>
+  </body>
+</html>
