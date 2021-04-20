@@ -42,25 +42,25 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 
 //////////////// ПЕРЕКЛЮЧЕНИЕ КОММЕНТАРИЕВ ////////////////
-    if (reviews_toggles !== null) {
-        for (let i = 0; i < reviews_toggles.length; i++) {
-            reviews_toggles[i].addEventListener('click', function () {
-                // alert(i);
-                // В цикле проходимся по всем элементам, видимые скрываем
-                for (let i = 0; i < reviews.length; i++) {
-                    reviews[i].classList.add('individual__size-item--nonactive');
-                    reviews[i].classList.remove('animate-show');
-                    reviews_toggles[i].classList.remove('toggle__button--active')
-                }
-                // Показываем тот, который соответствует нажатой кнопке переключателя
-                if (reviews[i].classList.contains('individual__size-item--nonactive')) {
-                    reviews[i].classList.remove('individual__size-item--nonactive');
-                    reviews[i].classList.add('animate-show');
-                    reviews_toggles[i].classList.add('toggle__button--active')
-                }
-            });
-        }
-    }
+//     if (reviews_toggles !== null) {
+//         for (let i = 0; i < reviews_toggles.length; i++) {
+//             reviews_toggles[i].addEventListener('click', function () {
+//                 // alert(i);
+//                 // В цикле проходимся по всем элементам, видимые скрываем
+//                 for (let i = 0; i < reviews.length; i++) {
+//                     reviews[i].classList.add('individual__size-item--nonactive');
+//                     reviews[i].classList.remove('animate-show');
+//                     reviews_toggles[i].classList.remove('toggle__button--active')
+//                 }
+//                 // Показываем тот, который соответствует нажатой кнопке переключателя
+//                 if (reviews[i].classList.contains('individual__size-item--nonactive')) {
+//                     reviews[i].classList.remove('individual__size-item--nonactive');
+//                     reviews[i].classList.add('animate-show');
+//                     reviews_toggles[i].classList.add('toggle__button--active')
+//                 }
+//             });
+//         }
+//     }
 
     //////////////// ПЛАВНАЯ ПРОКРУТКА ////////////////
     for (let link of site_links) {
@@ -76,3 +76,66 @@ window.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+
+$('.feedbacks__list').slick({
+    dots: false,
+    dotsClass: "my-dots",
+    arrows: true,
+    adaptiveHeight: true,
+    prevArrow: $('.switch__button--right'),
+    nextArrow: $('.switch__button--left '),
+    // variableWidth: true
+});
+
+$('.individual__filling-list').slick({
+    dots: false,
+    dotsClass: "my-dots",
+    arrows: true,
+    adaptiveHeight: true,
+    prevArrow: $('.individual__filling-switch-r'),
+    nextArrow: $('.individual__filling-switch-l'),
+    // variableWidth: true
+});
+
+
+$('.individual__design-list').slick({
+    dots: false,
+    dotsClass: "my-dots",
+    arrows: true,
+    adaptiveHeight: true,
+    prevArrow: $('.individual__design-switch-r'),
+    nextArrow: $('.individual__design-switch-l'),
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                infinite: true,
+                arrows: false,
+                dots: false
+            }
+        },
+    ]
+    // variableWidth: true
+});
+
+
+if (window.matchMedia("(max-width: 768px)").matches) {
+    $('.individual__size-list').slick(
+        {
+            breakpoint: 768,
+            dots: false,
+            dotsClass: "my-dots",
+            arrows: false,
+            adaptiveHeight: true,
+        }
+    );
+}
+
+
+let filling_input = document.querySelector('#filling'),
+    size_input = document.querySelector('#size'),
+    design_input = document.querySelector('#design');
