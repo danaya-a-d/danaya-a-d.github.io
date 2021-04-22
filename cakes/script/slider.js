@@ -1,11 +1,21 @@
+
+
 $('.feedbacks__list').slick({
     dots: false,
     dotsClass: "my-dots",
     arrows: true,
     adaptiveHeight: true,
-    prevArrow: $('.switch__button--left'),
-    nextArrow: $('.switch__button--right '),
-    // variableWidth: true
+    prevArrow: $('.feedbacks__switch-l'),
+    nextArrow: $('.feedbacks__switch-r '),
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                dots: true,
+            }
+        },
+    ]
 });
 
 $('.individual__filling-list').slick({
@@ -15,7 +25,15 @@ $('.individual__filling-list').slick({
     adaptiveHeight: true,
     prevArrow: $('.individual__filling-switch-l'),
     nextArrow: $('.individual__filling-switch-r'),
-    // variableWidth: true
+    responsive: [
+        {
+            breakpoint: 768,
+            settings: {
+                arrows: false,
+                dots: true,
+            }
+        },
+    ]
 });
 
 
@@ -32,15 +50,15 @@ $('.individual__design-list').slick({
         {
             breakpoint: 768,
             settings: {
+                arrows: false,
+                dots: true,
+                dotsClass: "my-dots",
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                infinite: true,
-                arrows: false,
-                dots: false
+                infinite: true
             }
         },
     ]
-    // variableWidth: true
 });
 
 
@@ -48,7 +66,7 @@ if (window.matchMedia("(max-width: 768px)").matches) {
     $('.individual__size-list').slick(
         {
             breakpoint: 768,
-            dots: false,
+            dots: true,
             dotsClass: "my-dots",
             arrows: false,
             adaptiveHeight: true,
