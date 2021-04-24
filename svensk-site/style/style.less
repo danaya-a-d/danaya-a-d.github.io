@@ -1,0 +1,83 @@
+.reset-list() {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+body {
+  background-image: url("../img/background.jpg");
+}
+
+.main, .header, .footer {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  &__nav {
+    display: flex;
+    a {
+      color: black;
+      text-decoration: none;
+      margin-left: 60px;
+    }
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    max-width: 800px;
+  }
+  &__nav {
+    display: flex;
+  }
+  button {
+    margin-left: 60px;
+  }
+}
+
+.upper-block {
+  max-width: 1050px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.main-table {
+  max-width: 1220px;
+  margin: 0 auto;
+  background-color: white;
+}
+
+.main-table__list {
+  .reset-list;
+}
+
+.main-table__item {
+  display: flex;
+  div {
+    border: 1px solid lightgray;
+  }
+  &-casino {
+    width: 221px;
+  }
+  &-bonus {
+    width: 221px;
+  }
+  &-payout {
+    width: 318px
+  }
+  &-bonus {
+    width: 121px;
+  }
+  &-deposits {
+    width: 134px;
+  }
+  &-pay {
+    width: 210px;
+  }
+}
+
+.main-table__item-deposits {
+
+}
