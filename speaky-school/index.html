@@ -611,7 +611,8 @@
                 <ul class="header__contacts">
                     <li class="header__contact"><a href="#">+7 (495) 723-75-15</a></li>
                     <li class="header__contact"><a href="#">info@speaky.school</a></li>
-                    <li class="header__contact"><a href="#">108840, Россия,  г. Москва, г. Троицк, Троицкий бульвар, 6</a></li>
+                    <li class="header__contact"><a href="#">108840, Россия,  г. Москва, г. Троицк, Троицкий бульвар,
+                        6</a></li>
                 </ul>
             </section>
         </nav>
@@ -791,7 +792,14 @@
                 <button class="trial__button button" type="submit">Отправить</button>
             </form>
         </div>
-        <img class="trial__img" src="img/illustration2.svg" alt="illustration">
+        <!--<img class="trial__img" src="img/illustration2.svg" alt="illustration">-->
+
+        <picture>
+            <source srcset="img/illustration2-mob.svg 1x" media="(max-width: 800px)" >
+            <source srcset="img/illustration2.svg 1x">
+            <img class="trial__img" alt="illustration" src="img/illustration2-mob.svg">
+        </picture>
+
     </section>
     <section class="clients">
         <h3 class="visually-hidden">Для клиентов</h3>
@@ -996,7 +1004,15 @@
                 <button class="trial__button button" type="submit">Отправить</button>
             </form>
         </div>
-        <img class="trial__img" src="img/illustration2.svg" alt="illustration">
+        <!--<img class="trial__img" src="img/illustration2.svg" alt="illustration">-->
+
+        <picture>
+            <source srcset="img/illustration2-mob.svg 1x" media="(max-width: 800px)" >
+            <source srcset="img/illustration2.svg 1x">
+            <img class="trial__img" alt="illustration" src="img/illustration2-mob.svg">
+        </picture>
+
+
     </section>
     <section class="story">
         <h3 class="story__title title title--back">История развития Speaky school</h3>
@@ -1105,7 +1121,6 @@
                 <li class="footer__item"><a href="kids-online.html">Для детей онлайн</a></li>
                 <li class="footer__item"><a href="kids-offline.html">Для детей офлайн</a></li>
             </ul>
-            <span class="footer__copy">© 2021 Speaky school. Все права защищены.</span>
         </section>
         <section class="footer__block footer__block--2">
             <h4 class="visually-hidden">Школа инфостранных языков</h4>
@@ -1156,9 +1171,15 @@
                 <li class="footer__item"><a href="#">info@speaky.school</a></li>
                 <li class="footer__item"><a href="#">108840, Россия,  г. Москва, г. Троицк, Троицкий бульвар, 6</a></li>
             </ul>
-            <span class="footer__copy">Design by @arinkob</span>
         </section>
     </div>
+
+
+    <ul class="footer__copy-list">
+        <li class="footer__copy">Design by @arinkob</li>
+        <li class="footer__copy">© 2021 Speaky school. Все права защищены.</li>
+    </ul>
+
 </footer>
 
 <script src="script/jquery.min.js"></script>
