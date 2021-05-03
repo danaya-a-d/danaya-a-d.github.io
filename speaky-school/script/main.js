@@ -30,12 +30,24 @@ jQuery(($) => {
 //маска телефона
 $(".phone_mask").mask("+7(999)999-99-99");
 
-//слайдер
+//слайдеры
 $('.story__list').slick({
     dots: true,
     dotsClass: "my-dots",
     arrows: false
 });
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+    $('.results__list').slick({
+        dots: false,
+        arrows: false
+    });
+
+    $('.packages__item-list').slick({
+        dots: false,
+        arrows: false
+    });
+}
 
 
 //////////////// МОБИЛЬНОЕ МЕНЮ ////////////////
@@ -55,4 +67,33 @@ navToggle.addEventListener('click', function () {
         navToggle.classList.remove('header__nav-toggle--open');
         header.style.backgroundColor = '#FFF';
     }
+});
+
+
+////показ пакетов обучения
+function packet_show(){
+    let packet_type = $('input[name="packet-type"]:checked').val();
+    let packet_time = $('input[name="packet-time"]:checked').val();
+
+    if (packet_type === "individual") {
+        $(".packages__line--time").removeClass("visually-hidden");
+        if (packet_time === "30min") {
+            $(".packages__big-item").addClass("visually-hidden");
+            $("#individual-30-list").removeClass("visually-hidden");
+        }
+        if (packet_time === "60min") {
+            $(".packages__big-item").addClass("visually-hidden");
+            $("#individual-60-list").removeClass("visually-hidden");
+        }
+    }
+    else if (packet_type === "talking-club") {
+        $(".packages__big-item").addClass("visually-hidden");
+        $("#talking-club-list").removeClass("visually-hidden");
+        $(".packages__line--time").addClass("visually-hidden");
+    }
+}
+
+packet_show();
+$('.packages__input').on('change', function (e) {
+    packet_show();
 });
