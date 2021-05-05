@@ -1,3 +1,8 @@
+packet_show();
+$('.packages__input').on('change', function (e) {
+    packet_show();
+});
+
 //кастомный select
 jQuery(($) => {
     $('.select').on('click', '.select__head', function () {
@@ -30,26 +35,6 @@ jQuery(($) => {
 //маска телефона
 $(".phone_mask").mask("+7(999)999-99-99");
 
-//слайдеры
-$('.story__list').slick({
-    dots: true,
-    dotsClass: "my-dots",
-    arrows: false
-});
-
-if (window.matchMedia("(max-width: 600px)").matches) {
-    $('.results__list').slick({
-        dots: false,
-        arrows: false
-    });
-
-    $('.packages__item-list').slick({
-        dots: false,
-        arrows: false
-    });
-}
-
-
 //////////////// МОБИЛЬНОЕ МЕНЮ ////////////////
 let navToggle = document.querySelector('.header__nav-toggle');
 let navMain = document.querySelector('.header__nav');
@@ -70,6 +55,23 @@ navToggle.addEventListener('click', function () {
 });
 
 
+
+
+//слайдеры
+$('.story__list').slick({
+    dots: true,
+    dotsClass: "my-dots",
+    arrows: false
+});
+
+if (window.matchMedia("(max-width: 600px)").matches) {
+    $('.results__list').slick({
+        dots: false,
+        arrows: false
+    });
+}
+
+
 ////показ пакетов обучения
 function packet_show(){
     let packet_type = $('input[name="packet-type"]:checked').val();
@@ -78,22 +80,69 @@ function packet_show(){
     if (packet_type === "individual") {
         $(".packages__line--time").removeClass("visually-hidden");
         if (packet_time === "30min") {
-            $(".packages__big-item").addClass("visually-hidden");
+            $(".packages__item-list").addClass("visually-hidden");
             $("#individual-30-list").removeClass("visually-hidden");
+            if (window.matchMedia("(max-width: 600px)").matches) {
+                $('#individual-30-list').slick({
+                    dots: false,
+                    arrows: false
+                });
+            }
         }
         if (packet_time === "60min") {
-            $(".packages__big-item").addClass("visually-hidden");
+            $(".packages__item-list").addClass("visually-hidden");
             $("#individual-60-list").removeClass("visually-hidden");
+            if (window.matchMedia("(max-width: 600px)").matches) {
+                $('#individual-60-list').slick({
+                    dots: false,
+                    arrows: false
+                });
+            }
         }
     }
-    else if (packet_type === "talking-club") {
-        $(".packages__big-item").addClass("visually-hidden");
-        $("#talking-club-list").removeClass("visually-hidden");
+    if (packet_type === "talking-club") {
+        $(".packages__item-list").addClass("visually-hidden");
         $(".packages__line--time").addClass("visually-hidden");
+        $("#talking-club-list").removeClass("visually-hidden");
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            $('#talking-club-list').slick({
+                dots: false,
+                arrows: false
+            });
+        }
+    }
+
+    if (packet_type === "group") {
+        $(".packages__item-list").addClass("visually-hidden");
+        $(".packages__line--time").addClass("visually-hidden");
+        $("#group-list").removeClass("visually-hidden");
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            $('#group-list').slick({
+                dots: false,
+                arrows: false
+            });
+        }
+    }
+    if (packet_type === "group-list") {
+        $(".packages__item-list").addClass("visually-hidden");
+        $(".packages__line--time").addClass("visually-hidden");
+        $("#group-list").removeClass("visually-hidden");
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            $('#group-list').slick({
+                dots: false,
+                arrows: false
+            });
+        }
+    }
+    if (packet_type === "individual-offline") {
+        $(".packages__item-list").addClass("visually-hidden");
+        $(".packages__line--time").addClass("visually-hidden");
+        $("#individual-offline-list").removeClass("visually-hidden");
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            $('#individual-offline-list').slick({
+                dots: false,
+                arrows: false
+            });
+        }
     }
 }
-
-packet_show();
-$('.packages__input').on('change', function (e) {
-    packet_show();
-});
