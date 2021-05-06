@@ -1510,14 +1510,14 @@
                 <li class="header__nav-item">
                     <a href="adults.html">Обучение взрослых</a>
                 </li>
-                <li class="header__nav-item">
-                    <a href="public-offer.html">Публичная оферта</a>
-                </li>
                 <li class="header__nav-item header__nav-item--small-screen">
                     <a href="kids-online.html">Обучение детей онлайн</a>
                 </li>
                 <li class="header__nav-item header__nav-item--small-screen">
                     <a href="kids-offline.html">Обучение детей оффлайн</a>
+                </li>
+                <li class="header__nav-item">
+                    <a href="public-offer.html">Публичная оферта</a>
                 </li>
             </ul>
 
@@ -1984,6 +1984,198 @@
     </ul>
 
 </footer>
+
+<div class="modal-back hide">
+    <section class="trial trial--modal trial--small modal-pay hide">
+        <button class="trial__close modal-close" type="button">Закрыть</button>
+        <picture>
+            <source srcset="img/illustration2-mob.svg" media="(max-width: 600px)" >
+            <source srcset="img/oplata-left.svg">
+            <img class="trial__img trial__img--left" alt="illustration" src="img/illustration2-mob.svg">
+        </picture>
+        <div class="trial__container">
+            <h3 class="title trial__title">Оплата услуг</h3>
+            <form class="trial__form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="trial__line">
+                    <label class="visually-hidden" for="name-3">Имя</label>
+                    <input class="trial__input" id="name-3" name="name"
+                           placeholder="Имя" type="text" required>
+
+                    <label class="visually-hidden" for="phone-3">Номер телефона</label>
+                    <input class="trial__input phone_mask" id="phone-3" name="phone"
+                           placeholder="Телефрн" type="tel" required>
+
+                    <label class="visually-hidden" for="email-3">Адрес почты</label>
+                    <input class="trial__input trial__input--width" id="email-3" name="email"
+                           pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                           placeholder="Почта" type="email" required>
+
+                    <label class="visually-hidden" for="pay">Сумма платежа</label>
+                    <input class="trial__input trial__input--width trial__input--pay" id="pay" name="pay"
+                           placeholder="Сумма платежа" type="number" required>
+                </div>
+
+                <p class="trial__warning">
+                    Нажимая кнопку "Оплатить", Вы соглашаетесь с условиями договора оферты и обработку персональных данных.
+                </p>
+
+                <button class="trial__button button" type="submit">Оплатить</button>
+            </form>
+        </div>
+        <picture>
+            <source srcset="img/illustration2-mob.svg" media="(max-width: 600px)" >
+            <source srcset="img/oplata-right.svg">
+            <img class="trial__img" alt="illustration" src="img/illustration2-mob.svg">
+        </picture>
+    </section>
+    <section class="trial trial--modal trial--small modal-call hide">
+        <button class="trial__close modal-close" type="button">Закрыть</button>
+        <picture>
+            <source srcset="img/illustration2-mob.svg" media="(max-width: 600px)" >
+            <source srcset="img/call-left.svg">
+            <img class="trial__img trial__img--left" alt="illustration" src="img/illustration2-mob.svg">
+        </picture>
+        <div class="trial__container">
+            <h3 class="title trial__title">Заказать звонок</h3>
+            <form class="trial__form" action="https://echo.htmlacademy.ru" method="post">
+                <div class="trial__line">
+                    <label class="visually-hidden" for="name-4">Имя</label>
+                    <input class="trial__input trial__input--width" id="name-4" name="name"
+                           placeholder="Имя" type="text" required>
+
+                    <label class="visually-hidden" for="phone-4">Номер телефона</label>
+                    <input class="trial__input trial__input--width phone_mask" id="phone-4" name="phone"
+                           placeholder="Телефрн" type="tel" required>
+
+                </div>
+                <button class="trial__button button" type="submit">Отправить</button>
+            </form>
+        </div>
+        <picture>
+            <source srcset="img/illustration2-mob.svg" media="(max-width: 600px)" >
+            <source srcset="img/call-right.svg">
+            <img class="trial__img" alt="illustration" src="img/illustration2-mob.svg">
+        </picture>
+    </section>
+    <section class="trial trial--modal trial--big modal-lesson hide">
+        <div class="trial__container">
+            <button class="trial__close modal-close" type="button">Закрыть</button>
+            <h3 class="title trial__title">Записаться на пробное занятие</h3>
+
+            <div class="trial__tab">
+                <button class="trial__tab-toggle trial__tab-toggle--active tab-toggle-adult">Взрослые</button>
+                <button class="trial__tab-toggle tab-toggle-child">Дети и подростки</button>
+            </div>
+
+            <form class="trial__form form-adult" action="https://echo.htmlacademy.ru" method="post">
+                <div class="trial__line">
+                    <div class="select trial__select">
+                        <input class="select__input" type="hidden" name="language">
+                        <div class="select__head">Выберите язык</div>
+                        <ul class="select__list" style="display: none;">
+                            <li class="select__item">Английский язык</li>
+                            <li class="select__item">Немецкий язык</li>
+                            <li class="select__item">Испанский язык</li>
+                            <li class="select__item">Французский язык</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="trial__line line-radio">
+                    <label class="trial__label label-radio" for="online-adult">
+                        <span class="label-title">Онлайн-занятия</span>
+                        <input class="visually-hidden" id="online-adult" name="class-type" type="radio" value="online">
+                        <span class="radio-indicator"></span>
+                    </label>
+
+                    <label class="trial__label label-radio" for="club-adult">
+                        <span class="label-title">Занятия в клубе</span>
+                        <input class="visually-hidden" id="club-adult" name="class-type" type="radio" value="club">
+                        <span class="radio-indicator"></span>
+                    </label>
+                </div>
+                <div class="trial__line">
+                    <label class="visually-hidden" for="name-adult">Имя</label>
+                    <input class="trial__input" id="name-adult" name="name"
+                           placeholder="Имя" type="text" required>
+
+                    <label class="visually-hidden" for="phone-adult">Номер телефона</label>
+                    <input class="trial__input phone_mask" id="phone-adult" name="phone"
+                           placeholder="Телефрн" type="tel" required>
+
+                    <label class="visually-hidden" for="email-adult">Адрес почты</label>
+                    <input class="trial__input trial__input--width" id="email-adult" name="email"
+                           pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                           placeholder="Почта" type="email" required>
+                </div>
+                <button class="trial__button button" type="submit">Отправить</button>
+            </form>
+            <form class="trial__form form-child hide" action="https://echo.htmlacademy.ru" method="post">
+
+                <div class="trial__line">
+                    <div class="select trial__select">
+                        <input class="select__input" type="hidden" name="language">
+                        <div class="select__head">Выберите язык</div>
+                        <ul class="select__list" style="display: none;">
+                            <li class="select__item">Английский язык</li>
+                            <li class="select__item">Немецкий язык</li>
+                            <li class="select__item">Испанский язык</li>
+                            <li class="select__item">Французский язык</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="trial__line line-radio">
+                    <label class="trial__label label-radio" for="online-child">
+                        <span class="label-title">Онлайн-занятия</span>
+                        <input class="visually-hidden" id="online-child" name="class-type" type="radio" value="online">
+                        <span class="radio-indicator"></span>
+                    </label>
+
+                    <label class="trial__label label-radio" for="club-child">
+                        <span class="label-title">Занятия в клубе</span>
+                        <input class="visually-hidden" id="club-child" name="class-type" type="radio" value="club">
+                        <span class="radio-indicator"></span>
+                    </label>
+                </div>
+
+                <div class="trial__line">
+
+                    <label class="visually-hidden" for="name-parent-child">Имя родителя</label>
+                    <input class="trial__input" id="name-parent-child" name="name-parent"
+                           placeholder="Имя родителя" type="text" required>
+
+                    <label class="visually-hidden" for="phone-child">Номер телефона</label>
+                    <input class="trial__input phone_mask" id="phone-child" name="phone"
+                           placeholder="Телефрн" type="tel" required>
+
+                    <label class="visually-hidden" for="name-kid-child">Имя ребёнка</label>
+                    <input class="trial__input" id="name-kid-child" name="name-kid"
+                           placeholder="Имя ребёнка" type="text" required>
+
+                    <label class="visually-hidden" for="age-child">Возраст ребёнка</label>
+                    <input class="trial__input" id="age-child" name="age"
+                           placeholder="Возраст ребёнка" type="number" pattern="/[0-9]/g" required>
+
+                    <label class="visually-hidden" for="email-child">Адрес почты</label>
+                    <input class="trial__input trial__input--width" id="email-child" name="email"
+                           pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
+                           placeholder="Почта" type="email" required>
+                </div>
+
+                <button class="trial__button button" type="submit">Отправить</button>
+            </form>
+        </div>
+
+        <picture>
+            <source srcset="img/illustration2-mob.svg" media="(max-width: 600px)" >
+            <source srcset="/img/oplata-right.svg" media="(max-width: 800px)" >
+            <source srcset="img/illustration2.svg">
+            <img class="trial__img" alt="illustration" src="img/illustration2-mob.svg">
+        </picture>
+
+    </section>
+    <div class="trial__overlay hide"></div>
+</div>
 
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
