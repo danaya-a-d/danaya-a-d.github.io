@@ -49,7 +49,7 @@ $(document).ready(function () {
             header.style.backgroundColor = '#FFF';
         }
     });
-// .attr("checked", true);
+
 //модальные окна
     function modal_show(modal, button_open) {
 
@@ -114,7 +114,35 @@ $(document).ready(function () {
     form_switch($('.tab-toggle-child'));
 
 
+//фильтрация пакетов
+function packet_filter() {
+    let filter = '';
+
+    let packet_params = {
+        packet_type: $('input[name="packet-type"]:checked').val(),
+        packet_time: $('input[name="packet-time"]:checked').val(),
+        packet_online: $('input[name="packet-online"]:checked').val()
+    };
+
+    $.each(packet_params, function (i, value) {
+        if (packet_params[i] !== undefined) {
+            filter += '.' + value;
+        }
+    });
+    return filter;
+}
+
+
+
 //слайдеры
+    function packet_filter_mobile() {
+        $(".packages__item-list").slick('slickUnfilter');
+
+        let filter = packet_filter();
+
+        $(".packages__item-list").slick('slickFilter', filter);
+    }
+
     $('.story__list').slick({
         dots: true,
         dotsClass: "my-dots",
@@ -131,41 +159,30 @@ $(document).ready(function () {
             dots: false,
             arrows: false
         });
+        packet_filter_mobile();
+        $(".packages__input").on('change', function (e) {
+            packet_filter_mobile();
+        });
     }
 
 
 ////показ пакетов обучения
-    packet_filter();
 
-    $('.packages__input').on('change', function (e) {
-        packet_filter();
-    });
-
-    function packet_filter() {
-
-        let packet_type = $('input[name="packet-type"]:checked').val();
-        let packet_time = $('input[name="packet-time"]:checked').val();
-        let packet_online = $('input[name="packet-online"]:checked').val();
-
-        // if (packet_online === undefined) {
-        //     $('input[name="packet-type"]').closest($('.packages__type-list')).addClass("visually-hidden");
-        // } else {
-        //     $('input[name="packet-type"]').closest($('.packages__type-list')).removeClass("visually-hidden");
-        // }
-        //
-        // if (packet_type === undefined) {
-        //     $('input[name="packet-time"]').closest($('.packages__type-list')).addClass("visually-hidden");
-        // } else {
-        //     $('input[name="packet-time"]').closest($('.packages__type-list')).removeClass("visually-hidden");
-        // }
-
-
-        $('.packages__item').each(function (i, elem) {
-            $(this).addClass("hide");
-            console.log(packet_online + " " + packet_type + " " + packet_time);
-            if ($(this).hasClass(packet_type) && $(this).hasClass(packet_time) && $(this).hasClass(packet_online)) {
-                $(this).removeClass("hide");
+    function packet_filter_desk() {
+        let filter = packet_filter();
+        $('.packages__item').each(function () {
+            $(this).hide();
+            if ($(this).is(filter)) {
+                $(this).show();
             }
+        });
+    }
+
+
+    if (window.matchMedia("(min-width: 601px)").matches) {
+        packet_filter_desk();
+        $('.packages__input').on('change', function (e) {
+            packet_filter_desk();
         });
     }
 });
