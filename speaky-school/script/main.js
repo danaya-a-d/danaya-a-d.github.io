@@ -115,33 +115,45 @@ $(document).ready(function () {
 
 
 //фильтрация пакетов
-function packet_filter() {
-    let filter = '';
+    function packet_filter() {
+        let filter = '';
+        let packet_params = {
+            packet_type: $('input[name="packet-type"]:checked').val(),
+            packet_time: $('input[name="packet-time"]:checked').val(),
+            packet_online: $('input[name="packet-online"]:checked').val()
+        };
 
-    let packet_params = {
-        packet_type: $('input[name="packet-type"]:checked').val(),
-        packet_time: $('input[name="packet-time"]:checked').val(),
-        packet_online: $('input[name="packet-online"]:checked').val()
-    };
+        $.each(packet_params, function (i, value) {
+            if (packet_params[i] !== undefined) {
+                filter += '.' + value;
+            }
+        });
+        return filter;
+    }
 
-    $.each(packet_params, function (i, value) {
-        if (packet_params[i] !== undefined) {
-            filter += '.' + value;
-        }
-    });
-    return filter;
-}
+    function packet_exist() {
+        let packets = {
+            packet_type: $('input[name="packet-type"]'),
+            packet_time: $('input[name="packet-time"]',),
+            packet_online: $('input[name="packet-online"]')
+        };
+        let n = true;
 
+        $.each(packets, function (i, value) {
+            if (packets[i].length) {
+                if (packets[i].is(':checked')) {
+                    n *= true;
+                }
+                if (!(packets[i].is(':checked'))) {
+                    n *= false;
+                }
+            }
+        });
+        return n;
+    }
 
 
 //слайдеры
-    function packet_filter_mobile() {
-        $(".packages__item-list").slick('slickUnfilter');
-
-        let filter = packet_filter();
-
-        $(".packages__item-list").slick('slickFilter', filter);
-    }
 
     $('.story__list').slick({
         dots: true,
@@ -159,30 +171,100 @@ function packet_filter() {
             dots: false,
             arrows: false
         });
+
         packet_filter_mobile();
         $(".packages__input").on('change', function (e) {
+            // if (packet_exist()) {
             packet_filter_mobile();
+            // }
         });
+
     }
 
 
 ////показ пакетов обучения
+    function packet_filter_mobile() {
+        let filter = packet_filter();
+        $(".packages__item-list").slick('slickUnfilter');
+        if (packet_exist()) {
+            $(".packages__item-list").slick('slickFilter', filter);
+        } else $(".packages__item-list").slick('slickFilter', '');
+    }
 
     function packet_filter_desk() {
         let filter = packet_filter();
         $('.packages__item').each(function () {
             $(this).hide();
-            if ($(this).is(filter)) {
+            if ($(this).is(filter) && packet_exist()) {
                 $(this).show();
             }
         });
     }
 
-
     if (window.matchMedia("(min-width: 601px)").matches) {
         packet_filter_desk();
-        $('.packages__input').on('change', function (e) {
+        $('.packages__input').on('change', function () {
             packet_filter_desk();
         });
     }
+
+
+    $.each($('.packages__toggle'), function () {
+        if (!($(this).hasClass('packages__toggle--mediactive'))) {
+            $(this).closest('.packages__toggle-item').children('.packages__type-list').hide();
+        }
+    });
+
+    $('.packages__input').on('change', function () {
+        let toggle = $(this).closest('.packages__toggle-item').children('.packages__toggle');
+        let toggle_next = $(this).closest('.packages__toggle-item').next().children('.packages__toggle');
+        let toggle_type = $(this).closest('.packages__toggle-item').children('.packages__toggle-type');
+
+        let toggle_list = $(this).closest('.packages__toggle-item').children('.packages__type-list');
+        let toggle_list_next = $(this).closest('.packages__toggle-item').next().children('.packages__type-list');
+        let toggle_list_prev = $(this).closest('.packages__toggle-item').prev().children('.packages__type-list');
+
+        toggle.removeClass('packages__toggle--mediactive');
+        toggle.addClass('packages__toggle--active');
+
+        toggle_list.hide();
+        toggle_list_prev.hide();
+        toggle_list_next.show();
+
+        toggle_next.addClass('packages__toggle--mediactive');
+        toggle_type.text($(this).attr('placeholder'));
+    });
+
+    $('.packages__toggle').on('click', function () {
+        let toggle_list = $(this).closest('.packages__toggle-item').children('.packages__type-list');
+        let toggle_radio = $(this).closest('.packages__toggle-item').find('.packages__input');
+        let toggle_type = $(this).closest('.packages__toggle-item').find('.packages__toggle-type');
+
+        let toggle_list_next_all = $(this).closest('.packages__toggle-item').nextAll().children('.packages__type-list');
+        let toggle_radio_next_all = $(this).closest('.packages__toggle-item').nextAll().find('.packages__input');
+        let toggle_type_next_all = $(this).closest('.packages__toggle-item').nextAll().find('.packages__toggle-type');
+        let toggle_next_all = $(this).closest('.packages__toggle-item').nextAll().find('.packages__toggle');
+
+        if ($(this).hasClass('packages__toggle--active')) {
+            $(this).removeClass('packages__toggle--active');
+            $(this).addClass('packages__toggle--mediactive');
+            toggle_radio.prop('checked', false);
+            toggle_type.text('');
+            toggle_list.show();
+
+            toggle_next_all.removeClass('packages__toggle--mediactive');
+            toggle_next_all.removeClass('packages__toggle--active');
+            toggle_radio_next_all.prop('checked', false);
+            toggle_type_next_all.text('');
+            toggle_list_next_all.hide();
+        }
+
+
+        if (window.matchMedia("(min-width: 601px)").matches) {
+            packet_filter_desk();
+        }
+        if (window.matchMedia("(max-width: 600px)").matches) {
+            packet_filter_mobile();
+        }
+    });
 });
