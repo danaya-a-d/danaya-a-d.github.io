@@ -176,6 +176,7 @@ $(document).ready(function () {
             packet_filter_mobile();
         });
 
+
         let packages_toggle_slider = $('.packages__toggle-list');
         packages_toggle_slider.slick({
             dots: false,
@@ -185,14 +186,14 @@ $(document).ready(function () {
             slidesToScroll: 1
         });
 
-        // let slick = packages_toggle_slider.slick('getSlick');
-        //
-        // packages_toggle_slider.on('click', '.slick-slide' ,function() {
-        //     let curSlide = slick.slideCount === slick.currentSlide ? 0 : slick.currentSlide + 1;
-        //
-        //     packages_toggle_slider.slick('slickGoTo', curSlide, true);
-        //     console.log(slick);
-        // });
+        let slick = packages_toggle_slider.slick('getSlick');
+
+        $('.packages__type-list').on('click', function() {
+            let curSlide = slick.slideCount === slick.currentSlide ? 0 : slick.currentSlide + 1;
+
+            packages_toggle_slider.slick('slickGoTo', curSlide, true);
+            console.log(slick);
+        });
     }
 
 
