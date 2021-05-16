@@ -73,4 +73,17 @@ $(document).ready(function () {
             });
         }
     }
+
+
+    /////// ОТКРЫТИЕ ЭЛЕМЕНТОВ ПОДВАЛА ///////
+
+    let footer_block = document.querySelectorAll('.footer__block');
+
+    if (footer_block !== undefined) {
+        for (let i = 0; i < footer_block.length; i++) {
+            footer_block[i].addEventListener('click', function () {
+                footer_block[i].classList.toggle('footer__block--close');
+            });
+        }
+    }
 });
