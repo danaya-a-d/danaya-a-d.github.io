@@ -6,6 +6,8 @@
     <title>Школа 997</title>
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="script/simplebar/simplebar.css"/>-->
+    <link rel="stylesheet" href="script/customScroll/jquery.mCustomScrollbar.min.css" />
     <link rel="stylesheet" href="style/main.css">
 </head>
 <body>
@@ -43,11 +45,14 @@
             </symbol>
             <symbol id="instagram">
                 <g clip-path="url(#clip0)">
-                    <path d="M3.75123 4.08176C-0.963769 8.97926 0.00123057 14.1818 0.00123057 29.9868C0.00123057 43.1118 -2.28877 56.2693 9.69623 59.3668C13.4387 60.3293 46.5987 60.3293 50.3362 59.3618C55.3262 58.0743 59.3862 54.0268 59.9412 46.9693C60.0187 45.9843 60.0187 14.0068 59.9387 13.0018C59.3487 5.48426 54.7212 1.15176 48.6237 0.274262C47.2262 0.0717615 46.9462 0.0117615 39.7762 -0.000738502C14.3437 0.0117615 8.76873 -1.12074 3.75123 4.08176Z" fill="url(#paint0_linear)"/>
-                    <path d="M29.9945 7.84755C20.917 7.84755 12.297 7.04005 9.00454 15.4901C7.64454 18.9801 7.84204 23.5126 7.84204 30.0026C7.84204 35.6976 7.65954 41.0501 9.00454 44.5126C12.2895 52.9676 20.9795 52.1576 29.9895 52.1576C38.682 52.1576 47.6445 53.0626 50.977 44.5126C52.3395 40.9876 52.1395 36.5226 52.1395 30.0026C52.1395 21.3476 52.617 15.7601 48.4195 11.5651C44.1695 7.31505 38.422 7.84755 29.9845 7.84755H29.9945ZM28.0095 11.8401C46.9445 11.8101 49.3545 9.70506 48.0245 38.9476C47.552 49.2901 39.677 48.1551 29.997 48.1551C12.347 48.1551 11.8395 47.6501 11.8395 29.9926C11.8395 12.1301 13.2395 11.8501 28.0095 11.8351V11.8401ZM41.8195 15.5176C40.352 15.5176 39.162 16.7076 39.162 18.1751C39.162 19.6426 40.352 20.8326 41.8195 20.8326C43.287 20.8326 44.477 19.6426 44.477 18.1751C44.477 16.7076 43.287 15.5176 41.8195 15.5176ZM29.9945 18.6251C23.712 18.6251 18.6195 23.7201 18.6195 30.0026C18.6195 36.2851 23.712 41.3776 29.9945 41.3776C36.277 41.3776 41.367 36.2851 41.367 30.0026C41.367 23.7201 36.277 18.6251 29.9945 18.6251ZM29.9945 22.6176C39.757 22.6176 39.7695 37.3876 29.9945 37.3876C20.2345 37.3876 20.2195 22.6176 29.9945 22.6176Z" fill="white"/>
+                    <path d="M3.75123 4.08176C-0.963769 8.97926 0.00123057 14.1818 0.00123057 29.9868C0.00123057 43.1118 -2.28877 56.2693 9.69623 59.3668C13.4387 60.3293 46.5987 60.3293 50.3362 59.3618C55.3262 58.0743 59.3862 54.0268 59.9412 46.9693C60.0187 45.9843 60.0187 14.0068 59.9387 13.0018C59.3487 5.48426 54.7212 1.15176 48.6237 0.274262C47.2262 0.0717615 46.9462 0.0117615 39.7762 -0.000738502C14.3437 0.0117615 8.76873 -1.12074 3.75123 4.08176Z"
+                          fill="url(#paint0_linear)"/>
+                    <path d="M29.9945 7.84755C20.917 7.84755 12.297 7.04005 9.00454 15.4901C7.64454 18.9801 7.84204 23.5126 7.84204 30.0026C7.84204 35.6976 7.65954 41.0501 9.00454 44.5126C12.2895 52.9676 20.9795 52.1576 29.9895 52.1576C38.682 52.1576 47.6445 53.0626 50.977 44.5126C52.3395 40.9876 52.1395 36.5226 52.1395 30.0026C52.1395 21.3476 52.617 15.7601 48.4195 11.5651C44.1695 7.31505 38.422 7.84755 29.9845 7.84755H29.9945ZM28.0095 11.8401C46.9445 11.8101 49.3545 9.70506 48.0245 38.9476C47.552 49.2901 39.677 48.1551 29.997 48.1551C12.347 48.1551 11.8395 47.6501 11.8395 29.9926C11.8395 12.1301 13.2395 11.8501 28.0095 11.8351V11.8401ZM41.8195 15.5176C40.352 15.5176 39.162 16.7076 39.162 18.1751C39.162 19.6426 40.352 20.8326 41.8195 20.8326C43.287 20.8326 44.477 19.6426 44.477 18.1751C44.477 16.7076 43.287 15.5176 41.8195 15.5176ZM29.9945 18.6251C23.712 18.6251 18.6195 23.7201 18.6195 30.0026C18.6195 36.2851 23.712 41.3776 29.9945 41.3776C36.277 41.3776 41.367 36.2851 41.367 30.0026C41.367 23.7201 36.277 18.6251 29.9945 18.6251ZM29.9945 22.6176C39.757 22.6176 39.7695 37.3876 29.9945 37.3876C20.2345 37.3876 20.2195 22.6176 29.9945 22.6176Z"
+                          fill="white"/>
                 </g>
                 <defs>
-                    <linearGradient id="paint0_linear" x1="3.86628" y1="56.167" x2="59.6299" y2="7.9042" gradientUnits="userSpaceOnUse">
+                    <linearGradient id="paint0_linear" x1="3.86628" y1="56.167" x2="59.6299" y2="7.9042"
+                                    gradientUnits="userSpaceOnUse">
                         <stop stop-color="#FFDD55"/>
                         <stop offset="0.5" stop-color="#FF543E"/>
                         <stop offset="1" stop-color="#C837AB"/>
@@ -263,7 +268,7 @@
                 <span>Учителю</span>
             </a></li>
         </ul>
-        <div class="header__scroll">
+        <div class="header__scroll mCustomScrollbar" data-mcs-theme="minimal-dark">
             <ul class="header__offer-list">
                 <li class="header__offer-item"><a href="#">
                     <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
@@ -874,58 +879,142 @@
             </ul>
         </div>
     </div>
-    <section class="table">
-        <table class="table__item" border="1" width="100%" cellpadding="5">
+
+
+    <section class="packets">
+        <table class="packets__table packets__table--name">
             <tbody>
-            <tr class="table__head">
-                <th>Базова програма</th>
-                <th>Екстернат</th>
-                <th>Окремі курси</th>
+            <tr class="packets__head">
+                <td class="packets__first-cell">Базова програма</td>
             </tr>
             <tr>
-                <td>Даємо доступ до демо-уроку.
+                <td class="packets__first-cell">Даємо доступ до демо-уроку.
                     Спілкуємося з батьками про цілі і дізнаємося індивідуальні
                 </td>
-                <td class="table__yes">Да</td>
-                <td class="table__yes">Да</td>
             </tr>
             <tr>
-                <td>Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
-                <td class="table__yes">Да</td>
-                <td class="table__no">Нет</td>
+                <td class="packets__first-cell">Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
             </tr>
             <tr>
-                <td>Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
-                <td class="table__yes">Да</td>
-                <td class="table__no">Нет</td>
+                <td class="packets__first-cell">Даємо доступ до демо-уроку.
+                    Спілкуємося з батьками про цілі і дізнаємося індивідуальні
+                </td>
             </tr>
             <tr>
-                <td>Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
-                <td class="table__yes">Да</td>
-                <td class="table__no">Нет</td>
+                <td class="packets__first-cell">Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
             </tr>
             <tr>
-                <td>Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
-                <td class="table__yes">Да</td>
-                <td class="table__no">Нет</td>
+                <td class="packets__first-cell">Даємо доступ до демо-уроку.
+                    Спілкуємося з батьками про цілі і дізнаємося індивідуальні
+                </td>
             </tr>
             <tr>
-                <td>Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
-                <td class="table__yes">Да</td>
-                <td class="table__no">Нет</td>
+                <td class="packets__first-cell">Даємо доступ до демо-уроку. Спілкуємося з батьками про</td>
             </tr>
-            <tr class="table__footer">
-                <th>Вартість</th>
-                <th>Від 3000 грн в місяць
-                    (всі предмети класа)
-                </th>
-                <th>Від 1000 грн в місяць
-                    (за один курс)
-                </th>
+            <tr class="packets__footer">
+                <td class="packets__first-cell">Вартість</td>
+            </tr>
+            </tbody>
+        </table>
+        <table class="packets__table packets__table--check">
+            <tbody class="packets__tbody dragscroll" data-mcs-theme="minimal-dark">
+            <tr class="packets__head">
+                <td>Екстернат</td>
+                <td>Екстернат і домашня школа</td>
+                <td>Окремі курси</td>
+                <td>Окремі курси</td>
+            </tr>
+            <tr>
+                <td class="packets__yes"></td>
+                <td class="packets__yes"></td>
+                <td class="packets__yes"></td>
+                <td class="packets__yes"></td>
+            </tr>
+            <tr>
+                <td class="packets__yes"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+            </tr>
+            <tr>
+                <td class="packets__yes"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+            </tr>
+            <tr>
+                <td class="packets__yes"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+            </tr>
+            <tr>
+                <td class="packets__yes"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+            </tr>
+            <tr>
+                <td class="packets__yes"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+                <td class="packets__no"></td>
+            </tr>
+            <tr class="packets__footer">
+                <td><a class="packets__button" href="#">Детальніше</a></td>
+                <td><a class="packets__button" href="#">Детальніше</a></td>
+                <td><a class="packets__button" href="#">Детальніше</a></td>
+                <td><a class="packets__button" href="#">Детальніше</a></td>
+                <!--<td>Від 1000 грн в місяць-->
+                <!--(за один курс)-->
+                <!--</td>-->
             </tr>
             </tbody>
         </table>
     </section>
+
+    <!--<section class="table">-->
+    <!--<h3 class="visually-hidden">Программы обучения</h3>-->
+    <!--<section class="table__column table__column&#45;&#45;first">-->
+    <!--<h4 class="table__title">Базова програма</h4>-->
+    <!--<p class="table__cell table__cell&#45;&#45;text">Даємо доступ до демо-уроку.-->
+    <!--Спілкуємося з батьками про цілі і дізнаємося індивідуальні </p>-->
+    <!--<p class="table__cell table__cell-text">Даємо доступ до демо-уроку.-->
+    <!--Спілкуємося з батьками про</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;text">Даємо доступ до демо-уроку.-->
+    <!--Спілкуємося з батьками про цілі і дізнаємося індивідуальні </p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;text">Даємо доступ до демо-уроку.-->
+    <!--Спілкуємося з батьками про</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;text">Даємо доступ до демо-уроку.-->
+    <!--Спілкуємося з батьками про цілі і дізнаємося індивідуальні </p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;bottom">Від 3000 грн в місяць-->
+    <!--(всі предмети класа)</p>-->
+    <!--</section>-->
+
+    <!--<section class="table__column table__column&#45;&#45;packet">-->
+    <!--<h4 class="table__title">Екстернат і домашня школа</h4>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;yes">Да</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;yes">Да</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;yes">Да</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;no">Нет</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;no">Нет</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;bottom">Від 3000 грн в місяць-->
+    <!--(всі предмети класа)</p>-->
+    <!--</section>-->
+
+    <!--<section class="table__column table__column&#45;&#45;packet">-->
+    <!--<h4 class="table__title">Окремі курси</h4>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;yes">Да</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;yes">Да</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;yes">Да</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;no">Нет</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;check table__cell&#45;&#45;no">Нет</p>-->
+    <!--<p class="table__cell table__cell&#45;&#45;bottom">Від 3000 грн в місяць-->
+    <!--(всі предмети класа)</p>-->
+    <!--</section>-->
+    <!--</section>-->
+
+
     <section class="tabs">
         <h3 class="visually-hidden">Усе, щоб вчитися з задоволенням</h3>
 
@@ -1277,10 +1366,21 @@
 <script src="script/phone_mask.min.js"></script>
 <script src="script/slick/slick.min.js"></script>
 <script src="script/dragscroll.js"></script>
+<!--<script src="script/simplebar/simplebar.min.js"></script>-->
+<script src="script/customScroll/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="script/main.min.js"></script>
 
 <script> //маска телефона
 $(".phone_mask").mask("+380(99)999-99-99");
+
+$(".header__scroll").mCustomScrollbar({
+    axis:"y" //
+});
+
+$(".packets__tbody").mCustomScrollbar({
+    axis:"x" //
+});
+
 </script>
 
 </body>
