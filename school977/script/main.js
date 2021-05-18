@@ -55,6 +55,10 @@ $(document).ready(function () {
             arrows: false
         });
     }
+    // $('.variants__list').slick({
+    //     dots: false,
+    //     arrows: false
+    // });
 
     /////// ОТКРЫТИЕ FAQ ///////
     let faq_item = document.querySelectorAll('.faq__item');
@@ -145,4 +149,14 @@ $(document).ready(function () {
             button_upp.style.display = 'none';
         }
     });
+
+    (function($) {
+        $(function() {
+
+            $('.button-upp').click(function() {
+                $('html, body').animate({scrollTop: 0},500);
+                return false;
+            })
+        })
+    })(jQuery)
 });
