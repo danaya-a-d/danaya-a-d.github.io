@@ -48,6 +48,14 @@ $(document).ready(function () {
     });
 
 
+    /////// СЛАЙДЕРЫ ///////
+    if (window.matchMedia("(max-width: 600px)").matches) {
+        $('.content--scroll .content__list').slick({
+            dots: false,
+            arrows: false
+        });
+    }
+
     /////// ОТКРЫТИЕ FAQ ///////
     let faq_item = document.querySelectorAll('.faq__item');
     if (faq_item !== undefined) {
