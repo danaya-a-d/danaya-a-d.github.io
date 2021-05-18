@@ -14,12 +14,12 @@ $(document).ready(function () {
             $('.overlay').show();
             $(".header__container").removeClass('header__container--close');
             $(".header__container").stop().animate({width: hoverWidth}, speed);
-            $(".header__logo img").attr('src', 'img/logo-big.svg');
+            $(".header__logo img").attr('src', 'img/logo-big.png');
         }, function () {
             $('.overlay').hide();
             $(".header__container").addClass('header__container--close');
             $(".header__container").stop().animate({width: originalWidth}, speed);
-            $(".header__logo img").attr('src', 'img/logo-small.svg');
+            $(".header__logo img").attr('src', 'img/logo-small.png');
         });
     }
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $('.overlay').show();
         $(".header__container").removeClass('header__container--close');
         $(".header__container").stop().animate({width: hoverWidth}, speed);
-        $(".header__logo img").attr('src', 'img/logo-big.svg');
+        $(".header__logo img").attr('src', 'img/logo-big.png');
         $(".header").removeClass('header--close');
     });
 
@@ -35,7 +35,7 @@ $(document).ready(function () {
         $('.overlay').hide();
         $(".header__container").addClass('header__container--close');
         $(".header__container").stop().animate({width: originalWidth}, speed);
-        $(".header__logo img").attr('src', 'img/logo-small.svg');
+        $(".header__logo img").attr('src', 'img/logo-small.png');
         $(".header").addClass('header--close');
     });
 
@@ -43,7 +43,7 @@ $(document).ready(function () {
         $('.overlay').hide();
         $(".header__container").addClass('header__container--close');
         $(".header__container").stop().animate({width: originalWidth}, speed);
-        $(".header__logo img").attr('src', 'img/logo-small.svg');
+        $(".header__logo img").attr('src', 'img/logo-small.png');
         $(".header").addClass('header--close');
     });
 
@@ -54,11 +54,12 @@ $(document).ready(function () {
             dots: false,
             arrows: false
         });
+
+        // $('.variants__list').slick({
+        //     dots: false,
+        //     arrows: false
+        // });
     }
-    // $('.variants__list').slick({
-    //     dots: false,
-    //     arrows: false
-    // });
 
     /////// ОТКРЫТИЕ FAQ ///////
     let faq_item = document.querySelectorAll('.faq__item');
@@ -109,8 +110,22 @@ $(document).ready(function () {
     let vars_list = document.querySelectorAll('.variants__list');
     let vars_btn = document.querySelectorAll('.variants__btn-item');
 
+    function show_vars_slick(i) {
+        if (!(vars_list[i].classList.contains('visually-hidden'))) {
+            {
+                if (window.matchMedia("(max-width: 768px)").matches) {
+                    $('.variants__list').eq(i).slick({
+                        dots: true,
+                        arrows: false
+                    });
+                }
+            }
+        }
+    }
+
     if (vars_btn !== undefined) {
         for (let i = 0; i < vars_btn.length; i++) {
+            // show_vars_slick(i);
             vars_btn[i].addEventListener('click', function () {
                 for (let j = 0; j < vars_list.length; j++) {
                     vars_list[j].classList.add('visually-hidden');
@@ -118,9 +133,23 @@ $(document).ready(function () {
                 }
                 vars_list[i].classList.remove('visually-hidden');
                 vars_btn[i].classList.add('variants__btn-item--active');
+                // show_vars_slick(i);
             });
         }
     }
+
+
+    // $.each($('.variants__btn-item'), function (i, value) {
+    //     $(this).click(function () {
+    //         $.each($('.variants__list'), function (j, value) {
+    //             console.log($(this));
+    //             $('.variants__list')[j].addClass('visually-hidden');
+    //             $('.variants__btn-item')[j].removeClass('variants__btn-item--active');
+    //         });
+    //         $('.variants__list')[i].removeClass('visually-hidden');
+    //         $('.variants__btn-item')[i].addClass('variants__btn-item--active');
+    //     });
+    // });
 
 
     /////// ОТКРЫТИЕ ЭЛЕМЕНТОВ ПОДВАЛА ///////
@@ -150,11 +179,11 @@ $(document).ready(function () {
         }
     });
 
-    (function($) {
-        $(function() {
+    (function ($) {
+        $(function () {
 
-            $('.button-upp').click(function() {
-                $('html, body').animate({scrollTop: 0},500);
+            $('.button-upp').click(function () {
+                $('html, body').animate({scrollTop: 0}, 500);
                 return false;
             })
         })
