@@ -93,6 +93,23 @@ $(document).ready(function () {
         }
     }
 
+    /////// ОТКРЫТИЕ ВАРИАНТОВ ///////
+    let vars_list = document.querySelectorAll('.variants__list');
+    let vars_btn = document.querySelectorAll('.variants__btn-item');
+
+    if (vars_btn !== undefined) {
+        for (let i = 0; i < vars_btn.length; i++) {
+            vars_btn[i].addEventListener('click', function () {
+                for (let j = 0; j < vars_list.length; j++) {
+                    vars_list[j].classList.add('visually-hidden');
+                    vars_btn[j].classList.remove('variants__btn-item--active');
+                }
+                vars_list[i].classList.remove('visually-hidden');
+                vars_btn[i].classList.add('variants__btn-item--active');
+            });
+        }
+    }
+
 
     /////// ОТКРЫТИЕ ЭЛЕМЕНТОВ ПОДВАЛА ///////
     let footer_block = document.querySelectorAll('.footer__block');
