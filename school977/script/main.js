@@ -55,7 +55,7 @@ $(document).ready(function () {
         $(".header").addClass('header--close');
     }
 
-    let speed = 300,
+    let speed = 200,
         originalWidth = 100,
         hoverWidth = 330;
 
