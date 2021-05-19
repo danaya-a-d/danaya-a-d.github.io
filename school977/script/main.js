@@ -52,7 +52,7 @@ $(document).ready(function () {
         on_overlay_close();
     });
 
-    $(".overlay").on("touchmove",function(){
+    $(".overlay").on("touchmove", function () {
         on_overlay_close();
     });
 
@@ -195,8 +195,31 @@ $(document).ready(function () {
                 return false;
             })
         })
-    })(jQuery)
+    })(jQuery);
 
     /////// ТАБЛИЦА ///////
-    // let footer_block = document.querySelectorAll('.footer__block');
+
+    let table_name = document.querySelectorAll('.packets__table--name');
+    let table_check = document.querySelectorAll('.packets__table--check');
+
+    function resize_table() {
+        for (let j = 0; j < table_name.length; j++) {
+            let tr = table_name[j].querySelectorAll('tr');
+            let tr2 = table_check[j].querySelectorAll('tr');
+
+            for (let i = 0; i < tr.length; i++) {
+
+                if(tr[i].offsetHeight > tr2[i].offsetHeight) {
+                    tr2[i].style.height = tr[i].offsetHeight + 'px';
+                } tr[i].style.height = tr2[i].offsetHeight + 'px';
+            }
+        }
+    }
+
+    resize_table();
+    window.onresize = function(event) {
+        resize_table();
+    };
+
+
 });
