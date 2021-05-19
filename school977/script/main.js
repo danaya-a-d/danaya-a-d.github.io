@@ -4,6 +4,13 @@ $(document).ready(function () {
         $('.banner').hide();
     });
 
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
     /////// ТАБЛИЦА ///////
 
     let table_name = document.querySelectorAll('.packets__table--name');
