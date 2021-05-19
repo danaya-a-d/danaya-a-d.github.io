@@ -700,6 +700,87 @@
             </ul>
         </div>
     </section>
+    <section class="content content--second">
+        <div class="content__title-block">
+            <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
+        </div>
+        <div class="content__container dragscroll">
+            <ul class="content__list">
+                <li class="content__item content__item--light-violet">
+                    <a href="#">
+                        <h5>Дошкільнята</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <svg class="content__triangles" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#triangles"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="content__item content__item--blue">
+                    <a href="#">
+                        <h5>1-4 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <svg class="content__triangles" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#triangles"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="content__item content__item--dark-pink">
+                    <a href="#">
+                        <h5>5-9 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <svg class="content__triangles" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#triangles"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="content__item content__item--light-orange">
+                    <a href="#">
+                        <h5>10-11 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <svg class="content__triangles" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#triangles"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="content__item content__item--yellow">
+                    <a href="#">
+                        <h5>Вчителя</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <svg class="content__triangles" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#triangles"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="content__item content__item--green">
+                    <a href="#">
+                        <h5>Репетиторы</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <svg class="content__triangles" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#triangles"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
     <section class="content content--third content--scroll">
         <div class="content__title-block">
             <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
@@ -1827,9 +1908,14 @@ $(".header__scroll").mCustomScrollbar({
     axis: "y" //
 });
 
-//$(".packets__tbody").mCustomScrollbar({
-//    axis:"x" //
-//});
+(function ($) {
+    $(function () {
+        $('.button-upp').click(function () {
+            $('html, body').animate({scrollTop: 0}, 500);
+            return false;
+        })
+    })
+})(jQuery)
 
 </script>
 </body>

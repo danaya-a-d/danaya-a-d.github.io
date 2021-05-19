@@ -188,4 +188,7 @@ $(document).ready(function () {
             })
         })
     })(jQuery)
+
+    /////// ТАБЛИЦА ///////
+    // let footer_block = document.querySelectorAll('.footer__block');
 });
