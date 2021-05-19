@@ -55,6 +55,12 @@ $(document).ready(function () {
     $(".overlay").on("swipe",function(){
         on_overlay_close();
     });
+    $(".overlay").on("tap",function(){
+        on_overlay_close();
+    });
+    $(".overlay").on("taphold",function(){
+        on_overlay_close();
+    });
 
 
     /////// СЛАЙДЕРЫ ///////
