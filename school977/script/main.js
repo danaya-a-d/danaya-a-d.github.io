@@ -52,16 +52,9 @@ $(document).ready(function () {
         on_overlay_close();
     });
 
-    $(".overlay").on("swipe",function(){
+    $(".overlay").on("touchmove",function(){
         on_overlay_close();
     });
-    $(".overlay").on("tap",function(){
-        on_overlay_close();
-    });
-    $(".overlay").on("taphold",function(){
-        on_overlay_close();
-    });
-
 
     /////// СЛАЙДЕРЫ ///////
     if (window.matchMedia("(max-width: 768px)").matches) {
