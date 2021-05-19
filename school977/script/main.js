@@ -5,6 +5,15 @@ $(document).ready(function () {
     });
 
     /////// ОТКРЫТИЕ ХЕДЕР МЕНЮ ///////
+
+    function on_overlay_close() {
+        $('.overlay').hide();
+        $(".header__container").addClass('header__container--close');
+        $(".header__container").stop().animate({width: originalWidth}, speed);
+        $(".header__logo img").attr('src', 'img/logo-small.png');
+        $(".header").addClass('header--close');
+    }
+
     let speed = 300,
         originalWidth = 100,
         hoverWidth = 330;
@@ -40,11 +49,11 @@ $(document).ready(function () {
     });
 
     $('.overlay').on('click', function () {
-        $('.overlay').hide();
-        $(".header__container").addClass('header__container--close');
-        $(".header__container").stop().animate({width: originalWidth}, speed);
-        $(".header__logo img").attr('src', 'img/logo-small.png');
-        $(".header").addClass('header--close');
+        on_overlay_close();
+    });
+
+    $(".overlay").on("swipe",function(){
+        on_overlay_close();
     });
 
 
