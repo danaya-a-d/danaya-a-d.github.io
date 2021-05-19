@@ -607,7 +607,7 @@
 
         <div class="video-section__container">
             <p class="video-section__title">Подивіться, як проходить навчання в домашній школі</p>
-            <video class="video-section__video" type="video/mp4" muted="muted" controls loop>
+            <video class="video-section__video" muted="muted" controls loop>
                 <source src="img/video1.mp4" type="video/mp4">
             </video>
         </div>
@@ -655,11 +655,13 @@
     <section class="feedback">
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
             <h3 class="title feedback__title">Виникли запитання?</h3>
-            <label>
+            <div>
                 <input class="feedback__input form__input" type="text" placeholder="Ім'я Прізвище" required>
                 <input class="feedback__input form__input phone_mask" type="tel" placeholder="Телефон" required>
                 <input class="feedback__input form__input" type="email" placeholder="Email" required>
-                <textarea class="feedback__textarea form__textarea"></textarea>
+                <label>
+                    <textarea class="feedback__textarea form__textarea"></textarea>
+                </label>
 
                 <label class="feedback__label form__label">
                     <input class="visually-hidden" type="checkbox" name="agree" value="yes" required>
@@ -670,7 +672,7 @@
                 </label>
 
                 <button class="feedback__button button button--violet">Передзвоніть мені</button>
-            </label>
+            </div>
         </form>
         <section class="feedback__contacts">
             <h3 class="feedback__title title">Контакти</h3>
@@ -1445,7 +1447,7 @@
     </article>
     <section class="questions">
         <form class="questions__form form">
-            <label>
+            <div>
                 <input class="questions__input form__input" type="text" placeholder="Клас" required>
                 <input class="questions__input form__input phone_mask" type="tel" placeholder="Телефон батьків"
                        required>
@@ -1460,7 +1462,7 @@
                 </label>
 
                 <button class="questions__button button button--green">Button</button>
-            </label>
+            </div>
         </form>
         <div class="questions__block">
             <h3 class="title">Залишились питання?</h3>
