@@ -4,6 +4,31 @@ $(document).ready(function () {
         $('.banner').hide();
     });
 
+    /////// ТАБЛИЦА ///////
+
+    let table_name = document.querySelectorAll('.packets__table--name');
+    let table_check = document.querySelectorAll('.packets__table--check');
+
+    function resize_table() {
+        for (let j = 0; j < table_name.length; j++) {
+            let tr_name = table_name[j].querySelectorAll('tr');
+            let tr_check = table_check[j].querySelectorAll('tr');
+
+            for (let i = 0; i < tr_name.length; i++) {
+
+                if(tr_name[i].offsetHeight > tr_check[i].offsetHeight) {
+                    tr_check[i].style.height = tr_name[i].offsetHeight + 'px';
+                } tr_name[i].style.height = tr_check[i].offsetHeight + 'px';
+            }
+        }
+    }
+
+    resize_table();
+
+    window.addEventListener('resize', function(event) {
+        resize_table();
+    }, true);
+
     /////// ОТКРЫТИЕ ХЕДЕР МЕНЮ ///////
 
     function on_overlay_close() {
@@ -196,30 +221,5 @@ $(document).ready(function () {
             })
         })
     })(jQuery);
-
-    /////// ТАБЛИЦА ///////
-
-    let table_name = document.querySelectorAll('.packets__table--name');
-    let table_check = document.querySelectorAll('.packets__table--check');
-
-    function resize_table() {
-        for (let j = 0; j < table_name.length; j++) {
-            let tr = table_name[j].querySelectorAll('tr');
-            let tr2 = table_check[j].querySelectorAll('tr');
-
-            for (let i = 0; i < tr.length; i++) {
-
-                if(tr[i].offsetHeight > tr2[i].offsetHeight) {
-                    tr2[i].style.height = tr[i].offsetHeight + 'px';
-                } tr[i].style.height = tr2[i].offsetHeight + 'px';
-            }
-        }
-    }
-
-    resize_table();
-    window.onresize = function(event) {
-        resize_table();
-    };
-
 
 });
