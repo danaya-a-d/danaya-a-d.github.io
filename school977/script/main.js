@@ -98,17 +98,51 @@ $(document).ready(function () {
     });
 
     /////// СЛАЙДЕРЫ ///////
-    if (window.matchMedia("(max-width: 768px)").matches) {
-        $('.content--scroll .content__list').slick({
-            dots: false,
-            arrows: false
-        });
+    // if (window.matchMedia("(max-width: 768px)").matches) {
+    //     $('.content--scroll .content__list').slick({
+    //         dots: false,
+    //         arrows: false,
+    //         mobileFirst: true,
+    //         responsive: [{
+    //             breakpoint: 768,
+    //             settings: 'unslick'
+    //         }]
+    //     });
+    // }
 
-        // $('.variants__list').slick({
-        //     dots: false,
-        //     arrows: false
-        // });
-    }
+    // window.addEventListener('resize', () => {
+    //     $('.content--scroll .content__list').slick({
+    //         dots: false,
+    //         arrows: false,
+    //         mobileFirst: true,
+    //         settings: 'slick',
+    //         responsive: [{
+    //             breakpoint: 768,
+    //             settings: 'unslick'
+    //         }]
+    //     });
+    // // });
+
+    const settings = {
+        // default settings
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        settings: 'slick',
+        responsive: [{
+            breakpoint: 768,
+            settings: 'unslick'
+        }]
+    };
+
+    const sl =  $('.content--scroll .content__list').slick(settings);
+
+    $(window).on('resize', function() {
+        if( $(window).width() > 420 &&  !sl.hasClass('slick-initialized')) {
+            $('.content--scroll .content__list').slick(settings);
+        }
+    });
+
 
     /////// ОТКРЫТИЕ FAQ ///////
     let faq_item = document.querySelectorAll('.faq__item');
