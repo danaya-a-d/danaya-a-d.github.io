@@ -245,13 +245,9 @@ $(document).ready(function () {
         }
     });
 
-    (function ($) {
-        $(function () {
-            $('.button-upp').click(function () {
-                $('html, body').animate({scrollTop: 0}, 500);
-                return false;
-            })
-        })
-    })(jQuery);
+    $('.button-upp').click(function () {
+        $('html, body').animate({scrollTop: 0}, 500);
+        return false;
+    })
 
 });
