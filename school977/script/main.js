@@ -21,7 +21,6 @@ $(document).ready(function () {
 
 
     /////// ТАБЛИЦА ///////
-
     let table_name = document.querySelectorAll('.packets__table--name');
     let table_check = document.querySelectorAll('.packets__table--check');
 
@@ -30,7 +29,7 @@ $(document).ready(function () {
             let tr_name = table_name[j].querySelectorAll('tr');
             let tr_check = table_check[j].querySelectorAll('tr');
 
-            for (let i = 0; i < tr_name.length; i++) {
+            for (let i = 1; i < tr_name.length; i++) {
 
                 if(tr_name[i].offsetHeight > tr_check[i].offsetHeight) {
                     tr_check[i].style.height = tr_name[i].offsetHeight + 'px';
@@ -40,7 +39,6 @@ $(document).ready(function () {
     }
 
     resize_table();
-
     window.addEventListener('resize', function(event) {
         resize_table();
     }, true);
@@ -98,30 +96,6 @@ $(document).ready(function () {
     });
 
     /////// СЛАЙДЕРЫ ///////
-    // if (window.matchMedia("(max-width: 768px)").matches) {
-    //     $('.content--scroll .content__list').slick({
-    //         dots: false,
-    //         arrows: false,
-    //         mobileFirst: true,
-    //         responsive: [{
-    //             breakpoint: 768,
-    //             settings: 'unslick'
-    //         }]
-    //     });
-    // }
-
-    // window.addEventListener('resize', () => {
-    //     $('.content--scroll .content__list').slick({
-    //         dots: false,
-    //         arrows: false,
-    //         mobileFirst: true,
-    //         settings: 'slick',
-    //         responsive: [{
-    //             breakpoint: 768,
-    //             settings: 'unslick'
-    //         }]
-    //     });
-    // // });
 
     const settings = {
         // default settings
@@ -264,7 +238,6 @@ $(document).ready(function () {
 
     (function ($) {
         $(function () {
-
             $('.button-upp').click(function () {
                 $('html, body').animate({scrollTop: 0}, 500);
                 return false;
