@@ -126,12 +126,19 @@ $(document).ready(function () {
             settings: 'unslick'
         }]
     };
+    const settings2 = {
+        dots: true,
+        arrows: false,
+        mobileFirst: true,
+        settings: 'slick',
+        responsive: [{
+            breakpoint: 768,
+            settings: 'unslick'
+        }]
+    };
 
     slick_mobile($('.content--scroll .content__list'), settings);
-    // slick_mobile($('.courses__list'), settings);
-
-    // window.moveBy(deltaX, deltaY);
-
+    slick_mobile($('.courses__list'), settings2);
 
 
     /////// ОТКРЫТИЕ FAQ ///////
@@ -212,19 +219,14 @@ $(document).ready(function () {
     function show_vars_slick(i) {
         if (!(vars_list[i].classList.contains('visually-hidden'))) {
             {
-                if (window.matchMedia("(max-width: 768px)").matches) {
-                    $('.variants__list').eq(i).slick({
-                        dots: true,
-                        arrows: false
-                    });
-                }
+                slick_mobile( $('.variants__list').eq(i), settings2);
             }
         }
     }
 
     if (vars_btn !== undefined) {
         for (let i = 0; i < vars_btn.length; i++) {
-            // show_vars_slick(i);
+            show_vars_slick(i);
             vars_btn[i].addEventListener('click', function () {
                 for (let j = 0; j < vars_list.length; j++) {
                     vars_list[j].classList.add('visually-hidden');
@@ -232,7 +234,7 @@ $(document).ready(function () {
                 }
                 vars_list[i].classList.remove('visually-hidden');
                 vars_btn[i].classList.add('variants__btn-item--active');
-                // show_vars_slick(i);
+                show_vars_slick(i);
             });
         }
     }
