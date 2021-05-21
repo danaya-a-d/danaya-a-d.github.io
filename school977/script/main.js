@@ -162,9 +162,20 @@ $(document).ready(function () {
                 }
 
 
-                $('html, body').animate({
-                    scrollTop: $(this).offset().top-height
-                }, 0);
+                if (window.matchMedia('(max-width: 768px)').matches) {
+                    $('html, body').animate({
+                        scrollTop: $(this).offset().top-height
+                    }, 300);
+                }
+
+                window.addEventListener('resize', () => {
+                    if (window.matchMedia('(max-width: 768px)').matches) {
+                        $('html, body').animate({
+                            scrollTop: $(this).offset().top-height
+                        }, 300);
+                    }
+                });
+
 
                 faq_text.classList.toggle('hidden');
                 faq_img.classList.toggle('hidden');
