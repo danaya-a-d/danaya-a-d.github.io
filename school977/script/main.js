@@ -162,7 +162,10 @@ $(document).ready(function () {
                     }
                 }
 
-
+                faq_text.classList.toggle('hidden');
+                faq_img.classList.toggle('hidden');
+                faq_item[i].classList.toggle('faq__item--active');
+                
                 if (window.matchMedia('(max-width: 768px)').matches) {
                     $('html, body').animate({
                         scrollTop: $(this).offset().top - 20
@@ -176,11 +179,6 @@ $(document).ready(function () {
                         }, 300);
                     }
                 });
-
-
-                faq_text.classList.toggle('hidden');
-                faq_img.classList.toggle('hidden');
-                faq_item[i].classList.toggle('faq__item--active');
             });
         }
     }
