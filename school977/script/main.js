@@ -138,7 +138,7 @@ $(document).ready(function () {
 
 
     let faq_item = document.querySelectorAll('.faq__item');
-    let height  = 0;
+    // let height  = 0;
 
     if (faq_item !== undefined) {
         for (let i = 0; i < faq_item.length; i++) {
@@ -152,7 +152,7 @@ $(document).ready(function () {
                         let faq_img = faq_item[j].querySelector('.faq__img');
 
                         if (!faq_text.classList.contains('hidden') && !faq_img.classList.add('hidden')) {
-                            height  = faq_text.offsetHeight + faq_img.offsetHeight;
+                            // height  = faq_text.offsetHeight + faq_img.offsetHeight;
 
                             faq_text.classList.add('hidden');
                             faq_img.classList.add('hidden');
@@ -164,14 +164,14 @@ $(document).ready(function () {
 
                 if (window.matchMedia('(max-width: 768px)').matches) {
                     $('html, body').animate({
-                        scrollTop: $(this).offset().top-height
+                        scrollTop: $(this).offset().top - 20
                     }, 300);
                 }
 
                 window.addEventListener('resize', () => {
                     if (window.matchMedia('(max-width: 768px)').matches) {
                         $('html, body').animate({
-                            scrollTop: $(this).offset().top-height
+                            scrollTop: $(this).offset().top - 20
                         }, 300);
                     }
                 });
