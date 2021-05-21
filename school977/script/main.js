@@ -144,7 +144,8 @@ $(document).ready(function () {
         for (let i = 0; i < faq_item.length; i++) {
             let faq_text = faq_item[i].querySelector('.faq__text');
             let faq_img = faq_item[i].querySelector('.faq__img');
-            faq_item[i].addEventListener('click', function (event) {
+            let faq_title = faq_item[i].querySelector('.faq__item-title');
+            faq_title.addEventListener('click', function (event) {
                 if (faq_text.classList.contains('hidden')) {
                     for (let j = 0; j < faq_item.length; j++) {
 
