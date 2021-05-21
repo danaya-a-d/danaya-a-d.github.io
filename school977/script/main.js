@@ -49,7 +49,7 @@ $(document).ready(function () {
             $('.overlay').hide();
             $(".header__container").addClass('header__container--close');
             $(".header__container").stop().animate({width: originalWidth}, speed);
-            $(".header__logo img").attr('src', 'img/logo-small.png');
+            $(".header__logo img").attr('src', 'img/logo-small.svg');
             $(".header").addClass('header--close');
         }
 
@@ -62,12 +62,12 @@ $(document).ready(function () {
                 $('.overlay').show();
                 $(".header__container").removeClass('header__container--close');
                 $(".header__container").stop().animate({width: hoverWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-big.png');
+                $(".header__logo img").attr('src', 'img/logo-big.svg');
             }, function () {
                 $('.overlay').hide();
                 $(".header__container").addClass('header__container--close');
                 $(".header__container").stop().animate({width: originalWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-small.png');
+                $(".header__logo img").attr('src', 'img/logo-small.svg');
                 $(".header").addClass('header--close'); //test
             });
         }
@@ -76,7 +76,7 @@ $(document).ready(function () {
                 $('.overlay').show();
                 $(".header__container").removeClass('header__container--close');
                 $(".header__container").stop().animate({width: hoverWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-big.png');
+                $(".header__logo img").attr('src', 'img/logo-big.svg');
                 $(".header").removeClass('header--close');
             });
 
@@ -84,7 +84,7 @@ $(document).ready(function () {
                 $('.overlay').hide();
                 $(".header__container").addClass('header__container--close');
                 $(".header__container").stop().animate({width: originalWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-small.png');
+                $(".header__logo img").attr('src', 'img/logo-small.svg');
                 $(".header").addClass('header--close');
             });
 
@@ -106,8 +106,17 @@ $(document).ready(function () {
 
     /////// СЛАЙДЕРЫ ///////
 
+    function slick_mobile(slider, settings) {
+        const slick = slider.slick(settings);
+
+        $(window).on('resize', function () {
+            if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
+                slider.slick(settings);
+            }
+        });
+    }
+
     const settings = {
-        // default settings
         dots: false,
         arrows: false,
         mobileFirst: true,
@@ -118,13 +127,11 @@ $(document).ready(function () {
         }]
     };
 
-    const sl = $('.content--scroll .content__list').slick(settings);
+    slick_mobile($('.content--scroll .content__list'), settings);
+    // slick_mobile($('.courses__list'), settings);
 
-    $(window).on('resize', function () {
-        if ($(window).width() > 420 && !sl.hasClass('slick-initialized')) {
-            $('.content--scroll .content__list').slick(settings);
-        }
-    });
+
+
 
 
     /////// ОТКРЫТИЕ FAQ ///////
@@ -134,21 +141,21 @@ $(document).ready(function () {
             let faq_text = faq_item[i].querySelector('.faq__text');
             let faq_img = faq_item[i].querySelector('.faq__img');
             faq_item[i].addEventListener('click', function (event) {
-                if (faq_text.classList.contains('visually-hidden')) {
+                if (faq_text.classList.contains('hidden')) {
 
                     for (let j = 0; j < faq_item.length; j++) {
 
                         let faq_text = faq_item[j].querySelector('.faq__text');
-                        faq_text.classList.add('visually-hidden');
+                        faq_text.classList.add('hidden');
 
                         let faq_img = faq_item[j].querySelector('.faq__img');
-                        faq_img.classList.add('visually-hidden');
+                        faq_img.classList.add('hidden');
 
                         faq_item[j].classList.remove('faq__item--active');
                     }
                 }
-                faq_text.classList.toggle('visually-hidden');
-                faq_img.classList.toggle('visually-hidden');
+                faq_text.classList.toggle('hidden');
+                faq_img.classList.toggle('hidden');
                 faq_item[i].classList.toggle('faq__item--active');
             });
         }
