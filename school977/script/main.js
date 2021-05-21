@@ -57,7 +57,11 @@ $(document).ready(function () {
             originalWidth = 100,
             hoverWidth = 330;
 
-        if (window.matchMedia('(min-width: 1400px)').matches) {
+        if (window.matchMedia('(min-width: 1250px)').matches) {
+            // $('.overlay').show();
+            // $(".header__container").removeClass('header__container--close');
+            // $(".header__container").stop().animate({width: hoverWidth}, 0);
+            // $(".header__logo img").attr('src', 'img/logo-big.svg');
             $(".header").hover(function () {
                 $('.overlay').show();
                 $(".header__container").removeClass('header__container--close');
