@@ -167,19 +167,19 @@ $(document).ready(function () {
                 faq_item[i].classList.toggle('faq__item--active');
 
                 if (faq_item[i].classList.contains('faq__item--active')) {
-                    if (window.matchMedia('(max-width: 768px)').matches) {
+                    console.log($(this));
+                    if (window.matchMedia('(max-width: 1025px)').matches) {
                         $('html, body').animate({
                             scrollTop: $(this).offset().top - 20
                         }, 300);
                     }
-
-                    window.addEventListener('resize', () => {
-                        if (window.matchMedia('(max-width: 768px)').matches) {
-                            $('html, body').animate({
-                                scrollTop: $(this).offset().top - 20
-                            }, 300);
-                        }
-                    });
+                    // window.addEventListener('resize', () => {
+                    //     if (window.matchMedia('(max-width: 768px)').matches) {
+                    //         $('html, body').animate({
+                    //             scrollTop: $(this).offset().top - 20
+                    //         }, 300);
+                    //     }
+                    // });
                 }
 
 
