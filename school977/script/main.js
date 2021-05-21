@@ -66,7 +66,8 @@ $(document).ready(function () {
 
     function header_activity() {
 
-        if (window.matchMedia('(min-width: 1250px)').matches) {
+        // if (window.matchMedia('(min-width: 1250px)').matches) {
+        if (window.matchMedia('(min-width: 1700px)').matches) {
 
             menu_open();
             $('.overlay').hide();
