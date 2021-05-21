@@ -165,20 +165,24 @@ $(document).ready(function () {
                 faq_text.classList.toggle('hidden');
                 faq_img.classList.toggle('hidden');
                 faq_item[i].classList.toggle('faq__item--active');
-                
-                if (window.matchMedia('(max-width: 768px)').matches) {
-                    $('html, body').animate({
-                        scrollTop: $(this).offset().top - 20
-                    }, 300);
-                }
 
-                window.addEventListener('resize', () => {
+                if (faq_item[i].classList.contains('faq__item--active')) {
                     if (window.matchMedia('(max-width: 768px)').matches) {
                         $('html, body').animate({
                             scrollTop: $(this).offset().top - 20
                         }, 300);
                     }
-                });
+
+                    window.addEventListener('resize', () => {
+                        if (window.matchMedia('(max-width: 768px)').matches) {
+                            $('html, body').animate({
+                                scrollTop: $(this).offset().top - 20
+                            }, 300);
+                        }
+                    });
+                }
+
+
             });
         }
     }
