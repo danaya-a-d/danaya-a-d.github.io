@@ -109,7 +109,6 @@ $(document).ready(function () {
 
 
     /////// СЛАЙДЕРЫ ///////
-
     function slick_mobile(slider, settings) {
         const slick = slider.slick(settings);
 
@@ -130,7 +129,7 @@ $(document).ready(function () {
             settings: 'unslick'
         }]
     };
-    const settings2 = {
+    const settings_toggles = {
         dots: true,
         arrows: false,
         mobileFirst: true,
@@ -142,14 +141,13 @@ $(document).ready(function () {
     };
 
     slick_mobile($('.content--scroll .content__list'), settings);
-    slick_mobile($('.courses__list'), settings2);
-
+    slick_mobile($('.courses__list'), settings_toggles);
+    slick_mobile($('.checklist--slick'), settings);
 
     /////// ОТКРЫТИЕ FAQ ///////
 
 
     let faq_item = document.querySelectorAll('.faq__item');
-    // let height  = 0;
 
     if (faq_item !== undefined) {
         for (let i = 0; i < faq_item.length; i++) {
@@ -164,7 +162,6 @@ $(document).ready(function () {
                         let faq_img = faq_item[j].querySelector('.faq__img');
 
                         if (!faq_text.classList.contains('hidden') && !faq_img.classList.add('hidden')) {
-                            // height  = faq_text.offsetHeight + faq_img.offsetHeight;
 
                             faq_text.classList.add('hidden');
                             faq_img.classList.add('hidden');
@@ -178,19 +175,11 @@ $(document).ready(function () {
                 faq_item[i].classList.toggle('faq__item--active');
 
                 if (faq_item[i].classList.contains('faq__item--active')) {
-                    console.log($(this));
                     if (window.matchMedia('(max-width: 1025px)').matches) {
                         $('html, body').animate({
                             scrollTop: $(this).offset().top - 20
                         }, 300);
                     }
-                    // window.addEventListener('resize', () => {
-                    //     if (window.matchMedia('(max-width: 768px)').matches) {
-                    //         $('html, body').animate({
-                    //             scrollTop: $(this).offset().top - 20
-                    //         }, 300);
-                    //     }
-                    // });
                 }
 
 
@@ -222,9 +211,7 @@ $(document).ready(function () {
 
     function show_vars_slick(i) {
         if (!(vars_list[i].classList.contains('visually-hidden'))) {
-            {
-                slick_mobile( $('.variants__list').eq(i), settings2);
-            }
+            slick_mobile($('.variants__list').eq(i), settings_toggles);
         }
     }
 
