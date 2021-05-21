@@ -130,30 +130,42 @@ $(document).ready(function () {
     slick_mobile($('.content--scroll .content__list'), settings);
     // slick_mobile($('.courses__list'), settings);
 
-
+    // window.moveBy(deltaX, deltaY);
 
 
 
     /////// ОТКРЫТИЕ FAQ ///////
+
+
     let faq_item = document.querySelectorAll('.faq__item');
+    let height  = 0;
+
     if (faq_item !== undefined) {
         for (let i = 0; i < faq_item.length; i++) {
             let faq_text = faq_item[i].querySelector('.faq__text');
             let faq_img = faq_item[i].querySelector('.faq__img');
             faq_item[i].addEventListener('click', function (event) {
                 if (faq_text.classList.contains('hidden')) {
-
                     for (let j = 0; j < faq_item.length; j++) {
 
                         let faq_text = faq_item[j].querySelector('.faq__text');
-                        faq_text.classList.add('hidden');
-
                         let faq_img = faq_item[j].querySelector('.faq__img');
-                        faq_img.classList.add('hidden');
 
-                        faq_item[j].classList.remove('faq__item--active');
+                        if (!faq_text.classList.contains('hidden') && !faq_img.classList.add('hidden')) {
+                            height  = faq_text.offsetHeight + faq_img.offsetHeight;
+
+                            faq_text.classList.add('hidden');
+                            faq_img.classList.add('hidden');
+                            faq_item[j].classList.remove('faq__item--active');
+                        }
                     }
                 }
+
+
+                $('html, body').animate({
+                    scrollTop: $(this).offset().top-height
+                }, 0);
+
                 faq_text.classList.toggle('hidden');
                 faq_img.classList.toggle('hidden');
                 faq_item[i].classList.toggle('faq__item--active');
