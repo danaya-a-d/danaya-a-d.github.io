@@ -44,71 +44,69 @@ $(document).ready(function () {
 
     /////// ОТКРЫТИЕ ХЕДЕР МЕНЮ ///////
 
-    function header_activity() {
-        function on_overlay_close() {
-            $('.overlay').hide();
-            $(".header__container").addClass('header__container--close');
-            $(".header__container").stop().animate({width: originalWidth}, speed);
-            $(".header__logo img").attr('src', 'img/logo-small.svg');
-            $(".header").addClass('header--close');
-        }
+    let speed = 200,
+        originalWidth = 100,
+        hoverWidth = 330;
+    function menu_open() {
+        $('.overlay').show();
+        $(".header__container").removeClass('header__container--close');
+        $(".header__container").stop().animate({width: hoverWidth}, speed);
+        $(".header__logo img").attr('src', 'img/logo-big.svg');
+        $(".header").removeClass('header--close');
+    }
 
-        let speed = 200,
-            originalWidth = 100,
-            hoverWidth = 330;
+    function menu_close() {
+        $('.overlay').hide();
+        $(".header__container").addClass('header__container--close');
+        $(".header__container").stop().animate({width: originalWidth}, speed);
+        $(".header__logo img").attr('src', 'img/logo-small.svg');
+        $(".header").addClass('header--close');
+    }
+
+
+    function header_activity() {
 
         if (window.matchMedia('(min-width: 1250px)').matches) {
-            // $('.overlay').show();
-            // $(".header__container").removeClass('header__container--close');
-            // $(".header__container").stop().animate({width: hoverWidth}, 0);
-            // $(".header__logo img").attr('src', 'img/logo-big.svg');
-            $(".header").hover(function () {
-                $('.overlay').show();
-                $(".header__container").removeClass('header__container--close');
-                $(".header__container").stop().animate({width: hoverWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-big.svg');
-            }, function () {
-                $('.overlay').hide();
-                $(".header__container").addClass('header__container--close');
-                $(".header__container").stop().animate({width: originalWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-small.svg');
-                $(".header").addClass('header--close'); //test
-            });
+
+            menu_open();
+
+            // $(".header").hover(function () {
+            //     menu_open();
+            // }, function () {
+            //     menu_close();
+            //     $(".header").addClass('header--close'); //test
+            // });
         }
-        else {
+        // else {
             $('.header-mobile__toggle').on('click', function () {
-                $('.overlay').show();
-                $(".header__container").removeClass('header__container--close');
-                $(".header__container").stop().animate({width: hoverWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-big.svg');
-                $(".header").removeClass('header--close');
+                menu_open();
             });
 
             $('.header__open-btn').on('click', function () {
-                $('.overlay').hide();
-                $(".header__container").addClass('header__container--close');
-                $(".header__container").stop().animate({width: originalWidth}, speed);
-                $(".header__logo img").attr('src', 'img/logo-small.svg');
-                $(".header").addClass('header--close');
+                if ($(".header").hasClass('header--close')) {
+                    menu_open();
+                } else {
+                    menu_close();
+                }
             });
 
             $('.overlay').on('click', function () {
-                on_overlay_close();
+                menu_close();
             });
 
             $(".overlay").on("touchmove", function () {
-                on_overlay_close();
+                menu_close();
             });
         }
-    }
+    // }
 
     header_activity();
-    window.addEventListener('resize', function (event) {
-        header_activity();
-    }, true);
+    // window.addEventListener('resize', function (event) {
+    //     header_activity();
+    // }, true);
 
 
-    /////// СЛАЙДЕРЫ ///////
+/////// СЛАЙДЕРЫ ///////
     function slick_mobile(slider, settings) {
         const slick = slider.slick(settings);
 
@@ -144,7 +142,7 @@ $(document).ready(function () {
     slick_mobile($('.courses__list'), settings_toggles);
     slick_mobile($('.checklist--slick'), settings);
 
-    /////// ОТКРЫТИЕ FAQ ///////
+/////// ОТКРЫТИЕ FAQ ///////
 
 
     let faq_item = document.querySelectorAll('.faq__item');
@@ -188,7 +186,7 @@ $(document).ready(function () {
     }
 
 
-    /////// ОТКРЫТИЕ ТАБОВ ///////
+/////// ОТКРЫТИЕ ТАБОВ ///////
     let tabs_item = document.querySelectorAll('.tabs__item');
     let tabs_btn = document.querySelectorAll('.tabs__btn');
 
@@ -205,7 +203,7 @@ $(document).ready(function () {
         }
     }
 
-    /////// ОТКРЫТИЕ ВАРИАНТОВ ///////
+/////// ОТКРЫТИЕ ВАРИАНТОВ ///////
     let vars_list = document.querySelectorAll('.variants__list');
     let vars_btn = document.querySelectorAll('.variants__btn-item');
 
@@ -231,20 +229,20 @@ $(document).ready(function () {
     }
 
 
-    // $.each($('.variants__btn-item'), function (i, value) {
-    //     $(this).click(function () {
-    //         $.each($('.variants__list'), function (j, value) {
-    //             console.log($(this));
-    //             $('.variants__list')[j].addClass('visually-hidden');
-    //             $('.variants__btn-item')[j].removeClass('variants__btn-item--active');
-    //         });
-    //         $('.variants__list')[i].removeClass('visually-hidden');
-    //         $('.variants__btn-item')[i].addClass('variants__btn-item--active');
-    //     });
-    // });
+// $.each($('.variants__btn-item'), function (i, value) {
+//     $(this).click(function () {
+//         $.each($('.variants__list'), function (j, value) {
+//             console.log($(this));
+//             $('.variants__list')[j].addClass('visually-hidden');
+//             $('.variants__btn-item')[j].removeClass('variants__btn-item--active');
+//         });
+//         $('.variants__list')[i].removeClass('visually-hidden');
+//         $('.variants__btn-item')[i].addClass('variants__btn-item--active');
+//     });
+// });
 
 
-    /////// ОТКРЫТИЕ ЭЛЕМЕНТОВ ПОДВАЛА ///////
+/////// ОТКРЫТИЕ ЭЛЕМЕНТОВ ПОДВАЛА ///////
     let footer_block = document.querySelectorAll('.footer__block');
 
     if (footer_block !== undefined) {
@@ -255,7 +253,7 @@ $(document).ready(function () {
         }
     }
 
-    /////// КНОПКА ВВЕРХ ///////
+/////// КНОПКА ВВЕРХ ///////
     let button_upp = document.querySelector('.button-upp');
     if (pageYOffset > 1200) {
         button_upp.style.display = 'block';
