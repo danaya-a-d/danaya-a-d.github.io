@@ -116,7 +116,7 @@ $(document).ready(function () {
             // Храним её в data
             let init = slider.data('init-slider');
             // Если мобильный
-            if (window.innerWidth < 768) {
+            if (window.innerWidth < 769) {
                 // Если слайдер не запущен
                 if (init !== 1) {
                     // Запускаем слайдер и записываем в data init-slider = 1
@@ -140,7 +140,7 @@ $(document).ready(function () {
         mobileFirst: true,
         settings: 'slick',
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 769,
             settings: 'unslick'
         }]
     };
@@ -151,7 +151,7 @@ $(document).ready(function () {
         adaptiveHeight: true,
         settings: 'slick',
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 769,
             settings: 'unslick'
         }]
     };
