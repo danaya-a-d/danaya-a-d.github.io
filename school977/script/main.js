@@ -255,14 +255,14 @@ $(document).ready(function () {
     function slick_mobile_vars(slider, settings) {
         const slick = slider.slick(settings);
         let saved_width = $(window).width();
-        // $(window).on('resize', function () {
-        //     if ($(window).width() != saved_width) {
+        $(window).on('resize', function () {
+            if ($(window).width() != saved_width) {
                 if ($(window).width() > 320 && !slider.hasClass('slick-initialized')) {
                     console.log(saved_width);
                     slider.slick(settings);
                 }
-            // }
-        // });
+            }
+        });
     }
 
     // function show_vars_slick(i) {
