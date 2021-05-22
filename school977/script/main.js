@@ -132,19 +132,6 @@ $(document).ready(function () {
                 }
             }
         }).trigger('resize');
-
-
-        // const slick = slider.slick(settings)
-        // // Сохраняем ширину экрана
-        // let saved_width = $(window).width();;
-
-        // $(window).on('resize', function () {
-        //     if ($(window).width() != saved_width) {
-        //         if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
-        //             slider.slick(settings);
-        //         }
-        //     }
-        // });
     }
 
     const settings = {
@@ -272,9 +259,9 @@ $(document).ready(function () {
     // }
 
     function show_vars_slick(i) {
-        if (!(vars_list[i].classList.contains('visually-hidden'))) {
-            slick_mobile_vars($('.variants__list').eq(i), settings_toggles);
-        }
+        // if (!(vars_list[i].classList.contains('visually-hidden'))) {
+            slick_mobile($('.variants__list').eq(i), settings_toggles);
+        // }
     }
 
 
@@ -283,12 +270,12 @@ $(document).ready(function () {
             show_vars_slick(i);
             vars_btn[i].addEventListener('click', function () {
                 for (let j = 0; j < vars_list.length; j++) {
-                    vars_list[j].classList.add('visually-hidden');
+                    vars_list[j].classList.add('variants__list--hidden');
                     vars_btn[j].classList.remove('variants__btn-item--active');
                 }
-                vars_list[i].classList.remove('visually-hidden');
+                vars_list[i].classList.remove('variants__list--hidden');
                 vars_btn[i].classList.add('variants__btn-item--active');
-                show_vars_slick(i);
+                // show_vars_slick(i);
             });
         }
     }
