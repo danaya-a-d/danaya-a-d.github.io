@@ -47,7 +47,6 @@ $(document).ready(function () {
     let speed = 200,
         originalWidth = 100,
         hoverWidth = 330;
-
     function menu_open() {
         $('.overlay').show();
         $(".header__container").removeClass('header__container--close');
@@ -81,52 +80,57 @@ $(document).ready(function () {
             // });
         }
         // else {
-        $('.header-mobile__toggle').on('click', function () {
-            menu_open();
-        });
-
-        $('.header__open-btn').on('click', function () {
-            if ($(".header").hasClass('header--close')) {
+            $('.header-mobile__toggle').on('click', function () {
                 menu_open();
-            } else {
+            });
+
+            $('.header__open-btn').on('click', function () {
+                if ($(".header").hasClass('header--close')) {
+                    menu_open();
+                } else {
+                    menu_close();
+                }
+            });
+
+            $('.overlay').on('click', function () {
                 menu_close();
-            }
-        });
+            });
 
-        $('.overlay').on('click', function () {
-            menu_close();
-        });
-
-        $(".overlay").on("touchmove", function () {
-            menu_close();
-        });
-    }
-
+            $(".overlay").on("touchmove", function () {
+                menu_close();
+            });
+        }
     // }
 
     header_activity();
-    // window.addEventListener('resize', function (event) {
-    //     header_activity();
-    // }, true);
+
+//     // Сохраняем где-то ширину
+//     let saved_width = $(window).width();
+//
+// // В нужном месте ставим проверку
+//
+//     function slick_mobile(slider, settings) {
+//         const slick = slider.slick(settings);
+//
+//         $(window).on('resize', function () {
+//             if ($(window).width() !== saved_width) {
+//                 return false;
+//             } else {
+//                 if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
+//                     slider.slick(settings);
+//                 }
+//             }
+//         });
+//     }
 
 
 /////// СЛАЙДЕРЫ ///////
-
-    // Сохраняем где-то ширину
-    let saved_width = $(window).width();
-
-// В нужном месте ставим проверку
-
     function slick_mobile(slider, settings) {
         const slick = slider.slick(settings);
 
         $(window).on('resize', function () {
-            if ($(window).width() !== saved_width) {
-                return false;
-            } else {
-                if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
-                    slider.slick(settings);
-                }
+            if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
+                slider.slick(settings);
             }
         });
     }
