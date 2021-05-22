@@ -123,6 +123,16 @@ $(document).ready(function () {
                 return false;
             }
         });
+
+        window.addEventListener("orientationchange", function() {
+            if ($(window).width() !== saved_width) {
+                if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
+                    slider.slick(settings);
+                }
+            } else {
+                return false;
+            }
+        }, false);
     }
 
 
