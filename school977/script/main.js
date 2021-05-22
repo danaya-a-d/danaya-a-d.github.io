@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
-    // Сохраняем ширину экрана
-    let saved_width = $(window).width();
+
 
     $('.banner__close').click(function () {
         $('.banner').hide();
@@ -112,39 +111,43 @@ $(document).ready(function () {
 /////// СЛАЙДЕРЫ ///////
 
     function slick_mobile(slider, settings) {
-        const slick = slider.slick(settings);
+        // // Сохраняем ширину экрана
+        // let saved_width = $(window).width();
 
-        $(window).on('resize', function () {
-            if ($(window).width() !== saved_width) {
-                if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
-                    slider.slick(settings);
+        // Подпишемся на ресайз и продиспатчим его для запуска
+        $(window).on('resize', function (e) {
+            // Переменная, по которой узнаем запущен слайдер или нет.
+            // Храним её в data
+            let init = slider.data('init-slider');
+            // Если мобильный
+            if (window.innerWidth < 768) {
+                // Если слайдер не запущен
+                if (init !== 1) {
+                    // Запускаем слайдер и записываем в data init-slider = 1
+                    slider.slick(settings).data({'init-slider': 1});
                 }
-            } else {
-                return false;
             }
-        });
+            // Если десктоп
+            else {
+                // Если слайдер запущен
+                if (init === 1) {
+                    // Разрушаем слайдер и записываем в data init-slider = 0
+                    slider.slick('unslick').data({'init-slider': 0});
+                }
+            }
+        }).trigger('resize');
 
-        window.addEventListener("orientationchange", function() {
-            if ($(window).width() !== saved_width) {
-                if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
-                    slider.slick(settings);
-                }
-            } else {
-                return false;
-            }
-        }, false);
+
+        // const slick = slider.slick(settings);
+
+        // $(window).on('resize', function () {
+        //     if ($(window).width() != saved_width) {
+        //         if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
+        //             slider.slick(settings);
+        //         }
+        //     }
+        // });
     }
-
-
-//     function slick_mobile(slider, settings) {
-//         const slick = slider.slick(settings);
-//
-//         $(window).on('resize', function () {
-//             if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
-//                 slider.slick(settings);
-//             }
-//         });
-//     }
 
     const settings = {
         dots: false,
