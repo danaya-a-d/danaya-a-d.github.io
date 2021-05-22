@@ -1,7 +1,6 @@
 $(document).ready(function () {
 
 
-
     $('.banner__close').click(function () {
         $('.banner').hide();
     });
@@ -111,9 +110,6 @@ $(document).ready(function () {
 /////// СЛАЙДЕРЫ ///////
 
     function slick_mobile(slider, settings) {
-        // // Сохраняем ширину экрана
-        // let saved_width = $(window).width();
-
         // Подпишемся на ресайз и продиспатчим его для запуска
         $(window).on('resize', function (e) {
             // Переменная, по которой узнаем запущен слайдер или нет.
@@ -138,7 +134,9 @@ $(document).ready(function () {
         }).trigger('resize');
 
 
-        // const slick = slider.slick(settings);
+        // const slick = slider.slick(settings)
+        // // Сохраняем ширину экрана
+        // let saved_width = $(window).width();;
 
         // $(window).on('resize', function () {
         //     if ($(window).width() != saved_width) {
@@ -239,11 +237,39 @@ $(document).ready(function () {
     let vars_list = document.querySelectorAll('.variants__list');
     let vars_btn = document.querySelectorAll('.variants__btn-item');
 
+
+    // function show_vars_slick(i) {
+    //     let slider = $('.variants__list').eq(i);
+    //     let slick = slider.slick(settings);
+    //
+    //     let saved_width = $(window).width();
+    //
+    //
+    //     if (!(vars_list[i].classList.contains('visually-hidden'))) {
+    //         if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
+    //             slider.slick(settings_toggles);
+    //         }
+    //     }
+    // }
+
+    function slick_mobile_vars(slider, settings) {
+        const slick = slider.slick(settings);
+
+        $(window).on('resize', function () {
+            if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
+                slider.slick(settings);
+            }
+        });
+    }
+
     function show_vars_slick(i) {
         if (!(vars_list[i].classList.contains('visually-hidden'))) {
-            slick_mobile($('.variants__list').eq(i), settings_toggles);
+            {
+                slick_mobile_vars( $('.variants__list').eq(i), settings_toggles);
+            }
         }
     }
+
 
     if (vars_btn !== undefined) {
         for (let i = 0; i < vars_btn.length; i++) {
