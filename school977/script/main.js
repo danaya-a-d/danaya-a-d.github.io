@@ -148,6 +148,7 @@ $(document).ready(function () {
         dots: true,
         arrows: false,
         mobileFirst: true,
+        adaptiveHeight: true,
         settings: 'slick',
         responsive: [{
             breakpoint: 768,
