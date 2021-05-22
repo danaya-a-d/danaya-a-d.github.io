@@ -1,5 +1,8 @@
 $(document).ready(function () {
 
+    // Сохраняем ширину экрана
+    let saved_width = $(window).width();
+
     $('.banner__close').click(function () {
         $('.banner').hide();
     });
@@ -106,10 +109,7 @@ $(document).ready(function () {
 
     header_activity();
 
-    // Сохраняем где-то ширину
-    let saved_width = $(window).width();
-
-// В нужном месте ставим проверку
+/////// СЛАЙДЕРЫ ///////
 
     function slick_mobile(slider, settings) {
         const slick = slider.slick(settings);
@@ -126,7 +126,6 @@ $(document).ready(function () {
     }
 
 
-/////// СЛАЙДЕРЫ ///////
 //     function slick_mobile(slider, settings) {
 //         const slick = slider.slick(settings);
 //
