@@ -238,35 +238,32 @@ $(document).ready(function () {
     let vars_btn = document.querySelectorAll('.variants__btn-item');
 
 
-    // function show_vars_slick(i) {
-    //     let slider = $('.variants__list').eq(i);
-    //     let slick = slider.slick(settings);
-    //
-    //     let saved_width = $(window).width();
-    //
-    //
-    //     if (!(vars_list[i].classList.contains('visually-hidden'))) {
+    // let saved_width = $(window).width();
+
+    // $(window).on('resize', function () {
+    //     if ($(window).width() != saved_width) {
     //         if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
-    //             slider.slick(settings_toggles);
+    //             slider.slick(settings);
     //         }
     //     }
-    // }
+    // });
 
     function slick_mobile_vars(slider, settings) {
         const slick = slider.slick(settings);
+        let saved_width = $(window).width();
 
         $(window).on('resize', function () {
-            if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
-                slider.slick(settings);
+            if ($(window).width() != saved_width) {
+                if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
+                    slider.slick(settings);
+                }
             }
         });
     }
 
     function show_vars_slick(i) {
         if (!(vars_list[i].classList.contains('visually-hidden'))) {
-            {
-                slick_mobile_vars( $('.variants__list').eq(i), settings_toggles);
-            }
+            slick_mobile_vars($('.variants__list').eq(i), settings_toggles);
         }
     }
 
