@@ -168,6 +168,10 @@ $(document).ready(function () {
         }]
     };
 
+    const settings_unslick = {
+        settings: 'unslick'
+    };
+
     slick_mobile($('.content--scroll .content__list'), settings);
     slick_mobile($('.courses__list'), settings_toggles);
     slick_mobile($('.checklist--slick'), settings);
@@ -251,15 +255,21 @@ $(document).ready(function () {
     function slick_mobile_vars(slider, settings) {
         const slick = slider.slick(settings);
         let saved_width = $(window).width();
-
-        $(window).on('resize', function () {
-            if ($(window).width() != saved_width) {
-                if ($(window).width() > 320 && !slick.hasClass('slick-initialized')) {
+        // $(window).on('resize', function () {
+        //     if ($(window).width() != saved_width) {
+                if ($(window).width() > 320 && !slider.hasClass('slick-initialized')) {
+                    console.log(saved_width);
                     slider.slick(settings);
                 }
-            }
-        });
+            // }
+        // });
     }
+
+    // function show_vars_slick(i) {
+    //     if (!(vars_list[i].classList.contains('visually-hidden'))) {
+    //         slick_mobile_vars($('.variants__list').eq(i), settings_toggles);
+    //     }
+    // }
 
     function show_vars_slick(i) {
         if (!(vars_list[i].classList.contains('visually-hidden'))) {
