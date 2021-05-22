@@ -228,46 +228,9 @@ $(document).ready(function () {
     let vars_list = document.querySelectorAll('.variants__list');
     let vars_btn = document.querySelectorAll('.variants__btn-item');
 
-
-    // let saved_width = $(window).width();
-
-    // $(window).on('resize', function () {
-    //     if ($(window).width() != saved_width) {
-    //         if ($(window).width() < 768 && !slick.hasClass('slick-initialized')) {
-    //             slider.slick(settings);
-    //         }
-    //     }
-    // });
-
-    function slick_mobile_vars(slider, settings) {
-        const slick = slider.slick(settings);
-        let saved_width = $(window).width();
-        $(window).on('resize', function () {
-            if ($(window).width() != saved_width) {
-                if ($(window).width() > 320 && !slider.hasClass('slick-initialized')) {
-                    console.log(saved_width);
-                    slider.slick(settings);
-                }
-            }
-        });
-    }
-
-    // function show_vars_slick(i) {
-    //     if (!(vars_list[i].classList.contains('visually-hidden'))) {
-    //         slick_mobile_vars($('.variants__list').eq(i), settings_toggles);
-    //     }
-    // }
-
-    function show_vars_slick(i) {
-        // if (!(vars_list[i].classList.contains('visually-hidden'))) {
-            slick_mobile($('.variants__list').eq(i), settings_toggles);
-        // }
-    }
-
-
     if (vars_btn !== undefined) {
         for (let i = 0; i < vars_btn.length; i++) {
-            show_vars_slick(i);
+            slick_mobile($('.variants__list').eq(i), settings_toggles);
             vars_btn[i].addEventListener('click', function () {
                 for (let j = 0; j < vars_list.length; j++) {
                     vars_list[j].classList.add('variants__list--hidden');
@@ -275,23 +238,9 @@ $(document).ready(function () {
                 }
                 vars_list[i].classList.remove('variants__list--hidden');
                 vars_btn[i].classList.add('variants__btn-item--active');
-                // show_vars_slick(i);
             });
         }
     }
-
-
-// $.each($('.variants__btn-item'), function (i, value) {
-//     $(this).click(function () {
-//         $.each($('.variants__list'), function (j, value) {
-//             console.log($(this));
-//             $('.variants__list')[j].addClass('visually-hidden');
-//             $('.variants__btn-item')[j].removeClass('variants__btn-item--active');
-//         });
-//         $('.variants__list')[i].removeClass('visually-hidden');
-//         $('.variants__btn-item')[i].addClass('variants__btn-item--active');
-//     });
-// });
 
 
 /////// ОТКРЫТИЕ ЭЛЕМЕНТОВ ПОДВАЛА ///////
