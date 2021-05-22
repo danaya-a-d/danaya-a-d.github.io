@@ -116,7 +116,7 @@ $(document).ready(function () {
 
         $(window).on('resize', function () {
             if ($(window).width() !== saved_width) {
-                if ($(window).width() > 420 && !slick.hasClass('slick-initialized')) {
+                if ($(window).width() > 319 && !slick.hasClass('slick-initialized')) {
                     slider.slick(settings);
                 }
             } else {
