@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <a class="header__logo logo" href="#">
+            <img src="img/logo.svg" alt="Удача авто">
+        </a>
+        <nav class="header__nav">
+            <ul>
+                <li><a href="#">О компании</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Блог</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__contacts">
+            <ul class="header__socials">
+                <li><a href="#"><img src="img/youtube.svg" alt="youtube"></a></li>
+                <li><a href="#"><img src="img/vk.svg" alt="vk"></a></li>
+                <li><a href="#"><img src="img/telegram.svg" alt="telegram"></a></li>
+            </ul>
+            <button class="header__button button button--orange">Записаться на обслуживание</button>
+            <ul class="header__addresses addresses">
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12.0453 11.8259C11.1338 11.8259 10.2222 11.4789 9.52838 10.7849C8.14044 9.39716 8.14044 7.13892 9.52838 5.75098C10.2006 5.07861 11.0945 4.70837 12.0453 4.70837C12.9962 4.70837 13.89 5.0788 14.5623 5.75098C15.9503 7.13892 15.9503 9.39716 14.5623 10.7849C13.8683 11.4789 12.9568 11.8259 12.0453 11.8259ZM12.0453 6.11737C11.4944 6.11737 10.9434 6.32703 10.5239 6.74652C9.68494 7.58551 9.68494 8.95056 10.5239 9.78955C10.9302 10.1959 11.4706 10.4196 12.0453 10.4196C12.6201 10.4196 13.1605 10.1959 13.5668 9.78955C14.4058 8.95056 14.4058 7.58551 13.5668 6.74652C13.1473 6.32703 12.5963 6.11737 12.0453 6.11737Z"
+                              fill="#EE561C"/>
+                        <path d="M12.0536 24L11.5093 23.3606C11.1907 22.9861 3.70312 14.1238 3.70312 8.34229C3.70312 3.74231 7.44543 0 12.0454 0C16.6454 0 20.3877 3.74231 20.3877 8.34229C20.3877 13.8395 12.9067 22.9666 12.5883 23.3524L12.0536 24ZM12.0454 1.4079C8.2218 1.4079 5.11102 4.51868 5.11102 8.34229C5.11102 10.4912 6.3924 13.6011 8.81671 17.3359C10.0748 19.274 11.3417 20.9154 12.0377 21.7841C12.7348 20.8916 14.0138 19.1962 15.2798 17.2213C17.7004 13.4454 18.9798 10.3749 18.9798 8.34229C18.9798 4.51868 15.869 1.4079 12.0454 1.4079Z"
+                              fill="#EE561C"/>
+                    </svg>
+                    г. Одесса ул. Какая-то 50
+                </li>
+                <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0)">
+                            <path d="M20.5214 3.14396C18.4939 1.11641 15.798 -0.000113402 12.9308 8.63884e-09C12.4609 8.63884e-09 12.0802 0.380832 12.0802 0.850577C12.0802 1.32032 12.461 1.70115 12.9308 1.70115C15.3437 1.70104 17.6122 2.64065 19.3185 4.3469C21.0249 6.05316 21.9645 8.32182 21.9644 10.7349C21.9644 11.2046 22.3451 11.5854 22.8149 11.5854C23.2847 11.5854 23.6655 11.2046 23.6655 10.735C23.6656 7.86739 22.5491 5.17151 20.5214 3.14396Z"
+                                  fill="#EE561C"/>
+                            <path d="M17.0225 10.735C17.0225 11.2047 17.4033 11.5855 17.8732 11.5854C18.3429 11.5854 18.7237 11.2046 18.7237 10.7348C18.7234 7.54122 16.1248 4.94265 12.9309 4.94219C12.9308 4.94219 12.9309 4.94219 12.9308 4.94219C12.461 4.94219 12.0803 5.32291 12.0802 5.79266C12.0802 6.2624 12.4609 6.64323 12.9307 6.64335C15.1867 6.64369 17.0223 8.47912 17.0225 10.735Z"
+                                  fill="#EE561C"/>
+                            <path d="M15.1403 15.0718C13.8438 15.0046 13.1833 15.9689 12.8665 16.432C12.6013 16.8198 12.7006 17.3491 13.0884 17.6143C13.4761 17.8796 14.0054 17.7802 14.2707 17.3925C14.6449 16.8453 14.8145 16.7592 15.0445 16.7701C15.7806 16.8566 18.6799 18.9813 18.9703 19.6456C19.0431 19.8412 19.0404 20.033 18.9622 20.2663C18.6578 21.1697 18.1539 21.8046 17.5048 22.1022C16.8881 22.3849 16.132 22.3593 15.3187 22.0284C12.2819 20.7906 9.62879 19.0632 7.43316 16.8942C7.43226 16.8933 7.43135 16.8925 7.43055 16.8916C5.26601 14.6981 3.54183 12.0484 2.30611 9.01623C1.97507 8.20229 1.94943 7.44607 2.23217 6.82946C2.52976 6.18029 3.16463 5.67641 4.06726 5.37236C4.30134 5.29388 4.49277 5.29138 4.68659 5.36351C5.35333 5.65486 7.47785 8.55409 7.56358 9.28195C7.57583 9.52057 7.48907 9.69 6.94232 10.0636C6.55446 10.3285 6.45477 10.8578 6.71981 11.2457C6.98474 11.6335 7.51391 11.7331 7.90189 11.4682C8.36528 11.1517 9.32927 10.4931 9.26236 9.19213C9.18864 7.83325 6.54527 4.23463 5.28222 3.77021C4.7205 3.56086 4.12963 3.55723 3.52538 3.76001C2.16582 4.21784 1.18392 5.03417 0.685818 6.12064C0.20269 7.17468 0.218 8.39758 0.730615 9.65779C2.05309 12.9027 3.90338 15.7419 6.22999 18.0969C6.23566 18.1027 6.24145 18.1083 6.24734 18.1139C8.60061 20.4362 11.4365 22.2831 14.6771 23.604C15.3261 23.8679 15.9651 24 16.5763 24C17.1517 24 17.7027 23.883 18.2137 23.6487C19.3003 23.1507 20.1165 22.1689 20.5747 20.8084C20.777 20.2053 20.7737 19.6147 20.566 19.0555C20.1 17.7891 16.5013 15.1457 15.1403 15.0718Z"
+                                  fill="#EE561C"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0">
+                                <rect width="24" height="24" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <a href="tel:+380881201901">098-120-19-01</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="upper-block">
+        <ul class="upper-block__list">
+            <li class="upper-block__item">
+                <div class="upper-block__wrapper">
+                    <div class="upper-block__title-block">
+                        <h1 class="upper-block__title">Lorem ipsum</h1>
+                        <p>Amet in mi diam ut egestas tortor morbi quis est duis vitae.</p>
+                    </div>
+                </div>
+                <img src="img/content/car1.jpg" alt="Машина" width="1920" height="820">
+            </li>
+            <li class="upper-block__item">
+                <div class="upper-block__wrapper">
+                    <div class="upper-block__title-block">
+                        <h1 class="upper-block__title">Lorem ipsum</h1>
+                        <p>Amet in mi diam ut egestas tortor morbi quis est duis vitae.</p>
+                    </div>
+                </div>
+                <img src="img/content/car2.jpg" alt="Машина" width="1920" height="820">
+            </li>
+            <li class="upper-block__item">
+                <div class="upper-block__wrapper">
+                    <div class="upper-block__title-block">
+                        <h1 class="upper-block__title">Lorem ipsum</h1>
+                        <p>Amet in mi diam ut egestas tortor morbi quis est duis vitae.</p>
+                    </div>
+                </div>
+                <img src="img/content/car3.jpg" alt="Машина" width="1920" height="820">
+            </li>
+            <li class="upper-block__item">
+                <div class="upper-block__wrapper">
+                    <div class="upper-block__title-block">
+                        <h1 class="upper-block__title">Lorem ipsum</h1>
+                        <p>Amet in mi diam ut egestas tortor morbi quis est duis vitae.</p>
+                    </div>
+                </div>
+                <img src="img/content/car4.jpg" alt="Машина" width="1920" height="820">
+            </li>
+        </ul>
+        <form class="upper-block__form form">
+            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+            <input class="form__input form__tel" type="tel" placeholder="Номер телефона" name="phone" required>
+            <button class="form__button button button--orange">Записаться на обслуживание</button>
+        </form>
+    </section>
+    <section class="service">
+        <h2 class="service__title title">Наши Услуги</h2>
+        <ul class="service__list">
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service1.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service2.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service3.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service4.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service5.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service6.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service7.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+            <li class="service__item">
+                <a href="#">
+                    <h5 class="service__name"></h5>
+                    <img src="img/content/service6.jpg" alt="Фото услуги" class="service__image">
+                </a>
+            </li>
+        </ul>
+
+        <div class="upper-block__buttons">
+            <button class="upper-block__button button button--orange">Записаться на обслуживание</button>
+            <button class="upper-block__button button button--white">Подробнее об услугах</button>
+        </div>
+    </section>
+    <section class="about-us">
+        <ul class="about-us__list">
+            <li class="about-us__item"><img src="img/content/porsche.jpg" alt="porsche"></li>
+            <li class="about-us__item"><img src="img/content/honda.jpg" alt="honda"></li>
+            <li class="about-us__item"><img src="img/content/ssangyong.jpg" alt="ssangyong"></li>
+            <li class="about-us__item"><img src="img/content/volkswagen.jpg" alt="volkswagen"></li>
+            <li class="about-us__item"><img src="img/content/suzuki.jpg" alt="suzuki"></li>
+            <li class="about-us__item"><img src="img/content/fiat.jpg" alt="fiat"></li>
+            <li class="about-us__item"><img src="img/content/toyota.jpg" alt="toyota"></li>
+            <li class="about-us__item"><img src="img/content/citroen.jpg" alt="citroen"></li>
+            <li class="about-us__item"><img src="img/content/chevrolet.jpg" alt="chevrolet"></li>
+            <li class="about-us__item"><img src="img/content/skoda.jpg" alt="skoda"></li>
+        </ul>
+        <button class="slider-left"></button>
+        <button class="slider-right"></button>
+
+        <h2 class="about-us__title title">О Нас</h2>
+        <img src="img/content/about.jpg" alt="О Нас">
+        <p>Ut consectetur dolor, pellentesque risus semper mauris, vulputate tempor, id. Porta in enim nibh dictum. Et
+            morbi porta ante quis varius tellus ac, neque. Diam sed pharetra quisque volutpat cras cursus. Eu sit
+            viverra ornare euismod in pellentesque pellentesque erat. Posuere diam aliquam.</p>
+        <p>Ultricies turpis lectus morbi egestas ultrices nunc, eu interdum ac. Aliquet porttitor fames urna sed
+            pharetra, congue. Interdum ullamcorper ut amet risus mi sem. Velit aliquet ante turpis consequat euismod in
+            ullamcorper pulvinar.</p>
+    </section>
+    <section class="blog">
+        <h2 class="blog__title title">Блог</h2>
+        <ul class="blog__list">
+            <li>
+                <h5>Nec proin neque at ornare.</h5>
+                <img src="img/content/about.jpg" alt="Фото к статье">
+            </li>
+            <li>
+                <h5>Nam varius laoreet molestie vulputate.</h5>
+                <img src="img/content/about.jpg" alt="Фото к статье">
+            </li>
+            <li>
+                <h5>Id duis in elementum, ultrices. </h5>
+                <img src="img/content/about.jpg" alt="Фото к статье">
+            </li>
+            <li>
+                <h5>Dui viverra sed tempor lectus risus.</h5>
+                <img src="img/content/about.jpg" alt="Фото к статье">
+            </li>
+        </ul>
+    </section>
+    <section class="cars">
+        <h2 class="cars__title title">Авто из США</h2>
+        <p>Также мы занимаемся доставкой авто из сша semper mauris, vulputate tempor, id. Porta in enim nibh dictum. Et
+            morbi porta ante quis varius tellus ac, neque. Diam sed pharetra quisque volutpat cras cursus.</p>
+        <ul class="cars__list">
+            <li class="cars__item">
+                <img src="img/content/small-car1.png" alt="2016 FORD C-MAX PREMIUM">
+                <h5 class="cars__name">2016 FORD C-MAX PREMIUM</h5>
+                <p class="cars__prise">10000 $</p>
+                <a class="cars__link button button-orange" href="#">Смотреть</a>
+            </li>
+            <li class="cars__item">
+                <img src="img/content/small-car2.png" alt="2014 DODGE JOURNEY">
+                <h5 class="cars__name">2014 DODGE JOURNEY</h5>
+                <p class="cars__prise">10000 $</p>
+                <a class="cars__link button button-orange" href="#">Смотреть</a>
+            </li>
+            <li class="cars__item">
+                <img src="img/content/small-car3.png" alt="2016 FORD C-MAX PREMIUM">
+                <h5 class="cars__name">2017 VOLKSWAGEN TIGUAN</h5>
+                <p class="cars__prise">10000 $</p>
+                <a class="cars__link button button-orange" href="#">Смотреть</a>
+            </li>
+        </ul>
+        <button class="cars__button button button-orange">Подробнее</button>
+    </section>
+    <section class="request">
+        <h3 class="request__title">Оставьте заявку на бесплатную консультацию</h3>
+        <form class="request__form form">
+            <input class="form__input" type="text" placeholder="Имя" name="name" required>
+            <input class="form__input form__tel" type="tel" placeholder="Номер телефона" name="phone" required>
+            <button class="form__button button">Записаться на обслуживание</button>
+        </form>
+    </section>
+</main>
+
+<footer class="footer">
+    <a class="footer__logo logo" href="#">
+        <img src="img/logo.svg" alt="Удача авто">
+    </a>
+</footer>
+
+<script src="script/jquery.min.js"></script>
+<script src="script/phone_mask.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/main.min.js"></script>
+
+
+<script>
+    $(".form__tel").mask("+380(99)999-99-99");
+</script>
+
+
+<script type="text/javascript">
+
+    $('.upper-block__list').slick({
+        dots: true,
+        dotsClass: "my-dots",
+        arrows: false,
+        fade: true,
+        speed: 1000
+    });
+</script>
+
+</body>
+
+</html>
+
