@@ -135,7 +135,7 @@ $(document).ready(function () {
     }
 
     const settings = {
-        dots: false,
+        dots: true,
         arrows: false,
         mobileFirst: true,
         settings: 'slick',
