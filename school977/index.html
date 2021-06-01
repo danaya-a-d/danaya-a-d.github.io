@@ -283,6 +283,7 @@
     </svg>
 </div>
 
+<!-- хедер на мобильном устройстве -->
 <header class="header-mobile">
     <button class="header-mobile__toggle">
         <span class="visually-hidden">Открыть меню</span>
@@ -292,6 +293,7 @@
     </a>
 </header>
 
+<!-- открывающееся меню -->
 <header class="header header--close">
     <button class="header__open-btn"></button>
     <div class="header__container header__container--close">
@@ -398,11 +400,13 @@
 </header>
 
 <main class="page-main">
+    <!-- Баннер -->
     <div class="banner">
         <button class="banner__close"></button>
         <span class="banner__title">Стипендіальна програма</span>
         <span class="banner__years">2021-2022</span>
     </div>
+    <!-- Первый экран -->
     <section class="upper-block">
         <div class="upper-block__container">
             <div class="upper-block__top-block">
@@ -430,6 +434,11 @@
             </div>
         </div>
     </section>
+
+
+
+
+    <!-- 6 разноразмерных блоков/ прокрутка -->
     <section class="content content--first content--scroll">
         <div class="content__title-block">
             <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
@@ -501,16 +510,29 @@
             </ul>
         </div>
     </section>
-    <section class="content content--second">
+    <!-- 6 разноразмерных блоков/ поштучно -->
+    <section class="content content--first">
         <div class="content__title-block">
             <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
         </div>
         <div class="content__container dragscroll">
             <ul class="content__list">
-                <li class="content__item content__item--light-violet">
+                <li class="content__item content__item--orange">
                     <a href="#">
                         <h5>Дошкільнята</h5>
                         <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/triangles.svg" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--pink">
+                    <a href="#">
+                        <h5>1-4 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+
                         <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#arrow"></use>
                         </svg>
@@ -519,27 +541,7 @@
                 </li>
                 <li class="content__item content__item--blue">
                     <a href="#">
-                        <h5>1-4 класи</h5>
-                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
-                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#arrow"></use>
-                        </svg>
-                        <img class="content__triangles" src="img/triangles.svg" alt="">
-                    </a>
-                </li>
-                <li class="content__item content__item--dark-pink">
-                    <a href="#">
                         <h5>5-9 класи</h5>
-                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
-                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#arrow"></use>
-                        </svg>
-                        <img class="content__triangles" src="img/triangles.svg" alt="">
-                    </a>
-                </li>
-                <li class="content__item content__item--light-orange">
-                    <a href="#">
-                        <h5>10-11 класи</h5>
                         <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
                         <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#arrow"></use>
@@ -547,7 +549,17 @@
                         <img class="content__triangles" src="img/racoon2.png" alt="">
                     </a>
                 </li>
-                <li class="content__item content__item--yellow">
+                <li class="content__item content__item--light-green">
+                    <a href="#">
+                        <h5>10-11 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/racoon.png" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--violet">
                     <a href="#">
                         <h5>Вчителя</h5>
                         <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
@@ -557,7 +569,7 @@
                         <img class="content__triangles" src="img/triangles.svg" alt="">
                     </a>
                 </li>
-                <li class="content__item content__item--green">
+                <li class="content__item content__item--orange">
                     <a href="#">
                         <h5>Репетиторы</h5>
                         <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
@@ -570,6 +582,7 @@
             </ul>
         </div>
     </section>
+    <!-- 6 одинаковых блоков/ прокрутка -->
     <section class="content content--second content--scroll">
         <div class="content__title-block">
             <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
@@ -639,6 +652,77 @@
             </ul>
         </div>
     </section>
+    <!-- 6 одинаковых блоков/ поштучно -->
+    <section class="content content--second">
+        <div class="content__title-block">
+            <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
+        </div>
+        <div class="content__container dragscroll">
+            <ul class="content__list">
+                <li class="content__item content__item--light-violet">
+                    <a href="#">
+                        <h5>Дошкільнята</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/racoon.png" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--blue">
+                    <a href="#">
+                        <h5>1-4 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/triangles.svg" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--dark-pink">
+                    <a href="#">
+                        <h5>5-9 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/triangles.svg" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--light-orange">
+                    <a href="#">
+                        <h5>10-11 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/racoon2.png" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--yellow">
+                    <a href="#">
+                        <h5>Вчителя</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/triangles.svg" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--green">
+                    <a href="#">
+                        <h5>Репетиторы</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/triangles.svg" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- 5 разноразмерных блоков/ прокрутка -->
     <section class="content content--third content--scroll">
         <div class="content__title-block">
             <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
@@ -700,25 +784,24 @@
             </ul>
         </div>
     </section>
-    <section class="content content--fourth">
+    <!-- 5 разноразмерных блоков/ поштучно -->
+    <section class="content content--third">
         <div class="content__title-block">
             <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
         </div>
         <div class="content__container dragscroll">
             <ul class="content__list">
-                <li class="content__item content__item--orange-reverse">
+                <li class="content__item content__item--light-blue">
                     <a href="#">
                         <h5>Дошкільнята</h5>
-                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з
-                            уривку
-                            класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію.</p>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
                         <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#arrow"></use>
                         </svg>
-                        <img class="content__triangles" src="img/racoon.png" alt="">
+                        <img class="content__triangles" src="img/racoon2.png" alt="">
                     </a>
                 </li>
-                <li class="content__item content__item--blue-reverse">
+                <li class="content__item content__item--light-green">
                     <a href="#">
                         <h5>1-4 класи</h5>
                         <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з
@@ -730,9 +813,19 @@
                         <img class="content__triangles" src="img/triangles.svg" alt="">
                     </a>
                 </li>
-                <li class="content__item content__item--violet-reverse">
+                <li class="content__item content__item--light-violet">
                     <a href="#">
                         <h5>5-9 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/racoon.png" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--yellow">
+                    <a href="#">
+                        <h5>10-11 класи</h5>
                         <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
                         <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#arrow"></use>
@@ -740,19 +833,20 @@
                         <img class="content__triangles" src="img/triangles.svg" alt="">
                     </a>
                 </li>
-                <li class="content__item content__item--pink-reverse">
+                <li class="content__item content__item--light-pink">
                     <a href="#">
-                        <h5>10-11 класи</h5>
+                        <h5>Вчителя</h5>
                         <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
                         <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#arrow"></use>
                         </svg>
-                        <img class="content__triangles" src="img/racoon2.png" alt="">
+                        <img class="content__triangles" src="img/racoon.png" alt="">
                     </a>
                 </li>
             </ul>
         </div>
     </section>
+    <!-- 4 одинаковых блоков/ прокрутка -->
     <section class="content content--fourth content--scroll">
         <div class="content__title-block">
             <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
@@ -806,6 +900,61 @@
             </ul>
         </div>
     </section>
+    <!-- 4 одинаковых блоков/ поштучно -->
+    <section class="content content--fourth">
+        <div class="content__title-block">
+            <h3 class="title title--rainbow content__title">Усе, щоб вчитися з задоволенням</h3>
+        </div>
+        <div class="content__container dragscroll">
+            <ul class="content__list">
+                <li class="content__item content__item--orange-reverse">
+                    <a href="#">
+                        <h5>Дошкільнята</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з
+                            уривку
+                            класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/racoon.png" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--blue-reverse">
+                    <a href="#">
+                        <h5>1-4 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер. Він походить з
+                            уривку
+                            класичної латинської літератури 45 року до н.е., тобто має більш як 2000-річну історію.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/triangles.svg" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--violet-reverse">
+                    <a href="#">
+                        <h5>5-9 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/triangles.svg" alt="">
+                    </a>
+                </li>
+                <li class="content__item content__item--pink-reverse">
+                    <a href="#">
+                        <h5>10-11 класи</h5>
+                        <p>На відміну від поширеної думки Lorem Ipsum не є випадковим набором літер.</p>
+                        <svg class="content__arrow" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#arrow"></use>
+                        </svg>
+                        <img class="content__triangles" src="img/racoon2.png" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- блок видео -->
     <section class="video-section">
         <h3 class="visually-hidden">Навчання в домашній школі</h3>
 
@@ -821,6 +970,7 @@
             <button class="video-section__button button button--orange">Отримати безкоштовну консультацію</button>
         </div>
     </section>
+    <!-- блок раскрывашки -->
     <section class="faq">
         <h3 class="faq__title title">Усе, щоб вчитися з задоволенням</h3>
         <ul class="faq__list">
@@ -856,7 +1006,9 @@
         </ul>
         <button class="faq__button button button--light-green">Отримати безкоштовну консультацію</button>
     </section>
+    <!-- контактная форма с текстовым блоком и блок адрес -->
     <section class="feedback">
+        <!-- контактная форма -->
         <form class="feedback__form form" action="https://echo.htmlacademy.ru" method="post">
             <h3 class="title feedback__title">Виникли запитання?</h3>
             <div>
@@ -878,6 +1030,7 @@
                 <button class="feedback__button button button--violet">Передзвоніть мені</button>
             </div>
         </form>
+        <!-- блок адрес -->
         <section class="feedback__contacts">
             <h3 class="feedback__title title">Контакти</h3>
 
@@ -966,6 +1119,7 @@
             </amp-img>
         </section>
     </section>
+    <!-- 6 разноразмерных чекблоки/ прокрутка -->
     <div class="checklist checklist--slick">
         <div class="checklist__form checklist__form--pink">
             <h3 class="checklist__title">Базова програма</h3>
@@ -1014,6 +1168,7 @@
             </ul>
         </div>
     </div>
+    <!-- 6 разноразмерных чекблоки/ поштучно -->
     <div class="checklist">
         <div class="checklist__form checklist__form--pink">
             <h3 class="checklist__title">Базова програма</h3>
@@ -1062,6 +1217,7 @@
             </ul>
         </div>
     </div>
+    <!-- список с галочками первый столбец закреплен -->
     <section class="packets">
         <div class="packets__wrapper">
             <h3 class="visually-hidden">Пакеты обучения</h3>
@@ -1154,6 +1310,7 @@
             </table>
         </div>
     </section>
+    <!-- список с галочками весь прокручивается -->
     <section class="packets packets--small">
         <h3 class="visually-hidden">Пакеты обучения</h3>
         <div class="packets__wrapper dragscroll">
@@ -1232,6 +1389,7 @@
             </table>
         </div>
     </section>
+    <!-- 3 вкладки с переключением и иллюстрациями -->
     <section class="tabs">
         <h3 class="visually-hidden">Усе, щоб вчитися з задоволенням</h3>
 
@@ -1307,6 +1465,7 @@
             </li>
         </ul>
     </section>
+    <!-- каталог -->
     <section class="variants">
         <h3 class="variants__title title">Усе, щоб вчитися з задоволенням</h3>
 
@@ -1653,6 +1812,7 @@
         </div>
 
     </section>
+    <!-- 3 карточки с переключением и иллюстрациями -->
     <section class="courses">
         <h3 class="courses__title title">Усе, щоб вчитися з задоволенням</h3>
         <ul class="courses__list">
@@ -1696,6 +1856,7 @@
             </li>
         </ul>
     </section>
+    <!-- текстовый блок с иллюстрацией -->
     <article class="article">
         <img src="img/racoon.png" alt="">
         <h3 class="title">Курс підходить учням, які хочуть підготуватися до нуля,
@@ -1707,6 +1868,7 @@
         <p>Отримати від занять максимум користі допоможуть куратори, а також робочі зошити для кращого засвоєння
             матеріалу. Перевірити свої знання можна на унікальних пробних варіантах ДПА з математики.</p>
     </article>
+    <!-- форма заявки с процессом -->
     <section class="questions">
         <form class="questions__form form">
             <div>
@@ -1737,6 +1899,7 @@
     </section>
 </main>
 
+<!-- футер -->
 <footer class="footer">
     <div class="footer__top">
         <div class="footer__container footer__container--top">
@@ -1859,24 +2022,18 @@
     </div>
 </footer>
 
+<!-- кнопка вверх -->
 <a href="#" class="button-upp"></a>
+<!-- оверлей для меню -->
 <div class="overlay"></div>
 
-<!--<script src="script/svgxuse.min.js" defer></script>-->
+<!-- скрипты -->
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
 <script src="script/slick/slick.min.js"></script>
 <script src="script/dragscroll.js"></script>
 <script src="script/customScroll/jquery.mCustomScrollbar.concat.min.js"></script>
 <script src="script/main.min.js"></script>
-
-<script> //маска телефона
-$(".phone_mask").mask("+380(99)999-99-99");
-
-$(".header__scroll").mCustomScrollbar({
-    axis: "y" //
-});
-</script>
 
 </body>
 </html>

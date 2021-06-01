@@ -277,3 +277,11 @@ $(document).ready(function () {
     })
 
 });
+
+//маска телефона
+$(".phone_mask").mask("+380(99)999-99-99");
+
+//скролл для меню
+$(".header__scroll").mCustomScrollbar({
+    axis: "y"
+});
