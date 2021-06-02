@@ -68,43 +68,46 @@
 </header>
 
 <main class="page-main">
-    <h1 class="order__title title">Заказ №70543321</h1>
-    <p class="order__about">Товары</p>
     <div class="order__block">
-        <table class="order__table">
-            <tr class="order__item">
-                <td><img src="img/content/item.jpg" alt="Товар"></td>
-                <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
-                <td class="order__count">
-                    <span class="order__type">Цена</span>
-                    <span class="order__number">315 ₴</span>
-                </td>
-                <td class="order__count">
-                    <span class="order__type">Колличество</span>
-                    <span class="order__number">1</span>
-                </td>
-                <td class="order__count">
-                    <span class="order__type">Сумма</span>
-                    <span class="order__number">315 ₴</span>
-                </td>
-            </tr>
-            <tr class="order__item">
-                <td><img src="img/content/item.jpg" alt="Товар"></td>
-                <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
-                <td class="order__count">
-                    <span class="order__type">Цена</span>
-                    <span class="order__number">315 ₴</span>
-                </td>
-                <td class="order__count">
-                    <span class="order__type">Колличество</span>
-                    <span class="order__number">1</span>
-                </td>
-                <td class="order__count">
-                    <span class="order__type">Сумма</span>
-                    <span class="order__number">315 ₴</span>
-                </td>
-            </tr>
-        </table>
+        <div class="order__left-block">
+            <h1 class="order__title title">Заказ №70543321</h1>
+            <p class="order__about">Товары</p>
+            <table class="order__table">
+                <tr class="order__item">
+                    <td><img src="img/content/item.jpg" alt="Товар"></td>
+                    <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
+                    <td class="order__count">
+                        <span class="order__type">Цена</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Колличество</span>
+                        <span class="order__number">1</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Сумма</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                </tr>
+                <tr class="order__item">
+                    <td><img src="img/content/item.jpg" alt="Товар"></td>
+                    <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
+                    <td class="order__count">
+                        <span class="order__type">Цена</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Колличество</span>
+                        <span class="order__number">1</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Сумма</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
         <div class="order__total">
             <p>Доставка в Киев
             <p>Самовывоз из новой почты</p>
@@ -197,33 +200,6 @@
         © Производитель мясной продукции “Ваш Мясной” <a href="#">все права защищены и так далее</a>
     </div>
 </footer>
-
-<div class="modal__back hide">
-    <div class="modal hide">
-        <section class="modal__feedback feedback">
-            <h3 class="title feedback__title">Хотите стать нашим партнером?</h3>
-            <form class="modal__form main-form" action="https://echo.htmlacademy.ru" method="post">
-                <div>
-                    <label>
-                        <input class="main-form__input" id="name1" name="name"
-                               placeholder="Имя" type="text" required>
-                    </label>
-                    <label>
-                        <input class="main-form__input phone_mask" id="phone1" name="phone"
-                               placeholder="Номер телефона" type="tel" required>
-                    </label>
-                    <label>
-                        <input class="main-form__input" id="email1" name="email"
-                               placeholder="E-mail" type="email" required>
-                    </label>
-
-                    <button type="submit" class="button main-form__button">Отправить</button>
-                </div>
-            </form>
-        </section>
-    </div>
-    <div class="modal__overlay hide"></div>
-</div>
 
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>

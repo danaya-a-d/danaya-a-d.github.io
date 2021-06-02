@@ -68,8 +68,99 @@
 </header>
 
 <main class="page-main">
+    <form class="order__block"  action="https://echo.htmlacademy.ru" method="post">
+        <div class="order__left-block">
+            <h1 class="order__title title">Оформление заказа</h1>
+            <p class="order__about">Ваши контактные данные</p>
 
+            <div class="order__inputs">
+                <label>
+                    <input class="main-form__input order__input" id="lastname" name="lastname"
+                           placeholder="Фамилия" type="text" required>
+                </label>
+                <label>
+                    <input class="main-form__input order__input" id="name" name="name"
+                           placeholder="Имя" type="text" required>
+                </label>
+                <label>
+                    <input class="main-form__input order__input phone_mask" id="phone" name="phone"
+                           placeholder="Мобильный телефон" type="tel" required>
+                </label>
+                <label>
+                    <input class="main-form__input order__input" id="city" name="city"
+                           placeholder="Город" type="text" required>
+                </label>
+            </div>
+
+            <h3 class="order__title title">Заказ №70543321</h3>
+            <p class="order__about">Товары</p>
+            <table class="order__table">
+                <tr class="order__item">
+                    <td><img src="img/content/item.jpg" alt="Товар"></td>
+                    <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
+                    <td class="order__count">
+                        <span class="order__type">Цена</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Колличество</span>
+                        <span class="order__number">1</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Сумма</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                </tr>
+                <tr class="order__item">
+                    <td><img src="img/content/item.jpg" alt="Товар"></td>
+                    <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
+                    <td class="order__count">
+                        <span class="order__type">Цена</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Колличество</span>
+                        <span class="order__number">1</span>
+                    </td>
+                    <td class="order__count">
+                        <span class="order__type">Сумма</span>
+                        <span class="order__number">315 ₴</span>
+                    </td>
+                </tr>
+            </table>
+
+            <p class="order__about">Доставка в <a class="order__place">Киев</a></p>
+
+            <p class="order__about">Оплата</p>
+        </div>
+
+        <div class="order__total">
+            <h4>Итого</h4>
+            <div class="order__line">
+                <p>2 товара на сумму</p>
+                <strong>630 ₴</strong>
+            </div>
+            <div class="order__line">
+                <p>Стоимость доставки</p>
+                <strong>По тарифам перевозчика</strong>
+            </div>
+            <div class="order__line">
+                <p>К оплате</p>
+                <strong class="order__total-price">630 ₴</strong>
+            </div>
+
+            <button class="button order__button">Заказ подтверждаю</button>
+
+            <p class="order__small">
+                Получение заказа от 5 000 ₴ только по паспорту (Закон от 06.12.2019 № 361-IX)
+            </p>
+            <p class="order__small">
+                Подтверждая заказ, я принимаю условия пользовательского соглашения
+            </p>
+        </div>
+    </form>
 </main>
+
 
 <footer class="footer">
     <div class="footer__wrapper">
