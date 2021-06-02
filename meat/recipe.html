@@ -74,6 +74,86 @@
     <article class="recipe__article">
         <h1 class="recipe__title">Хот-дог по-ганноверски</h1>
         <p class="recipe__description">Оригинальный хот-дог с маринованными огурчиками и луковыми кольцами</p>
+
+        <div class="recipe__container">
+            <div class="recipe__table-block">
+                <h3 class="recipe__subtitle">ИНГРЕДИЕНТЫ</h3>
+                <table class="recipe__table">
+                    <tr>
+                        <td>3 шт.</td>
+                        <td>Булочка с кунжутом</td>
+                    </tr>
+                    <tr>
+                        <td>3 шт.</td>
+                        <td>Сосиска «Ганноверская»</td>
+                    </tr>
+                    <tr>
+                        <td>150 г.</td>
+                        <td>Сыр моцарелла</td>
+                    </tr>
+                    <tr>
+                        <td>3 шт.</td>
+                        <td>Мартнованные огурчики</td>
+                    </tr>
+                    <tr>
+                        <td>150 г.</td>
+                        <td>Лук репчатый</td>
+                    </tr>
+                    <tr>
+                        <td>2 шт.</td>
+                        <td>Куриное яйцо</td>
+                    </tr>
+                    <tr>
+                        <td>150 г.</td>
+                        <td>Мука пшеничная</td>
+                    </tr>
+                    <tr>
+                        <td>75 мл.</td>
+                        <td>Сметана</td>
+                    </tr>
+                    <tr>
+                        <td>По вкусу</td>
+                        <td>Соль, перец, растительное масло</td>
+                    </tr>
+                </table>
+
+                <h3 class="recipe__subtitle">Для соуса</h3>
+                <table class="recipe__table">
+                    <tr>
+                        <td>120 мл.</td>
+                        <td>Майонез</td>
+                    </tr>
+                    <tr>
+                        <td>1/2 шт.</td>
+                        <td>Лимон (сок и цедра)</td>
+                    </tr>
+                    <tr>
+                        <td>150 г.</td>
+                        <td>Горчица</td>
+                    </tr>
+                    <tr>
+                        <td>3 шт.</td>
+                        <td>Зубчики чеснока</td>
+                    </tr>
+                    <tr>
+                        <td>150 г.</td>
+                        <td>Прованские травы</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="recipe__steps-block">
+            <h3 class="recipe__subtitle">ГОТОВИМ ВМЕСТЕ</h3>
+                <ol>
+                    <li>Смешайте в небольшой ёмкости все компоненты для соуса: майонез, горчицу, сок и цедру лимона, мелко нарезанные зубчики чеснока.</li>
+                    <li>Нарежьте лук тонкими кольцами. Обмакните в муку, стряхните излишки.</li>
+                    <li>Приготовьте кляр: взбейте яйца с солью, перцем, специями, сметаной и мукой.</li>
+                    <li>Обмакните лук в кляр, обжарьте во фритюре до золотистой корочки. Затем выложите на бумажные полотенца.</li>
+                    <li>Обжарьте сосиски на сковороде до появления румяной корочки. Нарежьте сыр тонкими ломтиками. Затем подогрейте на сковороде булочки с кунжутом и растопите сыр.</li>
+                    <li>Смажьте соусом. Добавьте сосиски, тонко нарезанные маринованные огурцы, хрустящий лук. Хот-доги готовы! Приятного аппетита!</li>
+                </ol>
+            </div>
+        </div>
     </article>
 
     <video class="recipe__video video" muted="muted" controls loop>
@@ -118,33 +198,33 @@
 
 <footer class="footer">
     <div class="footer__wrapper">
-        <div class="footer__socials">
+        <div class="footer__socials socials">
             <img class="footer__banner" src="img/content/banner.jpg" alt="баннер">
-            <ul class="footer__socials-list">
-                <li class="footer__socials-item">
+            <ul class="socials__list">
+                <li class="socials__item">
                     <a href="#">
-                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#instagram"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="footer__socials-item">
+                <li class="socials__icon">
                     <a href="#">
-                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#telegram"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="footer__socials-item">
+                <li class="socials__item">
                     <a href="#">
-                        <svg class="footer__icon footer__icon--facebook" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="socials__icon socials__icon--facebook" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#facebook"></use>
                         </svg>
                     </a>
                 </li>
-                <li class="footer__socials-item">
+                <li class="socials__item">
                     <a href="#">
-                        <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                             <use xlink:href="#youtube"></use>
                         </svg>
                     </a>
@@ -153,13 +233,13 @@
         </div>
 
         <ul class="footer__list">
-            <li class="footer__item"><a href="#">О нас</a></li>
-            <li class="footer__item"><a href="#">Ассортимент</a></li>
-            <li class="footer__item"><a href="#">Рецепты</a></li>
-            <li class="footer__item"><a href="#">Жизнь на твой вкус</a></li>
-            <li class="footer__item"><a href="#">Где купить</a></li>
-            <li class="footer__item"><a href="#">Контакты</a></li>
-            <li class="footer__item"><a href="#">Партнерам</a></li>
+            <li class="footer__item"><a href="about-us.html">О нас</a></li>
+            <li class="footer__item"><a href="assortment.html">Ассортимент</a></li>
+            <li class="footer__item"><a href="recipes.html">Рецепты</a></li>
+            <li class="footer__item"><a href="articles.html">Жизнь на твой вкус</a></li>
+            <li class="footer__item"><a href="map.html">Где купить</a></li>
+            <li class="footer__item"><a href="contacts.html">Контакты</a></li>
+            <li class="footer__item"><a href="partners.html">Партнерам</a></li>
         </ul>
 
         <ul class="footer__list">
