@@ -68,7 +68,7 @@
 </header>
 
 <main class="page-main">
-    <form class="order__block"  action="https://echo.htmlacademy.ru" method="post">
+    <form class="order__block" action="https://echo.htmlacademy.ru" method="post">
         <div class="order__left-block">
             <h1 class="order__title title">Оформление заказа</h1>
             <p class="order__about">Ваши контактные данные</p>
@@ -88,16 +88,19 @@
                 </label>
                 <label>
                     <input class="main-form__input order__input" id="city" name="city"
-                           placeholder="Город" type="text" required>
+                           placeholder="Город" value="Киев" type="text" required>
                 </label>
             </div>
 
-            <h3 class="order__title title">Заказ №70543321</h3>
-            <p class="order__about">Товары</p>
+            <h3 class="order__title title">Заказ №70543321 <span>на сумму 630 ₴</span></h3>
+            <p class="order__about">
+                Товары
+                <button class="order__redact" type="button">Редактировать</button>
+            </p>
             <table class="order__table">
                 <tr class="order__item">
                     <td><img src="img/content/item.jpg" alt="Товар"></td>
-                    <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
+                    <td class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
                     <td class="order__count">
                         <span class="order__type">Цена</span>
                         <span class="order__number">315 ₴</span>
@@ -113,7 +116,7 @@
                 </tr>
                 <tr class="order__item">
                     <td><img src="img/content/item.jpg" alt="Товар"></td>
-                    <td  class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
+                    <td class="order__name">Сосиски из свинины и куриного филе со сметаной и зеленью</td>
                     <td class="order__count">
                         <span class="order__type">Цена</span>
                         <span class="order__number">315 ₴</span>
@@ -131,7 +134,90 @@
 
             <p class="order__about">Доставка в <a class="order__place">Киев</a></p>
 
+            <div class="order__radio-buttons">
+                <label class="main-form__radio">
+                    <span class="label-title">
+                        <strong>Курьер по вашему адресу</strong>
+                        <span class="label-title__time">Доставка завтра с</span>
+                        <span class="label-title__price">59 ₴</span>
+                    </span>
+                    <input class="visually-hidden" id="courier" name="delivery-type" type="radio" value="courier">
+                    <span class="radio-indicator"></span>
+                </label>
+
+                <label class="main-form__radio">
+                    <span class="label-title">
+                        <strong>Самовывоз из магазина</strong>
+                        <span class="label-title__time">Будет передан в службу доставки сегодня</span>
+                        <span class="label-title__price">0 ₴</span>
+                    </span>
+                    <input class="visually-hidden" id="pick-up" name="delivery-type" type="radio" value="pick-up">
+                    <span class="radio-indicator"></span>
+                </label>
+
+                <label class="main-form__radio">
+                    <span class="label-title">
+                        <strong>Самовывоз из УКРПОШТА</strong>
+                        <span class="label-title__time">Будет передан в службу доставки сегодня</span>
+                        <span class="label-title__price">24 ₴</span>
+                    </span>
+                    <input class="visually-hidden" id="ukrposhta" name="delivery-type" type="radio" value="ukrposhta">
+                    <span class="radio-indicator"></span>
+                </label>
+
+                <div class="order__delivery">
+                    <label class="main-form__radio">
+                    <span class="label-title">
+                        <strong>Самовывоз из Новой Почты</strong>
+                        <span class="label-title__time">Будет передан в службу доставки сегодня</span>
+                        <span class="label-title__price">60 ₴</span>
+                    </span>
+                        <input class="visually-hidden" id="novaposhta" name="delivery-type" type="radio"
+                               value="novaposhta">
+                        <span class="radio-indicator"></span>
+                    </label>
+
+                    <div class="select order__select">
+                        <input class="select__input" type="hidden" name="language">
+                        <div class="select__head">Выберите подходящее отделение</div>
+                        <ul class="select__list" style="display: none;">
+                            <li class="select__item">Отделение 1</li>
+                            <li class="select__item">Отделение 2</li>
+                            <li class="select__item">Отделение 3</li>
+                            <li class="select__item">Отделение 4</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
             <p class="order__about">Оплата</p>
+
+            <div class="order__radio-buttons">
+                <label class="main-form__radio">
+                    <span class="label-title">Картой онлайн</span>
+                    <input class="visually-hidden" id="cart" name="pay-type" type="radio" value="cart">
+                    <span class="radio-indicator"></span>
+                </label>
+
+                <label class="main-form__radio">
+                    <span class="label-title">При получении товара</span>
+                    <input class="visually-hidden" id="receiving" name="pay-type" type="radio" value="receiving">
+                    <span class="radio-indicator"></span>
+                </label>
+
+                <label class="main-form__radio">
+                    <span class="label-title">Кредит или оплата частями</span>
+                    <input class="visually-hidden" id="credit" name="pay-type" type="radio" value="credit">
+                    <span class="radio-indicator"></span>
+                </label>
+
+                <label class="main-form__radio">
+                    <span class="label-title">Google Pay</span>
+                    <input class="visually-hidden" id="google-pay" name="pay-type" type="radio" value="google-pay">
+                    <span class="radio-indicator"></span>
+                </label>
+            </div>
         </div>
 
         <div class="order__total">

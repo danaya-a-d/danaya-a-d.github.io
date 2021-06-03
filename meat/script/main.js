@@ -1,7 +1,7 @@
 // Гугл карта
 function initMap() {
     // The location of Uluru
-    const uluru = { lat: 50.438549, lng: 30.416071 };
+    const uluru = {lat: 50.438549, lng: 30.416071};
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 12,
@@ -274,6 +274,34 @@ function initMap() {
 
 
 $(document).ready(function () {
+    //кастомный select
+    jQuery(($) => {
+        $('.select').on('click', '.select__head', function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $(this).next().fadeOut();
+            } else {
+                $('.select__head').removeClass('open');
+                $('.select__list').fadeOut();
+                $(this).addClass('open');
+                $(this).next().fadeIn();
+            }
+        });
+
+        $('.select').on('click', '.select__item', function () {
+            $('.select__head').removeClass('open');
+            $(this).parent().fadeOut();
+            $(this).parent().prev().text($(this).text());
+            $(this).parent().prev().prev().val($(this).text());
+        });
+
+        $(document).click(function (e) {
+            if (!$(e.target).closest('.select').length) {
+                $('.select__head').removeClass('open');
+                $('.select__list').fadeOut();
+            }
+        });
+    });
 
     //Слайдер верхнего блока
     $('.upper-block__list').slick({
@@ -325,9 +353,9 @@ $(document).ready(function () {
         button_open.on('click', function (e) {
             show();
         });
-        // $('.modal__close').on('click', function (e) {
-        //     hide();
-        // });
+        $('.modal-close').on('click', function (e) {
+            hide();
+        });
         $('.modal__overlay').on('click', function (e) {
             modal.addClass('hide');
             hide();
@@ -339,7 +367,42 @@ $(document).ready(function () {
         });
     }
 
-    modal_show($('.modal'), $('.contacts__button'));
+    modal_show($('.modal--contacts'), $('.contacts__button'));
+    modal_show($('.modal--cart'), $('.cart-button'));
 
+    //калькулятор корзины
+    const init = () => {
+        let total_cost = 0;
+        [...document.querySelectorAll('.cart__item')].forEach((cart_item)=> {
+            total_cost +=
+                Number(cart_item.querySelector('.counter__input').value) *
+                cart_item.querySelector('.counter__input').dataset.price;
+        });
+
+        document.querySelector('.cart__total-price').textContent = total_cost + ' ₴';
+    };
+    init();
+
+    //кастомный input number
+    $('.counter .counter__button').on('click', function () {
+        var input = $(this).closest('.counter').find('input'); // инпут
+        var value = parseInt(input.val()) || 0; // получаем value инпута или 0
+        if ($(this).hasClass('minus')) {
+            if (value - 1 > 0)
+                value = value - 1; // вычитаем из value 1
+        }
+        if ($(this).hasClass('plus')) {
+            value = value + 1; // прибавляем к value 1
+        }
+        input.val(value).change(); // выводим полученное value в инпут; триггер .change() - на случай, если на изменение этого инпута у вас уже объявлен еще какой-то обработчик
+        init();
+    });
+
+    $('.counter .counter__input').on('keyup', function () {
+        if (!$(this).val().length) {
+            $(this).val(1);
+        }
+        init();
+    });
 
 });
