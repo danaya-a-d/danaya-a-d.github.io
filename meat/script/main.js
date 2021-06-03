@@ -377,6 +377,12 @@ $(document).ready(function () {
             total_cost +=
                 Number(cart_item.querySelector('.counter__input').value) *
                 cart_item.querySelector('.counter__input').dataset.price;
+
+            let item_cost =
+                Number(cart_item.querySelector('.counter__input').value) *
+                cart_item.querySelector('.counter__input').dataset.price;
+
+            cart_item.querySelector('.cart__item-price').textContent = item_cost + ' ₴';
         });
 
         document.querySelector('.cart__total-price').textContent = total_cost + ' ₴';
