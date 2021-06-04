@@ -370,29 +370,115 @@ $(document).ready(function () {
     modal_show($('.modal--contacts'), $('.contacts__button'));
     modal_show($('.modal--cart'), $('.cart-button'));
 
-    //калькулятор корзины
-    const init = () => {
-        let total_cost = 0;
-        let basket = document.querySelector('#basket');
-        [...document.querySelectorAll('.cart__item')].forEach((cart_item)=> {
-            total_cost +=
-                Number(cart_item.querySelector('.counter__input').value) *
-                cart_item.querySelector('.counter__input').dataset.price;
 
-            let item_cost =
-                Number(cart_item.querySelector('.counter__input').value) *
-                cart_item.querySelector('.counter__input').dataset.price;
-
-            cart_item.querySelector('.cart__item-price').textContent = item_cost + ' ₴';
-        });
-
-
-        if (basket !== null) {
-            let cart_total_price = basket.querySelector('.cart__total-price');
-            cart_total_price.textContent = total_cost + ' ₴';
-        }
-    };
-    init();
+    // //корзина
+    // (function () {
+    //     const cart = JSON.parse(localStorage.getItem('cart')) || {};
+    //     const cartListDOMElement = document.querySelector('.js-cart-list');
+    //
+    //     const saveCart = () => {
+    //         localStorage.setItem('cart', JSON.stringify(cart));
+    //     };
+    //
+    //     const updateCart = () => {
+    //         saveCart()
+    //     };
+    //
+    //     const getProductData = (productDOMElement) => {
+    //         const id = productDOMElement.getAttribute('data-product-name');
+    //         const name = productDOMElement.getAttribute('data-product-name');
+    //         const price = productDOMElement.getAttribute('data-price');
+    //         const src = productDOMElement.getAttribute('data-product-src');
+    //         const quantity = 1;
+    //
+    //         return {id, name, price, src, quantity};
+    //     };
+    //
+    //     const renderCart = () => {
+    //         const ids = Object.keys(cart);
+    //         ids.forEach((id) => renderCartItem(cart[id]));
+    //
+    //         console.log(cart);
+    //     };
+    //
+    //     const renderCartItem = ({id, name, price, src, quantity}) => {
+    //         const cartItemDOMElement = document.createElement('div');
+    //
+    //         const cartItemTemplate = `
+    //         <div class="cart__item">
+    //                 <img class="cart__item-photo" src="${src}" alt="Колбаса">
+    //                 <p class="cart__item-name">${name}</p>
+    //                 <p class="cart__item-price">${price}</p>
+    //
+    //                 <input type="hidden" name="товар" value="${name}">
+    //                 <input type="hidden" name="количество" value="${quantity}">
+    //                 <input type="hidden" name="цена" value="${price}">
+    //
+    //                 <span class="cart__counter counter">
+    //                 <button class="counter__button minus">-</button><label class="counter__label">
+    //                     <input class="counter__input" type="text" value="${quantity}" data-price="${price}"
+    //                            onkeyup="this.value = this.value.replace(/^0{1}|[^\\d]|[^\\-]]/g,'');">
+    //                 </label><button class="counter__button plus">+</button>
+    //             </span>
+    //         </div>`;
+    //
+    //         cartItemDOMElement.innerHTML = cartItemTemplate;
+    //         cartItemDOMElement.setAttribute('data-product-id', id);
+    //         cartListDOMElement.appendChild(cartItemDOMElement);
+    //     };
+    //
+    //     const addCartItem = (data) => {
+    //         const {id} = data;
+    //         cart[id] = data;
+    //
+    //         renderCartItem(data);
+    //         updateCart();
+    //     };
+    //
+    //     const addToCart = () => {
+    //         renderCart();
+    //
+    //         document.querySelector('body').addEventListener('click', (e) => {
+    //
+    //             const target = e.target;
+    //             if (target.classList.contains('js-btn-add-to-cart')) {
+    //                 e.preventDefault();
+    //                 const productDOMElement = target.closest('.js-product');
+    //                 const data = getProductData(productDOMElement);
+    //
+    //                 addCartItem(data);
+    //             }
+    //         });
+    //     };
+    //
+    //     addToCart();
+    // })();
+    //
+    //
+    // //калькулятор корзины
+    // const initCart = () => {
+    //     let total_cost = 0;
+    //     let basket = document.querySelector('#basket');
+    //     [...document.querySelectorAll('.cart__item')].forEach((cart_item) => {
+    //         total_cost +=
+    //             Number(cart_item.querySelector('.counter__input').value) *
+    //             cart_item.querySelector('.counter__input').dataset.price;
+    //
+    //         let item_cost =
+    //             Number(cart_item.querySelector('.counter__input').value) *
+    //             cart_item.querySelector('.counter__input').dataset.price;
+    //
+    //         cart_item.querySelector('.cart__item-price').textContent = item_cost + ' ₴';
+    //     });
+    //
+    //
+    //     if (basket !== null) {
+    //         let cart_total_price = basket.querySelector('.cart__total-price');
+    //         cart_total_price.textContent = total_cost + ' ₴';
+    //     }
+    // };
+    //
+    // initCart();
 
     //кастомный input number
     $('.counter .counter__button').on('click', function () {
@@ -406,14 +492,14 @@ $(document).ready(function () {
             value = value + 1; // прибавляем к value 1
         }
         input.val(value).change(); // выводим полученное value в инпут; триггер .change() - на случай, если на изменение этого инпута у вас уже объявлен еще какой-то обработчик
-        init();
+        // initCart();
     });
 
     $('.counter .counter__input').on('keyup', function () {
         if (!$(this).val().length) {
             $(this).val(1);
         }
-        init();
+        initCart();
     });
 
 });
