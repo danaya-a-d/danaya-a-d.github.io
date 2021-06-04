@@ -373,6 +373,7 @@ $(document).ready(function () {
     //калькулятор корзины
     const init = () => {
         let total_cost = 0;
+        let basket = document.querySelector('#basket');
         [...document.querySelectorAll('.cart__item')].forEach((cart_item)=> {
             total_cost +=
                 Number(cart_item.querySelector('.counter__input').value) *
@@ -385,7 +386,11 @@ $(document).ready(function () {
             cart_item.querySelector('.cart__item-price').textContent = item_cost + ' ₴';
         });
 
-        document.querySelector('.cart__total-price').textContent = total_cost + ' ₴';
+
+        if (basket !== null) {
+            let cart_total_price = basket.querySelector('.cart__total-price');
+            cart_total_price.textContent = total_cost + ' ₴';
+        }
     };
     init();
 
