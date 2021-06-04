@@ -39,7 +39,7 @@
     </svg>
 </div>
 
-<header class="header">
+<header class="header header--main">
     <nav class="header__nav">
         <a class="header__logo logo" href="index.html">ВашМясной</a>
         <ul class="header__list">
@@ -58,7 +58,7 @@
             <li class="header__language"><a href="#">UA</a></li>
         </ul>
 
-        <button class="header__cart-button">
+        <button class="header__cart-button cart-button">
             Корзина
             <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#cart"></use>
@@ -252,27 +252,41 @@
 
 
 <div class="modal__back hide">
-    <div class="modal hide">
-        <section class="modal__feedback feedback">
-            <h3 class="title feedback__title">Хотите стать нашим партнером?</h3>
-            <form class="modal__form main-form" action="https://echo.htmlacademy.ru" method="post">
-                <div>
-                    <label>
-                        <input class="main-form__input" id="name1" name="name"
-                               placeholder="Имя" type="text" required>
-                    </label>
-                    <label>
-                        <input class="main-form__input phone_mask" id="phone1" name="phone"
-                               placeholder="Номер телефона" type="tel" required>
-                    </label>
-                    <label>
-                        <input class="main-form__input" id="email1" name="email"
-                               placeholder="E-mail" type="email" required>
-                    </label>
+    <div class="modal modal--cart hide">
+        <section class="modal__cart cart" id="basket">
+            <h3 class="cart__title">Корзина</h3>
+            <div class="cart__list">
+                <div class="cart__item">
+                    <img class="cart__item-photo" src="img/content/item.jpg" alt="Колбаса">
+                    <p class="cart__item-name">Сосиски из свинины и куриного филе со сметаной и зеленью</p>
+                    <p class="cart__item-price">415 ₴</p>
 
-                    <button type="submit" class="button main-form__button">Отправить</button>
+                    <span class="cart__counter counter">
+                    <button class="counter__button minus">-</button><label class="counter__label">
+                        <input class="counter__input" type="text" value="1" data-price="415"
+                               onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                    </label><button class="counter__button plus">+</button>
+                </span>
                 </div>
-            </form>
+                <div class="cart__item">
+                    <img class="cart__item-photo" src="img/content/item.jpg" alt="Колбаса">
+                    <p class="cart__item-name">Сосиски из свинины и куриного филе со сметаной и зеленью</p>
+                    <p class="cart__item-price">315 ₴</p>
+
+                    <span class="cart__counter counter">
+                    <button class="counter__button minus">-</button><label class="counter__label">
+                        <input class="counter__input" type="text" value="1" data-price="315"
+                               onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                    </label><button class="counter__button plus">+</button>
+                </span>
+                </div>
+            </div>
+
+            <div class="cart__checkout">
+                <p class="cart__total-price">315 ₴</p>
+                <a class="cart__button button" href="ordering.html">Оформить заказ</a>
+            </div>
+            <button class="cart__close modal-close">Продолжить покупки</button>
         </section>
     </div>
     <div class="modal__overlay hide"></div>
