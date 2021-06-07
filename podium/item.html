@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Товар</title>
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
@@ -88,21 +88,13 @@
     <div class="header__wrapper">
         <div class="header__medium">
             <div class="header__contacts">
-                <ul class="header__contacts-list">
+                <ul class="header__contacts-list header__contacts-list--inner">
                     <li class="header__contacts-item"><a href="tel:+380677535444">+38 (067) 75-35-444</a></li>
                     <li class="header__contacts-item"><a href="tel:+380989744572">+38 (098) 974-45-72</a></li>
-                    <li class="header__contacts-item"><a href="tel:+380677535444">+38 (067) 75-35-444</a></li>
-                    <li class="header__contacts-item">8:00 - 21:00
+                    <li class="header__contacts-item">8:00 - 21:00<br>
                         <small>без выходных</small>
                     </li>
                 </ul>
-                <form class="header__call-me">
-                    <label for="call-me"></label>
-                    <input class="header__call-me-input call-me-input" type="tel" id="call-me"
-                           placeholder="+38" name="call-me">
-                    <button class="button button--gray-small header__call-me-button" type="submit">Перезвонить мне
-                    </button>
-                </form>
             </div>
             <a class="header__logo logo" href="index.html">
                 <img src="img/logo.svg" alt="Подиум">
@@ -147,248 +139,270 @@
 </header>
 
 <main class="page-main">
-    <section class="banner">
-        <h1 class="visually-hidden">МАГАЗИН КАЧЕСТВЕННОЙ ОБУВИ</h1>
-        <ul class="banner__list">
-            <li class="banner__item">
-                <img src="img/banner.jpg" class="banner__img" alt="Баннер">
-            </li>
-            <li class="banner__item">
-                <img src="img/banner.jpg" class="banner__img" alt="Баннер">
-            </li>
-            <li class="banner__item">
-                <img src="img/banner.jpg" class="banner__img" alt="Баннер">
-            </li>
-        </ul>
-    </section>
-
-    <section class="why-us">
-        <div class="title__wrapper">
-            <h3 class="title why-us__title">Почему мы:</h3>
+    <div class="breadcrumbs breadcrumbs--red">
+        <div class="breadcrumbs__container">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="category.html">Женская обувь</a></li>
+                <li class="breadcrumbs__item"><a href="category.html">Демисезонные ботильоны</a></li>
+                <li class="breadcrumbs__item">LOTTINI</li>
+            </ul>
         </div>
-        <ul class="why-us__list">
-            <li class="why-us__item">
-                <img src="img/why-us1.jpg" alt="Только натуральные материалы">
-                <p>Только натуральные материалы</p>
-            </li>
-            <li class="why-us__item">
-                <img src="img/why-us2.jpg" alt="Уникальная дисконтная программа">
-                <p>Уникальная дисконтная программа</p>
-            </li>
-            <li class="why-us__item">
-                <img src="img/why-us3.jpg" alt="Весь товар в наличии">
-                <p>Весь товар в наличии</p>
-            </li>
-            <li class="why-us__item">
-                <img src="img/why-us4.jpg" alt="Мгновенная обработка заказа и отправка">
-                <p>Мгновенная обработка заказа и отправка</p>
-            </li>
-            <li class="why-us__item">
-                <img src="img/why-us5.jpg" alt="Соответствие последним тенденциям моды">
-                <p>Соответствие последним тенденциям моды</p>
-            </li>
-        </ul>
+    </div>
+
+    <section class="product">
+        <div class="product__left">
+            <div class="product__big-photo">
+                <img src="img/prod1.jpg" alt="Фото">
+            </div>
+            <ul class="product__photo-list">
+                <li class="product__photo-item">
+                    <img src="img/prod2.jpg" alt="Фото">
+                </li>
+                <li class="product__photo-item">
+                    <img src="img/prod3.jpg" alt="Фото">
+                </li>
+                <li class="product__photo-item">
+                    <img src="img/prod4.jpg" alt="Фото">
+                </li>
+            </ul>
+
+            <p>Женские демисезонные ботильоны торговой марки Lottini, Турция.
+                Стильная и актуальная модель, воплотившая в себе последние
+                тенденции обувной моды. Материал верха - высококачественная
+                натуральная кожа. Внутри утеплитель (байка). Высота каблука 9 см.
+                Высота ботинка без каблука 11 см.</p>
+        </div>
+
+        <div class="product__right">
+            <h1 class="product__title title title--bold">Ботильоны LOTTINI</h1>
+            <p class="product__chose">
+                <span>Выберите размер</span>
+                <a href="#">Как узнать размер</a>
+            </p>
+            <ul class="sizes">
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="35">
+                        <span class="size-indicator">35</span>
+                    </label>
+                </li>
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="36">
+                        <span class="size-indicator">36</span>
+                    </label>
+                </li>
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="37">
+                        <span class="size-indicator">37</span>
+                    </label>
+                </li>
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="38">
+                        <span class="size-indicator">38</span>
+                    </label>
+                </li>
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="39">
+                        <span class="size-indicator">39</span>
+                    </label>
+                </li>
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="40">
+                        <span class="size-indicator">40</span>
+                    </label>
+                </li>
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="41">
+                        <span class="size-indicator">41</span>
+                    </label>
+                </li>
+                <li class="size">
+                    <label>
+                        <input class="visually-hidden" name="size" type="radio" value="42">
+                        <span class="size-indicator">42</span>
+                    </label>
+                </li>
+            </ul>
+
+            <div class="product__buy">
+                <div>
+                    <p class="product__price">3350 грн</p>
+                    <p class="product__code">Код товара: 3536</p>
+                </div>
+
+                <div>
+                    <button class="product__button button button--red">В корзину</button>
+                    <button class="product__button button button--gray-reverse">В избранное</button>
+                </div>
+            </div>
+
+            <table class="product__table">
+                <tr>
+                    <td>Бренд</td>
+                    <td>Lottini</td>
+                </tr>
+                <tr>
+                    <td>Страна</td>
+                    <td>Турция</td>
+                </tr>
+                <tr>
+                    <td>Сезон</td>
+                    <td>Демисезонные</td>
+                </tr>
+                <tr>
+                    <td>Стиль</td>
+                    <td>Повседневный</td>
+                </tr>
+                <tr>
+                    <td>Материал</td>
+                    <td>Кожа натуральная</td>
+                </tr>
+                <tr>
+                    <td>Подошва</td>
+                    <td>Устойчивый каблук</td>
+                </tr>
+                <tr>
+                    <td>Носок</td>
+                    <td>Острый</td>
+                </tr>
+                <tr>
+                    <td>Застёжка</td>
+                    <td>Молния</td>
+                </tr>
+                <tr>
+                    <td>Высота каблука</td>
+                    <td>Средний</td>
+                </tr>
+                <tr>
+                    <td>Цвет</td>
+                    <td>Черный</td>
+                </tr>
+                <tr>
+                    <td>Подкладка</td>
+                    <td>Байка</td>
+                </tr>
+            </table>
+
+            <form class="product__call-me">
+                <label for="call-me"></label>
+                <input class="header__call-me-input call-me-input" type="tel" id="call-me"
+                       placeholder="+38" name="call-me">
+                <button class="button button--gray header__call-me-button" type="submit">Купить в один клик
+                </button>
+            </form>
+        </div>
     </section>
 
     <section class="goods">
         <div class="title__wrapper">
-            <h3 class="title goods__title">Топовые товары</h3>
+            <h3 class="title goods__title">Похожие товары</h3>
         </div>
-        <ul class="goods__list">
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-old">1650 грн</p>
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--sale">-50%</p>
-                </a>
-            </li>
-        </ul>
-        <a class="goods__show-more" href="category.html">Смотреть ещё</a>
-    </section>
-
-    <section class="goods">
-        <div class="title__wrapper">
-            <h3 class="title goods__title">Новинки</h3>
+        <div class="goods__container">
+            <ul class="goods__list goods__list--slick">
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-old">1650 грн</p>
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--sale">-50%</p>
+                    </a>
+                </li>
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--new">New</p>
+                    </a>
+                </li>
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--new">New</p>
+                    </a>
+                </li>
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-old">1650 грн</p>
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--sale">-50%</p>
+                    </a>
+                </li>
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-old">1650 грн</p>
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--sale">-50%</p>
+                    </a>
+                </li>
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-old">1650 грн</p>
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--sale">-50%</p>
+                    </a>
+                </li>
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--new">New</p>
+                    </a>
+                </li>
+                <li class="goods__item">
+                    <a class="goods__link" href="item.html">
+                        <img class="goods__photo" src="img/item.jpg" alt="Туфли">
+                        <p class="goods__name">Замшевые туфли на шпильке</p>
+                        <p class="goods__brand">BALDACCINI</p>
+                        <div class="goods__prices">
+                            <p class="goods__price-old">1650 грн</p>
+                            <p class="goods__price-current">825 грн</p>
+                        </div>
+                        <p class="goods__hot goods__hot--sale">-50%</p>
+                    </a>
+                </li>
+            </ul>
+            <button class="slider-left"></button>
+            <button class="slider-right"></button>
         </div>
-        <ul class="goods__list">
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-            <li class="goods__item">
-                <a class="goods__link" href="item.html">
-                    <img class="goods__photo" src="img/item.jpg" alt="Туфли">
-                    <p class="goods__name">Замшевые туфли на шпильке</p>
-                    <p class="goods__brand">BALDACCINI</p>
-                    <div class="goods__prices">
-                        <p class="goods__price-current">825 грн</p>
-                    </div>
-                    <p class="goods__hot goods__hot--new">New</p>
-                </a>
-            </li>
-        </ul>
     </section>
 </main>
 
