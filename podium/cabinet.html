@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оформление заказа - контакты</title>
+    <title>Кабинет пользователя</title>
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
@@ -146,52 +146,118 @@
 
 <main class="page-main">
     <div class="title__wrapper order__title">
-        <h1 class="title title--bold">Оформление заказа</h1><h2
-            class="title title--bold title--red">Контакты</h2><h2
-            class="title title--bold title--gray">Доставка и оплата</h2>
+        <h1 class="title title--bold">Добро пожаловать <mark>Артём</mark></h1>
     </div>
 
-    <section class="ordering">
-        <div class="ordering__left">
-            <h3 class="ordering__title">Для подтверждения заказа заполните следующие поля:</h3>
-            <form class="ordering__form form" method="post">
+    <section class="cabinet">
+        <div class="cabinet__left">
+            <h3 class="cabinet__title">Личные данные</h3>
+            <form class="cabinet__form form" method="post">
                 <label class="form__label">
-                    Фамилия<input class="form__input" type="text" name="lastname" required>
+                    Фамилия<input class="form__input" type="text" name="lastname"
+                                  value="Косик">
                 </label>
                 <label class="form__label">
-                    Имя<input class="form__input" type="text" name="firstname" required>
+                    Имя<input class="form__input" type="text" name="firstname"
+                              required value="Артём">
                 </label>
                 <label class="form__label">
-                    Телефон<input class="form__input ordering__tel" type="tel" name="telephone" required>
+                    Отчество<input class="form__input" type="text" name="patronim"
+                                   required value="Анатолиевич">
                 </label>
                 <label class="form__label">
-                    Email<input class="form__input" type="email" name="email" required
+                    Телефон<input class="form__input ordering__tel" type="tel" name="telephone"
+                                  required value="+380976135900">
+                </label>
+                <label class="form__label">
+                    Email<input class="form__input" type="email" name="email"
+                                required value="artem.kosyk@gmail.com"
                                 pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" >
                 </label>
+
                 <label class="form__label">
-                    Страна<input class="form__input" type="text" name="country" required>
+                    Дата регистрации<input class="form__input form__input--red" type="text" name="country"
+                                 readonly value="12.11.2019">
                 </label>
 
-                <button class="form__button button button--red-small">Выбрать доставку и оплату</button>
+
+                <div class="form__radio-block">
+                    <span class="form__radio-block-title">Пол</span>
+                    <label class="form__label-radio">
+                        <span class="form__label-title">Мужской</span>
+                        <input class="visually-hidden" name="gender" type="radio" value="men" checked>
+                        <span class="form__radio-indicator"></span>
+                    </label>
+
+                    <label class="form__label-radio">
+                        <span class="form__label-title">Женский</span>
+                        <input class="visually-hidden" name="gender" type="radio" value="women">
+                        <span class="form__radio-indicator"></span>
+                    </label>
+                </div>
+
+
+                <label class="form__label form__label--small">
+                    Ваша скидка<input class="form__input form__input--small" type="text" name="country"
+                                           readonly value="5%">
+                </label>
             </form>
         </div>
 
-        <div class="ordering__right">
-            <p class="ordering__items-title">Ваш товар</p>
+        <div class="cabinet__right">
+            <h3 class="cabinet__title">История заказов</h3>
+            <table class="cabinet__table">
+                <tr>
+                    <th><span>Дата</span></th>
+                    <th><span>Код</span></th>
+                    <th><span>Товар</span></th>
+                    <th><span>Кол&#8209;во</span></th>
+                    <th><span>Сумма</span></th>
+                    <th><span>Информация о заказе</span></th>
+                    <th><span>Статус</span></th>
+                </tr>
+                <tr>
+                    <td><span>22.02.2020</span></td>
+                    <td><span>3536</span></td>
+                    <td><span>Ботильоны LOTTINI</span></td>
+                    <td><span>1пара</span></td>
+                    <td><span>3350 грн</span></td>
+                    <td><span><small>г. Бердичев, д-вка Новая Почта,
+                        отд 3, наложенный платеж
+                        <b>ТТН 20 0000 4567 9832</b></small></span></td>
+                    <td><span><mark>Выполнен</mark></span></td>
+                </tr>
 
-            <img class="order__photo" src="img/item2.jpg" alt="Товар">
+                <tr>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                </tr>
 
-            <div class="order__container">
-                <p class="order__name">Кожаные ботильоны <span>VERITAS</span></p>
-                <p class="order__size">размер <span><mark>36</mark></span></p>
-                <p class="order__code">код товара: <span>3536</span></p>
+                <tr>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                </tr>
 
-                <p class="order__total">К оплате
-                    <mark>2515</mark>
-                    грн
-                </p>
-            </div>
-
+                <tr>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                    <td><span></span></td>
+                </tr>
+            </table>
         </div>
     </section>
 

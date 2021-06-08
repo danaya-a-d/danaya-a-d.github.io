@@ -5,7 +5,7 @@ $(document).ready(function () {
         arrows: false,
         speed: 1000,
         autoplay: true,
-        autoplaySpeed: 2000
+        autoplaySpeed: 3000
     });
 
     $('.goods__list--slick').slick({
@@ -41,5 +41,18 @@ $(document).ready(function () {
         if (!$(this).val().length) {
             $(this).val(1);
         }
+    });
+
+    //Показать / скрыть пароль
+
+    $('body').on('click', '.password-control', function(){
+        if ($('#password-input').attr('type') == 'password'){
+            $(this).addClass('view');
+            $('#password-input').attr('type', 'text');
+        } else {
+            $(this).removeClass('view');
+            $('#password-input').attr('type', 'password');
+        }
+        return false;
     });
 });

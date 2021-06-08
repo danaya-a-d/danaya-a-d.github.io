@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Оформление заказа - контакты</title>
+    <title>Регистрация</title>
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
@@ -146,15 +146,16 @@
 
 <main class="page-main">
     <div class="title__wrapper order__title">
-        <h1 class="title title--bold">Оформление заказа</h1><h2
-            class="title title--bold title--red">Контакты</h2><h2
-            class="title title--bold title--gray">Доставка и оплата</h2>
+        <h1 class="title title--bold title__links">
+            <a href="login.html">Вход</a>
+            <a><mark>Регистрация</mark></a>
+        </h1>
     </div>
 
-    <section class="ordering">
-        <div class="ordering__left">
-            <h3 class="ordering__title">Для подтверждения заказа заполните следующие поля:</h3>
-            <form class="ordering__form form" method="post">
+    <div class="registr">
+        <p class="registr__line">Создайте свой личный кабинет</p>
+        <form class="registr__forms" method="post">
+            <div class="form registr__form">
                 <label class="form__label">
                     Фамилия<input class="form__input" type="text" name="lastname" required>
                 </label>
@@ -162,39 +163,44 @@
                     Имя<input class="form__input" type="text" name="firstname" required>
                 </label>
                 <label class="form__label">
+                    Отчество<input class="form__input" type="text" name="patronim" required>
+                </label>
+
+                <div class="form__radio-block">
+                    <span class="form__radio-block-title">Пол</span>
+                    <label class="form__label-radio">
+                        <span class="form__label-title">Мужской</span>
+                        <input class="visually-hidden" name="gender" type="radio" value="men" checked>
+                        <span class="form__radio-indicator"></span>
+                    </label>
+
+                    <label class="form__label-radio">
+                        <span class="form__label-title">Женский</span>
+                        <input class="visually-hidden" name="gender" type="radio" value="women">
+                        <span class="form__radio-indicator"></span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="form registr__form">
+                <label class="form__label">
                     Телефон<input class="form__input ordering__tel" type="tel" name="telephone" required>
                 </label>
                 <label class="form__label">
                     Email<input class="form__input" type="email" name="email" required
-                                pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" >
+                                pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
                 </label>
+
                 <label class="form__label">
-                    Страна<input class="form__input" type="text" name="country" required>
+                    Пароль
+                    <input type="password" class="form__input" id="password-input" name="password">
+                    <a href="#" class="password-control"></a>
                 </label>
 
-                <button class="form__button button button--red-small">Выбрать доставку и оплату</button>
-            </form>
-        </div>
-
-        <div class="ordering__right">
-            <p class="ordering__items-title">Ваш товар</p>
-
-            <img class="order__photo" src="img/item2.jpg" alt="Товар">
-
-            <div class="order__container">
-                <p class="order__name">Кожаные ботильоны <span>VERITAS</span></p>
-                <p class="order__size">размер <span><mark>36</mark></span></p>
-                <p class="order__code">код товара: <span>3536</span></p>
-
-                <p class="order__total">К оплате
-                    <mark>2515</mark>
-                    грн
-                </p>
+                <button class="button button--red-small registr__button">Регистрация</button>
             </div>
-
-        </div>
-    </section>
-
+        </form>
+    </div>
 </main>
 
 <footer class="footer">
