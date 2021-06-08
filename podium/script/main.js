@@ -1,4 +1,43 @@
 $(document).ready(function () {
+
+    /////// СЛАЙДЕРЫ ///////
+    function slick_mobile(slider, settings) {
+        // Подпишемся на ресайз и продиспатчим его для запуска
+        $(window).on('resize', function (e) {
+            // Переменная, по которой узнаем запущен слайдер или нет.
+            // Храним её в data
+            let init = slider.data('init-slider');
+            // Если мобильный
+            if (window.innerWidth < 480) {
+                // Если слайдер не запущен
+                if (init !== 1) {
+                    // Запускаем слайдер и записываем в data init-slider = 1
+                    slider.slick(settings).data({'init-slider': 1});
+                }
+            }
+            // Если десктоп
+            else {
+                // Если слайдер запущен
+                if (init === 1) {
+                    // Разрушаем слайдер и записываем в data init-slider = 0
+                    slider.slick('unslick').data({'init-slider': 0});
+                }
+            }
+        }).trigger('resize');
+    }
+
+
+    const settings = {
+        dots: true,
+        arrows: false,
+        mobileFirst: true,
+        settings: 'slick',
+        responsive: [{
+            breakpoint: 480,
+            settings: 'unslick'
+        }]
+    };
+
     //Слайдер верхнего блока
     $('.banner__list').slick({
         dots: true,
@@ -17,6 +56,8 @@ $(document).ready(function () {
         prevArrow: $('.slider-left'),
         nextArrow: $('.slider-right'),
     });
+
+    slick_mobile($('.why-us__list'), settings);
 
     //Маска телефона
     $(".call-me-input").mask("+38(999)999-99-99");
@@ -44,7 +85,6 @@ $(document).ready(function () {
     });
 
     //Показать / скрыть пароль
-
     $('body').on('click', '.password-control', function(){
         if ($('#password-input').attr('type') == 'password'){
             $(this).addClass('view');
