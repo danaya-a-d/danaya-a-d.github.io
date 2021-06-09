@@ -146,7 +146,9 @@
 
 <main class="page-main">
     <div class="title__wrapper order__title">
-        <h1 class="title title--bold">Добро пожаловать <mark>Артём</mark></h1>
+        <h1 class="title title--bold">Добро пожаловать
+            <mark>Артём</mark>
+        </h1>
     </div>
 
     <section class="cabinet">
@@ -155,29 +157,29 @@
             <form class="cabinet__form form" method="post">
                 <label class="form__label">
                     Фамилия<input class="form__input" type="text" name="lastname"
-                                  value="Косик">
+                                  readonly value="Косик">
                 </label>
                 <label class="form__label">
                     Имя<input class="form__input" type="text" name="firstname"
-                              required value="Артём">
+                              readonly value="Артём">
                 </label>
                 <label class="form__label">
                     Отчество<input class="form__input" type="text" name="patronim"
-                                   required value="Анатолиевич">
+                                   readonly value="Анатолиевич">
                 </label>
                 <label class="form__label">
                     Телефон<input class="form__input ordering__tel" type="tel" name="telephone"
-                                  required value="+380976135900">
+                                  readonly value="+380976135900">
                 </label>
                 <label class="form__label">
                     Email<input class="form__input" type="email" name="email"
-                                required value="artem.kosyk@gmail.com"
-                                pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" >
+                                readonly value="artem.kosyk@gmail.com"
+                                pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$">
                 </label>
 
                 <label class="form__label">
                     Дата регистрации<input class="form__input form__input--red" type="text" name="country"
-                                 readonly value="12.11.2019">
+                                           readonly value="12.11.2019">
                 </label>
 
 
@@ -199,65 +201,69 @@
 
                 <label class="form__label form__label--small">
                     Ваша скидка<input class="form__input form__input--small" type="text" name="country"
-                                           readonly value="5%">
+                                      readonly value="5%">
                 </label>
             </form>
         </div>
 
         <div class="cabinet__right">
             <h3 class="cabinet__title">История заказов</h3>
-            <table class="cabinet__table">
-                <tr>
-                    <th><span>Дата</span></th>
-                    <th><span>Код</span></th>
-                    <th><span>Товар</span></th>
-                    <th><span>Кол&#8209;во</span></th>
-                    <th><span>Сумма</span></th>
-                    <th><span>Информация о заказе</span></th>
-                    <th><span>Статус</span></th>
-                </tr>
-                <tr>
-                    <td><span>22.02.2020</span></td>
-                    <td><span>3536</span></td>
-                    <td><span>Ботильоны LOTTINI</span></td>
-                    <td><span>1пара</span></td>
-                    <td><span>3350 грн</span></td>
-                    <td><span><small>г. Бердичев, д-вка Новая Почта,
+            <div class="cabinet__table-block">
+                <table class="cabinet__table">
+                    <tbody>
+                    <tr>
+                        <th><span>Дата</span></th>
+                        <th><span>Код</span></th>
+                        <th><span>Товар</span></th>
+                        <th><span>Кол&#8209;во</span></th>
+                        <th><span>Сумма</span></th>
+                        <th><span>Информация о заказе</span></th>
+                        <th><span>Статус</span></th>
+                    </tr>
+                    <tr>
+                        <td><span>22.02.2020</span></td>
+                        <td><span>3536</span></td>
+                        <td><span>Ботильоны LOTTINI</span></td>
+                        <td><span>1пара</span></td>
+                        <td><span>3350 грн</span></td>
+                        <td><span><small>г. Бердичев, д-вка Новая Почта,
                         отд 3, наложенный платеж
                         <b>ТТН 20 0000 4567 9832</b></small></span></td>
-                    <td><span><mark>Выполнен</mark></span></td>
-                </tr>
+                        <td><span><mark>Выполнен</mark></span></td>
+                    </tr>
 
-                <tr>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                </tr>
+                    <tr>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                    </tr>
 
-                <tr>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                </tr>
+                    <tr>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                    </tr>
 
-                <tr>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                    <td><span></span></td>
-                </tr>
-            </table>
+                    <tr>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                        <td><span></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </section>
 

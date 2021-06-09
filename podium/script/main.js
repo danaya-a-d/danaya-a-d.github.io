@@ -59,6 +59,44 @@ $(document).ready(function () {
 
     slick_mobile($('.why-us__list'), settings);
 
+    // товар
+    $('[data-fancybox="gallery"]').fancybox({
+        thumbs : {
+            showOnStart : true
+        },
+        hash : true
+    });
+
+    $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        fade: true,
+        asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+        slidesToShow: $(this).find(".product__photo-item").length === 1 ? 1 : $(this).find(".product__photo-item").length === 2 ? 2 : 3,
+        slidesToScroll: 1,
+        asNavFor: '.slider-for',
+        dots: true,
+        arrows: false,
+        focusOnSelect: true,
+        // variableWidth: true,
+        infinite: false
+    });
+
+    if ($('.product__photo-list').find('.product__photo-item').length < 4) {
+        $('.product__photo-list').find('.slick-track').addClass('slick-scale');
+    }
+
+
+    //Блок фильтров
+    $('.filter__show').on('click', function () {
+        if ($('.filter').hasClass('filter--hide')) {
+            $('.filter').removeClass('filter--hide');
+        } else $('.filter').addClass('filter--hide');
+    });
+
     //Маска телефона
     $(".call-me-input").mask("+38(999)999-99-99");
     $(".ordering__tel").mask("+38 999 999 99 99");
@@ -85,8 +123,8 @@ $(document).ready(function () {
     });
 
     //Показать / скрыть пароль
-    $('body').on('click', '.password-control', function(){
-        if ($('#password-input').attr('type') == 'password'){
+    $('body').on('click', '.password-control', function () {
+        if ($('#password-input').attr('type') == 'password') {
             $(this).addClass('view');
             $('#password-input').attr('type', 'text');
         } else {
@@ -95,4 +133,11 @@ $(document).ready(function () {
         }
         return false;
     });
+
+
+    // $('.fancybox-img').loupe({
+    //     width: 200, // width of magnifier
+    //     height: 150, // height of magnifier
+    //     loupe: 'loupe' // css class for magnifier
+    // });
 });
