@@ -60,12 +60,14 @@ $(document).ready(function () {
     slick_mobile($('.why-us__list'), settings);
 
     // товар
-    $('[data-fancybox="gallery"]').fancybox({
-        thumbs : {
-            showOnStart : true
-        },
-        hash : true
-    });
+    if ($('[data-fancybox="gallery"]').length > 0) {
+        $('[data-fancybox="gallery"]').fancybox({
+            thumbs: {
+                showOnStart: true
+            },
+            hash: true
+        });
+    }
 
     $('.slider-for').slick({
         slidesToShow: 1,
@@ -94,7 +96,11 @@ $(document).ready(function () {
     $('.filter__show').on('click', function () {
         if ($('.filter').hasClass('filter--hide')) {
             $('.filter').removeClass('filter--hide');
-        } else $('.filter').addClass('filter--hide');
+            $('.filter__show').text('Скрыть фильтры');
+        } else {
+            $('.filter').addClass('filter--hide');
+            $('.filter__show').text('Показать фильтры');
+        }
     });
 
     //Маска телефона
