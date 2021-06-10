@@ -1,14 +1,26 @@
 $(document).ready(function () {
 
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
     /////// СЛАЙДЕРЫ ///////
-    function slick_mobile(slider, settings) {
+    function slick_mobile(slider, settings, width) {
         // Подпишемся на ресайз и продиспатчим его для запуска
         $(window).on('resize', function (e) {
             // Переменная, по которой узнаем запущен слайдер или нет.
             // Храним её в data
             let init = slider.data('init-slider');
             // Если мобильный
-            if (window.innerWidth < 480) {
+            if (window.innerWidth < width) {
                 // Если слайдер не запущен
                 if (init !== 1) {
                     // Запускаем слайдер и записываем в data init-slider = 1
@@ -38,6 +50,40 @@ $(document).ready(function () {
         }]
     };
 
+    const settings_goods_hot = {
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        prevArrow: $('#slider-left-hot'),
+        nextArrow: $('#slider-right-hot'),
+
+        mobileFirst: true,
+        settings: 'slick',
+        responsive: [{
+            breakpoint: 767,
+            settings: 'unslick'
+        }]
+    };
+
+    const settings_goods_new = {
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: false,
+        prevArrow: $('#slider-left-new'),
+        nextArrow: $('#slider-right-new'),
+
+        mobileFirst: true,
+        settings: 'slick',
+        responsive: [{
+            breakpoint: 767,
+            settings: 'unslick'
+        }]
+    };
+
     //Слайдер верхнего блока
     $('.banner__list').slick({
         dots: true,
@@ -53,8 +99,8 @@ $(document).ready(function () {
         slidesToShow: 4,
         slidesToScroll: 1,
         infinite: false,
-        prevArrow: $('.slider-left'),
-        nextArrow: $('.slider-right'),
+        prevArrow: $('#slider-left-similar'),
+        nextArrow: $('#slider-right-similar'),
 
         responsive: [
             {
@@ -78,7 +124,9 @@ $(document).ready(function () {
         ]
     });
 
-    slick_mobile($('.why-us__list'), settings);
+    slick_mobile($('.why-us__list'), settings, 480);
+    slick_mobile($('.goods__list--slick-mob-hot'), settings_goods_hot, 767);
+    slick_mobile($('.goods__list--slick-mob-new'), settings_goods_new, 767);
 
     // товар
     if ($('[data-fancybox="gallery"]').length > 0) {
@@ -101,7 +149,9 @@ $(document).ready(function () {
     $('.slider-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
-        arrows: false,
+        arrows: true,
+        prevArrow: $('#slider-left-big-photo'),
+        nextArrow: $('#slider-right-big-photo'),
         dots: true,
         fade: true,
         asNavFor: '.slider-nav'
@@ -175,26 +225,49 @@ $(document).ready(function () {
     });
 
      // Открытие и закрытие мобильлного меню
-    // $('.header__contacts');
-    // $('.header__bottom');
-    // $('.header__top');
     function menu_open() {
-        $('.header__contacts').removeClass('close');
-        $('.header__bottom').removeClass('close');
-        $('.header__top').removeClass('close');
+        $('.header').removeClass('close');
+        $('.overlay').show();
     }
 
     function menu_close() {
-        $('.header__contacts').addClass('close');
-        $('.header__bottom').addClass('close');
-        $('.header__top').addClass('close');
+        $('.header').addClass('close');
+        $('.overlay').hide();
     }
 
     $('.header__open-menu').on('click', function () {
-        if ($(".header__top").hasClass('close')) {
+        if ($(".header").hasClass('close')) {
             menu_open();
         } else {
             menu_close();
         }
     });
+
+    $('.overlay').on('click', function () {
+        menu_close();
+    });
+
+    $(".overlay").on("touchmove", function () {
+        menu_close();
+    });
+
+    // function menu_open() {
+    //     $('.header__contacts').removeClass('close');
+    //     $('.header__bottom').removeClass('close');
+    //     $('.header__top').removeClass('close');
+    // }
+    //
+    // function menu_close() {
+    //     $('.header__contacts').addClass('close');
+    //     $('.header__bottom').addClass('close');
+    //     $('.header__top').addClass('close');
+    // }
+    //
+    // $('.header__open-menu').on('click', function () {
+    //     if ($(".header__top").hasClass('close')) {
+    //         menu_open();
+    //     } else {
+    //         menu_close();
+    //     }
+    // });
 });

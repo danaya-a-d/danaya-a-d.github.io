@@ -53,8 +53,19 @@
     </svg>
 </div>
 
-<header class="header">
-    <div class="header__top close">
+<!-- оверлей для меню -->
+<div class="overlay"></div>
+
+<!-- хедер на мобильном устройстве -->
+<header class="header-mobile">
+    <button class="header__open-menu">Открыть меню</button>
+    <a href="index.html" class="header-mobile__logo logo">
+        <img src="img/logo.svg" alt="Подиум">
+    </a>
+</header>
+
+<header class="header close">
+    <div class="header__top">
         <div class="header__wrapper">
             <ul class="header__top-list">
                 <li class="header__top-item"><a href="#">О компании</a></li>
@@ -78,7 +89,7 @@
     </div>
     <div class="header__wrapper header__center">
         <div class="header__medium">
-            <div class="header__contacts close">
+            <div class="header__contacts">
                 <ul class="header__contacts-list">
                     <li class="header__contacts-item"><a href="tel:+380677535444">+38 (067) 75-35-444</a></li>
                     <li class="header__contacts-item"><a href="tel:+380989744572">+38 (098) 974-45-72</a></li>
@@ -125,13 +136,13 @@
 
                 <label class="header__search-label" for="search">
                     <input class="header__search" type="text" id="search" name="search">
-                    <button class="header__open-menu">Открыть меню</button>
+                    <!--<button class="header__open-menu">Открыть меню</button>-->
                 </label>
             </div>
 
         </div>
     </div>
-    <div class="header__bottom close">
+    <div class="header__bottom">
         <div class="header__wrapper">
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -161,6 +172,8 @@
     <section class="product">
         <div class="product__left">
 
+            <button class="slider-left" id="slider-left-big-photo"></button>
+            <button class="slider-right" id="slider-right-big-photo"></button>
             <div class="product__big-photo-list slider-for">
                 <div class="product__big-photo">
                     <img class="fancybox-img" src="img/prod1.jpg" alt="Фото">
@@ -429,8 +442,8 @@
                         </a>
                     </li>
                 </ul>
-                <button class="slider-left"></button>
-                <button class="slider-right"></button>
+                <button class="slider-left" id="slider-left-similar"></button>
+                <button class="slider-right" id="slider-right-similar"></button>
             </div>
     </section>
 </main>

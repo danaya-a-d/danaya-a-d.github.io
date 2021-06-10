@@ -54,8 +54,19 @@
     </svg>
 </div>
 
-<header class="header">
-    <div class="header__top close">
+<!-- оверлей для меню -->
+<div class="overlay"></div>
+
+<!-- хедер на мобильном устройстве -->
+<header class="header-mobile">
+    <button class="header__open-menu">Открыть меню</button>
+    <a href="index.html" class="header-mobile__logo logo">
+        <img src="img/logo.svg" alt="Подиум">
+    </a>
+</header>
+
+<header class="header close">
+    <div class="header__top">
         <div class="header__wrapper">
             <ul class="header__top-list">
                 <li class="header__top-item"><a href="#">О компании</a></li>
@@ -79,7 +90,7 @@
     </div>
     <div class="header__wrapper header__center">
         <div class="header__medium">
-            <div class="header__contacts close">
+            <div class="header__contacts">
                 <ul class="header__contacts-list">
                     <li class="header__contacts-item"><a href="tel:+380677535444">+38 (067) 75-35-444</a></li>
                     <li class="header__contacts-item"><a href="tel:+380989744572">+38 (098) 974-45-72</a></li>
@@ -126,13 +137,13 @@
 
                 <label class="header__search-label" for="search">
                     <input class="header__search" type="text" id="search" name="search">
-                    <button class="header__open-menu">Открыть меню</button>
+                    <!--<button class="header__open-menu">Открыть меню</button>-->
                 </label>
             </div>
 
         </div>
     </div>
-    <div class="header__bottom close">
+    <div class="header__bottom">
         <div class="header__wrapper">
             <nav class="header__nav">
                 <ul class="header__nav-list">
@@ -195,7 +206,8 @@
         <div class="title__wrapper">
             <h3 class="title goods__title">Топовые товары</h3>
         </div>
-        <ul class="goods__list">
+        <div class="goods__container">
+        <ul class="goods__list goods__list--slick-mob1 goods__list--slick-mob-hot">
             <li class="goods__item">
                 <a class="goods__link" href="item.html">
                     <img class="goods__photo" src="img/item.jpg" alt="Туфли">
@@ -293,6 +305,9 @@
                 </a>
             </li>
         </ul>
+            <button class="slider-left" id="slider-left-hot"></button>
+            <button class="slider-right" id="slider-right-hot"></button>
+        </div>
         <a class="goods__show-more" href="category.html">Смотреть ещё</a>
     </section>
 
@@ -300,7 +315,8 @@
         <div class="title__wrapper">
             <h3 class="title goods__title">Новинки</h3>
         </div>
-        <ul class="goods__list">
+        <div class="goods__container">
+        <ul class="goods__list goods__list--slick-mob goods__list--slick-mob-new">
             <li class="goods__item">
                 <a class="goods__link" href="item.html">
                     <img class="goods__photo" src="img/item.jpg" alt="Туфли">
@@ -390,6 +406,9 @@
                 </a>
             </li>
         </ul>
+            <button class="slider-left" id="slider-left-new"></button>
+            <button class="slider-right" id="slider-right-new"></button>
+        </div>
     </section>
 </main>
 
