@@ -90,6 +90,12 @@ $(document).ready(function () {
             hideOnOverlayClick : true,
             enableEscapeButton: true
         });
+
+        $('.fancybox-img').loupe({
+            width: 200, // width of magnifier
+            height: 200, // height of magnifier
+            loupe: 'loupe' // css class for magnifier
+        });
     }
 
     $('.slider-for').slick({
@@ -168,10 +174,27 @@ $(document).ready(function () {
         return false;
     });
 
+     // Открытие и закрытие мобильлного меню
+    // $('.header__contacts');
+    // $('.header__bottom');
+    // $('.header__top');
+    function menu_open() {
+        $('.header__contacts').removeClass('close');
+        $('.header__bottom').removeClass('close');
+        $('.header__top').removeClass('close');
+    }
 
-    $('.fancybox-img').loupe({
-        width: 200, // width of magnifier
-        height: 200, // height of magnifier
-        loupe: 'loupe' // css class for magnifier
+    function menu_close() {
+        $('.header__contacts').addClass('close');
+        $('.header__bottom').addClass('close');
+        $('.header__top').addClass('close');
+    }
+
+    $('.header__open-menu').on('click', function () {
+        if ($(".header__top").hasClass('close')) {
+            menu_open();
+        } else {
+            menu_close();
+        }
     });
 });
