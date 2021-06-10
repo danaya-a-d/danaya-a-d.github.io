@@ -53,7 +53,7 @@
 </div>
 
 <header class="header">
-    <div class="header__top">
+    <div class="header__top close">
         <div class="header__wrapper">
             <ul class="header__top-list">
                 <li class="header__top-item"><a href="#">О компании</a></li>
@@ -75,9 +75,9 @@
             </ul>
         </div>
     </div>
-    <div class="header__wrapper">
+    <div class="header__wrapper header__center">
         <div class="header__medium">
-            <div class="header__contacts">
+            <div class="header__contacts close">
                 <ul class="header__contacts-list">
                     <li class="header__contacts-item"><a href="tel:+380677535444">+38 (067) 75-35-444</a></li>
                     <li class="header__contacts-item"><a href="tel:+380989744572">+38 (098) 974-45-72</a></li>
@@ -95,7 +95,12 @@
                 </form>
             </div>
             <a class="header__logo logo" href="index.html">
-                <img src="img/logo.svg" alt="Подиум">
+                <picture>
+                    <source srcset="img/logo-white.svg" media="(max-width: 1199px)" >
+                    <source srcset="img/logo.svg">
+                    <img class="trial__img" alt="Подиум" src="img/logo-white.svg">
+                </picture>
+
                 <p>Магазин качественной обуви</p>
             </a>
 
@@ -123,13 +128,15 @@
                     </a></li>
                 </ul>
 
-                <label for="search"></label>
-                <input class="header__search" type="text" id="search" name="search">
+                <label class="header__search-label" for="search">
+                    <input class="header__search" type="text" id="search" name="search">
+                    <button class="header__open-menu">Открыть меню</button>
+                </label>
             </div>
 
         </div>
     </div>
-    <div class="header__bottom">
+    <div class="header__bottom close">
         <div class="header__wrapper">
             <nav class="header__nav">
                 <ul class="header__nav-list">
