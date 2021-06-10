@@ -55,6 +55,27 @@ $(document).ready(function () {
         infinite: false,
         prevArrow: $('.slider-left'),
         nextArrow: $('.slider-right'),
+
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow: 3,
+                }
+            },
+            {
+                breakpoint: 1199,
+                settings: {
+                    slidesToShow: 2,
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
     });
 
     slick_mobile($('.why-us__list'), settings);
@@ -65,7 +86,9 @@ $(document).ready(function () {
             thumbs: {
                 showOnStart: true
             },
-            hash: true
+            hash: true,
+            hideOnOverlayClick : true,
+            enableEscapeButton: true
         });
     }
 
@@ -73,18 +96,23 @@ $(document).ready(function () {
         slidesToShow: 1,
         slidesToScroll: 1,
         arrows: false,
+        dots: true,
         fade: true,
         asNavFor: '.slider-nav'
     });
+
     $('.slider-nav').slick({
         slidesToShow: $(this).find(".product__photo-item").length === 1 ? 1 : $(this).find(".product__photo-item").length === 2 ? 2 : 3,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
-        dots: true,
+        dots: false,
         arrows: false,
         focusOnSelect: true,
-        // variableWidth: true,
-        infinite: false
+        infinite: false,
+        responsive: [{
+            breakpoint: 767,
+            settings: "unslisck"
+        }]
     });
 
     if ($('.product__photo-list').find('.product__photo-item').length < 4) {
@@ -141,9 +169,9 @@ $(document).ready(function () {
     });
 
 
-    // $('.fancybox-img').loupe({
-    //     width: 200, // width of magnifier
-    //     height: 150, // height of magnifier
-    //     loupe: 'loupe' // css class for magnifier
-    // });
+    $('.fancybox-img').loupe({
+        width: 200, // width of magnifier
+        height: 200, // height of magnifier
+        loupe: 'loupe' // css class for magnifier
+    });
 });
