@@ -59,12 +59,19 @@
 <!-- хедер на мобильном устройстве -->
 <header class="header-mobile">
     <button class="header__open-menu">Открыть меню</button>
-    <a href="index.html" class="header-mobile__logo logo">
+    <a href="index.html" class="header__logo header__logo-mobile logo">
         <img src="img/logo.svg" alt="Подиум">
+        <p>Магазин качественной обуви</p>
     </a>
+    <button class="header__open-contacts">Открыть контакты</button>
 </header>
 
+<div class="contacts-menu close">
+    <button class="contacts-menu__btn-close btn-close">Закрыть</button>
+</div>
+
 <header class="header close">
+    <button class="header__btn-close btn-close">Закрыть</button>
     <div class="header__top">
         <div class="header__wrapper">
             <ul class="header__top-list">
@@ -136,7 +143,6 @@
 
                 <label class="header__search-label" for="search">
                     <input class="header__search" type="text" id="search" name="search">
-                    <!--<button class="header__open-menu">Открыть меню</button>-->
                 </label>
             </div>
 

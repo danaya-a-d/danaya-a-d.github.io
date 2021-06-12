@@ -135,7 +135,7 @@ $(document).ready(function () {
                 showOnStart: true
             },
             hash: true,
-            hideOnOverlayClick : true,
+            hideOnOverlayClick: true,
             enableEscapeButton: true
         });
 
@@ -224,7 +224,17 @@ $(document).ready(function () {
         return false;
     });
 
-     // Открытие и закрытие мобильлного меню
+    // Открытие и закрытие мобильлного меню
+    function call_menu_open() {
+        $('.contacts-menu').removeClass('close');
+        $('.overlay').show();
+    }
+
+    function call_menu_close() {
+        $('.contacts-menu').addClass('close');
+        $('.overlay').hide();
+    }
+
     function menu_open() {
         $('.header').removeClass('close');
         $('.overlay').show();
@@ -235,6 +245,14 @@ $(document).ready(function () {
         $('.overlay').hide();
     }
 
+    $('.header__open-contacts').on('click', function () {
+        if ($(".header").hasClass('close')) {
+            call_menu_open();
+        } else {
+            call_menu_close();
+        }
+    });
+
     $('.header__open-menu').on('click', function () {
         if ($(".header").hasClass('close')) {
             menu_open();
@@ -243,31 +261,35 @@ $(document).ready(function () {
         }
     });
 
+    $('.contacts-menu__btn-close').on('click', function () {
+        call_menu_close();
+    });
+
+    $('.header__btn-close').on('click', function () {
+        menu_close();
+    });
+
     $('.overlay').on('click', function () {
         menu_close();
+        call_menu_close();
     });
 
     $(".overlay").on("touchmove", function () {
         menu_close();
     });
 
-    // function menu_open() {
-    //     $('.header__contacts').removeClass('close');
-    //     $('.header__bottom').removeClass('close');
-    //     $('.header__top').removeClass('close');
-    // }
-    //
-    // function menu_close() {
-    //     $('.header__contacts').addClass('close');
-    //     $('.header__bottom').addClass('close');
-    //     $('.header__top').addClass('close');
-    // }
-    //
-    // $('.header__open-menu').on('click', function () {
-    //     if ($(".header__top").hasClass('close')) {
-    //         menu_open();
-    //     } else {
-    //         menu_close();
-    //     }
-    // });
+
+    const mediaQuery = window.matchMedia('(max-width: 1199px)');
+    if (mediaQuery.matches) {
+        $('.header-mobile').append($('.header__buy-list'));
+        $('.contacts-menu').append($('.header__contacts'));
+    }
+
+    window.addEventListener('resize', function (event) {
+        if (mediaQuery.matches) {
+            $('.header-mobile').append($('.header__buy-list'));
+            $('.contacts-menu').append($('.header__contacts'));
+        }
+    }, true);
+
 });
