@@ -306,19 +306,19 @@ $(document).ready(function () {
         const mediaQuery = window.matchMedia('(max-width: 1199px)');
         if (mediaQuery.matches) {
             $('.header-mobile').append($('.header__buy-list'));
-            $('.contacts-menu').append($('.header__contacts'));
+            // $('.contacts-menu').append($('.header__contacts'));
         }
         else {
             $('.header__buy').append($('.header__buy-list'));
-            $('.header__medium').prepend($('.header__contacts'));
+            // $('.header__medium').prepend($('.header__contacts'));
         }
     }
 
-    // // перемещение элементов в хедере
-    // moving_header_elements();
-    // window.addEventListener('resize', function (event) {
-    //     moving_header_elements();
-    // }, true);
+    // перемещение элементов в хедере
+    moving_header_elements();
+    window.addEventListener('resize', function (event) {
+        moving_header_elements();
+    }, true);
 
 
     //чекбокс, жирный лейбл
