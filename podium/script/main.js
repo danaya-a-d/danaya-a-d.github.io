@@ -246,7 +246,16 @@ $(document).ready(function () {
     }
 
     $('.header__open-contacts').on('click', function () {
-        if ($(".header").hasClass('close')) {
+        if ($(".contacts-menu").hasClass('close')) {
+            call_menu_open();
+        } else {
+            call_menu_close();
+        }
+    });
+
+    $('.header__recall').on('click', function () {
+        menu_close();
+        if ($(".contacts-menu").hasClass('close')) {
             call_menu_open();
         } else {
             call_menu_close();
@@ -279,6 +288,7 @@ $(document).ready(function () {
     });
 
 
+    // перемещение элементов в хедере
     const mediaQuery = window.matchMedia('(max-width: 1199px)');
     if (mediaQuery.matches) {
         $('.header-mobile').append($('.header__buy-list'));
@@ -291,5 +301,24 @@ $(document).ready(function () {
             $('.contacts-menu').append($('.header__contacts'));
         }
     }, true);
+
+
+    //чекбокс, жирный лейбл
+    function bold_label() {
+        $('.filter input[type="checkbox"]:checked:not(:disabled)')
+            .closest('label')
+            .find('.filter__indicator-title')
+            .css("font-family", 'avenirnextcyr-bold, Arial, sans-serif');
+
+        $('.filter input[type="checkbox"]:not(:checked):not(:disabled)')
+            .closest('label')
+            .find('.filter__indicator-title')
+            .css("font-family", 'avenirnextcyr-demibold, Arial, sans-serif');
+    }
+
+    bold_label();
+    $('.filter__item input').on('change', function () {
+        bold_label()
+    });
 
 });
