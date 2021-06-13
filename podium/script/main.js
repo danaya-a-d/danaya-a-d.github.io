@@ -350,5 +350,5 @@ $(document).ready(function () {
 
     //чтобы не пропадал фокус на поле звонка меню
     let call_me = document.querySelector('#call-me');
-    call_me.addEventListener('click', e => setTimeout(() => e.target.focus(), 500));
+    call_me.addEventListener('click', e => () => e.target.focus());
 });
