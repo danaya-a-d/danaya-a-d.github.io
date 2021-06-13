@@ -243,6 +243,13 @@ $(document).ready(function () {
     function menu_close() {
         $('.header').addClass('close');
         $('.overlay').hide();
+
+
+        function close_submenu() {
+            $('.header__nav-sublist').addClass('close');
+        }
+
+        setTimeout(close_submenu, 300);
     }
 
     $('.header__open-contacts').on('click', function () {
@@ -278,6 +285,13 @@ $(document).ready(function () {
         menu_close();
     });
 
+    $('.header__sublist-btn-close').on('click', function () {
+        $(this)
+            .closest('.header__nav-item')
+            .find('.header__nav-sublist')
+            .addClass('close');
+    });
+
     $('.overlay').on('click', function () {
         menu_close();
         call_menu_close();
@@ -288,18 +302,22 @@ $(document).ready(function () {
     });
 
 
-    // перемещение элементов в хедере
-    const mediaQuery = window.matchMedia('(max-width: 1199px)');
-    if (mediaQuery.matches) {
-        $('.header-mobile').append($('.header__buy-list'));
-        $('.contacts-menu').append($('.header__contacts'));
-    }
-
-    window.addEventListener('resize', function (event) {
+    function moving_header_elements() {
+        const mediaQuery = window.matchMedia('(max-width: 1199px)');
         if (mediaQuery.matches) {
             $('.header-mobile').append($('.header__buy-list'));
             $('.contacts-menu').append($('.header__contacts'));
         }
+        else {
+            $('.header__buy').append($('.header__buy-list'));
+            $('.header__medium').prepend($('.header__contacts'));
+        }
+    }
+
+    // перемещение элементов в хедере
+    moving_header_elements();
+    window.addEventListener('resize', function (event) {
+        moving_header_elements();
     }, true);
 
 
@@ -321,4 +339,12 @@ $(document).ready(function () {
         bold_label()
     });
 
+
+    // открытие подменю на моб
+    $('.header__nav-item-block').on('click', function (e) {
+        $(this)
+            .parent('.header__nav-item')
+            .find('.header__nav-sublist')
+            .removeClass('close');
+    });
 });
