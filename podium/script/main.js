@@ -305,12 +305,14 @@ $(document).ready(function () {
     function moving_header_elements() {
         const mediaQuery = window.matchMedia('(max-width: 1199px)');
         if (mediaQuery.matches) {
-            $('.header-mobile').append($('.header__buy-list'));
-            // $('.contacts-menu').append($('.header__contacts'));
+            if(!$('.contacts-menu').children('.header__contacts').length > 0) {
+                $('.header-mobile').append($('.header__buy-list'));
+                $('.contacts-menu').append($('.header__contacts'));
+            }
         }
         else {
             $('.header__buy').append($('.header__buy-list'));
-            // $('.header__medium').prepend($('.header__contacts'));
+            $('.header__medium').prepend($('.header__contacts'));
         }
     }
 
