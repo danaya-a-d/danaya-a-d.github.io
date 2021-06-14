@@ -247,26 +247,46 @@
     </div>
 
     <div class="order">
-        <p class="order__subtitle">Ваш товар</p>
-        <ul class="order__list">
-            <li class="order__item">
-                <img class="order__photo" src="img/item2.jpg" alt="Товар">
+        <div class="order__block order__block--center">
+            <p class="order__subtitle">Ваша информация</p>
+            <ul class="order__about-list">
+                <li class="order__about-item">№1221</li>
+                <li class="order__about-item">12.06.2021</li>
+                <li class="order__about-item">Иван Иванов</li>
+                <li class="order__about-item">+380961232112</li>
+                <li class="order__about-item">Новая почта</li>
+            </ul>
+        </div>
 
-                <div class="order__container">
-                    <p class="order__name">Кожаные ботильоны <span>VERITAS</span></p>
-                    <p class="order__size">размер <span><mark>36</mark></span></p>
-                    <p class="order__code">код товара: <span>3536</span></p>
+        <div class="order__block">
+            <p class="order__subtitle">Ваш товар</p>
+            <ul class="order__list">
+                <li class="order__item">
+                    <img class="order__photo" src="img/item2.jpg" alt="Товар">
 
-                    <p class="order__total">К оплате
-                        <mark>2515</mark>
-                        грн
-                    </p>
-                </div>
-            </li>
-        </ul>
+                    <div class="order__container">
+                        <p class="order__name">Кожаные ботильоны <span>VERITAS</span></p>
+                        <p class="order__size">размер <span><mark>36</mark></span></p>
+                        <p class="order__code">код товара: <span>3536</span></p>
 
-        <a href="index.html" class="order__button button button--red-small">Продолжить покупки</a>
+                        <p class="order__total">К оплате
+                            <mark>2515</mark>
+                            грн
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="order__block order__block--center">
+            <p class="order__subtitle">Ваша оплата</p>
+            <ul class="order__about-list">
+                <li class="order__about-item">Банковской картой онлайн</li>
+            </ul>
+        </div>
     </div>
+
+    <a href="index.html" class="order__button button button--red-small">Продолжить покупки</a>
 </main>
 
 <footer class="footer">
