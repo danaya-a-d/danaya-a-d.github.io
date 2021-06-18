@@ -41,29 +41,60 @@
 
 <header class="header">
     <nav class="header__nav">
-        <a class="header__logo logo" href="index.html">ВашМясной</a>
-        <ul class="header__list">
+        <ul class="header__list header__list--first">
             <li class="header__item"><a href="about-us.html">О нас</a></li>
             <li class="header__item"><a href="assortment.html">Ассортимент</a></li>
             <li class="header__item"><a href="recipes.html">Рецепты</a></li>
             <li class="header__item"><a href="articles.html">Жизнь на твой вкус</a></li>
             <li class="header__item"><a href="map.html">Где купить</a></li>
+        </ul>
+        <ul class="header__list header__list--last">
             <li class="header__item"><a href="contacts.html">Контакты</a></li>
             <li class="header__item"><a href="partners.html">Партнерам</a></li>
         </ul>
+        <a class="header__logo logo" href="index.html">
+            <img src="img/LOGO-small.svg" alt="Ваш Мясной">
+        </a>
         <a class="header__tel" href="tel:+380999999999">+38 099 999 99 99</a>
-
         <ul class="header__languages">
             <li class="header__language header__language--active"><a href="#">RU</a></li>
             <li class="header__language"><a href="#">UA</a></li>
         </ul>
-
-        <button class="header__cart-button">
+        <button class="header__cart-button cart-button">
             Корзина
             <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#cart"></use>
             </svg>
         </button>
+        <button class="header__open-menu"></button>
+    </nav>
+
+    <nav class="header__nav-mobile close">
+        <div class="header__socials socials">
+            <ul class="socials__list socials__list--white">
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon socials__icon--facebook" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#telegram"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </header>
 
@@ -104,7 +135,9 @@
 <footer class="footer">
     <div class="footer__wrapper">
         <div class="footer__socials socials">
-            <img class="footer__banner" src="img/content/banner.jpg" alt="баннер">
+            <a class="footer__banner" href="index.html">
+                <img src="img/LOGO-small.svg" alt="баннер">
+            </a>
             <ul class="socials__list">
                 <li class="socials__item">
                     <a href="#">
@@ -160,7 +193,8 @@
     </div>
 
     <div class="footer__copy">
-        © Производитель мясной продукции “Ваш Мясной” <a href="#">все права защищены и так далее</a>
+        © Производитель мясной продукции “Ваш Мясной” <a class="footer__copy-link" href="#">все права защищены и так далее</a>
+        <a class="footer__design" href="#">Designed by GoFriends</a>
     </div>
 </footer>
 
