@@ -5,6 +5,7 @@ function initMap() {
     // The map, centered at Uluru
     const map = new google.maps.Map(document.getElementById("map"), {
         zoom: 12,
+        fullscreenControl: false,
         center: uluru,
         styles: [
             {
@@ -325,6 +326,19 @@ $(document).ready(function () {
         nextArrow: $('.slider-right'),
     });
 
+    //слайдер ассортимента
+    $('.assortment__sliders').slick({
+        dots: false,
+        arrows: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        adaptiveHeight: true,
+        infinite: false,
+        prevArrow: $('.assortment__slider-left'),
+        nextArrow: $('.assortment__slider-right'),
+    });
+
+
     //маска телефона
     $(".phone_mask").mask("+380(99)999-99-99");
 
@@ -536,6 +550,8 @@ $(document).ready(function () {
                 $('.header__nav-mobile').prepend($('.header__tel'));
                 $('.header__nav-mobile').prepend($('.header__list--first'));
                 $('.header__nav-mobile').prepend($('.header__list--last'));
+
+                $('.product__about').prepend($('.product__title'));
             }
         }
         else {
@@ -543,6 +559,8 @@ $(document).ready(function () {
             $('.header__nav').prepend($('.header__tel'));
             $('.header__nav').prepend($('.header__list--last'));
             $('.header__nav').prepend($('.header__list--first'));
+
+            $('.page-main--product').prepend($('.product__title'));
         }
     }
 
