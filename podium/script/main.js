@@ -40,12 +40,17 @@ $(document).ready(function () {
 
 
     const settings = {
-        dots: true,
-        arrows: false,
+        dots: false,
+        arrows: true,
         mobileFirst: true,
         settings: 'slick',
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        infinite: false,
+        prevArrow: $('#slider-left-why-us'),
+        nextArrow: $('#slider-right-why-us'),
         responsive: [{
-            breakpoint: 480,
+            breakpoint: 767,
             settings: 'unslick'
         }]
     };
@@ -124,7 +129,7 @@ $(document).ready(function () {
         ]
     });
 
-    slick_mobile($('.why-us__list'), settings, 480);
+    slick_mobile($('.why-us__list'), settings, 767);
     slick_mobile($('.goods__list--slick-mob-hot'), settings_goods_hot, 767);
     slick_mobile($('.goods__list--slick-mob-new'), settings_goods_new, 767);
 
