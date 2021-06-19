@@ -321,10 +321,27 @@ $(document).ready(function () {
         }
     }
 
+    function moving_size_element() {
+        const mediaQuery = window.matchMedia('(max-width: 480px)');
+
+        if (mediaQuery.matches) {
+            $('.goods__link').each(function() {
+                $(this).find('.goods__sizes-show').insertAfter($(this).find('.goods__prices'));
+            });
+        }
+        else {
+            $('.goods__link').each(function() {
+                $(this).find('.goods__sizes-show').insertBefore($(this).find('.goods__prices'));
+            });
+        }
+    }
+
     // перемещение элементов в хедере
     moving_header_elements();
+    moving_size_element();
     window.addEventListener('resize', function (event) {
         moving_header_elements();
+        moving_size_element();
     }, true);
 
 
