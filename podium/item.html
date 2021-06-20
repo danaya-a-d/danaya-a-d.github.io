@@ -427,6 +427,73 @@
         </div>
     </section>
 
+    <section class="leave-comment">
+        <h3 class="visually-hidden">Оставить отзыв</h3>
+        <form class="form leave-comment__form" method="post">
+            <label class="form__label">
+               Ваще имя<input class="form__input" type="text" name="firstname" required>
+            </label>
+            <label class="form__label">
+                Ваш Email<input class="form__input" type="email" name="email" required
+                            pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" >
+            </label>
+
+            <label class="form__label leave-comment__label-text">
+                <textarea class="form__textarea" type="text" name="comment" required></textarea>
+            </label>
+
+            <button class="form__button button button--gray">Отправить сообщение</button>
+        </form>
+    </section>
+
+    <section class="comments">
+        <div class="title__wrapper">
+            <h3 class="title goods__title">Отзывы</h3>
+        </div>
+
+        <ul class="comments__list">
+            <li class="comments__item">
+                <div class="comments__wrapper">
+                    <div class="comments__block comments__block--client">
+                        <p class="comments__name">Андрей</p>
+                        <p class="comments__text">Добрый день) Байки какого народа использовали для утеплителя?</p>
+                    </div>
+
+                    <div class="comments__block comments__block--seller">
+                        <p class="comments__name">Кирил</p>
+                        <p class="comments__text">Добрый день) Нанайские шутки</p>
+                    </div>
+                </div>
+            </li>
+            <li class="comments__item">
+                <div class="comments__wrapper">
+                    <div class="comments__block comments__block--client">
+                        <p class="comments__name">Лена</p>
+                        <p class="comments__text">Добрый день) Спасибо, все понравилось, быстро, и красиво.</p>
+                    </div>
+
+                    <div class="comments__block comments__block--seller">
+                        <p class="comments__name">Кирил</p>
+                        <p class="comments__text">Добрый день) Спасибо за заказ!</p>
+                    </div>
+                </div>
+            </li>
+            <li class="comments__item">
+                <div class="comments__wrapper">
+                    <div class="comments__block comments__block--client">
+                        <p class="comments__name">Андрей</p>
+                        <p class="comments__text">Добрый день) Спасибо, все понравилось, быстро, и красиво.</p>
+                    </div>
+
+                    <div class="comments__block comments__block--seller">
+                        <p class="comments__name">Кирил</p>
+                        <p class="comments__text">Добрый день) Спасибо за заказ!</p>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+    </section>
 
     <section class="goods">
         <div class="title__wrapper">
