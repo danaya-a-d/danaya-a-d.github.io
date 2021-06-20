@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     $('.banner__close').click(function () {
-        $('.banner').hide();
+        $('.banner__container').hide();
     });
 
 
@@ -70,16 +70,8 @@ $(document).ready(function () {
 
         // if (window.matchMedia('(min-width: 1250px)').matches) {
         if (window.matchMedia('(min-width: 1700px)').matches) {
-
             menu_open();
             $('.overlay').hide();
-
-            // $(".header").hover(function () {
-            //     menu_open();
-            // }, function () {
-            //     menu_close();
-            //     $(".header").addClass('header--close'); //test
-            // });
         }
         // else {
         $('.header-mobile__toggle').on('click', function () {
@@ -156,13 +148,10 @@ $(document).ready(function () {
         }]
     };
 
-    const settings_unslick = {
-        settings: 'unslick'
-    };
-
     slick_mobile($('.content--scroll .content__list'), settings);
     slick_mobile($('.courses__list'), settings_toggles);
     slick_mobile($('.checklist--slick'), settings);
+
 
 /////// ОТКРЫТИЕ FAQ ///////
 
@@ -209,18 +198,35 @@ $(document).ready(function () {
 
 
 /////// ОТКРЫТИЕ ТАБОВ ///////
-    let tabs_item = document.querySelectorAll('.tabs__item');
-    let tabs_btn = document.querySelectorAll('.tabs__btn');
+    let tabs_item_program = document.querySelectorAll('.tabs__item--program');
+    let tabs_btn_program = document.querySelectorAll('.tabs__btn--program');
 
-    if (tabs_btn !== undefined) {
-        for (let i = 0; i < tabs_btn.length; i++) {
-            tabs_btn[i].addEventListener('click', function () {
-                for (let j = 0; j < tabs_item.length; j++) {
-                    tabs_item[j].classList.add('visually-hidden');
-                    tabs_btn[j].classList.remove('tabs__btn--active');
+    if (tabs_btn_program !== undefined) {
+        for (let i = 0; i < tabs_btn_program.length; i++) {
+            tabs_btn_program[i].addEventListener('click', function () {
+                for (let j = 0; j < tabs_item_program.length; j++) {
+                    tabs_item_program[j].classList.add('visually-hidden');
+                    tabs_btn_program[j].classList.remove('tabs__btn--active');
                 }
-                tabs_item[i].classList.remove('visually-hidden');
-                tabs_btn[i].classList.add('tabs__btn--active');
+                tabs_item_program[i].classList.remove('visually-hidden');
+                tabs_btn_program[i].classList.add('tabs__btn--active');
+            });
+        }
+    }
+
+
+    let tabs_item_class = document.querySelectorAll('.tabs__item--class');
+    let tabs_btn_class = document.querySelectorAll('.tabs__btn--class');
+
+    if (tabs_btn_class !== undefined) {
+        for (let i = 0; i < tabs_btn_class.length; i++) {
+            tabs_btn_class[i].addEventListener('click', function () {
+                for (let j = 0; j < tabs_item_class.length; j++) {
+                    tabs_item_class[j].classList.add('visually-hidden');
+                    tabs_btn_class[j].classList.remove('tabs__btn--active');
+                }
+                tabs_item_class[i].classList.remove('visually-hidden');
+                tabs_btn_class[i].classList.add('tabs__btn--active');
             });
         }
     }
@@ -274,9 +280,18 @@ $(document).ready(function () {
     $('.button-upp').click(function () {
         $('html, body').animate({scrollTop: 0}, 500);
         return false;
-    })
+    });
 
+
+
+    /////// ОТКРЫТИЕ ПОДМЕНЮ ///////
+    $('.header__offer-item').on('click', function () {
+        if ($(this).children('.header__offer-sublist').length > 0) {
+            $(this).children('.header__offer-sublist').toggle();
+        }
+    });
 });
+
 
 //маска телефона
 $(".phone_mask").mask("+380(99)999-99-99");

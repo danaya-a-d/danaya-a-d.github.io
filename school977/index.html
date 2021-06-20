@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Школа 977">
     <meta name="description" content="Школа 977">
-    <meta name="keywords" content="школа 977, дистанционная школа, онлайн-уроки, онлайн школа, дистанционное обучение, дистанционное образование, онлайн образование">
+    <meta name="keywords"
+          content="школа 977, дистанционная школа, онлайн-уроки, онлайн школа, дистанционное обучение, дистанционное образование, онлайн образование">
     <meta http-equiv="Reply-To" content="977info@gmail.com">
     <meta name="geo.placename" content="Днепр, город Днепр, Украина"/>
     <meta name="geo.region" content="UA-город Днепр">
@@ -340,12 +341,20 @@
                     </svg>
                     <span>Репетиторы</span>
                 </a></li>
-                <li class="header__offer-item"><a href="#">
-                    <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#packets"></use>
-                    </svg>
-                    <span>Пакеты и Абонементы</span>
-                </a></li>
+                <li class="header__offer-item">
+                    <a>
+                        <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#packets"></use>
+                        </svg>
+                        <span>Пакеты и Абонементы</span>
+                    </a>
+                    <ul class="header__offer-sublist">
+                        <li class="header__offer-subitem"><a href="#">Пакет “Ученик”</a></li>
+                        <li class="header__offer-subitem"><a href="#">Пакет “Ученик”</a></li>
+                        <li class="header__offer-subitem"><a href="#">Пакет “Ученик”</a></li>
+                        <li class="header__offer-subitem"><a href="#">Пакет “Ученик”</a></li>
+                    </ul>
+                </li>
                 <li class="header__offer-item"><a href="#">
                     <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
                         <use xlink:href="#extern"></use>
@@ -401,11 +410,22 @@
 
 <main class="page-main">
     <!-- Баннер -->
-    <div class="banner">
-        <button class="banner__close"></button>
-        <span class="banner__title">Стипендіальна програма</span>
-        <span class="banner__years">2021-2022</span>
+    <div class="banner__container">
+        <div class="banner">
+            <button class="banner__close"></button>
+            <span class="banner__title">Стипендіальна програма</span>
+            <span class="banner__years">2021-2022</span>
+        </div>
+
+        <ul class="banner__contacts">
+            <li class="banner__contact"><a href="tel:+380991500977">+380991500-977</a></li>
+            <li class="banner__contact"><a href="tel:+380671500977">+380671500-977</a></li>
+            <li class="banner__contact"><a href="tel:+380631500977">+380631500-977</a></li>
+            <li class="banner__contact banner__contact--email"><a href="mailto:977info@gmail.com">977info@gmail.com</a>
+            </li>
+        </ul>
     </div>
+
     <!-- Первый экран -->
     <section class="upper-block">
         <div class="upper-block__container">
@@ -433,10 +453,8 @@
                 </ul>
             </div>
         </div>
+        <a href="#" class="upper-block__right-btn"><span>Учиться бесплатно</span></a>
     </section>
-
-
-
 
     <!-- 6 разноразмерных блоков/ прокрутка -->
     <section class="content content--first content--scroll">
@@ -1394,19 +1412,19 @@
         <h3 class="visually-hidden">Усе, щоб вчитися з задоволенням</h3>
 
         <ul class="tabs__btn-list">
-            <li class="tabs__btn-item">
-                <button class="tabs__btn tabs__btn--active">Базова програма</button>
+            <li class="tabs__btn-item tabs__btn-item--program">
+                <button class="tabs__btn tabs__btn--program tabs__btn--active">Базова програма</button>
             </li>
-            <li class="tabs__btn-item">
-                <button class="tabs__btn">Базова програма</button>
+            <li class="tabs__btn-item tabs__btn-item--program">
+                <button class="tabs__btn tabs__btn--program">Базова програма</button>
             </li>
-            <li class="tabs__btn-item">
-                <button class="tabs__btn">Базова програма</button>
+            <li class="tabs__btn-item tabs__btn-item--program">
+                <button class="tabs__btn tabs__btn--program">Базова програма</button>
             </li>
         </ul>
 
         <ul class="tabs__list">
-            <li class="tabs__item">
+            <li class="tabs__item tabs__item--program">
                 <h4 class="title tabs__title">Усе, щоб вчитися</h4>
                 <img class="tabs__img tabs__img--right" src="img/racoon2.png" alt="">
                 <h6 class="tabs__subtitle">Даємо доступ до демо-уроку.</h6>
@@ -1425,7 +1443,7 @@
                     <button class="tabs__button button button--dark-violet">Button</button>
                 </div>
             </li>
-            <li class="tabs__item visually-hidden">
+            <li class="tabs__item tabs__item--program visually-hidden">
                 <h4 class="title tabs__title">Усе, щоб вчитися</h4>
                 <img class="tabs__img tabs__img--right" src="img/img.jpg" alt="">
                 <h6 class="tabs__subtitle">Даємо доступ до демо-уроку.</h6>
@@ -1444,7 +1462,7 @@
                     <button class="tabs__button button button--dark-violet">Button</button>
                 </div>
             </li>
-            <li class="tabs__item visually-hidden">
+            <li class="tabs__item tabs__item--program visually-hidden">
                 <h4 class="title tabs__title">Усе, щоб вчитися</h4>
                 <img class="tabs__img tabs__img--right" src="img/racoon2.png" alt="">
                 <h6 class="tabs__subtitle">Даємо доступ до демо-уроку.</h6>
@@ -1465,6 +1483,373 @@
             </li>
         </ul>
     </section>
+
+
+    <!-- вкладки с предметамит для разных классов -->
+
+    <section class="tabs">
+        <div class="tabs__title-block">
+            <h3 class="title title--rainbow content__title">Предметы</h3>
+        </div>
+
+        <ul class="tabs__btn-list">
+            <li class="tabs__btn-item">
+                <button class="tabs__btn tabs__btn--class tabs__btn--active">Дошкільнята</button>
+            </li>
+            <li class="tabs__btn-item">
+                <button class="tabs__btn tabs__btn--class">5-8 класи</button>
+            </li>
+            <li class="tabs__btn-item">
+                <button class="tabs__btn tabs__btn--class">9-11 класи</button>
+            </li>
+        </ul>
+
+        <ul class="tabs__list">
+            <li class="tabs__item tabs__item--class dragscroll">
+                <table class="class">
+                    <tbody>
+                    <tr class="class__numbers">
+                        <td><h4 class="class__number">0 клас</h4></td>
+                        <td><h4 class="class__number">1 клас</h4></td>
+                        <td><h4 class="class__number">2 клас</h4></td>
+                        <td><h4 class="class__number">3 клас</h4></td>
+                        <td><h4 class="class__number">4 клас</h4></td>
+                    </tr>
+                    <tr class="class__lessons">
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Логіка.</li>
+                                <li class="class__item">Читання.</li>
+                                <li class="class__item">Рахування.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Навчання грамоті (читання).</li>
+                                <li class="class__item">Навчання грамоті (мова).</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Математика.</li>
+                                <li class="class__item">Я досліджую світ.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Читання.</li>
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Математика.</li>
+                                <li class="class__item">Я досліджую світ.</li>
+                                <li class="class__item">Інформатика.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Читання.</li>
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Математика.</li>
+                                <li class="class__item">Я в світі.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Природа.</li>
+                                <li class="class__item">Основи здоров'я.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Читання.</li>
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Математика.</li>
+                                <li class="class__item">Я в світі.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Природа.</li>
+                                <li class="class__item">Основи здоров'я.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr class="class__courses">
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Ліплення.</li>
+                                <li class="class__item">Творча робота.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Мистецтво.</li>
+                                <li class="class__item">Дизайн і технології.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Образотворче мистецтво.</li>
+                                <li class="class__item">Музика.</li>
+                                <li class="class__item">Трудове навчання.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Образотворче мистецтво.</li>
+                                <li class="class__item">Музика.</li>
+                                <li class="class__item">Трудовое обучение.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Образотворче мистецтво.</li>
+                                <li class="class__item">Музика.</li>
+                                <li class="class__item">Трудовое обучение.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+
+            <li class="tabs__item tabs__item--class visually-hidden dragscroll">
+                <table class="class">
+                    <tbody>
+                    <tr class="class__numbers">
+                        <td><h4 class="class__number">5 клас</h4></td>
+                        <td><h4 class="class__number">6 клас</h4></td>
+                        <td><h4 class="class__number">7 клас</h4></td>
+                        <td><h4 class="class__number">8 клас</h4></td>
+                    </tr>
+                    <tr class="class__lessons">
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Математика.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Українська література.</li>
+                                <li class="class__item">Зарубіжна література.</li>
+                                <li class="class__item">Природознавство.</li>
+                                <li class="class__item">Історія України.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Математика.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Українська література.</li>
+                                <li class="class__item">Зарубіжна література.</li>
+                                <li class="class__item">Історія України.</li>
+                                <li class="class__item">Біологія.</li>
+                                <li class="class__item">Географія.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Геометрія.</li>
+                                <li class="class__item">Алгебра.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Українська література.</li>
+                                <li class="class__item">Зарубіжна література.</li>
+                                <li class="class__item">Всесвітня історія.</li>
+                                <li class="class__item">Біологія.</li>
+                                <li class="class__item">Географія.</li>
+                                <li class="class__item">Хімія.</li>
+                                <li class="class__item">Фізика.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Геометрія.</li>
+                                <li class="class__item">Алгебра.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Українська література.</li>
+                                <li class="class__item">Зарубіжна література.</li>
+                                <li class="class__item">Всесвітня історія.</li>
+                                <li class="class__item">Біологія.</li>
+                                <li class="class__item">Географія.</li>
+                                <li class="class__item">Хімія.</li>
+                                <li class="class__item">Фізика.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr class="class__courses">
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Образотворче мистецтво.</li>
+                                <li class="class__item">Трудове навчання.</li>
+                                <li class="class__item">Основи здоров'я.</li>
+                                <li class="class__item">Музика.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Образотворче мистецтво.</li>
+                                <li class="class__item">Трудове навчання.</li>
+                                <li class="class__item">Основи здоров'я.</li>
+                                <li class="class__item">Музика.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Образотворче мистецтво.</li>
+                                <li class="class__item">Трудове навчання.</li>
+                                <li class="class__item">Основи здоров'я.</li>
+                                <li class="class__item">Музика.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Трудове навчання.</li>
+                                <li class="class__item">Основи здоров'я.</li>
+                                <li class="class__item">Мистецтво.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+
+            <li class="tabs__item tabs__item--class visually-hidden dragscroll">
+                <table class="class">
+                    <tbody>
+                    <tr class="class__numbers">
+                        <td><h4 class="class__number">9 клас</h4></td>
+                        <td><h4 class="class__number">10 клас</h4></td>
+                        <td><h4 class="class__number">11 клас</h4></td>
+                    </tr>
+                    <tr class="class__lessons">
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Геометрія.</li>
+                                <li class="class__item">Алгебра.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Українська література.</li>
+                                <li class="class__item">Зарубіжна література.</li>
+                                <li class="class__item">Всесвітня історія.</li>
+                                <li class="class__item">Біологія.</li>
+                                <li class="class__item">Географія.</li>
+                                <li class="class__item">Хімія.</li>
+                                <li class="class__item">Фізика.</li>
+                                <li class="class__item">Основи правознавства.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Геометрія.</li>
+                                <li class="class__item">Алгебра.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Українська література.</li>
+                                <li class="class__item">Зарубіжна література.</li>
+                                <li class="class__item">Всесвітня історія.</li>
+                                <li class="class__item">Біологія.</li>
+                                <li class="class__item">Географія.</li>
+                                <li class="class__item">Хімія.</li>
+                                <li class="class__item">Фізика.</li>
+                                <li class="class__item">Громадянська освіта.</li>
+                            </ol>
+                        </td>
+
+                        <td>
+                            <h5 class="class__list-title">Онлайн-уроки</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Українська мова.</li>
+                                <li class="class__item">Англійська мова.</li>
+                                <li class="class__item">Геометрія.</li>
+                                <li class="class__item">Алгебра.</li>
+                                <li class="class__item">Інформатика.</li>
+                                <li class="class__item">Українська література.</li>
+                                <li class="class__item">Зарубіжна література.</li>
+                                <li class="class__item">Всесвітня історія.</li>
+                                <li class="class__item">Біологія.</li>
+                                <li class="class__item">Географія.</li>
+                                <li class="class__item">Хімія.</li>
+                                <li class="class__item">Фізика.</li>
+                                <li class="class__item">Астрономія.</li>
+                            </ol>
+                        </td>
+                    </tr>
+
+                    <tr class="class__courses">
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Трудове навчання.</li>
+                                <li class="class__item">Основи здоров'я.</li>
+                                <li class="class__item">Мистецтво.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Технології.</li>
+                                <li class="class__item">Захист Вітчизни.</li>
+                                <li class="class__item">Екологія.</li>
+                                <li class="class__item">Мистецтво.</li>
+                            </ol>
+                        </td>
+                        <td>
+                            <h5 class="class__list-title">Проєктні курси</h5>
+                            <ol class="class__list">
+                                <li class="class__item">Фізкультура.</li>
+                                <li class="class__item">Технології.</li>
+                                <li class="class__item">Захист Вітчизни.</li>
+                                <li class="class__item">Екологія.</li>
+                                <li class="class__item">Мистецтво.</li>
+                            </ol>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </li>
+        </ul>
+    </section>
+
     <!-- каталог -->
     <section class="variants">
         <h3 class="variants__title title">Усе, щоб вчитися з задоволенням</h3>
