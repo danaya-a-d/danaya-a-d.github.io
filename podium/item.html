@@ -359,7 +359,7 @@
             </ul>
 
             <div class="product__buy">
-                <div>
+                <div class="product__buy-info">
                     <p class="product__price">3350 грн</p>
                     <p class="product__code">Код товара: 3536</p>
                 </div>
@@ -430,19 +430,25 @@
     <section class="leave-comment">
         <h3 class="visually-hidden">Оставить отзыв</h3>
         <form class="form leave-comment__form" method="post">
-            <label class="form__label">
-               Ваще имя<input class="form__input" type="text" name="firstname" required>
-            </label>
-            <label class="form__label">
-                Ваш Email<input class="form__input" type="email" name="email" required
-                            pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" >
-            </label>
 
-            <label class="form__label leave-comment__label-text">
-                <textarea class="form__textarea" type="text" name="comment" required></textarea>
-            </label>
+                <div>
+                    <label class="form__label">
+                        Ваше имя<input class="form__input" type="text" name="firstname" required>
+                    </label>
+                    <label class="form__label">
+                        Ваш Email<input class="form__input" type="email" name="email" required
+                                        pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$" >
+                    </label>
+                </div>
 
-            <button class="form__button button button--gray">Отправить сообщение</button>
+
+                <div>
+                    <label class="form__label leave-comment__label-text">
+                        <textarea class="form__textarea" type="text" name="comment" required></textarea>
+                    </label>
+                </div>
+
+            <button class="form__button button button--gray">Оставить отзыв</button>
         </form>
     </section>
 
@@ -698,6 +704,7 @@
             <li class="footer__item"><a href="delivery-and-payment.html">Оплата и доставка</a></li>
             <li class="footer__item"><a href="faq.html">Вопросы и ответы</a></li>
             <li class="footer__item"><a href="sizes.html">Размерная сетка</a></li>
+            <li class="footer__item"><a href="reviews.html">Отзывы</a></li>
             <li class="footer__item"><a href="how-place-order.html">Как оформить заказ?</a></li>
             <li class="footer__item"><a href="privacy-policy.html">Политика конфиденциальности</a></li>
         </ul>
