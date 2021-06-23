@@ -102,26 +102,29 @@
     <form class="order__block" action="https://echo.htmlacademy.ru" method="post">
         <div class="order__left-block">
             <h1 class="order__title title">Оформление заказа</h1>
-            <p class="order__about">Ваши контактные данные</p>
 
-            <div class="order__inputs">
-                <label>
-                    <input class="main-form__input order__input" id="lastname" name="lastname"
-                           placeholder="Фамилия" type="text" required>
-                </label>
-                <label>
-                    <input class="main-form__input order__input" id="name" name="name"
-                           placeholder="Имя" type="text" required>
-                </label>
-                <label>
-                    <input class="main-form__input order__input phone_mask" id="phone" name="phone"
-                           placeholder="Мобильный телефон" type="tel" required>
-                </label>
-                <label>
-                    <input class="main-form__input order__input" id="city" name="city"
-                           placeholder="Город" value="Киев" type="text" required>
-                </label>
+            <div class="order__about-contacts">
+                <p class="order__about">Ваши контактные данные</p>
+                <div class="order__inputs">
+                    <label>
+                        <input class="main-form__input order__input" id="lastname" name="lastname"
+                               placeholder="Фамилия" type="text" required>
+                    </label>
+                    <label>
+                        <input class="main-form__input order__input" id="name" name="name"
+                               placeholder="Имя" type="text" required>
+                    </label>
+                    <label>
+                        <input class="main-form__input order__input phone_mask" id="phone" name="phone"
+                               placeholder="Мобильный телефон" type="tel" required>
+                    </label>
+                    <label>
+                        <input class="main-form__input order__input" id="city" name="city"
+                               placeholder="Город" value="Киев" type="text" required>
+                    </label>
+                </div>
             </div>
+
 
             <h3 class="order__title title">Заказ №70543321 <span>на сумму 630 ₴</span></h3>
             <p class="order__about">
@@ -137,7 +140,7 @@
                         <span class="order__number">315 ₴</span>
                     </td>
                     <td class="order__count">
-                        <span class="order__type">Колличество</span>
+                        <span class="order__type">Количество</span>
                         <span class="order__number">1</span>
                     </td>
                     <td class="order__count">
@@ -153,7 +156,7 @@
                         <span class="order__number">315 ₴</span>
                     </td>
                     <td class="order__count">
-                        <span class="order__type">Колличество</span>
+                        <span class="order__type">Количество</span>
                         <span class="order__number">1</span>
                     </td>
                     <td class="order__count">
@@ -163,7 +166,7 @@
                 </tr>
             </table>
 
-            <p class="order__about">Доставка в <a class="order__place">Киев</a></p>
+            <p class="order__about order__about--check">Доставка в <a class="order__place">Киев</a></p>
 
             <div class="order__radio-buttons">
                 <label class="main-form__radio">
@@ -222,32 +225,33 @@
 
             </div>
 
-            <p class="order__about">Оплата</p>
+            <div class="order__payment">
+                <p class="order__about order__about--check">Оплата</p>
+                <div class="order__radio-buttons">
+                    <label class="main-form__radio">
+                        <span class="label-title">Картой онлайн</span>
+                        <input class="visually-hidden" id="cart" name="pay-type" type="radio" value="cart">
+                        <span class="radio-indicator"></span>
+                    </label>
 
-            <div class="order__radio-buttons">
-                <label class="main-form__radio">
-                    <span class="label-title">Картой онлайн</span>
-                    <input class="visually-hidden" id="cart" name="pay-type" type="radio" value="cart">
-                    <span class="radio-indicator"></span>
-                </label>
+                    <label class="main-form__radio">
+                        <span class="label-title">При получении товара</span>
+                        <input class="visually-hidden" id="receiving" name="pay-type" type="radio" value="receiving">
+                        <span class="radio-indicator"></span>
+                    </label>
 
-                <label class="main-form__radio">
-                    <span class="label-title">При получении товара</span>
-                    <input class="visually-hidden" id="receiving" name="pay-type" type="radio" value="receiving">
-                    <span class="radio-indicator"></span>
-                </label>
+                    <label class="main-form__radio">
+                        <span class="label-title">Кредит или оплата частями</span>
+                        <input class="visually-hidden" id="credit" name="pay-type" type="radio" value="credit">
+                        <span class="radio-indicator"></span>
+                    </label>
 
-                <label class="main-form__radio">
-                    <span class="label-title">Кредит или оплата частями</span>
-                    <input class="visually-hidden" id="credit" name="pay-type" type="radio" value="credit">
-                    <span class="radio-indicator"></span>
-                </label>
-
-                <label class="main-form__radio">
-                    <span class="label-title">Google Pay</span>
-                    <input class="visually-hidden" id="google-pay" name="pay-type" type="radio" value="google-pay">
-                    <span class="radio-indicator"></span>
-                </label>
+                    <label class="main-form__radio">
+                        <span class="label-title">Google Pay</span>
+                        <input class="visually-hidden" id="google-pay" name="pay-type" type="radio" value="google-pay">
+                        <span class="radio-indicator"></span>
+                    </label>
+                </div>
             </div>
         </div>
 
@@ -339,7 +343,8 @@
     </div>
 
     <div class="footer__copy">
-        © Производитель мясной продукции “Ваш Мясной” <a class="footer__copy-link" href="#">все права защищены и так далее</a>
+        © Производитель мясной продукции “Ваш Мясной” <a class="footer__copy-link" href="#">все права защищены и так
+        далее</a>
         <a class="footer__design" href="#">Designed by GoFriends</a>
     </div>
 </footer>
