@@ -100,7 +100,9 @@
 </header>
 
 <img class="recipe__img" src="img/content/recipe.jpg" alt="Рецепт">
-<main class="page-main">
+
+<div class="back-container back-container__inner1">
+    <main class="page-main">
 
     <article class="recipe__article">
         <h1 class="recipe__title">Хот-дог по&#8209;ганноверски</h1>
@@ -226,6 +228,7 @@
         </ul>
     </section>
 </main>
+</div>
 
 <footer class="footer">
     <div class="footer__wrapper">
@@ -292,6 +295,58 @@
         <a class="footer__design" href="#">Designed by GoFriends</a>
     </div>
 </footer>
+
+<div class="modal__back hide">
+    <div class="modal modal--cart hide">
+        <button class="modal__btn-close modal-close"></button>
+        <section class="modal__cart cart" id="basket">
+            <h3 class="cart__title">Корзина</h3>
+            <div class="cart__list js-cart-list">
+                <div class="cart__item">
+                    <img class="cart__item-photo" src="img/content/item.jpg" alt="Колбаса">
+                    <p class="cart__item-name">Сосиски из свинины и куриного филе со сметаной и зеленью</p>
+                    <p class="cart__item-price">415 ₴</p>
+
+                    <input type="hidden" name="товар" value="">
+                    <input type="hidden" name="количество" value="">
+                    <input type="hidden" name="цена" value="">
+
+                    <span class="cart__counter counter">
+                    <button class="counter__button minus">-</button><label class="counter__label">
+                        <input class="counter__input" type="text" value="1" data-price="415"
+                               onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                    </label><button class="counter__button plus">+</button>
+                </span>
+                </div>
+                <div class="cart__item">
+                    <img class="cart__item-photo" src="img/content/item.jpg" alt="Колбаса">
+                    <p class="cart__item-name">Сосиски из свинины и куриного филе со сметаной и зеленью</p>
+                    <p class="cart__item-price">315 ₴</p>
+
+                    <input type="hidden" name="товар" value="">
+                    <input type="hidden" name="количество" value="">
+                    <input type="hidden" name="цена" value="">
+
+                    <span class="cart__counter counter">
+                    <button class="counter__button minus">-</button><label class="counter__label">
+                        <input class="counter__input" type="text" value="1" data-price="315"
+                               onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                    </label><button class="counter__button plus">+</button>
+                </span>
+                </div>
+            </div>
+
+            <div class="cart__bottom">
+                <div class="cart__checkout">
+                    <p class="cart__total-price">315 ₴</p>
+                    <a class="cart__button button" href="ordering.html">Оформить заказ</a>
+                </div>
+                <button class="cart__close modal-close">Продолжить покупки</button>
+            </div>
+        </section>
+    </div>
+    <div class="modal__overlay hide"></div>
+</div>
 
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
