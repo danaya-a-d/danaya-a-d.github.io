@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 
     $('.banner__close').click(function () {
-        $('.banner__container').hide();
+        $('.banner').hide();
     });
 
 
