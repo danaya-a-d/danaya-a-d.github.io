@@ -12,6 +12,8 @@ $(document).ready(function () {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
+    $(".phone_mask").mask("+7(999)999-99-99");
+
     $('.products__list--scroll').slick({
         dots: true,
         dotsClass: "my-dots",
@@ -24,6 +26,7 @@ $(document).ready(function () {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 2
                 }
             }
         ]
