@@ -12,6 +12,22 @@ $(document).ready(function () {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
+    function menu_open() {
+        $(".menu").removeClass('menu--close');
+    }
+
+    function menu_close() {
+        $(".menu").addClass('menu--close');
+    }
+
+    $('.header__open-btn').on('click', function () {
+        if ($(".menu").hasClass('menu--close')) {
+            menu_open();
+        } else {
+            menu_close();
+        }
+    });
+
     $(".phone_mask").mask("+7(999)999-99-99");
 
     $('.products__list--scroll').slick({
