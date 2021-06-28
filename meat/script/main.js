@@ -584,7 +584,7 @@ $(document).ready(function () {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
-    // Открытие и закрытие мобильлного меню
+    // Открытие и закрытие мобильного меню
     function menu_open() {
         $('.header__nav-mobile').removeClass('close');
         $('.header__open-menu').addClass('open');
@@ -606,4 +606,17 @@ $(document).ready(function () {
             menu_close();
         }
     });
+
+
+    // Прозрачность шапки при скролле
+    $(window).on("scroll", function () {
+        let scrolled = $(this).scrollTop();
+        if( scrolled > 95 ) {
+            $('.header').addClass('scrolled');
+        }
+        if( scrolled <= 95 ) {
+            $('.header').removeClass('scrolled');
+        }
+    });
+
 });
