@@ -311,8 +311,10 @@ $(document).ready(function () {
         arrows: false,
         fade: true,
         speed: 1000,
-        // autoplay: true,
-        // autoplaySpeed: 3000
+        autoplay: true,
+        autoplaySpeed: 3000,
+        pauseOnFocus: false,
+        pauseOnHover: false
     });
 
     //Слайдер видео
