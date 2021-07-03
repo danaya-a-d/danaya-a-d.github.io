@@ -100,115 +100,126 @@
 
 <div class="back-container back-container__inner4">
     <main class="page-main page-main--product">
-        <h1 class="product__title title">Сосиски из свинины и куриного филе со сметаной и зеленью</h1>
-        <div class="product__main">
-            <img class="product__photo" src="img/content/item.jpg" alt="Товар">
-            <div class="product__about">
-                <div class="product__baying">
-                    <span class="product__price">315 ₴ / кг</span>
+        <section class="product">
 
-                    <span class="product__counter counter">
+            <div class="breadcrumbs">
+                <ul class="breadcrumbs__list">
+                    <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="products.html">Продукты</a></li>
+                    <li class="breadcrumbs__item">Сосиски из свинины</li>
+                </ul>
+            </div>
+
+            <h1 class="product__title title">Сосиски из свинины и куриного филе со сметаной и зеленью</h1>
+            <div class="product__main">
+                <img class="product__photo" src="img/content/item.jpg" alt="Товар">
+                <div class="product__about">
+                    <div class="product__baying">
+                        <span class="product__price">315 ₴ / кг</span>
+
+                        <span class="product__counter counter">
                     <button class="counter__button minus">-</button><label class="counter__label">
                         <input class="counter__input" type="text" value="1"
                                onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
                     </label><button class="counter__button plus">+</button>
                 </span>
 
-                    <button class="product__button button" type="button">Добавить в корзину</button>
+                        <button class="product__button button" type="button">Добавить в корзину</button>
+                    </div>
+                    <ul class="product__list">
+                        <li class="product__item"><img src="img/delivery.svg" alt="Доставка"></li>
+                        <li class="product__item"><img src="img/oche.svg" alt=""></li>
+                        <li class="product__item"><img src="img/credit.svg" alt="Кредит"></li>
+                        <li class="product__item"><img src="img/cat.svg" alt=""></li>
+                    </ul>
+                    <p class="product__description">Любители чипсов, мы вас услышали! Знакомьтесь с деликатесом линейки
+                        «Гранд
+                        Шеф» – сосисками со вкусом сметаны и зелени. Уверяем, такого вы ещё не пробовали! Свинина и курица в
+                        компании натуральной сметаны и свежей зелени звучат совсем по-новому. Предлагаем вам оценить это
+                        сочетание! Для этого достаточно разогреть сосиски: залейте в упаковку горячую воду и подождите или
+                        залейте в упаковку холодную воду и отправьте в микроволновку. Пара минут – готово. Приятного
+                        аппетита!</p>
+
+                    <section class="product__diet">
+                        <h5>Сосиски и сардельки</h5>
+                        <p>свинина, вода, филе куриной грудки, говядина, масло растительное, животный белок, сметана, соль,
+                            молочный белок, укроп.
+                        </p>
+                        <h5>ПИЩЕВАЯ ЦЕННОСТЬ</h5>
+                        <p>На 100г продукта %от нормы (м/ж)*</p>
+                        <p>Белки — не менее 11 г</p>
+                        <p>Жиры — не более 23 г</p>
+                        <p>250 Ккал/1040 кДж</p>
+                        <p>*Основано на диете в 2000 калорий/день</p>
+                    </section>
                 </div>
-                <ul class="product__list">
-                    <li class="product__item"><img src="img/delivery.svg" alt="Доставка"></li>
-                    <li class="product__item"><img src="img/oche.svg" alt=""></li>
-                    <li class="product__item"><img src="img/credit.svg" alt="Кредит"></li>
-                    <li class="product__item"><img src="img/cat.svg" alt=""></li>
-                </ul>
-                <p class="product__description">Любители чипсов, мы вас услышали! Знакомьтесь с деликатесом линейки
-                    «Гранд
-                    Шеф» – сосисками со вкусом сметаны и зелени. Уверяем, такого вы ещё не пробовали! Свинина и курица в
-                    компании натуральной сметаны и свежей зелени звучат совсем по-новому. Предлагаем вам оценить это
-                    сочетание! Для этого достаточно разогреть сосиски: залейте в упаковку горячую воду и подождите или
-                    залейте в упаковку холодную воду и отправьте в микроволновку. Пара минут – готово. Приятного
-                    аппетита!</p>
-
-                <section class="product__diet">
-                    <h5>Сосиски и сардельки</h5>
-                    <p>свинина, вода, филе куриной грудки, говядина, масло растительное, животный белок, сметана, соль,
-                        молочный белок, укроп.
-                    </p>
-                    <h5>ПИЩЕВАЯ ЦЕННОСТЬ</h5>
-                    <p>На 100г продукта %от нормы (м/ж)*</p>
-                    <p>Белки — не менее 11 г</p>
-                    <p>Жиры — не более 23 г</p>
-                    <p>250 Ккал/1040 кДж</p>
-                    <p>*Основано на диете в 2000 калорий/день</p>
-                </section>
             </div>
-        </div>
 
-        <div class="product__video-block">
-            <h3 class="title">Рецепты</h3>
+            <div class="product__video-block">
+                <h3 class="title">Рецепты</h3>
 
-            <ul class="product__video-list">
-                <li class="product__video-item">
-                    <video class="product__video video" muted="muted" controls loop>
-                        <source src="img/video1.mp4" type="video/mp4">
-                    </video>
-                </li>
-                <li class="product__video-item">
-                    <video class="product__video video" muted="muted" controls loop>
-                        <source src="img/video1.mp4" type="video/mp4">
-                    </video>
-                </li>
-                <li class="product__video-item">
-                    <video class="product__video video" muted="muted" controls loop>
-                        <source src="img/video1.mp4" type="video/mp4">
-                    </video>
-                </li>
-            </ul>
-            <button class="slider-left"></button>
-            <button class="slider-right"></button>
-        </div>
+                <ul class="product__video-list">
+                    <li class="product__video-item">
+                        <video class="product__video video" muted="muted" controls loop>
+                            <source src="img/video1.mp4" type="video/mp4">
+                        </video>
+                    </li>
+                    <li class="product__video-item">
+                        <video class="product__video video" muted="muted" controls loop>
+                            <source src="img/video1.mp4" type="video/mp4">
+                        </video>
+                    </li>
+                    <li class="product__video-item">
+                        <video class="product__video video" muted="muted" controls loop>
+                            <source src="img/video1.mp4" type="video/mp4">
+                        </video>
+                    </li>
+                </ul>
+                <button class="slider-left"></button>
+                <button class="slider-right"></button>
+            </div>
 
-        <section class="assortment assortment--similar">
-            <h3 class="assortment__title title">Похожие продукты</h3>
-            <ul class="assortment__list">
-                <li class="assortment__item">
-                    <div class="assortment__img-container">
-                        <img src="img/content/item.jpg" alt="Колбаса">
-                    </div>
-                    <h5>Сосиски и сардельки</h5>
-                    <p>315 ₴ / кг</p>
-                    <a class="button assortment__link" href="product.html">Подробнее</a>
-                    <button class="assortment__button"></button>
-                </li>
-                <li class="assortment__item">
-                    <div class="assortment__img-container">
-                        <img src="img/content/item.jpg" alt="Колбаса">
-                    </div>
-                    <h5>Сосиски и сардельки</h5>
-                    <p>315 ₴ / кг</p>
-                    <a class="button assortment__link" href="product.html">Подробнее</a>
-                    <button class="assortment__button"></button>
-                </li>
-                <li class="assortment__item">
-                    <div class="assortment__img-container">
-                        <img src="img/content/item.jpg" alt="Колбаса">
-                    </div>
-                    <h5>Сосиски и сардельки</h5>
-                    <p>315 ₴ / кг</p>
-                    <a class="button assortment__link" href="product.html">Подробнее</a>
-                    <button class="assortment__button"></button>
-                </li>
-                <li class="assortment__item">
-                    <div class="assortment__img-container">
-                        <img src="img/content/item.jpg" alt="Колбаса">
-                    </div>
-                    <h5>Сосиски и сардельки</h5>
-                    <p>315 ₴ / кг</p>
-                    <a class="button assortment__link" href="product.html">Подробнее</a>
-                    <button class="assortment__button"></button>
-                </li>
-            </ul>
+            <section class="assortment assortment--similar">
+                <h3 class="assortment__title title">Похожие продукты</h3>
+                <ul class="assortment__list">
+                    <li class="assortment__item">
+                        <div class="assortment__img-container">
+                            <img src="img/content/item.jpg" alt="Колбаса">
+                        </div>
+                        <h5>Сосиски и сардельки</h5>
+                        <p>315 ₴ / кг</p>
+                        <a class="button assortment__link" href="product.html">Подробнее</a>
+                        <button class="assortment__button"></button>
+                    </li>
+                    <li class="assortment__item">
+                        <div class="assortment__img-container">
+                            <img src="img/content/item.jpg" alt="Колбаса">
+                        </div>
+                        <h5>Сосиски и сардельки</h5>
+                        <p>315 ₴ / кг</p>
+                        <a class="button assortment__link" href="product.html">Подробнее</a>
+                        <button class="assortment__button"></button>
+                    </li>
+                    <li class="assortment__item">
+                        <div class="assortment__img-container">
+                            <img src="img/content/item.jpg" alt="Колбаса">
+                        </div>
+                        <h5>Сосиски и сардельки</h5>
+                        <p>315 ₴ / кг</p>
+                        <a class="button assortment__link" href="product.html">Подробнее</a>
+                        <button class="assortment__button"></button>
+                    </li>
+                    <li class="assortment__item">
+                        <div class="assortment__img-container">
+                            <img src="img/content/item.jpg" alt="Колбаса">
+                        </div>
+                        <h5>Сосиски и сардельки</h5>
+                        <p>315 ₴ / кг</p>
+                        <a class="button assortment__link" href="product.html">Подробнее</a>
+                        <button class="assortment__button"></button>
+                    </li>
+                </ul>
+            </section>
         </section>
     </main>
 </div>
