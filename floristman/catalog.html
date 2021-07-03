@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+
+    <title>Каталог</title>
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
@@ -137,219 +138,172 @@
     </div>
 </nav>
 
-<section class="upper-block">
+<section class="upper-block upper-block--inner upper-block--catalog">
     <div class="upper-block__flower"></div>
     <div class="upper-block__wrapper">
-        <p class="upper-block__subtitle">Подарите ощущение праздника</p>
-        <h1 class="upper-block__title title title--big">Собираем букеты, созданные для Вас</h1>
-        <button class="upper-block__button button">Выбрать букет</button>
+        <h1 class="upper-block__title title title--big">Каталог</h1>
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumbs__item"><a href="catalog.html">Каталог</a></li>
+                <li class="breadcrumbs__item">Букеты</li>
+            </ul>
+        </div>
     </div>
 </section>
-
 <main class="page-main">
-    <section class="products">
-        <h3 class="title title--medium products__title">Скидки</h3>
-        <ul class="products__list products__list--scroll">
-            <li class="products__item">
-                <a href="#" class="products__link">
-                    <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
+    <div class="products-container">
+        <form class="filter">
+            <div class="filter__checkboxes">
+                <h3 class="filter__title">Категории</h3>
+                <ul class="filter__list">
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="category" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Категория (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="category" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Категория (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="category" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Категория (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="category" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Категория (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="category" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Категория (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="category" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Категория (0)</span>
+                        </label>
+                    </li>
+                </ul>
 
-                    <ul class="products__hot-list">
-                        <li class="products__hot products__hot--hit">Хит продаж</li>
-                        <li class="products__hot products__hot--new">Новинка</li>
-                        <li class="products__hot products__hot--day">Букет дня</li>
-                        <li class="products__hot products__hot--sale">Скидка 50%</li>
-                    </ul>
+                <h3 class="filter__title">Повод</h3>
+                <ul class="filter__list">
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="motive" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Повод (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="motive" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Повод (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="motive" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Повод (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="motive" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Повод (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="motive" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Повод (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="motive" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Повод (0)</span>
+                        </label>
+                    </li>
+                </ul>
 
-                    <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                </a>
-                <div class="products__buy">
-                    <p class="products__prices">
-                        <span class="products__price-current">3 700 грн</span>
-                    </p>
-                    <button class="products__button button">Заказать</button>
+                <h3 class="filter__title">Кому</h3>
+                <ul class="filter__list">
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="whom" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Кому (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="whom" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Кому (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="whom" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Кому (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="whom" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Кому (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="whom" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Кому (0)</span>
+                        </label>
+                    </li>
+                    <li class="filter__item">
+                        <label>
+                            <input class="visually-hidden" name="whom" type="checkbox" value="value">
+                            <span class="filter__indicator"></span>
+                            <span class="filter__indicator-title">Кому (0)</span>
+                        </label>
+                    </li>
+                </ul>
+            </div>
+            <div class="filter__range">
+                <h3 class="filter__range-title">Фильтр</h3>
+
+                <div class="filter__result">
+                    <button class="filter__button button">Фильтровать</button>
+                    <p class="filter__result-prices">Цена: 000 грн-0000 грн</p>
                 </div>
-            </li>
-            <li class="products__item">
-                <a href="#" class="products__link">
-                    <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                    <ul class="products__hot-list">
-                        <li class="products__hot products__hot--hit">Хит продаж</li>
-                        <li class="products__hot products__hot--new">Новинка</li>
-                        <li class="products__hot products__hot--day">Букет дня</li>
-                        <li class="products__hot products__hot--sale">Скидка 50%</li>
-                    </ul>
-
-                    <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                </a>
-                <div class="products__buy">
-                    <p class="products__prices">
-                        <span class="products__price-old">5 400 грн</span>
-                        <span class="products__price-current">3 700 грн</span>
-                    </p>
-                    <button class="products__button button">Заказать</button>
-                </div>
-            </li>
-            <li class="products__item">
-                <a href="#" class="products__link">
-                    <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                    <ul class="products__hot-list">
-                        <li class="products__hot products__hot--hit">Хит продаж</li>
-                        <li class="products__hot products__hot--new">Новинка</li>
-                        <li class="products__hot products__hot--day">Букет дня</li>
-                        <li class="products__hot products__hot--sale">Скидка 50%</li>
-                    </ul>
-
-                    <h5 class="products__name">№225 “Ромашки для Наташки”</h5>
-                </a>
-                <div class="products__buy">
-                    <p class="products__prices">
-                        <span class="products__price-old">5 400 грн</span>
-                        <span class="products__price-current">3 700 грн</span>
-                    </p>
-                    <button class="products__button button">Заказать</button>
-                </div>
-            </li>
-            <li class="products__item">
-                <a href="#" class="products__link">
-                    <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                    <ul class="products__hot-list">
-                        <li class="products__hot products__hot--hit">Хит продаж</li>
-                        <li class="products__hot products__hot--new">Новинка</li>
-                        <li class="products__hot products__hot--day">Букет дня</li>
-                        <li class="products__hot products__hot--sale">Скидка 50%</li>
-                    </ul>
-
-                    <h5 class="products__name">№225 “Ромашки для Наташки”</h5>
-                </a>
-                <div class="products__buy">
-                    <p class="products__prices">
-                        <span class="products__price-old">5 400 грн</span>
-                        <span class="products__price-current">3 700 грн</span>
-                    </p>
-                    <button class="products__button button">Заказать</button>
-                </div>
-            </li>
-            <li class="products__item">
-                <a href="#" class="products__link">
-                    <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                    <ul class="products__hot-list">
-                        <li class="products__hot products__hot--hit">Хит продаж</li>
-                        <li class="products__hot products__hot--new">Новинка</li>
-                        <li class="products__hot products__hot--day">Букет дня</li>
-                        <li class="products__hot products__hot--sale">Скидка 50%</li>
-                    </ul>
-
-                    <h5 class="products__name">№225 “Ромашки для Наташки”</h5>
-                </a>
-                <div class="products__buy">
-                    <p class="products__prices">
-                        <span class="products__price-old">5 400 грн</span>
-                        <span class="products__price-current">3 700 грн</span>
-                    </p>
-                    <button class="products__button button">Заказать</button>
-                </div>
-            </li>
-            <li class="products__item">
-                <a href="#" class="products__link">
-                    <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                    <ul class="products__hot-list">
-                        <li class="products__hot products__hot--hit">Хит продаж</li>
-                        <li class="products__hot products__hot--new">Новинка</li>
-                        <li class="products__hot products__hot--day">Букет дня</li>
-                        <li class="products__hot products__hot--sale">Скидка 50%</li>
-                    </ul>
-
-                    <h5 class="products__name">№225 “Ромашки для Наташки”</h5>
-                </a>
-                <div class="products__buy">
-                    <p class="products__prices">
-                        <span class="products__price-old">5 400 грн</span>
-                        <span class="products__price-current">3 700 грн</span>
-                    </p>
-                    <button class="products__button button">Заказать</button>
-                </div>
-            </li>
-        </ul>
-    </section>
-    <section class="why-us">
-        <h3 class="title title--medium why-us__title">Почему именно мы?</h3>
-
-        <ul class="why-us__list">
-            <li class="why-us__item">
-                <img class="why-us__img" src="img/why-us1.jpg" alt="">
-                <p class="why-us__text">Вы можете выбрать любую цветочную композицию из нашего каталога
-                    или заказать свой вариант. Вы можете выбрать любую цветочную композицию из нашего
-                    каталога или заказать свой вариант</p>
-            </li>
-            <li class="why-us__item">
-                <img class="why-us__img" src="img/why-us2.jpg" alt="">
-                <p class="why-us__text">Вы можете выбрать любую цветочную композицию из нашего
-                    каталога или заказать свой вариант</p>
-            </li>
-            <li class="why-us__item">
-                <img class="why-us__img" src="img/why-us3.jpg" alt="">
-                <p class="why-us__text">Вы можете выбрать любую цветочную композицию из нашего
-                    каталога или заказать свой вариант</p>
-            </li>
-        </ul>
-    </section>
-    <div class="catalog__container">
-        <section class="catalog">
-            <h3 class="title title--medium catalog__title">Каталог</h3>
-
-            <ul class="catalog__list">
-                <li class="catalog__item">
-                    <a href="#">
-                        <img class="catalog__photo" src="img/catalog1.jpg">
-                        <h5 class="catalog__name">Для кого</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="#">
-                        <img class="catalog__photo" src="img/catalog2.png">
-                        <h5 class="catalog__name">Сладости</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="#">
-                        <img class="catalog__photo" src="img/catalog3.png">
-                        <h5 class="catalog__name">Подарки</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="#">
-                        <img class="catalog__photo" src="img/catalog4.jpg">
-                        <h5 class="catalog__name">Букеты</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="#">
-                        <img class="catalog__photo" src="img/catalog5.jpg">
-                        <h5 class="catalog__name">Розы</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="#">
-                        <img class="catalog__photo" src="img/catalog6.png">
-                        <h5 class="catalog__name">Праздничная коллекция</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="#">
-                        <img class="catalog__photo" src="img/catalog7.png">
-                        <h5 class="catalog__name">Комнатные растения</h5>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="products catalog__products">
-            <h3 class="title title--small title--gold products__title products__title--gold">Для кого</h3>
+            </div>
+        </form>
+        <section class="products">
+            <h3 class="visually-hidden">Для кого</h3>
             <ul class="products__list">
                 <li class="products__item">
                     <a href="#" class="products__link">
@@ -520,37 +474,8 @@
                     </div>
                 </li>
             </ul>
-
-            <a class="products__href" href="#">Перейти к каталогу</a>
         </section>
     </div>
-    <section class="delivery">
-        <div class="delivery__wrapper">
-            <h3 class="delivery__title title title--medium">Доставка</h3>
-            <p class="delivery__text">Возьмём на себя все заботы по созданию, оформлению и доставке
-                корпоративных букетов в обычные и праздничные дни за разумные деньги</p>
-        </div>
-    </section>
-    <section class="bucket">
-        <h3 class="bucket__title title title--medium">Предложи свой букет</h3>
-
-        <div class="bucket__wrapper">
-            <form class="bucket__form form" method="post">
-                <label>
-                    <input class="form__input" placeholder="Имя" name="name" type="text" required>
-                </label>
-                <label>
-                    <input class="form__input phone_mask" placeholder="Телефон" name="name" type="tel" required>
-                </label>
-                <label>
-                    <textarea class="form__textarea" placeholder="Ваша идея" name="message" required></textarea>
-                </label>
-                <button class="form__button button" type="submit">Отправить</button>
-            </form>
-            <img class="bucket__image" src="img/bucket.jpg" alt="Букет">
-        </div>
-    </section>
-
 </main>
 
 <footer class="footer">
@@ -661,4 +586,3 @@
 
 </body>
 </html>
-

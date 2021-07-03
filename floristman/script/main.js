@@ -47,4 +47,23 @@ $(document).ready(function () {
             }
         ]
     });
+
+    //чекбокс, выделенный лейбл
+    function bold_label() {
+        $('.filter input[type="checkbox"]:checked:not(:disabled)')
+            .closest('label')
+            .find('.filter__indicator-title')
+            .css("color", '#FD4F79');
+
+        $('.filter input[type="checkbox"]:not(:checked):not(:disabled)')
+            .closest('label')
+            .find('.filter__indicator-title')
+            .css("color", 'black');
+    }
+
+    bold_label();
+    $('.filter__item input').on('change', function () {
+        bold_label()
+    });
+
 });
