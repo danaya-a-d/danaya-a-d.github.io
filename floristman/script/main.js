@@ -64,7 +64,6 @@ $(document).ready(function () {
             $(this).find(".product__photo-item").length === 1 ? 1 :
             $(this).find(".product__photo-item").length === 2 ? 2 :
             $(this).find(".product__photo-item").length === 3 ? 3 : 4,
-        // slidesToShow: 4,
         slidesToScroll: 1,
         asNavFor: '.slider-for',
         dots: false,
@@ -75,15 +74,6 @@ $(document).ready(function () {
 
     //чекбокс, выделенный лейбл
     function bold_label() {
-        // $('form input[type="checkbox"]:checked:not(:disabled)')
-        //     .closest('label')
-        //     .find('.indicator-title')
-        //     .css("color", '#FD4F79');
-        //
-        // $('form input[type="checkbox"]:not(:checked):not(:disabled)')
-        //     .closest('label')
-        //     .find('.indicator-title')
-        //     .css("color", 'black');
 
         $('input[type="radio"]:checked')
             .closest('label')
@@ -134,10 +124,11 @@ $(document).ready(function () {
         button_open.on('click', function (e) {
             show();
         });
-        $('.modal-close').on('click', function (e) {
+        $('.modal__overlay').on('click', function (e) {
+            modal.addClass('hide');
             hide();
         });
-        $('.modal__overlay').on('click', function (e) {
+        $('.modal__overlay').on('touchmove', function (e) {
             modal.addClass('hide');
             hide();
         });
