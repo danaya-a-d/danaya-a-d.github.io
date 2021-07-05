@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Личный кабинет. Адресная книга</title>
+    <title>Корзина</title>
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
@@ -145,54 +145,136 @@
     </div>
 </nav>
 
+<section class="upper-block upper-block--inner">
+    <div class="upper-block__flower"></div>
+    <div class="upper-block__wrapper">
+        <h1 class="upper-block__title title title--big">Корзина</h1>
+    </div>
+</section>
+
 <main class="page-main">
-    <section class="cabinet">
-        <h1 class="cabinet__main-title title title-medium">Личный кабинет</h1>
+    <section class="cart">
+        <h2 class="visually-hidden">Корзина с букетами</h2>
+        <ul class="cart__list">
+            <li class="cart__item">
+                <img class="cart__photo" src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
+                <div class="cart__info">
+                    <h3 class="cart__name">№225 “Ромашки для Наташки” </h3>
+                    <button type="button" class="cart__delete"></button>
 
-        <ul class="cabinet__nav-list">
-            <li class="cabinet__nav-item"><a href="cabinet-personal.html">Личные данные</a></li>
-            <li class="cabinet__nav-item active"><a href="cabinet-address.html">Адресная книга</a></li>
-            <li class="cabinet__nav-item"><a href="cabinet-reviews.html">Отзывы</a></li>
-            <li class="cabinet__nav-item"><a href="cabinet-viewed.html">Просмотренные</a></li>
+                    <p class="cart__prices">
+                        <span class="cart__price-old">5 400 грн</span>
+                        <span class="cart__price-current">3 700 грн</span>
+                    </p>
+                    <span class="cart__counter counter">
+                        <button class="counter__button minus">−</button><label class="counter__label">
+                        <input class="counter__input" type="text" value="1" data-price="415"
+                               onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                        </label><button class="counter__button plus">+</button>
+                    </span>
+                </div>
+            </li>
+            <li class="cart__item">
+                <img class="cart__photo" src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
+                <div class="cart__info">
+                    <h3 class="cart__name">№225 “Ромашки для Наташки” </h3>
+                    <button type="button" class="cart__delete"></button>
 
-            <li class="cabinet__nav-item cabinet__nav-item--exit"><a href="cabinet-personal.html">Выйти</a></li>
+                    <p class="cart__prices">
+                        <span class="cart__price-old">5 400 грн</span>
+                        <span class="cart__price-current">3 700 грн</span>
+                    </p>
+                    <span class="cart__counter counter">
+                        <button class="counter__button minus">−</button><label class="counter__label">
+                        <input class="counter__input" type="text" value="1" data-price="415"
+                               onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                        </label><button class="counter__button plus">+</button>
+                    </span>
+                </div>
+            </li>
         </ul>
 
-        <div class="cabinet__block">
-            <div class="cabinet__breadcrumbs breadcrumbs">
-                <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
-                    <li class="breadcrumbs__item">Личный кабинет</li>
-                </ul>
+        <form class="cart__form">
+            <h2 class="cart__title title title--medium">Сумма заказов:</h2>
+            <div class="cart__line">
+                <span class="cart__line-name">Общая сумма заказов:</span>
+                <span class="cart__line-price">5 400 грн</span>
             </div>
-            <form class="cabinet__form-address" method="post">
-                <h2 class="cabinet__title title title--small">Адреса доставки</h2>
 
-                <ol class="cabinet__addresses">
-                    <li class="cabinet__address">Город, улица Название, дом 1</li>
-                    <li class="cabinet__address">Город, улица Название, дом 1</li>
-                    <li class="cabinet__address">Город, улица Название, дом 1</li>
-                </ol>
+            <div class="cart__line">
+                <span class="cart__line-name">Способ оплаты:</span>
+                <div class="cart__selects">
+                    <label class="cart__label">
+                        <input class="visually-hidden" name="pay-method" type="radio" value="Опллата при доставке">
+                        <span class="cart__indicator indicator"></span>
+                        <span class="cart__indicator-title indicator-title">Оплата при доставке</span>
+                    </label>
+                    <label class="cart__label">
+                        <input class="visually-hidden" name="pay-method" type="radio" value="Оплата картой">
+                        <span class="cart__indicator indicator"></span>
+                        <span class="cart__indicator-title indicator-title">Оплата картой</span>
+                    </label>
+                    <label class="cart__label">
+                        <input class="visually-hidden" name="pay-method" type="radio"
+                               value="Оплата на карту ПриватБанк">
+                        <span class="cart__indicator indicator"></span>
+                        <span class="cart__indicator-title indicator-title">Оплата на карту ПриватБанк</span>
+                    </label>
+                </div>
+            </div>
 
-                <label class="cabinet__label">
-                    <input class="cabinet__input" type="text" name="address" placeholder="Добавить адресс">
+            <div class="cart__line">
+                <span class="cart__line-name">Доставка:</span>
+                <div class="cart__selects">
+                    <div class="cart__label-container">
+                        <span class="cart__line-name">Самовывоз</span>
+                        <label class="cart__label">
+                            <input class="visually-hidden" name="delivery-method" type="radio" value="">
+                            <span class="cart__indicator indicator"></span>
+                            <span class="cart__indicator-title indicator-title">Бесплатно</span>
+                        </label>
+                    </div>
+                    <div class="cart__label-container">
+                        <span class="cart__line-name">Курьером</span>
+                        <label class="cart__label">
+                            <input class="visually-hidden" name="delivery-method" type="radio" value="">
+                            <span class="cart__indicator indicator"></span>
+                            <span class="cart__indicator-title indicator-title">000 грн</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cart__line">
+                <span class="cart__line-name">Скидка:</span>
+                <span class="cart__line-price">-10%</span>
+            </div>
+
+            <div class="cart__line">
+                <span class="cart__line-name">Итого к оплате:</span>
+                <span class="cart__line-total-price">5 130 грн</span>
+            </div>
+
+            <div class="cart__subform form">
+                <h3 class="cart__subform-title title title--medium">Оформление заказа</h3>
+
+                <div class="cart__links">
+                    <a class="cart__link active" href="#">Новый покупатель</a>
+                    <a class="cart__link" href="#">Постоянный покупатель</a>
+                </div>
+
+                <label>
+                    <input class="form__input" placeholder="Имя" name="name" type="text" required>
                 </label>
-
-                <h2 class="cabinet__title title title--small">Контакты</h2>
-
-                <ol class="cabinet__addresses">
-                    <li class="cabinet__address">Имя, +38 (000) 0000000</li>
-                    <li class="cabinet__address">Имя, +38 (000) 0000000</li>
-                    <li class="cabinet__address">Имя, +38 (000) 0000000</li>
-                </ol>
-
-                <label class="cabinet__label">
-                    <input class="cabinet__input" type="text" name="contact" placeholder="Добавить новый контакт">
+                <label>
+                    <input class="form__input phone_mask" placeholder="Телефон" name="name" type="tel" required>
                 </label>
-
-                <button class="button cabinet__button">Сохранить</button>
-            </form>
-        </div>
+                <label>
+                    <input class="form__input" placeholder="Адресс доставки" name="address" type="text" required>
+                </label>
+                <button class="form__button button" type="submit">Подтверждение заказа</button>
+            </div>
+        </form>
     </section>
 </main>
 
