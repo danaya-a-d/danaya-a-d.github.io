@@ -584,7 +584,7 @@ $(document).ready(function () {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
-    // Открытие и закрытие мобильного меню
+    // Открытие и закрытие мобильного меню (и смиена лого)
     function menu_open() {
         $('.header__nav-mobile').removeClass('close');
         $('.header__open-menu').addClass('open');
