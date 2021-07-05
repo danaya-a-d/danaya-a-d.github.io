@@ -185,4 +185,12 @@ $(document).ready(function () {
         }
         input.val(value).change(); // выводим полученное value в инпут; триггер .change() - на случай, если на изменение этого инпута у вас уже объявлен еще какой-то обработчик
     });
+
+    //плавная прокрутка к якорю
+    $('a[href*="#"]').click(function (e) {
+        $('html, body').stop().animate({
+            scrollTop: $(this.hash).offset().top - 80
+        }, 1000);
+        e.preventDefault();
+    })
 });
