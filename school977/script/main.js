@@ -127,7 +127,7 @@ $(document).ready(function () {
     }
 
     const settings = {
-        dots: true,
+        dots: false,
         arrows: false,
         mobileFirst: true,
         settings: 'slick',
