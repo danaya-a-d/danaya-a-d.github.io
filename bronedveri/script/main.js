@@ -198,10 +198,12 @@ $(document).ready(function () {
         dots: true,
         dotsClass: "my-dots",
         arrows: false,
-        fade: true,
+        // fade: true,
         speed: 1000,
+        cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
+        touchThreshold: 100,
         autoplay: true,
-        autoplaySpeed: 4000,
+        autoplaySpeed: 6000,
         pauseOnFocus: false,
         pauseOnHover: false
     });
