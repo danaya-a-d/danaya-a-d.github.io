@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" type="text/css" href="style/main.min.css">
 </head>
 <body>
@@ -263,21 +264,31 @@
         <div class="tests__wrapper wrapper">
             <div class="tests__section">
                 <p class="tests__video-title">Испытания бронедверей 3,4,5,6 класса</p>
-                <iframe class="tests__video" src="https://www.youtube.com/embed/bU3k1WeM_Ag" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                <a href="#" class="button tests__button">Перейти в раздел видео</a>
+                <iframe class="tests__video"
+                        loading="lazy"
+                        src="https://www.youtube.com/embed/bU3k1WeM_Ag"
+                        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img,span{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{height:1.5em;text-align:center;font:48px/1.5 sans-serif;color:white;text-shadow:0 0 0.5em black}</style><a href=https://www.youtube.com/embed/bU3k1WeM_Ag?autoplay=1><img src=https://img.youtube.com/vi/bU3k1WeM_Ag/hqdefault.jpg alt='Испытание на взломостойкость и пулестойкость бронедвери 4/2 класса, сертификаты EN 1627, ДСТУ 4547.'><span>▶</span></a>"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                <a href="videos.html" class="button tests__button">Перейти в раздел видео</a>
             </div>
             <div class="tests__section">
                 <ul class="tests__certificates">
                     <li class="tests__certificate">
-                        <p>Сертификат EN 1627 RC-4</p>
-                        <img src="img/certificate1.jpg" alt="" width="241" height="345">
+                        <a href="img/certificate1.jpg" data-fancybox="gallery">
+                            <p>Сертификат EN 1627 RC-4</p>
+                            <img src="img/certificate1.jpg" alt="" width="241" height="345">
+                        </a>
                     </li>
                     <li class="tests__certificate">
-                        <p>Сертификат EN 1627 RC-6</p>
-                        <img src="img/certificate2.jpg" alt="" width="241" height="345">
+                        <a href="img/certificate2.jpg" data-fancybox="gallery">
+                            <p>Сертификат EN 1627 RC-6</p>
+                            <img src="img/certificate2.jpg" alt="" width="241" height="345">
+                        </a>
                     </li>
                 </ul>
-                <a href="#" class="button tests__button">Перейти в раздел сертификаты</a>
+                <a href="certificates.html" class="button tests__button">Перейти в раздел сертификаты</a>
             </div>
         </div>
     </section>
@@ -313,7 +324,7 @@
                     <p class="doors__price">от 16800 грн</p>
                     <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
-        </ul>
+            </ul>
         </div>
     </section>
     <section class="advantages">
@@ -369,19 +380,25 @@
                         risus enim, auctor nisi, enim. Urna et orci ipsum viverra cras. Eget sit mattis
                         scelerisque tempor. Quis diam mollis egestas tellus sem facilisi nibh condimentum
                         varius.</p>
-                    <a href="#" class="button presentation__more">Подробнее</a>
+                    <a href="gladiator.html" class="button presentation__more">Подробнее</a>
                     <ul class="presentation__certificates">
                         <li class="presentation__certificate">
-                            <p>Сертификат EN 1627 RC-4</p>
-                            <img src="img/certificate3.jpg" alt="" width="185" height="266">
+                            <a href="img/certificate3.jpg" data-fancybox="gallery">
+                                <p>Сертификат EN 1627 RC-4</p>
+                                <img src="img/certificate3.jpg" alt="" width="185" height="266">
+                            </a>
                         </li>
                         <li class="presentation__certificate">
-                            <p>Сертификат EN 1627 RC-5</p>
-                            <img src="img/certificate4.jpg" alt="" width="185" height="266">
+                            <a href="img/certificate4.jpg" data-fancybox="gallery">
+                                <p>Сертификат EN 1627 RC-5</p>
+                                <img src="img/certificate4.jpg" alt="" width="185" height="266">
+                            </a>
                         </li>
                         <li class="presentation__certificate">
-                            <p>Сертификат EN 1627 RC-6</p>
-                            <img src="img/certificate5.jpg" alt="" width="185" height="266">
+                            <a href="img/certificate5.jpg" data-fancybox="gallery">
+                                <p>Сертификат EN 1627 RC-6</p>
+                                <img src="img/certificate5.jpg" alt="" width="185" height="266">
+                            </a>
                         </li>
                     </ul>
 
@@ -406,7 +423,7 @@
                     </button>
                 </div>
             </div>
-            <a href="#" class="presentation__main-btn button">Перейти на страницу дверей Гладиатор</a>
+            <a href="gladiator.html" class="presentation__main-btn button">Перейти на страницу дверей Гладиатор</a>
 
             <ul class="doors doors--slick presentation__doors">
                 <li class="doors__item">
@@ -415,7 +432,7 @@
                     <h5 class="doors__name">Гладиатор 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--orange"><img src="img/door1.png" alt=""
@@ -423,7 +440,7 @@
                     <h5 class="doors__name">Гладиатор 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--orange"><img src="img/door1.png" alt=""
@@ -431,7 +448,7 @@
                     <h5 class="doors__name">Гладиатор 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--orange"><img src="img/door1.png" alt=""
@@ -439,7 +456,7 @@
                     <h5 class="doors__name">Гладиатор 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--orange"><img src="img/door1.png" alt=""
@@ -447,7 +464,7 @@
                     <h5 class="doors__name">Гладиатор 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--orange"><img src="img/door1.png" alt=""
@@ -455,7 +472,7 @@
                     <h5 class="doors__name">Гладиатор 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
             </ul>
         </div>
@@ -474,19 +491,25 @@
                         risus enim, auctor nisi, enim. Urna et orci ipsum viverra cras. Eget sit mattis
                         scelerisque tempor. Quis diam mollis egestas tellus sem facilisi nibh condimentum
                         varius.</p>
-                    <a href="#" class="button presentation__more">Подробнее</a>
+                    <a href="cyborg.html" class="button presentation__more">Подробнее</a>
                     <ul class="presentation__certificates">
                         <li class="presentation__certificate">
-                            <p>Сертификат EN 1627 RC-4</p>
-                            <img src="img/certificate3.jpg" alt="" width="185" height="266">
+                            <a href="img/certificate3.jpg" data-fancybox="gallery">
+                                <p>Сертификат EN 1627 RC-4</p>
+                                <img src="img/certificate3.jpg" alt="" width="185" height="266">
+                            </a>
                         </li>
                         <li class="presentation__certificate">
-                            <p>Сертификат EN 1627 RC-5</p>
-                            <img src="img/certificate4.jpg" alt="" width="185" height="266">
+                            <a href="img/certificate4.jpg" data-fancybox="gallery">
+                                <p>Сертификат EN 1627 RC-5</p>
+                                <img src="img/certificate4.jpg" alt="" width="185" height="266">
+                            </a>
                         </li>
                         <li class="presentation__certificate">
-                            <p>Сертификат EN 1627 RC-6</p>
-                            <img src="img/certificate5.jpg" alt="" width="185" height="266">
+                            <a href="img/certificate5.jpg" data-fancybox="gallery">
+                                <p>Сертификат EN 1627 RC-6</p>
+                                <img src="img/certificate5.jpg" alt="" width="185" height="266">
+                            </a>
                         </li>
                     </ul>
 
@@ -514,7 +537,7 @@
                     </button>
                 </div>
             </div>
-            <a href="#" class="presentation__main-btn button">Перейти на страницу дверей Киборг</a>
+            <a href="cyborg.html" class="presentation__main-btn button">Перейти на страницу дверей Киборг</a>
 
             <ul class="doors doors--slick presentation__doors">
                 <li class="doors__item">
@@ -523,7 +546,7 @@
                     <h5 class="doors__name">Киборг 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--gray"><img src="img/door2.png" alt=""
@@ -531,7 +554,7 @@
                     <h5 class="doors__name">Киборг 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--gray"><img src="img/door2.png" alt=""
@@ -539,7 +562,7 @@
                     <h5 class="doors__name">Киборг 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--gray"><img src="img/door2.png" alt=""
@@ -547,7 +570,7 @@
                     <h5 class="doors__name">Киборг 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--gray"><img src="img/door2.png" alt=""
@@ -555,7 +578,7 @@
                     <h5 class="doors__name">Киборг 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--gray"><img src="img/door2.png" alt=""
@@ -563,7 +586,7 @@
                     <h5 class="doors__name">Киборг 2</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
             </ul>
         </div>
@@ -578,60 +601,60 @@
                         At tristique massa sit risus enim, auctor nisi, enim. Urna et orci ipsum viverra
                         cras. Eget sit mattis scelerisque tempor. Quis diam mollis egestas tellus sem
                         facilisi nibh condimentum varius.</p>
-                    <button class="cottage__button button">Подробнее</button>
+                    <a href="sv.html" class="cottage__button button">Подробнее</a>
                 </div>
             </div>
         </div>
-        <a href="#" class="button cottage__main-button">Перейти на страницу дверей SV</a>
+        <a href="sv.html" class="button cottage__main-button">Перейти на страницу дверей SV</a>
         <div class="wrapper">
             <ul class="doors doors--slick presentation__doors">
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--beige"><img src="img/door3.png" alt=""
                                                                                            class="doors__photo"></div>
-                    <h5 class="doors__name">Гладиатор 2</h5>
+                    <h5 class="doors__name">SV</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--beige"><img src="img/door3.png" alt=""
                                                                                            class="doors__photo"></div>
-                    <h5 class="doors__name">Гладиатор 2</h5>
+                    <h5 class="doors__name">SV</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--beige"><img src="img/door3.png" alt=""
                                                                                            class="doors__photo"></div>
-                    <h5 class="doors__name">Гладиатор 2</h5>
+                    <h5 class="doors__name">SV</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--beige"><img src="img/door3.png" alt=""
                                                                                            class="doors__photo"></div>
-                    <h5 class="doors__name">Гладиатор 2</h5>
+                    <h5 class="doors__name">SV</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--beige"><img src="img/door3.png" alt=""
                                                                                            class="doors__photo"></div>
-                    <h5 class="doors__name">Гладиатор 2</h5>
+                    <h5 class="doors__name">SV</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
                 <li class="doors__item">
                     <div class="doors__photo-container doors__photo-container--beige"><img src="img/door3.png" alt=""
                                                                                            class="doors__photo"></div>
-                    <h5 class="doors__name">Гладиатор 2</h5>
+                    <h5 class="doors__name">SV</h5>
                     <p class="doors__about">Бронедвери <br>4+ класс</p>
                     <p class="doors__price">от 16800 грн</p>
-                    <a href="#" class="button doors__button">Подробнее</a>
+                    <a href="product-card.html" class="button doors__button">Подробнее</a>
                 </li>
             </ul>
         </div>
@@ -648,7 +671,7 @@
                         At tristique massa sit risus enim, auctor nisi, enim. Urna et orci ipsum viverra
                         cras. Eget sit mattis scelerisque tempor. Quis diam mollis egestas tellus sem
                         facilisi nibh condimentum varius.</p>
-                    <button class="cottage__button button">Подробнее</button>
+                    <a href="cottage.html" class="cottage__button button">Подробнее</a>
                 </div>
             </div>
         </div>
@@ -668,7 +691,7 @@
             </li>
         </ul>
 
-        <a href="#" class="button cottage__main-button">Перейти на страницу дверей Котеджные</a>
+        <a href="cottage.html" class="button cottage__main-button">Перейти на страницу дверей Котеджные</a>
     </section>
     <section class="lock">
         <h2 class="lock__title">Замок невидимка</h2>
@@ -732,7 +755,7 @@
                         blandit fermentum viverra mauris sagittis, fames sed viverra faucibus. Purus
                         malesuada tempor a mattis imperdiet mauris in purus. Scelerisque sem odio justo
                         eget.</p>
-                    <button class="production__button button">Подробнее</button>
+                    <a href="#" class="production__button button">Подробнее</a>
                 </div>
                 <ul class="production__big-list">
                     <li class="production__big-item">
@@ -993,13 +1016,11 @@
     </div>
     <div class="modal__overlay hide"></div>
 </div>
-
-
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
 <script src="script/slick/slick.min.js"></script>
+<script src="script/fancybox/jquery.fancybox.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
 </html>
-

@@ -319,5 +319,18 @@ $(document).ready(function () {
     $('.header__more-phones').on('click', function (e) {
         $('.phones a').slice(2, 6).toggle();
     });
+
+
+    //увеличение изображений
+    if ($('[data-fancybox="gallery"]').length > 0) {
+        $('[data-fancybox="gallery"]').fancybox({
+            thumbs: {
+                showOnStart: true
+            },
+            hash: true,
+            hideOnOverlayClick: true,
+            enableEscapeButton: true
+        });
+    }
 });
 
