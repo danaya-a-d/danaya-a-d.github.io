@@ -1,10 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дизайн дверей</title>
+
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/fancybox/jquery.fancybox.min.css">
+    <link rel="stylesheet" type="text/css" href="style/main.min.css">
 </head>
 <body>
+
+<div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <defs>
+            <clipPath id="clip0">
+                <path fill="#fff" d="M0 0h24v22.8H0z"/>
+            </clipPath>
+            <clipPath id="clip0">
+                <path fill="#fff" transform="translate(.857)" d="M0 0h24v24H0z"/>
+            </clipPath>
+        </defs>
+        <symbol id="facebook" viewBox="0 0 13 25">
+            <path d="M9.045 25.1V13.709h3.843l.571-4.46H9.045V6.407c0-1.287.358-2.169 2.206-2.169h2.34V.261a31.047 31.047 0 0 0-3.429-.176c-3.397 0-5.73 2.074-5.73 5.881v3.273H.615V13.7h3.827v11.4h4.604z"/>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 29 30">
+            <path d="M14.589 7.327c-4.144 0-7.488 3.449-7.488 7.722 0 4.273 3.344 7.721 7.488 7.721 4.143 0 7.487-3.448 7.487-7.721s-3.344-7.722-7.487-7.722zm0 12.74c-2.68 0-4.866-2.255-4.866-5.018 0-2.764 2.186-5.019 4.866-5.019 2.68 0 4.866 2.255 4.866 5.019 0 2.763-2.187 5.018-4.866 5.018zm7.794-14.856c-.968 0-1.749.806-1.749 1.804 0 .997.781 1.803 1.749 1.803.967 0 1.748-.802 1.748-1.803a1.85 1.85 0 0 0-.132-.69 1.807 1.807 0 0 0-.38-.586 1.743 1.743 0 0 0-.567-.39 1.7 1.7 0 0 0-.67-.138zm6.8 9.838c0-2.078.019-4.138-.094-6.212-.113-2.41-.646-4.548-2.355-6.31C25.022.762 22.952.216 20.616.1 18.6-.018 16.604.001 14.592.001 12.577.001 10.58-.018 8.57.1 6.234.217 4.16.766 2.452 2.528.739 4.293.209 6.427.096 8.837c-.113 2.078-.095 4.137-.095 6.212 0 2.074-.018 4.137.095 6.212.113 2.409.646 4.547 2.355 6.31 1.712 1.765 3.782 2.31 6.118 2.427 2.015.117 4.012.098 6.023.098 2.016 0 4.012.02 6.024-.098 2.336-.116 4.41-.666 6.118-2.428 1.712-1.765 2.242-3.9 2.355-6.31.117-2.074.095-4.133.095-6.211zm-3.212 8.877a4.797 4.797 0 0 1-1.102 1.724 4.662 4.662 0 0 1-1.672 1.137c-1.92.787-6.48.61-8.608.61-2.129 0-6.692.177-8.612-.606a4.63 4.63 0 0 1-1.672-1.137 4.831 4.831 0 0 1-1.102-1.724c-.76-1.984-.588-6.686-.588-8.881 0-2.195-.172-6.901.588-8.881a4.799 4.799 0 0 1 1.102-1.725 4.71 4.71 0 0 1 1.672-1.136c1.92-.784 6.483-.607 8.612-.607 2.128 0 6.691-.177 8.611.607a4.63 4.63 0 0 1 1.672 1.136c.515.531.836 1.04 1.103 1.725.76 1.98.588 6.686.588 8.88 0 2.196.171 6.898-.592 8.878z"/>
+        </symbol>
+        <symbol id="telegram" viewBox="0 0 29 24">
+            <path d="M27.866.127a.922.922 0 0 0-.31.056L.881 10.318c-.75.286-.732 1.357.029 1.615l6.185 2.09 3.728 7.462s0 .005.005.005l.01.019h.004a.4.4 0 0 0 .615.131l3.494-2.963-3.902-2.959.305 3.889-2.804-5.805 14.906-8.95-12.406 10.87 9.655 7.33a1.755 1.755 0 0 0 2.766-.977l5.227-20.883a.86.86 0 0 0-.831-1.066z"/>
+        </symbol>
+        <symbol id="youtube" viewBox="0 0 35 23">
+            <path d="M35 5.238C35 2.415 32.676.127 29.81.127H5.454C2.59.127.265 2.416.265 5.238v12.71c0 2.822 2.324 5.11 5.19 5.11H29.81c2.867 0 5.19-2.288 5.19-5.11V5.237zM14.158 17.487V5.156l9.92 5.894-9.92 6.437z"/>
+        </symbol>
+        <symbol id="phone">
+            <g clip-path="url(#clip0)" fill="#fff">
+                <path d="M21.378 3.144A10.664 10.664 0 0 0 13.788 0a.85.85 0 1 0 0 1.701c2.413 0 4.681.94 6.388 2.646a8.974 8.974 0 0 1 2.645 6.388.85.85 0 0 0 1.702 0c0-2.868-1.117-5.563-3.145-7.591z"/>
+                <path d="M17.88 10.735a.85.85 0 1 0 1.7 0 5.8 5.8 0 0 0-5.792-5.793.85.85 0 0 0 0 1.701 4.097 4.097 0 0 1 4.092 4.092zm-1.883 4.337c-1.296-.067-1.957.897-2.273 1.36a.85.85 0 1 0 1.404.96c.374-.547.544-.633.774-.622.736.087 3.635 2.211 3.925 2.876.073.195.07.387-.008.62-.304.904-.808 1.539-1.457 1.836-.617.283-1.373.257-2.186-.074-3.037-1.237-5.69-2.965-7.886-5.134l-.002-.002c-2.165-2.194-3.889-4.844-5.125-7.876-.33-.814-.356-1.57-.074-2.187.298-.649.933-1.153 1.835-1.457.234-.078.426-.08.62-.008.666.29 2.791 3.19 2.877 3.918.012.239-.075.408-.622.782a.85.85 0 1 0 .96 1.404c.463-.316 1.427-.975 1.36-2.276-.073-1.359-2.717-4.957-3.98-5.422-.561-.21-1.152-.213-1.756-.01-1.36.458-2.342 1.274-2.84 2.36-.483 1.055-.468 2.278.045 3.538 1.322 3.245 3.173 6.084 5.5 8.439a.647.647 0 0 0 .016.017c2.354 2.322 5.19 4.17 8.43 5.49a5.047 5.047 0 0 0 1.9.396c.575 0 1.126-.117 1.637-.351 1.086-.498 1.903-1.48 2.36-2.84.203-.604.2-1.194-.008-1.754-.466-1.266-4.064-3.91-5.426-3.983z"/>
+            </g>
+        </symbol>
+        <symbol id="email">
+            <path d="M19 12.025V7c0-1.103-.897-2-2-2H2C.897 5 0 5.897 0 7v10c0 1.103.897 2 2 2h11.213c.655 2.305 2.775 4 5.287 4 .967 0 1.918-.254 2.75-.736a.5.5 0 1 0-.5-.866A4.505 4.505 0 0 1 14 17.5c0-2.481 2.018-4.5 4.5-4.5 2.481 0 4.5 2.019 4.5 4.5v.5c0 .551-.449 1-1 1-.551 0-1-.449-1-1v-2a.5.5 0 0 0-.845-.36A2.48 2.48 0 0 0 18.5 15a2.503 2.503 0 0 0-2.5 2.5c0 1.378 1.122 2.5 2.5 2.5.745 0 1.408-.334 1.866-.853A1.996 1.996 0 0 0 24 18v-.5a5.506 5.506 0 0 0-5-5.475zM2 6h15c.02 0 .038.01.059.012L9.91 11.879c-.254.16-.623.127-.788.025l-7.18-5.892C1.962 6.01 1.979 6 2 6zm16 6.025a5.506 5.506 0 0 0-5 5.475c0 .169.01.335.025.5H2c-.551 0-1-.449-1-1V7a.99.99 0 0 1 .085-.397l7.447 6.107c.291.19.626.29.968.29a1.767 1.767 0 0 0 1.015-.323l7.4-6.075A.99.99 0 0 1 18 7v5.025zM18.5 19c-.827 0-1.5-.673-1.5-1.5s.673-1.5 1.5-1.5 1.5.673 1.5 1.5-.673 1.5-1.5 1.5z"
+                  fill="#fff"/>
+        </symbol>
+        <symbol id="map">
+            <path d="M12.054 24l-.545-.64c-.318-.374-7.806-9.236-7.806-15.018C3.703 3.742 7.445 0 12.045 0c4.6 0 8.343 3.742 8.343 8.342 0 5.497-7.481 14.625-7.8 15.01l-.534.648zm-.009-22.592a6.942 6.942 0 0 0-6.934 6.934c0 2.15 1.281 5.26 3.706 8.994a56.95 56.95 0 0 0 3.22 4.448 62.338 62.338 0 0 0 3.243-4.563c2.42-3.776 3.7-6.846 3.7-8.879a6.942 6.942 0 0 0-6.935-6.934z"
+                  fill="#fff"/>
+            <path d="M12.045 11.826a3.548 3.548 0 0 1-2.517-1.04 3.563 3.563 0 0 1 0-5.034 3.536 3.536 0 0 1 2.517-1.043c.951 0 1.845.37 2.517 1.043a3.563 3.563 0 0 1 0 5.034 3.549 3.549 0 0 1-2.517 1.04zm0-5.708c-.55 0-1.102.21-1.521.63a2.154 2.154 0 0 0 0 3.042c.406.407.947.63 1.521.63.575 0 1.116-.223 1.522-.63a2.154 2.154 0 0 0 0-3.043c-.42-.42-.97-.629-1.522-.629z"
+                  fill="#fff"/>
+        </symbol>
+        <symbol id="clock">
+            <g clip-path="url(#clip0)" fill="#fff">
+                <path d="M14.32 20.834c-.19.047-.383.09-.574.125a.924.924 0 0 0 .336 1.815c.228-.042.458-.092.684-.148a.923.923 0 1 0-.446-1.792zM21.148 8.46a.92.92 0 0 0 1.166.585.923.923 0 0 0 .586-1.166c-.072-.22-.153-.442-.24-.658a.923.923 0 1 0-1.714.686c.072.181.14.367.201.552zM17.32 19.516c-.163.108-.33.212-.5.31a.923.923 0 0 0 .922 1.599c.202-.116.402-.24.596-.368a.923.923 0 0 0-1.018-1.54zm6.155-8.476a.923.923 0 0 0-1.846.072c.008.195.01.392.006.587a.922.922 0 1 0 1.846.04c.005-.232.003-.467-.006-.7zm-2.478 6.047a.923.923 0 0 0-1.293.185 9.6 9.6 0 0 1-.367.459.924.924 0 0 0 1.406 1.197c.15-.177.298-.361.438-.548a.923.923 0 0 0-.184-1.293zm1.357-3.335a.923.923 0 0 0-1.157.604 9.811 9.811 0 0 1-.193.556.924.924 0 0 0 1.725.657c.083-.217.16-.44.23-.66a.924.924 0 0 0-.605-1.158zm-12.062 7.216a9.533 9.533 0 0 1-2.368-.753c-.01-.004-.017-.01-.026-.014a10.105 10.105 0 0 1-.525-.266l-.003-.001a9.846 9.846 0 0 1-.918-.574C2.108 16.3 1.064 10.278 4.124 5.935a9.594 9.594 0 0 1 2.368-2.356l.033-.023c3.163-2.18 7.458-2.326 10.816-.087l-.721 1.042c-.2.29-.077.502.274.47l3.133-.28a.516.516 0 0 0 .467-.675L19.653.994c-.094-.34-.335-.38-.536-.09l-.723 1.044A11.402 11.402 0 0 0 10.039.172c-.296.05-.587.113-.875.186L9.16.36l-.034.01A11.385 11.385 0 0 0 2.813 4.6l-.039.049a10.837 10.837 0 0 0-.4.576l-.025.044a11.383 11.383 0 0 0-1.82 6.714v.023c.011.232.03.467.054.698l.008.044a11.394 11.394 0 0 0 3.312 6.877l.011.012.004.004c.452.445.942.857 1.471 1.23a11.385 11.385 0 0 0 4.578 1.915.923.923 0 1 0 .326-1.817z"/>
+                <path d="M11.434 4.023a.747.747 0 0 0-.748.747v7.443l6.807 3.518a.747.747 0 0 0 .686-1.327l-6-3.101V4.77a.747.747 0 0 0-.745-.747z"/>
+            </g>
+        </symbol>
+    </svg>
+</div>
+
+<header class="header">
+    <div class="header__top">
+        <div class="header__wrapper wrapper">
+            <p class="header__contact">
+                <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#map"></use>
+                </svg>
+                Магазин г. Киев<br> ул. Вадима Гетьмана 17
+            </p>
+
+            <p class="header__time">
+                <span>Пн-Пт: 10:00-20:00</span>
+                <span>Сб-Вс: 11:00-16:00</span>
+            </p>
+
+            <ul class="header__socials socials">
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon socials__icon--facebook" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#telegram"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+
+            <p class="header__contact phones">
+                <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#phone"></use>
+                </svg>
+                <span class="header__contact-phones-block">
+                    <a href="tel:+380442237045">+38(044) 223-70-45</a>
+                    <a href="tel:+380675078432">+38(067) 507-84-32</a>
+                    <a href="tel:+380669225320">+38(066) 922-53-20</a>
+                    <a href="tel:+380631000502">+38(063) 100-50-02</a>
+                </span>
+                <button class="header__more-phones"></button>
+            </p>
+
+            <button class="header__button button-modal">Вызвать замерщика</button>
+        </div>
+    </div>
+    <div class="header__bottom">
+        <div class="header__wrapper wrapper">
+            <a class="header__logo" href="index.html">
+                <img src="img/logo.svg" alt="Ideal">
+            </a>
+
+            <a class="header__home" href="index.html"></a>
+
+            <ul class="header__links">
+                <li class="header__link">
+                    <a href="category-doors.html">Каталог дверей</a>
+                    <ul class="header__sublinks">
+                        <li class="header__sublink">
+                            <a href="category-doors.html">все бронедвери</a>
+                            <ul class="header__sublinks">
+                                <li class="header__sublink"><a href="gladiator.html">гладиатор</a></li>
+                                <li class="header__sublink"><a href="cyborg.html">кибор</a></li>
+                                <li class="header__sublink"><a href="sv.html">SV</a></li>
+                            </ul>
+                        </li>
+                        <li class="header__sublink"><a href="products-list.html">бюджетные</a></li>
+                        <li class="header__sublink"><a href="products-list.html">пуленепробиваемые</a></li>
+                        <li class="header__sublink"><a href="products-list.html">котедж-дом</a></li>
+                        <li class="header__sublink"><a href="products-list.html">нестандартные</a></li>
+                        <li class="header__sublink"><a href="products-list.html">технические</a></li>
+                    </ul>
+                </li>
+                <li class="header__link">
+                    <a href="design.html">Дизайн</a>
+                    <ul class="header__sublinks">
+                        <li class="header__sublink"><a href="design-composite.html">композит</a></li>
+                        <li class="header__sublink"><a href="design-aluminum.html">алюминий</a></li>
+                        <li class="header__sublink"><a href="design-glass.html">стекло</a></li>
+                        <li class="header__sublink"><a href="design-mirror.html">зеркало</a></li>
+                        <li class="header__sublink"><a href="design-combi.html">комбинированные</a></li>
+                        <li class="header__sublink"><a href="design.html">прочие</a></li>
+                        <li class="header__sublink"><a href="design-fronts.html">фронтоны</a></li>
+                        <li class="header__sublink"><a href="design-platbands.html">наличники</a></li>
+                        <li class="header__sublink"><a href="design-film.html">пленки</a></li>
+                    </ul>
+                </li>
+                <li class="header__link">
+                    <a href="category-locks.html">Каталог замков</a>
+                    <ul class="header__sublinks">
+                        <li class="header__sublink"><a href="locks.html">врезные замки</a></li>
+                        <li class="header__sublink"><a href="locks.html">умные замки</a></li>
+                        <li class="header__sublink"><a href="locks.html">замки-невидимки</a></li>
+                        <li class="header__sublink"><a href="locks.html">защитная фурнитура</a></li>
+                        <li class="header__sublink"><a href="locks.html">ручки</a></li>
+                        <li class="header__sublink"><a href="locks.html">доводчики</a></li>
+                    </ul>
+                </li>
+                <li class="header__link"><a href="certificates.html">Сертификаты</a></li>
+                <li class="header__link"><a href="about-us.html">О нас</a></li>
+                <li class="header__link"><a href="blog.html">Блог</a></li>
+                <li class="header__link"><a href="contacts.html">Контакты</a></li>
+            </ul>
+
+            <ul class="header__languages">
+                <li class="header__language header__language--active"><a href="#">RU</a></li>
+                <li class="header__language"><a href="#">UA</a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="index.html">главная</a></li>
+            <li class="breadcrumbs__item"><a href="blog.html">блог</a></li>
+            <li class="breadcrumbs__item"><a>дизайн</a></li>
+        </ul>
+    </div>
+
+    <section class="design">
+        <div class="wrapper design__wrapper">
+            <h1 class="design__title title">Дизайн дверей</h1>
+            <p class="design__subtitle">Примеры входных металлических дверей (бронедверей) в комплектации: "Усиленная
+                противовзломная", "4 класс взломостойкости", "4 класс +", "5 класс взломостойкости" с отделкой МДФ, ПВХ,
+                VINORIT, покраска RAL, Дуб, Ясень</p>
+            <div class="design__films-block">
+                <h2 class="design__small-title">Пленки для наружной отделки</h2>
+                <ul class="design__films-list">
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="design__films-block">
+                <h2 class="design__small-title">Пленки для внутренней отделки</h2>
+                <ul class="design__films-list">
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film1.jpg" data-fancybox="gallery">
+                            <img src="img/film1.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film2.jpg" data-fancybox="gallery">
+                            <img src="img/film2.jpg" alt="">
+                        </a>
+                    </li>
+                    <li class="design__films-item">
+                        <a href="img/film3.jpg" data-fancybox="gallery">
+                            <img src="img/film3.jpg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__block">
+            <a class="footer__logo" href="index.html">
+                <img src="img/logo.svg" alt="Ideal">
+            </a>
+            <ul class="footer__links-list">
+                <li class="footer__links-item"><a href="#">Акции</a></li>
+                <li class="footer__links-item"><a href="#">Видео</a></li>
+                <li class="footer__links-item"><a href="#">Блог</a></li>
+                <li class="footer__links-item"><a href="#">О нас</a></li>
+            </ul>
+
+            <ul class="footer__socials socials">
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon socials__icon--facebook" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#youtube"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li class="socials__item">
+                    <a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#telegram"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer__block">
+            <ul class="footer__links-list">
+                <li class="footer__links-item"><a href="#">Каталог дверей</a></li>
+                <li class="footer__links-item"><a href="#">Дизайн</a></li>
+                <li class="footer__links-item"><a href="#">Каталог замков</a></li>
+                <li class="footer__links-item"><a href="#">Сертификаты</a></li>
+                <li class="footer__links-item"><a href="#">Гарантия на взлом бронедверей</a></li>
+                <li class="footer__links-item"><a href="#">Гарантия-сервис</a></li>
+                <li class="footer__links-item"><a href="#">Сотрудничество</a></li>
+                <li class="footer__links-item"><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="footer__block">
+            <span class="footer__contact">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#map"></use>
+                </svg>
+                г. Киев<br> ул. Вадима Гетьмана 17
+            </span>
+            <span class="footer__contact">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#phone"></use>
+                </svg>
+                <a href="tel:+380442237045">+38(044) 223-70-45</a>
+                <a href="tel:+380675078432">+38(067) 507-84-32</a>
+                <a href="tel:+380669225320">+38(066) 922-53-20</a>
+                <a href="tel:+380631000502">+38(063) 1000-502</a>
+            </span>
+            <span class="footer__contact">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#clock"></use>
+                </svg>
+                <span>Пн-Пт: 10:00-20:00</span>
+                <span>Сб-Вс: 11:00 -16:00</span>
+            </span>
+            <span class="footer__contact">
+                <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#email"></use>
+                </svg>
+                <a href="mailto:ideal@dveri-ideal.com.ua">ideal@dveri-ideal.com.ua</a>
+            </span>
+        </div>
+    </div>
+    <div class="footer__copy">
+        “Бронедвери Идеал” (C) 1999 - 2021. все права защищены
+        <p class="footer__warning">
+            Копирование и коммерческое использование графических материалов сайта запрещено.
+            При перепечатке и цитировании гиперссылка на этот сайт обязательна
+        </p>
+    </div>
+</footer>
+
+<div class="modal__back hide">
+    <div class="modal hide">
+        <button class="modal__btn-close modal-close"></button>
+        <h2 class="modal__title">Вызвать мастера по замерам</h2>
+        <p class="modal__subtitle">Заполните форму ниже и наш специалист свяжется с вами</p>
+        <form class="modal__form" method="post">
+            <input class="modal__input" name="name" placeholder="Имя" type="text">
+            <input class="modal__input phone_mask" name="phone" placeholder="Номер телефона" type="tel">
+            <button class="modal__button button">Отправить заявку</button>
+        </form>
+    </div>
+    <div class="modal__overlay hide"></div>
+</div>
+<script src="script/jquery.min.js"></script>
+<script src="script/phone_mask.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/fancybox/jquery.fancybox.min.js"></script>
+<script src="script/main.min.js"></script>
 
 </body>
 </html>
