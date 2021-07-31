@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+
+
+    setTimeout(preloader_hide,500);
+    setTimeout(preloader,1500);
+
+    function preloader_hide() {
+        $('#preloader').addClass('hide');
+    }
+
+    function preloader() {
+        $('#preloader').hide()
+    }
+
     // Слайдер portfolio
     $('.portfolio__list').slick({
         dots: true,
@@ -129,13 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
             follower.classList.remove('active')
         })
     }
-
-    window.addEventListener('scroll', e => {
-        // mouseCoords(e)
-        cursor.classList.remove('hidden')
-        follower.classList.remove('hidden')
-        console.log(true);
-    })
 
     window.addEventListener('mouseout', e => {
         cursor.classList.add('hidden')
