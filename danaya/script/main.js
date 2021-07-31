@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function menu_close() {
         $('.header__nav').addClass('close');
         $('.header__nav').removeClass('open');
-        $('.header__open-menu').removeClass('open');
+        $('.header__open-menu').removeClass('close');
     }
 
     $('.header__open-menu').on('click', function () {
@@ -65,6 +65,17 @@ document.addEventListener('DOMContentLoaded', () => {
             menu_close();
         }
     });
+
+    //Плавное пролистывание к якорю
+    $('a[href*="#"]').click(function (e) {
+
+        menu_close();
+
+        $('html, body').stop().animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
+        e.preventDefault();
+    })
 
 
     // Курсор и аура

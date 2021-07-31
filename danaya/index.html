@@ -78,37 +78,37 @@
 <section class="contacts-fixed">
     <h4 class="contacts-fixed__title">Связаться со мной</h4>
     <ul class="socials socials--green contacts-fixed__list">
-        <li class="socials__item"><a href="#">
+        <li class="socials__item"><a href="viber://chat?number=%2B380999047765">
             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#viber"></use>
             </svg>
         </a></li>
 
-        <li class="socials__item"><a href="#">
+        <li class="socials__item"><a href="tg://resolve?domain=danaya_a_d">
             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#telegram"></use>
             </svg>
         </a></li>
 
-        <li class="socials__item"><a href="#">
+        <li class="socials__item"><a href="https://api.whatsapp.com/send/?phone=%2B380999047765">
             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#whatsapp"></use>
             </svg>
         </a></li>
 
-        <li class="socials__item"><a href="#">
+        <li class="socials__item"><a href="https://www.facebook.com/danaya.davidenko/">
             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#facebook"></use>
             </svg>
         </a></li>
 
-        <li class="socials__item"><a href="#">
+        <li class="socials__item"><a href="https://www.instagram.com/danaya.a.d/">
             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#instagram"></use>
             </svg>
         </a></li>
 
-        <li class="socials__item"><a href="#">
+        <li class="socials__item"><a href="https://freelancehunt.com/freelancer/danaya_a_d.html">
             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                 <use xlink:href="#freelancehunt"></use>
             </svg>
@@ -124,10 +124,10 @@
 
         <nav class="header__nav close">
             <ul class="header__nav-list">
-                <li class="header__nav-item active"><a href=#>Главная</a></li>
-                <li class="header__nav-item"><a href=#>Обо мне</a></li>
-                <li class="header__nav-item"><a href=#>Мои работы</a></li>
-                <li class="header__nav-item"><a href=#>Связаться со мной</a></li>
+                <li class="header__nav-item"><a href=#upper-block>Главная</a></li>
+                <li class="header__nav-item"><a href=#about-me>Обо мне</a></li>
+                <li class="header__nav-item"><a href=#portfolio>Мои работы</a></li>
+                <li class="header__nav-item"><a href=#contacts>Связаться со мной</a></li>
             </ul>
 
             <ul class="header__languages-list">
@@ -142,15 +142,15 @@
 </header>
 
 <main class="page-main">
-    <section class="upper-block">
+    <section class="upper-block" id="upper-block">
         <div class="upper-block__block">
             <div class="upper-block__wrapper wrapper">
                 <div class="upper-block__left-block">
                     <h1 class="upper-block__title">Привет.</h1>
                     <p class="upper-block__subtitle">Я Даная и я Web разработчица</p>
                     <div class="upper-block__buttons">
-                        <button type="button" class="upper-block__button button">Мои работы</button>
-                        <button type="button" class="upper-block__scroll-button"></button>
+                        <a href="#portfolio" type="button" class="upper-block__button button">Мои работы</a>
+                        <a href="#about-me" type="button" class="upper-block__scroll-button"></a>
                     </div>
                 </div>
             </div>
@@ -159,7 +159,7 @@
         </div>
     </section>
 
-    <section class="about-me">
+    <section class="about-me" id="about-me">
         <div class="about-me__wrapper wrapper">
             <h2 class="about-me__title title">Обо мне</h2>
             <div class="about-me__block">
@@ -188,10 +188,10 @@
         </div>
     </section>
 
-    <section class="portfolio">
+    <section class="portfolio" id="portfolio">
         <div class="portfolio__wrapper wrapper">
             <h2 class="portfolio__title title">Мои работы</h2>
-            <ul class="portfolio__filter-list">
+            <ul class="portfolio__filter-list dragscroll">
                 <li class="portfolio__filter-item button button--reverse"><span>Всё</span></li>
                 <li class="portfolio__filter-item button button--reverse"><span>Frontend</span></li>
                 <li class="portfolio__filter-item button button--reverse"><span>Backend</span></li>
@@ -258,8 +258,8 @@
                             </li>
                         </ul>
                         <div class="portfolio__photos">
-                            <img class="portfolio__photo portfolio__photo--big" src="img/case1-d.png" alt="1">
-                            <img class="portfolio__photo portfolio__photo--small" src="img/case1-m.png" alt="2">
+                            <img class="portfolio__photo portfolio__photo--big" src="img/case2-d.png" alt="1">
+                            <img class="portfolio__photo portfolio__photo--small" src="img/case2-m.png" alt="2">
                         </div>
                         <h3 class="portfolio__name">Интернет-магазин "Floristman"</h3>
                         <div class="portfolio__links">
@@ -300,10 +300,10 @@
                             </li>
                         </ul>
                         <div class="portfolio__photos">
-                            <img class="portfolio__photo portfolio__photo--big" src="img/case1-d.png" alt="1">
-                            <img class="portfolio__photo portfolio__photo--small" src="img/case1-m.png" alt="2">
+                            <img class="portfolio__photo portfolio__photo--big" src="img/case3-d.png" alt="1">
+                            <img class="portfolio__photo portfolio__photo--small" src="img/case3-m.png" alt="2">
                         </div>
-                        <h3 class="portfolio__name">Лендинг “Торты на заказ”</h3>
+                        <h3 class="portfolio__name">Интернет-магазин “Подиум”</h3>
                         <div class="portfolio__links">
                             <a class="portfolio__link portfolio__link--color" href="#">Подробнее</a>
                             <a class="portfolio__link portfolio__link--orange" href="#">Посетить сайт</a>
@@ -329,7 +329,7 @@
         </div>
     </section>
 
-    <section class="what-i-use">
+    <section class="what-i-use" id="what-i-use">
         <h2 class="visually-hidden">Что я использую в работе</h2>
         <section class="technologies">
             <div class="technologies__wrapper wrapper">
@@ -401,9 +401,9 @@
         </section>
     </section>
 
-    <section class="feedbacks">
+    <section class="feedbacks" id="feedbacks">
         <div class="feedbacks__wrapper wrapper">
-            <h2 class="feedbacks__title title">Отзывы моих клиентов</h2>
+            <h2 class="feedbacks__title title">Отзывы клиентов</h2>
             <ul class="feedbacks__list">
                 <li class="feedbacks__item">
                     <img class="feedbacks__photo" src="img/avatar.svg" alt="Фото">
@@ -437,44 +437,44 @@
         </div>
     </section>
 
-    <section class="contacts">
+    <section class="contacts" id="contacts">
         <div class="contacts__wrapper wrapper">
             <h2 class="contacts__title title">Свяжитесь со мной</h2>
             <div class="contacts__container">
                 <div class="contacts__form-block">
                     <p class="contacts__subtitle">Любым удобным для вас способом</p>
                     <ul class="socials socials--green contacts__socials">
-                        <li class="socials__item"><a href="#">
+                        <li class="socials__item"><a href="viber://chat?number=%2B380999047765">
                             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#viber"></use>
                             </svg>
                         </a></li>
 
-                        <li class="socials__item"><a href="#">
+                        <li class="socials__item"><a href="tg://resolve?domain=danaya_a_d">
                             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#telegram"></use>
                             </svg>
                         </a></li>
 
-                        <li class="socials__item"><a href="#">
+                        <li class="socials__item"><a href="https://api.whatsapp.com/send/?phone=%2B380999047765">
                             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#whatsapp"></use>
                             </svg>
                         </a></li>
 
-                        <li class="socials__item"><a href="#">
+                        <li class="socials__item"><a href="https://www.facebook.com/danaya.davidenko/">
                             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#facebook"></use>
                             </svg>
                         </a></li>
 
-                        <li class="socials__item"><a href="#">
+                        <li class="socials__item"><a href="https://www.instagram.com/danaya.a.d/">
                             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#instagram"></use>
                             </svg>
                         </a></li>
 
-                        <li class="socials__item"><a href="#">
+                        <li class="socials__item"><a href="https://freelancehunt.com/freelancer/danaya_a_d.html">
                             <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                                 <use xlink:href="#freelancehunt"></use>
                             </svg>
@@ -509,47 +509,47 @@
         </a>
 
         <ul class="footer__list">
-            <li class="footer__item"><a href="#">Главная</a></li>
-            <li class="footer__item"><a href="#">Обо мне</a></li>
+            <li class="footer__item"><a href="#upper-block">Главная</a></li>
+            <li class="footer__item"><a href="#about-me">Обо мне</a></li>
         </ul>
 
         <ul class="footer__list">
-            <li class="footer__item"><a href="#">Мои работы</a></li>
-            <li class="footer__item"><a href="#">Связаться со мной</a></li>
+            <li class="footer__item"><a href="#portfolio">Мои работы</a></li>
+            <li class="footer__item"><a href="#contacts">Связаться со мной</a></li>
         </ul>
 
         <ul class="socials socials--orange footer__socials">
-            <li class="socials__item"><a href="#">
+            <li class="socials__item"><a href="viber://chat?number=%2B380999047765">
                 <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#viber"></use>
                 </svg>
             </a></li>
 
-            <li class="socials__item"><a href="#">
+            <li class="socials__item"><a href="tg://resolve?domain=danaya_a_d">
                 <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#telegram"></use>
                 </svg>
             </a></li>
 
-            <li class="socials__item"><a href="#">
+            <li class="socials__item"><a href="https://api.whatsapp.com/send/?phone=%2B380999047765">
                 <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#whatsapp"></use>
                 </svg>
             </a></li>
 
-            <li class="socials__item"><a href="#">
+            <li class="socials__item"><a href="https://www.facebook.com/danaya.davidenko/">
                 <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#facebook"></use>
                 </svg>
             </a></li>
 
-            <li class="socials__item"><a href="#">
+            <li class="socials__item"><a href="https://www.instagram.com/danaya.a.d/">
                 <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#instagram"></use>
                 </svg>
             </a></li>
 
-            <li class="socials__item"><a href="#">
+            <li class="socials__item"><a href="https://freelancehunt.com/freelancer/danaya_a_d.html">
                 <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#freelancehunt"></use>
                 </svg>
