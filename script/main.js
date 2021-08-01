@@ -49,9 +49,18 @@ document.addEventListener('DOMContentLoaded', () => {
         else if(filter === 'all'){
             $(".portfolio__list").slick('slickUnfilter');
         }
-
     })
 
+    // Поворот плашек portfolio
+    $('.portfolio__link--color').on('click', function(e){
+        e.preventDefault();
+        $(this).closest('.portfolio__item').addClass('active');
+    });
+
+    $('.portfolio__close').on('click', function(e){
+        e.preventDefault();
+        $(this).closest('.portfolio__item').removeClass('active');
+    });
 
     // Слайдер отзывов
     $('.feedbacks__list').slick({
