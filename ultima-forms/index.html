@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<main class="page-main">
+    <section class="thanks">
+        <img class="thanks__img" src="img/star.svg" alt="Star">
+        <h1 class="thanks__title">Tudo certo Jane!</h1>
+        <p class="thanks__text">Você vai receber nosso email de confirmação em breve com todos os detalhes.</p>
+
+        <ul class="thanks__list">
+            <li class="thanks__item">
+                <img class="thanks__item-img" src="img/thanks1.svg" alt="">
+                <p class="thanks__item-text">Pagamento efetuado!</p>
+            </li>
+
+            <li class="thanks__item">
+                <img class="thanks__item-img" src="img/thanks2.svg" alt="">
+                <p class="thanks__item-text">O acesso ao curso está aberto</p>
+            </li>
+
+            <li class="thanks__item">
+                <img class="thanks__item-img" src="img/thanks3.svg" alt="">
+                <p class="thanks__item-text">Comece a aprender agora</p>
+            </li>
+        </ul>
+
+        <button class="thanks__button button">Comece já</button>
+    </section>
+</main>
+
+<div class="modal-back">
+    <div class="modal steps">
+        <div class="modal__title-block">
+            <h3 class="modal__title">Detalhes do pagamento</h3>
+            <time class="modal__time" id="time">05:00</time>
+        </div>
+
+        <form class="modal__form form" action="" method="post">
+            <div id="step1">
+                <div class="modal__steps">
+                    <span class="modal__step active first"></span>
+                    <span class="modal__step second"></span>
+                </div>
+
+                <div class="modal__product modal__product--big product">
+                    <div class="product__about">
+                        <p class="product__type">Product</p>
+                        <p class="product__name">Design Thinking & UX/UI</p>
+                        <p class="product__discount-block">Preço DESCONTO <span class="product__discount">-40%</span>
+                        </p>
+                    </div>
+                    <img src="img/phone.svg" alt="Phone" class="product__phone">
+                </div>
+
+                <fieldset class="form__fieldset-prices">
+                    <label>
+                        <input class="visually-hidden" type="radio" name="price" value="197" id="one"
+                               data-count="" required checked>
+                        <span class="form__price-radio">
+                            <span class="form__price-radio-title"><small>R$</small><mark>197</mark></span>
+                            <span class="form__price-radio-count form__price-radio-count--underline">R$332</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input class="visually-hidden" type="radio" name="price" value="69" id="three"
+                               data-count="3 parcelas" required>
+                        <span class="form__price-radio">
+                            <span class="form__price-radio-title"><small>R$</small><mark>69</mark>/mês</span>
+                            <span class="form__price-radio-count">3 parcelas</span>
+                        </span>
+                    </label>
+                    <label>
+                        <input class="visually-hidden" type="radio" name="price" value="35" id="six"
+                               data-count="6 parcelas" required>
+                        <span class="form__price-radio">
+                            <span class="form__price-radio-title"><small>R$</small><mark>35</mark>/mês</span>
+                            <span class="form__price-radio-count">6 parcelas</span>
+                        </span>
+                    </label>
+                </fieldset>
+                <fieldset class="form__fieldset-pagamente">
+                    <legend class="form__legend">Metodo de pagamente</legend>
+
+                    <label>
+                        <input class="visually-hidden" type="radio" name="pagamente" value="credito" id="credito"
+                               required checked>
+                        <span class="form__pagamente-radio">Cartão de crédito</span>
+                    </label>
+                    <label>
+                        <input class="visually-hidden" type="radio" name="pagamente" value="boleto" id="boleto"
+                               required>
+                        <span class="form__pagamente-radio"><img src="img/boleto.jpg" alt="Boleto"></span>
+                    </label>
+                    <label>
+                        <input class="visually-hidden" type="radio" name="pagamente" value="pix" id="pix"
+                               required>
+                        <span class="form__pagamente-radio"><img src="img/pix.jpg" alt="PIX"></span>
+                    </label>
+                </fieldset>
+                <fieldset class="form__fieldset-inputs" id="step1-inputs">
+                    <legend class="form__legend">Personal</legend>
+
+                    <label class="form__input form__input--medium">
+                        <img src="img/name-icon.svg" alt="name">
+                        <input id="name" name="name"
+                               placeholder="Nome" type="text" required>
+                    </label>
+
+                    <label class="form__input form__input--small">
+                        <img src="img/sever-icon.svg" alt="cpf">
+                        <input id="cpf" name="cpf" placeholder="CPF" type="number" required
+                               maxlength="3" oninput="this.value=this.value.slice(0,this.maxLength)">
+                    </label>
+
+                    <label class="form__input form__input--big">
+                        <img src="img/phone-icon.svg" alt="phone">
+                        <input id="phone" name="phone"
+                               placeholder="Número de telefone" type="tel" required>
+                    </label>
+                    <label class="form__input form__input--big">
+                        <img src="img/email-icon.svg" alt="email">
+                        <input id="email" name="email"
+                               placeholder="E-mail" type="text" required>
+                    </label>
+                </fieldset>
+                <button class="button form__button form__button--big" type="button">Continuar</button>
+                <p class="form__politic">Clicando no botão, atesto que aceito os
+                    <a href="#">Política de uso</a> e <a href="#">Termos do usuário</a></p>
+            </div>
+
+            <div id="step2" class="visually-hidden">
+                <div class="modal__steps">
+                    <span class="modal__step active first"></span>
+                    <span class="modal__step active second"></span>
+                </div>
+                <div class="modal__product product">
+                    <div class="product__about">
+                        <p class="product__type">Product</p>
+                        <p class="product__name">Design Thinking & UX/UI</p>
+                        <p class="product__discount-block">Preço DESCONTO <span class="product__discount">-40%</span>
+                        </p>
+                    </div>
+                    <img src="img/phone.svg" alt="Phone" class="product__phone">
+                </div>
+
+                <fieldset class="form__fieldset-inputs">
+                    <legend class="form__legend">Address</legend>
+
+                    <label class="form__input form__input--big">
+                        <img src="img/name-icon.svg" alt="estado">
+                        <select required>
+                            <option value="" disabled selected>Estado</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                        </select>
+                    </label>
+
+                    <label class="form__input form__input--medium">
+                        <img src="img/map-icon.svg" alt="cidase">
+                        <input id="cidade" name="cidade"
+                               placeholder="Cidade" type="text" required>
+                    </label>
+
+                    <label class="form__input form__input--small">
+                        <input id="cep" name="cep" placeholder="CEP" type="number" required
+                               maxlength="3" oninput="this.value=this.value.slice(0,this.maxLength)">
+                    </label>
+
+                    <label class="form__input form__input--big">
+                        <img src="img/point-icon.svg" alt="address">
+                        <input id="address" name="address"
+                               placeholder="Address line" type="tel" required>
+                    </label>
+                </fieldset>
+                <fieldset class="form__fieldset-inputs">
+                    <legend class="form__legend">Payment</legend>
+
+                    <label class="form__input form__input--big">
+                        <img src="img/name-icon.svg" alt="nome">
+                        <input id="nome" name="nome"
+                               placeholder="Nome do titular do cartão" type="text" required>
+                    </label>
+
+                    <label class="form__input form__input--big">
+                        <img src="img/card-icon.svg" alt="cart">
+                        <input id="cart" name="cart"
+                               placeholder="Número do cartão" type="number" required
+                               maxlength="16" oninput="this.value=this.value.slice(0,this.maxLength)">
+                    </label>
+
+                    <label class="form__input form__input--medium">
+                        <img src="img/calendar-icon.svg" alt="data">
+                        <input id="data" name="data"
+                               placeholder="Data de validade" type="text" required
+                               onkeyup="addSlashes(this)" maxlength=7>
+                    </label>
+
+                    <label class="form__input form__input--small">
+                        <input id="cvv" name="cvv" placeholder="CVV" type="number" required
+                               maxlength="3" oninput="this.value=this.value.slice(0,this.maxLength)">
+                    </label>
+                </fieldset>
+                <div class="form__confirm">
+                    <span class="form__total">
+                        R$<strong>197</strong>.00<br>
+                        <small></small>
+                    </span>
+                    <button class="button form__button form__button--small" type="submit">Efetuar compra</button>
+                </div>
+            </div>
+        </form>
+    </div >
+
+    <div class="modal process process--pix visually-hidden">
+        <img class="process__img" src="img/loading.gif" alt="Loading">
+        <h4 class="process__title">Waiting for payment</h4>
+        <h5 class="process__subtitle">To complete your payment </h5>
+
+        <div class="process__container">
+            <div class="process__text-block">
+                <p class="process__text">Para efetuar a compra, copie o código e cole na área de pagamento do Pix</p>
+                <button class="button process__button process__button--small">Copiar código</button>
+            </div>
+
+            <div class="process__code-block">
+                <p class="process__text">Ou abra o aplicativo do seu banco e escaneie o QR code</p>
+                <img class="process__code" src="img/code.jpg" alt="Code">
+            </div>
+        </div>
+    </div>
+
+    <div class="modal process process--boleto visually-hidden">
+        <img class="process__img" src="img/loading.gif" alt="Loading">
+        <h4 class="process__title">Aguardando pagamento</h4>
+
+        <div class="process__container">
+            <div class="process__text-block">
+                <p class="process__text">Acesse o link para acessar seu banco e completar o pagamento </p>
+                <button class="button process__button process__button">Acesse</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal process process--card visually-hidden">
+        <img class="process__img" src="img/loading.gif" alt="Loading">
+        <h4 class="process__title">Pagamento autorizado</h4>
+    </div>
+
+    <div class="modal__overlay hide"></div>
+</div>
+
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
+
