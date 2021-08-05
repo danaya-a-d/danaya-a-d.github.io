@@ -8,32 +8,6 @@
 </head>
 <body>
 
-<main class="page-main">
-    <section class="thanks">
-        <img class="thanks__img" src="img/star.svg" alt="Star">
-        <h1 class="thanks__title">Tudo certo Jane!</h1>
-        <p class="thanks__text">Você vai receber nosso email de confirmação em breve com todos os detalhes.</p>
-
-        <ul class="thanks__list">
-            <li class="thanks__item">
-                <img class="thanks__item-img" src="img/thanks1.svg" alt="">
-                <p class="thanks__item-text">Pagamento efetuado!</p>
-            </li>
-
-            <li class="thanks__item">
-                <img class="thanks__item-img" src="img/thanks2.svg" alt="">
-                <p class="thanks__item-text">O acesso ao curso está aberto</p>
-            </li>
-
-            <li class="thanks__item">
-                <img class="thanks__item-img" src="img/thanks3.svg" alt="">
-                <p class="thanks__item-text">Comece a aprender agora</p>
-            </li>
-        </ul>
-
-        <button class="thanks__button button">Comece já</button>
-    </section>
-</main>
 
 <div class="modal-back">
     <div class="modal steps">
@@ -42,7 +16,7 @@
             <time class="modal__time" id="time">05:00</time>
         </div>
 
-        <form class="modal__form form" action="" method="post">
+        <form class="modal__form form" action="thanks.html" method="post">
             <div id="step1">
                 <div class="modal__steps">
                     <span class="modal__step active first"></span>
@@ -130,7 +104,7 @@
                                placeholder="E-mail" type="text" required>
                     </label>
                 </fieldset>
-                <button class="button form__button form__button--big" type="button">Continuar</button>
+                <button class="button form__button form__button--big" type="submit">Continuar</button>
                 <p class="form__politic">Clicando no botão, atesto que aceito os
                     <a href="#">Política de uso</a> e <a href="#">Termos do usuário</a></p>
             </div>
@@ -212,7 +186,7 @@
                         R$<strong>197</strong>.00<br>
                         <small></small>
                     </span>
-                    <button class="button form__button form__button--small" type="submit">Efetuar compra</button>
+                    <button class="button form__button form__button--small" id="btn-send" type="submit">Efetuar compra</button>
                 </div>
             </div>
         </form>
@@ -253,7 +227,7 @@
         <h4 class="process__title">Pagamento autorizado</h4>
     </div>
 
-    <div class="modal__overlay hide"></div>
+    <div class="modal__overlay visually-hidden"></div>
 </div>
 
 <script src="script/main.min.js"></script>
