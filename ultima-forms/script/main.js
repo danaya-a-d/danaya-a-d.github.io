@@ -21,6 +21,16 @@ document.addEventListener('DOMContentLoaded', () => {
         step2 = document.querySelector('#step2'),
         step1_btn = document.querySelector('#step2 .modal__step.first');
 
+    let btn_send = document.querySelector('#btn-send');
+
+    // btn_send.addEventListener('click', function (e) {
+    //     e.preventDefault();
+    //
+    //     if (pagamente_credito.value === true) {
+    //
+    //     }
+    // });
+
     // помещение исходного значения в итоговое окно
     total.innerText = price;
     subtotal.innerText = price_cnt;
