@@ -198,7 +198,6 @@ $(document).ready(function () {
         dots: true,
         dotsClass: "my-dots",
         arrows: false,
-        // fade: true,
         speed: 1000,
         cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)',
         touchThreshold: 100,
@@ -214,7 +213,27 @@ $(document).ready(function () {
         arrows: true,
         slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow: 3
+                }
+            },
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     //Слайдер фото домов
@@ -229,7 +248,15 @@ $(document).ready(function () {
         autoplaySpeed: 4000,
         infinite: true,
         pauseOnFocus: false,
-        pauseOnHover: false
+        pauseOnHover: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 1
+                }
+            }
+        ]
     });
 
     //Слайдеры производства
@@ -239,7 +266,15 @@ $(document).ready(function () {
         arrows: false,
         dots: false,
         fade: true,
-        asNavFor: '.production__small-list'
+        asNavFor: '.production__small-list',
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: true,
+                }
+            }
+        ]
     });
 
     $('.production__small-list').slick({
@@ -249,7 +284,7 @@ $(document).ready(function () {
         dots: false,
         arrows: true,
         focusOnSelect: true,
-        infinite: false,
+        infinite: false
     });
 
     //Слайдеры карточки товара
@@ -315,10 +350,10 @@ $(document).ready(function () {
 
 
     //показ доп.телефонов в шапке
-    $('.phones a').slice(2, 6).hide();
-    $('.header__more-phones').on('click', function (e) {
-        $('.phones a').slice(2, 6).toggle();
-    });
+    // $('.phones a').slice(2, 6).hide();
+    // $('.header__more-phones').on('click', function (e) {
+    //     $('.phones a').slice(2, 6).toggle();
+    // });
 
 
     //увеличение изображений
@@ -332,5 +367,64 @@ $(document).ready(function () {
             enableEscapeButton: true
         });
     }
+
+
+    //перемещение элементов на моб
+    function moving_header_elements() {
+        const mediaQuery = window.matchMedia('(max-width: 991px)');
+        if (mediaQuery.matches) {
+            // if($('.header__mobile').children('.header__languages').length < 0) {
+            $('.header__mobile').append($('.header__logo'));
+            $('.header__mobile').append($('.header__languages'));
+            $('.footer__block-last').append($('.footer__socials'));
+            // }
+        } else {
+            $('.header__bottom .wrapper').append($('.header__languages'));
+            $('.header__top .wrapper').prepend($('.header__logo'));
+            $('.footer__block-first').append($('.footer__socials'));
+        }
+    }
+
+    // перемещение элементов в хедере
+    moving_header_elements();
+    window.addEventListener('resize', function (event) {
+        moving_header_elements();
+    }, true);
+
+
+    // Фикс 100vh на мобильных устройствах
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+
+    // Открытие и закрытие мобильного меню
+    function menu_open() {
+        $('.header').removeClass('close');
+        $('.header').addClass('fixed');
+        $('.header__open-menu').addClass('open');
+    }
+
+    function menu_close() {
+        $('.header').addClass('close');
+        $('.header').removeClass('fixed');
+        $('.header__open-menu').removeClass('open');
+    }
+
+    $('.header__open-menu').on('click', function () {
+        if ($(".header").hasClass('close')) {
+            menu_open();
+        } else {
+            menu_close();
+        }
+    });
 });
 

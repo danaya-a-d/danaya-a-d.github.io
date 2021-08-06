@@ -59,10 +59,18 @@
     </svg>
 </div>
 
-<header class="header">
+<header class="header-mobile">
+    <button class="header__open-menu"></button>
+</header>
+
+<header class="header close">
     <div class="header__top">
         <div class="header__wrapper wrapper">
-            <p class="header__contact">
+            <a class="header__logo" href="index.html">
+                <img src="img/logo.svg" alt="Ideal">
+            </a>
+
+            <p class="header__contact address">
                 <svg class="header__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#map"></use>
                 </svg>
@@ -118,18 +126,15 @@
                 <button class="header__more-phones"></button>
             </p>
 
-            <button class="header__button button-modal">Вызвать замерщика</button>
+            <button class="header__button button-modal">Заказать</button>
         </div>
     </div>
     <div class="header__bottom">
         <div class="header__wrapper wrapper">
-            <a class="header__logo" href="index.html">
-                <img src="img/logo.svg" alt="Ideal">
-            </a>
-
             <a class="header__home" href="index.html"></a>
 
             <ul class="header__links">
+                <li class="header__link header__link--main"><a href="index.html">Главная</a></li>
                 <li class="header__link active">
                     <a href="category-doors.html">Каталог дверей</a>
                     <ul class="header__sublinks">
@@ -174,6 +179,8 @@
                     </ul>
                 </li>
                 <li class="header__link"><a href="certificates.html">Сертификаты</a></li>
+                <li class="header__link"><a href="sale.html">Акции</a></li>
+                <li class="header__link"><a href="videos.html">Видео</a></li>
                 <li class="header__link"><a href="about-us.html">О нас</a></li>
                 <li class="header__link"><a href="blog.html">Блог</a></li>
                 <li class="header__link"><a href="contacts.html">Контакты</a></li>
@@ -183,8 +190,10 @@
                 <li class="header__language header__language--active"><a href="#">RU</a></li>
                 <li class="header__language"><a href="#">UA</a></li>
             </ul>
+
         </div>
     </div>
+    <div class="header__mobile"></div>
 </header>
 
 <main class="page-main">
@@ -193,7 +202,7 @@
             <li class="upper-block__item">
                 <div class="upper-block__wrapper">
                     <div class="upper-block__title-block">
-                        <h1 class="upper-block__title">Бронедвери серии киборг</h1>
+                        <h1 class="upper-block__title">Бронедвери серии <span>Киборг</span></h1>
                         <a href="cyborg.html" class="button upper-block__button">Подробнее</a>
                     </div>
                 </div>
@@ -202,7 +211,7 @@
             <li class="upper-block__item">
                 <div class="upper-block__wrapper">
                     <div class="upper-block__title-block">
-                        <h1 class="upper-block__title">Бронедвери серии киборг</h1>
+                        <h1 class="upper-block__title">Бронедвери серии <span>Киборг</span></h1>
                         <a href="gladiator.html" class="button upper-block__button">Подробнее</a>
                     </div>
                 </div>
@@ -211,7 +220,7 @@
             <li class="upper-block__item">
                 <div class="upper-block__wrapper">
                     <div class="upper-block__title-block">
-                        <h1 class="upper-block__title">Бронедвери серии SV</h1>
+                        <h1 class="upper-block__title">Бронедвери серии <span>SV</span></h1>
                         <a href="sv.html" class="button upper-block__button">Подробнее</a>
                     </div>
                 </div>
@@ -259,7 +268,7 @@
         </div>
     </section>
     <section class="tests">
-        <h2 class="tests__title">Сертификаты на бронедвери взломостойкие-пуленепробиваемые  EN 1627 RC 3, 4, 5, 6
+        <h2 class="tests__title">Сертификаты на бронедвери взломостойкие-пуленепробиваемые EN 1627 RC 3, 4, 5, 6
             класса и ДСТУ 4547 ОЗК 2, 4 «БО»</h2>
         <div class="tests__wrapper wrapper">
             <div class="tests__section">
@@ -716,7 +725,6 @@
             </ol>
             <div class="lock__img-block">
                 <img class="lock__img" src="img/lock.png" alt="">
-                <a href="#" class="lock__button button">Подробнее</a>
             </div>
             <ul class="lock__list">
                 <li class="lock__item">RFID - бесконтактные брелоки подносят к скрытому считывателю, активны на
@@ -731,6 +739,7 @@
                 <li class="lock__item">Биометрическая система распознавания отпечатков пальцев</li>
             </ul>
         </div>
+        <a href="#" class="lock__button button">Подробнее</a>
     </section>
     <section class="mech-lock">
         <div class="mech-lock__wrapper wrapper">
@@ -799,22 +808,38 @@
             <h2 class="blog__title title">Блог</h2>
             <ul class="blog__list">
                 <li class="blog__item">
-                    <img class="blog__photo" src="img/blog1.jpg" alt="">
+                    <div class="blog__photo-wrapper">
+                        <div class="blog__photo-container">
+                            <img class="blog__photo" src="img/blog1.jpg" alt="">
+                        </div>
+                    </div>
                     <h5 class="blog__name">Гарантия на взлом бронедверей</h5>
                     <a href="news.html" class="blog__button button">Подробнее</a>
                 </li>
                 <li class="blog__item">
-                    <img class="blog__photo" src="img/blog2.jpg" alt="">
+                    <div class="blog__photo-wrapper">
+                        <div class="blog__photo-container">
+                            <img class="blog__photo" src="img/blog2.jpg" alt="">
+                        </div>
+                    </div>
                     <h5 class="blog__name">Гарантия-сервис</h5>
                     <a href="news.html" class="blog__button button">Подробнее</a>
                 </li>
                 <li class="blog__item">
-                    <img class="blog__photo" src="img/blog3.jpg" alt="">
+                    <div class="blog__photo-wrapper">
+                        <div class="blog__photo-container">
+                            <img class="blog__photo" src="img/blog3.jpg" alt="">
+                        </div>
+                    </div>
                     <h5 class="blog__name">Id duis in elementum, ultrices. </h5>
                     <a href="news.html" class="blog__button button">Подробнее</a>
                 </li>
                 <li class="blog__item">
-                    <img class="blog__photo" src="img/blog4.jpg" alt="">
+                    <div class="blog__photo-wrapper">
+                        <div class="blog__photo-container">
+                            <img class="blog__photo" src="img/blog4.jpg" alt="">
+                        </div>
+                    </div>
                     <h5 class="blog__name">Dui viverra sed tempor lectus risus.</h5>
                     <a href="news.html" class="blog__button button">Подробнее</a>
                 </li>
@@ -827,8 +852,7 @@
     <section class="how-buy">
         <div class="how-buy__wrapper wrapper">
             <h2 class="how-buy__title title">Как купить
-                <mark>входную дверь</mark>
-                ?
+                <mark>входную дверь</mark>?
             </h2>
             <p class="how-buy__subtitle">5 простых шагов</p>
             <ol class="how-buy__list">
@@ -909,11 +933,11 @@
 
 <footer class="footer">
     <div class="footer__wrapper wrapper">
-        <div class="footer__block">
+        <div class="footer__block footer__block-first">
             <a class="footer__logo" href="index.html">
                 <img src="img/logo.svg" alt="Ideal">
             </a>
-            <ul class="footer__links-list">
+            <ul class="footer__links-list footer__links-list--horizontal">
                 <li class="footer__links-item"><a href="#">Акции</a></li>
                 <li class="footer__links-item"><a href="#">Видео</a></li>
                 <li class="footer__links-item"><a href="#">Блог</a></li>
@@ -951,7 +975,7 @@
                 </li>
             </ul>
         </div>
-        <div class="footer__block">
+        <div class="footer__block footer__block-second">
             <ul class="footer__links-list">
                 <li class="footer__links-item"><a href="#">Каталог дверей</a></li>
                 <li class="footer__links-item"><a href="#">Дизайн</a></li>
@@ -963,7 +987,7 @@
                 <li class="footer__links-item"><a href="#">Контакты</a></li>
             </ul>
         </div>
-        <div class="footer__block">
+        <div class="footer__block footer__block-last">
             <span class="footer__contact">
                 <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#map"></use>
@@ -995,7 +1019,7 @@
         </div>
     </div>
     <div class="footer__copy">
-        “Бронедвери Идеал” (C) 1999 - 2021. все права защищены
+        <span class="footer__copy-text">“Бронедвери Идеал” (C) 1999 - 2021. все права защищены</span>
         <p class="footer__warning">
             Копирование и коммерческое использование графических материалов сайта запрещено.
             При перепечатке и цитировании гиперссылка на этот сайт обязательна
@@ -1009,8 +1033,10 @@
         <h2 class="modal__title">Вызвать мастера по замерам</h2>
         <p class="modal__subtitle">Заполните форму ниже и наш специалист свяжется с вами</p>
         <form class="modal__form" method="post">
-            <input class="modal__input" name="name" placeholder="Имя" type="text">
-            <input class="modal__input phone_mask" name="phone" placeholder="Номер телефона" type="tel">
+            <label class="visually-hidden" for="modal-name">Имя</label>
+            <input class="modal__input" id="modal-name" name="name" placeholder="Имя" type="text">
+            <label class="visually-hidden" for="modal-phone">Номер телефона</label>
+            <input class="modal__input phone_mask" id="modal-phone" name="phone" placeholder="Номер телефона" type="tel">
             <button class="modal__button button">Отправить заявку</button>
         </form>
     </div>
