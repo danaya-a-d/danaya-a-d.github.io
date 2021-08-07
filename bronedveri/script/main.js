@@ -310,6 +310,14 @@ $(document).ready(function () {
         arrows: true,
         focusOnSelect: true,
         infinite: false,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 4
+                }
+            }
+        ]
     });
 
 
@@ -350,11 +358,16 @@ $(document).ready(function () {
 
 
     //показ доп.телефонов в шапке
-    // $('.phones a').slice(2, 6).hide();
-    // $('.header__more-phones').on('click', function (e) {
-    //     $('.phones a').slice(2, 6).toggle();
-    // });
-
+    function toggle_phones() {
+        if (mediaQuery.matches) {
+            $('.phones a').slice(0, 6).show();
+        } else {
+            $('.phones a').slice(2, 6).hide();
+            $('.header__more-phones').on('click', function (e) {
+                $('.phones a').slice(2, 6).toggle();
+            });
+        }
+    }
 
     //увеличение изображений
     if ($('[data-fancybox="gallery"]').length > 0) {
@@ -368,26 +381,36 @@ $(document).ready(function () {
         });
     }
 
+    const mediaQuery = window.matchMedia('(max-width: 991px)');
 
     //перемещение элементов на моб
     function moving_header_elements() {
-        const mediaQuery = window.matchMedia('(max-width: 991px)');
+
         if (mediaQuery.matches) {
             // if($('.header__mobile').children('.header__languages').length < 0) {
             $('.header__mobile').append($('.header__logo'));
             $('.header__mobile').append($('.header__languages'));
+
             $('.footer__block-last').append($('.footer__socials'));
+
+            $('.product__wrapper').append($('.product__title'));
+            $('.product__wrapper').append($('.product__about-block'));
+
             // }
         } else {
             $('.header__bottom .wrapper').append($('.header__languages'));
             $('.header__top .wrapper').prepend($('.header__logo'));
-            $('.footer__block-first').append($('.footer__socials'));
+
+            $('.product__wrapper').prepend($('.product__title'));
+            $('.product__cart').append($('.product__about-block'));
         }
     }
 
     // перемещение элементов в хедере
+    toggle_phones();
     moving_header_elements();
     window.addEventListener('resize', function (event) {
+        toggle_phones();
         moving_header_elements();
     }, true);
 
