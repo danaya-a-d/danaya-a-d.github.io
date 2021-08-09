@@ -17,8 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pagamente_boleto = document.getElementById('boleto'),
             pagamente_pix = document.getElementById('pix');
 
-        let step1_inputs = document.querySelector('#step1').querySelectorAll('input'),
-            step2_inputs = document.querySelector('#step2').querySelectorAll('input'),
+        let step1_inputs = document.querySelector('#step1').querySelectorAll('.input'),
+            step2_inputs = document.querySelector('#step2').querySelectorAll('.input'),
             step1 = document.querySelector('#step1'),
             step2 = document.querySelector('#step2'),
             step1_btn = document.querySelector('#step2 .modal__step.first'),

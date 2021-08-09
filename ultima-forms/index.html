@@ -84,24 +84,24 @@
                     <legend class="form__legend">Personal</legend>
 
                     <label class="form__input form__input--medium">
-                        <input id="name" name="name"
+                        <input id="name" name="name" class="input"
                                placeholder="Nome" type="text" required>
                         <img src="img/name-icon.svg" alt="name">
                     </label>
 
                     <label class="form__input form__input--small">
-                        <input id="cpf" name="cpf" placeholder="CPF" type="text" required
+                        <input id="cpf" name="cpf" placeholder="CPF" type="text" class="input" required
                                maxlength="20">
                         <img src="img/sever-icon.svg" alt="cpf">
                     </label>
 
                     <label class="form__input form__input--big">
-                        <input id="phone" name="phone" class="phone_mask"
+                        <input id="phone" name="phone" class="phone_mask input"
                                placeholder="Número de telefone" type="tel" required>
                         <img src="img/phone-icon.svg" alt="phone">
                     </label>
                     <label class="form__input form__input--big">
-                        <input id="email" name="email"
+                        <input id="email" name="email" class="input"
                                placeholder="E-mail" type="text" required>
                         <img src="img/email-icon.svg" alt="email">
                     </label>
@@ -130,8 +130,8 @@
                     <legend class="form__legend">Address</legend>
 
                     <label class="form__input form__input--big">
-                        <select name="address_st" id="address_st" required>
-                            <option value="" disabled selected>Selecione o Estado</option>
+                        <select name="address_st" id="address_st" class="input" required>
+                            <option value="" disabled="" selected="">Selecione o Estado</option>
                             <option value="AC">Acre</option>
                             <option value="AL">Alagoas</option>
                             <option value="AP">Amapá</option>
@@ -164,18 +164,18 @@
                     </label>
 
                     <label class="form__input form__input--medium">
-                        <input id="cidade" name="cidade"
+                        <input id="cidade" name="cidade" class="input"
                                placeholder="Cidade" type="text" required>
                         <img src="img/map-icon.svg" alt="cidase">
                     </label>
 
                     <label class="form__input form__input--small">
-                        <input id="cep" name="cep" placeholder="CEP" type="number" required
+                        <input id="cep" name="cep" placeholder="CEP" type="number" class="input" required
                                maxlength="6" oninput="this.value=this.value.slice(0,this.maxLength)">
                     </label>
 
                     <label class="form__input form__input--big">
-                        <input id="address" name="address"
+                        <input id="address" name="address" class="input"
                                placeholder="Address line" type="text" required>
                         <img src="img/point-icon.svg" alt="address">
                     </label>
@@ -184,26 +184,26 @@
                     <legend class="form__legend">Payment</legend>
 
                     <label class="form__input form__input--big">
-                        <input id="nome" name="nome"
+                        <input id="nome" name="nome" class="input"
                                placeholder="Nome do titular do cartão" type="text" required>
                         <img src="img/name-icon.svg" alt="nome">
                     </label>
 
                     <label class="form__input form__input--big">
-                        <input id="cart" name="cart"
+                        <input id="cart" name="cart" class="input"
                                placeholder="Número do cartão" type="number" required
                                maxlength="16" oninput="this.value=this.value.slice(0,this.maxLength)">
                         <img src="img/card-icon.svg" alt="cart">
                     </label>
 
                     <label class="form__input form__input--medium">
-                        <input id="data" name="data" class="data_mask"
+                        <input id="data" name="data" class="data_mask input"
                                placeholder="Data de validade" type="text" required>
                         <img src="img/calendar-icon.svg" alt="data">
                     </label>
 
                     <label class="form__input form__input--small">
-                        <input id="cvv" name="cvv" placeholder="CVV" type="number" required
+                        <input id="cvv" name="cvv" placeholder="CVV" type="number" class="input" required
                                maxlength="3" oninput="this.value=this.value.slice(0,this.maxLength)">
                     </label>
                 </fieldset>
