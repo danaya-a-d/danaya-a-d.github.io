@@ -98,7 +98,7 @@
                     </li>
                 </ul>
 
-                <button class="advantages__button button">Нужна срочная помощь</button>
+                <button class="advantages__button button recall-js">Нужна срочная помощь</button>
             </div>
         </div>
 
@@ -129,7 +129,9 @@
             </div>
         </div>
 
-        <button class="about-us__button button button--finger">Получить скидку 10% на первичный прием</button>
+        <div class="wrapper">
+            <button class="about-us__button button button--finger recall-js">Получить скидку 10% на первичный прием</button>
+        </div>
     </section>
     <section class="methods" id="methods">
         <div class="methods__wrapper wrapper">
@@ -162,17 +164,17 @@
 
             <div class="methods__bottom-block">
 
-                <form class="methods__form form">
+                <form class="methods__form form" action="#" method="post">
                     <h2 class="form__title title">Не знаете, какой метод подойдет в вашей ситуации?</h2>
                     <p class="form__subtitle subtitle">Оставьте заявку на бесплатную консультацию и
                         получите скидку 10% на первичный прием</p>
                     <fieldset class="form__fieldset">
                         <label class="form__label">
-                            <input class="form__input" type="text" placeholder="Ваше имя">
+                            <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
                         </label>
 
                         <label class="form__label">
-                            <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон">
+                            <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
                         </label>
                     </fieldset>
 
@@ -232,7 +234,7 @@
 
                         <div class="useful__button-block">
                             <span>У вас похожий случай?</span>
-                            <button class="button button--finger">Записаться на прием</button>
+                            <button class="button button--finger recall-js">Записаться на прием</button>
                         </div>
                     </div>
                 </li>
@@ -250,7 +252,7 @@
 
                         <div class="useful__button-block">
                             <span>У вас похожий случай?</span>
-                            <button class="button button--finger">Записаться на прием</button>
+                            <button class="button button--finger recall-js">Записаться на прием</button>
                         </div>
                     </div>
                 </li>
@@ -270,16 +272,16 @@
                     также раковыми опухолями и сепсисом, противопоказано остеопатическое лечение.</p>
             </div>
 
-            <form class="contraindications__form form">
+            <form class="contraindications__form form" action="#" method="post">
                 <h2 class="form__title title">Возникли дополнительные вопросы? Ваш звонок поможет
                     снять все сомнения!</h2>
                 <fieldset class="form__fieldset">
                     <label class="form__label">
-                        <input class="form__input" type="text" placeholder="Ваше имя">
+                        <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
                     </label>
 
                     <label class="form__label">
-                        <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон">
+                        <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
                     </label>
                 </fieldset>
 
@@ -301,7 +303,7 @@
                         <li>Высшее образование СПБГУ - терапия</li>
                     </ul>
 
-                    <button class="doctor__button button button--finger">Записаться на прием</button>
+                    <button class="doctor__button button button--finger recall-js">Записаться на прием</button>
                 </div>
 
                 <img class="doctor__photo" src="img/doctor.jpg" alt="Никита Иванов">
@@ -454,7 +456,7 @@
                 </li>
                 <li class="faq__item">
                     <h5 class="faq__item-title">Как остеопатия лечит такие разные заболевания?</h5>
-                    <div class="faq__text visually-hidden">
+                    <div class="faq__text hidden">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Adipisci commodi debitis dolor dolorem dolorum eos, error in nemo officiis voluptatem.
                             Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
@@ -463,7 +465,7 @@
                 </li>
                 <li class="faq__item">
                     <h5 class="faq__item-title">Как подготовиться к приему остеопата?</h5>
-                    <div class="faq__text visually-hidden">
+                    <div class="faq__text hidden">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Adipisci commodi debitis dolor dolorem dolorum eos, error in nemo officiis voluptatem.
                             Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
@@ -472,7 +474,7 @@
                 </li>
                 <li class="faq__item">
                     <h5 class="faq__item-title">Сколько приемов требуется и как часто?</h5>
-                    <div class="faq__text visually-hidden">
+                    <div class="faq__text hidden">
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                             Adipisci commodi debitis dolor dolorem dolorum eos, error in nemo officiis voluptatem.
                             Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
@@ -483,7 +485,7 @@
 
             <h3 class="faq__title title">Остались вопросы?</h3>
             <p class="faq__subtitle subtitle">Бесплатно проконсультируем по телефону и очно</p>
-            <button class="faq__button button button--finger">Получить консультацию</button>
+            <button class="faq__button button button--finger recall-js">Получить консультацию</button>
         </div>
     </section>
     <section class="licenses" id="licenses">
@@ -508,14 +510,14 @@
                     <h5>Скидка на большие покупки</h5>
                     <p>Особые условия и специально низкие цены при необходимости
                         покупки курса от 3х сеансов</p>
-                    <a href="#" class="button stocks__button">Узнать об условиях</a>
+                    <a class="button stocks__button recall-js">Узнать об условиях</a>
                 </li>
 
                 <li class="stocks__item">
                     <h5>Скидка на профилактику</h5>
                     <p>Первое профилактическое посещение через 6 месяцев с
                         гарантированой скидкой 20%</p>
-                    <a href="#" class="button stocks__button">Узнать об условиях</a>
+                    <a class="button stocks__button recall-js">Узнать об условиях</a>
                 </li>
             </ul>
         </div>
@@ -524,17 +526,17 @@
         <div class="consultation__wrapper wrapper">
             <img class="consultation__img" src="img/man2.png" alt="Мужчина">
 
-            <form class="consultation__form form">
+            <form class="consultation__form form" action="#" method="post">
                 <h2 class="form__title title">Получите консультацию</h2>
                 <p class="form__subtitle subtitle">Укажите ваш номер телефона и специалист клиники
                     свяжется с Вами в течении 15 минут и проконсультирует</p>
                 <fieldset class="form__fieldset">
                     <label class="form__label">
-                        <input class="form__input" type="text" placeholder="Ваше имя">
+                        <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
                     </label>
 
                     <label class="form__label">
-                        <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон">
+                        <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
                     </label>
                 </fieldset>
 
@@ -542,7 +544,6 @@
             </form>
         </div>
     </section>
-
     <section class="contacts" id="contacts">
         <div class="contacts__wrapper wrapper">
             <div class="contacts__text-block">
@@ -561,7 +562,7 @@
                 <a class="contacts__phone" href="tel:+79219676188">+7 (921) 967-61-88</a>
 
             </div>
-<!--            <img src="img/map.jpg" class="contacts__map" alt="">-->
+            <!--            <img src="img/map.jpg" class="contacts__map" alt="">-->
 
             <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae09e41e165d7f63218996850c392650876df7fa6a919f5719fa38a80c5f86ead&amp;source=constructor"
                     width="796" height="633" frameborder="0" loading="lazy" class="contacts__map"></iframe>
@@ -576,13 +577,33 @@
     </section>
 </main>
 
-<footer class="footer">
+<div class="modal-back hide">
+    <div class="modal hide">
+        <button class="modal__btn-close modal-close"></button>
+        <form class="modal__form form" action="#" method="post">
+            <h2 class="form__title title">Получите консультацию</h2>
+            <p class="form__subtitle subtitle">Укажите ваш номер телефона и специалист клиники
+                свяжется с Вами в течении 15 минут и проконсультирует</p>
+            <fieldset class="form__fieldset">
+                <label class="form__label">
+                    <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
+                </label>
 
-</footer>
+                <label class="form__label">
+                    <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
+                </label>
+            </fieldset>
+
+            <button class="form__button button button--finger">Получить консультацию</button>
+        </form>
+    </div>
+    <div class="modal__overlay hide"></div>
+</div>
+
 
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
-<script src="script/slick/slick.min.js"></script>
+<script src="script/slick/slick.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
