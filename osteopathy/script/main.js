@@ -175,6 +175,14 @@ $(document).ready(function () {
 
                 faq_text.classList.toggle('hidden');
                 faq_item[i].classList.toggle('faq__item--active');
+
+                if (faq_item[i].classList.contains('faq__item--active')) {
+                    if (window.matchMedia('(max-width: 769px)').matches) {
+                        $('html, body').animate({
+                            scrollTop: $(this).offset().top - 60
+                        }, 300);
+                    }
+                }
             });
         }
     }
