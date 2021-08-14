@@ -1,33 +1,33 @@
+//Показ слайдеров на мобильном
+function slick_mobile(slider, settings) {
+    // Подпишемся на ресайз и продиспатчим его для запуска
+    $(window).on('resize', function (e) {
+        // Переменная, по которой узнаем запущен слайдер или нет.
+        // Храним её в data
+        let init = slider.data('init-slider');
+        // Если мобильный
+        if (window.innerWidth < 769) {
+            // Если слайдер не запущен
+            if (init !== 1) {
+                // Запускаем слайдер и записываем в data init-slider = 1
+                slider.slick(settings).data({'init-slider': 1});
+            }
+        }
+        // Если десктоп
+        else {
+            // Если слайдер запущен
+            if (init === 1) {
+                // Разрушаем слайдер и записываем в data init-slider = 0
+                slider.slick('unslick').data({'init-slider': 0});
+            }
+        }
+    }).trigger('resize');
+}
+
 $(document).ready(function () {
 
     //Маска телефона
     $(".phone_mask").mask("+7(999)999-99-99");
-
-    //Показ слайдеров на мобильном
-    function slick_mobile(slider, settings) {
-        // Подпишемся на ресайз и продиспатчим его для запуска
-        $(window).on('resize', function (e) {
-            // Переменная, по которой узнаем запущен слайдер или нет.
-            // Храним её в data
-            let init = slider.data('init-slider');
-            // Если мобильный
-            if (window.innerWidth < 769) {
-                // Если слайдер не запущен
-                if (init !== 1) {
-                    // Запускаем слайдер и записываем в data init-slider = 1
-                    slider.slick(settings).data({'init-slider': 1});
-                }
-            }
-            // Если десктоп
-            else {
-                // Если слайдер запущен
-                if (init === 1) {
-                    // Разрушаем слайдер и записываем в data init-slider = 0
-                    slider.slick('unslick').data({'init-slider': 0});
-                }
-            }
-        }).trigger('resize');
-    }
 
     //Слайдер "Кому может быть полезна остеопатия?"
     $('.useful__list').slick({
