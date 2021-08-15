@@ -84,7 +84,9 @@
         <div class="advantages__wrapper wrapper">
 
             <h2 class="advantages__title title wow fadeInRight">
-                Что вы <mark>получаете</mark> на наших курсах?
+                Что вы
+                <mark>получаете</mark>
+                на наших курсах?
             </h2>
 
             <ul class="advantages__list">
@@ -136,7 +138,8 @@
     <section class="teachers" id="teachers">
         <div class="teachers__wrapper wrapper">
             <h2 class="teachers__title title wow fadeInLeft">
-                Наши <mark>преподаватели</mark>
+                Наши
+                <mark>преподаватели</mark>
             </h2>
             <ul class="teachers__list">
                 <li class="teachers__item wow fadeInRight">
@@ -189,7 +192,7 @@
                                required>
                         <span class="form__indicator"></span>
                         <span class="form__title-label">
-                        Я согласен с <a href="#">политикой обработки персональных данных</a>
+                        Я согласен с <a href="politica.html">политикой обработки персональных данных</a>
                     </span>
                     </label>
 
@@ -218,7 +221,7 @@
             <p class="footer__name">Самозанятый<br/> Шелковников Иван Сергеевич</p>
 
             <ul class="footer__list">
-                <li class="footer__item"><a href="#">Политика обработки персональных данных</a></li>
+                <li class="footer__item"><a href="politica.html">Политика обработки персональных данных</a></li>
                 <li class="footer__item"><a href="#">Оферта</a></li>
             </ul>
         </div>
@@ -226,13 +229,40 @@
 
     <p class="footer__copy">© Шелковников И.С. 2021</p>
 </footer>
+
+<div class="modal-back hide">
+    <div class="modal modal--checks hide">
+        <h3 class="modal__title title">Вы не приняли политику обработки персональных данных или оферту.</h3>
+        <button class="modal__button-close button" type="button">Хорошо</button>
+    </div>
+
+    <div class="modal modal--name hide">
+        <h3 class="modal__title title">Вы не ввели ФИО или существующий Email.</h3>
+        <button class="modal__button-close button" type="button">Хорошо</button>
+    </div>
+
+    <div class="modal modal--all hide">
+        <h3 class="modal__title title">Пожалуйста, заполните форму.</h3>
+        <button class="modal__button-close button" type="button">Хорошо</button>
+    </div>
+
+    <div class="modal modal--success hide">
+        <h3 class="modal__title title">Ваша заявка успешно отправлена.</h3>
+        <button class="modal__button-close button" type="button">Хорошо</button>
+    </div>
+
+    <div class="modal modal--unsuccessful hide">
+        <h3 class="modal__title title">Ошибка при отправке формы.</h3>
+        <button class="modal__button-close button" type="button">Хорошо</button>
+    </div>
+
+    <div class="modal__overlay hide"></div>
+</div>
+
+
 <script src="script/jquery.min.js"></script>
 <script src="script/animate/wow.min.js"></script>
 <script src="script/main.min.js"></script>
-
-<script>
-    new WOW().init();
-</script>
 
 </body>
 </html>
