@@ -1,0 +1,11 @@
+{
+  "name": "Супер ЕГЭ",
+  "short_name": "Супер ЕГЭ",
+  "icons": [{
+    "src": "img/google-touch-icon.png",
+    "sizes": "512x512"
+  }],
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
+  "display": "fullscreen"
+}
