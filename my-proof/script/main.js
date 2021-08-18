@@ -7,7 +7,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         effect: 'fade',
         speed: 1000,
         fadeEffect: {
-          crossFade: true
+            crossFade: true
         },
 
         // Navigation arrows
@@ -30,6 +30,29 @@ window.addEventListener('DOMContentLoaded', function (event) {
             nextEl: '.categories__slider-button-next',
             prevEl: '.categories__slider-button-prev',
         },
+    });
+
+    const thumbsSwiper = new Swiper('.product__thumbs-block', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        speed: 1000,
+        slidesPerView: 4,
+        spaceBetween: 40,
+    });
+
+    const swiper3 = new Swiper('.product__big-photo-block', {
+        // Optional parameters
+        direction: 'horizontal',
+        loop: false,
+        speed: 1000,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        thumbs: {
+            swiper: thumbsSwiper
+        }
     });
 
 });
