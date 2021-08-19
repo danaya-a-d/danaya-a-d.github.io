@@ -87,7 +87,164 @@
 </header>
 
 <main class="page-main">
+    <div class="breadcrumbs wrapper">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="index.html">MyProof</a></li>
+            <li class="breadcrumbs__item"><a>Checkout</a></li>
+        </ul>
+    </div>
 
+    <section class="order leaf-wrapper">
+        <div class="order__wrapper wrapper">
+
+            <form class="order__form form">
+                <h1 class="form__title">shipping information</h1>
+
+                <fieldset class="form__fieldset">
+
+                    <label class="form__label-radio form__label-radio--trans">
+                        <input class="visually-hidden" name="info" type="radio" value="same" checked>
+                        <span class="form__radio-indicator"></span>
+                        <span class="form__indicator-title">Same as billing information.</span>
+                    </label>
+
+                    <label class="form__label-radio form__label-radio--trans">
+                        <input class="visually-hidden" name="info" type="radio" value="new">
+                        <span class="form__radio-indicator"></span>
+                        <span class="form__indicator-title">Enter new information.</span>
+                    </label>
+
+                    <p class="form__line form__line--small">
+                        <label class="form__label" for="first-name">first name</label>
+                        <input class="form__input" type="text" name="first-name" id="first-name"
+                               placeholder="First Name" required>
+                    </p>
+
+                    <p class="form__line form__line--small">
+                        <label class="form__label" for="last-name">last name</label>
+                        <input class="form__input" type="text" name="last-name" id="last-name"
+                               placeholder="Last Name" required>
+                    </p>
+
+                    <p class="form__line">
+                        <label class="form__label" for="email">email address</label>
+                        <input class="form__input" type="email" name="email" id="email"
+                               placeholder="Email" required>
+                    </p>
+
+                    <p class="form__line">
+                        <label class="form__label" for="tel">phone number</label>
+                        <input class="form__input" type="tel" name="tel" id="tel"
+                               placeholder="Phone Number" required>
+                    </p>
+
+                    <p class="form__line">
+                        <label class="form__label" for="address">address</label>
+                        <input class="form__input" type="text" name="address" id="address"
+                               placeholder="Address" required>
+                    </p>
+
+                    <p class="form__line form__line--small">
+                        <label class="form__label" for="country">country</label>
+                        <select class="form__select" name="country" id="country">
+                            <option value="" disabled="" selected="">Please Choose</option>
+                            <option value="Choose 1">Choose 1</option>
+                            <option value="Choose 2">Choose 2</option>
+                        </select>
+                    </p>
+
+                    <p class="form__line form__line--small">
+                        <label class="form__label" for="city">city</label>
+                        <select class="form__select" name="city" id="city">
+                            <option value="" disabled="" selected="">Please Choose</option>
+                            <option value="Choose 1">Choose 1</option>
+                            <option value="Choose 2">Choose 2</option>
+                        </select>
+                    </p>
+
+                    <p class="form__line form__line--small">
+                        <label class="form__label" for="zip">zip</label>
+                        <input class="form__input" type="number" name="zip" id="zip"
+                               placeholder="Zip" required>
+                    </p>
+
+                    <p class="form__line form__line--small">
+                        <label class="form__label" for="state">state</label>
+                        <select class="form__select" name="state" id="state">
+                            <option value="" disabled="" selected="">Please Choose</option>
+                            <option value="Choose 1">Choose 1</option>
+                            <option value="Choose 2">Choose 2</option>
+                        </select>
+                    </p>
+
+                </fieldset>
+
+                <p class="form__buttons">
+                    <button class="form__button button button--black">back</button>
+                    <button class="form__button button">continue</button>
+                </p>
+            </form>
+
+            <div class="order__products">
+                <h2 class="order__title title">order summary</h2>
+
+                <ul class="order__list">
+                    <li class="order__item">
+                        <img class="order__photo" src="img/prod1.jpg" alt="">
+                        <div class="order__description">
+                            <h2 class="order__name title">Emilia Clarke original art proof</h2>
+                            <p class="order__note note">simple pencil execution</p>
+
+                            <span class="order__counter counter">
+                                <button class="counter__button minus">–</button><label class="counter__label">
+                                <input class="counter__input" type="text" value="1" data-price="415"
+                                       onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                                </label><button class="counter__button plus">+</button>
+                            </span>
+                        </div>
+
+                        <div class="order__manage">
+                            <button class="order__delete delete">x</button>
+                            <span class="order__price price">$36.99</span>
+                        </div>
+                    </li>
+
+                    <li class="order__item">
+                        <img class="order__photo" src="img/prod1.jpg" alt="">
+                        <div class="order__description">
+                            <h2 class="order__name title">Emilia Clarke original art proof</h2>
+                            <p class="order__note note">simple pencil execution</p>
+
+                            <span class="cart__limit">
+                                Limited QTY products do not allow purchase of multiples!
+                            </span>
+                        </div>
+
+                        <div class="order__manage">
+                            <button class="order__delete delete">x</button>
+                            <span class="order__price price">$36.99</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="order__total-block">
+                    <span class="order__total-type">products total:</span>
+                    <span class="order__total-price price">$123.98</span>
+                </div>
+
+                <div class="order__total-block">
+                    <span class="order__total-type">shipping:</span>
+                    <span class="order__total-price price">$15.00</span>
+                </div>
+
+                <div class="order__total-block">
+                    <span class="order__total-type-big">products total:</span>
+                    <span class="order__total-price price price--big">$123.98</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </main>
 
 <footer class="footer">

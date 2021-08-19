@@ -87,7 +87,136 @@
 </header>
 
 <main class="page-main">
+    <div class="breadcrumbs wrapper">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="index.html">MyProof</a></li>
+            <li class="breadcrumbs__item"><a>Checkout</a></li>
+        </ul>
+    </div>
 
+    <section class="order leaf-wrapper">
+        <div class="order__wrapper wrapper">
+
+            <form class="order__form form">
+                <h1 class="form__title">payment information</h1>
+
+                <fieldset class="form__fieldset">
+
+                    <label class="form__label-radio">
+                        <input class="visually-hidden" name="pay-method" type="radio" value="card" checked>
+                        <span class="form__radio-indicator"></span>
+                        <span class="form__indicator-title">Credit Card</span>
+                        <img class="form__input-icon" src="img/payment1.jpg" alt="card">
+                    </label>
+
+                    <div class="form__sub">
+                        <p class="form__line">
+                            <label class="visually-hidden" for="card-holder">card holder</label>
+                            <input class="form__input" type="text" name="last-name" id="card-holder"
+                                   placeholder="Card Holder" required>
+                        </p>
+
+                        <p class="form__line">
+                            <label class="visually-hidden" for="card-number">card number</label>
+                            <input class="form__input" type="text" name="last-name" id="card-number"
+                                   placeholder="Card Number" required>
+                        </p>
+
+                        <p class="form__line form__line--small">
+                            <label class="visually-hidden" for="data">MM/YY</label>
+                            <input class="form__input" type="text" name="data" id="data"
+                                   placeholder="MM/YY" required>
+                        </p>
+
+                        <p class="form__line form__line--small">
+                            <label class="visually-hidden" for="cvv">CVV/CVC</label>
+                            <input class="form__input" type="number" name="cvv" id="cvv"
+                                   placeholder="CVV/CVC" required>
+                        </p>
+                    </div>
+
+                    <label class="form__label-radio">
+                        <input class="visually-hidden" name="pay-method" type="radio" value="paypal">
+                        <span class="form__radio-indicator"></span>
+                        <span class="form__indicator-title">Credit Card</span>
+                        <img class="form__input-icon" src="img/paypal-logo.jpg" alt="paypal">
+                    </label>
+
+                    <label class="form__label-radio">
+                        <input class="visually-hidden" name="pay-method" type="radio" value="apple-pay">
+                        <span class="form__radio-indicator"></span>
+                        <span class="form__indicator-title">Credit Card</span>
+                        <img class="form__input-icon" src="img/apple-pay.jpg" alt="apple-pay">
+                    </label>
+
+                </fieldset>
+
+                <p class="form__buttons">
+                    <button class="form__button button button--black">back</button>
+                    <button class="form__button button">continue</button>
+                </p>
+            </form>
+
+            <div class="order__products">
+                <h2 class="order__title title">order summary</h2>
+
+                <ul class="order__list">
+                    <li class="order__item">
+                        <img class="order__photo" src="img/prod1.jpg" alt="">
+                        <div class="order__description">
+                            <h2 class="order__name title">Emilia Clarke original art proof</h2>
+                            <p class="order__note note">simple pencil execution</p>
+
+                            <span class="order__counter counter">
+                                <button class="counter__button minus">–</button><label class="counter__label">
+                                <input class="counter__input" type="text" value="1" data-price="415"
+                                       onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                                </label><button class="counter__button plus">+</button>
+                            </span>
+                        </div>
+
+                        <div class="order__manage">
+                            <button class="order__delete delete">x</button>
+                            <span class="order__price price">$36.99</span>
+                        </div>
+                    </li>
+
+                    <li class="order__item">
+                        <img class="order__photo" src="img/prod1.jpg" alt="">
+                        <div class="order__description">
+                            <h2 class="order__name title">Emilia Clarke original art proof</h2>
+                            <p class="order__note note">simple pencil execution</p>
+
+                            <span class="cart__limit">
+                                Limited QTY products do not allow purchase of multiples!
+                            </span>
+                        </div>
+
+                        <div class="order__manage">
+                            <button class="order__delete delete">x</button>
+                            <span class="order__price price">$36.99</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="order__total-block">
+                    <span class="order__total-type">products total:</span>
+                    <span class="order__total-price price">$123.98</span>
+                </div>
+
+                <div class="order__total-block">
+                    <span class="order__total-type">shipping:</span>
+                    <span class="order__total-price price">$15.00</span>
+                </div>
+
+                <div class="order__total-block">
+                    <span class="order__total-type-big">products total:</span>
+                    <span class="order__total-price price price--big">$123.98</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </main>
 
 <footer class="footer">

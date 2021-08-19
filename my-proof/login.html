@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>MyProof - Cart</title>
+  <title>MyProof - Login</title>
 
-    <link rel="stylesheet" href="style/main.min.css">
-    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style/main.min.css">
+  <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -87,93 +87,61 @@
 </header>
 
 <main class="page-main">
-    <div class="breadcrumbs wrapper">
-        <ul class="breadcrumbs__list">
-            <li class="breadcrumbs__item"><a href="index.html">MyProof</a></li>
-            <li class="breadcrumbs__item"><a>Shopping cart</a></li>
-        </ul>
+  <div class="breadcrumbs wrapper">
+    <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item"><a href="index.html">MyProof</a></li>
+      <li class="breadcrumbs__item"><a>Login</a></li>
+    </ul>
+  </div>
+
+
+  <div class="login-block leaf-wrapper">
+
+    <div class="login-block__wrapper wrapper">
+
+      <section class="login">
+        <h1 class="login__title title">login to your account</h1>
+
+        <form class="login__form form" method="post" action="#">
+
+          <p class="form__line">
+            <label class="form__label" for="email">email address</label>
+            <input class="form__input" type="email" name="email" id="email"
+                   placeholder="Email" required>
+          </p>
+
+          <p class="form__line">
+            <label class="form__label" for="password">password</label>
+            <input class="form__input" type="password" name="password" id="password"
+                   placeholder="Password" required>
+          </p>
+
+          <button class="form__button button">continue</button>
+
+        </form>
+
+      </section>
+
+      <section class="login-nav">
+
+        <div class="login-nav__block">
+          <h2 class="login-nav__title title">Don’t have an account?</h2>
+          <p class="login-nav__text">If you don’t own a MyProof account, you can easily sign up.
+            All your information will be stored and checkout will be fast.</p>
+          <button class="login-nav__button button">sign up</button>
+        </div>
+
+        <div class="login-nav__block">
+          <h2 class="login-nav__title title">Continue as guest?</h2>
+          <p class="login-nav__text">If you continue as a guest, your information will not be stored.</p>
+          <button class="login-nav__button button button--black">guest checkout</button>
+        </div>
+
+      </section>
+
     </div>
 
-    <section class="cart leaf-wrapper">
-        <div class="cart__wrapper wrapper">
-            <div class="cart__about">
-                <h1 class="cart__title title">shopping cart</h1>
-                <p class="cart__subtitle">
-                    <span>( ! )</span>
-                    Don’t forget to finish your order. Adding the articles
-                    to your cart is not a guarantee.
-                </p>
-
-                <ul class="cart__list">
-                    <li class="cart__item">
-                        <img class="cart__photo" src="img/prod1.jpg" alt="">
-                        <div class="cart__description">
-                            <h2 class="cart__name title">Emilia Clarke original art proof</h2>
-                            <p class="cart__note note">simple pencil execution</p>
-
-                            <span class="cart__counter counter">
-                                <button class="counter__button minus">–</button><label class="counter__label">
-                                <input class="counter__input" type="text" value="1" data-price="415"
-                                       onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
-                                </label><button class="counter__button plus">+</button>
-                            </span>
-                        </div>
-
-                        <div class="cart__manage">
-                            <button class="cart__delete delete">x</button>
-                            <span class="cart__price price">$36.99</span>
-                        </div>
-                    </li>
-
-                    <li class="cart__item">
-                        <img class="cart__photo" src="img/prod1.jpg" alt="">
-                        <div class="cart__description">
-                            <h2 class="cart__name title">Hugh Jackman original art proof</h2>
-                            <p class="cart__note note">simple pencil execution</p>
-
-                            <span class="cart__limit">
-                                Limited QTY products do not allow purchase of multiples!
-                            </span>
-                        </div>
-
-                        <div class="cart__manage">
-                            <button class="cart__delete delete">x</button>
-                            <span class="cart__price price">$86.99</span>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-
-            <form class="cart__form form">
-                <p class="form__line">
-                    <label class="form__label" for="total">products total:</label>
-                    <span class="price price--big" id="total">$123.98</span>
-                </p>
-
-                <fieldset class="form__fieldset">
-                    <legend class="form__label">shipping method:</legend>
-
-                    <label class="form__label-radio">
-                        <input class="visually-hidden" name="pay-method" type="radio" value="with tracking" checked>
-                        <span class="form__radio-indicator"></span>
-                        <span class="form__indicator-title">Standard shipping with tracking.</span>
-                        <span class="form__price price">$15.00</span>
-                    </label>
-
-                    <label class="form__label-radio">
-                        <input class="visually-hidden" name="pay-method" type="radio" value="without tracking">
-                        <span class="form__radio-indicator"></span>
-                        <span class="form__indicator-title">Standard shipping without tracking.</span>
-                        <span class="form__price price">$10.00</span>
-                    </label>
-
-                </fieldset>
-
-                <button class="form__button button">checkout</button>
-            </form>
-        </div>
-    </section>
+  </div>
 </main>
 
 <footer class="footer">
