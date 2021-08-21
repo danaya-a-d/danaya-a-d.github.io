@@ -87,91 +87,211 @@
 </header>
 
 <main class="page-main">
+    <div class="breadcrumbs wrapper">
+        <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item"><a href="index.html">MyProof</a></li>
+            <li class="breadcrumbs__item"><a>Checkout</a></li>
+        </ul>
+    </div>
 
+    <section class="order leaf-wrapper">
+        <div class="order__wrapper wrapper">
+
+            <form class="order__form form">
+                <div class="form__info">
+                    <h3 class="form__title">billing information
+                        <a class="form__title-link" href="order-billing.html">edit</a>
+                    </h3>
+                    <p class="form__label">bill to:</p>
+
+                    <div class="form__info-wrapper">
+                        <div class="form__info-block">
+                            <p class="form__info-line">John Lee Doe</p>
+                            <p class="form__info-line">johnleedoe@mail.com</p>
+                            <p class="form__info-line">123 - 456 - 789</p>
+                        </div>
+
+                        <div class="form__info-block">
+                            <p class="form__info-line">4 Privet Drive,</p>
+                            <p class="form__info-line">Lovely Country, Small City,</p>
+                            <p class="form__info-line">123456, Small State</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form__info">
+                    <h3 class="form__title">shipping information
+                        <a class="form__title-link" href="order-shipping.html">edit</a>
+                    </h3>
+                    <p class="form__label">ship to:</p>
+
+                    <div class="form__info-wrapper">
+                        <div class="form__info-block">
+                            <p class="form__info-line">John Lee Doe, 4 Privet Drive,</p>
+                            <p class="form__info-line">Lovely Country, Small City,</p>
+                            <p class="form__info-line">123456, Small State</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form__info">
+                    <h3 class="form__title">payment information
+                        <a class="form__title-link" href="order-payment.html">edit</a>
+                    </h3>
+                    <p class="form__label">payment method:</p>
+                    <div class="form__info-wrapper">
+                        <div class="form__info-block">
+                            <p class="form__info-line">Credit Card ending in 1234.</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="order-products order__products">
+                <h2 class="order-products__title title">order summary</h2>
+
+                <ul class="order-products__list">
+                    <li class="order-products__item">
+                        <img class="order-products__photo" src="img/prod1.jpg" alt="">
+                        <div class="order-products__description">
+                            <h2 class="order-products__name title">Emilia Clarke original art proof</h2>
+                            <p class="order-products__note note">simple pencil execution</p>
+
+                            <span class="order-products__counter counter">
+                                <button class="counter__button minus">–</button><label class="counter__label">
+                                <input class="counter__input" type="text" value="1" data-price="415"
+                                       onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                                </label><button class="counter__button plus">+</button>
+                            </span>
+                        </div>
+
+                        <div class="order-products__manage">
+                            <button class="order-products__delete delete">x</button>
+                            <span class="order-products__price price">$36.99</span>
+                        </div>
+                    </li>
+
+                    <li class="order-products__item">
+                        <img class="order-products__photo" src="img/prod1.jpg" alt="">
+                        <div class="order-products__description">
+                            <h2 class="order-products__name title">Emilia Clarke original art proof</h2>
+                            <p class="order-products__note note">simple pencil execution</p>
+
+                            <span class="order-products__limit">
+                                Limited QTY products do not allow purchase of multiples!
+                            </span>
+                        </div>
+
+                        <div class="order-products__manage">
+                            <button class="order-products__delete delete">x</button>
+                            <span class="order-products__price price">$36.99</span>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="order-products__total-block">
+                    <span class="order-products__total-type">products total:</span>
+                    <span class="order-products__total-price price">$123.98</span>
+                </div>
+
+                <div class="order-products__total-block">
+                    <span class="order-products__total-type">shipping:</span>
+                    <span class="order-products__total-price price">$15.00</span>
+                </div>
+
+                <div class="order-products__total-block">
+                    <span class="order-products__total-type-big">products total:</span>
+                    <span class="order-products__total-price price price--big">$123.98</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
-  <div class="footer__wrapper wrapper">
-    <div class="footer__main-block">
-      <a class="footer__logo logo" href="index.html">
-        <img class="logo__img" src="img/logo-white.svg" alt="MyProof">
-      </a>
+    <div class="footer__wrapper wrapper">
+        <div class="footer__main-block">
+            <a class="footer__logo logo" href="index.html">
+                <img class="logo__img" src="img/logo-white.svg" alt="MyProof">
+            </a>
 
-      <p class="footer__text">Phasellus pellentesque placerat vestibulum.
-        Vestibulum fermentum pulvinar tincidunt.
-        Donec bibendum venenatis odio sed.</p>
+            <p class="footer__text">Phasellus pellentesque placerat vestibulum.
+                Vestibulum fermentum pulvinar tincidunt.
+                Donec bibendum venenatis odio sed.</p>
 
-      <ul class="footer__socials socials">
-        <li class="socials__item"><a href="#">
-          <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#twitter"></use>
-          </svg>
-        </a></li>
-        <li class="socials__item"><a href="#">
-          <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#instagram"></use>
-          </svg>
-        </a></li>
-        <li class="socials__item"><a href="#">
-          <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#facebook"></use>
-          </svg>
-        </a></li>
-      </ul>
+            <ul class="footer__socials socials">
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#twitter"></use>
+                    </svg>
+                </a></li>
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a></li>
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a></li>
+            </ul>
 
+        </div>
+
+        <div class="footer__block">
+            <h4 class="footer__title italic">useful</h4>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#">Products</a></li>
+                <li class="footer__item"><a href="#">Support</a></li>
+                <li class="footer__item"><a href="#">Resources</a></li>
+                <li class="footer__item"><a href="#">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__block">
+            <h4 class="footer__title italic">about</h4>
+            <ul class="footer__list">
+                <li class="footer__item"><a href="#">Our Story</a></li>
+                <li class="footer__item"><a href="#">Our Team</a></li>
+                <li class="footer__item"><a href="#">Our Legacy</a></li>
+                <li class="footer__item"><a href="#">Causes</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__block">
+            <h4 class="footer__title italic">reach out</h4>
+            <ul class="footer__list addresses">
+                <li class="addresses__item">
+                    <svg class="addresses__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#map"></use>
+                    </svg>
+                    1234 Main Street, Suite 123
+                    Lovely City, Country 12345
+                </li>
+                <li class="addresses__item"><a href="tel:2345678901">
+                    <svg class="addresses__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#call"></use>
+                    </svg>
+                    (234) 567-8901
+                </a></li>
+                <li class="addresses__item"><a href="mailto:hello@myproof.art">
+                    <svg class="addresses__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                    hello@myproof.art
+                </a></li>
+            </ul>
+        </div>
     </div>
 
-    <div class="footer__block">
-      <h4 class="footer__title italic">useful</h4>
-      <ul class="footer__list">
-        <li class="footer__item"><a href="#">Products</a></li>
-        <li class="footer__item"><a href="#">Support</a></li>
-        <li class="footer__item"><a href="#">Resources</a></li>
-        <li class="footer__item"><a href="#">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__block">
-      <h4 class="footer__title italic">about</h4>
-      <ul class="footer__list">
-        <li class="footer__item"><a href="#">Our Story</a></li>
-        <li class="footer__item"><a href="#">Our Team</a></li>
-        <li class="footer__item"><a href="#">Our Legacy</a></li>
-        <li class="footer__item"><a href="#">Causes</a></li>
-      </ul>
-    </div>
-
-    <div class="footer__block">
-      <h4 class="footer__title italic">reach out</h4>
-      <ul class="footer__list">
-        <li class="footer__item">
-          <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#map"></use>
-          </svg>
-          1234 Main Street, Suite 123
-          Lovely City, Country 12345
-        </li>
-        <li class="footer__item"><a href="tel:2345678901">
-          <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#call"></use>
-          </svg>
-          (234) 567-8901
-        </a></li>
-        <li class="footer__item"><a href="mailto:hello@myproof.art">
-          <svg class="footer__icon" xmlns="http://www.w3.org/2000/svg">
-            <use xlink:href="#telegram"></use>
-          </svg>
-          hello@myproof.art
-        </a></li>
-      </ul>
-    </div>
-  </div>
-
-  <ul class="footer__copy-list">
-    <li class="footer__copy-item">Copyright 2021, MyProof.art</li>
-    <li class="footer__copy-item"><a href="#">Privacy Policy</a></li>
-    <li class="footer__copy-item"><a href="#">Terms of Use</a></li>
-  </ul>
+    <ul class="footer__copy-list">
+        <li class="footer__copy-item">Copyright 2021, MyProof.art</li>
+        <li class="footer__copy-item"><a href="#">Privacy Policy</a></li>
+        <li class="footer__copy-item"><a href="#">Terms of Use</a></li>
+    </ul>
 </footer>
 
 <script src="script/swiper/swiper-bundle.min.js"></script>

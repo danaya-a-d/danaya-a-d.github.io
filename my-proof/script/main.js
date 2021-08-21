@@ -55,5 +55,29 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     });
 
+
+    /////// ОТКРЫТИЕ ИСТОРИИ ЗАКАЗОВ ///////
+    let history_item_content = document.querySelectorAll('.history__item-content');
+
+    if (history_item_content !== undefined) {
+        for (let i = 0; i < history_item_content.length; i++) {
+
+            history_item_content[i].addEventListener('click', function (event) {
+
+                console.log(this);
+
+                if (this.classList.contains('inactive')) {
+                    this.classList.remove('inactive');
+                    this.classList.add('active');
+                }
+
+                else if (this.classList.contains('active')) {
+                    this.classList.add('inactive');
+                    this.classList.remove('active');
+                }
+            });
+        }
+    }
+
 });
 
