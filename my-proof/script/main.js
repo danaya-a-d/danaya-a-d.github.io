@@ -1,7 +1,6 @@
 window.addEventListener('DOMContentLoaded', function (event) {
 
-    const swiper1 = new Swiper('.upper-block__swiper', {
-        // Optional parameters
+    const upper_block_swiper = new Swiper('.upper-block__swiper', {
         direction: 'horizontal',
         loop: true,
         effect: 'fade',
@@ -17,23 +16,29 @@ window.addEventListener('DOMContentLoaded', function (event) {
         },
     });
 
-    const swiper2 = new Swiper('.browse__list', {
-        // Optional parameters
+    const browse_list = new Swiper('.browse__list', {
         direction: 'horizontal',
         loop: true,
         speed: 1000,
-        slidesPerView: 3,
+        slidesPerView: 1,
         spaceBetween: 30,
+
+        breakpoints: {
+            // when window width is <= 769px
+            769: {
+                slidesPerView: 3,
+            },
+        },
 
         // Navigation arrows
         navigation: {
             nextEl: '.categories__slider-button-next',
             prevEl: '.categories__slider-button-prev',
-        },
+        }
     });
 
-    const thumbsSwiper = new Swiper('.product__thumbs-block', {
-        // Optional parameters
+
+    const product_thumbs_swiper = new Swiper('.product__thumbs-block', {
         direction: 'horizontal',
         loop: false,
         speed: 1000,
@@ -41,8 +46,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         spaceBetween: 40,
     });
 
-    const swiper3 = new Swiper('.product__big-photo-block', {
-        // Optional parameters
+    const product_swiper = new Swiper('.product__big-photo-block', {
         direction: 'horizontal',
         loop: false,
         speed: 1000,
@@ -51,7 +55,18 @@ window.addEventListener('DOMContentLoaded', function (event) {
             crossFade: true
         },
         thumbs: {
-            swiper: thumbsSwiper
+            swiper: product_thumbs_swiper
+        },
+
+        pagination: {
+            el: '.product__swiper-pagination',
+            type: 'bullets',
+        },
+
+        // Navigation arrows
+        navigation: {
+            nextEl: '.product__slider-button-next',
+            prevEl: '.product__slider-button-prev',
         }
     });
 
@@ -79,5 +94,24 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     }
 
-});
 
+    /////// ОТКРЫТИЕ МОБИЛЬНОГО МЕНЮ ///////
+    let header_nav = document.querySelector('.header__nav');
+    let open_menu = document.querySelector('.header__button-open-menu');
+    let overlay = document.querySelector('.overlay');
+
+    if (header_nav !== undefined) {
+        open_menu.addEventListener('click', function (event) {
+            if (header_nav.classList.contains('close')) {
+                header_nav.classList.remove('close');
+                open_menu.classList.remove('close');
+                overlay.classList.remove('close');
+            } else {
+                header_nav.classList.add('close');
+                open_menu.classList.add('close');
+                overlay.classList.add('close');
+            }
+        });
+    }
+
+});
