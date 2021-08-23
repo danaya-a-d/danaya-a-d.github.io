@@ -25,8 +25,13 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
         breakpoints: {
             // when window width is <= 769px
-            769: {
+            992: {
                 slidesPerView: 3,
+            },
+
+            // when window width is <= 992px
+            769: {
+                slidesPerView: 2,
             },
         },
 
