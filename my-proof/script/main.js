@@ -77,9 +77,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
 
     let mySwiper = undefined;
+
     function initSwiper() {
         let screenWidth = window.outerWidth;
-        if ( (screenWidth < (769)) && (mySwiper == undefined)) {
+        if ((screenWidth < (769)) && (mySwiper == undefined)) {
             mySwiper = new Swiper('.categories--mob-swiper', {
                 direction: 'horizontal',
                 loop: true,
@@ -115,19 +116,35 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
             history_item_content[i].addEventListener('click', function (event) {
 
-                console.log(this);
-
                 if (this.classList.contains('inactive')) {
                     this.classList.remove('inactive');
                     this.classList.add('active');
-                }
-
-                else if (this.classList.contains('active')) {
+                } else if (this.classList.contains('active')) {
                     this.classList.add('inactive');
                     this.classList.remove('active');
                 }
             });
         }
+    }
+
+
+    /////// ОТКРЫТИЕ СПИСКА ТОВАРОВ В ЗАКАЗЕ ///////
+    let order_products_title = document.querySelector('.order-products__title');
+
+    if (order_products_title !== undefined) {
+        let order_products_list = order_products_title.parentNode.querySelector('.order-products__container');
+
+        order_products_title.addEventListener('click', function (event) {
+
+            if (order_products_list.classList.contains('close')) {
+                order_products_list.classList.remove('close');
+                order_products_title.classList.add('active');
+            } else {
+                order_products_list.classList.add('close');
+                order_products_title.classList.remove('active');
+            }
+        });
+
     }
 
 
