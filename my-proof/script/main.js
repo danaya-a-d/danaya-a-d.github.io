@@ -111,7 +111,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     /////// ОТКРЫТИЕ ИСТОРИИ ЗАКАЗОВ ///////
     let history_item_content = document.querySelectorAll('.history__item-content');
 
-    if (history_item_content !== undefined) {
+    if (history_item_content !== null) {
         for (let i = 0; i < history_item_content.length; i++) {
 
             history_item_content[i].addEventListener('click', function (event) {
@@ -130,9 +130,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     /////// ОТКРЫТИЕ СПИСКА ТОВАРОВ В ЗАКАЗЕ ///////
     let order_products_title = document.querySelector('.order-products__title');
+    let order_products_list = document.querySelector('.order-products__container');
 
-    if (order_products_title !== undefined) {
-        let order_products_list = order_products_title.parentNode.querySelector('.order-products__container');
+    if (order_products_title !== null && order_products_list !== null) {
 
         order_products_title.addEventListener('click', function (event) {
 
@@ -166,5 +166,41 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         });
     }
+
+
+    let account_nav_item_active = document.querySelector('.account__nav-item.active');
+    let account_nav_item_all = document.querySelectorAll('.account__nav-item:not(.active)');
+
+    console.log(account_nav_item_active);
+
+    account_nav_item_active.addEventListener('click', function (event) {
+        for (let i = 0; i < account_nav_item_all.length; i++) {
+            account_nav_item_all[i].classList.toggle('hide');
+        }
+    });
+
+
+
+    // $(function() {
+    //     $(".account__nav-item.active").click(function(){
+    //         var $menu_popup = $(this).next();
+    //         $menu_popup.slideToggle(200, function(){
+    //             $('.selectlink ul').not($menu_popup).slideUp(200);
+    //             if ($menu_popup.is(':hidden')) {
+    //                 $('body').removeClass('body_pointer');
+    //             } else {
+    //                 $('body').addClass('body_pointer');
+    //             }
+    //         });
+    //         return false;
+    //     });
+    //
+    //     $(document).on('click', function(e){
+    //         if (!$(e.target).closest('.selectlink').length){
+    //             $('body').removeClass('body_pointer');
+    //             $('.selectlink ul').slideUp(200);
+    //         }
+    //     });
+    // });
 
 });
