@@ -40,7 +40,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     const product_thumbs_swiper = new Swiper('.product__thumbs-block', {
         direction: 'horizontal',
-        loop: false,
+        loop: true,
         speed: 1000,
         slidesPerView: 4,
         spaceBetween: 40,
@@ -48,7 +48,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     const product_swiper = new Swiper('.product__big-photo-block', {
         direction: 'horizontal',
-        loop: false,
+        loop: true,
         speed: 1000,
         effect: 'fade',
         fadeEffect: {
@@ -68,6 +68,37 @@ window.addEventListener('DOMContentLoaded', function (event) {
             nextEl: '.product__slider-button-next',
             prevEl: '.product__slider-button-prev',
         }
+    });
+
+
+    let mySwiper = undefined;
+    function initSwiper() {
+        let screenWidth = window.outerWidth;
+        if ( (screenWidth < (769)) && (mySwiper == undefined)) {
+            mySwiper = new Swiper('.categories--mob-swiper', {
+                direction: 'horizontal',
+                loop: true,
+                speed: 1000,
+                slidesPerView: 1,
+                spaceBetween: 30,
+
+                // Navigation arrows
+                navigation: {
+                    nextEl: '.categories__slider-button-next',
+                    prevEl: '.categories__slider-button-prev',
+                }
+            });
+        } else if ((screenWidth > 768) && (mySwiper != undefined)) {
+            mySwiper.destroy();
+            mySwiper = undefined;
+            // $('.swiper-wrapper').removeAttr('style');
+            // $('.swiper-slide').removeAttr('style');
+        }
+    }
+
+    initSwiper();
+    window.addEventListener('resize', () => {
+        initSwiper();
     });
 
 
