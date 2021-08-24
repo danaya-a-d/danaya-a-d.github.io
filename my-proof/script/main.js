@@ -97,8 +97,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
         } else if ((screenWidth > 768) && (mySwiper != undefined)) {
             mySwiper.destroy();
             mySwiper = undefined;
-            // $('.swiper-wrapper').removeAttr('style');
-            // $('.swiper-slide').removeAttr('style');
         }
     }
 
@@ -153,7 +151,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let open_menu = document.querySelector('.header__button-open-menu');
     let overlay = document.querySelector('.overlay');
 
-    if (header_nav !== undefined) {
+    if (header_nav !== null) {
         open_menu.addEventListener('click', function (event) {
             if (header_nav.classList.contains('close')) {
                 header_nav.classList.remove('close');
@@ -171,36 +169,35 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let account_nav_item_active = document.querySelector('.account__nav-item.active');
     let account_nav_item_all = document.querySelectorAll('.account__nav-item:not(.active)');
 
-    console.log(account_nav_item_active);
+    if (account_nav_item_active !== null) {
+        account_nav_item_active.addEventListener('click', function (event) {
+            for (let i = 0; i < account_nav_item_all.length; i++) {
+                account_nav_item_all[i].classList.toggle('hide');
+            }
+        });
+    }
 
-    account_nav_item_active.addEventListener('click', function (event) {
-        for (let i = 0; i < account_nav_item_all.length; i++) {
-            account_nav_item_all[i].classList.toggle('hide');
-        }
+
+    /////// ПРОИГРЫШ ВИДЕО ///////
+    [].forEach.call(document.querySelectorAll('video'), function(el) {
+        let cont = document.createElement('div');
+        cont.className = "video";
+        el.parentNode.insertBefore(cont, el);
+        cont.appendChild(el);
+        cont.insertAdjacentHTML('afterbegin', '<div class="video-overlay"></div>');
+        cont.addEventListener('click', function(e) {
+            let video = cont.querySelector('video');
+            if (video.paused) {
+                cont.classList.add('is-playing');
+                video.play();
+            } else {
+                cont.classList.remove('is-playing');
+                video.pause();
+            }
+            video.onended = function() {
+                cont.classList.remove('is-playing');
+            };
+        });
     });
-
-
-
-    // $(function() {
-    //     $(".account__nav-item.active").click(function(){
-    //         var $menu_popup = $(this).next();
-    //         $menu_popup.slideToggle(200, function(){
-    //             $('.selectlink ul').not($menu_popup).slideUp(200);
-    //             if ($menu_popup.is(':hidden')) {
-    //                 $('body').removeClass('body_pointer');
-    //             } else {
-    //                 $('body').addClass('body_pointer');
-    //             }
-    //         });
-    //         return false;
-    //     });
-    //
-    //     $(document).on('click', function(e){
-    //         if (!$(e.target).closest('.selectlink').length){
-    //             $('body').removeClass('body_pointer');
-    //             $('.selectlink ul').slideUp(200);
-    //         }
-    //     });
-    // });
 
 });
