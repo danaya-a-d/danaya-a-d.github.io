@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -52,7 +53,7 @@
 
             <div class="tel__links">
                 <a class="tel__link" href="tel:+74957956785">+7 (495) 795-6785</a>
-                <a class="tel__recall" href="#">Обратный звонок</a>
+                <a class="tel__recall recall-js" href="#">Обратный звонок</a>
             </div>
         </div>
 
@@ -220,7 +221,8 @@
         <div class="why-us__wrapper wrapper">
             <h2 class="why-us__title title">
                 Почему клиенты повторно<br>
-                <em>выбирают именно <mark>умнаямойка.рф?</mark>
+                <em>выбирают именно
+                    <mark>умнаямойка.рф?</mark>
                 </em>
             </h2>
 
@@ -443,7 +445,23 @@
                         <a href="#" class="reviews__video video"><img src="img/why-us-video.jpg" alt=""></a>
                     </div>
                 </li>
+                <li class="reviews__item">
+                    <div class="reviews__author">
+                        <img class="reviews__photo" src="img/user.jpg" alt="">
+                        <div class="reviews__author-about">
+                            <p class="reviews__name">Екатерина Журавлева</p>
+                            <p class="reviews__who">Владелец мойки</p>
+                        </div>
+                    </div>
 
+                    <div class="reviews__content">
+                        <p>Добро пожаловать на официальный сайт компании по проектированию,
+                            монтажу и обслуживанию роботизированных автоматических
+                            автомоек. Вы можете просмотреть презентации, обзоры,
+                            рекомендации в режиме видео</p>
+                        <a href="#" class="reviews__video video"><img src="img/why-us-video.jpg" alt=""></a>
+                    </div>
+                </li>
                 <li class="reviews__item">
                     <div class="reviews__author">
                         <img class="reviews__photo" src="img/user.jpg" alt="">
@@ -544,6 +562,25 @@
                 экстремально увлеченных роботмойками</h2>
 
             <ul class="professionals__list">
+                <li class="professionals__item">
+                    <img class="professionals__photo" src="img/professionals1.jpg" alt="">
+                    <div class="professionals__about-block">
+                        <p class="professionals__phrase">На данный момент в Москве успешно работает сеть наших
+                            собственных автомоек и несколько партнерских в Московской области - это позволяет
+                            нам не только знать про оборудование ВСЁ, но и ответить на любой вопрос изнутри
+                            бизнеса, который у вас может появиться</p>
+
+                        <p class="professionals__name">Александр Петров</p>
+                        <p class="professionals__who">руководитель</p>
+
+                        <ul class="professionals__ul">
+                            <li>пункт 1</li>
+                            <li>пункт 2</li>
+                            <li>пункт 3</li>
+                            <li>пункт 4</li>
+                        </ul>
+                    </div>
+                </li>
                 <li class="professionals__item">
                     <img class="professionals__photo" src="img/professionals1.jpg" alt="">
                     <div class="professionals__about-block">
@@ -719,12 +756,248 @@
     </div>
 </footer>
 
+<div class="side-buttons">
+    <button class="side-button side-button--green calc-js">Рассчитать</button>
+    <button class="side-button side-button--blue table-js">Таблица сравнения</button>
+</div>
+
+<div class="fixed-video">
+    <a href="#" class="fixed-video__item video"><img src="img/why-us-video.jpg" alt=""></a>
+    <button class="fixed-video__close">x</button>
+</div>
+
+<div class="modal-back hide">
+    <div class="modal modal--recall hide">
+        <button class="modal__btn-close modal-close"></button>
+        <form class="modal__form form form--white" action="#" method="post">
+            <h2 class="form__title title">Обратный звонок</h2>
+
+            <label class="form__label">
+                <input class="form__input" type="text" placeholder="Имя *" name="name" required>
+            </label>
+
+            <label class="form__label">
+                <input class="form__input phone_mask" type="tel" placeholder="Телефон *" name="tel" required>
+            </label>
+
+            <label class="form__label">
+                <input class="form__input" type="text" placeholder="Город *" name="city" required>
+            </label>
+
+            <button class="form__button button button--finger">Получить пример расчёта</button>
+
+            <label class="form__label-check">
+                <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
+                <span class="form__check-indicator"></span>
+                <span class="form__indicator-title">
+                        Я принимаю условия
+                        <a href="#">обработки персональных данных, передачи и получения информации</a>
+                    </span>
+            </label>
+        </form>
+    </div>
+
+    <div class="modal modal--calc hide">
+        <button class="modal__btn-close modal-close"></button>
+        <form class="modal__form form form--white" action="#" method="post">
+            <h2 class="form__title title">Рассчитать прибыль</h2>
+
+            <div class="form__ranges">
+                <div class="form__label-range">
+                    <p class="form__range-name">Автомобилей в месяц</p>
+                    <div id="range-auto"></div>
+                </div>
+
+                <div class="form__label-range">
+                    <p class="form__range-name">Средний чек</p>
+                    <div id="range-check"></div>
+                </div>
+
+                <div class="form__label-range">
+                    <p class="form__range-name">Закупка автохимии</p>
+                    <div id="range-chem"></div>
+                </div>
+
+                <div class="form__label-range">
+                    <p class="form__range-name">Размер аренды</p>
+                    <div id="range-rent"></div>
+                </div>
+
+                <div class="form__label-range">
+                    <p class="form__range-name">Расходы на воду и электричество</p>
+                    <div id="range-water"></div>
+                </div>
+            </div>
+
+            <label class="form__label">
+                <input class="form__input" type="text" placeholder="Имя *" name="name" required>
+            </label>
+
+            <label class="form__label">
+                <input class="form__input phone_mask" type="tel" placeholder="Телефон *" name="tel" required>
+            </label>
+
+            <label class="form__label">
+                <input class="form__input" type="text" placeholder="Город *" name="city" required>
+            </label>
+
+            <label class="form__label">
+                <input class="form__input" type="email" placeholder="Email *" name="email" required>
+            </label>
+
+            <button class="form__button button button--finger">Получить пример расчёта</button>
+
+            <label class="form__label-check">
+                <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
+                <span class="form__check-indicator"></span>
+                <span class="form__indicator-title">
+                        Я принимаю условия
+                        <a href="#">обработки персональных данных, передачи и получения информации</a>
+                    </span>
+            </label>
+        </form>
+    </div>
+
+    <div class="modal modal--thanks hide">
+        <button class="modal__btn-close modal-close"></button>
+        <form class="modal__form form form--white">
+            <img class="form__img" src="img/thanks.png" alt="">
+            <h2 class="form__title title">Спасибо</h2>
+            <p class="form__text text">В самое ближайшее время мы свяжемся<br>
+                с Вами для обсуждения деталей</p>
+        </form>
+    </div>
+
+    <div class="modal modal--wait hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <img class="modal__image" src="img/modal.jpg" alt="">
+        <form class="modal__form form form--white" action="#" method="post">
+            <h2 class="form__title title">ПОДОЖДИТЕ! У нас есть для вас
+                <em>персональное предложение
+                    именно сейчас</em></h2>
+
+            <label class="form__label">
+                <input class="form__input" type="text" placeholder="Имя *" name="name" required>
+            </label>
+
+            <label class="form__label">
+                <input class="form__input phone_mask" type="tel" placeholder="Телефон *" name="tel" required>
+            </label>
+
+            <label class="form__label">
+                <input class="form__input" type="text" placeholder="Город *" name="city" required>
+            </label>
+
+            <button class="form__button button button--finger">Получить пример расчёта</button>
+
+            <label class="form__label-check">
+                <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
+                <span class="form__check-indicator"></span>
+                <span class="form__indicator-title">
+                        Я принимаю условия
+                        <a href="#">обработки персональных данных, передачи и получения информации</a>
+                    </span>
+            </label>
+        </form>
+    </div>
+
+    <div class="modal modal--table hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <div class="modal__form form form--white">
+            <h2 class="form__title title">Комплектации и цены</h2>
+
+            <table class="form__table table">
+                <tr class="table__head">
+                    <td>Функции</td>
+                    <td class="table__center">Kolon X7-360<br> Silver</td>
+                    <td class="table__center">Kolon X7-360<br> Silver</td>
+                    <td class="table__center">Kolon X7-360<br> Silver</td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                    <td class="table__yes"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                </tr>
+                <tr>
+                    <td>Мойка днища, арок</td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                    <td class="table__no"></td>
+                </tr>
+                <tr class="table__footer">
+                    <td>Стоимость</td>
+                    <td>2 220 000 руб</td>
+                    <td>2 220 000 руб</td>
+                    <td>2 220 000 руб</td>
+                </tr>
+            </table>
+
+            <p class="form__note">Основные отличия, за дополнительными характеристиками
+                (которых более двух десятков) обратитесь к нам по телефону +3 89089808890
+                или нажав на кнопку <a class="recall-close">"Обратный звонок"</a></p>
+
+        </div>
+    </div>
+
+    <div class="modal__overlay hide"></div>
+</div>
 
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
 <script src="script/slick/slick.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
 </html>
-
