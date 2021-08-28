@@ -3,1001 +3,609 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <title>Остеопатия</title>
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
-    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
 
-<div style="display: none">
-    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <symbol id="youtube" viewBox="-21 -117 682.667 682">
-            <path d="M626.813 64.035c-7.375-27.418-28.993-49.031-56.407-56.414C520.324-6.082 319.992-6.082 319.992-6.082s-200.324 0-250.406 13.184c-26.887 7.375-49.031 29.52-56.406 56.933C0 114.113 0 217.97 0 217.97s0 104.379 13.18 153.933c7.382 27.414 28.992 49.028 56.41 56.41C120.195 442.02 320 442.02 320 442.02s200.324 0 250.406-13.184c27.418-7.379 49.032-28.992 56.414-56.406 13.176-50.082 13.176-153.934 13.176-153.934s.527-104.383-13.183-154.46zM256.21 313.915V122.022l166.586 95.946zm0 0"/>
-        </symbol>
-        <symbol id="instagram" viewBox="0 0 511 511.9">
-            <path d="M510.95 150.5c-1.2-27.2-5.598-45.898-11.9-62.102-6.5-17.199-16.5-32.597-29.6-45.398-12.802-13-28.302-23.102-45.302-29.5-16.296-6.3-34.898-10.7-62.097-11.898C334.648.3 325.949 0 256.449 0s-78.199.3-105.5 1.5c-27.199 1.2-45.898 5.602-62.097 11.898-17.204 6.5-32.602 16.5-45.403 29.602-13 12.8-23.097 28.3-29.5 45.3-6.3 16.302-10.699 34.9-11.898 62.098C.75 177.801.449 186.5.449 256s.301 78.2 1.5 105.5c1.2 27.2 5.602 45.898 11.903 62.102 6.5 17.199 16.597 32.597 29.597 45.398 12.801 13 28.301 23.102 45.301 29.5 16.3 6.3 34.898 10.7 62.102 11.898 27.296 1.204 36 1.5 105.5 1.5s78.199-.296 105.5-1.5c27.199-1.199 45.898-5.597 62.097-11.898a130.934 130.934 0 0 0 74.903-74.898c6.296-16.301 10.699-34.903 11.898-62.102 1.2-27.3 1.5-36 1.5-105.5s-.102-78.2-1.3-105.5zm-46.098 209c-1.102 25-5.301 38.5-8.801 47.5-8.602 22.3-26.301 40-48.602 48.602-9 3.5-22.597 7.699-47.5 8.796-27 1.204-35.097 1.5-103.398 1.5s-76.5-.296-103.403-1.5c-25-1.097-38.5-5.296-47.5-8.796C94.551 451.5 84.45 445 76.25 436.5c-8.5-8.3-15-18.3-19.102-29.398-3.5-9-7.699-22.602-8.796-47.5-1.204-27-1.5-35.102-1.5-103.403s.296-76.5 1.5-103.398c1.097-25 5.296-38.5 8.796-47.5C61.25 94.199 67.75 84.1 76.352 75.898c8.296-8.5 18.296-15 29.398-19.097 9-3.5 22.602-7.7 47.5-8.801 27-1.2 35.102-1.5 103.398-1.5 68.403 0 76.5.3 103.403 1.5 25 1.102 38.5 5.3 47.5 8.8 11.097 4.098 21.199 10.598 29.398 19.098 8.5 8.301 15 18.301 19.102 29.403 3.5 9 7.699 22.597 8.8 47.5 1.2 27 1.5 35.097 1.5 103.398s-.3 76.301-1.5 103.301zm0 0"/>
-            <path d="M256.45 124.5c-72.598 0-131.5 58.898-131.5 131.5s58.902 131.5 131.5 131.5c72.6 0 131.5-58.898 131.5-131.5s-58.9-131.5-131.5-131.5zm0 216.8c-47.098 0-85.302-38.198-85.302-85.3s38.204-85.3 85.301-85.3c47.102 0 85.301 38.198 85.301 85.3s-38.2 85.3-85.3 85.3zm167.402-222c0 16.954-13.747 30.7-30.704 30.7-16.953 0-30.699-13.746-30.699-30.7 0-16.956 13.746-30.698 30.7-30.698 16.956 0 30.703 13.742 30.703 30.699zm0 0"/>
-        </symbol>
-        <symbol id="facebook" viewBox="0 0 96.1 96.1">
-            <path d="M72.1 0H59.6c-14 0-23.1 9.3-23.1 23.7v10.9H24c-1.1 0-2 .9-2 2v15.8c0 1.1.9 2 2 2h12.5v39.9c0 1.1.9 2 2 2h16.4c1.1 0 2-.9 2-2v-40h14.7c1.1 0 2-.9 2-2V36.5c0-.5-.2-1-.6-1.4s-.9-.6-1.4-.6H56.8v-9.2c0-4.4 1.1-6.7 6.8-6.7H72c1.1 0 2-.9 2-2V2c0-1.1-.8-2-1.9-2z"/>
-        </symbol>
-        <symbol id="tiktok" viewBox="0 0 512 512">
-            <path d="M480.3 128.4c-29.2 0-56.2-9.7-77.8-26-24.8-18.7-42.7-46.2-49-77.8-1.6-7.8-2.4-15.9-2.5-24.2h-83.5v228.1l-.1 124.9c0 33.4-21.8 61.7-51.9 71.7-8.8 2.9-18.2 4.3-28 3.7-12.6-.7-24.3-4.5-34.6-10.6-21.8-13-36.5-36.6-36.9-63.7-.6-42.2 33.5-76.7 75.7-76.7 8.3 0 16.3 1.4 23.8 3.8V197c-7.9-1.2-15.9-1.8-24.1-1.8-46.2 0-89.4 19.2-120.3 53.8-23.3 26.1-37.3 59.5-39.5 94.5-2.8 45.9 14 89.6 46.6 121.8 4.8 4.7 9.8 9.1 15.1 13.2 28 21.5 62.1 33.2 98.1 33.2 8.1 0 16.2-.6 24.1-1.8 33.6-5 64.6-20.4 89.1-44.6 30.1-29.7 46.7-69.2 46.9-111.2l-.4-186.6c14.4 11.1 30 20.2 46.9 27.3 26.2 11.1 54 16.6 82.5 16.6v-83.1c.1.1-.2.1-.2.1z"/>
-        </symbol>
-        <symbol id="phone" viewBox="0 0 513.64 513.64">
-            <path d="M499.66 376.96l-71.68-71.68c-25.6-25.6-69.12-15.359-79.36 17.92-7.68 23.041-33.28 35.841-56.32 30.72-51.2-12.8-120.32-79.36-133.12-133.12-7.68-23.041 7.68-48.641 30.72-56.32 33.28-10.24 43.52-53.76 17.92-79.36l-71.68-71.68c-20.48-17.92-51.2-17.92-69.12 0L18.38 62.08c-48.64 51.2 5.12 186.88 125.44 307.2s256 176.641 307.2 125.44l48.64-48.64c17.921-20.48 17.921-51.2 0-69.12z"/>
-        </symbol>
-    </svg>
-</div>
+<main class="page-main">
+    <section class="upper-block">
+        <header class="header">
+            <div class="header__wrapper wrapper">
+                <img class="header__logo" src="img/LOGO.svg" alt="LOGO">
+                <nav class="header__nav">
+                    <ul class="header__nav-list">
+                        <li class="header__nav-item"><a href="#about-us">О нас</a></li>
+                        <li class="header__nav-item"><a href="#methods">Методы лечения</a></li>
+                        <li class="header__nav-item"><a href="#indications">Показания</a></li>
+                        <li class="header__nav-item"><a href="#contraindications">Противопоказания</a></li>
+                        <li class="header__nav-item"><a href="#faq">Вопросы</a></li>
+                        <li class="header__nav-item"><a href="#licenses">Лицензии</a></li>
+                        <li class="header__nav-item"><a href="#stocks">Акции</a></li>
+                        <li class="header__nav-item"><a href="#contacts">Контакты</a></li>
+                    </ul>
+                </nav>
 
-<header class="header">
-    <div class="header__wrapper wrapper">
-        <a class="header__logo logo" href="#">
-            <img src="img/logo-small.svg" alt="SmartWash">
-        </a>
+                <div class="header__contacts">
+                    <a class="header__tel" href="tel:+78122960994">+7(812)296-09-94</a>
+                    <p class="header__time">08:00 – 21:00 Ежедневно</p>
+                    <button class="header__recall recall-js" type="button">Перезвоните мне</button>
+                </div>
+            </div>
+        </header>
 
-        <ul class="header__list">
-            <li class="header__item">Официальный дистрибьютор роботмоек в России и снг</li>
-            <li class="header__item">Более 30 установленных роботмоек в россии</li>
-        </ul>
+        <div class="upper-block__wrapper wrapper">
+            <div class="upper-block__main-block">
+                <p class="upper-block__subtitle">Хватит заличивать болезни на время, можно вылечить раз и навсегда!</p>
 
-        <div class="header__tel tel">
-            <a class="tel__button" href="tel:+74957956785">
-                <svg class="tel__icon" xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#phone"></use>
-                </svg>
-            </a>
+                <h1 class="upper-block__title">Центр остеопатического лечения в Санкт&#8209;Петербурге</h1>
 
-            <div class="tel__links">
-                <a class="tel__link" href="tel:+74957956785">+7 (495) 795-6785</a>
-                <a class="tel__recall recall-js" href="#">Обратный звонок</a>
+                <ul class="upper-block__positives">
+                    <li class="upper-block__positive">Целостный и системный подход к лечению</li>
+                    <li class="upper-block__positive">Эффект от 1-го посещения</li>
+                </ul>
+
+                <div class="upper-block__price price">
+                    <p class="price__text">Первичный приём всего за:</p>
+                    <p class="price__current">1 499<small> ₽</small></p>
+                    <p class="price__old">3 000 ₽</p>
+
+                    <button class="price__button recall-js
+                    button button--finger">Записаться на прием
+                    </button>
+                </div>
+            </div>
+
+            <div class="upper-block__sale-block">
+                <img class="upper-block__photo" src="img/man.png" alt="Мужчина с больной спиной">
+                <div class="upper-block__sale">
+                    <p class="upper-block__sale-text">Только до конца августа</p>
+                    <p class="upper-block__sale-title">СКИДКА</p>
+                    <p class="upper-block__sale-number">50%</p>
+                </div>
+            </div>
+        </div>
+        <div class="upper-block__wrapper wrapper">
+            <div class="upper-block__advantages">
+                <ul class="advantages">
+                    <li class="advantages__item">
+                        <img src="img/headphones.svg" alt="">
+                        <h5>Бесплатная консультация</h5>
+                        <p>При необходимости врач-остеопат
+                            проводит диагностику всего организма, а не только той части тела, где
+                            наблюдаются болевые ощущения. Глубокие знания анатомии и физиологии
+                            позволяют остеопату понять причину боли.</p>
+                    </li>
+
+                    <li class="advantages__item">
+                        <img src="img/timer.svg" alt="">
+                        <h5>Быстрый результат</h5>
+                        <p>Уже после первого остеопатического
+                            сеанса пациент чувствует улучшение. В неосложнённых случаях достаточно 1-3
+                            сеансов, в тяжёлых случаях требуется полный курс лечения, который занимает
+                            в среднем 5-6 сеансов.</p>
+                    </li>
+
+                    <li class="advantages__item">
+                        <img src="img/clock.svg" alt="">
+                        <h5>Удобный график</h5>
+                        <p>Индивидуальная программа с учетом занятости экономит ваше время на лечение.
+                            Мы находимся возле метро – нас легко найти!</p>
+                        <a href="#contacts">Как к нам доехать?</a>
+                    </li>
+                </ul>
+
+                <button class="advantages__button button recall-js">Нужна срочная помощь</button>
             </div>
         </div>
 
-        <ul class="header__socials socials">
-            <li class="socials__item">
-                <a href="#">
-                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#instagram"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="socials__item">
-                <a href="#">
-                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#youtube"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="socials__item">
-                <a href="#">
-                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#facebook"></use>
-                    </svg>
-                </a>
-            </li>
-            <li class="socials__item">
-                <a href="#">
-                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#tiktok"></use>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-    </div>
+    </section>
+    <section class="about-us" id="about-us">
+        <div class="about-us__wrapper wrapper">
+            <img class="about-us__photo" src="img/about-us.jpg" alt="Прием пациента">
 
-</header>
+            <div class="about-us__text-block">
+                <h2 class="about-us__title title">О нас</h2>
+                <p class="about-us__subtitle subtitle">Остеопатия – медицина будущего!</p>
 
-<main class="page-main">
-
-
-    <section class="upper-block">
-        <div class="upper-block__wrapper wrapper">
-            <div class="upper-block__text-block">
-                <h1 class="upper-block__title title">Xотите автоматический<br>
-                    бизнес без людей<br>
-                    и с доходом
-                    <mark>~700 т.руб/мес?</mark>
-                </h1>
-
-                <p class="upper-block__subtitle">За 8 дней бригада с опытом более 3 лет,<br>
-                    установит оборудование в ваше помещение, и вы сможете:</p>
-
-                <ol class="upper-block__list">
-                    <li class="upper-block__item">Не зависеть от сотрудников и сократить
-                        расходы на зарплату в несколько раз
+                <p>К преимуществам диагностики и лечения заболеваний у врача-остеопата перед
+                    медикаментозным и хирургическим относятся:</p>
+                <ul>
+                    <li>возможность определить и устранить не проявления болезни, а ее первопричину,
+                        которая может быть локализована далеко от причиняющего боль участка тела;
                     </li>
-                    <li class="upper-block__item">Открыть автомойку, с условиям: быстро, качественно, недорого</li>
-                    <li class="upper-block__item">Принимать до 180 а/м в сутки <b>со средним чеком ~350 рублей</b>
+
+                    <li>безболезненность и полная безопасность для пациента всех техник,
+                        которые использует специалист;
                     </li>
+
+                    <li>малое количество противопоказаний и побочных эффектов, следует
+                        проконсультироваться с врачом.
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper">
+            <button class="about-us__button button button--finger recall-js">Получить скидку 10% на первичный прием</button>
+        </div>
+    </section>
+    <section class="methods" id="methods">
+        <div class="methods__wrapper wrapper">
+            <h2 class="methods__title title">Методы лечения</h2>
+            <p class="methods__subtitle subtitle">Следует учесть, что в зависимости от локализации
+                боли, назначаются различные методы лечения.</p>
+
+            <ul class="methods__list">
+                <li class="methods__item">
+                    <img src="img/methods1.jpg" alt="">
+                    <h5>Структуральный</h5>
+                    <p>Подразумевает воздействие непосредственно на позвоночник, суставы и связки.</p>
+                </li>
+
+                <li class="methods__item">
+                    <img src="img/methods2.jpg" alt="">
+                    <h5>Кранио-сакральный</h5>
+                    <p>В данном случае под лечебное воздействие, помимо позвоночного столба, попадают
+                        ЛОР-органы и голова пациента, а также восстановление подвижности костей таза,
+                        крестца, нормализация функции нервной системы.</p>
+                </li>
+
+                <li class="methods__item">
+                    <img src="img/methods3.jpg" alt="">
+                    <h5>Висцеральный</h5>
+                    <p>Отличие этого метода состоит в том, что при его применении стимулируются
+                        функции внутренних органов и лимфатической системы.</p>
+                </li>
+            </ul>
+
+            <div class="methods__bottom-block">
+
+                <form class="methods__form form" action="#" method="post">
+                    <h2 class="form__title title">Не знаете, какой метод подойдет в вашей ситуации?</h2>
+                    <p class="form__subtitle subtitle">Оставьте заявку на бесплатную консультацию и
+                        получите скидку 10% на первичный прием</p>
+                    <fieldset class="form__fieldset">
+                        <label class="form__label">
+                            <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
+                        </label>
+
+                        <label class="form__label">
+                            <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
+                        </label>
+                    </fieldset>
+
+                    <button class="form__button button button--finger">Получить консультацию</button>
+                </form>
+
+                <img class="methods__img" src="img/women.png" alt="Доктор">
+            </div>
+        </div>
+    </section>
+    <section class="indications" id="indications">
+        <div class="indications__wrapper wrapper">
+            <div class="indications__text-block">
+                <h2 class="indications__title title">Показания к лечению остеопатией</h2>
+
+                <p class="indications__subtitle subtitle">Основной причиной обращения пациентов к
+                    специалисту в области остеопатии являются болезненные симптомы, которые могут
+                    возникать по разным причинам, поэтому на прием стоит записаться при:</p>
+
+                <ol class="indications__list ol-list">
+                    <li>частых головных болях, мигрени и головокружениях;</li>
+                    <li>рассеянности и ухудшении памяти;</li>
+                    <li>проблемах со зрением (неясность и/или затуманивание);</li>
+                    <li>хроническом насморке, кашле, а также частых простудных заболеваниях;</li>
+                    <li>снижении слуха, хроническом отите и хроническом гайморите;</li>
+                    <li>болях в пояснице и шее, в суставах и между лопатками;</li>
+                    <li>онемении конечностей и уменьшении подвижности суставов;</li>
+                    <li>хронической усталости и снижении переносимости физических нагрузок;</li>
                 </ol>
 
-                <div class="upper-block__request">
-                    <button class="upper-block__request-button button">отправить заявку и получить бонус</button>
-                    <p class="upper-block__request-text">Отправь заявку, чтобы бесплатно получить<br>
-                        план открытия автоматической<br>
-                        автомойки без щеток
-                    </p>
+                <a class="indications__button button" href="#">Полный список показаний</a>
+            </div>
+        </div>
+    </section>
+    <section class="useful">
+        <div class="useful__wrapper wrapper">
+            <div class="useful__text-block">
+                <h2 class="useful__title title">Кому может быть полезна остеопатия?</h2>
+                <p class="useful__subtitle subtitle">В каждом из этих случаев врач сможет не только
+                    помочь пациенту решить проблему со здоровьем, но и значительно снизит расходы на
+                    лечение.
+                </p>
+            </div>
+
+            <ul class="useful__list">
+                <li class="useful__item">
+                    <img src="img/contraindications.jpg" alt="">
+                    <div class="useful__text">
+                        <h5>Помощь врача-остеопата будет полезна, как взрослым, так и детям*,
+                            перенесшим:</h5>
+
+                        <ul>
+                            <li>операции (реабилитация в послеоперационный период);</li>
+                            <li>тяжелые заболевания (пневмония, энцефалит и т. д.);</li>
+                            <li>различные травмы (сотрясения, переломы, ушибы и т. п.).</li>
+                        </ul>
+
+                        <div class="useful__button-block">
+                            <span>У вас похожий случай?</span>
+                            <button class="button button--finger recall-js">Записаться на прием</button>
+                        </div>
+                    </div>
+                </li>
+                <li class="useful__item">
+                    <img src="img/contraindications.jpg" alt="">
+                    <div class="useful__text">
+                        <h5>Помощь врача-остеопата будет полезна, как взрослым, так и детям*,
+                            перенесшим:</h5>
+
+                        <ul>
+                            <li>операции (реабилитация в послеоперационный период);</li>
+                            <li>тяжелые заболевания (пневмония, энцефалит и т. д.);</li>
+                            <li>различные травмы (сотрясения, переломы, ушибы и т. п.).</li>
+                        </ul>
+
+                        <div class="useful__button-block">
+                            <span>У вас похожий случай?</span>
+                            <button class="button button--finger recall-js">Записаться на прием</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="contraindications" id="contraindications">
+        <div class="contraindications__wrapper wrapper">
+            <div class="contraindications__text-block">
+                <h2 class="contraindications__title title">Противопоказания</h2>
+                <p>В отличие от традиционной терапии с использованием современных медикаментов,
+                    которая зачастую связана с риском возникновения побочных эффектов,
+                    остеопатическое лечение имеет минимум противопоказаний.</p>
+
+                <p>Этот аспект позволяет данной методике применяться практически без ограничений.
+                    Однако следует учесть, что больным с тяжелыми инфекционными заболеваниями, а
+                    также раковыми опухолями и сепсисом, противопоказано остеопатическое лечение.</p>
+            </div>
+
+            <form class="contraindications__form form" action="#" method="post">
+                <h2 class="form__title title">Возникли дополнительные вопросы? Ваш звонок поможет
+                    снять все сомнения!</h2>
+                <fieldset class="form__fieldset">
+                    <label class="form__label">
+                        <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
+                    </label>
+
+                    <label class="form__label">
+                        <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
+                    </label>
+                </fieldset>
+
+                <button class="form__button button button--finger">Заказать звонок</button>
+            </form>
+        </div>
+    </section>
+    <section class="doctor">
+        <div class="doctor__wrapper wrapper">
+            <div class="doctor__block">
+                <div class="doctor__text">
+                    <p>Кто ведет лечение?</p>
+                    <h3>Никита Иванов</h3>
+                    <p>Врач-остеопат</p>
+
+                    <ul>
+                        <li>Ординатура по Остеопатии</li>
+                        <li>Практика в клинике доктора Мохова, Санкт-Петербург</li>
+                        <li>Высшее образование СПБГУ - терапия</li>
+                    </ul>
+
+                    <button class="doctor__button button button--finger recall-js">Записаться на прием</button>
+                </div>
+
+                <img class="doctor__photo" src="img/doctor.jpg" alt="Никита Иванов">
+
+                <div class="doctor__certificates">
+                    <h5>Сертификаты</h5>
+                    <ul>
+                        <li><img src="img/cert.jpg" alt=""></li>
+                        <li><img src="img/cert.jpg" alt=""></li>
+                        <li><img src="img/cert.jpg" alt=""></li>
+                        <li><img src="img/cert.jpg" alt=""></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
-    <section class="fast">
-        <div class="fast__wrapper wrapper">
-            <h2 class="fast__title title">Установив роботмойку вы становитесь <em>быстрее и лучше конкурентов</em>
-            </h2>
+    <section class="how-work">
+        <div class="how-work__wrapper wrapper">
+            <h2 class="how-work__title title">Как работает остеопатия?</h2>
+            <p class="how-work__subtitle subtitle">Остеопатия направлена на устранение
+                самой причины заболевания, а не только на исправление осанки или избавление
+                от боли в спине и шее.</p>
 
-            <ul class="fast__nav-buttons">
-                <li class="fast__nav-button active button button--noborder">Cтарт</li>
-                <li class="fast__nav-button inactive button button--empty">Качество</li>
-                <li class="fast__nav-button inactive button button--empty">Контроль</li>
-            </ul>
-
-            <ul class="fast__nav-list">
-                <li class="fast__nav-item active">
-                    <img class="fast__nav-image" src="img/fast1.png" alt="">
-
-                    <ul class="fast__about-list">
-                        <li class="fast__about-item"><p>легкий вход</p></li>
-                        <li class="fast__about-item"><p>сроки от 8 дней до 2,5 месяцев</p></li>
-                        <li class="fast__about-item"><p>структурированный маркетинговый план в начале</p></li>
-                        <li class="fast__about-item"><p>удобные инструменты промо</p></li>
-                        <li class="fast__about-item"><p>комплект проектов зданий и помещений</p></li>
-                        <li class="fast__about-item"><p>пакет предварительных документов-примеров</p></li>
-                        <li class="fast__about-item"><p>выезд на место локации</p></li>
-                        <li class="fast__about-item"><p>легкие консультации on-line</p></li>
-                    </ul>
+            <ol class="how-work__list ol-list">
+                <li>Наш врач-остеопат занимается изучением связи между
+                    различными отделами тела и работой нервной системы, внутренних органов.
                 </li>
+                <li>Проводит диагностику и мягко, деликатно на протяжении
+                    нескольких сеансов проводит коррекцию состояния, устраняет спазмы, зажимы и
+                    болевой синдром, нормализует подвижность, улучшает общее состояние, устраняет
+                    влияние стресса.
+                </li>
+                <li>Включается механизм саморегуляции организма и
+                    активируются его внутренние ресурсы
+                </li>
+            </ol>
 
-                <!--                <li class="fast__nav-item inactive">-->
-                <!--                    <img class="fast__nav-image" src="img/fast1.png" alt="">-->
-
-                <!--                    <ul class="fast__about-list">-->
-                <!--                        <li class="fast__about-item">легкий вход</li>-->
-                <!--                        <li class="fast__about-item">сроки от 8 дней до 2,5 месяцев</li>-->
-                <!--                        <li class="fast__about-item">структурированный маркетинговый план в начале</li>-->
-                <!--                        <li class="fast__about-item">удобные инструменты промо</li>-->
-                <!--                        <li class="fast__about-item">комплект проектов зданий и помещений</li>-->
-                <!--                        <li class="fast__about-item">пакет предварительных документов-примеров</li>-->
-                <!--                        <li class="fast__about-item">выезд на место локации</li>-->
-                <!--                        <li class="fast__about-item">легкие консультации on-line</li>-->
-                <!--                    </ul>-->
-                <!--                </li>-->
-
-                <!--                <li class="fast__nav-item inactive">-->
-                <!--                    <img class="fast__nav-image" src="img/fast1.png" alt="">-->
-
-                <!--                    <ul class="fast__about-list">-->
-                <!--                        <li class="fast__about-item">легкий вход</li>-->
-                <!--                        <li class="fast__about-item">сроки от 8 дней до 2,5 месяцев</li>-->
-                <!--                        <li class="fast__about-item">структурированный маркетинговый план в начале</li>-->
-                <!--                        <li class="fast__about-item">удобные инструменты промо</li>-->
-                <!--                        <li class="fast__about-item">комплект проектов зданий и помещений</li>-->
-                <!--                        <li class="fast__about-item">пакет предварительных документов-примеров</li>-->
-                <!--                        <li class="fast__about-item">выезд на место локации</li>-->
-                <!--                        <li class="fast__about-item">легкие консультации on-line</li>-->
-                <!--                    </ul>-->
-                <!--                </li>-->
-            </ul>
+            <video poster="img/poster-video.jpg" class="how-work__video video" muted controls loop>
+                <source src="img/video1.mp4" type="video/mp4">
+            </video>
         </div>
     </section>
-    <section class="schedule">
-        <div class="schedule__wrapper wrapper">
-            <h2 class="schedule__title title">Получите график поставки и
-                <em>персональное предложение по вашей роботмойке</em></h2>
+    <section class="individual">
+        <div class="individual__wrapper wrapper">
+            <div class="individual__text-block">
+                <h2 class="individual__title title">Получите индивидуальную программу улучшения своего здоровья за 1
+                    прием</h2>
+                <div class="individual__price price price--white">
+                    <p class="price__text">Первичный приём всего за:</p>
+                    <p class="price__current">1 499<small> ₽</small></p>
+                    <p class="price__old">3 000 ₽</p>
 
-            <form class="schedule__quiz quiz">
-                <fieldset class="quiz__fieldset">
-                    <legend class="quiz__legend button button--noborder">Шаг 1 из 4</legend>
+                    <button class="price__button recall-js
+                   button button--finger">Записаться на прием
+                    </button>
+                </div>
+            </div>
 
-                    <div class="quiz__container">
-
-                        <label class="quiz__label">
-                            <input class="visually-hidden" type="radio" name="step-1" value="" required>
-
-                            <span class="quiz__radio-indicator">
-                            <span class="quiz__image-block"><img class="quiz__image" src="img/quiz1.png" alt=""></span>
-                            <span class="quiz__name">Здание есть</span>
-                        </span>
-                        </label>
-
-                        <label class="quiz__label">
-                            <input class="visually-hidden" type="radio" name="step-1" value="" required>
-
-                            <span class="quiz__radio-indicator">
-                            <span class="quiz__image-block"><img class="quiz__image" src="img/quiz2.png" alt=""></span>
-                            <span class="quiz__name">Здание строится</span>
-                        </span>
-                        </label>
-                    </div>
-                </fieldset>
-            </form>
+            <img class="individual__img" src="img/women.png" alt="Доктор">
         </div>
     </section>
     <section class="why-us">
         <div class="why-us__wrapper wrapper">
-            <h2 class="why-us__title title">
-                Почему клиенты повторно<br>
-                <em>выбирают именно
-                    <mark>умнаямойка.рф?</mark>
-                </em>
-            </h2>
+            <img class="why-us__logo" src="img/LOGO.svg" alt="LOGO">
+            <div class="why-us__text-block">
+                <h2 class="why-us__title title">Почему стоит прийти в наш центр остеопатии?</h2>
 
-            <ul class="why-us__list">
-                <li class="why-us__item">
-                    <img class="why-us__photo" src="img/why-us.jpg" alt="">
-                    <div class="why-us__text-block">
-                        <h4>Мы построили собственную сеть
-                            автоматических автомоек без щеток</h4>
+                <p>Курс лечения у остеопата продолжительностью от 3х сеансов поможет устранить проявления хронических
+                    заболеваний, скорректировать неправильное положение внутренних органов и повысить иммунитет!</p>
 
-                        <p>На данный момент в Москве успешно работает сеть наших собственных
-                            автомоек и несколько партнерских в Московской области - это
-                            позволяет нам не только знать про оборудование ВСЁ, но и ответить
-                            на любой вопрос изнутри бизнеса, который у вас может появиться</p>
-
-                        <div class="why-us__video-block">
-                            <a href="#" class="why-us__video video"><img src="img/why-us-video.jpg" alt=""></a>
-
-                            <p>Посмотрите видео установленных проектов на заправках
-                                Shell, BP, техцентрах ФИТ-Сервис, мойках самообслуживания.</p>
-                        </div>
-
-                    </div>
-                </li>
-                <li class="why-us__item">
-                    <img class="why-us__photo" src="img/why-us.jpg" alt="">
-                    <div class="why-us__text-block">
-                        <h4>Мы построили собственную сеть
-                            автоматических автомоек без щеток</h4>
-
-                        <p>На данный момент в Москве успешно работает сеть наших собственных
-                            автомоек и несколько партнерских в Московской области - это
-                            позволяет нам не только знать про оборудование ВСЁ, но и ответить
-                            на любой вопрос изнутри бизнеса, который у вас может появиться</p>
-
-                        <div class="why-us__video-block">
-                            <a href="#" class="why-us__video video"><img src="img/why-us-video.jpg" alt=""></a>
-
-                            <p>Посмотрите видео установленных проектов на заправках
-                                Shell, BP, техцентрах ФИТ-Сервис, мойках самообслуживания.</p>
-                        </div>
-
-                    </div>
-                </li>
-            </ul>
+                <ol class="why-us__list ol-list">
+                    <li>Избавление от боли в спине, шее, голове, пояснице с первого
+                        же посещения остеопата.
+                    </li>
+                    <li>Нахождение первопричиных проблем в организме.</li>
+                    <li>Комплексное лечение всего организма.</li>
+                    <li>Лечение хронических заболеваний и травм вызваных нагрузками в спортзале,
+                        или при посадке и сбора урожая на огороде.
+                    </li>
+                </ol>
+            </div>
         </div>
     </section>
-    <section class="visual">
-        <div class="visual__wrapper wrapper">
-            <div class="visual__text-block">
-                <h2 class="visual__small-title title">
-                    Вам очень понравится предварительная визуализация роботмойки
-                    в вашем помещении, которую мы сделаем
-                    для Вас <em>совершенно бесплатно</em>
-                </h2>
+    <section class="difference">
+        <div class="difference__wrapper wrapper">
+            <h2 class="difference__title title">Отличие остеопатии от массажа</h2>
 
-                <img class="visual__image" src="img/vizual.png" alt="">
-            </div>
+            <ol class="difference__list">
+                <li class="difference__item">
+                    <h5>Нет лечения без диагностики</h5>
+                    <p>Если массажист начинает сеанс
+                        с подготовительных расслабляющих действий,
+                        то первое, что делает врач-остеопат – это диагностика,
+                        то есть выявление первопричины заболевания. Только после этого,
+                        он приступает к непосредственному лечению.</p>
+                </li>
 
-            <form class="visual__form form">
-                <h3 class="form__title">Заполните форму<br> прямо сейчас!</h3>
+                <li class="difference__item">
+                    <h5>Действует не только на суставы</h5>
+                    <p>Остеопатии под силу решать не только проблемы позвоночника,
+                        суставов и центральной нервной системы, она отлично излечивает
+                        многие хронические внутренние заболевания.</p>
+                </li>
 
-                <label class="form__label">
-                    <input class="form__input" placeholder="Имя" name="name" type="text" required>
-                </label>
+                <li class="difference__item">
+                    <h5>Постоянный эффект</h5>
+                    <p>Массаж способствует выздоровлению. Однако отсутствие полноценной
+                        диагностики не всегда способствует достижению положительного эффекта,
+                        а иногда и усугубляет болезнь.</p>
+                    <p>Остеопатия же, ликвидируя саму первопричину заболевания, делает
+                        невозможным рецидив болезни.</p>
+                </li>
 
-                <label class="form__label">
-                    <input class="form__input phone_mask" placeholder="Телефон" name="tel" type="tel" required>
-                </label>
-
-                <label class="form__label">
-                    <input class="form__input" placeholder="Email" name="email" type="email" required>
-                </label>
-
-                <label class="form__label">
-                    <input class="form__input" placeholder="Город" name="city" type="text" required>
-                </label>
-
-                <button class="form__button button">получить бесплатный проект</button>
-
-                <label class="form__label-check">
-                    <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
-                    <span class="form__check-indicator"></span>
-                    <span class="form__indicator-title">
-                        Я принимаю условия
-                        <a href="#">обработки персональных данных, передачи и получения информации</a>
-                    </span>
-                </label>
-            </form>
+                <li class="difference__item">
+                    <h5>Длительность лечения</h5>
+                    <p>Курс массажа состоит обычно из 10 сеансов, которые проводятся по три раза
+                        в неделю. Остеопатия не требует курсового лечения: бывает достаточно 3-4
+                        сеансов. Положительные результаты остеопатического лечения проявляются уже
+                        после первого сеанса.</p>
+                </li>
+            </ol>
         </div>
-
-        <div class="visual__wrapper-bottom wrapper">
-            <div class="visual__title-block">
-                <h2 class="visual__title title">
-                    Почувствуйте себя<br>
-                    <em>VIP-персоной и испытайте удовольствие!</em>
-                </h2>
-
-                <p class="visual__text">Проверьте нас в деле и испытайте удовольствие
-                    от всего процесса выбора и покупки оборудования.
-                    Выберите Ваше оборудование из наличия или
-                    закажите самую новую версию с завода
-                </p>
-            </div>
-
-            <div class="visual__nav-block">
-                <ul class="visual__nav-list">
-                    <li class="visual__nav-item active">
-                        <h5 class="visual__nav-title">Разгрузки</h5>
-                        <p class="visual__nav-text">есть оборудование в наличии</p>
-                    </li>
-
-                    <li class="visual__nav-item">
-                        <h5 class="visual__nav-title">Отзыв клиента</h5>
-                        <p class="visual__nav-text">посмотрите интервью с одним из наших постоянных клиентов</p>
-                    </li>
-
-                    <li class="visual__nav-item">
-                        <h5 class="visual__nav-title">Полное видео мойки</h5>
-                        <p class="visual__nav-text">оцените результаты именно наших роботмоек, ведь у вас будет
-                            также</p>
-                    </li>
-                </ul>
-
-                <div class="visual__items">
-                    <div class="visual__item">
-                        <ul class="visual__sliders">
-                            <li class="visual__slider">
-                                <a href="#" class="visual__video video"><img src="img/why-us-video.jpg" alt=""></a>
-                            </li>
-
-                            <li class="visual__slider">
-                                <a href="#" class="visual__video video"><img src="img/why-us-video.jpg" alt=""></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!--                    <div class="visual__item">-->
-                    <!--                        <ul class="visual__sliders">-->
-                    <!--                            <li class="visual__slider"></li>-->
-                    <!--                            <li class="visual__slider"></li>-->
-                    <!--                            <li class="visual__slider"></li>-->
-                    <!--                        </ul>-->
-                    <!--                    </div>-->
-
-                    <!--                    <div class="visual__item">-->
-                    <!--                        <ul class="visual__sliders">-->
-                    <!--                            <li class="visual__slider"></li>-->
-                    <!--                            <li class="visual__slider"></li>-->
-                    <!--                            <li class="visual__slider"></li>-->
-                    <!--                        </ul>-->
-                    <!--                    </div>-->
-                </div>
-            </div>
-
-        </div>
-
-    </section>
-    <section class="reasons">
-        <div class="reasons__wrapper wrapper">
-            <h2 class="reasons__title title">
-                <em>6 причин</em> почему вы будете зарабатывать
-                больше сделав выбор роботмойки от
-                <mark>умнаямойка.рф</mark>
-            </h2>
-        </div>
-
-        <ul class="reasons__list">
-            <li class="reasons__item">
-                <img class="reasons__photo" src="img/reasons1.jpg" alt="">
-                <p class="reasons__text">Качественная услуга благодаря нашей системе внедрения - ведь мы не просто
-                    ставим оборудование, но и полностью настраиваем, обучаем, подбираем химию именно под вашу локацию
-                    и погружаем ваших сотрудников в знания</p>
-            </li>
-
-            <li class="reasons__item">
-                <img class="reasons__photo" src="img/reasons1.jpg" alt="">
-                <p class="reasons__text">Качественная услуга благодаря нашей системе внедрения - ведь мы не просто
-                    ставим оборудование, но и полностью настраиваем, обучаем, подбираем химию именно под вашу локацию
-                    и погружаем ваших сотрудников в знания</p>
-            </li>
-
-            <li class="reasons__item">
-                <img class="reasons__photo" src="img/reasons1.jpg" alt="">
-                <p class="reasons__text">Качественная услуга благодаря нашей системе внедрения - ведь мы не просто
-                    ставим оборудование, но и полностью настраиваем, обучаем, подбираем химию именно под вашу локацию
-                    и погружаем ваших сотрудников в знания</p>
-            </li>
-
-            <li class="reasons__item">
-                <img class="reasons__photo" src="img/reasons1.jpg" alt="">
-                <p class="reasons__text">Качественная услуга благодаря нашей системе внедрения - ведь мы не просто
-                    ставим оборудование, но и полностью настраиваем, обучаем, подбираем химию именно под вашу локацию
-                    и погружаем ваших сотрудников в знания</p>
-            </li>
-        </ul>
     </section>
     <section class="reviews">
         <div class="reviews__wrapper wrapper">
-            <div class="reviews__about">
-                <h2 class="reviews__title title">Узнайте <em>мнение<br> наших клиентов</em></h2>
-                <img class="reviews__image" src="img/design.png" alt="">
-            </div>
-
+            <h2 class="reviews__title title">Отзывы наших пациентов</h2>
             <ul class="reviews__list">
-                <li class="reviews__item">
-                    <div class="reviews__author">
-                        <img class="reviews__photo" src="img/user.jpg" alt="">
-                        <div class="reviews__author-about">
-                            <p class="reviews__name">Екатерина Журавлева</p>
-                            <p class="reviews__who">Владелец мойки</p>
-                        </div>
-                    </div>
-
-                    <div class="reviews__content">
-                        <p>Добро пожаловать на официальный сайт компании по проектированию,
-                            монтажу и обслуживанию роботизированных автоматических
-                            автомоек. Вы можете просмотреть презентации, обзоры,
-                            рекомендации в режиме видео</p>
-                        <a href="#" class="reviews__video video"><img src="img/why-us-video.jpg" alt=""></a>
-                    </div>
-                </li>
-                <li class="reviews__item">
-                    <div class="reviews__author">
-                        <img class="reviews__photo" src="img/user.jpg" alt="">
-                        <div class="reviews__author-about">
-                            <p class="reviews__name">Екатерина Журавлева</p>
-                            <p class="reviews__who">Владелец мойки</p>
-                        </div>
-                    </div>
-
-                    <div class="reviews__content">
-                        <p>Добро пожаловать на официальный сайт компании по проектированию,
-                            монтажу и обслуживанию роботизированных автоматических
-                            автомоек. Вы можете просмотреть презентации, обзоры,
-                            рекомендации в режиме видео</p>
-                        <a href="#" class="reviews__video video"><img src="img/why-us-video.jpg" alt=""></a>
+                <li class="reviews__item"><img src="img/cert.jpg" alt=""></li>
+                <li class="reviews__item"><img src="img/cert.jpg" alt=""></li>
+                <li class="reviews__item"><img src="img/cert.jpg" alt=""></li>
+                <li class="reviews__item"><img src="img/cert.jpg" alt=""></li>
+                <li class="reviews__item"><img src="img/cert.jpg" alt=""></li>
+                <li class="reviews__item"><img src="img/cert.jpg" alt=""></li>
+            </ul>
+        </div>
+    </section>
+    <section class="faq" id="faq">
+        <div class="faq__wrapper wrapper">
+            <h3 class="faq__title title">Часто задаваемые вопросы</h3>
+            <ul class="faq__list">
+                <li class="faq__item faq__item--active">
+                    <h5 class="faq__item-title">Каков принцип работы остеопатического метода?</h5>
+                    <div class="faq__text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci commodi debitis dolor dolorem dolorum eos, error in nemo officiis voluptatem.
+                            Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
+                            Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
+                            voluptatem!</p>
                     </div>
                 </li>
-                <li class="reviews__item">
-                    <div class="reviews__author">
-                        <img class="reviews__photo" src="img/user.jpg" alt="">
-                        <div class="reviews__author-about">
-                            <p class="reviews__name">Екатерина Журавлева</p>
-                            <p class="reviews__who">Владелец мойки</p>
-                        </div>
+                <li class="faq__item">
+                    <h5 class="faq__item-title">Как остеопатия лечит такие разные заболевания?</h5>
+                    <div class="faq__text hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci commodi debitis dolor dolorem dolorum eos, error in nemo officiis voluptatem.
+                            Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
+                            voluptatem!</p>
                     </div>
+                </li>
+                <li class="faq__item">
+                    <h5 class="faq__item-title">Как подготовиться к приему остеопата?</h5>
+                    <div class="faq__text hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci commodi debitis dolor dolorem dolorum eos, error in nemo officiis voluptatem.
+                            Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
+                            voluptatem!</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <h5 class="faq__item-title">Сколько приемов требуется и как часто?</h5>
+                    <div class="faq__text hidden">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Adipisci commodi debitis dolor dolorem dolorum eos, error in nemo officiis voluptatem.
+                            Asperiores deserunt inventore iste maxime perferendis quas recusandae repellendus
+                            voluptatem!</p>
+                    </div>
+                </li>
+            </ul>
 
-                    <div class="reviews__content">
-                        <p>Добро пожаловать на официальный сайт компании по проектированию,
-                            монтажу и обслуживанию роботизированных автоматических
-                            автомоек. Вы можете просмотреть презентации, обзоры,
-                            рекомендации в режиме видео</p>
-                        <a href="#" class="reviews__video video"><img src="img/why-us-video.jpg" alt=""></a>
-                    </div>
+            <h3 class="faq__title title">Остались вопросы?</h3>
+            <p class="faq__subtitle subtitle">Бесплатно проконсультируем по телефону и очно</p>
+            <button class="faq__button button button--finger recall-js">Получить консультацию</button>
+        </div>
+    </section>
+    <section class="licenses" id="licenses">
+        <div class="licenses__wrapper wrapper">
+            <h2 class="licenses__title title">Центр остеопатического лечения</h2>
+
+            <div class="licenses__photos">
+                <img alt="" src="img/methods1.jpg">
+                <img alt="" src="img/methods2.jpg">
+                <img alt="" src="img/methods3.jpg">
+                <img alt="" src="img/methods1.jpg">
+                <img alt="" src="img/methods2.jpg">
+                <img alt="" src="img/methods3.jpg">
+            </div>
+        </div>
+    </section>
+    <section class="stocks" id="stocks">
+        <div class="stocks__wrapper wrapper">
+            <h2 class="stocks__title title">Программа лояльности</h2>
+            <ul class="stocks__list">
+                <li class="stocks__item">
+                    <h5>Скидка на большие покупки</h5>
+                    <p>Особые условия и специально низкие цены при необходимости
+                        покупки курса от 3х сеансов</p>
+                    <a class="button stocks__button recall-js">Узнать об условиях</a>
+                </li>
+
+                <li class="stocks__item">
+                    <h5>Скидка на профилактику</h5>
+                    <p>Первое профилактическое посещение через 6 месяцев с
+                        гарантированой скидкой 20%</p>
+                    <a class="button stocks__button recall-js">Узнать об условиях</a>
                 </li>
             </ul>
         </div>
     </section>
-    <section class="equipment">
-        <div class="equipment__wrapper wrapper">
-            <h2 class="equipment__title title"><em>Создайте сами свою<br> комплектацию</em> прямо сейчас<br>
-                и узнайте цену</h2>
+    <section class="consultation">
+        <div class="consultation__wrapper wrapper">
+            <img class="consultation__img" src="img/man2.png" alt="Мужчина">
 
-            <form class="equipment__quiz quiz">
-                <fieldset class="quiz__fieldset">
-                    <legend class="quiz__legend button button--noborder">Шаг 1 из 6</legend>
+            <form class="consultation__form form" action="#" method="post">
+                <h2 class="form__title title">Получите консультацию</h2>
+                <p class="form__subtitle subtitle">Укажите ваш номер телефона и специалист клиники
+                    свяжется с Вами в течении 15 минут и проконсультирует</p>
+                <fieldset class="form__fieldset">
+                    <label class="form__label">
+                        <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
+                    </label>
 
-                    <div class="quiz__container">
-
-                        <label class="quiz__label">
-                            <input class="visually-hidden" type="radio" name="step-1" value="" required>
-
-                            <span class="quiz__radio-indicator">
-                            <span class="quiz__image-block"><img class="quiz__image" src="img/quiz3.png" alt=""></span>
-                            <span class="quiz__name">Хочу сам выбрать функции</span>
-                        </span>
-                        </label>
-
-                        <label class="quiz__label">
-                            <input class="visually-hidden" type="radio" name="step-1" value="" required>
-
-                            <span class="quiz__radio-indicator">
-                            <span class="quiz__image-block"><img class="quiz__image" src="img/quiz4.png" alt=""></span>
-                            <span class="quiz__name">Хочу, чтобы за меня все сделали</span>
-                        </span>
-                        </label>
-                    </div>
+                    <label class="form__label">
+                        <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
+                    </label>
                 </fieldset>
+
+                <button class="form__button button button--finger">Получить консультацию</button>
             </form>
         </div>
     </section>
-    <section class="facilities">
-        <div class="facilities__wrapper wrapper">
-            <h2 class="facilities__title title">Познакомьтесь с нами поближе - посмотрите на наши объекты</h2>
-            <p class="facilities__subtitle title">Мы представлены уже в <em>14 городах России.</em><br>
-                Вливайтеь в самую профессиональную команду официального
-                дистрибьютора роботмоек
-                <mark><em>умнаямойка.рф</em></mark>
-            </p>
+    <section class="contacts" id="contacts">
+        <div class="contacts__wrapper wrapper">
+            <div class="contacts__text-block">
+                <h2 class="contacts__title title">Контакты</h2>
 
-            <ul class="facilities__list">
-                <li class="facilities__item">
-                    <img class="facilities__photo" src="img/facilities1.jpg" alt="">
-                    <button class="facilities__button button">получить весь список городов</button>
+                <h4>Адрес:</h4>
+                <p>пр. Просвещения, д.33, корп.2</p>
+                <p>пр. Комендантский, д.12, корп.1</p>
+                <a class="contacts__path-link" href="#">Построить маршрут</a>
 
-                    <div class="facilities__text-block">
-                        <h4 class="facilities__name">Мы построили собственную сеть автоматических
-                            автомоек без щеток</h4>
+                <h4>Время работы:</h4>
+                <p>Ежедневно с 10:00 до 21:00</p>
 
-                        <p class="facilities__text">На данный момент в Москве успешно работает сеть наших
-                            собственных автомоек и несколько партнерских в Московской области - это позволяет
-                            нам не только знать про оборудование ВСЁ, но и ответить на любой вопрос изнутри
-                            бизнеса, который у вас может появиться</p>
-                    </div>
-                </li>
-                <li class="facilities__item">
-                    <img class="facilities__photo" src="img/facilities1.jpg" alt="">
-                    <button class="facilities__button button">получить весь список городов</button>
+                <h4>Телефоны:</h4>
+                <a class="contacts__phone" href="tel:+78122960994">+7 (812) 296-09-94</a>
+                <a class="contacts__phone" href="tel:+79219676188">+7 (921) 967-61-88</a>
 
-                    <div class="facilities__text-block">
-                        <h4 class="facilities__name">Мы построили собственную сеть автоматических
-                            автомоек без щеток</h4>
-
-                        <p class="facilities__text">На данный момент в Москве успешно работает сеть наших
-                            собственных автомоек и несколько партнерских в Московской области - это позволяет
-                            нам не только знать про оборудование ВСЁ, но и ответить на любой вопрос изнутри
-                            бизнеса, который у вас может появиться</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="professionals">
-        <div class="professionals__wrapper wrapper">
-            <h2 class="professionals__title title"> С вами будет работать команда профессионалов,
-                экстремально увлеченных роботмойками</h2>
-
-            <ul class="professionals__list">
-                <li class="professionals__item">
-                    <img class="professionals__photo" src="img/professionals1.jpg" alt="">
-                    <div class="professionals__about-block">
-                        <p class="professionals__phrase">На данный момент в Москве успешно работает сеть наших
-                            собственных автомоек и несколько партнерских в Московской области - это позволяет
-                            нам не только знать про оборудование ВСЁ, но и ответить на любой вопрос изнутри
-                            бизнеса, который у вас может появиться</p>
-
-                        <p class="professionals__name">Александр Петров</p>
-                        <p class="professionals__who">руководитель</p>
-
-                        <ul class="professionals__ul">
-                            <li>пункт 1</li>
-                            <li>пункт 2</li>
-                            <li>пункт 3</li>
-                            <li>пункт 4</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="professionals__item">
-                    <img class="professionals__photo" src="img/professionals1.jpg" alt="">
-                    <div class="professionals__about-block">
-                        <p class="professionals__phrase">На данный момент в Москве успешно работает сеть наших
-                            собственных автомоек и несколько партнерских в Московской области - это позволяет
-                            нам не только знать про оборудование ВСЁ, но и ответить на любой вопрос изнутри
-                            бизнеса, который у вас может появиться</p>
-
-                        <p class="professionals__name">Александр Петров</p>
-                        <p class="professionals__who">руководитель</p>
-
-                        <ul class="professionals__ul">
-                            <li>пункт 1</li>
-                            <li>пункт 2</li>
-                            <li>пункт 3</li>
-                            <li>пункт 4</li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="professionals__item">
-                    <img class="professionals__photo" src="img/professionals1.jpg" alt="">
-                    <div class="professionals__about-block">
-                        <p class="professionals__phrase">На данный момент в Москве успешно работает сеть наших
-                            собственных автомоек и несколько партнерских в Московской области - это позволяет
-                            нам не только знать про оборудование ВСЁ, но и ответить на любой вопрос изнутри
-                            бизнеса, который у вас может появиться</p>
-
-                        <p class="professionals__name">Александр Петров</p>
-                        <p class="professionals__who">руководитель</p>
-
-                        <ul class="professionals__ul">
-                            <li>пункт 1</li>
-                            <li>пункт 2</li>
-                            <li>пункт 3</li>
-                            <li>пункт 4</li>
-                        </ul>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="coordinates">
-        <h2 class="visually-hidden">Наше месторасположение</h2>
-
-        <div class="coordinates__container">
-            <ul class="coordinates__list">
-                <li class="coordinates__item">
-                    <p class="coordinates__name">м. Коньково</p>
-                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
-                </li>
-                <li class="coordinates__item">
-                    <p class="coordinates__name">м. Коньково</p>
-                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
-                </li>
-                <li class="coordinates__item">
-                    <p class="coordinates__name">м. Коньково</p>
-                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
-                </li>
-                <li class="coordinates__item">
-                    <p class="coordinates__name">м. Коньково</p>
-                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
-                </li>
-                <li class="coordinates__item">
-                    <p class="coordinates__name">м. Коньково</p>
-                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
-                </li>
-                <li class="coordinates__item">
-                    <p class="coordinates__name">м. Коньково</p>
-                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
-                </li>
-            </ul>
-        </div>
-
-        <img class="coordinates__map" src="img/map.jpg" alt="">
-    </section>
-    <section class="secrets">
-        <div class="secrets__wrapper wrapper">
-            <div class="secrets__container">
-                <div class="secrets__text-block">
-                    <h2 class="secrets__title title">Заполните форму и получите
-                        <em>секретную информацию,<br> которая есть только у нас</em></h2>
-                    <button class="secrets__button button button--noborder">Шаг 1 из 6</button>
-                </div>
-
-                <form class="secrets__form form">
-                    <h3 class="form__title">Заполните форму<br> прямо сейчас!</h3>
-
-                    <label class="form__label">
-                        <input class="form__input" placeholder="Имя" name="name" type="text" required>
-                    </label>
-
-                    <label class="form__label">
-                        <input class="form__input phone_mask" placeholder="Телефон" name="tel" type="tel" required>
-                    </label>
-
-                    <label class="form__label">
-                        <input class="form__input" placeholder="Email" name="email" type="email" required>
-                    </label>
-
-                    <label class="form__label">
-                        <input class="form__input" placeholder="Город" name="city" type="text" required>
-                    </label>
-
-                    <button class="form__button button">получить бесплатный проект</button>
-
-                    <label class="form__label-check">
-                        <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
-                        <span class="form__check-indicator"></span>
-                        <span class="form__indicator-title">
-                        Я принимаю условия
-                        <a href="#">обработки персональных данных, передачи и получения информации</a>
-                    </span>
-                    </label>
-                </form>
             </div>
+            <!--            <img src="img/map.jpg" class="contacts__map" alt="">-->
+
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Ae09e41e165d7f63218996850c392650876df7fa6a919f5719fa38a80c5f86ead&amp;source=constructor"
+                    width="796" height="633" frameborder="0" loading="lazy" class="contacts__map"></iframe>
+
+            <amp-img src="img/map.jpg"
+                     class="visually-hidden"
+                     alt="пр. Комендантский, д.12, корп.1">
+
+            </amp-img>
+
         </div>
     </section>
 </main>
 
-<footer class="footer">
-    <div class="footer__wrapper wrapper">
-        <div class="footer__block">
-            <a class="footer__logo logo" href="#">
-                <img src="img/logo-big.svg" alt="SmartWash">
-            </a>
-        </div>
-
-        <div class="footer__block">
-            <p class="footer__text">
-                Разработано специально для<br>
-                <a href="#">http://умнаямойка.рф © 2018-2021</a>
-            </p>
-
-            <p class="footer__text">
-                Есть вопросы? Звоните <a href="tel:+74957956785">+7 (495) 795-6785</a>
-            </p>
-        </div>
-
-        <div class="footer__block">
-            <ul class="header__socials socials socials--reverse">
-                <li class="socials__item">
-                    <a href="#">
-                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#instagram"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item">
-                    <a href="#">
-                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#youtube"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item">
-                    <a href="#">
-                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                    </a>
-                </li>
-                <li class="socials__item">
-                    <a href="#">
-                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#tiktok"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-
-            <p class="footer__text">Москва, МКАД, 69 км, внеш.ст., к.9</p>
-        </div>
-    </div>
-</footer>
-
-<div class="side-buttons">
-    <a class="side-button side-button--green calc-js">Рассчитать</a>
-    <a class="side-button side-button--blue table-js">Таблица сравнения</a>
-</div>
-
-<div class="fixed-video">
-    <a href="#" class="fixed-video__item video"><img src="img/why-us-video.jpg" alt=""></a>
-    <button class="fixed-video__close">x</button>
-</div>
-
 <div class="modal-back hide">
-    <div class="modal modal--recall hide">
+    <div class="modal hide">
         <button class="modal__btn-close modal-close"></button>
-        <form class="modal__form form form--white" action="#" method="post">
-            <h2 class="form__title title">Обратный звонок</h2>
+        <form class="modal__form form" action="#" method="post">
+            <h2 class="form__title title">Получите консультацию</h2>
+            <p class="form__subtitle subtitle">Укажите ваш номер телефона и специалист клиники
+                свяжется с Вами в течении 15 минут и проконсультирует</p>
+            <fieldset class="form__fieldset">
+                <label class="form__label">
+                    <input class="form__input" type="text" placeholder="Ваше имя" name="name" required>
+                </label>
 
-            <label class="form__label">
-                <input class="form__input" type="text" placeholder="Имя *" name="name" required>
-            </label>
+                <label class="form__label">
+                    <input class="form__input phone_mask" type="tel" placeholder="Ваш телефон" name="tel" required>
+                </label>
+            </fieldset>
 
-            <label class="form__label">
-                <input class="form__input phone_mask" type="tel" placeholder="Телефон *" name="tel" required>
-            </label>
-
-            <label class="form__label">
-                <input class="form__input" type="text" placeholder="Город *" name="city" required>
-            </label>
-
-            <button class="form__button button button--finger">Получить пример расчёта</button>
-
-            <label class="form__label-check">
-                <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
-                <span class="form__check-indicator"></span>
-                <span class="form__indicator-title">
-                        Я принимаю условия
-                        <a href="#">обработки персональных данных, передачи и получения информации</a>
-                    </span>
-            </label>
+            <button class="form__button button button--finger">Получить консультацию</button>
         </form>
     </div>
-
-    <div class="modal modal--calc hide">
-        <button class="modal__btn-close modal-close"></button>
-        <form class="modal__form form form--white" action="#" method="post">
-            <h2 class="form__title title">Рассчитать прибыль</h2>
-
-            <div class="form__ranges">
-                <div class="form__label-range">
-                    <p class="form__range-name">Автомобилей в месяц</p>
-                    <div id="range-auto"></div>
-                </div>
-
-                <div class="form__label-range">
-                    <p class="form__range-name">Средний чек</p>
-                    <div id="range-check"></div>
-                </div>
-
-                <div class="form__label-range">
-                    <p class="form__range-name">Закупка автохимии</p>
-                    <div id="range-chem"></div>
-                </div>
-
-                <div class="form__label-range">
-                    <p class="form__range-name">Размер аренды</p>
-                    <div id="range-rent"></div>
-                </div>
-
-                <div class="form__label-range">
-                    <p class="form__range-name">Расходы на воду и электричество</p>
-                    <div id="range-water"></div>
-                </div>
-            </div>
-
-            <label class="form__label">
-                <input class="form__input" type="text" placeholder="Имя *" name="name" required>
-            </label>
-
-            <label class="form__label">
-                <input class="form__input phone_mask" type="tel" placeholder="Телефон *" name="tel" required>
-            </label>
-
-            <label class="form__label">
-                <input class="form__input" type="text" placeholder="Город *" name="city" required>
-            </label>
-
-            <label class="form__label">
-                <input class="form__input" type="email" placeholder="Email *" name="email" required>
-            </label>
-
-            <button class="form__button button button--finger">Получить пример расчёта</button>
-
-            <label class="form__label-check">
-                <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
-                <span class="form__check-indicator"></span>
-                <span class="form__indicator-title">
-                        Я принимаю условия
-                        <a href="#">обработки персональных данных, передачи и получения информации</a>
-                    </span>
-            </label>
-        </form>
-    </div>
-
-    <div class="modal modal--thanks hide">
-        <button class="modal__btn-close modal-close"></button>
-        <form class="modal__form form form--white">
-            <img class="form__img" src="img/thanks.png" alt="">
-            <h2 class="form__title title">Спасибо</h2>
-            <p class="form__text text">В самое ближайшее время мы свяжемся<br>
-                с Вами для обсуждения деталей</p>
-        </form>
-    </div>
-
-    <div class="modal modal--wait hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <img class="modal__image" src="img/modal.jpg" alt="">
-        <form class="modal__form form form--white" action="#" method="post">
-            <h2 class="form__title title">ПОДОЖДИТЕ! У нас есть для вас
-                <em>персональное предложение
-                    именно сейчас</em></h2>
-
-            <label class="form__label">
-                <input class="form__input" type="text" placeholder="Имя *" name="name" required>
-            </label>
-
-            <label class="form__label">
-                <input class="form__input phone_mask" type="tel" placeholder="Телефон *" name="tel" required>
-            </label>
-
-            <label class="form__label">
-                <input class="form__input" type="text" placeholder="Город *" name="city" required>
-            </label>
-
-            <button class="form__button button button--finger">Получить пример расчёта</button>
-
-            <label class="form__label-check">
-                <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
-                <span class="form__check-indicator"></span>
-                <span class="form__indicator-title">
-                        Я принимаю условия
-                        <a href="#">обработки персональных данных, передачи и получения информации</a>
-                    </span>
-            </label>
-        </form>
-    </div>
-
-    <div class="modal modal--table hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <div class="modal__form form form--white">
-            <h2 class="form__title title">Комплектации и цены</h2>
-
-            <table class="form__table table">
-                <tr class="table__head">
-                    <td>Функции</td>
-                    <td class="table__center">Kolon X7-360<br> Silver</td>
-                    <td class="table__center">Kolon X7-360<br> Silver</td>
-                    <td class="table__center">Kolon X7-360<br> Silver</td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                    <td class="table__yes"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                </tr>
-                <tr>
-                    <td>Мойка днища, арок</td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                    <td class="table__no"></td>
-                </tr>
-                <tr class="table__footer">
-                    <td>Стоимость</td>
-                    <td>2 220 000 руб</td>
-                    <td>2 220 000 руб</td>
-                    <td>2 220 000 руб</td>
-                </tr>
-            </table>
-
-            <p class="form__note">Основные отличия, за дополнительными характеристиками
-                (которых более двух десятков) обратитесь к нам по телефону +3 89089808890
-                или нажав на кнопку <a class="recall-close">"Обратный звонок"</a></p>
-
-        </div>
-    </div>
-
     <div class="modal__overlay hide"></div>
 </div>
 
+
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
-<script src="script/slick/slick.min.js"></script>
-<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/slick/slick.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
 </html>
+

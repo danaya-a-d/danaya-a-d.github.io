@@ -1,152 +1,189 @@
+//Показ слайдеров на мобильном
+function slick_mobile(slider, settings) {
+    // Подпишемся на ресайз и продиспатчим его для запуска
+    $(window).on('resize', function (e) {
+        // Переменная, по которой узнаем запущен слайдер или нет.
+        // Храним её в data
+        let init = slider.data('init-slider');
+        // Если мобильный
+        if (window.innerWidth < 769) {
+            // Если слайдер не запущен
+            if (init !== 1) {
+                // Запускаем слайдер и записываем в data init-slider = 1
+                slider.slick(settings).data({'init-slider': 1});
+            }
+        }
+        // Если десктоп
+        else {
+            // Если слайдер запущен
+            if (init === 1) {
+                // Разрушаем слайдер и записываем в data init-slider = 0
+                slider.slick('unslick').data({'init-slider': 0});
+            }
+        }
+    }).trigger('resize');
+}
+
 $(document).ready(function () {
 
     //Маска телефона
     $(".phone_mask").mask("+7(999)999-99-99");
 
-    $('.why-us__list').slick({
-        dots: false,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        adaptiveHeight: true,
-    });
-
-    $('.facilities__list').slick({
+    //Слайдер "Кому может быть полезна остеопатия?"
+    $('.useful__list').slick({
         dots: true,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        adaptiveHeight: true,
+        arrows: false
     });
 
-    $('.visual__sliders').slick({
-        dots: false,
-        arrows: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: false,
-        adaptiveHeight: true,
-    });
-
-    $('.reasons__list').slick({
-        centerMode: true,
-        slidesToShow: 3,
-        variableWidth: true,
+    //Слайдер отзывов
+    $('.reviews__list').slick({
         dots: true,
         arrows: false,
-        infinite: true,
-    });
-
-    $('.reviews__list').slick({
-        dots: false,
-        arrows: true,
-        slidesToShow: 2,
+        slidesToShow: 4,
         slidesToScroll: 1,
-        infinite: false,
+        rows: 1,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                    rows: 2
+                }
+            }
+        ]
+    });
+
+    //Слайдер методов лечения
+    const settings = {
+        dots: true,
+        arrows: false,
+        mobileFirst: true,
         adaptiveHeight: true,
-    });
+        settings: 'slick',
+        responsive: [{
+            breakpoint: 769,
+            settings: 'unslick'
+        }]
+    };
 
-    $('.professionals__list').slick({
-        dots: false,
-        arrows: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        variableWidth: true,
-        adaptiveHeight: true,
-        infinite: false,
-    });
+    slick_mobile($('.methods__list'), settings);
+    slick_mobile($('.licenses__photos'), settings);
+    slick_mobile($('.stocks__list'), settings);
 
-
-    $('.fixed-video__close').on('click', function (e) {
-        $('.fixed-video').hide();
-    });
 
     //Модальные окна
-    function show(modal) {
-        modal.removeClass('hide');
-        modal.addClass('show');
-        $('.modal__overlay').removeClass('hide');
-        $('.modal-back').removeClass('hide');
-    }
-
-    function hide(modal) {
-        modal.addClass('hide');
-        $('.modal__overlay').addClass('hide');
-        $('.modal-back').addClass('hide');
-    }
-
     function modal_show(modal, button_open) {
 
-        if (button_open !== null) {
-            button_open.on('click', function (e) {
-                show(modal);
-            });
+        function show() {
+            modal.removeClass('hide');
+            modal.addClass('show');
+            $('.modal__overlay').removeClass('hide');
+            $('.modal-back').removeClass('hide');
         }
 
-        $('.modal-close').on('click', function (e) {
-            hide(modal);
-        });
+        function hide() {
+            modal.addClass('hide');
+            $('.modal__overlay').addClass('hide');
+            $('.modal-back').addClass('hide');
+        }
 
+        button_open.on('click', function (e) {
+            show();
+        });
+        $('.modal-close').on('click', function (e) {
+            hide();
+        });
         $('.modal__overlay').on('click', function (e) {
             modal.addClass('hide');
-            hide(modal);
+            hide();
         });
-
         $(document).keydown(function (e) {
             if (e.which === 27) {
-                hide(modal);
+                hide();
             }
         });
     }
 
-    modal_show($('.modal--recall'), $('.recall-js'));
-    modal_show($('.modal--calc'), $('.calc-js'));
-    modal_show($('.modal--table'), $('.table-js'));
+    modal_show($('.modal'), $('.recall-js'));
 
-    $('.recall-close').on('click', function (e) {
-        hide($('.modal--table'));
-        show($('.modal--recall'));
-        modal_show($('.modal--recall'), null)
-    });
+    //Плавное пролистывание к якорю
+    $('a[href*="#"]').click(function (e) {
 
+        $('html, body').stop().animate({
+            scrollTop: $(this.hash).offset().top
+        }, 1000);
+        e.preventDefault();
+    })
 
-    let first = true;
-    $(document).mouseleave(function () {
-        if (first && $('.modal-back').hasClass('hide')) {
-            show($('.modal--wait'));
-            modal_show($('.modal--wait'), null)
-            first = false;
+    //Отправка формы
+    $('.form__button').click(function (e) {
+        let form_data = $(this).closest('.form').serializeArray(); // Собираем все данные из формы
+        let valid = true;
+
+        $(this).closest('.form').find($('.form__input')).each(function () {
+            let value;
+            if ($(this).val() !== '') {
+                value = 1;
+            } else value = 0;
+            valid *= value;
+        });
+
+        if (valid) {
+            e.preventDefault();
+            $('body').addClass('sending');
+
+            $.ajax({
+                type: "POST", // Метод отправки
+                url: "../action.php", // Путь до php файла отправителя
+                data: form_data,
+                success: function () {
+                    // Код в этом блоке выполняется при успешной отправке сообщения
+                    $('body').removeClass('sending');
+                    alert("Ваше сообщение отправлено!");
+                },
+                error: function () {
+                    // Код в этом блоке выполняется при неуспешной отправке сообщения
+                    $('body').removeClass('sending');
+                    alert("Сообщение не отправлено!");
+                }
+            });
         }
     });
 
 
-    let range_auto = document.getElementById('range-auto');
-    let range_check = document.getElementById('range-check');
-    let range_chem = document.getElementById('range-chem');
-    let range_rent = document.getElementById('range-rent');
-    let range_water = document.getElementById('range-water');
+    //Открытие FAQ
+    let faq_item = document.querySelectorAll('.faq__item');
 
-    const setting_range = {
-        start: 850,
-        range: {
-            'min': 500,
-            'max': 3500
-        },
-        connect: [true, false],
-        // Show a scale with the slider
-        pips: {
-            mode: 'steps',
-            stepped: true,
-            density: 4
+    if (faq_item !== undefined) {
+
+        for (let i = 0; i < faq_item.length; i++) {
+            let faq_text = faq_item[i].querySelector('.faq__text');
+
+            faq_item[i].addEventListener('click', function (event) {
+
+                if (faq_text.classList.contains('hidden')) {
+
+                    for (let j = 0; j < faq_item.length; j++) {
+
+                        let faq_text = faq_item[j].querySelector('.faq__text');
+                        faq_text.classList.add('hidden');
+                        faq_item[j].classList.remove('faq__item--active');
+                    }
+
+                }
+
+                faq_text.classList.toggle('hidden');
+                faq_item[i].classList.toggle('faq__item--active');
+
+                if (faq_item[i].classList.contains('faq__item--active')) {
+                    if (window.matchMedia('(max-width: 769px)').matches) {
+                        $('html, body').animate({
+                            scrollTop: $(this).offset().top - 60
+                        }, 300);
+                    }
+                }
+            });
         }
     }
-
-    noUiSlider.create(range_auto, setting_range);
-    noUiSlider.create(range_check, setting_range);
-    noUiSlider.create(range_chem, setting_range);
-    noUiSlider.create(range_rent, setting_range);
-    noUiSlider.create(range_water, setting_range);
-
 });
