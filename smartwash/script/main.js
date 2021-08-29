@@ -89,7 +89,7 @@ $(document).ready(function () {
         slidesToScroll: 1,
         variableWidth: true,
         adaptiveHeight: true,
-        infinite: false,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 991,
@@ -269,5 +269,13 @@ $(document).ready(function () {
             enableEscapeButton: true
         });
     }
+
+
+    $('.quiz__fieldset').on('click', function (e) {
+        if ($(this).nextAll(".quiz__fieldset").length !== 0) {
+            $(this).addClass('hide');
+            $(this).next(".quiz__fieldset").removeClass('hide');
+        }
+    });
 
 });
