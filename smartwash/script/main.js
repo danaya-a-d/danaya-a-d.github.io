@@ -258,4 +258,16 @@ $(document).ready(function () {
     noUiSlider.create(range_rent, setting_range);
     noUiSlider.create(range_water, setting_range);
 
+
+    if ($('[data-fancybox="gallery"]').length > 0) {
+        $('[data-fancybox="gallery"]').fancybox({
+            thumbs: {
+                showOnStart: true
+            },
+            hash: true,
+            hideOnOverlayClick: true,
+            enableEscapeButton: true
+        });
+    }
+
 });
