@@ -447,13 +447,16 @@ $(document).ready(function () {
             'min': 500,
             'max': 3500
         },
+
+        tooltips: true,
         connect: [true, false],
         // Show a scale with the slider
         pips: {
             mode: 'steps',
             stepped: true,
             density: 4
-        }
+        },
+
     }
 
     noUiSlider.create(range_auto, setting_range);
