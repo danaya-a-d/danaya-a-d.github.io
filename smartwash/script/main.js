@@ -1,4 +1,208 @@
+// Гугл карта
+
+// The location of Uluru
+const uluru = {lat: 50.438549, lng: 30.416071};
+
+function initMap(center) {
+
+    if (center == null) {
+        center = uluru;
+    }
+
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("google-map"), {
+        zoom: 14,
+        fullscreenControl: false,
+        center: center,
+        styles: [
+            {
+                "featureType": "all",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "weight": "2.00"
+                    }
+                ]
+            },
+            {
+                "featureType": "all",
+                "elementType": "geometry.stroke",
+                "stylers": [
+                    {
+                        "color": "#9c9c9c"
+                    }
+                ]
+            },
+            {
+                "featureType": "all",
+                "elementType": "labels.text",
+                "stylers": [
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "color": "#f2f2f2"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#F6F6F4"
+                    }
+                ]
+            },
+            {
+                "featureType": "landscape.man_made",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#F6F6F4"
+                    }
+                ]
+            },
+            {
+                "featureType": "poi",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "saturation": -100
+                    },
+                    {
+                        "lightness": 45
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#FEFEFE"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#7b7b7b"
+                    }
+                ]
+            },
+            {
+                "featureType": "road",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.highway",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "simplified"
+                    }
+                ]
+            },
+            {
+                "featureType": "road.arterial",
+                "elementType": "labels.icon",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "transit",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "visibility": "off"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "all",
+                "stylers": [
+                    {
+                        "color": "#46bcec"
+                    },
+                    {
+                        "visibility": "on"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "geometry.fill",
+                "stylers": [
+                    {
+                        "color": "#CAD2D3"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.fill",
+                "stylers": [
+                    {
+                        "color": "#070707"
+                    }
+                ]
+            },
+            {
+                "featureType": "water",
+                "elementType": "labels.text.stroke",
+                "stylers": [
+                    {
+                        "color": "#ffffff"
+                    }
+                ]
+            }
+        ]
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+        position: center,
+        map: map,
+        // icon: 'img/map-marker.svg'
+    });
+}
+
+
 $(document).ready(function () {
+
+    $('.coordinates__item').on('click', function (e) {
+
+        $('.coordinates__item').removeClass('active');
+        $(this).addClass('active');
+
+        initMap($(this).data('coords'));
+    });
 
     //Маска телефона
     $(".phone_mask").mask("+7(999)999-99-99");

@@ -848,34 +848,42 @@
 
         <div class="coordinates__container">
             <ul class="coordinates__list">
-                <li class="coordinates__item">
+                <li class="coordinates__item active" data-coords='{"lat": 55.438549, "lng": 31.416071}'>
                     <p class="coordinates__name">м. Коньково</p>
                     <p class="coordinates__about">ул. Профсоюзная 124А</p>
                 </li>
-                <li class="coordinates__item">
+                <li class="coordinates__item" data-coords='{"lat": 58.438549, "lng": 32.416071}'>
                     <p class="coordinates__name">м. Коньково</p>
                     <p class="coordinates__about">ул. Профсоюзная 124А</p>
                 </li>
-                <li class="coordinates__item">
+                <li class="coordinates__item" data-coords='{"lat": 55.438549, "lng": 31.416071}'>
                     <p class="coordinates__name">м. Коньково</p>
                     <p class="coordinates__about">ул. Профсоюзная 124А</p>
                 </li>
-                <li class="coordinates__item">
+                <li class="coordinates__item" data-coords='{"lat": 58.438549, "lng": 32.416071}'>
                     <p class="coordinates__name">м. Коньково</p>
                     <p class="coordinates__about">ул. Профсоюзная 124А</p>
                 </li>
-                <li class="coordinates__item">
+                <li class="coordinates__item" data-coords='{"lat": 55.438549, "lng": 31.416071}'>
                     <p class="coordinates__name">м. Коньково</p>
                     <p class="coordinates__about">ул. Профсоюзная 124А</p>
                 </li>
-                <li class="coordinates__item">
+                <li class="coordinates__item" data-coords='{"lat": 58.438549, "lng": 32.416071}'>
+                    <p class="coordinates__name">м. Коньково</p>
+                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
+                </li>
+                <li class="coordinates__item" data-coords='{"lat": 55.438549, "lng": 31.416071}'>
+                    <p class="coordinates__name">м. Коньково</p>
+                    <p class="coordinates__about">ул. Профсоюзная 124А</p>
+                </li>
+                <li class="coordinates__item" data-coords='{"lat": 58.438549, "lng": 32.416071}'>
                     <p class="coordinates__name">м. Коньково</p>
                     <p class="coordinates__about">ул. Профсоюзная 124А</p>
                 </li>
             </ul>
         </div>
 
-        <img class="coordinates__map" src="img/map.jpg" alt="">
+        <div class="coordinates__map" id="google-map"></div>
     </section>
     <section class="secrets">
         <div class="secrets__wrapper wrapper">
@@ -1480,6 +1488,12 @@
 <script src="script/nouislider/nouislider.min.js"></script>
 <script src="script/fancybox/jquery.fancybox.min.js"></script>
 <script src="script/main.min.js"></script>
+
+<!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+<script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOnmYycTGBQB15ElV2I8bjf62aCR5umOw&callback=initMap&libraries=&v=weekly"
+        async>
+</script>
 
 </body>
 </html>
