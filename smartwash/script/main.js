@@ -189,6 +189,47 @@ $(document).ready(function () {
         }
     });
 
+    function fast_toggle(select) {
+        $('.fast__nav-button' + select).on('click', function (e) {
+            $('.fast__nav-button').addClass('button--empty');
+            $('.fast__nav-item').addClass('inactive');
+
+            $('.fast__nav-button').removeClass('button--noborder');
+            $('.fast__nav-item').removeClass('active');
+            $('.fast__nav-item').removeClass('show');
+
+
+            if ($('.fast__nav-button' + select).hasClass('button--empty')) {
+
+                $('.fast__nav-button' + select).removeClass('button--empty');
+                $('.fast__nav-item' + select).removeClass('inactive');
+
+                $('.fast__nav-button' + select).addClass('button--noborder');
+                $('.fast__nav-item' + select).addClass('active');
+                $('.fast__nav-item' + select).addClass('show');
+            }
+        });
+    }
+
+    fast_toggle('.control');
+    fast_toggle('.quality');
+    fast_toggle('.start');
+
+    function visual_toggle(select) {
+        $('.visual__nav-item' + select).on('click', function (e) {
+
+            $('.visual__nav-item').removeClass('active');
+            $('.visual__item').addClass('hidden');
+
+            $('.visual__nav-item' + select).addClass('active');
+            $('.visual__item' + select).removeClass('hidden');
+        });
+    }
+
+    visual_toggle('.unloading');
+    visual_toggle('.review');
+    visual_toggle('.full');
+
 
     let range_auto = document.getElementById('range-auto');
     let range_check = document.getElementById('range-check');
