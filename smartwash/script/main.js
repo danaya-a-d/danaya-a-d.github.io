@@ -196,6 +196,8 @@ function initMap(center) {
 
 $(document).ready(function () {
 
+    new WOW().init();
+
     $('.coordinates__item').on('click', function (e) {
 
         $('.coordinates__item').removeClass('active');
