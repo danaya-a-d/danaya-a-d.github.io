@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             },
 
             // when window width is <= 992px
-            769: {
+            768: {
                 slidesPerView: 2,
             },
         },
