@@ -73,12 +73,18 @@ $(document).ready(function () {
             },
             hash: true,
             hideOnOverlayClick: true,
-            enableEscapeButton: true
+            enableEscapeButton: true,
+            arrows : false, //Отображает кнопки навигации по краям экрана
+            infobar : false, //При необхходимости - отключает инфорбар вверху (стрелки и счетчик)
+            toolbar : true, //При необходимости - включает панель инструментов в правом верхнем углу
+            buttons : [
+                'close'
+            ],
         });
     }
 
     //Маска телефона
-    $(".phone_mask").mask("+38(999)999-99-99");
+    // $(".phone_mask").mask("+38(999)999-99-99");
 
     //Модальные окна
 
