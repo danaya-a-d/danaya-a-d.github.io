@@ -37,6 +37,7 @@ $(document).ready(function () {
         focusOnSelect: true,
         prevArrow: $('.reviews .arrows__btn--left'),
         nextArrow: $('.reviews .arrows__btn--right'),
+        // variableWidth: true,
         responsive: [
             {
                 breakpoint: 1198,
