@@ -445,6 +445,13 @@ $(document).ready(function () {
 
     const setting_range = {
         start: 850,
+        step: 1,
+
+        format: {
+            to: (v) => parseFloat(v).toFixed(0),
+            from: (v) => parseFloat(v).toFixed(0)
+        },
+
         range: {
             'min': 500,
             'max': 3500
