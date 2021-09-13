@@ -1,3 +1,5 @@
+new WOW().init();
+
 // Гугл карта
 
 // The location of Uluru
@@ -185,18 +187,24 @@ function initMap(center) {
             }
         ]
     });
+
+    const icon = {
+        url: "img/map-marker.svg", // url
+        scaledSize: new google.maps.Size(50, 50), // scaled size
+        origin: new google.maps.Point(0,0), // origin
+        anchor: new google.maps.Point(0, 0) // anchor
+    };
+
     // The marker, positioned at Uluru
     const marker = new google.maps.Marker({
         position: center,
         map: map,
-        // icon: 'img/map-marker.svg'
+        icon: icon,
     });
 }
 
 
 $(document).ready(function () {
-
-    new WOW().init();
 
     $('.coordinates__item').on('click', function (e) {
 
