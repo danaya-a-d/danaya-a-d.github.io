@@ -1,7 +1,6 @@
 new WOW().init();
 
 // Гугл карта
-
 // The location of Uluru
 const uluru = {lat: 50.438549, lng: 30.416071};
 
@@ -206,6 +205,7 @@ function initMap(center) {
 
 $(document).ready(function () {
 
+    // переключение адресов гугл карты
     $('.coordinates__item').on('click', function (e) {
 
         $('.coordinates__item').removeClass('active');
@@ -217,6 +217,8 @@ $(document).ready(function () {
     //Маска телефона
     $(".phone_mask").mask("+7(999)999-99-99");
 
+
+    // слайдеры
     $('.why-us__list').slick({
         dots: false,
         arrows: true,
@@ -318,11 +320,12 @@ $(document).ready(function () {
     });
 
 
+    // закрытие видео в нижнем левом углу
     $('.fixed-video__close').on('click', function (e) {
         $('.fixed-video').hide();
     });
 
-    //Модальные окна
+    // модальные окна
     function show(modal) {
         modal.removeClass('hide');
         modal.addClass('show');
@@ -394,6 +397,7 @@ $(document).ready(function () {
     });
 
 
+    // модалка при попытке покинуть сайт
     let first = true;
     $(document).mouseleave(function () {
         if (first && $('.modal-back').hasClass('hide')) {
@@ -403,6 +407,7 @@ $(document).ready(function () {
         }
     });
 
+    // переключение вкладок блока старт, качество, контроль
     function fast_toggle(select) {
         $('.fast__nav-button' + select).on('click', function (e) {
             $('.fast__nav-button').addClass('button--empty');
@@ -429,6 +434,8 @@ $(document).ready(function () {
     fast_toggle('.quality');
     fast_toggle('.start');
 
+
+    // переключение вкладок со слайдерамим видео
     function visual_toggle(select) {
         $('.visual__nav-item' + select).on('click', function (e) {
 
@@ -445,6 +452,7 @@ $(document).ready(function () {
     visual_toggle('.full');
 
 
+    // кастомный input range
     let range_auto = document.getElementById('range-auto');
     let range_check = document.getElementById('range-check');
     let range_chem = document.getElementById('range-chem');
@@ -483,6 +491,7 @@ $(document).ready(function () {
     noUiSlider.create(range_water, setting_range);
 
 
+    // всплывающие видео fancybox
     if ($('[data-fancybox="gallery"]').length > 0) {
         $('[data-fancybox="gallery"]').fancybox({
             thumbs: {
@@ -495,10 +504,11 @@ $(document).ready(function () {
     }
 
 
-    $('.quiz__fieldset').on('click', function (e) {
-        if ($(this).nextAll(".quiz__fieldset").length !== 0) {
-            $(this).addClass('hide');
-            $(this).next(".quiz__fieldset").removeClass('hide');
+    // переключение квиза
+    $('.quiz__label').on('click', function (e) {
+        if ($(this).closest(".quiz__fieldset").nextAll(".quiz__fieldset").length !== 0) {
+            $(this).closest(".quiz__fieldset").addClass('hide');
+            $(this).closest(".quiz__fieldset").next(".quiz__fieldset").removeClass('hide');
         }
     });
 
