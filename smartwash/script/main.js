@@ -512,4 +512,26 @@ $(document).ready(function () {
         }
     });
 
+    //Плавное пролистывание к якорю
+    $('a[href*="#"]').click(function (e) {
+        // menu_close();
+        $('html, body').stop().animate({
+            scrollTop: $(this.hash).offset().top + -100
+        }, 1000);
+        e.preventDefault();
+    });
+
+
+    // Появление шапки при скролле
+    $(window).on("scroll", function () {
+        let scrolled = $(this).scrollTop();
+        if( scrolled > 900 ) {
+            $('.nav').addClass('scrolled');
+            $('.button-upp').addClass('scrolled');
+        }
+        if( scrolled <= 900 ) {
+            $('.nav').removeClass('scrolled');
+            $('.button-upp').removeClass('scrolled');
+        }
+    });
 });

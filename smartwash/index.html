@@ -94,12 +94,22 @@
             </li>
         </ul>
     </div>
-
 </header>
+
+<nav class="nav">
+    <ul class="nav__list wrapper">
+        <li class="nav__item"><a href="#main">Главная</a></li>
+        <li class="nav__item"><a href="#video">Видео</a></li>
+        <li class="nav__item"><a href="#watch">Где посмотреть</a></li>
+        <li class="nav__item"><a href="#calc">Расчёт</a></li>
+        <li class="nav__item"><a href="#price">Цена</a></li>
+        <li class="nav__item"><a href="#company">Компания</a></li>
+    </ul>
+</nav>
 
 <main class="page-main">
 
-    <section class="upper-block">
+    <section class="upper-block" id="main">
         <div class="upper-block__wrapper wrapper">
             <div class="upper-block__text-block">
                 <h1 class="upper-block__title title wow bounceInDown">Хотите автоматический<br>
@@ -188,7 +198,7 @@
             </ul>
         </div>
     </section>
-    <section class="schedule">
+    <section class="schedule" id="calc">
         <div class="schedule__wrapper wrapper">
             <h2 class="schedule__title title wow slideInRight">Получите график поставки и
                 <em>персональное предложение по вашей роботмойке</em></h2>
@@ -397,7 +407,7 @@
             </form>
         </div>
 
-        <div class="visual__wrapper-bottom wrapper">
+        <div class="visual__wrapper-bottom wrapper" id="video">
             <div class="visual__title-block wow slideInRight">
                 <h2 class="visual__title title">
                     Почувствуйте себя<br>
@@ -595,7 +605,7 @@
             </ul>
         </div>
     </section>
-    <section class="equipment">
+    <section class="equipment" id="price">
         <div class="equipment__wrapper wrapper">
             <h2 class="equipment__title title wow slideInRight"><em>Создайте сами свою<br> комплектацию</em> прямо
                 сейчас<br>
@@ -752,7 +762,7 @@
             </form>
         </div>
     </section>
-    <section class="facilities">
+    <section class="facilities" id="watch">
         <div class="facilities__wrapper wrapper">
             <h2 class="facilities__title title wow fadeInRightBig">Познакомьтесь с нами поближе - посмотрите на наши
                 объекты</h2>
@@ -801,7 +811,7 @@
             </ul>
         </div>
     </section>
-    <section class="professionals">
+    <section class="professionals" id="company">
         <div class="professionals__wrapper wrapper">
             <h2 class="professionals__title title wow fadeInRightBig"> С вами будет работать команда профессионалов,
                 экстремально увлеченных роботмойками</h2>
@@ -964,7 +974,8 @@
     <div class="footer__wrapper wrapper">
         <div class="footer__block">
             <a class="footer__logo logo" href="#">
-                <img src="img/logo-big.svg" alt="SmartWash">
+<!--                <img src="img/logo-big.svg" alt="SmartWash">-->
+                <img src="img/logo.jpg" alt="SmartWash">
             </a>
         </div>
 
@@ -1523,6 +1534,8 @@
 
     <div class="modal__overlay hide"></div>
 </div>
+
+<a href="#main" class="button-upp"></a>
 
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
