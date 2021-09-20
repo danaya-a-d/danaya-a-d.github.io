@@ -190,7 +190,7 @@ function initMap(center) {
     const icon = {
         url: "img/map-marker.svg", // url
         scaledSize: new google.maps.Size(50, 50), // scaled size
-        origin: new google.maps.Point(0,0), // origin
+        origin: new google.maps.Point(0, 0), // origin
         anchor: new google.maps.Point(0, 0) // anchor
     };
 
@@ -514,22 +514,25 @@ $(document).ready(function () {
 
     //Плавное пролистывание к якорю
     $('a[href*="#"]').click(function (e) {
-        // menu_close();
+        let offset;
+        if ($(this.hash).offset()) {
+            offset = $(this.hash).offset().top
+        } else offset = 0;
+
         $('html, body').stop().animate({
-            scrollTop: $(this.hash).offset().top + -100
+            scrollTop: offset
         }, 1000);
         e.preventDefault();
     });
 
-
     // Появление шапки при скролле
     $(window).on("scroll", function () {
         let scrolled = $(this).scrollTop();
-        if( scrolled > 900 ) {
+        if (scrolled > 900) {
             $('.nav').addClass('scrolled');
             $('.button-upp').addClass('scrolled');
         }
-        if( scrolled <= 900 ) {
+        if (scrolled <= 900) {
             $('.nav').removeClass('scrolled');
             $('.button-upp').removeClass('scrolled');
         }
