@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Дашборд</title>
+
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<header class="header">
+    <nav class="header__nav wrapper">
+        <div class="header__main-block">
+            <a class="header__logo logo" href="#"><img src="img/logo.svg" alt="BestMine"></a>
+
+            <ul class="header__nav-list">
+                <li class="header__nav-item active"><a href="dashboard.html">Dashboard</a></li>
+                <li class="header__nav-item"><a href="mining.html">Mining</a></li>
+                <li class="header__nav-item"><a href="deposit.html">Deposit</a></li>
+                <li class="header__nav-item"><a href="withdraw.html">Withdraw</a></li>
+                <li class="header__nav-item"><a href="calculator.html">Calculator</a></li>
+                <li class="header__nav-item"><a href="faq.html">FAQ</a></li>
+            </ul>
+
+
+            <a class="header__mail mail" href="mailto:support@gmail.com">support@gmail.com</a>
+            <button class="header__menu-btn"></button>
+        </div>
+
+        <div class="header__buttons">
+            <button class="header__button header__button--setting"></button>
+            <button class="header__button header__button--login"></button>
+        </div>
+    </nav>
+</header>
+
+<main class="page-main">
+    <section class="dashboard">
+        <div class="section-container">
+            <div class="section-name">
+                <p class="section-name__count">01</p>
+                <p class="section-name__title">Dashboard</p>
+            </div>
+        <div class="dashboard__wrapper wrapper">
+            <h1 class="visually-hidden">Dashboard</h1>
+
+            <h2 class="dashboard__title title">Your transaction Info</h2>
+            <ul class="dashboard__achievements achievements">
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/achievement1.svg" alt="">
+                        <p class="achievements__name">Total Balance</p>
+                        <p class="achievements__numbers">702$</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/achievement5.svg" alt="">
+                        <p class="achievements__name">Total Deposit</p>
+                        <p class="achievements__numbers">450$</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/achievement6.svg" alt="">
+                        <p class="achievements__name">Total Withdrawal</p>
+                        <p class="achievements__numbers">193$</p>
+                    </div>
+                </li>
+            </ul>
+
+            <h2 class="dashboard__title title">Currency Balance</h2>
+            <ul class="dashboard__achievements achievements">
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/bitcoin.png" alt="">
+                        <p class="achievements__name">Bitcoin</p>
+                        <p class="achievements__numbers">0.00000000000000 BTC</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/litecoin.png" alt="">
+                        <p class="achievements__name">Litecoin</p>
+                        <p class="achievements__numbers">0.00000000000000 LTC</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/dogecoin.png" alt="">
+                        <p class="achievements__name">Dogecoin</p>
+                        <p class="achievements__numbers">755 DOOGE</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/bitcoincash.png" alt="">
+                        <p class="achievements__name">Bitcoincash</p>
+                        <p class="achievements__numbers">0.00000000000000 BCH</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/phenom.png" alt="">
+                        <p class="achievements__name">Usdt (ERC-20)</p>
+                        <p class="achievements__numbers">0.00000000000000 USDT</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/zcash.png" alt="">
+                        <p class="achievements__name">Zcash</p>
+                        <p class="achievements__numbers">0.00000000000000 ZCASH</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/pm.png" alt="">
+                        <p class="achievements__name">Dollar</p>
+                        <p class="achievements__numbers">0.00000000000000 USD</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/ethereum.png" alt="">
+                        <p class="achievements__name">Etherium</p>
+                        <p class="achievements__numbers">0.00000000000000 ETH</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/ripple.png" alt="">
+                        <p class="achievements__name">Ripple</p>
+                        <p class="achievements__numbers">0.00000000000000 XRP</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/dash.png" alt="">
+                        <p class="achievements__name">Dash</p>
+                        <p class="achievements__numbers">0.00000000000000 DASH</p>
+                    </div>
+                </li>
+
+                <li class="achievements__buttons">
+                    <button class="achievements__button button button--transparent">Deposit</button>
+                    <button class="achievements__button button button--white">Withdraw</button>
+                </li>
+            </ul>
+
+            <h2 class="dashboard__title title">Currency Balance</h2>
+            <ul class="dashboard__achievements achievements">
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/bitcoin.png" alt="">
+                        <p class="achievements__name">Bitcoin</p>
+                        <p class="achievements__numbers">0.00000000000000 BTC</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/litecoin.png" alt="">
+                        <p class="achievements__name">Litecoin</p>
+                        <p class="achievements__numbers">0.00000000000000 LTC</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/dogecoin.png" alt="">
+                        <p class="achievements__name">Dogecoin</p>
+                        <p class="achievements__numbers">755 DOOGE</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/bitcoincash.png" alt="">
+                        <p class="achievements__name">Bitcoincash</p>
+                        <p class="achievements__numbers">0.00000000000000 BCH</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/pm.png" alt="">
+                        <p class="achievements__name">Dollar</p>
+                        <p class="achievements__numbers">0.00000000000000 USD</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/zcash.png" alt="">
+                        <p class="achievements__name">Zcash</p>
+                        <p class="achievements__numbers">0.00000000000000 ZCASH</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/ethereum.png" alt="">
+                        <p class="achievements__name">Etherium</p>
+                        <p class="achievements__numbers">0.00000000000000 ETH</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/ripple.png" alt="">
+                        <p class="achievements__name">Ripple</p>
+                        <p class="achievements__numbers">0.00000000000000 XRP</p>
+                    </div>
+                </li>
+                <li class="achievements__item">
+                    <div class="achievements__indicator">
+                        <img class="achievements__icon" src="img/dash.png" alt="">
+                        <p class="achievements__name">Dash</p>
+                        <p class="achievements__numbers">0.00000000000000 DASH</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+            <div class="section-nav">
+                <ul class="section-nav__socials socials">
+                    <li class="socials__item">
+                        <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__nav-wrapper wrapper">
+        <ul class="footer__nav-list">
+            <li class="footer__nav-item active"><a href="#">Affiliate Program</a></li>
+            <li class="footer__nav-item"><a href="#">Dashboard</a></li>
+            <li class="footer__nav-item"><a href="#">Mining</a></li>
+            <li class="footer__nav-item"><a href="#">Deposit</a></li>
+            <li class="footer__nav-item"><a href="#">Withdraw</a></li>
+            <li class="footer__nav-item"><a href="#">My orders</a></li>
+            <li class="footer__nav-item"><a href="#">History</a></li>
+            <li class="footer__nav-item"><a href="#">FAQ</a></li>
+            <li class="footer__nav-item"><a href="#">Support</a></li>
+            <li class="footer__nav-item"><a href="#">Calculator</a></li>
+        </ul>
+    </div>
+
+    <div class="footer__wrapper wrapper">
+        <div class="footer__section">
+            <a class="footer__logo logo" href="#"><img src="img/logo.svg" alt="BestMine"></a>
+        </div>
+
+        <div class="footer__section">
+            <p class="footer__about-us">The ultimate goal of our existence is to make
+                cryptocurrency mining an easy, fast and rewarding experience for all.</p>
+
+            <p class="footer__copy">Copyright © Bestmine 2021. All rights reserved</p>
+        </div>
+
+        <div class="footer__section">
+            <ul class="footer__socials socials">
+                <li class="socials__item">
+                    <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                </li>
+                <li class="socials__item">
+                    <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+                </li>
+                <li class="socials__item">
+                    <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+                </li>
+            </ul>
+
+            <a class="footer__mail mail" href="mailto:support@gmail.com">support@gmail.com</a>
+        </div>
+    </div>
+</footer>
+
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
