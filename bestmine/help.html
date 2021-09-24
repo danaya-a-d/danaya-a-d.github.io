@@ -48,7 +48,7 @@
 
             <div class="support__wrapper wrapper">
                 <div class="support__text-block">
-                    <h1 class="support__title title">Settings</h1>
+                    <h1 class="support__title title">Hello there!<br>Need help?</h1>
                     <p>Reach out to us right here, and well get back
                         to you as soon as we can!
                         If you will not
@@ -58,17 +58,19 @@
                         client, perhaps ours letter is there.</p>
                 </div>
                 <form class="support__form main-form" action="#" method="post">
-                    <label class="main-form__label main-form__label--small">
-                        <input class="main-form__input" type="text" name="name" placeholder="Name">
-                    </label>
+                    <div class="main-form__labels">
+                        <label class="main-form__label main-form__label--small">
+                            <input class="main-form__input" type="text" name="name" placeholder="Name">
+                        </label>
 
-                    <label class="main-form__label main-form__label--small">
-                        <input class="main-form__input" type="email" name="email" placeholder="Email">
-                    </label>
+                        <label class="main-form__label main-form__label--small">
+                            <input class="main-form__input" type="email" name="email" placeholder="Email">
+                        </label>
 
-                    <label class="main-form__label main-form__label--big">
-                        <textarea class="main-form__textarea" placeholder="Your massage"></textarea>
-                    </label>
+                        <label class="main-form__label main-form__label--big">
+                            <textarea class="main-form__textarea" placeholder="Your massage"></textarea>
+                        </label>
+                    </div>
 
                     <div class="main-form__button-block">
                         <button class="main-form__button button button--blue">Send</button>
@@ -139,6 +141,136 @@
         </div>
     </div>
 </footer>
+
+<div class="modal-back hide">
+    <div class="modal modal--registr hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Registration</h2>
+
+        <p class="modal__subtitle">If you have an account, please <a>log in.</a></p>
+
+        <form class="modal__form main-form main-form--white" action="#" method="post">
+            <div class="main-form__labels">
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="text" name="name" placeholder="Name"
+                           required>
+                </label>
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="text" name="surname" placeholder="Your surname"
+                           required>
+                </label>
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="email" name="email" placeholder="Email"
+                           required>
+                </label>
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="tel" name="tel" placeholder="Phone number"
+                           required>
+                </label>
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="password" name="password" placeholder="Password"
+                           required>
+                </label>
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="password" name="confirm" placeholder="Confirm password"
+                           required>
+                </label>
+            </div>
+
+            <img class="main-form__captcha" src="img/captcha.jpg" alt="">
+
+            <button class="main-form__button button button--blue">Regestration</button>
+        </form>
+    </div>
+
+    <div class="modal modal--login hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Login</h2>
+
+        <form class="modal__form main-form main-form--white" action="#" method="post">
+            <div class="main-form__labels">
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="text" name="surname" placeholder="Surname"
+                           required>
+                </label>
+
+                <label class="main-form__label main-form__label--small">
+                    <input class="main-form__input" type="password" name="password" placeholder="Password"
+                           required>
+                </label>
+            </div>
+
+            <img class="main-form__captcha" src="img/captcha.jpg" alt="">
+
+            <button class="main-form__button button button--blue">Regestration</button>
+        </form>
+
+        <p class="modal__subnote">If you do not have an account, then <a>register.</a></p>
+        <p class="modal__subnote">If you have forgotten your password, <a>click here.</a></p>
+    </div>
+
+    <div class="modal modal--recover hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Recover password</h2>
+
+        <form class="modal__form main-form main-form--white" action="#" method="post">
+            <div class="main-form__labels">
+                <label class="main-form__label main-form__label--big">
+                    <input class="main-form__input main-form__input--small" type="password" name="recover" placeholder="Enter the email address that you used when registering an account"
+                           required>
+                </label>
+            </div>
+
+            <img class="main-form__captcha" src="img/captcha.jpg" alt="">
+
+            <button class="main-form__button button button--blue">Regestration</button>
+        </form>
+
+        <p class="modal__subnote">If you do not have an account, then <a>register.</a></p>
+        <p class="modal__subnote">If you have forgotten your password, <a>click here.</a></p>
+    </div>
+
+    <div class="modal modal--table hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <table class="modal__table">
+            <tr>
+                <td><b>0.00000001</b></td>
+                <td>BTC in hour</td>
+            </tr>
+            <tr>
+                <td><b>0.00000021</b></td>
+                <td>BTC in day</td>
+            </tr>
+            <tr>
+                <td><b>0.00000147</b></td>
+                <td>BTC in Week</td>
+            </tr>
+            <tr>
+                <td><b>0.00000630</b></td>
+                <td>BTC per month</td>
+            </tr>
+            <tr>
+                <td><b>0.00001890</b></td>
+                <td>BTC per 3 month</td>
+            </tr>
+            <tr>
+                <td><b>0.00007665</b></td>
+                <td>BTC in year</td>
+            </tr>
+            <tr>
+                <td><b>0.00022995</b></td>
+                <td>BTC in 3 years</td>
+            </tr>
+        </table>
+
+    </div>
+
+    <div class="modal__overlay hide"></div>
+</div>
 
 
 <script src="script/jquery.min.js"></script>
