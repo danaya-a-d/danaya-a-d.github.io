@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Поддержка</title>
 
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -36,7 +39,59 @@
 </header>
 
 <main class="page-main">
+    <section class="support">
+        <div class="section-container">
+            <div class="section-name">
+                <p class="section-name__count">01</p>
+                <p class="section-name__title">Support</p>
+            </div>
 
+            <div class="support__wrapper wrapper">
+                <div class="support__text-block">
+                    <h1 class="support__title title">Settings</h1>
+                    <p>Reach out to us right here, and well get back
+                        to you as soon as we can!
+                        If you will not
+                        receive an email - check your</p>
+                    <p><strong>'Spam'</strong> or <strong>'Not checked'</strong>
+                        folders in your mail
+                        client, perhaps ours letter is there.</p>
+                </div>
+                <form class="support__form main-form" action="#" method="post">
+                    <label class="main-form__label main-form__label--small">
+                        <input class="main-form__input" type="text" name="name" placeholder="Name">
+                    </label>
+
+                    <label class="main-form__label main-form__label--small">
+                        <input class="main-form__input" type="email" name="email" placeholder="Email">
+                    </label>
+
+                    <label class="main-form__label main-form__label--big">
+                        <textarea class="main-form__textarea" placeholder="Your massage"></textarea>
+                    </label>
+
+                    <div class="main-form__button-block">
+                        <button class="main-form__button button button--blue">Send</button>
+                        <img class="main-form__captcha" src="img/captcha.jpg" alt="">
+                    </div>
+                </form>
+            </div>
+
+            <div class="section-nav">
+                <ul class="section-nav__socials socials">
+                    <li class="socials__item">
+                        <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
@@ -85,6 +140,11 @@
     </div>
 </footer>
 
+
+<script src="script/jquery.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/circletype/circletype.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>

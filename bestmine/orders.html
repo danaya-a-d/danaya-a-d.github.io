@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Заказы</title>
 
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -36,7 +39,59 @@
 </header>
 
 <main class="page-main">
+    <section class="orders">
+        <div class="section-container">
+            <div class="section-name">
+                <p class="section-name__count">01</p>
+                <p class="section-name__title">My orders</p>
+            </div>
 
+            <div class="orders__wrapper wrapper">
+                <h1 class="orders__title title">My orders</h1>
+
+                <table class="orders__stat-table stat-table">
+                    <tbody>
+                    <tr class="stat-table__header">
+                        <td>Orders ID</td>
+                        <td>Coin</td>
+                        <td>Time</td>
+                        <td>Amount</td>
+                    </tr>
+
+                    <tr class="stat-table__content">
+                        <td>769895</td>
+                        <td><img src="img/pm.png" alt="PM"></td>
+                        <td>2021-09-07 18:25:55</td>
+                        <td>111.000 GH/s</td>
+                    </tr>
+
+                    <tr class="stat-table__pagination-block">
+                        <td colspan="4">
+                            <ul class="stat-table__pagination pagination">
+                                <li class="pagination__item active"><a href="#">1</a></li>
+                                <li class="pagination__item"><a href="#">2</a></li>
+                            </ul>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="section-nav">
+                <ul class="section-nav__socials socials">
+                    <li class="socials__item">
+                        <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
@@ -85,6 +140,11 @@
     </div>
 </footer>
 
+
+<script src="script/jquery.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/circletype/circletype.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>

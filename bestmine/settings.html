@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Настройки</title>
 
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -36,7 +39,154 @@
 </header>
 
 <main class="page-main">
+    <section class="settings">
+        <div class="section-container">
+            <div class="section-name">
+                <p class="section-name__count">01</p>
+                <p class="section-name__title">Settings</p>
+            </div>
 
+            <div class="settings__wrapper wrapper">
+                <form class="settings__form" action="#" method="post">
+                    <h1 class="settings__title title">Settings</h1>
+                    <div class="settings__form-block">
+
+                        <label class="settings__form-label settings__form-label--big">
+                            <span class="settings__form-label-name">Username</span>
+                            <input class="settings__input" type="text" name="name" value="LINKOLN25">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--big">
+                            <span class="settings__form-label-name">Email</span>
+                            <input class="settings__input" type="email" name="email" value="linkoln@gmail.com">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--big">
+                            <span class="settings__form-label-name">Upline</span>
+                            <input class="settings__input" type="text" name="upline" value="Upline">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--big">
+                            <span class="settings__form-label-name">Date created</span>
+                            <input class="settings__input" type="text" name="date" value="2021-09-07 18:25:55">
+                        </label>
+                    </div>
+
+                    <h2 class="settings__title title">Edit Your Wallets</h2>
+                    <div class="settings__form-block">
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/bitcoin.png" alt="">
+                                Bitcoin
+                            </span>
+                            <input class="settings__input" type="text" name="Bitcoin">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/litecoin.png" alt="">
+                                Litecoin
+                            </span>
+                            <input class="settings__input" type="text" name="Litecoin">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/bitcoincash.png" alt="">
+                                Bitcoin Cash
+                            </span>
+                            <input class="settings__input" type="text" name="Bitcoin Cash">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/dogecoin.png" alt="">
+                                Dogecoin
+                            </span>
+                            <input class="settings__input" type="text" name="Dogecoin">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/zcash.png" alt="">
+                                Zcash
+                            </span>
+                            <input class="settings__input" type="text" name="Zcash">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/dash.png" alt="">
+                                Dash
+                            </span>
+                            <input class="settings__input" type="text" name="Dash">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/phenom.png" alt="">
+                                USDT (Erc-20)
+                            </span>
+                            <input class="settings__input" type="text" name="USDT">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/ripple.png" alt="">
+                                Ripple
+                            </span>
+                            <input class="settings__input" type="text" name="Ripple">
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">
+                                <img class="settings__form-label-icon" src="img/ethereum.png" alt="">
+                                Etherium
+                            </span>
+                            <input class="settings__input" type="text" name="Etherium">
+                        </label>
+
+
+                    </div>
+
+                    <h2 class="settings__title title">Update password</h2>
+                    <div class="settings__form-block">
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">Password</span>
+                            <input class="settings__input password-input" type="password"
+                                   name="Password" placeholder="Password">
+                            <a href="#" class="password-control"></a>
+                        </label>
+
+                        <label class="settings__form-label settings__form-label--small">
+                            <span class="settings__form-label-name">Confirm password</span>
+                            <input class="settings__input password-input" type="password"
+                                   name="Confirm" placeholder="The password again">
+                            <a href="#" class="password-control"></a>
+                        </label>
+
+                        <button class="settings__button button button--white" type="submit">Save</button>
+
+                    </div>
+                </form>
+            </div>
+
+            <div class="section-nav">
+                <ul class="section-nav__socials socials">
+                    <li class="socials__item">
+                        <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">
@@ -85,6 +235,11 @@
     </div>
 </footer>
 
+
+<script src="script/jquery.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/circletype/circletype.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
