@@ -181,4 +181,76 @@ $(document).ready(function () {
     modal_show($('.modal--recover'), $('.recover-btn'));
     modal_show($('.modal--table'), $('.table-btn'));
 
+    //Открытие FAQ
+    let faq_item = document.querySelectorAll('.faq__item');
+
+    if (faq_item !== undefined) {
+
+        for (let i = 0; i < faq_item.length; i++) {
+            faq_item[i].addEventListener('click', function (event) {
+
+                for (let j = 0; j < faq_item.length; j++) {
+                    faq_item[j].classList.remove('active');
+                    // console.log(j);
+                }
+
+                faq_item[i].classList.toggle('active');
+            });
+        }
+    }
+
+
+    //Плавное пролистывание к якорю
+    $('a[href*="#"]').click(function (e) {
+        let offset;
+        if ($(this.hash).offset()) {
+            offset = $(this.hash).offset().top
+        } else offset = 0;
+
+        $('html, body').stop().animate({
+            scrollTop: offset
+        }, 1000);
+        e.preventDefault();
+    });
+
+
+    // копировать в буфер обмена
+    $('.js-copy').on('click', function() {
+        copyToClipboard( $(this).text() );
+        ui_copyDone( this );
+        // this → объект, в контексте которого вызвана функция (здесь: кликнутый HTML элемент
+        // $(this) → оно же, завернутое в jQuery-объект.
+    });
+
+    $('.js-copy-btn').each(function(index) {
+        $(this).on('click', function() {
+            copyToClipboard( $('.js-copy-target').eq(index).text() );
+            ui_copyDone( this );
+        });
+        // this → очередной элемент, который перебираем
+        // index → его номер, который совпадает с номером блока, откуда нужно копировать
+    });
+
+    /***/
+
+    function copyToClipboard(str) {
+        let area = document.createElement('textarea');
+
+        document.body.appendChild(area);
+        area.value = str;
+        area.select();
+        document.execCommand("copy");
+        document.body.removeChild(area);
+    }
+
+    function ui_copyDone(btn) {
+        let contentSaved = btn.innerHTML;
+
+        btn.classList.add('copied');
+
+        setTimeout(function() {
+            btn.innerHTML = contentSaved;
+            btn.classList.remove('copied');
+        }, 1500);
+    }
 });
