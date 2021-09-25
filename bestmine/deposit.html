@@ -32,11 +32,43 @@
         </div>
 
         <div class="header__buttons">
-            <button class="header__button header__button--setting"></button>
+            <a href="settings.html" class="header__button header__button--setting"></a>
             <button class="header__button header__button--login"></button>
         </div>
     </nav>
 </header>
+
+<div class="mob-menu close">
+
+    <div class="mob-menu__block">
+        <button class="mob-menu__close"></button>
+
+        <a class="mob-menu__logo logo" href="index.html"><img src="img/logo.svg" alt="BestMine"></a>
+
+        <ul class="mob-menu__list">
+            <li class="mob-menu__item active"><a href="dashboard.html">Dashboard</a></li>
+            <li class="mob-menu__item"><a href="mining.html">Mining</a></li>
+            <li class="mob-menu__item"><a href="deposit.html">Deposit</a></li>
+            <li class="mob-menu__item"><a href="withdraw.html">Withdraw</a></li>
+            <li class="mob-menu__item"><a href="calculator.html">Calculator</a></li>
+            <li class="mob-menu__item"><a href="faq.html">FAQ</a></li>
+        </ul>
+
+        <ul class="mob-menu__socials socials">
+            <li class="socials__item">
+                <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+            </li>
+            <li class="socials__item">
+                <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+            </li>
+            <li class="socials__item">
+                <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="mob-menu__overlay"></div>
+</div>
 
 <main class="page-main">
     <main class="page-main">
@@ -154,13 +186,18 @@
     </div>
 </footer>
 
+<script src="script/jquery.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/circletype/circletype.min.js"></script>
+<script src="script/main.min.js"></script>
 <div class="modal-back hide">
     <div class="modal modal--registr hide">
         <button class="modal__btn-close modal-close"></button>
 
         <h2 class="modal__title title">Registration</h2>
 
-        <p class="modal__subtitle">If you have an account, please <a>log in.</a></p>
+        <p class="modal__subtitle">If you have an account, please <a class="login-btn">log in.</a></p>
 
         <form class="modal__form main-form main-form--white" action="#" method="post">
             <div class="main-form__labels">
@@ -189,6 +226,14 @@
                            required>
                 </label>
             </div>
+
+            <label class="main-form__label-check">
+                <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
+                <span class="main-form__check-indicator"></span>
+                <span class="main-form__indicator-title">
+                        Accept the <a href="#">rules</a>
+                    </span>
+            </label>
 
             <img class="main-form__captcha" src="img/captcha.jpg" alt="">
 
@@ -219,8 +264,8 @@
             <button class="main-form__button button button--blue">Regestration</button>
         </form>
 
-        <p class="modal__subnote">If you do not have an account, then <a>register.</a></p>
-        <p class="modal__subnote">If you have forgotten your password, <a>click here.</a></p>
+        <p class="modal__subnote">If you do not have an account, then <a class="registr-btn">register.</a></p>
+        <p class="modal__subnote">If you have forgotten your password, <a class="recover-btn">click here.</a></p>
     </div>
 
     <div class="modal modal--recover hide">
@@ -238,11 +283,8 @@
 
             <img class="main-form__captcha" src="img/captcha.jpg" alt="">
 
-            <button class="main-form__button button button--blue">Regestration</button>
+            <button class="main-form__button button button--blue">Recower</button>
         </form>
-
-        <p class="modal__subnote">If you do not have an account, then <a>register.</a></p>
-        <p class="modal__subnote">If you have forgotten your password, <a>click here.</a></p>
     </div>
 
     <div class="modal modal--table hide">
@@ -283,13 +325,6 @@
 
     <div class="modal__overlay hide"></div>
 </div>
-
-
-<script src="script/jquery.min.js"></script>
-<script src="script/slick/slick.min.js"></script>
-<script src="script/nouislider/nouislider.min.js"></script>
-<script src="script/circletype/circletype.min.js"></script>
-<script src="script/main.min.js"></script>
 
 </body>
 </html>
