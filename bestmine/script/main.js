@@ -10,10 +10,10 @@ $(document).ready(function () {
         // variableWidth: true,
         responsive: [
             {
-                // breakpoint: 1200,
-                // settings: {
-                //     slidesToShow: 3
-                // }
+                breakpoint: 767,
+                settings: {
+                    slidesToShow: 3
+                }
             }
         ]
     });
