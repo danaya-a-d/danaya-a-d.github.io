@@ -12,65 +12,75 @@
 </head>
 <body>
 
-<div class="mob-menu close">
-
-    <div class="mob-menu__block">
-        <button class="mob-menu__close mob-menu-close"></button>
-
-        <button class="mob-menu__button button button--transparent registr-btn">Registration</button>
-
-        <a class="mob-menu__logo logo" href="index.html"><img src="img/logo.svg" alt="BestMine"></a>
-
-        <ul class="mob-menu__list">
-            <li class="mob-menu__item active mob-menu-close"><a href="#section-1">Statistics</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-2">Registration Bonus</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-3">How It work</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-4">Mining today</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-5">Affiliate Program</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-6">Calculator</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-7">FAQ</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-8">Support</a></li>
-            <li class="mob-menu__item mob-menu-close"><a href="#section-9">History</a></li>
-        </ul>
-
-        <button class="mob-menu__button button button--transparent login-btn">Login</button>
-
-        <ul class="mob-menu__socials socials">
-            <li class="socials__item">
-                <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
-            </li>
-            <li class="socials__item">
-                <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
-            </li>
-            <li class="socials__item">
-                <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
-            </li>
-        </ul>
-    </div>
-
-    <div class="mob-menu__overlay"></div>
-</div>
-
 <main class="page-main">
     <section class="upper-block" id="section-1">
         <header class="header">
             <nav class="header__nav wrapper">
                 <div class="header__main-block">
-                    <a class="header__logo logo" href="#"><img src="img/logo.svg" alt="BestMine"></a>
-
+                    <a class="header__logo logo" href="index.html"><img src="img/logo.svg" alt="BestMine"></a>
+        
                     <ul class="header__nav-list">
-                        <li class="header__nav-item active"><a href="#section-1">Statistics</a></li>
-                        <li class="header__nav-item"><a href="#section-5">Affiliate Program</a></li>
-                        <li class="header__nav-item"><a href="#section-6">Calculator</a></li>
-                        <li class="header__nav-item"><a href="#section-7">FAQ</a></li>
-                        <li class="header__nav-item"><a href="#section-8">Support</a></li>
+                        <li class="header__nav-item active"><a href="dashboard.html">Dashboard</a></li>
+                        <li class="header__nav-item"><a href="mining.html">Mining</a></li>
+                        <li class="header__nav-item"><a href="deposit.html">Deposit</a></li>
+                        <li class="header__nav-item"><a href="withdraw.html">Withdraw</a></li>
+                        <li class="header__nav-item"><a href="partners.html">Affiliate Program</a></li>
+                        <li class="header__nav-item"><a href="orders.html">My orders</a></li>
+                        <li class="header__nav-item"><a href="history.html">History</a></li>
+                        <li class="header__nav-item"><a href="faq.html">FAQ</a></li>
+                        <li class="header__nav-item"><a href="help.html">Support</a></li>
+                        <li class="header__nav-item"><a href="index.html#section-6">Calculator</a></li>
+        
                     </ul>
-
+        
+        
                     <a class="header__mail mail" href="mailto:support@gmail.com">support@gmail.com</a>
                     <button class="header__menu-btn"></button>
                 </div>
+        
+                <div class="header__buttons">
+                    <a href="settings.html" class="header__button header__button--setting"></a>
+                    <button class="header__button header__button--login js-account"></button>
+                    <a class="header__exit hide" href="index.html">Exit personal account </a>
+                </div>
             </nav>
         </header>
+        
+        <div class="mob-menu close">
+        
+            <div class="mob-menu__block">
+                <button class="mob-menu__close mob-menu-close"></button>
+        
+                <a class="mob-menu__logo logo" href="index.html"><img src="img/logo.svg" alt="BestMine"></a>
+        
+                <ul class="mob-menu__list">
+                    <li class="mob-menu__item active"><a href="dashboard.html">Dashboard</a></li>
+                    <li class="mob-menu__item"><a href="mining.html">Mining</a></li>
+                    <li class="mob-menu__item"><a href="deposit.html">Deposit</a></li>
+                    <li class="mob-menu__item"><a href="withdraw.html">Withdraw</a></li>
+                    <li class="mob-menu__item"><a href="partners.html">Affiliate Program</a></li>
+                    <li class="mob-menu__item"><a href="orders.html">My orders</a></li>
+                    <li class="mob-menu__item"><a href="history.html">History</a></li>
+                    <li class="mob-menu__item"><a href="faq.html">FAQ</a></li>
+                    <li class="mob-menu__item"><a href="help.html">Support</a></li>
+                    <li class="mob-menu__item"><a href="index.html#section-6">Calculator</a></li>
+                </ul>
+        
+                <ul class="mob-menu__socials socials">
+                    <li class="socials__item">
+                        <a href="#"><img src="img/facebook.svg" alt="facebook"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/telegram.svg" alt="telegram"></a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#"><img src="img/instagram.svg" alt="instagram"></a>
+                    </li>
+                </ul>
+            </div>
+        
+            <div class="mob-menu__overlay"></div>
+        </div>
 
         <div class="section-container">
             <div class="section-name">
@@ -827,20 +837,27 @@
 </main>
 
 <footer class="footer">
+    <div class="footer__nav-wrapper wrapper">
+        <ul class="footer__nav-list">
+            <li class="footer__nav-item"><a href="dashboard.html">Dashboard</a></li>
+            <li class="footer__nav-item"><a href="mining.html">Mining</a></li>
+            <li class="footer__nav-item"><a href="deposit.html">Deposit</a></li>
+            <li class="footer__nav-item"><a href="withdraw.html">Withdraw</a></li>
+            <li class="footer__nav-item active"><a href="partners.html">Affiliate Program</a></li>
+            <li class="footer__nav-item"><a href="orders.html">My orders</a></li>
+            <li class="footer__nav-item"><a href="history.html">History</a></li>
+            <li class="footer__nav-item"><a href="faq.html">FAQ</a></li>
+            <li class="footer__nav-item"><a href="help.html">Support</a></li>
+            <li class="footer__nav-item"><a href="index.html#section-6">Calculator</a></li>
+        </ul>
+    </div>
+
     <div class="footer__wrapper wrapper">
         <div class="footer__section">
             <a class="footer__logo logo" href="#"><img src="img/logo.svg" alt="BestMine"></a>
         </div>
 
         <div class="footer__section">
-            <ul class="footer__nav-list">
-                <li class="footer__nav-item active"><a href="#section-1">Statistics</a></li>
-                <li class="footer__nav-item"><a href="#section-5">Affiliate Program</a></li>
-                <li class="footer__nav-item"><a href="#section-6">Calculator</a></li>
-                <li class="footer__nav-item"><a href="#section-7">FAQ</a></li>
-                <li class="footer__nav-item"><a href="#section-8">Support</a></li>
-            </ul>
-
             <p class="footer__about-us">The ultimate goal of our existence is to make
                 cryptocurrency mining an easy, fast and rewarding experience for all.</p>
 
@@ -861,12 +878,15 @@
             </ul>
 
             <a class="footer__mail mail" href="mailto:support@gmail.com">support@gmail.com</a>
-
-            <button class="footer__button button button--transparent registr-btn">Registration</button>
         </div>
     </div>
 </footer>
 
+<script src="script/jquery.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/circletype/circletype.min.js"></script>
+<script src="script/main.min.js"></script>
 <div class="modal-back hide">
     <div class="modal modal--registr hide">
         <button class="modal__btn-close modal-close"></button>

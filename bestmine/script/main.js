@@ -275,21 +275,42 @@ $(document).ready(function () {
 
     // Affiliate Program
 
-    let program_item = document.querySelectorAll('.program__item');
-    let program_text = document.querySelectorAll('.program__text');
+        let program_item = document.querySelectorAll('.program__item');
+        let program_text = document.querySelectorAll('.program__text');
 
-    for (let i = 0; i < program_item.length; i++) {
-        program_item[i].addEventListener('click', function (event) {
-            for (let j = 0; j < program_item.length; j++) {
-                program_item[j].classList.remove('active');
-                program_text[j].classList.add('hide');
-            }
+        if (program_item !== undefined) {
+        for (let i = 0; i < program_item.length; i++) {
+            program_item[i].addEventListener('click', function (event) {
+                for (let j = 0; j < program_item.length; j++) {
+                    program_item[j].classList.remove('active');
+                    program_text[j].classList.add('hide');
+                }
 
-            program_item[i].classList.add('active');
-            program_text[i].classList.remove('hide');
+                program_item[i].classList.add('active');
+                program_text[i].classList.remove('hide');
 
-        });
+            });
+        }
     }
-    // $('.program__item')
-    // $('.program__text')
+
+    // Last Deposit & Last Withdrawal
+
+    let history_nav_item = document.querySelectorAll('.history__nav-item');
+    let history_table = document.querySelectorAll('.history__table');
+
+    if (history_nav_item !== undefined) {
+        for (let i = 0; i < history_nav_item.length; i++) {
+            history_nav_item[i].addEventListener('click', function (event) {
+                for (let j = 0; j < history_nav_item.length; j++) {
+                    history_nav_item[j].classList.remove('active');
+                    history_table[j].classList.remove('active');
+                }
+
+                history_nav_item[i].classList.add('active');
+                history_table[i].classList.add('active');
+
+            });
+        }
+    }
+
 });
