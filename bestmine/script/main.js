@@ -121,7 +121,7 @@ $(document).ready(function () {
         menu_open();
     });
 
-    $('.mob-menu__close').on('click', function () {
+    $('.mob-menu-close').on('click', function () {
         menu_close();
     });
 
@@ -132,7 +132,6 @@ $(document).ready(function () {
     $(".mob-menu__overlay").on("touchmove", function () {
         menu_close();
     });
-
 
     //модальные окна
     function modal_show(modal, button_open) {
@@ -191,11 +190,31 @@ $(document).ready(function () {
 
                 for (let j = 0; j < faq_item.length; j++) {
                     faq_item[j].classList.remove('active');
-                    // console.log(j);
                 }
 
                 faq_item[i].classList.toggle('active');
             });
+        }
+    }
+
+    // показ кнопки выхода
+    $('.js-account').click(function (e) {
+        exit()
+    });
+
+    $('.js-account').hover(function (e) {
+        exit()
+    });
+
+    $('.header__exit').hover(function (e) {
+        exit()
+    });
+
+    function exit() {
+        if ($('.header__exit').hasClass('hide')) {
+            $('.header__exit').removeClass('hide');
+        } else {
+            $('.header__exit').addClass('hide');
         }
     }
 
@@ -210,22 +229,22 @@ $(document).ready(function () {
         $('html, body').stop().animate({
             scrollTop: offset
         }, 1000);
-        e.preventDefault();
+        // e.preventDefault();
     });
 
 
     // копировать в буфер обмена
-    $('.js-copy').on('click', function() {
-        copyToClipboard( $(this).text() );
-        ui_copyDone( this );
+    $('.js-copy').on('click', function () {
+        copyToClipboard($(this).text());
+        ui_copyDone(this);
         // this → объект, в контексте которого вызвана функция (здесь: кликнутый HTML элемент
         // $(this) → оно же, завернутое в jQuery-объект.
     });
 
-    $('.js-copy-btn').each(function(index) {
-        $(this).on('click', function() {
-            copyToClipboard( $('.js-copy-target').eq(index).text() );
-            ui_copyDone( this );
+    $('.js-copy-btn').each(function (index) {
+        $(this).on('click', function () {
+            copyToClipboard($('.js-copy-target').eq(index).text());
+            ui_copyDone(this);
         });
         // this → очередной элемент, который перебираем
         // index → его номер, который совпадает с номером блока, откуда нужно копировать
@@ -248,9 +267,29 @@ $(document).ready(function () {
 
         btn.classList.add('copied');
 
-        setTimeout(function() {
+        setTimeout(function () {
             btn.innerHTML = contentSaved;
             btn.classList.remove('copied');
         }, 1500);
     }
+
+    // Affiliate Program
+
+    let program_item = document.querySelectorAll('.program__item');
+    let program_text = document.querySelectorAll('.program__text');
+
+    for (let i = 0; i < program_item.length; i++) {
+        program_item[i].addEventListener('click', function (event) {
+            for (let j = 0; j < program_item.length; j++) {
+                program_item[j].classList.remove('active');
+                program_text[j].classList.add('hide');
+            }
+
+            program_item[i].classList.add('active');
+            program_text[i].classList.remove('hide');
+
+        });
+    }
+    // $('.program__item')
+    // $('.program__text')
 });
