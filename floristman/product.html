@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Главная</title>
+
+    <title>Карточка товара</title>
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
@@ -145,18 +146,126 @@
     </div>
 </nav>
 
-<section class="upper-block">
+<section class="upper-block upper-block--inner">
     <div class="upper-block__flower"></div>
     <div class="upper-block__wrapper">
-        <p class="upper-block__subtitle">Подарите ощущение праздника</p>
-        <h1 class="upper-block__title title title--big">Собираем букеты, созданные для Вас</h1>
-        <a href="catalog.html" class="upper-block__button button">Выбрать букет</a>
+        <h1 class="upper-block__title title title--big">Букет №225 “Ромашки для Наташки”</h1>
+        <div class="breadcrumbs">
+            <ul class="breadcrumbs__list">
+                <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumbs__item">Букет №225 “Ромашки для Наташки”</li>
+            </ul>
+        </div>
     </div>
 </section>
 
 <main class="page-main">
+    <section class="product">
+        <div class="product__main">
+            <div class="product__photos">
+                <div class="product__big-photo-list slider-for">
+                    <div class="product__big-photo">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </div>
+                    <div class="product__big-photo">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </div>
+                    <div class="product__big-photo">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </div>
+                    <div class="product__big-photo">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </div>
+                    <div class="product__big-photo">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </div>
+                </div>
+
+                <ul class="product__photo-list slider-nav">
+                    <li class="product__photo-item">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </li>
+                    <li class="product__photo-item">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </li>
+                    <li class="product__photo-item">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </li>
+                    <li class="product__photo-item">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </li>
+                    <li class="product__photo-item">
+                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Фото">
+                    </li>
+                </ul>
+            </div>
+
+            <div class="product__about-block">
+                <ul class="product__hot-list">
+                    <li class="product__hot product__hot--hit">Хит продаж</li>
+                    <li class="product__hot product__hot--sale">Скидка 50%</li>
+                    <li class="product__hot product__hot--new">Новинка</li>
+                    <li class="product__hot product__hot--day">Букет дня</li>
+                </ul>
+
+                <ul class="product__statuses">
+                    <li class="product__status"><a href="#reviews">Отзывов (1)</a></li>
+                    <li class="product__status">Есть в наличии</li>
+                </ul>
+
+                <div class="product__tags">
+                    <h4 class="product__tags-name">Повод:</h4>
+                    <ul class="product__tags-list">
+                        <li class="product__tags-item">8 марта.</li>
+                        <li class="product__tags-item">9 мая.</li>
+                        <li class="product__tags-item">Любовь</li>
+                    </ul>
+
+                    <h4 class="product__tags-name">Кому:</h4>
+                    <ul class="product__tags-list">
+                        <li class="product__tags-item">Маме.</li>
+                        <li class="product__tags-item">Девушке.</li>
+                        <li class="product__tags-item">Женщине.</li>
+                        <li class="product__tags-item">Учителю.</li>
+                        <li class="product__tags-item">Теще.</li>
+                        <li class="product__tags-item">Друзьям</li>
+                    </ul>
+                </div>
+
+                <div class="product__buying">
+                    <span class="product__counter counter">
+                        <button class="counter__button minus">−</button><label class="counter__label">
+                            <input class="counter__input" type="text" value="1" data-price="415"
+                                   onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                        </label><button class="counter__button plus">+</button>
+                    </span>
+
+                    <p class="product__prices">
+                        <span class="product__price-old">5 400 грн</span>
+                        <span class="product__price-current">3 700 грн</span>
+                    </p>
+
+                    <button class="product__button button" type="button">В корзину</button>
+                </div>
+
+                <div class="product__description">
+                    <h3>Описание:</h3>
+                    <p>Веб-дизайн — непростая сфера, провоцирующая постоянные споры. Кто-то скажет, что для привлечения внимания вашему лендингу просто необходим современный дизайн, включающий последние тенденции. Другие считают, что работающая посадочная страница, на которой посетители получают то, зачем пришли, гораздо важнее.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="reviews" id="reviews">
+            <h3 class="reviews__title">Отзывы (1):</h3>
+            <div class="reviews__item">
+                <p class="reviews__name">Отзыв от Лена Ленина</p>
+                <p class="reviews__text">Веб-дизайн — непростая сфера, провоцирующая постоянные споры. Кто-то скажет, что для привлечения внимания вашему лендингу просто необходим современный дизайн, включающий последние тенденции. Другие считают, что работающая посадочная страница, на которой посетители получают то, зачем пришли, гораздо важнее.</p>
+            </div>
+        </div>
+    </section>
+
     <section class="products">
-        <h3 class="title title--medium products__title">Скидки</h3>
+        <h3 class="title title--medium products__title">Вместе покупают</h3>
         <ul class="products__list products__list--scroll">
             <li class="products__item">
                 <a href="product.html" class="products__link">
@@ -285,280 +394,6 @@
             </li>
         </ul>
     </section>
-    <section class="why-us">
-        <h3 class="title title--medium why-us__title">Почему именно мы?</h3>
-
-        <ul class="why-us__list">
-            <li class="why-us__item">
-                <img class="why-us__img" src="img/why-us1.jpg" alt="">
-                <p class="why-us__text">Вы можете выбрать любую цветочную композицию из нашего каталога
-                    или заказать свой вариант. Вы можете выбрать любую цветочную композицию из нашего
-                    каталога или заказать свой вариант</p>
-            </li>
-            <li class="why-us__item">
-                <img class="why-us__img" src="img/why-us2.jpg" alt="">
-                <p class="why-us__text">Вы можете выбрать любую цветочную композицию из нашего
-                    каталога или заказать свой вариант</p>
-            </li>
-            <li class="why-us__item">
-                <img class="why-us__img" src="img/why-us3.jpg" alt="">
-                <p class="why-us__text">Вы можете выбрать любую цветочную композицию из нашего
-                    каталога или заказать свой вариант</p>
-            </li>
-        </ul>
-    </section>
-    <div class="catalog__container">
-        <section class="catalog">
-            <h3 class="title title--medium catalog__title">Каталог</h3>
-
-            <ul class="catalog__list">
-                <li class="catalog__item">
-                    <a href="catalog.html">
-                        <img class="catalog__photo" src="img/catalog1.jpg">
-                        <h5 class="catalog__name">Для кого</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="catalog.html">
-                        <img class="catalog__photo" src="img/catalog2.png">
-                        <h5 class="catalog__name">Сладости</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="catalog.html">
-                        <img class="catalog__photo" src="img/catalog3.png">
-                        <h5 class="catalog__name">Подарки</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="catalog.html">
-                        <img class="catalog__photo" src="img/catalog4.jpg">
-                        <h5 class="catalog__name">Букеты</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="catalog.html">
-                        <img class="catalog__photo" src="img/catalog5.jpg">
-                        <h5 class="catalog__name">Розы</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="catalog.html">
-                        <img class="catalog__photo" src="img/catalog6.png">
-                        <h5 class="catalog__name">Праздничная коллекция</h5>
-                    </a>
-                </li>
-                <li class="catalog__item">
-                    <a href="catalog.html">
-                        <img class="catalog__photo" src="img/catalog7.png">
-                        <h5 class="catalog__name">Комнатные растения</h5>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="products catalog__products">
-            <h3 class="title title--small title--gold products__title products__title--gold">Для кого</h3>
-            <ul class="products__list">
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-                <li class="products__item">
-                    <a href="product.html" class="products__link">
-                        <img src="img/Ромашки%20для%20наташки.jpg" alt="Букет">
-
-                        <ul class="products__hot-list">
-                            <li class="products__hot products__hot--hit">Хит продаж</li>
-                            <li class="products__hot products__hot--new">Новинка</li>
-                            <li class="products__hot products__hot--day">Букет дня</li>
-                            <li class="products__hot products__hot--sale">Скидка 50%</li>
-                        </ul>
-
-                        <h5 class="products__name">№225 “Ромашки для Наташки” №225 “Ромашки для Наташки”</h5>
-                    </a>
-                    <div class="products__buy">
-                        <p class="products__prices">
-                            <span class="products__price-old">5 400 грн</span>
-                            <span class="products__price-current">3 700 грн</span>
-                        </p>
-                        <button class="products__button button">Заказать</button>
-                    </div>
-                </li>
-            </ul>
-
-            <a class="products__href" href="catalog.html">Перейти к каталогу</a>
-        </section>
-    </div>
-    <section class="delivery">
-        <div class="delivery__wrapper">
-            <h3 class="delivery__title title title--medium">Доставка</h3>
-            <p class="delivery__text">Возьмём на себя все заботы по созданию, оформлению и доставке
-                корпоративных букетов в обычные и праздничные дни за разумные деньги</p>
-        </div>
-    </section>
-    <section class="bucket">
-        <h3 class="bucket__title title title--medium">Предложи свой букет</h3>
-
-        <div class="bucket__wrapper">
-            <form class="bucket__form form" method="post">
-                <label>
-                    <input class="form__input" placeholder="Имя" name="name" type="text" required>
-                </label>
-                <label>
-                    <input class="form__input phone_mask" placeholder="Телефон" name="name" type="tel" required>
-                </label>
-                <label>
-                    <textarea class="form__textarea" placeholder="Ваша идея" name="message" required></textarea>
-                </label>
-                <button class="form__button button" type="submit">Отправить</button>
-            </form>
-            <img class="bucket__image" src="img/bucket.jpg" alt="Букет">
-        </div>
-    </section>
-
 </main>
 
 <footer class="footer">
@@ -714,4 +549,3 @@
 
 </body>
 </html>
-
