@@ -370,16 +370,16 @@ $(document).ready(function () {
 
 
     //показ доп.телефонов в шапке
-    function toggle_phones() {
-        if (mediaQuery.matches) {
-            $('.phones a').slice(0, 6).show();
-        } else {
-            $('.phones a').slice(2, 6).hide();
-            $('.header__more-phones').on('click', function (e) {
-                $('.phones a').slice(2, 6).toggle();
-            });
-        }
-    }
+    // function toggle_phones() {
+    //     if (mediaQuery.matches) {
+    //         $('.phones a').slice(0, 6).show();
+    //     } else {
+    //         $('.phones a').slice(2, 6).hide();
+    //         $('.header__more-phones').on('click', function (e) {
+    //             $('.phones a').slice(2, 6).toggle();
+    //         });
+    //     }
+    // }
 
     //увеличение изображений
     if ($('[data-fancybox="gallery"]').length > 0) {
@@ -419,10 +419,10 @@ $(document).ready(function () {
     }
 
     // перемещение элементов в хедере
-    toggle_phones();
+    // toggle_phones();
     moving_header_elements();
     window.addEventListener('resize', function (event) {
-        toggle_phones();
+        // toggle_phones();
         moving_header_elements();
     }, true);
 
