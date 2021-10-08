@@ -66,6 +66,7 @@ $(document).ready(function () {
 
     slick_mobile($('.upper-block__list'), settings_var);
     slick_mobile($('.hire__list'), settings);
+    slick_mobile($('.locations__list'), settings);
 
 
     $('.reviews__list').slick({
