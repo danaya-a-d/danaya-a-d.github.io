@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+
+    <title>Главная</title>
+
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -17,7 +21,11 @@
 
 <header class="header">
     <div class="header__wrapper wrapper">
+        <button class="header__menu-btn"></button>
+
         <a class="header__logo logo" href="index.html"><img src="img/logo.svg" alt="ABEL"></a>
+
+        <a class="header__call-btn" href="#"></a>
 
         <nav class="header__nav">
             <ul class="header__nav-list">
@@ -194,20 +202,20 @@
                     </div>
                 </li>
 
-                <!--                <li class="reviews__item">-->
-                <!--                    <p class="reviews__text">Needed 2 trucks for our large house move which was-->
-                <!--                        very stressful but Steve and the team made it all straightforward and-->
-                <!--                        simple which relieved the pressure. Cant recommend them high enough!-->
-                <!--                        Thanks guys!</p>-->
-                <!--                    <div class="reviews__rate">★★★★★</div>-->
-                <!--                    <div class="reviews__author">-->
-                <!--                        <img class="reviews__photo" src="img/reviews2.png" alt="">-->
-                <!--                        <div class="reviews__about-author">-->
-                <!--                            <p class="reviews__name">Anthony Beechamp</p>-->
-                <!--                            <time class="reviews__time">18-8-2021</time>-->
-                <!--                        </div>-->
-                <!--                    </div>-->
-                <!--                </li>-->
+                <li class="reviews__item">
+                    <p class="reviews__text">Needed 2 trucks for our large house move which was
+                        very stressful but Steve and the team made it all straightforward and
+                        simple which relieved the pressure. Cant recommend them high enough!
+                        Thanks guys!</p>
+                    <div class="reviews__rate">★★★★★</div>
+                    <div class="reviews__author">
+                        <img class="reviews__photo" src="img/reviews2.png" alt="">
+                        <div class="reviews__about-author">
+                            <p class="reviews__name">Anthony Beechamp</p>
+                            <time class="reviews__time">18-8-2021</time>
+                        </div>
+                    </div>
+                </li>
             </ul>
         </div>
     </section>
@@ -515,8 +523,10 @@
     </div>
 </footer>
 
+
+<script src="script/jquery.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
 </html>
-

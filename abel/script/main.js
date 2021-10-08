@@ -1,0 +1,89 @@
+$(document).ready(function () {
+
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+// We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
+
+    //Слайдеры
+
+    function slick_mobile(slider, settings) {
+        // Подпишемся на ресайз и продиспатчим его для запуска
+        $(window).on('resize', function (e) {
+            // Переменная, по которой узнаем запущен слайдер или нет.
+            // Храним её в data
+            let init = slider.data('init-slider');
+            // Если мобильный
+            if (window.innerWidth < 769) {
+                // Если слайдер не запущен
+                if (init !== 1) {
+                    // Запускаем слайдер и записываем в data init-slider = 1
+                    slider.slick(settings).data({'init-slider': 1});
+                }
+            }
+            // Если десктоп
+            else {
+                // Если слайдер запущен
+                if (init === 1) {
+                    // Разрушаем слайдер и записываем в data init-slider = 0
+                    slider.slick('unslick').data({'init-slider': 0});
+                }
+            }
+        }).trigger('resize');
+    }
+
+    const settings_var = {
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        settings: 'slick',
+        centerMode: true,
+        variableWidth: true,
+        responsive: [{
+            breakpoint: 769,
+            settings: 'unslick'
+        }]
+    };
+
+    const settings = {
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        settings: 'slick',
+        responsive: [{
+            breakpoint: 769,
+            settings: 'unslick'
+        }]
+    };
+
+    slick_mobile($('.upper-block__list'), settings_var);
+    slick_mobile($('.hire__list'), settings);
+
+
+    $('.reviews__list').slick({
+        dots: true,
+        // dotsClass: "my-dots",
+        arrows: false,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        infinite: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+});
