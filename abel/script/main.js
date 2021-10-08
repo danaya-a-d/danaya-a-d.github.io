@@ -74,7 +74,7 @@ $(document).ready(function () {
         // dotsClass: "my-dots",
         arrows: false,
         slidesToShow: 5,
-        slidesToScroll: 1,
+        slidesToScroll: 2,
         infinite: true,
         responsive: [
             {
