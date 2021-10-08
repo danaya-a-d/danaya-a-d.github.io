@@ -115,4 +115,9 @@ $(document).ready(function () {
         $('.banner').hide();
     });
 
+
+    $('.faq__item').on('click', function () {
+        $(this).toggleClass('active');
+    });
+
 });
