@@ -120,4 +120,8 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
+    $('.footer__text').on('click', function () {
+        $(this).find('> *:not(.footer__title)').toggleClass('active');
+    });
+
 });
