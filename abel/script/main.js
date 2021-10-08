@@ -78,6 +78,13 @@ $(document).ready(function () {
         infinite: true,
         responsive: [
             {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 1
+                }
+            },
+            {
                 breakpoint: 769,
                 settings: {
                     slidesToShow: 1,
