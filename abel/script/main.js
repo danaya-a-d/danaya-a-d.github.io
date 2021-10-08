@@ -94,4 +94,25 @@ $(document).ready(function () {
         ]
     });
 
+    // Открытие и закрытие мобильного меню
+    function menu_open() {
+        $('.header__nav').removeClass('close');
+    }
+
+    function menu_close() {
+        $('.header__nav').addClass('close');
+    }
+
+    $('.header__menu-btn').on('click', function () {
+        menu_open();
+    });
+
+    $('.header__close-btn').on('click', function () {
+        menu_close();
+    });
+
+    $('.banner__close').on('click', function () {
+        $('.banner').hide();
+    });
+
 });
