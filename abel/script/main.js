@@ -69,7 +69,7 @@ $(document).ready(function () {
     slick_mobile($('.locations__list'), settings);
 
 
-    $('.reviews__list').slick({
+    $('.reviews__list:not(.reviews__list--two)').slick({
         dots: true,
         // dotsClass: "my-dots",
         arrows: false,
@@ -84,6 +84,31 @@ $(document).ready(function () {
                     slidesToScroll: 1
                 }
             },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+
+    $('.reviews__list--two').slick({
+        dots: true,
+        // dotsClass: "my-dots",
+        arrows: false,
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        infinite: true,
+        responsive: [
+            // {
+            //     breakpoint: 992,
+            //     settings: {
+            //         slidesToShow: 3,
+            //         slidesToScroll: 1
+            //     }
+            // },
             {
                 breakpoint: 769,
                 settings: {
