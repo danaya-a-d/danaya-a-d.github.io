@@ -119,6 +119,29 @@ $(document).ready(function () {
         ]
     });
 
+    $('.recent__list--slick').slick({
+        dots: true,
+        // dotsClass: "my-dots",
+        arrows: false,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 1,
+                }
+            }
+        ]
+    });
+
     // Открытие и закрытие мобильного меню
     function menu_open() {
         $('.header__nav').removeClass('close');
