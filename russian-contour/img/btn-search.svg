@@ -1,7 +1,1 @@
-<svg id="_.btn-search" data-name=".btn-search" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <rect id="_.el-hoverzone" data-name=".el-hoverzone" width="32" height="32" fill="none"/>
-  <g id="_.ic-search" data-name=".ic-search" transform="translate(4 4)">
-    <circle id="Эллипс_8" data-name="Эллипс 8" cx="8" cy="8" r="8" transform="translate(3 3)" fill="none" stroke="#949494" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-    <line id="Линия_55" data-name="Линия 55" x1="4.35" y1="4.35" transform="translate(16.65 16.65)" fill="none" stroke="#949494" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-  </g>
-</svg>
+<svg data-name=".btn-search" xmlns="http://www.w3.org/2000/svg" width="32" height="32"><path data-name=".el-hoverzone" fill="none" d="M0 0h32v32H0z"/><g data-name=".ic-search" transform="translate(4 4)" fill="none" stroke="#949494" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle data-name="Эллипс 8" cx="8" cy="8" r="8" transform="translate(3 3)"/><path data-name="Линия 55" d="M21 21l-4.35-4.35"/></g></svg>
