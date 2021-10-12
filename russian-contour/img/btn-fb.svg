@@ -1,0 +1,6 @@
+<svg id="_.btn-fb" data-name=".btn-fb" xmlns="http://www.w3.org/2000/svg" width="34" height="34" viewBox="0 0 34 34">
+  <rect id="_.ic-hoverzone" data-name=".ic-hoverzone" width="34" height="34" fill="none"/>
+  <g id="_.ic-fb_icon" data-name=".ic-fb/icon" transform="translate(-713 -3530)">
+    <path id="Контур_793" data-name="Контур 793" d="M12,2A10,10,0,1,1,2,12,10.011,10.011,0,0,1,12,2Zm0-2A12,12,0,1,0,24,12,12,12,0,0,0,12,0ZM10,10H8v2h2v6h3V12h1.82L15,10H13V9.167c0-.478.1-.667.558-.667H15V6H12.6C10.8,6,10,6.792,10,8.308Z" transform="translate(718 3535)" fill="#8d8d8d"/>
+  </g>
+</svg>

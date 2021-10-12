@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Русский Контур</title>
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <a href="index.html"><img alt="Русский контур" src="img/logotype.svg"></a>
+        <label class="header__select-label">
+            <select class="header__select">
+                <option>Пенза</option>
+                <option>Москва</option>
+            </select>
+        </label>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">Карта</a></li>
+                <li class="header__nav-item"><a href="#">Люди</a></li>
+                <li class="header__nav-item"><a href="#">Места</a></li>
+                <li class="header__nav-item"><a href="#">Приложение</a></li>
+                <li class="header__nav-item"><a href="#">...</a></li>
+            </ul>
+
+            <div class="header__nav-buttons">
+                <button class="header__button header__button--search"></button>
+                <button class="header__button header__button--login"></button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="upper-block">
+        <div class="upper-block__wrapper wrapper">
+
+            <div class="upper-block__breadcrumbs breadcrumbs">
+                <ul class="breadcrumbs__list wrapper">
+                    <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumbs__item"><a href="index.html">Места</a></li>
+                </ul>
+            </div>
+
+            <div class="upper-block__content" style="background-image: url('img/events1.jpg')">
+                <p class="upper-block__tag">Событие Дня</p>
+                <h1 class="upper-block__title title">10 Октября 1760</h1>
+                <p class="upper-block__subtitle">Взятие Берлина в ходе Семилетней войны русско-австрийскими
+                    войсками.</p>
+
+                <a class="upper-block__link" href="#">Читать подробнее...</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="events">
+        <div class="events__wrapper wrapper">
+
+            <div class="events__header">
+                <h2 class="events__title title">Календарь событий</h2>
+                <div class="events__calendar-container">
+                    <button class="events__button button button--brown">Выбор даты</button>
+
+                    <div class="events__calendar calendar hide">
+                        <ul class="calendar__months-list">
+                            <li class="calendar__months-item active">Январь</li>
+                            <li class="calendar__months-item">Февраль</li>
+                            <li class="calendar__months-item">Март</li>
+                            <li class="calendar__months-item">Апрель</li>
+                            <li class="calendar__months-item">Май</li>
+                            <li class="calendar__months-item">Июнь</li>
+                            <li class="calendar__months-item">Июль</li>
+                            <li class="calendar__months-item">Август</li>
+                            <li class="calendar__months-item">Сентябрь</li>
+                            <li class="calendar__months-item">Октябрь</li>
+                            <li class="calendar__months-item">Ноябрь</li>
+                            <li class="calendar__months-item">Декабрь</li>
+                        </ul>
+
+                        <div class="calendar__main-block">
+                            <div class="calendar__header">
+                                <h3 class="calendar__title title">Выберите дату</h3>
+                                <p class="calendar__subtitle">Выберите нужный месяц и дату.
+                                    Год в нашем календаре не нужен.</p>
+                            </div>
+
+                            <ul class="calendar__main-months-list">
+                                <li class="calendar__main-months-item active">
+                                    <p class="calendar__name">Январь</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Февраль</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item inactive">30</li>
+                                        <li class="calendar__data-item inactive">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Март</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Апрель</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item inactive">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Май</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Июнь</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item inactive">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Июль</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Август</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Сентябрь</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item inactive">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Октябрь</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Ноябрь</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item inactive">31</li>
+                                    </ul>
+                                </li>
+                                <li class="calendar__main-months-item">
+                                    <p class="calendar__name">Декабрь</p>
+                                    <ul class="calendar__data-list">
+                                        <li class="calendar__data-item">1</li>
+                                        <li class="calendar__data-item">2</li>
+                                        <li class="calendar__data-item">3</li>
+                                        <li class="calendar__data-item">4</li>
+                                        <li class="calendar__data-item">5</li>
+                                        <li class="calendar__data-item">6</li>
+                                        <li class="calendar__data-item">7</li>
+                                        <li class="calendar__data-item">8</li>
+                                        <li class="calendar__data-item">9</li>
+                                        <li class="calendar__data-item active">10</li>
+                                        <li class="calendar__data-item">11</li>
+                                        <li class="calendar__data-item">12</li>
+                                        <li class="calendar__data-item">13</li>
+                                        <li class="calendar__data-item">14</li>
+                                        <li class="calendar__data-item">15</li>
+                                        <li class="calendar__data-item">16</li>
+                                        <li class="calendar__data-item">17</li>
+                                        <li class="calendar__data-item active">18</li>
+                                        <li class="calendar__data-item">19</li>
+                                        <li class="calendar__data-item active">20</li>
+                                        <li class="calendar__data-item">21</li>
+                                        <li class="calendar__data-item">22</li>
+                                        <li class="calendar__data-item">23</li>
+                                        <li class="calendar__data-item">24</li>
+                                        <li class="calendar__data-item">25</li>
+                                        <li class="calendar__data-item active">26</li>
+                                        <li class="calendar__data-item">27</li>
+                                        <li class="calendar__data-item">28</li>
+                                        <li class="calendar__data-item">29</li>
+                                        <li class="calendar__data-item">30</li>
+                                        <li class="calendar__data-item">31</li>
+                                    </ul>
+                                </li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <ul class="events__nav">
+                <li class="events__nav-item"><a href="#">Вчера</a></li>
+                <li class="events__nav-item active"><a href="#">Сегодня</a></li>
+                <li class="events__nav-item"><a href="#">Пн, 2</a></li>
+                <li class="events__nav-item"><a href="#">Вт, 3</a></li>
+                <li class="events__nav-item"><a href="#">Ср, 4</a></li>
+            </ul>
+
+            <ul class="events__list">
+                <li class="events__item">
+                    <a class="events__link" href="#">
+                        <img class="events__photo" src="img/events1.jpg" alt="">
+                        <p class="events__name">10 Октября 18--</p>
+                        <p class="events__about">Построено здание/открытие здания и достаточно длинное название
+                            здания</p>
+                    </a>
+                </li>
+
+                <li class="events__item">
+                    <a class="events__link" href="#">
+                        <img class="events__photo" src="img/events2.jpg" alt="">
+                        <p class="events__name">10 Октября 18--</p>
+                        <p class="events__about">Построено здание/открытие здания</p>
+                    </a>
+                </li>
+
+                <li class="events__item">
+                    <a class="events__link" href="#">
+                        <img class="events__photo" src="img/events3.jpg" alt="">
+                        <p class="events__name">10 Октября 18--</p>
+                        <p class="events__about">Построено здание/открытие здания и достаточно длинное название
+                            здания</p>
+                    </a>
+                </li>
+
+                <li class="events__item">
+                    <a class="events__link" href="#">
+                        <img class="events__photo" src="img/events1.jpg" alt="">
+                        <p class="events__name">10 Октября 18--</p>
+                        <p class="events__about">Построено здание/открытие здания и достаточно длинное название
+                            здания</p>
+                    </a>
+                </li>
+
+                <li class="events__item">
+                    <a class="events__link" href="#">
+                        <img class="events__photo" src="img/events2.jpg" alt="">
+                        <p class="events__name">10 Октября 18--</p>
+                        <p class="events__about">Построено здание/открытие здания</p>
+                    </a>
+                </li>
+
+                <li class="events__item">
+                    <a class="events__link" href="#">
+                        <img class="events__photo" src="img/events3.jpg" alt="">
+                        <p class="events__name">10 Октября 18--</p>
+                        <p class="events__about">Построено здание/открытие здания и достаточно длинное название
+                            здания</p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="events__pagination pagination">
+                <li class="pagination__item active"><a href="#">1</a></li>
+                <li class="pagination__item"><a href="#">2</a></li>
+                <li class="pagination__item"><a href="#">3</a></li>
+                <li class="pagination__item"><a href="#">4</a></li>
+                <li class="pagination__item"><a href="#">5</a></li>
+                <li class="pagination__item"><a href="#">...</a></li>
+                <li class="pagination__item"><a href="#">421</a></li>
+
+                <li class="pagination__item-last"><a href="#"></a></li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="wrapper footer__wrapper">
+        <div class="footer__first-block">
+            <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a href="#">Политика Конфиденциальности</a></li>
+                <li class="footer__nav-item"><a href="#">Политика Cookies</a></li>
+                <li class="footer__nav-item"><a href="#">Условия Использования</a></li>
+            </ul>
+
+            <p class="footer__copy">© 2020-2021. Все права защищены "Русский контур"</p>
+        </div>
+
+        <div class="footer__last-block">
+            <ul class="footer__socials socials">
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-dzen.svg" alt="Дзен"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-odnk.svg" alt="Одноклассники"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-ytb.svg" alt="Youtube"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-fb.svg" alt="Facebook"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-inst.svg" alt="Instagram"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-vk.svg" alt="Вконтакте"></a>
+                </li>
+            </ul>
+
+            <div class="footer__buttons">
+                <a href="#" class="footer__button button button--black">
+                    <img src="img/ic-plstr-icon.svg" alt="">
+                    GOOGLE PLAY
+                </a>
+
+                <a href="#" class="footer__button button button--black">
+                    <img src="img/ic-icon-appl.svg" alt="">
+                    APP STORE
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script/main.min.js"></script>
+
+</body>
+</html>"socials__icon" src="img/btn-vk.svg" alt="Вконтакте"></a>
+                </li>
+            </ul>
+
+            <div class="footer__buttons">
+                <a href="#" class="footer__button button button--black">
+                    <img src="img/ic-plstr-icon.svg" alt="">
+                    GOOGLE PLAY
+                </a>
+
+                <a href="#" class="footer__button button button--black">
+                    <img src="img/ic-icon-appl.svg" alt="">
+                    APP STORE
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
+
