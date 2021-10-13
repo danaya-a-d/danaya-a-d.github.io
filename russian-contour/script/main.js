@@ -59,10 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Открытие и закрытие мобильного меню
     function menu_open() {
         $('.header__nav').removeClass('close');
+        body.classList.add('no-scroll');
     }
 
     function menu_close() {
         $('.header__nav').addClass('close');
+        body.classList.remove('no-scroll');
     }
 
     $('.header__menu-btn').on('click', function () {
