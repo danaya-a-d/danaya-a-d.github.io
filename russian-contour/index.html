@@ -11,20 +11,25 @@
 <header class="header">
     <div class="header__wrapper wrapper">
         <a href="index.html"><img alt="Русский контур" src="img/logotype.svg"></a>
-        <label class="header__select-label">
-            <select class="header__select">
-                <option>Пенза</option>
-                <option>Москва</option>
-            </select>
-        </label>
 
-        <nav class="header__nav">
+        <button class="header__menu-btn"></button>
+
+        <nav class="header__nav close">
+            <button class="header__close-btn"></button>
+
+            <label class="header__select-label">
+                <select class="header__select">
+                    <option>Пенза</option>
+                    <option>Москва</option>
+                </select>
+            </label>
+
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="#">Карта</a></li>
                 <li class="header__nav-item"><a href="#">Люди</a></li>
                 <li class="header__nav-item"><a href="#">Места</a></li>
                 <li class="header__nav-item"><a href="#">Приложение</a></li>
-                <li class="header__nav-item"><a href="#">...</a></li>
+                <li class="header__nav-item"><a href="#">•••</a></li>
             </ul>
 
             <div class="header__nav-buttons">
@@ -83,6 +88,7 @@
 
                         <div class="calendar__main-block">
                             <div class="calendar__header">
+                                <button class="calendar__close-btn"></button>
                                 <h3 class="calendar__title title">Выберите дату</h3>
                                 <p class="calendar__subtitle">Выберите нужный месяц и дату.
                                     Год в нашем календаре не нужен.</p>
@@ -550,7 +556,8 @@
                     <a class="events__link" href="#">
                         <img class="events__photo" src="img/events2.jpg" alt="">
                         <p class="events__name">10 Октября 18--</p>
-                        <p class="events__about">Построено здание/открытие здания</p>
+                        <p class="events__about">Построено здание/открытие здания и достаточно длинное название
+                            здания</p>
                     </a>
                 </li>
 
@@ -576,7 +583,8 @@
                     <a class="events__link" href="#">
                         <img class="events__photo" src="img/events2.jpg" alt="">
                         <p class="events__name">10 Октября 18--</p>
-                        <p class="events__about">Построено здание/открытие здания</p>
+                        <p class="events__about">Построено здание/открытие здания и достаточно длинное название
+                            здания</p>
                     </a>
                 </li>
 
@@ -595,7 +603,7 @@
                 <li class="pagination__item"><a href="#">2</a></li>
                 <li class="pagination__item"><a href="#">3</a></li>
                 <li class="pagination__item"><a href="#">4</a></li>
-                <li class="pagination__item"><a href="#">5</a></li>
+<!--                <li class="pagination__item"><a href="#">5</a></li>-->
                 <li class="pagination__item"><a href="#">...</a></li>
                 <li class="pagination__item"><a href="#">421</a></li>
 
@@ -614,7 +622,7 @@
                 <li class="footer__nav-item"><a href="#">Условия Использования</a></li>
             </ul>
 
-            <p class="footer__copy">© 2020-2021. Все права защищены "Русский контур"</p>
+            <p class="footer__copy">© 2020-2021. Все права защищены<br> "Русский контур"</p>
         </div>
 
         <div class="footer__last-block">
@@ -654,6 +662,8 @@
     </div>
 </footer>
 
+
+<script src="script/jquery.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
