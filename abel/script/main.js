@@ -64,9 +64,30 @@ $(document).ready(function () {
         }]
     };
 
+    const settings__locations = {
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        settings: 'slick',
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: 'unslick'
+            }
+        ]
+    };
+
     slick_mobile($('.upper-block__list'), settings_var);
     slick_mobile($('.hire__list'), settings);
-    slick_mobile($('.locations__list'), settings);
+    slick_mobile($('.locations__list'), settings__locations);
 
 
     $('.reviews__list:not(.reviews__list--two)').slick({
@@ -86,6 +107,13 @@ $(document).ready(function () {
             },
             {
                 breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1
+                }
+            },
+            {
+                breakpoint: 481,
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1
@@ -121,7 +149,6 @@ $(document).ready(function () {
 
     $('.recent__list--slick').slick({
         dots: true,
-        // dotsClass: "my-dots",
         arrows: false,
         slidesToShow: 3,
         slidesToScroll: 1,
