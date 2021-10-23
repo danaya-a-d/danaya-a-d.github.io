@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistics</title>
+
+    <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
+    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="facebook" viewBox="0 0 470.513 470.513">
+            <path d="M271.521 154.17v-40.541c0-6.086.28-10.8.849-14.13.567-3.335 1.857-6.615 3.859-9.853 1.999-3.236 5.236-5.47 9.706-6.708 4.476-1.24 10.424-1.858 17.85-1.858h40.539V0h-64.809c-37.5 0-64.433 8.897-80.803 26.691-16.368 17.798-24.551 44.014-24.551 78.658v48.82h-48.542v81.086h48.539v235.256h97.362V235.256h64.805l8.566-81.086h-73.37z"/>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 512.001 512.001">
+            <path d="M373.406 0H138.594C62.172 0 0 62.172 0 138.594V373.41C0 449.828 62.172 512 138.594 512H373.41C449.828 512 512 449.828 512 373.41V138.594C512 62.172 449.828 0 373.406 0zM256 395.996c-77.195 0-139.996-62.8-139.996-139.996S178.804 116.004 256 116.004 395.996 178.804 395.996 256 333.196 395.996 256 395.996zM399.344 149.02c-22.813 0-41.367-18.555-41.367-41.368s18.554-41.37 41.367-41.37 41.37 18.558 41.37 41.37-18.558 41.368-41.37 41.368zm0 0"/>
+            <path d="M256 146.02c-60.64 0-109.98 49.335-109.98 109.98 0 60.64 49.34 109.98 109.98 109.98 60.645 0 109.98-49.34 109.98-109.98 0-60.645-49.335-109.98-109.98-109.98zM399.344 96.3c-6.258 0-11.352 5.095-11.352 11.352 0 6.258 5.094 11.352 11.352 11.352 6.261 0 11.355-5.09 11.355-11.352 0-6.261-5.094-11.351-11.355-11.351zm0 0"/>
+        </symbol>
+        <symbol id="telegram" viewBox="0 0 300 300">
+            <path d="M5.299 144.645l69.126 25.8 26.756 86.047c1.712 5.511 8.451 7.548 12.924 3.891l38.532-31.412a11.496 11.496 0 0 1 14.013-.391l69.498 50.457c4.785 3.478 11.564.856 12.764-4.926L299.823 29.22c1.31-6.316-4.896-11.585-10.91-9.259L5.218 129.402c-7.001 2.7-6.94 12.612.081 15.243zm91.57 12.066l135.098-83.207c2.428-1.491 4.926 1.792 2.841 3.726L123.313 180.87a23.112 23.112 0 0 0-7.163 13.829l-3.798 28.146c-.503 3.758-5.782 4.131-6.819.494l-14.607-51.325c-1.673-5.854.765-12.107 5.943-15.303z"/>
+        </symbol>
+    </svg>
+</div>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <a class="header__logo logo" href="index.html"><img src="img/logo.svg" alt="MONTEES"></a>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item active"><a href="index.html">HOME</a></li>
+                <li class="header__nav-item"><a href="about.html">ABOUT US</a></li>
+                <li class="header__nav-item"><a href="plan.html">INVESTMENT PLANS</a></li>
+                <li class="header__nav-item"><a href="faq.html">FAQ</a></li>
+                <li class="header__nav-item"><a href="banners.html">BANNERS</a></li>
+                <li class="header__nav-item"><a href="statistics.html">STATISTICS</a></li>
+                <li class="header__nav-item"><a href="contact.html">CONTACT US</a></li>
+            </ul>
+
+            <div class="header__buttons">
+                <button class="header__button">LOGIN</button>
+                <button class="header__button">SIGNUP</button>
+            </div>
+
+            <div class="header__socials socials">
+                <a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+
+                <a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+
+                <a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="upper-block">
+        <div class="upper-block__wrapper wrapper">
+            <div class="upper-block__text-block">
+                <h1 class="upper-block__title title">
+                    <mark>Statistics</mark>
+                </h1>
+                <p class="upper-block__subtitle subtitle">Company statistics</p>
+            </div>
+
+            <div class="upper-block__content-block">
+                <ul class="upper-block__about-list">
+                    <li class="upper-block__about-item">
+                        <p class="upper-block__about-name">04 OCT 2021</p>
+                        <p class="upper-block__about-time">12:30:11</p>
+                    </li>
+                    <li class="upper-block__about-item">
+                        <p class="upper-block__about-name">SUPPORT:</p>
+                        <a href="#" class="upper-block__about-link">
+                            <svg class="upper-block__about-link-icon" xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#telegram"></use>
+                            </svg>
+                            Montees_Support
+                        </a>
+
+                        <a href="mailto:support@monteesupport.org" class="upper-block__about-link">
+                            support@monteesupport.org
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="statistic">
+        <div class="statistic__wrapper wrapper">
+            <div class="statistic__text-block">
+                <p class="statistic__subtitle subtitle">STATISTICS</p>
+                <h2 class="statistic__title title"><mark>IN NUMBERS</mark></h2>
+            </div>
+
+            <ul class="statistic__list">
+                <li class="statistic__item statistic__item--blue">
+                    <p class="statistic__name">RUNNING DAYS</p>
+                    <p class="statistic__value">114</p>
+                </li>
+
+                <li class="statistic__item statistic__item--blue">
+                    <p class="statistic__name">TOTAL DEPOSIT</p>
+                    <p class="statistic__value">$ 344 002</p>
+                </li>
+
+                <li class="statistic__item statistic__item--blue">
+                    <p class="statistic__name">TOTAL WITHDRAW</p>
+                    <p class="statistic__value">$ 110 010</p>
+                </li>
+
+                <li class="statistic__item statistic__item--blue">
+                    <p class="statistic__name">VISITORS ONLINE</p>
+                    <p class="statistic__value">474</p>
+                </li>
+
+                <li class="statistic__item statistic__item--blue">
+                    <p class="statistic__name">MEMBERS ONLINE</p>
+                    <p class="statistic__value">151</p>
+                </li>
+            </ul>
+        </div>
+
+        <div class="statistic__wrapper wrapper">
+
+            <div class="statistic__tables">
+                <div class="statistic__table table table--red">
+                    <div class="table__header">LAST USERS</div>
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">exmvfwh167</p>
+                        <p class="table__text"><strong>2021-10-19 08:17:54</strong></p>
+                    </div>
+                </div>
+
+                <div class="statistic__table table table--yellow">
+                    <div class="table__header">LAST DEPOSITS</div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Dalloglio2024</p>
+                        <p class="table__text"><strong>$27.00</strong></p>
+                    </div>
+
+                </div>
+
+                <div class="statistic__table table table--blue">
+                    <div class="table__header">LAST WITHDRAWALS</div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                    <div class="table__line">
+                        <p class="table__text">Profvest_com</p>
+                        <p class="table__text"><strong>9.6400 USD</strong></p>
+                    </div>
+
+                </div>
+            </div>
+
+            <ul class="statistic__list">
+                <li class="statistic__item statistic__item--red">
+                    <p class="statistic__name">TOTAL ACCOUNTS</p>
+                    <p class="statistic__value">10894</p>
+                </li>
+
+                <li class="statistic__item statistic__item--red">
+                    <p class="statistic__name">ACTIVE ACCOUNTS</p>
+                    <p class="statistic__value">444</p>
+                </li>
+
+                <li class="statistic__item statistic__item--red">
+                    <p class="statistic__name">LAST DEPOSIT</p>
+                    <p class="statistic__value">$27</p>
+                </li>
+
+                <li class="statistic__item statistic__item--red">
+                    <p class="statistic__name">LAST WITHDRAW</p>
+                    <p class="statistic__value">$9.64</p>
+                </li>
+
+                <li class="statistic__item statistic__item--red">
+                    <p class="statistic__name">NEW USERS</p>
+                    <p class="statistic__value">exmvfwh167</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <a class="footer__logo logo" href="index.html"><img src="img/logo.svg" alt="MONTEES"></a>
+
+        <ul class="footer__nav-list">
+            <li class="footer__nav-item active"><a href="#">HOME</a></li>
+            <li class="footer__nav-item"><a href="#">ABOUT US</a></li>
+            <li class="footer__nav-item"><a href="#">INVESTMENT PLANS</a></li>
+            <li class="footer__nav-item"><a href="#">FAQ</a></li>
+            <li class="footer__nav-item"><a href="#">BANNERS</a></li>
+            <li class="footer__nav-item"><a href="#">STATISTICS</a></li>
+            <li class="footer__nav-item"><a href="#">CONTACT US</a></li>
+        </ul>
+
+        <div class="footer__socials socials">
+            <p class="socials__title">FOLLOW US:</p>
+
+            <a href="#">
+                <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#facebook"></use>
+                </svg>
+            </a>
+
+            <a href="#">
+                <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#instagram"></use>
+                </svg>
+            </a>
+
+            <a href="#">
+                <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#telegram"></use>
+                </svg>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer__wrapper wrapper">
+        <p class="footer__copy">Copiryght © 2021 MONTEES blockchain
+            technology company all rights reserved</p>
+
+        <div class="footer__contact contact">
+            <img class="contact__icon" src="img/phone-call.svg" alt="">
+            <div class="contact__about-block">
+                <p class="contact__title">CONTACT US:</p>
+                <a href="#" class="contact__link">
+                    <svg class="contact__link-icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                    Montees_Support
+                </a>
+
+                <a href="mailto:support@monteesupport.org" class="contact__link">
+                    support@monteesupport.org
+                </a>
+            </div>
+        </div>
+
+        <div class="footer__contact contact">
+            <img class="contact__icon" src="img/navigator.svg" alt="">
+            <div class="contact__about-block">
+                <p class="contact__title">COMPANY ADRESS:</p>
+
+                <p class="contact__text">
+                    22, Stephenson Way, London,
+                    2HD, UNITED KINGDOM
+                </p>
+            </div>
+        </div>
+
+        <ul class="footer__currencies">
+            <li class="footer__currency"><img src="img/bitcoincash.png" alt="bitcoincash"></li>
+            <li class="footer__currency"><img src="img/dogecoin.png" alt="dogecoin"></li>
+            <li class="footer__currency"><img src="img/litecoin.png" alt="litecoin"></li>
+            <li class="footer__currency"><img src="img/perfect-money.png" alt="perfect-money"></li>
+            <li class="footer__currency"><img src="img/bitcoin.png" alt="bitcoin"></li>
+            <li class="footer__currency"><img src="img/etherium.png" alt="etherium"></li>
+        </ul>
+    </div>
+</footer>
+<script src="script/jquery.min.js"></script>
+<script src="script/slick/slick.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
