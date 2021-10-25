@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account</title>
+
+    <!--<link rel="stylesheet" type="text/css" href="script/slick/slick.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">-->
+    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="facebook" viewBox="0 0 470.513 470.513">
+            <path d="M271.521 154.17v-40.541c0-6.086.28-10.8.849-14.13.567-3.335 1.857-6.615 3.859-9.853 1.999-3.236 5.236-5.47 9.706-6.708 4.476-1.24 10.424-1.858 17.85-1.858h40.539V0h-64.809c-37.5 0-64.433 8.897-80.803 26.691-16.368 17.798-24.551 44.014-24.551 78.658v48.82h-48.542v81.086h48.539v235.256h97.362V235.256h64.805l8.566-81.086h-73.37z"/>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 512.001 512.001">
+            <path d="M373.406 0H138.594C62.172 0 0 62.172 0 138.594V373.41C0 449.828 62.172 512 138.594 512H373.41C449.828 512 512 449.828 512 373.41V138.594C512 62.172 449.828 0 373.406 0zM256 395.996c-77.195 0-139.996-62.8-139.996-139.996S178.804 116.004 256 116.004 395.996 178.804 395.996 256 333.196 395.996 256 395.996zM399.344 149.02c-22.813 0-41.367-18.555-41.367-41.368s18.554-41.37 41.367-41.37 41.37 18.558 41.37 41.37-18.558 41.368-41.37 41.368zm0 0"/>
+            <path d="M256 146.02c-60.64 0-109.98 49.335-109.98 109.98 0 60.64 49.34 109.98 109.98 109.98 60.645 0 109.98-49.34 109.98-109.98 0-60.645-49.335-109.98-109.98-109.98zM399.344 96.3c-6.258 0-11.352 5.095-11.352 11.352 0 6.258 5.094 11.352 11.352 11.352 6.261 0 11.355-5.09 11.355-11.352 0-6.261-5.094-11.351-11.355-11.351zm0 0"/>
+        </symbol>
+        <symbol id="telegram" viewBox="0 0 300 300">
+            <path d="M5.299 144.645l69.126 25.8 26.756 86.047c1.712 5.511 8.451 7.548 12.924 3.891l38.532-31.412a11.496 11.496 0 0 1 14.013-.391l69.498 50.457c4.785 3.478 11.564.856 12.764-4.926L299.823 29.22c1.31-6.316-4.896-11.585-10.91-9.259L5.218 129.402c-7.001 2.7-6.94 12.612.081 15.243zm91.57 12.066l135.098-83.207c2.428-1.491 4.926 1.792 2.841 3.726L123.313 180.87a23.112 23.112 0 0 0-7.163 13.829l-3.798 28.146c-.503 3.758-5.782 4.131-6.819.494l-14.607-51.325c-1.673-5.854.765-12.107 5.943-15.303z"/>
+        </symbol>
+    </svg>
+</div>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <a class="header__logo logo" href="index.html"><img src="img/logo.svg" alt="MONTEES"></a>
+        <button class="header__menu-btn"></button>
+
+        <nav class="header__nav close">
+            <button class="header__close-btn"></button>
+
+            <a class="header__nav-logo logo" href="index.html"><img src="img/logo.svg" alt="MONTEES"></a>
+
+            <ul class="header__statistics">
+                <li class="header__statistic">
+                    <p class="header__statistic-title">USERNAME:</p>
+                    <p class="header__statistic-value">isecretsv</p>
+                </li>
+
+                <li class="header__statistic">
+                    <p class="header__statistic-title">LAST SEEN:</p>
+                    <p class="header__statistic-value">2021-10-08 13:22:47</p>
+                </li>
+
+                <li class="header__statistic">
+                    <p class="header__statistic-title">WITH IP ADRESS:</p>
+                    <p class="header__statistic-value">46.98.125.166</p>
+                </li>
+
+                <li class="header__statistic">
+                    <p class="header__statistic-title">date and time:</p>
+                    <p class="header__statistic-value"><b>2021-10-08 13:22:47</b></p>
+                </li>
+            </ul>
+
+            <div class="header__socials socials">
+                <p class="socials__title">FOLLOW US:</p>
+
+                <a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a>
+
+                <a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a>
+
+                <a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page-lk">
+    <div class="page-lk__wrapper wrapper">
+
+        <div class="lk-menu">
+          <div class="lk-menu__main-info">
+            <div class="lk-menu__balance">
+              <p class="lk-menu__balance-name">YOUR BALANCE</p>
+              <p class="lk-menu__balance-value">0.05 $</p>
+            </div>
+        
+            <div class="lk-menu__link-block">
+              <p class="lk-menu__link-name">TELEGRAM:</p>
+              <a href="#" class="lk-menu__link">
+                <svg class="lk-menu__link-icon" xmlns="http://www.w3.org/2000/svg">
+                  <use xlink:href="#telegram"></use>
+                </svg>
+                Montees_Support
+              </a>
+            </div>
+        
+            <div class="lk-menu__link-block">
+              <p class="lk-menu__link-name">SUPPRORT:</p>
+              <a href="mailto:support@monteesupport.org" class="lk-menu__link">support@monteesupport.org</a>
+            </div>
+          </div>
+        
+          <nav class="lk-menu__nav">
+            <ul class="lk-menu__nav-list">
+              <li class="lk-menu__nav-item active"><a href="lk-account.html">ACCOUNT</a></li>
+              <li class="lk-menu__nav-item"><a href="lk-deposits.html">MY DEPOSITS</a></li>
+              <li class="lk-menu__nav-item"><a href="lk-settings.html">SETTINGS</a></li>
+              <li class="lk-menu__nav-item"><a href="lk-make-deposit.html">MAKE DEPOSIT</a></li>
+              <li class="lk-menu__nav-item"><a href="lk-history.html">HISTORY</a></li>
+              <li class="lk-menu__nav-item"><a href="lk-withdrawal.html">WITHDRAWAL</a></li>
+              <li class="lk-menu__nav-item"><a href="lk-referrals.html">REFERRALS</a></li>
+              <li class="lk-menu__nav-item"><a href="lk-adverting.html">ADVERTING LINK</a></li>
+              <li class="lk-menu__nav-item"><a href="#">LOGOUT</a></li>
+            </ul>
+            <p class="lk-menu__copy">Copyright © 2021 Montees</p>
+          </nav>
+        </div>
+
+        <section class="lk-section">
+            <h1 class="lk-section__title title">MY <mark>ACCOUNT</mark>
+            </h1>
+
+            <div class="lk-info">
+                <div class="lk-info__column">
+                    <div class="lk-info__head lk-info__head--red">
+                        <p class="lk-info__name">YOUR UPLINE:</p>
+                        <p class="lk-info__head-title">YOU HAVE NO UPLINE</p>
+                    </div>
+
+                    <div class="lk-info__row lk-info__row--up">
+                        <p class="lk-info__name">LAST DEPOSIT</p>
+                        <p class="lk-info__value">You have no deposits</p>
+                    </div>
+
+                    <div class="lk-info__row lk-info__row--up">
+                        <p class="lk-info__name">ACTIVE DEPOSITS</p>
+                        <p class="lk-info__value">0.00 USD</p>
+                    </div>
+
+                    <div class="lk-info__row lk-info__row--up">
+                        <p class="lk-info__name">TOTAL DEPOSITS</p>
+                        <p class="lk-info__value">0.00 USD</p>
+                    </div>
+                </div>
+
+                <div class="lk-info__column">
+                    <div class="lk-info__head lk-info__head--blue">
+                        <p class="lk-info__name">YOUR AFFILIATE LINK:</p>
+                        <a href="#" class="lk-info__head-link js-copy-target">https://montees.biz/ref?upline=isecretsv</a>
+                        <a class="lk-info__head-copy-link js-copy-btn">COPY AFFILIATE LINK</a>
+                    </div>
+
+                    <div class="lk-info__row lk-info__row--down">
+                        <p class="lk-info__name">LAST WITHDRAW</p>
+                        <p class="lk-info__value">You have no withdraws</p>
+                    </div>
+
+                    <div class="lk-info__row lk-info__row--down">
+                        <p class="lk-info__name">PENDING WITHDRAWALS</p>
+                        <p class="lk-info__value">0.00 USD</p>
+                    </div>
+
+                    <div class="lk-info__row lk-info__row--down">
+                        <p class="lk-info__name">TOTAL WITHDRAWALS</p>
+                        <p class="lk-info__value">0.00 USD</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+
+<script src="script/jquery.min.js"></script>
+<!--<script src="script/slick/slick.min.js"></script>-->
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
