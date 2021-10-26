@@ -1,1 +1,43 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="210.75" height="70.094"><defs><linearGradient id="a" x1="268.422" y1="85.094" x2="311.672" y2="41.844" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#e6764f"/><stop offset=".51" stop-color="#ff95d0"/><stop offset="1" stop-color="#fff05a"/></linearGradient><linearGradient id="b" x1="268.125" y1="58.219" x2="311.344" y2="15" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#6d59ca"/><stop offset=".51" stop-color="#379fd6"/><stop offset="1" stop-color="#aefcfe"/></linearGradient></defs><path d="M312.809 46.008l-.286 17.462-22.472-13.6-29.485 17.751 29.485 17.462 29.486-16.889V41.857zM290.2 76.352l-14.886-8.874L290.2 58.89l14.313 8.588z" transform="translate(-260.25 -15)" fill="url(#a)" fill-rule="evenodd"/><path data-name="el" d="M266.974 54.083l.286-17.462 22.471 13.6 29.486-17.751-29.486-17.462L260.246 31.9v26.334zm22.614-30.344l14.886 8.874-14.886 8.587-14.313-8.588z" transform="translate(-260.25 -15)" fill="url(#b)" fill-rule="evenodd"/><text x="139.054" y="43.588" style="text-transform:uppercase" font-size="30" fill="#404040" text-anchor="middle" font-family="Open Sans" font-weight="700">Montees</text></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 210.8 70.1" style="enable-background:new 0 0 210.8 70.1;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_1_);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:url(#SVGID_2_);}
+	.st2{enable-background:new    ;}
+	.st3{fill:#404040;}
+</style>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="270.639" y1="807.311" x2="313.889" y2="764.061" gradientTransform="matrix(1 0 0 1 -260.25 -735)">
+	<stop  offset="0" style="stop-color:#E6764F"/>
+	<stop  offset="0.51" style="stop-color:#FF95D0"/>
+	<stop  offset="1" style="stop-color:#FFF05A"/>
+</linearGradient>
+<path class="st0" d="M52.6,31l-0.3,17.5L29.8,34.9L0.3,52.6l29.5,17.5l29.5-16.9V26.9L52.6,31z M30,61.4l-14.9-8.9L30,43.9l14.3,8.6
+	L30,61.4z"/>
+<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="265.928" y1="776.022" x2="309.1469" y2="732.803" gradientTransform="matrix(1 0 0 1 -260.25 -735)">
+	<stop  offset="0" style="stop-color:#6D59CA"/>
+	<stop  offset="0.51" style="stop-color:#379FD6"/>
+	<stop  offset="1" style="stop-color:#AEFCFE"/>
+</linearGradient>
+<path class="st1" d="M6.7,39.1L7,21.6l22.5,13.6L59,17.5L29.5,0L0,16.9v26.3L6.7,39.1z M29.3,8.7l14.9,8.9l-14.9,8.6L15,17.6
+	L29.3,8.7z"/>
+<g class="st2">
+	<path class="st3" d="M78.8,43.6l-5.2-16.8h-0.1c0.2,3.4,0.3,5.7,0.3,6.8v10h-4.1V22.2H76l5,16.3h0.1l5.4-16.4h6.2v21.4h-4.2v-10
+		c0-0.5,0-1,0-1.7s0.1-2.3,0.2-5h-0.1L83,43.6H78.8z"/>
+	<path class="st3" d="M117.5,32.9c0,3.5-0.9,6.3-2.6,8.2s-4.3,2.9-7.6,2.9s-5.8-1-7.6-2.9c-1.8-1.9-2.6-4.6-2.6-8.2s0.9-6.3,2.6-8.2
+		c1.8-1.9,4.3-2.8,7.6-2.8s5.8,0.9,7.6,2.8S117.5,29.3,117.5,32.9z M101.9,32.9c0,2.4,0.5,4.2,1.4,5.4s2.3,1.8,4.1,1.8
+		c3.6,0,5.4-2.4,5.4-7.2s-1.8-7.2-5.4-7.2c-1.8,0-3.2,0.6-4.1,1.8C102.3,28.7,101.9,30.5,101.9,32.9z"/>
+	<path class="st3" d="M140.9,43.6h-5.8l-9.3-16.2h-0.1c0.2,2.9,0.3,4.9,0.3,6.1v10.1h-4.1V22.2h5.7l9.3,16h0.1
+		c-0.1-2.8-0.2-4.8-0.2-5.9V22.2h4.1L140.9,43.6L140.9,43.6z"/>
+	<path class="st3" d="M154.6,43.6H150V26h-5.8v-3.8h16.2V26h-5.8L154.6,43.6L154.6,43.6z"/>
+	<path class="st3" d="M176,43.6h-12.3V22.2H176v3.7h-7.8v4.7h7.3v3.7h-7.3v5.5h7.8V43.6z"/>
+	<path class="st3" d="M192.8,43.6h-12.3V22.2h12.3v3.7H185v4.7h7.3v3.7H185v5.5h7.8V43.6z"/>
+	<path class="st3" d="M209.9,37.6c0,1.9-0.7,3.5-2.1,4.6s-3.3,1.7-5.8,1.7c-2.3,0-4.3-0.4-6.1-1.3v-4.2c1.4,0.6,2.7,1.1,3.7,1.4
+		s1.9,0.4,2.7,0.4c1,0,1.8-0.2,2.3-0.6s0.8-0.9,0.8-1.7c0-0.4-0.1-0.8-0.4-1.1s-0.6-0.6-1-0.9s-1.4-0.8-2.8-1.5
+		c-1.3-0.6-2.3-1.2-2.9-1.8s-1.2-1.2-1.6-2s-0.6-1.6-0.6-2.6c0-1.9,0.6-3.4,1.9-4.5s3.1-1.6,5.3-1.6c1.1,0,2.2,0.1,3.2,0.4
+		s2.1,0.6,3.2,1.1l-1.5,3.5c-1.1-0.5-2.1-0.8-2.8-1s-1.5-0.3-2.2-0.3c-0.9,0-1.5,0.2-2,0.6s-0.7,0.9-0.7,1.6c0,0.4,0.1,0.8,0.3,1
+		s0.5,0.6,0.9,0.9s1.4,0.8,2.9,1.5c2,1,3.4,1.9,4.1,2.9S209.9,36.2,209.9,37.6z"/>
+</g>
+<script  xmlns=""></script>
+</svg>

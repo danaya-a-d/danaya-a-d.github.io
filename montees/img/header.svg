@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1930 200.4" enable-background="new 0 0 1930 200.4"><filter filterUnits="userSpaceOnUse" height="219" id="a" width="2029" x="0" y="0"><feOffset dx="2.079" dy="9.781" in="SourceAlpha"/><feGaussianBlur result="blurOut" stdDeviation="7.071"/><feFlood flood-color="#2F2751" result="floodOut"/><feComposite in="floodOut" in2="blurOut" operator="atop"/><feComponentTransfer><feFuncA slope=".15" type="linear"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter><g filter="url(#a)"><path d="M0 0h1930v67s-474 97.7-620-10C1237.7 3.7 1141.8 3 966 3c-428.2 0-400.3 8.8-490 76C327.8 190 0 37 0 37V0z" fill-rule="evenodd" clip-rule="evenodd" fill="#fff"/></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1930 200.4" style="enable-background:new 0 0 1930 200.4;" xml:space="preserve">
+<style type="text/css">
+	.st0{filter:url(#Filter_0);}
+	.st1{fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;}
+</style>
+<filter  filterUnits="userSpaceOnUse" height="219px" id="Filter_0" width="2029px" x="0px" y="0px">
+	<feOffset  dx="2.079" dy="9.781" in="SourceAlpha"></feOffset>
+	<feGaussianBlur  result="blurOut" stdDeviation="7.071"></feGaussianBlur>
+	<feFlood  flood-color="rgb(47, 39, 81)" result="floodOut"></feFlood>
+	<feComposite  in="floodOut" in2="blurOut" operator="atop"></feComposite>
+	<feComponentTransfer>
+		<feFuncA  slope="0.15" type="linear"></feFuncA>
+	</feComponentTransfer>
+	<feMerge>
+		<feMergeNode></feMergeNode>
+		<feMergeNode  in="SourceGraphic"></feMergeNode>
+	</feMerge>
+</filter>
+<g class="st0">
+	<path class="st1" d="M0,0h1930v67c0,0-474,97.7-620-10C1237.7,3.7,1141.8,3,966,3c-428.2,0-400.3,8.8-490,76C327.8,190,0,37,0,37V0
+		z"/>
+</g>
+</svg>

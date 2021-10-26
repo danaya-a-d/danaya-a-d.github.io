@@ -1,1 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1930" height="791"><defs><linearGradient id="a" x1="0%" x2="0%" y1="100%" y2="0%"><stop offset="0%" stop-color="#E4F2FD"/><stop offset="100%" stop-color="#EAFDFD"/></linearGradient></defs><path fill-rule="evenodd" fill="url(#a)" d="M0 0h1930v760s-66.395 71.633-264-3c-172.69-65.223-272.207-231-448-231-165.97 0-311.523 185.266-624.465 234C266.261 810.966 0 700 0 700V0z"/></svg>
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="1930px" height="791px">
+<defs>
+<linearGradient id="PSgrad_0" x1="0%" x2="0%" y1="100%" y2="0%">
+  <stop offset="0%" stop-color="rgb(228,242,253)" stop-opacity="1" />
+  <stop offset="100%" stop-color="rgb(234,253,253)" stop-opacity="1" />
+</linearGradient>
+
+</defs>
+<path fill-rule="evenodd"  fill="url(#PSgrad_0)"
+ d="M-0.000,0.000 L1930.000,0.000 L1930.000,760.000 C1930.000,760.000 1863.605,831.633 1666.000,757.000 C1493.310,691.777 1393.793,526.000 1218.000,526.000 C1052.030,526.000 906.477,711.266 593.535,760.000 C266.261,810.966 -0.000,700.000 -0.000,700.000 L-0.000,0.000 Z"/>
+</svg>
