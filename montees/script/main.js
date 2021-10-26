@@ -245,59 +245,37 @@ $(document).ready(function () {
     });
 
 
-    //Слайдеры
-
-    function slick_mobile(slider, settings) {
-        // Подпишемся на ресайз и продиспатчим его для запуска
-        $(window).on('resize', function (e) {
-            // Переменная, по которой узнаем запущен слайдер или нет.
-            // Храним её в data
-            let init = slider.data('init-slider');
-            // Если мобильный
-            if (window.innerWidth < 1270) {
-                // Если слайдер не запущен
-                if (init !== 1) {
-                    // Запускаем слайдер и записываем в data init-slider = 1
-                    slider.slick(settings).data({'init-slider': 1});
-                }
-            }
-            // Если десктоп
-            else {
-                // Если слайдер запущен
-                if (init === 1) {
-                    // Разрушаем слайдер и записываем в data init-slider = 0
-                    slider.slick('unslick').data({'init-slider': 0});
-                }
-            }
-        }).trigger('resize');
+    const sleep = (milliseconds) => {
+        return new Promise(resolve => setTimeout(resolve, milliseconds))
     }
 
-    const settings = {
-        dots: false,
-        arrows: false,
-        mobileFirst: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        settings: 'slick',
-        responsive: [
-            {
-                breakpoint: 481,
-                settings: {
-                    slidesToShow: 4
-                }
-            },
-            {
-                breakpoint: 769,
-                settings: {
-                    slidesToShow: 5
-                }
-            },
-            {
-                breakpoint: 1270,
-                settings: 'unslick'
-            }
-        ]
-    };
 
-    // slick_mobile($('.investment__rates'), settings);
+    // Загрузочный экран
+    let cells = document.querySelectorAll('.loading__svg path');
+    let percent = document.querySelector('.loading__progress-value');
+
+    let time = 1000;
+
+    const loading_cells = async () => {
+        for (let i = 0; i < cells.length; i++) {
+            await sleep(time/18);
+            cells[i].classList.add('st1');
+            cells[i].classList.remove('st0');
+        }
+
+    }
+
+    const loading_percents = async () => {
+        for (let i = 0; i <= 100; i++) {
+            await sleep(time/100);
+            percent.innerHTML  = i + '%';
+            console.log(percent);
+        }
+    }
+
+    loading_cells();
+    loading_percents();
+
 });
+
+
