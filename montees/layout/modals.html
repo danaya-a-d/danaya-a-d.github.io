@@ -1,0 +1,80 @@
+<div class="modal-back hide">
+    <div class="modal modal--registr hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <form class="main-form modal__form" action="#" method="post">
+            <h2 class="main-form__title main-form__title--red"><span>Sign up</span></h2>
+
+            <fieldset class="main-form__fieldset-small">
+                <label class="main-form__label main-form__label--big">
+                    <span class="main-form__label-name">Username *</span>
+                    <input class="main-form__input" type="text" name="username" required>
+                </label>
+
+                <label class="main-form__label main-form__label--big">
+                    <span class="main-form__label-name">Your e-mail *</span>
+                    <input class="main-form__input" type="email" name="email" required>
+                </label>
+
+                <label class="main-form__label main-form__label--big">
+                    <span class="main-form__label-name">Password *</span>
+                    <input class="main-form__input" type="text" name="password" required>
+                </label>
+
+                <label class="main-form__label main-form__label--big">
+                    <span class="main-form__label-name">Confirm password *</span>
+                    <input class="main-form__input" type="text" name="confirm-password" required>
+                </label>
+
+                <div class="main-form__bottom-line">
+                    <button class="main-form__button button main-form__login-btn">Sign up</button>
+
+                    <label class="main-form__radio-label">
+                        <input class="visually-hidden" name="agree" type="checkbox"
+                               value="From payment system">
+                        <span class="main-form__indicator main-form__indicator--check indicator"></span>
+                        <span class="main-form__indicator-title">I agree with Terms and conditions</span>
+                    </label>
+                </div>
+
+
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="modal modal--login hide">
+
+        <button class="modal__btn-close modal-close"></button>
+
+        <form class="main-form modal__form" action="#" method="post">
+            <h2 class="main-form__title main-form__title--blue"><span>Sign in</span></h2>
+
+            <fieldset class="main-form__fieldset-small">
+                <label class="main-form__label main-form__label--big">
+                    <span class="main-form__label-name">Your e-mail or nickname *</span>
+                    <input class="main-form__input" type="text" name="username" required>
+                </label>
+
+                <label class="main-form__label main-form__label--big">
+                    <span class="main-form__label-name">Your e-mail *</span>
+                    <input class="main-form__input" type="email" name="email" required>
+                </label>
+
+                <label class="main-form__label main-form__label--big">
+                    <span class="main-form__label-name">Your password *</span>
+                    <input class="main-form__input" type="text" name="password" required>
+                </label>
+
+                <div class="main-form__bottom-line">
+                    <button class="main-form__button button">Login</button>
+
+                    <a class="main-form__link" href="#">Forgot password?</a>
+                </div>
+
+            </fieldset>
+        </form>
+
+    </div>
+
+    <div class="modal-overlay hide"></div>
+</div>
