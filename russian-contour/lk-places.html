@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Русский Контур</title>
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="vk" viewBox="0 0 26 15">
+            <path d="M20.953 8.446c-.408-.516-.291-.745 0-1.206.005-.005 3.375-4.662 3.722-6.241.173-.576 0-1-.834-1h-2.759a1.185 1.185 0 0 0-1.2.769 22.581 22.581 0 0 1-3.394 5.546c-.642.63-.938.832-1.289.832-.173 0-.441-.2-.441-.778V1c0-.69-.2-1-.779-1H9.638a.661.661 0 0 0-.7.622c0 .654.994.8 1.1 2.646v3.995c0 .875-.159 1.036-.511 1.036-.938 0-3.216-3.378-4.566-7.245C4.683.3 4.417 0 3.709 0H.947C.159 0 0 .364 0 .77c0 .718.938 4.285 4.364 9 2.283 3.217 5.5 4.961 8.423 4.961 1.758 0 1.973-.387 1.973-1.053 0-3.074-.159-3.365.722-3.365.408 0 1.111.2 2.752 1.754 1.876 1.84 2.184 2.664 3.234 2.664h2.761c.787 0 1.186-.387.956-1.151-.525-1.608-4.072-4.913-4.232-5.134z"/>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 12 20">
+            <path d="M3.289 6.577H0v3.289h3.289v9.866h4.933V9.866h2.993l.3-3.289H8.222v-1.37c0-.786.158-1.1.918-1.1h2.37V0H7.557C4.6 0 3.289 1.3 3.289 3.8z"/>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 20 20">
+            <path d="M9.866 1.779c2.634 0 2.947.01 3.988.058 2.675.122 3.922 1.389 4.045 4.043.046 1.041.056 1.352.056 3.986s-.01 2.947-.056 3.986c-.123 2.652-1.368 3.923-4.045 4.045-1.041.046-1.352.058-3.988.058s-2.947-.01-3.986-.058c-2.68-.123-3.922-1.4-4.045-4.045-.046-1.039-.058-1.352-.058-3.986s.012-2.947.058-3.986C1.957 3.225 3.2 1.957 5.88 1.835c1.039-.048 1.352-.056 3.986-.056zm0-1.779c-2.68 0-3.014.012-4.068.061C2.213.225.224 2.213.059 5.8.012 6.852 0 7.187 0 9.866s.012 3.016.059 4.068c.164 3.583 2.154 5.574 5.739 5.739 1.054.048 1.388.059 4.068.059s3.016-.012 4.07-.059c3.578-.164 5.576-2.152 5.737-5.739.048-1.052.059-1.388.059-4.068s-.012-3.014-.059-4.068c-.161-3.58-2.152-5.574-5.737-5.737C12.882.012 12.546 0 9.866 0zm0 4.8a5.066 5.066 0 1 0 5.066 5.066A5.066 5.066 0 0 0 9.866 4.8zm0 8.355a3.289 3.289 0 1 1 3.29-3.289 3.288 3.288 0 0 1-3.29 3.289zm5.265-9.738A1.184 1.184 0 1 0 16.317 4.6a1.184 1.184 0 0 0-1.186-1.183z"/>
+        </symbol>
+    </svg>
+</div>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <a href="index.html"><img alt="Русский контур" src="img/logotype.svg"></a>
+
+        <button class="header__search-mob-btn header__search-mob-btn__lk"></button>
+        <a class="header__profile-link" href="lk-about.html" style="background-image: url(img/avatar.jpg);"></a>
+        <button class="header__menu-btn header__menu-btn--lk"></button>
+
+        <nav class="header__nav close">
+            <button class="header__close-btn"></button>
+
+            <label class="header__select-label">
+                <select class="header__select">
+                    <option>Пенза</option>
+                    <option>Москва</option>
+                </select>
+            </label>
+
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">Карта</a></li>
+                <li class="header__nav-item"><a href="#">Люди</a></li>
+                <li class="header__nav-item"><a href="#">Места</a></li>
+                <li class="header__nav-item"><a href="#">Библиотека</a></li>
+                <li class="header__nav-item"><a href="#">О проекте</a></li>
+                <li class="header__nav-item"><a href="#">Приложение</a></li>
+            </ul>
+
+            <div class="header__nav-buttons">
+                <button class="header__button header__button--search"></button>
+                <button class="header__button header__button--login"></button>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="upper-block lk-upper-block">
+    
+        <div class="upper-block__breadcrumbs-wrapper wrapper">
+            <div class="upper-block__breadcrumbs breadcrumbs">
+                <ul class="breadcrumbs__list wrapper">
+                    <li class="breadcrumbs__item breadcrumbs__item--big"><a href="index.html">Главная</a></li>
+                    <li class="breadcrumbs__item breadcrumbs__item--big"><a href="index.html">Профиль</a></li>
+                    <li class="breadcrumbs__item breadcrumbs__item--big"><a href="index.html">О себе</a></li>
+                </ul>
+            </div>
+        </div>
+    
+        <div class="upper-block__lk-wrapper wrapper">
+            <div class="upper-block__user-info user-info">
+                <div class="user-info__photo-block" style="background-image: url(img/avatar.jpg)">
+                    <input class="user-info__photo-input" type="file" name="file" id="input__file">
+                    <label class="user-info__photo-btn" for="input__file"></label>
+                </div>
+    
+                <div class="user-info__about">
+                    <h2 class="user-info__username">Петров Анатолий Сергеевич</h2>
+                    <p class="user-info__status">Местный эксперт</p>
+                </div>
+            </div>
+    
+            <a href="#" class="upper-block__exit-btn">Выход</a>
+        </div>
+    
+        <ul class="upper-block__lk-nav lk-nav wrapper">
+            <li class="lk-nav__item active"><a href="lk-about.html">о себе</a></li>
+            <li class="lk-nav__item"><a href="lk-settings.html">настройки</a></li>
+            <li class="lk-nav__item"><a href="lk-places.html">мои места</a></li>
+            <li class="lk-nav__item"><a href="lk-draft.html">черновики</a></li>
+        </ul>
+    </section>
+
+    <section class="lk-section">
+        <div class="lk-section__wrapper wrapper">
+            <h1 class="visually-hidden">мои места</h1>
+
+            <a href="#" class="lk-section__button button button--brown">Добавить место</a>
+
+            <p class="lk-section__subtitle">Фильтры</p>
+
+            <div class="lk-section__overlay hide"></div>
+            <div class="lk-filter">
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio" checked
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Показать все</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Учреждение</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Памятник</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Усадьба</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Доходные дома</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Сооружение</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Церковь</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Соборы и храмы</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Дом</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Могила</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">История</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Бизнес</span>
+                </label>
+                <label class="lk-filter__label">
+                    <input class="visually-hidden" name="place" type="radio"
+                           value="">
+                    <span class="lk-filter__indicator"></span>
+                    <span class="lk-filter__indicator-title">Музей</span>
+                </label>
+
+            </div>
+
+            <ul class="lk-places">
+                <li class="lk-places__item">
+                    <img class="lk-places__photo" src="img/avatar-grp.jpg" alt="">
+                    <div class="lk-places__about">
+                        <p class="lk-places__category">Доходный дом</p>
+                        <p class="lk-places__name">Памятник А. С. Ермолову в Сочи</p>
+                    </div>
+
+                    <div class="lk-places__controls">
+                        <a href="#" class="lk-places__control lk-places__control--look"></a>
+                        <a href="#" class="lk-places__control lk-places__control--edit"></a>
+                    </div>
+                </li>
+
+                <li class="lk-places__item">
+                    <img class="lk-places__photo" src="img/avatar-grp.jpg" alt="">
+                    <div class="lk-places__about">
+                        <p class="lk-places__category">Памятник</p>
+                        <p class="lk-places__name">Памятник А. С. Ермолову в Сочи</p>
+                    </div>
+
+                    <div class="lk-places__controls">
+                        <a href="#" class="lk-places__control lk-places__control--look"></a>
+                        <a href="#" class="lk-places__control lk-places__control--edit"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<div class="modal-back hide">
+
+  <div class="modal modal-delete hide">
+    <h3 class="modal__title">ВНИМАНИЕ!</h3>
+
+    <div class="modal__text-block">
+      <p>Вы собираетесь удалить вашу учетную запись в Русском Контуре.
+        Вы не сможете восстановить аккаунт после его удаления</p>
+      <p>Хотите продолжить?</p>
+    </div>
+
+    <div class="modal__buttons">
+      <button class="modal__button button button--gray modal-close">Нет, отменить</button>
+      <button class="modal__button button button--red">Да, хочу удалить</button>
+    </div>
+  </div>
+
+  <div class="modal modal-success hide">
+    <h3 class="modal__title">БЛАГОДАРИМ ЗА ПОМОЩЬ!</h3>
+
+    <div class="modal__text-block">
+      <p>Наши модераторы проверят вашу заявку на добавление нового места.
+        При успешной проверке вы получите оповещение на указанную вами почту.</p>
+    </div>
+
+    <div class="modal__buttons">
+      <button class="modal__button button button--brown modal-close">Отлично</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay hide"></div>
+</div>
+<footer class="footer">
+    <div class="wrapper footer__wrapper">
+        <div class="footer__first-block">
+            <ul class="footer__nav-list">
+                <li class="footer__nav-item"><a href="#">Политика Конфиденциальности</a></li>
+                <li class="footer__nav-item"><a href="#">Политика Cookies</a></li>
+                <li class="footer__nav-item"><a href="#">Условия Использования</a></li>
+            </ul>
+
+            <p class="footer__copy">© 2020-2021. Все права защищены<br> "Русский контур"</p>
+        </div>
+
+        <div class="footer__last-block">
+            <ul class="footer__socials socials">
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-dzen.svg" alt="Дзен"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-odnk.svg" alt="Одноклассники"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-ytb.svg" alt="Youtube"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-fb.svg" alt="Facebook"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-inst.svg" alt="Instagram"></a>
+                </li>
+                <li class="socials__item"><a class="socials__link" href="#">
+                    <img class="socials__icon" src="img/btn-vk.svg" alt="Вконтакте"></a>
+                </li>
+            </ul>
+
+            <div class="footer__buttons">
+                <a href="#" class="footer__button button button--black">
+                    <img src="img/ic-plstr-icon.svg" alt="">
+                    GOOGLE PLAY
+                </a>
+
+                <a href="#" class="footer__button button button--black">
+                    <img src="img/ic-icon-appl.svg" alt="">
+                    APP STORE
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="script/jquery.min.js"></script>
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
