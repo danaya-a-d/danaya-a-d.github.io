@@ -265,6 +265,17 @@ $(document).ready(function () {
         $('.header__call-block').toggleClass('active');
     });
 
+    $('.header__cart-about').click(function (e) {
+        $('.header__cart-block').toggleClass('active');
+    });
+
+    $('.header__mobile-btn').click(function (e) {
+        $('.header__mobile-btn').toggleClass('active');
+        $('.header__wrapper-nav').toggleClass('active');
+        $('.header__nav-list').toggleClass('active');
+        $('.header__cart-about').toggleClass('open-nav');
+    });
+
 });
 
 
