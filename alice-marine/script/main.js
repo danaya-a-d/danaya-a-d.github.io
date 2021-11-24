@@ -81,7 +81,25 @@ $(document).ready(function () {
         dots: false,
         arrows: true,
         slidesToShow: 3,
-        infinite: false
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: {
+                    slidesToShow: 2,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false
+                }
+            }
+        ]
     });
 
     $('.production__list').slick({
@@ -139,7 +157,15 @@ $(document).ready(function () {
         ]
     };
 
+    const settings_ban = {
+        infinite: false,
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+    };
+
     slick_mobile($('.products:not(.products--slider)'), settings_var);
+    slick_mobile($('.banners__container'), settings_ban);
 
     //Плавное пролистывание к якорю
     $('a[href*="#"]').click(function (e) {
