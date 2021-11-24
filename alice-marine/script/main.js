@@ -259,6 +259,12 @@ $(document).ready(function () {
         move_right();
     });
 
+
+    $('.header__call-btn').click(function (e) {
+        $('.header__call-btn').toggleClass('active');
+        $('.header__call-block').toggleClass('active');
+    });
+
 });
 
 
