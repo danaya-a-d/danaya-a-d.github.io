@@ -39,6 +39,7 @@ $(document).ready(function () {
                 settings: {
                     dots: true,
                     arrows: false,
+                    swipe: true
                 }
             }
         ]
