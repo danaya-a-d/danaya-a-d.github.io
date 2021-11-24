@@ -266,6 +266,7 @@ $(document).ready(function () {
     });
 
     $('.header__cart-about').click(function (e) {
+        // alert(1);
         $('.header__cart-block').toggleClass('active');
     });
 
