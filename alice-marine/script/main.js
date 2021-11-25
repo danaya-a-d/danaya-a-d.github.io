@@ -278,6 +278,17 @@ $(document).ready(function () {
         $('.header__cart-about').toggleClass('open-nav');
     });
 
+
+    $('.video-block').on('click', function() {
+        var $video =  $(this).find('.video-block__video'),
+            src = $video.attr('src');
+            $video.removeAttr('srcdoc');
+
+        $video.attr('src', src + '?&autoplay=1');
+        $(this).find('.video-block__play-btn').hide();
+        $(this).find('.video-block__name').hide();
+        $(this).addClass('play');
+    });
 });
 
 
