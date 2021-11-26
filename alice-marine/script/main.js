@@ -259,6 +259,31 @@ $(document).ready(function () {
         move_right();
     });
 
+    //
+    // $('.header__form').hover(function (e) {
+    //     $('.header__overlay').css('display', 'block');
+    // });
+    //
+    // $(".header__form").on("mouseover", function () {
+    //     $('.header__overlay').css('display', 'none');
+    // });
+
+    function overlay_on_hover(v) {
+        v.on({
+            mouseenter: function () {
+                $('.header__overlay').css('display', 'block');
+                $(this).css('z-index', '30');
+            },
+            mouseleave: function () {
+                $('.header__overlay').css('display', 'none');
+                $(this).css('z-index', '3');
+            }
+        });
+    }
+
+    overlay_on_hover($('.header__form'));
+    overlay_on_hover($('.header__wrapper-nav'));
+
 
     $('.header__call-btn').click(function (e) {
         $('.header__call-btn').toggleClass('active');
@@ -279,10 +304,10 @@ $(document).ready(function () {
     });
 
 
-    $('.video-block').on('click', function() {
-        var $video =  $(this).find('.video-block__video'),
+    $('.video-block').on('click', function () {
+        var $video = $(this).find('.video-block__video'),
             src = $video.attr('src');
-            $video.removeAttr('srcdoc');
+        $video.removeAttr('srcdoc');
 
         $video.attr('src', src + '?&autoplay=1');
         $(this).find('.video-block__play-btn').hide();

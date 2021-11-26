@@ -73,11 +73,17 @@
                 </svg>
             </a>
 
-            <button class="header__search-btn">
-                <svg xmlns="http://www.w3.org/2000/svg">
-                    <use xlink:href="#search"></use>
-                </svg>
-            </button>
+            <form class="header__form" method="post" action="#">
+                <label class="header__input-label">
+                    <input class="header__input" type="search" placeholder="Поиск по сайту" name="search">
+                </label>
+                <button class="header__search-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#search"></use>
+                    </svg>
+                </button>
+            </form>
+
 
             <div class="header__cart">
                 <div class="header__cart-about">
