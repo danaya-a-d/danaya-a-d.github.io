@@ -1,13 +1,13 @@
 $(document).ready(function () {
 
-    function slick_mobile(slider, settings) {
+    function slick_mobile(slider, settings, wide) {
         // Подпишемся на ресайз и продиспатчим его для запуска
         $(window).on('resize', function (e) {
             // Переменная, по которой узнаем запущен слайдер или нет.
             // Храним её в data
             let init = slider.data('init-slider');
             // Если мобильный
-            if (window.innerWidth < 769) {
+            if (window.innerWidth < wide) {
                 // Если слайдер не запущен
                 if (init !== 1) {
                     // Запускаем слайдер и записываем в data init-slider = 1
@@ -44,7 +44,6 @@ $(document).ready(function () {
             }
         ]
     });
-
 
     $('.products--slider').slick({
         dots: false,
@@ -127,33 +126,31 @@ $(document).ready(function () {
     });
 
     const settings_var = {
-        dots: false,
-        arrows: true,
-        slidesToShow: 4,
-        infinite: false,
+        mobileFirst: true,
+        slidesToShow: 1,
+        dots: true,
+        arrows: false,
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 481,
                 settings: {
-                    slidesToShow: 3
+                    slidesToShow: 2,
+                    dots: true,
+                    arrows: false
                 }
             },
             {
                 breakpoint: 769,
                 settings: {
-                    slidesToShow: 2,
-                    dots: true,
-                    arrows: false,
+                    slidesToShow: 3,
+                    dots: false,
+                    arrows: true,
                 }
             },
             {
-                breakpoint: 481,
-                settings: {
-                    slidesToShow: 1,
-                    dots: true,
-                    arrows: false
-                }
-            },
+                breakpoint: 992,
+                settings: 'unslick'
+            }
         ]
     };
 
@@ -161,21 +158,26 @@ $(document).ready(function () {
         infinite: false,
         dots: true,
         arrows: false,
-        slidesToShow: 2,
+        slidesToShow: 1,
+        mobileFirst: true,
         responsive: [
             {
                 breakpoint: 481,
                 settings: {
-                    slidesToShow: 1,
+                    slidesToShow: 2,
                     dots: true,
                     arrows: false
                 }
             },
+            {
+                breakpoint: 769,
+                settings: 'unslick'
+            },
         ]
     };
 
-    slick_mobile($('.products:not(.products--slider)'), settings_var);
-    slick_mobile($('.banners__container'), settings_ban);
+    slick_mobile($('.products:not(.products--slider)'), settings_var, 992);
+    slick_mobile($('.banners__container'), settings_ban, 769);
 
     //Плавное пролистывание к якорю
     $('a[href*="#"]').click(function (e) {
@@ -358,8 +360,6 @@ $(document).ready(function () {
         $(this).find('.video-block__name').hide();
         $(this).addClass('play');
     });
-
-
 
 
     // модальные окна
