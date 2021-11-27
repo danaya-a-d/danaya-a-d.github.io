@@ -301,6 +301,7 @@ $(document).ready(function () {
             $('.header__cart-about').removeClass('open-nav');
         });
     }
+
     $('.header__mobile-btn').click(function (e) {
         $('.header__mobile-btn').toggleClass('active');
         $('.header__wrapper-nav').toggleClass('active');
@@ -326,7 +327,7 @@ $(document).ready(function () {
         mouseleave: function () {
             $(this).find('.header__nav-second-list').fadeOut(250);
             $(this).find('.header__nav-second-list').removeClass('transform-in').addClass('transform-out');
-        },
+        }/*,
         click: function () {
             if ($(this).find('.header__nav-second-list').hasClass('transform-in')) {
                 $(this).find('.header__nav-second-list').fadeOut(100);
@@ -336,7 +337,7 @@ $(document).ready(function () {
                 $(this).find('.header__nav-second-list').css("display", "flex");
                 $(this).find('.header__nav-second-list').removeClass('transform-out').addClass('transform-in');
             }
-        }
+        }*/
     });
 
     // показ блока с телефоном
@@ -360,7 +361,7 @@ $(document).ready(function () {
             $('.header__cart-block').fadeIn(100);
             $('.header__cart-block').removeClass('transform-out').addClass('transform-in');
         },
-        mouseleave: function () {
+        mouseleave: function (event) {
             $('.header__cart-block').fadeOut(250);
             $('.header__cart-block').removeClass('transform-in').addClass('transform-out');
         },
