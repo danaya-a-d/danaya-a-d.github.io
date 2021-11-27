@@ -161,7 +161,17 @@ $(document).ready(function () {
         infinite: false,
         dots: true,
         arrows: false,
-        slidesToShow: 1,
+        slidesToShow: 2,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false
+                }
+            },
+        ]
     };
 
     slick_mobile($('.products:not(.products--slider)'), settings_var);
@@ -259,15 +269,6 @@ $(document).ready(function () {
         move_right();
     });
 
-    //
-    // $('.header__form').hover(function (e) {
-    //     $('.header__overlay').css('display', 'block');
-    // });
-    //
-    // $(".header__form").on("mouseover", function () {
-    //     $('.header__overlay').css('display', 'none');
-    // });
-
     function show_overlay(v) {
         v.on({
             mouseenter: function () {
@@ -348,7 +349,7 @@ $(document).ready(function () {
 
 
     $('.video-block').on('click', function () {
-        var $video = $(this).find('.video-block__video'),
+        let $video = $(this).find('.video-block__video'),
             src = $video.attr('src');
         $video.removeAttr('srcdoc');
 
@@ -357,6 +358,54 @@ $(document).ready(function () {
         $(this).find('.video-block__name').hide();
         $(this).addClass('play');
     });
+
+
+
+
+    // модальные окна
+    function modal_show(modal, button_open) {
+
+        function show() {
+            $('.modal').addClass('hide');
+            modal.removeClass('hide');
+            modal.addClass('show');
+            $('.modal-overlay').removeClass('hide');
+            $('.modal-back').removeClass('hide');
+        }
+
+        function hide() {
+            modal.addClass('hide');
+            $('.modal-overlay').addClass('hide');
+            $('.modal-back').addClass('hide');
+        }
+
+        button_open.on('click', function (e) {
+            show();
+        });
+
+        $('.modal-overlay').on('click', function (e) {
+            modal.addClass('hide');
+            hide();
+        });
+
+        $('.modal-close').on('click', function (e) {
+            modal.addClass('hide');
+            hide();
+        });
+
+        $('.modal-overlay').on('touchmove', function (e) {
+            modal.addClass('hide');
+            hide();
+        });
+        $(document).keydown(function (e) {
+            if (e.which === 27) {
+                hide();
+            }
+        });
+    }
+
+    modal_show($('.modal-recall'), $('.recall-btn'));
+    modal_show($('.modal-thanks'), $('.thanks-btn'));
 });
 
 

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Главная</title>
 
-    <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
-    <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
-    <link rel="stylesheet" href="style/main.min.css">
+    <script src="script/jquery.min.js"></script>
+    <script src="script/slick/slick.min.js"></script>
+    <script src="script/main.js"></script>
+
 </head>
 <body>
 
@@ -63,7 +64,7 @@
                 <div class="header__call-block">
                     <small class="header__call-time">Пн - Пт с 09.00 до 18.00</small>
                     <a class="header__call-number" href="tel:+79118134444">+7 (911) 813-44-44</a>
-                    <a class="header__recall" href="#">Заказать звонок</a>
+                    <a class="header__recall recall-btn" href="#">Заказать звонок</a>
                 </div>
             </div>
 
@@ -1518,11 +1519,39 @@
     </div>
 </footer>
 
-<!--<div class="overlay"></div>-->
+<div class="modal-back hide">
+    <div class="modal modal-recall hide">
+        <button class="modal__btn-close modal-close"></button>
+        <h2 class="modal__title">Заказать звонок</h2>
+        <p class="modal__subtitle">Оставьте свои данные и наши менеджеры свяжуться с Вами
+            в ближайшее время</p>
+        <form class="modal__form" method="post">
+            <label class="visually-hidden" for="modal-name">Имя</label>
+            <input class="modal__input modal__input--name" id="modal-name" name="name" placeholder="Ваше имя" type="text" required>
+            <label class="visually-hidden" for="modal-phone">Номер телефона</label>
+            <input class="modal__input modal__input--phone phone_mask" id="modal-phone" name="phone" placeholder="Номер телефона" type="tel" required>
 
-<script src="script/jquery.min.js"></script>
-<script src="script/slick/slick.min.js"></script>
-<script src="script/main.js"></script>
+            <div class="modal__submit-block">
+                <button class="modal__button button button--red thanks-btn">Заказать</button>
+                <span class="modal__note">Гарантируем конфидециальность ваших данных</span>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal modal-thanks hide">
+        <button class="modal__btn-close modal-close"></button>
+        <h2 class="modal__title">Благодарим за заявку!</h2>
+        <p class="modal__subtitle">Наши менеджеры свяжуться с Вами в ближайшее время</p>
+        <img class="modal__photo" src="img/modal-thanks.jpg" alt="">
+    </div>
+
+    <div class="modal-overlay hide"></div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="script/slick/slick.css">
+<link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+<link rel="stylesheet" href="style/main.min.css">
 
 </body>
 </html>
