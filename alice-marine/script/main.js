@@ -327,20 +327,10 @@ $(document).ready(function () {
     show_overlay_menu($('.header__wrapper-nav'));
 
 
-    $('.header__call-btn').click(function (e) {
-        $('.header__call-btn').toggleClass('active');
-        $('.header__call-block').toggleClass('active');
-    });
-
-    $('.header__cart-icon').click(function (e) {
-        $('.header__cart-block').addClass('active');
-        $('.header__cart-about').addClass('dark');
-    });
-
-    $('.cart__close').click(function (e) {
-        $('.header__cart-block').removeClass('active');
-        $('.header__cart-about').removeClass('dark');
-    });
+    // $('.header__call-btn').click(function (e) {
+    //     $('.header__call-btn').toggleClass('active');
+    //     $('.header__call-block').toggleClass('active');
+    // });
 
     $('.header__mobile-btn').click(function (e) {
         $('.header__mobile-btn').toggleClass('active');
@@ -350,6 +340,51 @@ $(document).ready(function () {
     });
 
 
+
+
+    // показ блока с телефоном
+
+    $('.header__call-btn').click(function (e) {
+        $('.header__call-btn').toggleClass('active');
+
+        if ($('.header__call-btn').hasClass('active')) {
+            $('.header__call-block').fadeIn(100);
+            $('.header__call-block').css("display", "flex");
+            $('.header__call-block').removeClass('transform-out').addClass('transform-in');
+
+        } else {
+            $('.header__call-block').fadeOut(100);
+            $('.header__call-block').removeClass('transform-in').addClass('transform-out');
+        }
+    });
+
+    // включение/выключение корзины
+
+    $('.header__cart-about').on({
+        mouseenter: function () {
+            $('.header__cart-block').fadeIn(100);
+            $('.header__cart-block').removeClass('transform-out').addClass('transform-in');
+        },
+        mouseleave: function () {
+            $('.header__cart-block').fadeOut(250);
+            $('.header__cart-block').removeClass('transform-in').addClass('transform-out');
+        },
+    });
+
+    $('.header__cart-icon').click(function (e) {
+        $('.header__cart-block').fadeIn(100);
+        $('.header__cart-block').removeClass('transform-out').addClass('transform-in');
+        $('.header__cart-about').addClass('dark');
+    });
+
+    $('.cart__close').click(function (e) {
+        $('.header__cart-block').fadeOut(250);
+        $('.header__cart-block').removeClass('transform-in').addClass('transform-out');
+        $('.header__cart-about').removeClass('dark');
+    });
+
+
+    // включение видео
     $('.video-block').on('click', function () {
         let $video = $(this).find('.video-block__video'),
             src = $video.attr('src');
@@ -366,17 +401,19 @@ $(document).ready(function () {
     function modal_show(modal, button_open) {
 
         function show() {
-            $('.modal').addClass('hide');
-            modal.removeClass('hide');
-            modal.addClass('show');
-            $('.modal-overlay').removeClass('hide');
-            $('.modal-back').removeClass('hide');
+            $('.modal').hide();
+            modal.fadeIn(0);
+            $('.modal-overlay').fadeIn(500);
+            $('.modal-back').fadeIn(0);
+            $('.modal-back').css("display", "flex");
+            modal.removeClass('transform-out').addClass('transform-in');
         }
 
         function hide() {
-            modal.addClass('hide');
-            $('.modal-overlay').addClass('hide');
-            $('.modal-back').addClass('hide');
+            modal.fadeOut(500);
+            $('.modal-overlay').fadeOut(500);
+            $('.modal-back').fadeOut(500);
+            modal.removeClass('transform-in').addClass('transform-out');
         }
 
         button_open.on('click', function (e) {
@@ -384,17 +421,14 @@ $(document).ready(function () {
         });
 
         $('.modal-overlay').on('click', function (e) {
-            modal.addClass('hide');
             hide();
         });
 
         $('.modal-close').on('click', function (e) {
-            modal.addClass('hide');
             hide();
         });
 
         $('.modal-overlay').on('touchmove', function (e) {
-            modal.addClass('hide');
             hide();
         });
         $(document).keydown(function (e) {
