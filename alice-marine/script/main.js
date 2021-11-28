@@ -322,26 +322,30 @@ $(document).ready(function () {
     show_overlay_menu($('.header__wrapper-nav'));
 
     // открытие подменю при клике и наведении
+    let is_mouseenter = 0;
     $('.header__nav-catalog').on({
         mouseenter: function () {
             $(this).find('.header__nav-second-list').fadeIn(250);
             $(this).find('.header__nav-second-list').css('display', 'flex');
             $(this).find('.header__nav-second-list').removeClass('transform-out').addClass('transform-in');
+            is_mouseenter = 1;
         },
         mouseleave: function () {
             $(this).find('.header__nav-second-list').fadeOut(250);
             $(this).find('.header__nav-second-list').removeClass('transform-in').addClass('transform-out');
-        }/*,
+        },
         click: function () {
-            if ($(this).find('.header__nav-second-list').hasClass('transform-in')) {
+            if ($(this).find('.header__nav-second-list').hasClass('transform-in') && is_mouseenter !== 1) {
                 $(this).find('.header__nav-second-list').fadeOut(100);
                 $(this).find('.header__nav-second-list').removeClass('transform-in').addClass('transform-out');
+                console.log('click-close');
             } else {
                 $(this).find('.header__nav-second-list').fadeIn(100);
                 $(this).find('.header__nav-second-list').css("display", "flex");
                 $(this).find('.header__nav-second-list').removeClass('transform-out').addClass('transform-in');
+                is_mouseenter = 0;
             }
-        }*/
+        }
     });
 
     // показ блока с телефоном
