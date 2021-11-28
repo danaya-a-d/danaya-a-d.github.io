@@ -248,15 +248,15 @@ $(document).ready(function () {
     function show_overlay(v) {
         v.on({
             mouseenter: function () {
-                $('.header__overlay-search').fadeIn(100);
+                $('.header__overlay-search').fadeIn(250);
                 $('.header__form').addClass('on-top');
-                $('.header__input-label').fadeIn(100);
+                $('.header__input-label').fadeIn(250);
                 $('.header__input-label').removeClass('transform-out').addClass('transform-in');
             },
             mouseleave: function () {
-                $('.header__overlay-search').fadeOut(100);
+                $('.header__overlay-search').fadeOut(250);
                 $('.header__form').removeClass('on-top');
-                $('.header__input-label').fadeOut(100);
+                $('.header__input-label').fadeOut(250);
                 $('.header__input-label').removeClass('transform-in').addClass('transform-out');
             }
         });
@@ -264,14 +264,14 @@ $(document).ready(function () {
         v.click(function (e) {
             $('.header__overlay-search').fadeIn(100);
             $('.header__form').addClass('on-top');
-            $('.header__input-label').fadeIn(100);
+            $('.header__input-label').fadeIn(250);
             $('.header__input-label').removeClass('transform-out').addClass('transform-in');
         });
 
         $('.header__overlay-search').click(function (e) {
-            $('.header__overlay-search').fadeOut(100);
+            $('.header__overlay-search').fadeOut(250);
             $('.header__form').removeClass('on-top');
-            $('.header__input-label').fadeOut(100);
+            $('.header__input-label').fadeOut(250);
             $('.header__input-label').removeClass('transform-in').addClass('transform-out');
         });
     }
@@ -324,8 +324,8 @@ $(document).ready(function () {
     // открытие подменю при клике и наведении
     $('.header__nav-catalog').on({
         mouseenter: function () {
-            $(this).find('.header__nav-second-list').fadeIn(100);
-            $(this).find('.header__nav-second-list').css("display", "flex");
+            $(this).find('.header__nav-second-list').fadeIn(250);
+            $(this).find('.header__nav-second-list').css('display', 'flex');
             $(this).find('.header__nav-second-list').removeClass('transform-out').addClass('transform-in');
         },
         mouseleave: function () {
@@ -349,12 +349,12 @@ $(document).ready(function () {
         $('.header__call-btn').toggleClass('active');
 
         if ($('.header__call-btn').hasClass('active')) {
-            $('.header__call-block').fadeIn(100);
+            $('.header__call-block').fadeIn(250);
             $('.header__call-block').css("display", "flex");
             $('.header__call-block').removeClass('transform-out').addClass('transform-in');
 
         } else {
-            $('.header__call-block').fadeOut(100);
+            $('.header__call-block').fadeOut(250);
             $('.header__call-block').removeClass('transform-in').addClass('transform-out');
         }
     });
@@ -362,7 +362,7 @@ $(document).ready(function () {
     // включение/выключение корзины
     $('.header__cart-about').on({
         mouseenter: function () {
-            $('.header__cart-block').fadeIn(100);
+            $('.header__cart-block').fadeIn(250);
             $('.header__cart-block').removeClass('transform-out').addClass('transform-in');
             $('.header__cart-about').addClass('dark');
         },
@@ -374,7 +374,7 @@ $(document).ready(function () {
     });
 
     $('.header__cart-icon').click(function (e) {
-        $('.header__cart-block').fadeIn(100);
+        $('.header__cart-block').fadeIn(250);
         $('.header__cart-block').removeClass('transform-out').addClass('transform-in');
         $('.header__cart-about').addClass('dark');
     });
@@ -404,17 +404,17 @@ $(document).ready(function () {
 
         function show() {
             $('.modal').hide();
-            modal.fadeIn(0);
-            $('.modal-overlay').fadeIn(500);
-            $('.modal-back').fadeIn(0);
+            modal.fadeIn(250);
+            $('.modal-overlay').fadeIn(250);
+            $('.modal-back').fadeIn(250);
             $('.modal-back').css("display", "flex");
             modal.removeClass('transform-out').addClass('transform-in');
         }
 
         function hide() {
             modal.fadeOut(500);
-            $('.modal-overlay').fadeOut(500);
-            $('.modal-back').fadeOut(500);
+            $('.modal-overlay').fadeOut(250);
+            $('.modal-back').fadeOut(250);
             modal.removeClass('transform-in').addClass('transform-out');
         }
 
