@@ -29,9 +29,9 @@ $(document).ready(function () {
     $('.upper-block__sliders').slick({
         dots: true,
         arrows: true,
-        infinite: true,
         fade: true,
         speed: 2300,
+        infinite: true,
 
         responsive: [
             {
@@ -48,7 +48,7 @@ $(document).ready(function () {
         dots: false,
         arrows: true,
         slidesToShow: 4,
-        infinite: false,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -79,7 +79,7 @@ $(document).ready(function () {
         dots: false,
         arrows: true,
         slidesToShow: 3,
-        infinite: false,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 769,
@@ -104,7 +104,7 @@ $(document).ready(function () {
         dots: false,
         arrows: true,
         slidesToShow: 3,
-        infinite: false,
+        infinite: true,
 
         responsive: [
             {
@@ -137,6 +137,7 @@ $(document).ready(function () {
         slidesToShow: 1,
         dots: true,
         arrows: false,
+        infinite: true,
         responsive: [
             {
                 breakpoint: 481,
@@ -162,7 +163,7 @@ $(document).ready(function () {
     };
 
     const settings_ban = {
-        infinite: false,
+        infinite: true,
         dots: true,
         arrows: false,
         slidesToShow: 1,
