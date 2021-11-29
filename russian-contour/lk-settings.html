@@ -138,7 +138,7 @@
                             <span class="main-form__placeholder">Email</span>
                         </label>
 
-                        <ul class="main-form__list">
+                        <ul class="main-form__list main-form__list--right">
                             <li class="main-form__item">На вашу почту придет письмо с подтверждением</li>
                             <li class="main-form__item">Ваш новый email не может быть старым</li>
                         </ul>
@@ -148,9 +148,9 @@
                         <label class="main-form__label main-form__label--small">
                             <span class="main-form__title main-form__title--small">Создайте новый пароль</span>
                             <span class="main-form__password-block">
-                                <input class="main-form__input password-input password-original" type="password" name="password-original"
+                                <input class="main-form__input password-input password-original" type="text" name="password-original"
                                        placeholder="">
-                                <a class="password-control"></a>
+                                <a class="password-control view"></a>
                                 <span class="main-form__placeholder">Старый пароль</span>
                                 <span class="main-form__warning warning-pass-original"></span>
                             </span>
@@ -159,9 +159,9 @@
                         <label class="main-form__label main-form__label--small">
                             <span class="main-form__title main-form__title--small">Подтвердите новый пароль</span>
                             <span class="main-form__password-block">
-                                <input class="main-form__input password-input password-repeat" type="password" name="password-repeat"
+                                <input class="main-form__input password-input password-repeat" type="text" name="password-repeat"
                                        placeholder="">
-                                <a class="password-control"></a>
+                                <a class="password-control view"></a>
                                 <span class="main-form__placeholder">Новый пароль</span>
                                 <span class="main-form__warning warning-pass-repeat"></span>
                             </span>
@@ -206,7 +206,7 @@
             </form>
 
             <div class="main-form">
-                <div class="main-form__container">
+                <div class="main-form__container main-form__container-manage">
                     <div class="main-form__account-block">
                         <p class="main-form__large-title">Управление подпиской</p>
                         <p class="main-form__footnote">Вход в личный кабинет управления подпиской:</p>
@@ -227,35 +227,35 @@
 
 <div class="modal-back hide">
 
-  <div class="modal modal-delete hide">
-    <h3 class="modal__title">ВНИМАНИЕ!</h3>
+    <div class="modal modal-delete hide">
+        <h3 class="modal__title">ВНИМАНИЕ!</h3>
 
-    <div class="modal__text-block">
-      <p>Вы собираетесь удалить вашу учетную запись в Русском Контуре.
-        Вы не сможете восстановить аккаунт после его удаления</p>
-      <p>Хотите продолжить?</p>
+        <div class="modal__text-block">
+            <p>Вы собираетесь удалить вашу учетную запись в Русском Контуре.
+                Вы не сможете восстановить аккаунт после его удаления</p>
+            <p>Хотите продолжить?</p>
+        </div>
+
+        <div class="modal__buttons">
+            <button class="modal__button button button--gray modal-close">Нет, отменить</button>
+            <button class="modal__button button button--red">Да, хочу удалить</button>
+        </div>
     </div>
 
-    <div class="modal__buttons">
-      <button class="modal__button button button--gray modal-close">Нет, отменить</button>
-      <button class="modal__button button button--red">Да, хочу удалить</button>
+    <div class="modal modal-success hide">
+        <h3 class="modal__title">БЛАГОДАРИМ ЗА ПОМОЩЬ!</h3>
+
+        <div class="modal__text-block">
+            <p>Наши модераторы проверят вашу заявку на добавление нового места.
+                При успешной проверке вы получите оповещение на указанную вами почту.</p>
+        </div>
+
+        <div class="modal__buttons">
+            <button class="modal__button button button--brown modal-close">Отлично</button>
+        </div>
     </div>
-  </div>
 
-  <div class="modal modal-success hide">
-    <h3 class="modal__title">БЛАГОДАРИМ ЗА ПОМОЩЬ!</h3>
-
-    <div class="modal__text-block">
-      <p>Наши модераторы проверят вашу заявку на добавление нового места.
-        При успешной проверке вы получите оповещение на указанную вами почту.</p>
-    </div>
-
-    <div class="modal__buttons">
-      <button class="modal__button button button--brown modal-close">Отлично</button>
-    </div>
-  </div>
-
-  <div class="modal-overlay hide"></div>
+    <div class="modal-overlay hide"></div>
 </div>
 <footer class="footer">
     <div class="wrapper footer__wrapper">
