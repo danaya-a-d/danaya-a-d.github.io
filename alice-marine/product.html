@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" type="text/css" href="script/slick/slick.css">
     <link rel="stylesheet" type="text/css" href="script/slick/slick-theme.css">
+    <link rel="stylesheet" type="text/css" href="script/fancybox/jquery.fancybox.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 
 </head>
@@ -179,7 +180,406 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class="product">
+        <div class="product__wrapper wrapper">
+            <div class="product__photo-block">
+                <div class="product__big-photos">
+                    <a href="img/product-photo1.jpg" class="product__big-photo" data-fancybox="gallery">
+                        <img src="img/product-photo1.jpg" alt="">
+                    </a>
+                    <a href="img/product-photo2.jpg" class="product__big-photo" data-fancybox="gallery">
+                        <img src="img/product-photo2.jpg" alt="">
+                    </a>
+                    <a href="img/product-photo3.jpg" class="product__big-photo" data-fancybox="gallery">
+                        <img src="img/product-photo3.jpg" alt="">
+                    </a>
+                    <a href="img/product-photo4.jpg" class="product__big-photo" data-fancybox="gallery">
+                        <img src="img/product-photo4.jpg" alt="">
+                    </a>
+                    <a href="img/product-photo4.jpg" class="product__big-photo" data-fancybox="gallery">
+                        <img src="img/product-photo4.jpg" alt="">
+                    </a>
+                </div>
+
+                <div class="product__small-photos">
+                    <a class="product__small-photo"><img src="img/product-photo1.jpg" alt=""></a>
+                    <a class="product__small-photo"><img src="img/product-photo2.jpg" alt=""></a>
+                    <a class="product__small-photo"><img src="img/product-photo3.jpg" alt=""></a>
+                    <a class="product__small-photo"><img src="img/product-photo4.jpg" alt=""></a>
+                    <a class="product__small-photo"><img src="img/product-photo4.jpg" alt=""></a>
+                </div>
+            </div>
+
+            <div class="product__about-block">
+                <h1 class="product__title title">Лосось охлажденный стейк "бабочка"</h1>
+
+                <div class="product__rate-block">
+                    <div class="product__rate rating">
+                        <span class="active">★</span>
+                        <span class="active">★</span>
+                        <span class="active">★</span>
+                        <span class="active">★</span>
+                        <span class="inactive">★</span>
+                    </div>
+
+                    <a href="product.html" class="product__rate-link">159 отзывов /&nbsp;</a>
+                    <a href="product.html" class="product__write-link">Написать отзыв</a>
+                </div>
+
+                <div class="product__text-block">
+                    <h3>Описание товара</h3>
+
+                    <p>Стейк лосося (семги) "бабочка". Не хвостовая часть. Удалена чешуя и кости. Идеально подойдет для
+                        жарки, гриля, запекания и приготовления на пару. Сервируйте как хотите, кухня останется чистой,
+                        с разделкой рыбы мы уже повозились.</p>
+
+                    <p>В качестве сырья - охлажденный лосось из Дании. Это не дикая рыба, это вкуснее - один из лучших
+                        Датских заводов. Маркировка качества - Superrior. На производстве Элис Марин не используются
+                        красители, поэтому от заказа к заказу цвет рыбы может незначительно варьироваться.</p>
+
+                    <p><strong>По вопросам сотрудничества, закупок и оптовых продаж: <a href="https://alicemarine.ru">https://alicemarine.ru</a></strong>
+                    </p>
+                </div>
+
+                <div class="product__price-block">
+                    <span class="product__price-title">Цена за шт.:</span>
+                    <span class="product__price-value">1 600 Р</span>
+                </div>
+
+                <div class="product__nav-block">
+                    <button class="product__button button button--red button--buy">В корзину</button>
+
+                    <div class="product__counter-block">
+                        <p class="product__label product__label-count">Выберите кол-во:</p>
+                        <span class="product__counter counter">
+                        <button class="counter__button minus">-</button><label class="counter__label">
+                            <input class="counter__input" type="text" value="1" data-price="415"
+                                   onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'')">
+                        </label><button class="counter__button plus">+</button>
+                        </span>
+                    </div>
+
+
+                    <div class="product__value-block product__value-block--pc">
+                        <p class="product__label">Вес продукции:</p>
+                        <p class="product__value">0,35 кг</p>
+                    </div>
+
+                </div>
+
+                <div class="product__value-block product__value-block--mob">
+                    <p class="product__label">Вес продукции:</p>
+                    <p class="product__value">0,35 кг</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews__wrapper wrapper">
+            <div class="reviews__comments-block">
+                <section class="production reviews__production">
+                    <h2 class="production__title title-small">Как мы производим продукцию</h2>
+                    <ul class="production__list">
+                        <li class="production__item video-block">
+                            <iframe class="video-block__video" loading="lazy"
+                                    src="https://www.youtube.com/embed/cC9r0jHF-Fw"
+                                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;height:100%;top:0;bottom:0;object-fit:cover}</style><a href=https://www.youtube.com/embed/cC9r0jHF-Fw?autoplay=1><img src=https://img.youtube.com/vi/cC9r0jHF-Fw/maxresdefault.jpg alt='Заголовок для видео'></a>"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen="" frameborder="0"></iframe>
+                            <p class="video-block__name">Заголовок для видео</p>
+                            <div class="video-block__play-btn">
+                                <div class="video-block__play-btn-back"></div>
+                            </div>
+                        </li>
+
+                        <li class="production__item video-block">
+                            <iframe class="video-block__video" loading="lazy"
+                                    src="https://www.youtube.com/embed/cC9r0jHF-Fw"
+                                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;height:100%;top:0;bottom:0;object-fit:cover}</style><a href=https://www.youtube.com/embed/cC9r0jHF-Fw?autoplay=1><img src=https://img.youtube.com/vi/cC9r0jHF-Fw/maxresdefault.jpg alt='Заголовок для видео'></a>"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen="" frameborder="0"></iframe>
+                            <p class="video-block__name">Заголовок для видео</p>
+                            <div class="video-block__play-btn">
+                                <div class="video-block__play-btn-back"></div>
+                            </div>
+                        </li>
+
+                        <li class="production__item video-block">
+                            <iframe class="video-block__video" loading="lazy"
+                                    src="https://www.youtube.com/embed/cC9r0jHF-Fw"
+                                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;height:100%;top:0;bottom:0;object-fit:cover}</style><a href=https://www.youtube.com/embed/cC9r0jHF-Fw?autoplay=1><img src=https://img.youtube.com/vi/cC9r0jHF-Fw/maxresdefault.jpg alt='Заголовок для видео'></a>"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen="" frameborder="0"></iframe>
+                            <p class="video-block__name">Заголовок для видео</p>
+                            <div class="video-block__play-btn">
+                                <div class="video-block__play-btn-back"></div>
+                            </div>
+                        </li>
+
+                        <li class="production__item video-block">
+                            <iframe class="video-block__video" loading="lazy"
+                                    src="https://www.youtube.com/embed/cC9r0jHF-Fw"
+                                    srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%}img{position:absolute;width:100%;height:100%;top:0;bottom:0;object-fit:cover}</style><a href=https://www.youtube.com/embed/cC9r0jHF-Fw?autoplay=1><img src=https://img.youtube.com/vi/cC9r0jHF-Fw/maxresdefault.jpg alt='Заголовок для видео'></a>"
+                                    title="YouTube video player"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen="" frameborder="0"></iframe>
+                            <p class="video-block__name">Заголовок для видео</p>
+                            <div class="video-block__play-btn">
+                                <div class="video-block__play-btn-back"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <section class="comments">
+                    <h2 class="comments__title title-small">Отзывы клиентов</h2>
+
+                    <div class="rate-count">
+                        <div class="rate-count__item">
+                            <span class="rate-count__title">2</span>
+                            <span class="rate-count__value">отзыва</span>
+                        </div>
+
+                        <div class="rate-count__item">
+                            <span class="rate-count__title">1</span>
+                            <span class="rate-count__value">ответ</span>
+                        </div>
+
+                        <div class="rate-count__item">
+                            <span class="rate-count__title">4</span>
+                            <span class="rate-count__value">оценки</span>
+                        </div>
+
+                        <div class="rate-count__item">
+                            <span class="rate-count__title">83%</span>
+                            <span class="rate-count__value">2 положительных</span>
+                        </div>
+
+                        <div class="rate-count__rate rating">
+                            <span class="active">★</span>
+                            <span class="active">★</span>
+                            <span class="active">★</span>
+                            <span class="active">★</span>
+                            <span class="inactive">★</span>
+                        </div>
+                    </div>
+
+                    <div class="comments__list">
+                        <div class="comments__item">
+                            <div class="comments__container">
+                                <div class="comments__info">
+                                    <img src="img/avatar.jpg" alt="" class="comments__photo">
+                                    <div class="comments__about">
+                                        <div class="comments__author">
+                                            <span class="comments__name">Александр</span>
+                                            <span class="comments__status">(Гость)</span>
+                                        </div>
+
+                                        <div class="comments__rate rating">
+                                            <span class="active">★</span>
+                                            <span class="active">★</span>
+                                            <span class="active">★</span>
+                                            <span class="inactive">★</span>
+                                            <span class="inactive">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comments__text-block">
+                                    <p>Третий раз заказываю и третий раз получаю прям сразу. Рыба отличная. Слабую соль
+                                        везли долго два раза. А охлажденная рыба пока всегда вовремя. Доставку слабой
+                                        соли бы еще поправить. Но я так понимаю это связано с какими-то циклами.</p>
+                                </div>
+                                <div class="comments__nav">
+
+                                    <div class="comments__nav-right">
+                                        <a href="#" class="comments__reply">Ответить</a>
+                                        <time class="comments__time">22 июня 2018</time>
+                                    </div>
+
+                                    <div class="comments__nav-left">
+                                        <p class="comments__useful no">Отзыв полезен? +3</p>
+                                        <div class="comments__is-useful">
+                                            <a class="yes" href="#">Да</a> 1 /
+                                            <a class="no" href="#">Нет</a> 4
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="comments__container">
+                                    <div class="comments__info">
+                                        <img src="img/avatar.jpg" alt="" class="comments__photo">
+                                        <div class="comments__about">
+                                            <div class="comments__author">
+                                                <span class="comments__name">Дмитрий</span>
+                                                <span class="comments__status">(Администратор)</span>
+                                            </div>
+
+                                            <div class="comments__rate rating">
+                                                <span class="active">★</span>
+                                                <span class="active">★</span>
+                                                <span class="active">★</span>
+                                                <span class="inactive">★</span>
+                                                <span class="inactive">★</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="comments__text-block">
+                                        <p>К сожалению у нас не было покупателя с таким именем.</p>
+                                        <p>Если Вы не обиженный конкурент - свяжитесь с нами пожалуйста, мы точно все
+                                            уладим и решим в Вашу пользу.</p>
+                                        <p>Можно позвонить по телефону (он наверху страницы).</p>
+                                        <p>Личная почта руководителя: smd@mail.ru</p>
+                                    </div>
+                                    <div class="comments__nav">
+
+                                        <div class="comments__nav-right">
+                                            <a href="#" class="comments__reply">Ответить</a>
+                                            <time class="comments__time">22 июня 2018</time>
+                                        </div>
+
+                                        <div class="comments__nav-left">
+                                            <p class="comments__useful yes">Отзыв полезен? +3</p>
+                                            <div class="comments__is-useful">
+                                                <a class="yes" href="#">Да</a> 1 /
+                                                <a class="no" href="#">Нет</a> 4
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="comments__item">
+                            <div class="comments__container">
+                                <div class="comments__info">
+                                    <img src="img/avatar.jpg" alt="" class="comments__photo">
+                                    <div class="comments__about">
+                                        <div class="comments__author">
+                                            <span class="comments__name">Александр</span>
+                                            <span class="comments__status">(Гость)</span>
+                                        </div>
+
+                                        <div class="comments__rate rating">
+                                            <span class="active">★</span>
+                                            <span class="active">★</span>
+                                            <span class="active">★</span>
+                                            <span class="inactive">★</span>
+                                            <span class="inactive">★</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="comments__text-block">
+                                    <p>Третий раз заказываю и третий раз получаю прям сразу. Рыба отличная. Слабую соль
+                                        везли долго два раза. А охлажденная рыба пока всегда вовремя. Доставку слабой
+                                        соли бы еще поправить. Но я так понимаю это связано с какими-то циклами.</p>
+                                </div>
+                                <div class="comments__nav">
+
+                                    <div class="comments__nav-right">
+                                        <a href="#" class="comments__reply">Ответить</a>
+                                        <time class="comments__time">22 июня 2018</time>
+                                    </div>
+
+                                    <div class="comments__nav-left">
+                                        <p class="comments__useful yes">Отзыв полезен? +3</p>
+                                        <div class="comments__is-useful">
+                                            <a class="yes" href="#">Да</a> 1 /
+                                            <a class="no" href="#">Нет</a> 4
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+            </div>
+
+            <div class="reviews__similar-block">
+                <h2 class="reviews__title title-small">Похожие товары</h2>
+                <ul class="reviews__products products">
+                    <li class="products__item">
+                        <a class="products__img-link" href="product.html">
+                            <div class="products__photo" style="background-image: url(img/product1.jpg)"></div>
+                        </a>
+
+                        <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                        <span class="products__label">Под заказ</span>
+
+                        <div class="products__rate-block">
+                            <div class="products__rate rating">
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="inactive">★</span>
+                            </div>
+                            <a href="product.html" class="products__rate-link">159 отзывов</a>
+                        </div>
+
+                        <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                            Икринки чистые, целые, ...
+                        </p>
+
+                        <div class="products__nav">
+                            <span class="products__value">0,5 кг</span>
+                            <button class="products__button button button--red button--buy">
+                                <span class="button-value">2 550 Р</span>
+                                <span class="button-text">В корзину</span>
+                            </button>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <a class="products__img-link" href="product.html">
+                            <div class="products__photo" style="background-image: url(img/product2.jpg)"></div>
+                        </a>
+
+                        <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                        <span class="products__label">Под заказ</span>
+
+                        <div class="products__rate-block">
+                            <div class="products__rate rating">
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="inactive">★</span>
+                            </div>
+                            <a href="product.html" class="products__rate-link">159 отзывов</a>
+                        </div>
+
+                        <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                            Икринки чистые, целые, ...
+                        </p>
+
+                        <div class="products__nav">
+                            <span class="products__value">0,5 кг</span>
+                            <button class="products__button button button--red button--buy">
+                                <span class="button-value">2 550 Р</span>
+                                <span class="button-text">В корзину</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">
@@ -311,7 +711,9 @@
     <div class="modal-overlay"></div>
 </div>
 <script src="script/jquery.min.js"></script>
+<script src="script/phone_mask.min.js"></script>
 <script src="script/slick/slick.min.js"></script>
+<script src="script/fancybox/jquery.fancybox.min.js"></script>
 <script src="script/main.js"></script>
 
 </body>
