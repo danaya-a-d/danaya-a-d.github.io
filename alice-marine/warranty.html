@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <a href="#" class="header__user-btn">
+            <a href="#" class="header__user-btn login-btn">
                 <svg xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#user"></use>
                 </svg>
@@ -180,7 +180,54 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class="warranty warranty-inner">
+        <div class="warranty__wrapper wrapper">
+            <h2 class="warranty__main-title title-big">Гарантии качества</h2>
+
+            <div class="warranty__container">
+                <div class="warranty__black-block">
+                    <img class="warranty__img" src="img/fishes.png" alt="">
+                </div>
+
+                <div class="warranty__red-block">
+                    <h2 class="warranty__title">
+                        <strong>100<small>%</small></strong> Гарантия качества
+                    </h2>
+
+                    <p class="warranty__subtitle-big">Мы уверены в качестве нашей продукции.</p>
+
+                </div>
+            </div>
+
+            <div class="warranty__text-block">
+                <h3>Поэтому в фирменном магазине с доставкой "Можно Все" гарантии только такие:</h3>
+
+                <p>Если Вам по какой-то причине что-то в нашей рабе не понравилось, то мы просто вернем деньги <b>без
+                    всяких споров и возражений</b>. Даже если вы эту рыбу уже попробовали. Вам не нужно будет заполнять
+                    никакие анкеты, писать письма и оставлять заявки. Просто позвоните.</p>
+
+                <p><strong>Таких гарантий на рыбном рынке никто никогда не давал, а мы даем!</strong></p>
+
+
+                <blockquote>
+                    <p><strong>Личная почта руководителя: <a href="mailto:smd@mail.ru">smd@mail.ru</a></strong></p>
+
+                    <p>Любые вопросы и комментарии, связанные с работой Элис Марин, рыбой, качеством продукции и так далее. Я очень люблю критику. Пожалуйста, пишите. Я читаю ВСЮ почту. Дмитрий.</p>
+                </blockquote>
+            </div>
+
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">
@@ -298,6 +345,23 @@
             <div class="modal__submit-block">
                 <button class="modal__button button button--red thanks-btn">Заказать</button>
                 <span class="modal__note">Гарантируем конфидециальность ваших данных</span>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal modal-login">
+        <button class="modal__btn-close modal-close"></button>
+        <h2 class="modal__title center">Вход в личный кабинет</h2>
+        <form class="modal__form" method="post">
+            <label class="visually-hidden" for="modal-email">E-mail</label>
+            <input class="modal__input modal__input--name" id="modal-email" name="email" placeholder="E-mail" type="email" required>
+
+            <label class="visually-hidden" for="modal-password">Пароль</label>
+            <input class="modal__input modal__input--password" id="modal-password" name="password"
+                   placeholder="Пароль" type="password" required>
+
+            <div class="modal__submit-block">
+                <button class="modal__button button button--red thanks-btn">Войти</button>
             </div>
         </form>
     </div>

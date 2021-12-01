@@ -69,7 +69,7 @@
                 </div>
             </div>
 
-            <a href="#" class="header__user-btn">
+            <a href="#" class="header__user-btn login-btn">
                 <svg xmlns="http://www.w3.org/2000/svg">
                     <use xlink:href="#user"></use>
                 </svg>
@@ -180,7 +180,26 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class="not-found">
+        <div class="not-found__wrapper wrapper">
+            <div class="not-found__container">
+                <img class="not-found__img" src="img/404.png" alt="404">
+                <h1 class="not-found__title">404!</h1>
+                <p class="not-found__text">Страница не найдена или была перемещена!</p>
+                <a class="not-found__button button button--red" href="index.html">На главную</a>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">
@@ -298,6 +317,23 @@
             <div class="modal__submit-block">
                 <button class="modal__button button button--red thanks-btn">Заказать</button>
                 <span class="modal__note">Гарантируем конфидециальность ваших данных</span>
+            </div>
+        </form>
+    </div>
+
+    <div class="modal modal-login">
+        <button class="modal__btn-close modal-close"></button>
+        <h2 class="modal__title center">Вход в личный кабинет</h2>
+        <form class="modal__form" method="post">
+            <label class="visually-hidden" for="modal-email">E-mail</label>
+            <input class="modal__input modal__input--name" id="modal-email" name="email" placeholder="E-mail" type="email" required>
+
+            <label class="visually-hidden" for="modal-password">Пароль</label>
+            <input class="modal__input modal__input--password" id="modal-password" name="password"
+                   placeholder="Пароль" type="password" required>
+
+            <div class="modal__submit-block">
+                <button class="modal__button button button--red thanks-btn">Войти</button>
             </div>
         </form>
     </div>

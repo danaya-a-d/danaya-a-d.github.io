@@ -480,6 +480,7 @@ $(document).ready(function () {
 
     modal_show($('.modal-recall'), $('.recall-btn'));
     modal_show($('.modal-thanks'), $('.thanks-btn'));
+    modal_show($('.modal-login'), $('.login-btn'));
 
     //кастомный input number
     $('.counter .counter__button').on('click', function () {
