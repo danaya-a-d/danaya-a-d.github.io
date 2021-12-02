@@ -1,3 +1,29 @@
+// яндекс карта
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('map', {
+            center: [59.966665, 30.355592],
+            zoom: 13
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: '../img/map-marker.png',
+            // Размеры метки.
+            iconImageSize: [55, 73],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+    myMap.geoObjects.add(myPlacemark);
+});
+
 $(document).ready(function () {
 
     $(".phone_mask").mask("+7(999)999-99-99");
@@ -187,7 +213,7 @@ $(document).ready(function () {
     };
 
     slick_mobile($('.products:not(.products--slider)'), settings_var, 992);
-    slick_mobile($('.banners__container'), settings_ban, 769);
+    slick_mobile($('.banners__container--slider'), settings_ban, 769);
 
     // слайдер карточки товара
 
