@@ -190,7 +190,345 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class="catalog">
+        <div class="catalog__wrapper wrapper">
+            <div class="catalog__left-block"></div>
+
+            <div class="catalog__content-block">
+
+                <div class="catalog__sliders-block">
+                    <ul class="catalog__sliders">
+                        <li class="catalog__slider" style="background-image: url(img/main-slider-img.jpg)">
+                            <div class="catalog__slider-container">
+                                <h1 class="catalog__slider-title white">Продажа рыбы<br> и морепродуктов<br> от
+                                    производителя</h1>
+                                <ul class="catalog__slider-benefits">
+                                    <li class="catalog__slider-benefit">
+                                        <img src="img/icons-fish.svg" alt="" class="catalog__slider-icon">
+                                        <p class="catalog__slider-text">Свежая</p>
+                                    </li>
+
+                                    <li class="catalog__slider-benefit">
+                                        <img src="img/icons-smoke.svg" alt="" class="catalog__slider-icon">
+                                        <p class="catalog__slider-text">Копченая</p>
+                                    </li>
+
+                                    <li class="catalog__slider-benefit">
+                                        <img src="img/icons-shaker.svg" alt="" class="catalog__slider-icon">
+                                        <p class="catalog__slider-text">Слабосоленая</p>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="catalog__slider-btn button button--red">Выбрать</a>
+                            </div>
+                        </li>
+                        <li class="catalog__slider" style="background-image: url(img/main-slider-img.jpg)">
+                            <div class="catalog__slider-container">
+                                <h1 class="catalog__slider-title white">Продажа рыбы<br> и морепродуктов<br> от
+                                    производителя</h1>
+                                <ul class="catalog__slider-benefits">
+                                    <li class="catalog__slider-benefit">
+                                        <img src="img/icons-fish.svg" alt="" class="catalog__slider-icon">
+                                        <p class="catalog__slider-text">Свежая</p>
+                                    </li>
+
+                                    <li class="catalog__slider-benefit">
+                                        <img src="img/icons-smoke.svg" alt="" class="catalog__slider-icon">
+                                        <p class="catalog__slider-text">Копченая</p>
+                                    </li>
+
+                                    <li class="catalog__slider-benefit">
+                                        <img src="img/icons-shaker.svg" alt="" class="catalog__slider-icon">
+                                        <p class="catalog__slider-text">Слабосоленая</p>
+                                    </li>
+                                </ul>
+
+                                <a href="#" class="catalog__slider-btn button button--red">Выбрать</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <svg id="svg1" class="up2 slider-transition" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle id="circle10" class="circle10 steap" cx="50%" cy="49%" r="20"></circle>
+                        <circle id="circle11" class="circle11 steap" cx="50%" cy="49%" r="100"></circle>
+                        <circle id="circle12" class="circle12 steap" cx="50%" cy="49%" r="180"></circle>
+                        <circle id="circle13" class="circle13 steap" cx="50%" cy="49%" r="260"></circle>
+                        <circle id="circle14" class="circle14 steap" cx="50%" cy="49%" r="340"></circle>
+                        <circle id="circle15" class="circle15 steap" cx="50%" cy="49%" r="420"></circle>
+                        <circle id="circle16" class="circle16 steap" cx="50%" cy="49%" r="500"></circle>
+                        <circle id="circle17" class="circle17 steap" cx="50%" cy="49%" r="580"></circle>
+                        <circle id="circle18" class="circle18 steap" cx="50%" cy="49%" r="660"></circle>
+                    </svg>
+
+                </div>
+
+               <section class="catalog__products-block">
+                   <h1 class="catalog__title title-big">Рыба с производства</h1>
+
+                   <ul class="catalog__nav-list">
+                       <li class="catalog__nav-item"><a href="#">Свежемороженная</a></li>
+                       <li class="catalog__nav-item"><a href="#">Холодное копчение</a></li>
+                       <li class="catalog__nav-item"><a href="#">Охлажденная рыба</a></li>
+                       <li class="catalog__nav-item"><a href="#">Слабая соль</a></li>
+                       <li class="catalog__nav-item"><a href="#">Горячее копчение</a></li>
+                   </ul>
+
+                   <form class="catalog__control-block control">
+                       <label class="control__sort-label">
+                           <span class="control__sort-title">Сортировать:</span>
+
+                           <select class="control__select">
+                               <option>По умолчанию</option>
+                               <option>По афавиту (А-Я)</option>
+                               <option>По афавиту (Я-А)</option>
+                               <option>По цене (убыванию)</option>
+                               <option>По цене (возрастанию)</option>
+                               <option>По рейтингу (убыванию)</option>
+                               <option>По рейтингу (возрастанию)</option>
+                           </select>
+                       </label>
+
+                       <div class="control__counts-block">
+                           <span class="control__sort-title">Показывать по:</span>
+
+                           <label class="control__count-label">
+                               <input class="visually-hidden" name="count" type="radio" value="15" checked>
+                               <span class="control__count-indicator">15</span>
+                           </label>
+
+                           <label class="control__count-label">
+                               <input class="visually-hidden" name="count" type="radio" value="30">
+                               <span class="control__count-indicator">30</span>
+                           </label>
+
+                           <label class="control__count-label">
+                               <input class="visually-hidden" name="count" type="radio" value="60">
+                               <span class="control__count-indicator">60</span>
+                           </label>
+
+                           <label class="control__count-label">
+                               <input class="visually-hidden" name="count" type="radio" value="all">
+                               <span class="control__count-indicator big">Все</span>
+                           </label>
+                       </div>
+
+                       <div class="control__views-block">
+                           <label class="control__view-label">
+                               <input class="visually-hidden" name="view" type="radio" value="list">
+                               <span class="control__view-indicator control__view-indicator--list"></span>
+                           </label>
+
+                           <label class="control__view-label">
+                               <input class="visually-hidden" name="view" type="radio" value="blocks" checked>
+                               <span class="control__view-indicator control__view-indicator--blocks"></span>
+                           </label>
+                       </div>
+                   </form>
+
+                   <ul class="catalog__products products">
+                       <li class="products__item">
+                           <a class="products__img-link" href="product.html">
+                               <div class="products__photo" style="background-image: url(img/product1.jpg)"></div>
+                           </a>
+
+                           <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                           <span class="products__label">Под заказ</span>
+
+                           <div class="products__rate-block">
+                               <div class="products__rate rating">
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="inactive">★</span>
+                               </div>
+                               <a href="product.html" class="products__rate-link">159 отзывов</a>
+                           </div>
+
+                           <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                               Икринки чистые, целые, ...
+                           </p>
+
+                           <div class="products__nav">
+                               <span class="products__value">0,5 кг</span>
+                               <button class="products__button button button--red button--buy">
+                                   <span class="button-value">2 550 Р</span>
+                                   <span class="button-text">В корзину</span>
+                               </button>
+                           </div>
+                       </li>
+                       <li class="products__item">
+                           <a class="products__img-link" href="product.html">
+                               <div class="products__photo" style="background-image: url(img/product2.jpg)"></div>
+                           </a>
+
+                           <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                           <span class="products__label">Под заказ</span>
+
+                           <div class="products__rate-block">
+                               <div class="products__rate rating">
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="inactive">★</span>
+                               </div>
+                               <a href="product.html" class="products__rate-link">159 отзывов</a>
+                           </div>
+
+                           <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                               Икринки чистые, целые, ...
+                           </p>
+
+                           <div class="products__nav">
+                               <span class="products__value">0,5 кг</span>
+                               <button class="products__button button button--red button--buy">
+                                   <span class="button-value">2 550 Р</span>
+                                   <span class="button-text">В корзину</span>
+                               </button>
+                           </div>
+                       </li>
+                       <li class="products__item">
+                           <a class="products__img-link" href="product.html">
+                               <div class="products__photo" style="background-image: url(img/product3.jpg)"></div>
+                           </a>
+
+                           <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                           <span class="products__label">Под заказ</span>
+
+                           <div class="products__rate-block">
+                               <div class="products__rate rating">
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="inactive">★</span>
+                               </div>
+                               <a href="product.html" class="products__rate-link">159 отзывов</a>
+                           </div>
+
+                           <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                               Икринки чистые, целые, ...
+                           </p>
+
+                           <div class="products__nav">
+                               <span class="products__value">0,5 кг</span>
+                               <button class="products__button button button--red button--buy">
+                                   <span class="button-value">2 550 Р</span>
+                                   <span class="button-text">В корзину</span>
+                               </button>
+                           </div>
+                       </li>
+                       <li class="products__item">
+                           <a class="products__img-link" href="product.html">
+                               <div class="products__photo" style="background-image: url(img/product4.jpg)"></div>
+                           </a>
+
+                           <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                           <span class="products__label">Под заказ</span>
+
+                           <div class="products__rate-block">
+                               <div class="products__rate rating">
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="inactive">★</span>
+                               </div>
+                               <a href="product.html" class="products__rate-link">159 отзывов</a>
+                           </div>
+
+                           <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                               Икринки чистые, целые, ...
+                           </p>
+
+                           <div class="products__nav">
+                               <span class="products__value">0,5 кг</span>
+                               <button class="products__button button button--red button--buy">
+                                   <span class="button-value">2 550 Р</span>
+                                   <span class="button-text">В корзину</span>
+                               </button>
+                           </div>
+                       </li>
+                       <li class="products__item">
+                           <a class="products__img-link" href="product.html">
+                               <div class="products__photo" style="background-image: url(img/product1.jpg)"></div>
+                           </a>
+
+                           <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                           <span class="products__label">Под заказ</span>
+
+                           <div class="products__rate-block">
+                               <div class="products__rate rating">
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="inactive">★</span>
+                               </div>
+                               <a href="product.html" class="products__rate-link">159 отзывов</a>
+                           </div>
+
+                           <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                               Икринки чистые, целые, ...
+                           </p>
+
+                           <div class="products__nav">
+                               <span class="products__value">0,5 кг</span>
+                               <button class="products__button button button--red button--buy">
+                                   <span class="button-value">2 550 Р</span>
+                                   <span class="button-text">В корзину</span>
+                               </button>
+                           </div>
+                       </li>
+                       <li class="products__item">
+                           <a class="products__img-link" href="product.html">
+                               <div class="products__photo" style="background-image: url(img/product2.jpg)"></div>
+                           </a>
+
+                           <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                           <span class="products__label">Под заказ</span>
+
+                           <div class="products__rate-block">
+                               <div class="products__rate rating">
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="active">★</span>
+                                   <span class="inactive">★</span>
+                               </div>
+                               <a href="product.html" class="products__rate-link">159 отзывов</a>
+                           </div>
+
+                           <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                               Икринки чистые, целые, ...
+                           </p>
+
+                           <div class="products__nav">
+                               <span class="products__value">0,5 кг</span>
+                               <button class="products__button button button--red button--buy">
+                                   <span class="button-value">2 550 Р</span>
+                                   <span class="button-text">В корзину</span>
+                               </button>
+                           </div>
+                       </li>
+                   </ul>
+               </section>
+            </div>
+
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">

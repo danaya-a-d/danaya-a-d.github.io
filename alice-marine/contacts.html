@@ -415,7 +415,36 @@
     <div class="modal-overlay"></div>
 </div>
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>" type="text/javascript"></script>
+<script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
+
+<script>
+    // яндекс карта
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [59.966665, 30.355592],
+                zoom: 13
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            // Создаём макет содержимого.
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: '../img/map-marker.png',
+                // Размеры метки.
+                iconImageSize: [55, 73],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-5, -38]
+            });
+
+        myMap.geoObjects.add(myPlacemark);
+    });
+</script>
+
 <script src="script/jquery.min.js"></script>
 <script src="script/phone_mask.min.js"></script>
 <script src="script/slick/slick.min.js"></script>

@@ -190,7 +190,141 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class=certificate>
+        <div class="certificate__wrapper wrapper">
+
+            <div class="certificate__container">
+                <h1 class="certificate__title title-big">Покупка подарочного сертификата</h1>
+                <form class="certificate__main-form main-form" method="post" action="#">
+                    <div class="main-form__container-big">
+                        <div class="main-form__fieldset-trans">
+                            <p class="main-form__text">После заполнения всех полей, сертификат будет перемещен в корзину, и после оплаты - отправлен получателю на указанный e-mail.</p>
+
+                            <div class="main-form__inputs">
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Имя получателя: <span>*</span></span>
+                                    <input class="main-form__input" type="text" name="name-recipient"
+                                           placeholder="Иван" required>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">E-mail получателя: <span>*</span></span>
+                                    <input class="main-form__input" type="email" name=email-recipient"
+                                           placeholder="example@gmail.com" required>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Ваше имя: <span>*</span></span>
+                                    <input class="main-form__input" type="text" name="name"
+                                           placeholder="Александр" required>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Ваш E-mail: <span>*</span></span>
+                                    <input class="main-form__input" type="email" name=email"
+                                           placeholder="example@gmail.com" required>
+                                </label>
+                            </div>
+
+                            <div class="main-form__radios main-form__radios--inner">
+                                <p class="main-form__radios-title">По какому поводу?: <span>*</span></p>
+
+                                <label class="main-form__radio-label">
+                                    <input class="visually-hidden" name="event" type="radio" value="birthday" checked>
+                                    <span class="main-form__radio-indicator"></span>
+                                    <span class="main-form__indicator-title">День рождения</span>
+                                </label>
+
+                                <label class="main-form__radio-label">
+                                    <input class="visually-hidden" name="event" type="radio" value="new-year">
+                                    <span class="main-form__radio-indicator"></span>
+                                    <span class="main-form__indicator-title">Новый год</span>
+                                </label>
+
+                                <label class="main-form__radio-label">
+                                    <input class="visually-hidden" name="event" type="radio" value="other">
+                                    <span class="main-form__radio-indicator"></span>
+                                    <span class="main-form__indicator-title">Другой повод</span>
+                                </label>
+                            </div>
+
+                            <div class="main-form__inputs">
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Комментарий:</span>
+                                    <textarea class="main-form__textarea" placeholder="Ваше сообщение"></textarea>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Сумма сертификата (руб.): <span>*</span></span>
+                                    <input class="main-form__input" type="text" name=sum"
+                                           placeholder="5000" required>
+                                </label>
+                            </div>
+
+                            <div class="main-form__submit-block">
+                                <button class="main-form__button button button--red">Продолжить</button>
+
+                                <label class="main-form__checkbox-label">
+                                    <input class="visually-hidden" name="agree" type="checkbox">
+                                    <span class="main-form__checkbox-indicator"></span>
+                                    <span class="main-form__indicator-title">Я понимаю, что подарочные сертификаты не подлежат возврату</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="certificate__similar-block">
+                <h2 class="certificate__title title-big">Хиты продаж</h2>
+                <ul class="certificate__products products">
+                    <li class="products__item">
+                        <a class="products__img-link" href="product.html">
+                            <div class="products__photo" style="background-image: url(img/product1.jpg)"></div>
+                        </a>
+
+                        <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+                        <span class="products__label">Под заказ</span>
+
+                        <div class="products__rate-block">
+                            <div class="products__rate rating">
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="active">★</span>
+                                <span class="inactive">★</span>
+                            </div>
+                            <a href="product.html" class="products__rate-link">159 отзывов</a>
+                        </div>
+
+                        <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                            Икринки чистые, целые, ...
+                        </p>
+
+                        <div class="products__nav">
+                            <span class="products__value">0,5 кг</span>
+                            <button class="products__button button button--red button--buy">
+                                <span class="button-value">2 550 Р</span>
+                                <span class="button-text">В корзину</span>
+                            </button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">

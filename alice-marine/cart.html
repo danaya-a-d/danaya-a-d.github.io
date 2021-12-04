@@ -190,7 +190,145 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class="cart-main">
+        <div class="cart-main__wrapper wrapper">
+            <h1 class="cart-main__title title-big">Ваша корзина</h1>
+
+            <div class="big-cart">
+                <div class="big-cart__body">
+                    <div class="big-cart__line big-cart__line-head">
+                        <div class="big-cart__cell big-cart__cell-photo">
+                            <p class="big-cart__head-name">Изображение</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-name">
+                            <p class="big-cart__head-name">Наименование</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-count">
+                            <p class="big-cart__head-name">Количество</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-price">
+                            <p class="big-cart__head-name">Цена за ед.</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-sum">
+                            <p class="big-cart__head-name">Сумма</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-delete">
+                            <p class="big-cart__head-name">Удалить</p>
+                        </div>
+                    </div>
+                    <div class="big-cart__line big-cart__line-product">
+                        <div class="big-cart__cell big-cart__cell-photo">
+                            <img class="big-cart__photo" src="img/product1.jpg" alt="">
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-name">
+                            <p class="big-cart__name">Икра ГОРБУШИ свежая (путИна 2021г.)</p>
+                            <small class="big-cart__name-small"><b>Вес: </b>0,35 кг.</small>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-count">
+                        <span class="big-cart__counter counter">
+                        <button class="counter__button minus">-</button><label class="counter__label">
+                            <input class="counter__input" type="text" value="1"
+                                   onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'')">
+                        </label><button class="counter__button plus">+</button>
+                        </span>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-price">
+                            <p class="big-cart__mob-name">Цена за ед.</p>
+                            <p class="big-cart__price">800 Р</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-sum">
+                            <p class="big-cart__mob-name">Сумма</p>
+                            <p class="big-cart__sum">1 600 Р</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-delete">
+                            <button class="big-cart__delete"></button>
+                        </div>
+                    </div>
+                    <div class="big-cart__line big-cart__line-product">
+                        <div class="big-cart__cell big-cart__cell-photo">
+                            <img class="big-cart__photo" src="img/product2.jpg" alt="">
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-name">
+                            <p class="big-cart__name">Икра ЧЕРНАЯ ОСЕТРОВАЯ "Premium"</p>
+                            <small class="big-cart__name-small"><b>Вес: </b>0,35 кг.</small>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-count">
+                        <span class="big-cart__counter counter">
+                        <button class="counter__button minus">-</button><label class="counter__label">
+                            <input class="counter__input" type="text" value="1"
+                                   onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'')">
+                        </label><button class="counter__button plus">+</button>
+                        </span>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-price">
+                            <p class="big-cart__mob-name">Цена за ед.</p>
+                            <p class="big-cart__price">800 Р</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-sum">
+                            <p class="big-cart__mob-name">Сумма</p>
+                            <p class="big-cart__sum">1 600 Р</p>
+                        </div>
+
+                        <div class="big-cart__cell big-cart__cell-delete">
+                            <button class="big-cart__delete"></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="big-cart__nav">
+                    <div class="big-cart__about">
+                        <div class="big-cart__about-line">
+                            <p class="big-cart__about-name">Стоимость заказа:</p>
+                            <p class="big-cart__about-value">3 200 Р</p>
+                        </div>
+
+                        <div class="big-cart__about-line">
+                            <p class="big-cart__about-name">Доставка:</p>
+                            <p class="big-cart__about-value">500 Р</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="big-cart__submit-block">
+                    <div class="big-cart__submit-line">
+                        <p class="big-cart__submit-name">Итого к оплате:</p>
+                        <p class="big-cart__submit-value">3 700 Р</p>
+                    </div>
+
+
+                    <div class="big-cart__submit-main">
+                        <a href="index.html" class="big-cart__submit-button button button--trans-red">Вернуться к покупкам</a>
+
+                        <a href="ordering.html" class="big-cart__submit-button button button--red">Оформить заказ</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">

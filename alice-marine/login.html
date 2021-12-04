@@ -190,7 +190,87 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class="authorization">
+        <div class="authorization__wrapper wrapper">
+            <h1 class="authorization__title title-big">Авторизация/регистрация</h1>
+
+            <div class="authorization__container">
+                <form class="authorization__main-form main-form" method="post" action="#">
+                    <div class="main-form__container-big">
+                        <div class="main-form__fieldset-trans">
+                            <div class="main-form__title-block">
+                                <h2 class="main-form__title">Быстрая регистрация</h2>
+
+                                <p class="main-form__text-small">Создание учетной записи поможет делать следующие покупки быстрее (не надо будет снова вводить адрес и контактную информацию), видеть состояние заказа, а также видеть заказы, сделанные ранее.</p>
+                            </div>
+
+                            <div class="main-form__inputs">
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">E-mail: <span>*</span></span>
+                                    <input class="main-form__input" type="email" name=email"
+                                           placeholder="example@gmail.com" required>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Пароль: <span>*</span></span>
+                                    <input class="main-form__input" type="password" name=password" required>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Повторите пароль: <span>*</span></span>
+                                    <input class="main-form__input" type="password" name=password-repeat" required>
+                                </label>
+                            </div>
+
+
+                            <div class="main-form__submit-block">
+                                <button class="main-form__button-reg button button--red">Зарегистрироваться</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="authorization__main-form main-form" method="post" action="#">
+                    <div class="main-form__container-big">
+                        <div class="main-form__fieldset-trans">
+                            <div class="main-form__title-block">
+                                <h2 class="main-form__title">Вход в личный кабинет</h2>
+                            </div>
+
+                            <div class="main-form__inputs">
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">E-mail: <span>*</span></span>
+                                    <input class="main-form__input" type="email" name=email"
+                                           placeholder="example@gmail.com" required>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Пароль: <span>*</span></span>
+                                    <input class="main-form__input" type="password" name=password" required>
+                                </label>
+                            </div>
+
+
+                            <div class="main-form__submit-block">
+                                <button class="main-form__button-log button button--red">Войти</button>
+                                <a class="main-form__forget-link" href="#">Забыли пароль?</a>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">
