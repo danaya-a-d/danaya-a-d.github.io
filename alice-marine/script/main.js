@@ -204,7 +204,7 @@ $(document).ready(function () {
         ]
     };
 
-    slick_mobile($('.products:not(.products--slider)'), settings_var, 992);
+    slick_mobile($('.products--mobslider'), settings_var, 992);
     slick_mobile($('.banners__container--slider'), settings_ban, 769);
 
     // слайдер карточки товара
@@ -529,6 +529,47 @@ $(document).ready(function () {
             enableEscapeButton: true
         });
     }
+
+    // открытие меню в каталоге
+
+    $('.nav-menu__title').on('click', function () {
+        $('.nav-menu__list').toggleClass('active');
+    });
+
+    $('.nav-menu__item-opening').on('click', function () {
+        $('.nav-menu__item-opening').toggleClass('active');
+        $('.nav-menu__sublist').toggleClass('active');
+    });
+
+    //кастомный select
+    jQuery(($) => {
+        $('.select').on('click', '.select__head', function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $(this).next().fadeOut();
+            } else {
+                $('.select__head').removeClass('open');
+                $('.select__list').fadeOut();
+                $(this).addClass('open');
+                $(this).next().fadeIn();
+            }
+        });
+
+        $('.select').on('click', '.select__item', function () {
+            $('.select__head').removeClass('open');
+            $(this).parent().fadeOut();
+            $(this).parent().prev().text('');
+            $(this).parent().prev().append($(this).html());
+            $(this).parent().prev().prev().val($(this).text());
+        });
+
+        $(document).click(function (e) {
+            if (!$(e.target).closest('.select').length) {
+                $('.select__head').removeClass('open');
+                $('.select__list').fadeOut();
+            }
+        });
+    });
 
 });
 
