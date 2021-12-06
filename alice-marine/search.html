@@ -190,7 +190,265 @@
 
 </header>
 
-<main class="page-main"></main>
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__home"><a href="index.html"></a></li>
+            <li class="breadcrumbs__item"><a href="catalog.html">Каталог продукции</a></li>
+            <li class="breadcrumbs__item">Охлажденная рыба, филе и стейки</li>
+        </ul>
+    </div>
+
+    <section class="search">
+        <div class="search__wrapper wrapper">
+            <h1 class="search__title title-big">Поиск - «Икра красная и черная, слабой соли»</h1>
+
+            <form class="search__form search-form">
+                <div class="search-form__line">
+                    <label class="search-form__label">
+                        <span class="search-form__label-name">Критерий поиска</span>
+                        <input class="search-form__input" name="criteria" type="text">
+                    </label>
+
+                    <div class="search-form__label">
+                        <span class="search-form__label-name">Категория</span>
+
+                        <div class="select search-form__input">
+                            <input type="hidden" name="categories" value="Все категории" required>
+                            <div class="select__head">Все категории</div>
+                            <ul class="select__list" style="display: none;">
+                                <li class="select__item">По умолчанию</li>
+                                <li class="select__item">По афавиту (А-Я)</li>
+                                <li class="select__item">По афавиту (Я-А)</li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="search-form__button button button--black">Найти</button>
+
+                <div class="search-form__line">
+                    <label class="search-form__checkbox-label">
+                        <input class="visually-hidden" name="agree" type="checkbox">
+                        <span class="search-form__checkbox-indicator"></span>
+                        <span class="search-form__indicator-title indicator-title">Искать в подкатегориях</span>
+                    </label>
+
+                    <label class="search-form__checkbox-label">
+                        <input class="visually-hidden" name="agree" type="checkbox">
+                        <span class="search-form__checkbox-indicator"></span>
+                        <span class="search-form__indicator-title indicator-title">Искать в описании товара</span>
+                    </label>
+                </div>
+            </form>
+
+            <div class="search__products-block">
+                <h2 class="search__products-title title-small">Найдено 4 товара</h2>
+
+                <form class="search__control-block control">
+                    <div class="control__sort-label">
+                        <div class="control__sort-title">Сортировать:</div>
+
+                        <div class="select control__select">
+                            <input type="hidden" name="sort" value="По умолчанию" required>
+                            <div class="select__head">По умолчанию</div>
+                            <ul class="select__list" style="display: none;">
+                                <li class="select__item">По умолчанию</li>
+                                <li class="select__item">По афавиту (А-Я)</li>
+                                <li class="select__item">По афавиту (Я-А)</li>
+                                <li class="select__item">По цене (убыванию)</li>
+                                <li class="select__item">По цене (возрастанию)</li>
+                                <li class="select__item">По рейтингу (убыванию)</li>
+                                <li class="select__item">По рейтингу (возрастанию)</li>
+                            </ul>
+                        </div>
+
+                        <!--                            <select class="control__select">-->
+                        <!--                                <option>По умолчанию</option>-->
+                        <!--                                <option>По афавиту (А-Я)</option>-->
+                        <!--                                <option>По афавиту (Я-А)</option>-->
+                        <!--                                <option>По цене (убыванию)</option>-->
+                        <!--                                <option>По цене (возрастанию)</option>-->
+                        <!--                                <option>По рейтингу (убыванию)</option>-->
+                        <!--                                <option>По рейтингу (возрастанию)</option>-->
+                        <!--                            </select>-->
+                    </div>
+
+                    <div class="control__counts-block">
+                        <span class="control__sort-title">Показывать по:</span>
+
+                        <label class="control__count-label">
+                            <input class="visually-hidden" name="count" type="radio" value="15" checked>
+                            <span class="control__count-indicator">15</span>
+                        </label>
+
+                        <label class="control__count-label">
+                            <input class="visually-hidden" name="count" type="radio" value="30">
+                            <span class="control__count-indicator">30</span>
+                        </label>
+
+                        <label class="control__count-label">
+                            <input class="visually-hidden" name="count" type="radio" value="60">
+                            <span class="control__count-indicator">60</span>
+                        </label>
+
+                        <label class="control__count-label">
+                            <input class="visually-hidden" name="count" type="radio" value="all">
+                            <span class="control__count-indicator big">Все</span>
+                        </label>
+                    </div>
+
+                    <div class="control__views-block">
+                        <label class="control__view-label">
+                            <input class="visually-hidden" name="view" type="radio" value="list">
+                            <span class="control__view-indicator control__view-indicator--list"></span>
+                        </label>
+
+                        <label class="control__view-label">
+                            <input class="visually-hidden" name="view" type="radio" value="blocks" checked>
+                            <span class="control__view-indicator control__view-indicator--blocks"></span>
+                        </label>
+                    </div>
+                </form>
+
+                <ul class="search__products products">
+                    <li class="products__item">
+                        <a class="products__img-link" href="product.html">
+                            <div class="products__photo" style="background-image: url(img/product1.jpg)"></div>
+                            <span class="products__label">Под заказ</span>
+                        </a>
+
+                        <div class="products__about">
+                            <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+
+                            <div class="products__rate-block">
+                                <div class="products__rate rating">
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="inactive">★</span>
+                                </div>
+                                <a href="product.html" class="products__rate-link">159 отзывов</a>
+                            </div>
+
+                            <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                                Икринки чистые, целые, ...
+                            </p>
+
+                            <div class="products__nav">
+                                <span class="products__value">0,5 кг</span>
+                                <button class="products__button button button--red button--buy">
+                                    <span class="button-value">2 550 Р</span>
+                                    <span class="button-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <a class="products__img-link" href="product.html">
+                            <div class="products__photo" style="background-image: url(img/product2.jpg)"></div>
+                            <span class="products__label">Под заказ</span>
+                        </a>
+
+                        <div class="products__about">
+                            <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+
+                            <div class="products__rate-block">
+                                <div class="products__rate rating">
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="inactive">★</span>
+                                </div>
+                                <a href="product.html" class="products__rate-link">159 отзывов</a>
+                            </div>
+
+                            <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                                Икринки чистые, целые, ...
+                            </p>
+
+                            <div class="products__nav">
+                                <span class="products__value">0,5 кг</span>
+                                <button class="products__button button button--red button--buy">
+                                    <span class="button-value">2 550 Р</span>
+                                    <span class="button-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <a class="products__img-link" href="product.html">
+                            <div class="products__photo" style="background-image: url(img/product3.jpg)"></div>
+                            <span class="products__label">Под заказ</span>
+                        </a>
+
+                        <div class="products__about">
+                            <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+
+                            <div class="products__rate-block">
+                                <div class="products__rate rating">
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="inactive">★</span>
+                                </div>
+                                <a href="product.html" class="products__rate-link">159 отзывов</a>
+                            </div>
+
+                            <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                                Икринки чистые, целые, ...
+                            </p>
+
+                            <div class="products__nav">
+                                <span class="products__value">0,5 кг</span>
+                                <button class="products__button button button--red button--buy">
+                                    <span class="button-value">2 550 Р</span>
+                                    <span class="button-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="products__item">
+                        <a class="products__img-link" href="product.html">
+                            <div class="products__photo" style="background-image: url(img/product4.jpg)"></div>
+                            <span class="products__label">Под заказ</span>
+                        </a>
+                        <div class="products__about">
+                            <a href="product.html" class="products__name">Икра ГОРБУШИ свежая (путИна 2021г.) Икра ГОРБУШИ свежая (путИна 2021г.)</a>
+
+                            <div class="products__rate-block">
+                                <div class="products__rate rating">
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="active">★</span>
+                                    <span class="inactive">★</span>
+                                </div>
+                                <a href="product.html" class="products__rate-link">159 отзывов</a>
+                            </div>
+
+                            <p class="products__description">Вкусный и полезный продукт с зернистой текстурой.
+                                Икринки чистые, целые, ...
+                            </p>
+
+                            <div class="products__nav">
+                                <span class="products__value">0,5 кг</span>
+                                <button class="products__button button button--red button--buy">
+                                    <span class="button-value">2 550 Р</span>
+                                    <span class="button-text">В корзину</span>
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
 
 <footer class="footer">
     <div class="footer__upper-wrapper wrapper">
@@ -324,7 +582,7 @@
                    placeholder="Пароль" type="password" required>
 
             <div class="modal__submit-block">
-                <button class="modal__button button button--red login-btn">Войти</button>
+                <button class="modal__button button button--red login">Войти</button>
             </div>
         </form>
     </div>

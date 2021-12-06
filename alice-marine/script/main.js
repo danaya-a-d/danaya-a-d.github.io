@@ -204,11 +204,33 @@ $(document).ready(function () {
         ]
     };
 
+    const settings_table = {
+        dots: true,
+        arrows: false,
+        slidesToShow: 1,
+        mobileFirst: true,
+        infinite: false,
+        responsive: [
+            {
+                breakpoint: 481,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    arrows: false,
+                }
+            },
+            {
+                breakpoint: 769,
+                settings: 'unslick'
+            },
+        ]
+    };
+
+    // slick_mobile($('.table__block--scroll'), settings_var, 992);
     slick_mobile($('.products--mobslider'), settings_var, 992);
     slick_mobile($('.banners__container--slider'), settings_ban, 769);
 
     // слайдер карточки товара
-
     $('.product__big-photos').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -227,8 +249,6 @@ $(document).ready(function () {
         focusOnSelect: true,
         infinite: false,
     });
-
-
 
     // плавное пролистывание к якорю
     $('a[href*="#"]').click(function (e) {
@@ -281,7 +301,6 @@ $(document).ready(function () {
         }
     }
 
-
     $('.upper-block__sliders').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         move_right();
     });
@@ -289,17 +308,6 @@ $(document).ready(function () {
     $('.catalog__sliders').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
         move_right();
     });
-
-
-    // // Left-Prev
-    // $('.upper-block__sliders').find('.slick-next').click(function (e) {
-    //     move_right();
-    // });
-    //
-    // // Right - Next
-    // $('.upper-block__sliders').find('.slick-prev').click(function (e) {
-    //     move_right();
-    // });
 
     function show_overlay(v) {
         v.on({
@@ -569,6 +577,42 @@ $(document).ready(function () {
                 $('.select__list').fadeOut();
             }
         });
+    });
+
+    //чекбокс, выделенный лейбл
+    function bold_label() {
+
+        $('input[type="radio"]:checked')
+            .closest('label')
+            .find('.indicator-title')
+            .css("color", '#202125');
+            // .css("font-weight", '600');
+
+        $('input[type="radio"]:not(:checked)')
+            .closest('label')
+            .find('.indicator-title')
+            .css("color", '#999999');
+            // .css("font-weight", 'normal');
+
+        $('input[type="checkbox"]:checked')
+            .closest('label')
+            .find('.indicator-title')
+            .css("color", '#202125');
+            // .css("font-weight", '600');
+
+        $('input[type="checkbox"]:not(:checked)')
+            .closest('label')
+            .find('.indicator-title')
+            .css("color", '#999999');
+            // .css("font-weight", 'normal');
+    }
+
+    bold_label();
+    $('input[type="radio"]').on('change', function () {
+        bold_label();
+    });
+    $('input[type="checkbox"]').on('change', function () {
+        bold_label();
     });
 
 });
