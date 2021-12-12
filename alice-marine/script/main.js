@@ -439,7 +439,13 @@ $(document).ready(function () {
         },
     });
 
-    $('.header__cart-about').click(function (e) {
+    $('.header__cart-icon').click(function (e) {
+        $('.header__cart-block').fadeIn(200);
+        $('.header__cart-block').removeClass('transform-out').addClass('transform-in');
+        $('.header__cart-about').addClass('dark');
+    });
+
+    $('.header__cart-info').click(function (e) {
         $('.header__cart-block').fadeIn(200);
         $('.header__cart-block').removeClass('transform-out').addClass('transform-in');
         $('.header__cart-about').addClass('dark');
