@@ -248,6 +248,11 @@ $(document).ready(function () {
         infinite: false,
     });
 
+    let slidesCount = $('.product__small-photo').length;
+    if(slidesCount < 4) {
+        $('.slick-track').addClass('no-transform');
+    }
+
     // плавное пролистывание к якорю
     $('a[href*="#"]').click(function (e) {
         let offset;
