@@ -75,6 +75,7 @@ $(document).ready(function () {
     slick_mobile($('.features__list'), settings_ban, 769);
     slick_mobile($('.specialization__list'), settings_ban, 769);
     slick_mobile($('.history__list'), settings_ban, 769);
+    slick_mobile($('.indications__list'), settings_ban, 769);
 
     // $('.slick-dots').prepend('<div><a class="prev-btn">Prev</a></div>');
     // $('.slick-dots').append('<div><a class="next-btn">Next</a></div>');
@@ -147,6 +148,17 @@ $(document).ready(function () {
         } else {
             menu_close();
         }
+    });
+
+    // включение видео
+    $('.gallery__video-link').on('click', function () {
+        let $video = $(this).find('.gallery__video'),
+            src = $video.attr('src');
+        $video.removeAttr('srcdoc');
+
+        $video.attr('src', src + '?&autoplay=1');
+        $(this).find('.gallery__play-btn').hide();
+        $(this).addClass('play');
     });
 
 });
