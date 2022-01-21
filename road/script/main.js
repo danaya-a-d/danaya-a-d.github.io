@@ -1,35 +1,5 @@
 $(document).ready(function () {
 
-    // //кастомный select
-    // jQuery(($) => {
-    //     $('.select').on('click', '.select__head', function () {
-    //         if ($(this).hasClass('open')) {
-    //             $(this).removeClass('open');
-    //             $(this).next().fadeOut();
-    //         } else {
-    //             $('.select__head').removeClass('open');
-    //             $('.select__list').fadeOut();
-    //             $(this).addClass('open');
-    //             $(this).next().fadeIn();
-    //         }
-    //     });
-    //
-    //     $('.select').on('click', '.select__item', function () {
-    //         $('.select__head').removeClass('open');
-    //         $(this).parent().fadeOut();
-    //         $(this).parent().prev().text('');
-    //         $(this).parent().prev().append($(this).html());
-    //         $(this).parent().prev().prev().val($(this).text());
-    //     });
-    //
-    //     $(document).click(function (e) {
-    //         if (!$(e.target).closest('.select').length) {
-    //             $('.select__head').removeClass('open');
-    //             $('.select__list').fadeOut();
-    //         }
-    //     });
-    // });
-
     // слайдеры
     function slick_mobile(slider, settings, wide) {
         // Подпишемся на ресайз и продиспатчим его для запуска
@@ -64,6 +34,12 @@ $(document).ready(function () {
         infinite: false,
         adaptiveHeight: true,
         responsive: [
+            {
+                breakpoint: 580,
+                settings: {
+                    slidesToShow: 2
+                }
+            },
             {
                 breakpoint: 769,
                 settings: 'unslick'
