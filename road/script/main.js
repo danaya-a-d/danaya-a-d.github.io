@@ -1,6 +1,7 @@
 $(document).ready(function () {
 
     // слайдеры
+
     function slick_mobile(slider, settings, wide) {
         // Подпишемся на ресайз и продиспатчим его для запуска
         $(window).on('resize', function (e) {
@@ -13,6 +14,8 @@ $(document).ready(function () {
                 if (init !== 1) {
                     // Запускаем слайдер и записываем в data init-slider = 1
                     slider.slick(settings).data({'init-slider': 1});
+                    slider.find($('.slick-dots')).prepend('<div><a class="slick-btn prev-btn"></a></div>');
+                    slider.find($('.slick-dots')).append('<div><a class="slick-btn next-btn"></a></div>');
                 }
             }
             // Если десктоп
@@ -29,9 +32,10 @@ $(document).ready(function () {
     const settings_ban = {
         dots: true,
         arrows: false,
+        // appendDots: $(".slide-m-dots"),
         slidesToShow: 1,
         mobileFirst: true,
-        infinite: false,
+        infinite: true,
         adaptiveHeight: true,
         responsive: [
             {
@@ -52,9 +56,6 @@ $(document).ready(function () {
     slick_mobile($('.specialization__list'), settings_ban, 769);
     slick_mobile($('.history__list'), settings_ban, 769);
     slick_mobile($('.indications__list'), settings_ban, 769);
-
-    // $('.slick-dots').prepend('<div><a class="prev-btn">Prev</a></div>');
-    // $('.slick-dots').append('<div><a class="next-btn">Next</a></div>');
 
     //увеличение изображений
     if ($('[data-fancybox="gallery"]').length > 0) {
