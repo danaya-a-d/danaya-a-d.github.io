@@ -65,9 +65,10 @@ $(document).ready(function () {
             },
             hash: true,
             hideOnOverlayClick: true,
-            enableEscapeButton: true
+            enableEscapeButton: true,
         });
     }
+
 
     //модальные окна
     function modal_show(modal, button_open) {
