@@ -16,6 +16,21 @@ $(document).ready(function () {
                     slider.slick(settings).data({'init-slider': 1});
                     slider.find($('.slick-dots')).prepend('<div><a class="slick-btn prev-btn"></a></div>');
                     slider.find($('.slick-dots')).append('<div><a class="slick-btn next-btn"></a></div>');
+
+
+                    slider.on('click', '.prev-btn', function(e) {
+                        e.preventDefault();
+                        slider.slick('slickPrev');
+                    });
+
+                    slider.on('click', '.next-btn', function(e) {
+                        e.preventDefault();
+                        slider.slick('slickNext');
+                    });
+
+                    slider.find($('.slick-dots li button')).on('click', function(e){
+                        e.stopPropagation();
+                    });
                 }
             }
             // Если десктоп
@@ -68,7 +83,6 @@ $(document).ready(function () {
             enableEscapeButton: true,
         });
     }
-
 
     //модальные окна
     function modal_show(modal, button_open) {
@@ -137,6 +151,12 @@ $(document).ready(function () {
         $video.attr('src', src + '?&autoplay=1');
         $(this).find('.gallery__play-btn').hide();
         $(this).addClass('play');
+    });
+
+
+    //смена языка
+    $('.languages').on('click', function () {
+        $(this).toggleClass('active');
     });
 
 });
