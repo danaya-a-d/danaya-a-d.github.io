@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+
+    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<div>
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <symbol id="twitter" viewBox="0 0 19 16">
+            <path d="M19.565 2.025a8.012 8.012 0 0 1-2.248.625A3.843 3.843 0 0 0 19.04.462a8.232 8.232 0 0 1-2.487.962 3.925 3.925 0 0 0-2.87-1.25c-2.175 0-3.921 1.78-3.921 3.943 0 .313.024.601.095.89C6.604 4.862 3.735 3.276 1.798.895c-1.387 2.5.167 4.568 1.195 5.266-.621 0-1.243-.193-1.77-.481 0 1.947 1.364 3.558 3.133 3.919-.382.12-1.243.192-1.77.072.503 1.563 1.962 2.717 3.66 2.741-1.34 1.058-3.3 1.9-5.811 1.635a11.019 11.019 0 0 0 6.026 1.78c7.222 0 11.143-6.012 11.143-11.205 0-.168 0-.337-.024-.505.813-.601 1.483-1.298 1.985-2.092z"
+                  fill="#fff"/>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 20 20">
+            <g clip-path="url(#clip0_307_1539)">
+                <path d="M11.482 19.565V10.84h2.927l.44-3.402h-3.367V5.267c0-.985.272-1.656 1.685-1.656h1.8V.567c-.311-.04-1.38-.133-2.623-.133C9.747.435 7.97 2.02 7.97 4.93v2.508H5.033v3.402H7.97v8.725h3.512z"
+                      fill="#fff"/>
+            </g>
+        </symbol>
+        <symbol id="discord" viewBox="0 0 20 20">
+            <g clip-path="url(#clip0_307_1544)">
+                <path d="M16.63 3.918a15.777 15.777 0 0 0-3.894-1.208.06.06 0 0 0-.063.03c-.168.299-.354.69-.485.996a14.57 14.57 0 0 0-4.373 0 9.902 9.902 0 0 0-.493-.996.061.061 0 0 0-.062-.03 15.732 15.732 0 0 0-3.894 1.208.056.056 0 0 0-.026.022C.86 7.645.18 11.26.514 14.829a.066.066 0 0 0 .025.044 15.865 15.865 0 0 0 4.777 2.415.062.062 0 0 0 .067-.022 11.34 11.34 0 0 0 .977-1.59.06.06 0 0 0-.033-.084 10.447 10.447 0 0 1-1.493-.71.061.061 0 0 1-.006-.103c.1-.075.201-.153.297-.232a.06.06 0 0 1 .062-.008c3.13 1.43 6.52 1.43 9.614 0a.06.06 0 0 1 .062.007c.096.08.197.158.298.233a.061.061 0 0 1-.006.102 9.8 9.8 0 0 1-1.493.71.06.06 0 0 0-.032.086c.287.556.615 1.086.976 1.588a.06.06 0 0 0 .067.023 15.809 15.809 0 0 0 4.785-2.415.061.061 0 0 0 .025-.044c.399-4.126-.668-7.71-2.829-10.888a.048.048 0 0 0-.024-.023zm-9.802 8.737c-.943 0-1.72-.865-1.72-1.928S5.87 8.8 6.828 8.8c.965 0 1.734.873 1.719 1.928 0 1.063-.762 1.928-1.72 1.928zm6.356 0c-.942 0-1.719-.865-1.719-1.928s.762-1.928 1.72-1.928c.964 0 1.733.873 1.718 1.928 0 1.063-.754 1.928-1.719 1.928z"
+                      fill="#fff"/>
+            </g>
+        </symbol>
+        <symbol id="google" viewBox="0 0 16 16">
+            <path d="M16 8c0-.5 0-1-.1-1.5 0-.2-.2-.4-.5-.4H8c-.3 0-.5.2-.5.5v2.8c0 .3.2.5.5.5h3.8c-.2.5-.6.9-.9 1.2l2.6 2.6C15 12.3 16 10.3 16 8zM8 3.8c.9 0 1.8.3 2.5.8.2.1.4.1.6 0l2-2c.1-.1.1-.2.1-.4 0-.1-.1-.3-.2-.3C11.7.7 9.9 0 8 0 5.3 0 2.8 1.4 1.4 3.5l2.8 2.8C4.8 4.8 6.3 3.8 8 3.8zM8 16c1.8 0 3.4-.6 4.8-1.6l-2.7-2.7c-.6.3-1.4.5-2.1.5-1.7 0-3.2-1-3.9-2.5l-2.8 2.8C2.8 14.6 5.3 16 8 16zM3.8 8.7c0-.2-.1-.4-.1-.7 0-.2 0-.5.1-.7L.9 4.4C.3 5.5 0 6.7 0 8c0 1.3.3 2.5.9 3.6l2.9-2.9z"
+                  fill="#fff"/>
+        </symbol>
+        <symbol id="bell" viewBox="0 0 28 28">
+            <g clip-path="url(#clip0_307_483)" fill="#fff">
+                <path d="M24.942 19.732a7.814 7.814 0 0 1-2.775-5.98V10.5c0-4.106-3.05-7.504-7-8.073v-1.26a1.166 1.166 0 1 0-2.334 0v1.26c-3.951.569-7 3.967-7 8.073v3.253a7.823 7.823 0 0 1-2.786 5.988 2.038 2.038 0 0 0-.714 1.55c0 1.127.916 2.042 2.042 2.042h19.25a2.044 2.044 0 0 0 2.042-2.041c0-.598-.26-1.162-.725-1.56zM14 28a4.382 4.382 0 0 0 4.286-3.5H9.714A4.382 4.382 0 0 0 14 28z"/>
+            </g>
+        </symbol>
+    </svg>
+</div>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <a class="header__logo logo" href="index.html"><img src="img/logo.svg" alt="AlibaGames"></a>
+
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item active"><a href="index.html">Games</a></li>
+                <li class="header__nav-item"><a href="news.html">News</a></li>
+                <li class="header__nav-item"><a href="shop.html">Shop</a></li>
+            </ul>
+        </nav>
+
+        <div class="header__controls">
+            <div class="header__tokens">
+                <span class="header__tokens-count">1200</span>
+                <img class="header__tokens-icon" alt="" src="img/token-Icon.svg">
+            </div>
+
+            <div class="header__user-info">
+                <div class="header__user-data">
+                    <span class="header__user-name">nikita.kornishev</span>
+                    <span class="header__user-email">nikita.kornishev@gmail...</span>
+                </div>
+
+                <button class="header__user-button">
+                    <img class="header__user-photo" src="img/user.svg" alt="">
+                </button>
+
+                <ul class="header__user-menu user-menu">
+                    <li class="user-menu__item"><a href="#">Profile</a></li>
+                    <li class="user-menu__item"><a href="#">Orders history</a></li>
+                    <li class="user-menu__item"><a href="#">Logout</a></li>
+                </ul>
+            </div>
+
+            <div class="header__notifications-block">
+                <div class="header__notifications-btn-block">
+                    <button class="header__notifications-button">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#bell"></use>
+                        </svg>
+                    </button>
+                    <span class="header__notifications-count">3</span>
+                </div>
+
+                <div class="header__notifications notifications">
+                    <ul class="notifications__list">
+                        <li class="notifications__item">
+                            <a href="news-item.html" class="notifications__title-block">
+                                <span class="notifications__icon game"></span>
+                                <h3 class="notifications__title">New event come!</h3>
+                                <span class="notifications__tag">New</span>
+                            </a>
+
+                            <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod</p>
+
+                            <div class="notifications__info">
+                                <p class="notifications__name">Ninja Crazy</p>
+                                <time class="notifications__time">03.02</time>
+                            </div>
+                        </li>
+
+                        <li class="notifications__item">
+                            <a href="news-item.html" class="notifications__title-block">
+                                <span class="notifications__icon article"></span>
+                                <h3 class="notifications__title">Updated portal rules</h3>
+                                <span class="notifications__tag">New</span>
+                            </a>
+
+                            <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod</p>
+
+                            <div class="notifications__info">
+                                <time class="notifications__time">03.02</time>
+                            </div>
+                        </li>
+
+                        <li class="notifications__item">
+                            <a href="news-item.html" class="notifications__title-block">
+                                <span class="notifications__icon megaphone"></span>
+                                <h3 class="notifications__title">20% discount on all products</h3>
+                                <span class="notifications__tag">New</span>
+                            </a>
+
+                            <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                do eiusmod</p>
+
+                            <div class="notifications__info">
+                                <time class="notifications__time">30.12.2021</time>
+                            </div>
+                        </li>
+                    </ul>
+                    <a class="notifications__link" href="#">Show all notifications</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header__languages">
+            <span class="header__language">EN</span>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <div class="breadcrumbs">
+        <ul class="breadcrumbs__list wrapper">
+            <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
+            <li class="breadcrumbs__item"><a>News</a></li>
+        </ul>
+    </div>
+
+    <section class="shop">
+        <div class="shop__wrapper wrapper">
+            <h1 class="visually-hidden">News</h1>
+
+            <form class="shop__filters filters" method="post" action="#">
+                <div class="filters__block">
+                    <div id="categories-select" class="filters__select customselect big">
+
+                        <label class="customselect__label">
+                            <input class="customselect__title" value="All categories" readonly>
+                        </label>
+
+                        <ul class="customselect__list">
+                            <li class="customselect__item" data-value="1">Item 1</li>
+                            <li class="customselect__item" data-value="2">Item 2</li>
+                            <li class="customselect__item" data-value="3">Item 3</li>
+                            <li class="customselect__item" data-value="4">Item 4</li>
+                        </ul>
+                    </div>
+
+                    <div id="games-select" class="filters__select customselect big">
+                        <label class="customselect__label">
+                            <input class="customselect__title" value="All games" readonly>
+                        </label>
+
+                        <ul class="customselect__list">
+                            <li class="customselect__item" data-value="1">Item 1</li>
+                            <li class="customselect__item" data-value="2">Item 2</li>
+                            <li class="customselect__item" data-value="3">Item 3</li>
+                            <li class="customselect__item" data-value="4">Item 4</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="filters__block">
+                    <label class="filters__search search">
+                        <input class="search__input" placeholder="Search" name="search">
+                        <button class="search__button"></button>
+                    </label>
+
+                    <div id="sort-select" class="filters__select customselect small">
+                        <label class="customselect__label">
+                            <input class="customselect__title" value="Sort by" readonly>
+                        </label>
+
+                        <ul class="customselect__list">
+                            <li class="customselect__item" data-value="1">Item 1</li>
+                            <li class="customselect__item" data-value="2">Item 2</li>
+                            <li class="customselect__item" data-value="3">Item 3</li>
+                            <li class="customselect__item" data-value="4">Item 4</li>
+                        </ul>
+                    </div>
+                </div>
+            </form>
+
+            <ul class="shop__list">
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image9.jpg" alt="">
+                        <span class="shop__timer">20:05:10</span>
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Bronze pack</p>
+                            <p class="shop__tokens">1000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$10.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image10.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Silver pack</p>
+                            <p class="shop__tokens">10000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">99.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image11.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Gold pack</p>
+                            <p class="shop__tokens">50000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$199.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image12.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Platinum pack</p>
+                            <p class="shop__tokens">100000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$499.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image9.jpg" alt="">
+                        <span class="shop__timer">20:05:10</span>
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Bronze pack</p>
+                            <p class="shop__tokens">1000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$10.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image10.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Silver pack</p>
+                            <p class="shop__tokens">10000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">99.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image11.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Gold pack</p>
+                            <p class="shop__tokens">50000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$199.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image12.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Platinum pack</p>
+                            <p class="shop__tokens">100000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$499.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image9.jpg" alt="">
+                        <span class="shop__timer">20:05:10</span>
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Bronze pack</p>
+                            <p class="shop__tokens">1000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$10.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image10.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Silver pack</p>
+                            <p class="shop__tokens">10000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">99.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image11.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Gold pack</p>
+                            <p class="shop__tokens">50000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$199.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="shop__item">
+                    <div class="shop__image-block">
+                        <img class="shop__image" src="img/image12.jpg" alt="">
+                    </div>
+
+                    <div class="shop__about">
+                        <div class="shop__name-block">
+                            <p class="shop__name">Platinum pack</p>
+                            <p class="shop__tokens">100000</p>
+                        </div>
+
+                        <div class="shop__buy-block">
+                            <a href="#" class="shop__button button">Buy Now</a>
+                            <p class="shop__price">
+                                <span class="shop__price-title">Price</span>
+                                <span class="shop__price-value">$499.00</span>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__logo-block">
+            <a class="footer__logo logo" href="index.html"><img src="img/logo.svg" alt="AlibaGames"></a>
+
+            <p class="footer__slogan">Owned and operated by MV Solutions</p>
+        </div>
+
+        <div class="footer__nav">
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">Resources</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Contacts</a></li>
+                    <li class="footer__nav-item"><a href="#">About us</a></li>
+                    <li class="footer__nav-item"><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">Legal</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Privacy policy</a></li>
+                    <li class="footer__nav-item"><a href="#">Terms of use</a></li>
+                    <li class="footer__nav-item"><a href="#">Cookie policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">My Account</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Profile</a></li>
+                    <li class="footer__nav-item"><a href="#">Orders history</a></li>
+                    <li class="footer__nav-item"><a href="#">Logout</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">Portal</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Games</a></li>
+                    <li class="footer__nav-item"><a href="#">News</a></li>
+                    <li class="footer__nav-item"><a href="#">Shop</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <ul class="footer__socials socials">
+            <li class="socials__item"><a href="#">
+                <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#twitter"></use>
+                </svg>
+            </a></li>
+
+            <li class="socials__item"><a href="#">
+                <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#facebook"></use>
+                </svg>
+            </a></li>
+
+            <li class="socials__item"><a href="#">
+                <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="#discord"></use>
+                </svg>
+            </a></li>
+        </ul>
+    </div>
+</footer>
+<div class="modal-back hide">
+    <div class="modal modal--form modal-register hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Register</h2>
+
+        <form class="modal__form main-form" action="#" method="post">
+            <fieldset class="main-form__fieldset">
+                <legend class="main-form__legend" align="center">Register with socials</legend>
+
+                <div class="main-form__social-btns">
+                    <a href="#" class="main-form__social-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#google"></use>
+                        </svg>
+                        Google</a>
+                    <a href="#" class="main-form__social-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                        Facebook</a>
+                </div>
+            </fieldset>
+
+
+            <fieldset class="main-form__fieldset">
+                <legend class="main-form__legend" align="center">Or directly</legend>
+                <label class="main-form__label">
+                    <span class="main-form__toggles">
+
+                        <label class="main-form__label-toggle">
+                            <input class="visually-hidden" name="login-type" type="radio" value="email" checked
+                                   required>
+                            <span class="main-form__toggle">Email</span>
+                        </label>
+
+                        <label class="main-form__label-toggle">
+                            <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
+                            <span class="main-form__toggle">Mobile</span>
+                        </label>
+
+                    </span>
+
+                    <input class="main-form__input" type="text" name="email" placeholder="Email"
+                           required>
+
+                    <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
+                    <!--                           required>-->
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name=password" placeholder="Password"
+                           required>
+                </label>
+
+                <label class="main-form__label-check">
+                    <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
+                    <span class="main-form__check-indicator"></span>
+                    <span class="main-form__indicator-title">
+                        I have read and agree to <a href="#">Terms and Conditions, Privacy Policy</a>
+                    </span>
+                </label>
+            </fieldset>
+
+            <button class="main-form__button button">Register</button>
+
+            <p class="main-form__note">Already have an account? <a href="#">Login</a></p>
+        </form>
+    </div>
+
+    <div class="modal modal--form modal-login hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Login</h2>
+
+        <form class="modal__form main-form" action="#" method="post">
+            <fieldset class="main-form__fieldset">
+                <legend class="main-form__legend" align="center">Login with socials</legend>
+
+                <div class="main-form__social-btns">
+                    <a href="#" class="main-form__social-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#google"></use>
+                        </svg>
+                        Google</a>
+                    <a href="#" class="main-form__social-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                        Facebook</a>
+                </div>
+            </fieldset>
+
+
+            <fieldset class="main-form__fieldset">
+                <legend class="main-form__legend" align="center">Or directly</legend>
+                <label class="main-form__label">
+                    <span class="main-form__toggles">
+
+                        <label class="main-form__label-toggle">
+                            <input class="visually-hidden" name="login-type" type="radio" value="email" checked
+                                   required>
+                            <span class="main-form__toggle">Email</span>
+                        </label>
+
+                        <label class="main-form__label-toggle">
+                            <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
+                            <span class="main-form__toggle">Mobile</span>
+                        </label>
+
+                    </span>
+
+                    <input class="main-form__input" type="text" name="email" placeholder="Email"
+                           required>
+
+                    <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
+                    <!--                           required>-->
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name=password" placeholder="Password"
+                           required>
+                </label>
+
+                <a href="#" class="main-form__note-link">Forgot password?</a>
+            </fieldset>
+
+            <button class="main-form__button button">Login</button>
+
+            <p class="main-form__note">Don’t have an account? <a href="#">Register</a></p>
+        </form>
+    </div>
+
+    <div class="modal modal--form modal-forgot hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Forgot password</h2>
+
+        <form class="modal__form main-form" action="#" method="post">
+            <fieldset class="main-form__fieldset main-form__fieldset--noborder">
+
+                <legend class="visually-hidden">Forgot password</legend>
+
+                <label class="main-form__label">
+                    <span class="main-form__toggles">
+
+                        <label class="main-form__label-toggle">
+                            <input class="visually-hidden" name="login-type" type="radio" value="email" checked
+                                   required>
+                            <span class="main-form__toggle">Email</span>
+                        </label>
+
+                        <label class="main-form__label-toggle">
+                            <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
+                            <span class="main-form__toggle">Mobile</span>
+                        </label>
+
+                    </span>
+
+                    <input class="main-form__input" type="text" name="email" placeholder="Email"
+                           required>
+
+                    <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
+                    <!--                           required>-->
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name=password" placeholder="Password"
+                           required>
+                </label>
+
+                <a href="#" class="main-form__note-link">Already have a code?</a>
+            </fieldset>
+
+            <button class="main-form__button button">Restore</button>
+
+            <p class="main-form__note">Back to <a href="#">Login</a></p>
+        </form>
+    </div>
+
+    <div class="modal modal--form modal-recovery hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Password recovery</h2>
+
+        <form class="modal__form main-form" action="#" method="post">
+            <fieldset class="main-form__fieldset main-form__fieldset--noborder">
+                <legend class="visually-hidden">Password recovery</legend>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name="password" placeholder="New password"
+                           required>
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name=password-repeat"
+                           placeholder="Repeat new password"
+                           required>
+                </label>
+
+            </fieldset>
+
+            <button class="main-form__button button">Change password</button>
+
+        </form>
+    </div>
+
+    <div class="modal modal--form modal-verification hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Code verification</h2>
+
+        <form class="modal__form main-form" action="#" method="post">
+            <fieldset class="main-form__fieldset main-form__fieldset--noborder">
+                <legend class="visually-hidden">Code verification</legend>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="text" name="code" placeholder="Code"
+                           required>
+                </label>
+
+            </fieldset>
+
+            <span class="main-form__indicator-title">The code has been sent to the specified number. You can send it again via: 01:00</span>
+
+            <button class="main-form__button button">Submit</button>
+
+            <p class="main-form__note">Back to <a href="#">Forgot password</a></p>
+        </form>
+    </div>
+
+    <div class="modal modal--form modal-verification hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Profile</h2>
+
+        <form class="modal__small-form main-form" action="#" method="post">
+            <div class="main-form__fieldset main-form__fieldset--noborder">
+                <p class="main-form__title">Change email</p>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="email" name="email" placeholder="Email"
+                           required>
+                </label>
+                <button class="main-form__button button button--trans">Save</button>
+            </div>
+        </form>
+
+        <form class="modal__small-form main-form" action="#" method="post">
+            <div class="main-form__fieldset main-form__fieldset--noborder">
+                <p class="main-form__title">Change mobile</p>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"
+                           required>
+                </label>
+
+                <a href="#" class="main-form__note-link">Already have a code?</a>
+
+                <button class="main-form__button button button--trans">Save</button>
+            </div>
+        </form>
+
+        <form class="modal__small-form main-form" action="#" method="post">
+            <div class="main-form__fieldset main-form__fieldset--noborder">
+                <p class="main-form__title">Change password</p>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name=current-password" placeholder="Current password"
+                           required>
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name=new-password" placeholder="New password"
+                           required>
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" type="password" name=repeat-new-password" placeholder="Repeat new password"
+                           required>
+                </label>
+
+                <button class="main-form__button button button--trans">Save</button>
+            </div>
+        </form>
+
+        <div class="modal__delete-block main-form">
+            <div class="main-form__fieldset main-form__fieldset--noborder">
+                <p class="main-form__title">Delete account</p>
+
+                <a href="#" class="main-form__button button">Delete my account</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal--form modal-notification hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Notifications</h2>
+
+        <div class="modal__notifications notifications">
+            <ul class="notifications__list">
+                <li class="notifications__item">
+                    <a href="news-item.html" class="notifications__title-block">
+                        <span class="notifications__icon game"></span>
+                        <h3 class="notifications__title">New event come!</h3>
+                        <span class="notifications__tag">New</span>
+                    </a>
+
+                    <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod</p>
+
+                    <div class="notifications__info">
+                        <p class="notifications__name">Ninja Crazy</p>
+                        <time class="notifications__time">03.02</time>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <a href="news-item.html" class="notifications__title-block">
+                        <span class="notifications__icon article"></span>
+                        <h3 class="notifications__title">Updated portal rules</h3>
+                        <span class="notifications__tag">New</span>
+                    </a>
+
+                    <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod</p>
+
+                    <div class="notifications__info">
+                        <time class="notifications__time">03.02</time>
+                    </div>
+                </li>
+
+                <li class="notifications__item">
+                    <a href="news-item.html" class="notifications__title-block">
+                        <span class="notifications__icon megaphone"></span>
+                        <h3 class="notifications__title">20% discount on all products</h3>
+                        <span class="notifications__tag">New</span>
+                    </a>
+
+                    <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod</p>
+
+                    <div class="notifications__info">
+                        <time class="notifications__time">30.12.2021</time>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="modal modal--pay modal-pay hide" style="display: none">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Payment</h2>
+
+        <ul class="modal__payments payments">
+            <li class="payments__item"><a class="payments__link" href="#">
+                <ul class="payments__systems">
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-american-express.svg" alt="American Express"></li>
+                </ul>
+
+                <img class="payments__wallet-icon" src="img/icon-stripe.svg" alt="Stripe">
+            </a></li>
+
+            <li class="payments__item"><a class="payments__link" href="#">
+                <ul class="payments__systems">
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-bitcoin.svg" alt="Bitcoin"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-ethereum.svg" alt="Ethereum"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-usdt.svg" alt="USDT"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-busd.svg" alt="BUSD"></li>
+                </ul>
+
+                <img class="payments__wallet-icon" src="img/icon-depay.svg" alt="DePay">
+            </a></li>
+
+            <li class="payments__item"><a class="payments__link" href="#">
+                <ul class="payments__systems">
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-paypal.svg" alt="PayPal"></li>
+                </ul>
+
+                <img class="payments__wallet-icon" src="img/icon-xsolla.svg" alt="Xsolla">
+            </a></li>
+
+            <li class="payments__item"><a class="payments__link" href="#">
+                <ul class="payments__systems">
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-bitcoin.svg" alt="Bitcoin"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-ethereum.svg" alt="Ethereum"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-usdt.svg" alt="USDT"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-busd.svg" alt="BUSD"></li>
+                    <li class="payments__system"><span class="payments__system-name">for fiat</span></li>
+                </ul>
+
+                <img class="payments__wallet-icon" src="img/icon-ramp.svg" alt="Ramp">
+            </a></li>
+
+            <li class="payments__item"><a class="payments__link" href="#">
+                <ul class="payments__systems">
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-paypal.svg" alt="PayPal"></li>
+                </ul>
+
+                <img class="payments__wallet-icon" src="img/icon-safecharge.svg" alt="SafeCharge">
+            </a></li>
+
+            <li class="payments__item"><a class="payments__link" href="#">
+                <ul class="payments__systems">
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                </ul>
+
+                <img class="payments__wallet-icon" src="img/icon-skrill.svg" alt="Skrill">
+            </a></li>
+        </ul>
+    </div>
+
+    <div class="modal modal--table modal-orders hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Orders history</h2>
+
+        <table class="modal__table order-table">
+            <tbody>
+            <tr>
+                <th>Id</th>
+                <th>Amount</th>
+                <th>Aliba Token</th>
+                <th>Platform</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>$5</td>
+                <td><img src="img/token-Icon.svg" alt=""> <span>500</span></td>
+                <td>Nuvei</td>
+                <td>Pending</td>
+                <td>10.02.2022</td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>$10</td>
+                <td><img src="img/token-Icon.svg" alt=""> 10000</td>
+                <td>Depay</td>
+                <td>Start</td>
+                <td>29.01.2022</td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>$100</td>
+                <td><img src="img/token-Icon.svg" alt=""> 1000</td>
+                <td>Skrill</td>
+                <td>Start</td>
+                <td>10.01.2022</td>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>$5</td>
+                <td><img src="img/token-Icon.svg" alt=""> 500</td>
+                <td>Nuvei</td>
+                <td>Pending</td>
+                <td>10.02.2022</td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>$10</td>
+                <td><img src="img/token-Icon.svg" alt=""> 10000</td>
+                <td>Depay</td>
+                <td>Start</td>
+                <td>29.01.2022</td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>$100</td>
+                <td><img src="img/token-Icon.svg" alt=""> 1000</td>
+                <td>Skrill</td>
+                <td>Start</td>
+                <td>10.01.2022</td>
+            </tr>
+            <tr>
+                <td>109</td>
+                <td>$5</td>
+                <td><img src="img/token-Icon.svg" alt=""> 500</td>
+                <td>Nuvei</td>
+                <td>Pending</td>
+                <td>10.02.2022</td>
+            </tr>
+            <tr>
+                <td>108</td>
+                <td>$10</td>
+                <td><img src="img/token-Icon.svg" alt=""> 10000</td>
+                <td>Depay</td>
+                <td>Start</td>
+                <td>29.01.2022</td>
+            </tr>
+            <tr>
+                <td>107</td>
+                <td>$100</td>
+                <td><img src="img/token-Icon.svg" alt=""> 1000</td>
+                <td>Skrill</td>
+                <td>Start</td>
+                <td>10.01.2022</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <ul class="modal__pagination pagination">
+            <li class="pagination__item-last"><a href="#">Next</a></li>
+
+            <li class="pagination__item active"><a href="#">1</a></li>
+            <li class="pagination__item"><a href="#">2</a></li>
+            <li class="pagination__item"><a href="#">3</a></li>
+            <li class="pagination__item"><a href="#">5</a></li>
+            <li class="pagination__item"><a href="#">6</a></li>
+            <li class="pagination__item"><a href="#">7</a></li>
+            <li class="pagination__item"><a href="#">8</a></li>
+            <li class="pagination__item"><a href="#">9</a></li>
+            <li class="pagination__item"><a href="#">10</a></li>
+
+            <li class="pagination__item-last"><a href="#">Prev</a></li>
+        </ul>
+
+    </div>
+
+    <div class="modal__overlay hide"></div>
+</div>
+<script src="script/swiper/swiper-bundle.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
