@@ -4,21 +4,29 @@ window.addEventListener('DOMContentLoaded', function (event) {
     const upper_block_swiper = new Swiper('.upper-block__sliders-container', {
         direction: 'horizontal',
         loop: true,
-        slidesPerView: 1.38,
-        spaceBetween: 30,
+        slidesPerView: 1.08,
+        spaceBetween: 15,
 
         // Navigation arrows
         navigation: {
             nextEl: '.upper-block__slider-btn',
         },
+
+        breakpoints: {
+            // when window width is <= 767
+            767: {
+                slidesPerView: 1.38,
+                spaceBetween: 30,
+            },
+        }
     });
 
 
     // Custom select
     function CustomSelect(options) {
-        if (elem) {
-            var elem = options.elem;
 
+        var elem = options.elem;
+        if (elem) {
             elem.onclick = function (event) {
                 if (event.target.className == 'customselect__title') {
                     toggle();
@@ -87,9 +95,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
 
     // Выпадающие меню
-
-    let user_btn = document.querySelector('.header__user-button')
-    let user_menu = document.querySelector('.header__user-menu')
-
+    //
+    // let user_btn = document.querySelector('.header__user-button')
+    // let user_menu = document.querySelector('.header__user-menu')
 
 });
