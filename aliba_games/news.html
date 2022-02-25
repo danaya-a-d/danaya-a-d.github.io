@@ -473,425 +473,425 @@
     </div>
 </footer>
 <div class="modal-back hide">
-    <div class="modal modal--form modal-register hide">
-        <button class="modal__btn-close modal-close"></button>
+        <div class="modal modal--form modal-register hide">
+            <button class="modal__btn-close modal-close"></button>
 
-        <h2 class="modal__title title">Register</h2>
+            <h2 class="modal__title title">Register</h2>
 
-        <form class="modal__form main-form" action="#" method="post">
-            <fieldset class="main-form__fieldset">
-                <legend class="main-form__legend" align="center">Register with socials</legend>
+            <form class="modal__form main-form" action="#" method="post">
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend" align="center">Register with socials</legend>
 
-                <div class="main-form__social-btns">
-                    <a href="#" class="main-form__social-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#google"></use>
-                        </svg>
-                        Google</a>
-                    <a href="#" class="main-form__social-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                        Facebook</a>
+                    <div class="main-form__social-btns">
+                        <a href="#" class="main-form__social-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#google"></use>
+                            </svg>
+                            Google</a>
+                        <a href="#" class="main-form__social-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            Facebook</a>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend" align="center">Or directly</legend>
+                    <label class="main-form__label">
+                        <span class="main-form__toggles">
+
+                            <label class="main-form__label-toggle">
+                                <input class="visually-hidden" name="login-type" type="radio" value="email" checked
+                                       required>
+                                <span class="main-form__toggle">Email</span>
+                            </label>
+
+                            <label class="main-form__label-toggle">
+                                <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
+                                <span class="main-form__toggle">Mobile</span>
+                            </label>
+
+                        </span>
+
+                        <input class="main-form__input" type="text" name="email" placeholder="Email"
+                               required>
+
+                        <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
+                        <!--                           required>-->
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name=password" placeholder="Password"
+                               required>
+                    </label>
+
+                    <label class="main-form__label-check">
+                        <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
+                        <span class="main-form__check-indicator"></span>
+                        <span class="main-form__indicator-title">
+                            I have read and agree to <a href="#">Terms and Conditions, Privacy Policy</a>
+                        </span>
+                    </label>
+                </fieldset>
+
+                <button class="main-form__button button">Register</button>
+
+                <p class="main-form__note">Already have an account? <a href="#">Login</a></p>
+            </form>
+        </div>
+
+        <div class="modal modal--form modal-login hide">
+            <button class="modal__btn-close modal-close"></button>
+
+            <h2 class="modal__title title">Login</h2>
+
+            <form class="modal__form main-form" action="#" method="post">
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend" align="center">Login with socials</legend>
+
+                    <div class="main-form__social-btns">
+                        <a href="#" class="main-form__social-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#google"></use>
+                            </svg>
+                            Google</a>
+                        <a href="#" class="main-form__social-btn">
+                            <svg xmlns="http://www.w3.org/2000/svg">
+                                <use xlink:href="#facebook"></use>
+                            </svg>
+                            Facebook</a>
+                    </div>
+                </fieldset>
+
+
+                <fieldset class="main-form__fieldset">
+                    <legend class="main-form__legend" align="center">Or directly</legend>
+                    <label class="main-form__label">
+                        <span class="main-form__toggles">
+
+                            <label class="main-form__label-toggle">
+                                <input class="visually-hidden" name="login-type" type="radio" value="email" checked
+                                       required>
+                                <span class="main-form__toggle">Email</span>
+                            </label>
+
+                            <label class="main-form__label-toggle">
+                                <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
+                                <span class="main-form__toggle">Mobile</span>
+                            </label>
+
+                        </span>
+
+                        <input class="main-form__input" type="text" name="email" placeholder="Email"
+                               required>
+
+                        <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
+                        <!--                           required>-->
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name=password" placeholder="Password"
+                               required>
+                    </label>
+
+                    <a href="#" class="main-form__note-link">Forgot password?</a>
+                </fieldset>
+
+                <button class="main-form__button button">Login</button>
+
+                <p class="main-form__note">Don’t have an account? <a href="#">Register</a></p>
+            </form>
+        </div>
+
+        <div class="modal modal--form modal-forgot hide">
+            <button class="modal__btn-close modal-close"></button>
+
+            <h2 class="modal__title title">Forgot password</h2>
+
+            <form class="modal__form main-form" action="#" method="post">
+                <fieldset class="main-form__fieldset main-form__fieldset--noborder">
+
+                    <legend class="visually-hidden">Forgot password</legend>
+
+                    <label class="main-form__label">
+                        <span class="main-form__toggles">
+
+                            <label class="main-form__label-toggle">
+                                <input class="visually-hidden" name="login-type" type="radio" value="email" checked
+                                       required>
+                                <span class="main-form__toggle">Email</span>
+                            </label>
+
+                            <label class="main-form__label-toggle">
+                                <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
+                                <span class="main-form__toggle">Mobile</span>
+                            </label>
+
+                        </span>
+
+                        <input class="main-form__input" type="text" name="email" placeholder="Email"
+                               required>
+
+                        <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
+                        <!--                           required>-->
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name=password" placeholder="Password"
+                               required>
+                    </label>
+
+                    <a href="#" class="main-form__note-link">Already have a code?</a>
+                </fieldset>
+
+                <button class="main-form__button button">Restore</button>
+
+                <p class="main-form__note">Back to <a href="#">Login</a></p>
+            </form>
+        </div>
+
+        <div class="modal modal--form modal-recovery hide">
+            <button class="modal__btn-close modal-close"></button>
+
+            <h2 class="modal__title title">Password recovery</h2>
+
+            <form class="modal__form main-form" action="#" method="post">
+                <fieldset class="main-form__fieldset main-form__fieldset--noborder">
+                    <legend class="visually-hidden">Password recovery</legend>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name="password" placeholder="New password"
+                               required>
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name=password-repeat"
+                               placeholder="Repeat new password"
+                               required>
+                    </label>
+
+                </fieldset>
+
+                <button class="main-form__button button">Change password</button>
+
+            </form>
+        </div>
+
+        <div class="modal modal--form modal-verification hide">
+            <button class="modal__btn-close modal-close"></button>
+
+            <h2 class="modal__title title">Code verification</h2>
+
+            <form class="modal__form main-form" action="#" method="post">
+                <fieldset class="main-form__fieldset main-form__fieldset--noborder">
+                    <legend class="visually-hidden">Code verification</legend>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="text" name="code" placeholder="Code"
+                               required>
+                    </label>
+
+                </fieldset>
+
+                <span class="main-form__indicator-title">The code has been sent to the specified number. You can send it again via: 01:00</span>
+
+                <button class="main-form__button button">Submit</button>
+
+                <p class="main-form__note">Back to <a href="#">Forgot password</a></p>
+            </form>
+        </div>
+
+        <div class="modal modal--form modal-verification hide">
+            <button class="modal__btn-close modal-close"></button>
+
+            <h2 class="modal__title title">Profile</h2>
+
+            <form class="modal__small-form main-form" action="#" method="post">
+                <div class="main-form__fieldset main-form__fieldset--noborder">
+                    <p class="main-form__title">Change email</p>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="email" name="email" placeholder="Email"
+                               required>
+                    </label>
+                    <button class="main-form__button button button--trans">Save</button>
                 </div>
-            </fieldset>
+            </form>
 
+            <form class="modal__small-form main-form" action="#" method="post">
+                <div class="main-form__fieldset main-form__fieldset--noborder">
+                    <p class="main-form__title">Change mobile</p>
 
-            <fieldset class="main-form__fieldset">
-                <legend class="main-form__legend" align="center">Or directly</legend>
-                <label class="main-form__label">
-                    <span class="main-form__toggles">
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"
+                               required>
+                    </label>
 
-                        <label class="main-form__label-toggle">
-                            <input class="visually-hidden" name="login-type" type="radio" value="email" checked
-                                   required>
-                            <span class="main-form__toggle">Email</span>
-                        </label>
+                    <a href="#" class="main-form__note-link">Already have a code?</a>
 
-                        <label class="main-form__label-toggle">
-                            <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
-                            <span class="main-form__toggle">Mobile</span>
-                        </label>
-
-                    </span>
-
-                    <input class="main-form__input" type="text" name="email" placeholder="Email"
-                           required>
-
-                    <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
-                    <!--                           required>-->
-                </label>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name=password" placeholder="Password"
-                           required>
-                </label>
-
-                <label class="main-form__label-check">
-                    <input class="visually-hidden" name="confirm" type="checkbox" value="yes" checked required>
-                    <span class="main-form__check-indicator"></span>
-                    <span class="main-form__indicator-title">
-                        I have read and agree to <a href="#">Terms and Conditions, Privacy Policy</a>
-                    </span>
-                </label>
-            </fieldset>
-
-            <button class="main-form__button button">Register</button>
-
-            <p class="main-form__note">Already have an account? <a href="#">Login</a></p>
-        </form>
-    </div>
-
-    <div class="modal modal--form modal-login hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <h2 class="modal__title title">Login</h2>
-
-        <form class="modal__form main-form" action="#" method="post">
-            <fieldset class="main-form__fieldset">
-                <legend class="main-form__legend" align="center">Login with socials</legend>
-
-                <div class="main-form__social-btns">
-                    <a href="#" class="main-form__social-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#google"></use>
-                        </svg>
-                        Google</a>
-                    <a href="#" class="main-form__social-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg">
-                            <use xlink:href="#facebook"></use>
-                        </svg>
-                        Facebook</a>
+                    <button class="main-form__button button button--trans">Save</button>
                 </div>
-            </fieldset>
+            </form>
 
+            <form class="modal__small-form main-form" action="#" method="post">
+                <div class="main-form__fieldset main-form__fieldset--noborder">
+                    <p class="main-form__title">Change password</p>
 
-            <fieldset class="main-form__fieldset">
-                <legend class="main-form__legend" align="center">Or directly</legend>
-                <label class="main-form__label">
-                    <span class="main-form__toggles">
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name=current-password" placeholder="Current password"
+                               required>
+                    </label>
 
-                        <label class="main-form__label-toggle">
-                            <input class="visually-hidden" name="login-type" type="radio" value="email" checked
-                                   required>
-                            <span class="main-form__toggle">Email</span>
-                        </label>
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name=new-password" placeholder="New password"
+                               required>
+                    </label>
 
-                        <label class="main-form__label-toggle">
-                            <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
-                            <span class="main-form__toggle">Mobile</span>
-                        </label>
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="password" name=repeat-new-password" placeholder="Repeat new password"
+                               required>
+                    </label>
 
-                    </span>
+                    <button class="main-form__button button button--trans">Save</button>
+                </div>
+            </form>
 
-                    <input class="main-form__input" type="text" name="email" placeholder="Email"
-                           required>
+            <div class="modal__delete-block main-form">
+                <div class="main-form__fieldset main-form__fieldset--noborder">
+                    <p class="main-form__title">Delete account</p>
 
-                    <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
-                    <!--                           required>-->
-                </label>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name=password" placeholder="Password"
-                           required>
-                </label>
-
-                <a href="#" class="main-form__note-link">Forgot password?</a>
-            </fieldset>
-
-            <button class="main-form__button button">Login</button>
-
-            <p class="main-form__note">Don’t have an account? <a href="#">Register</a></p>
-        </form>
-    </div>
-
-    <div class="modal modal--form modal-forgot hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <h2 class="modal__title title">Forgot password</h2>
-
-        <form class="modal__form main-form" action="#" method="post">
-            <fieldset class="main-form__fieldset main-form__fieldset--noborder">
-
-                <legend class="visually-hidden">Forgot password</legend>
-
-                <label class="main-form__label">
-                    <span class="main-form__toggles">
-
-                        <label class="main-form__label-toggle">
-                            <input class="visually-hidden" name="login-type" type="radio" value="email" checked
-                                   required>
-                            <span class="main-form__toggle">Email</span>
-                        </label>
-
-                        <label class="main-form__label-toggle">
-                            <input class="visually-hidden" name="login-type" type="radio" value="mobile" required>
-                            <span class="main-form__toggle">Mobile</span>
-                        </label>
-
-                    </span>
-
-                    <input class="main-form__input" type="text" name="email" placeholder="Email"
-                           required>
-
-                    <!--                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"-->
-                    <!--                           required>-->
-                </label>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name=password" placeholder="Password"
-                           required>
-                </label>
-
-                <a href="#" class="main-form__note-link">Already have a code?</a>
-            </fieldset>
-
-            <button class="main-form__button button">Restore</button>
-
-            <p class="main-form__note">Back to <a href="#">Login</a></p>
-        </form>
-    </div>
-
-    <div class="modal modal--form modal-recovery hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <h2 class="modal__title title">Password recovery</h2>
-
-        <form class="modal__form main-form" action="#" method="post">
-            <fieldset class="main-form__fieldset main-form__fieldset--noborder">
-                <legend class="visually-hidden">Password recovery</legend>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name="password" placeholder="New password"
-                           required>
-                </label>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name=password-repeat"
-                           placeholder="Repeat new password"
-                           required>
-                </label>
-
-            </fieldset>
-
-            <button class="main-form__button button">Change password</button>
-
-        </form>
-    </div>
-
-    <div class="modal modal--form modal-verification hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <h2 class="modal__title title">Code verification</h2>
-
-        <form class="modal__form main-form" action="#" method="post">
-            <fieldset class="main-form__fieldset main-form__fieldset--noborder">
-                <legend class="visually-hidden">Code verification</legend>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="text" name="code" placeholder="Code"
-                           required>
-                </label>
-
-            </fieldset>
-
-            <span class="main-form__indicator-title">The code has been sent to the specified number. You can send it again via: 01:00</span>
-
-            <button class="main-form__button button">Submit</button>
-
-            <p class="main-form__note">Back to <a href="#">Forgot password</a></p>
-        </form>
-    </div>
-
-    <div class="modal modal--form modal-verification hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <h2 class="modal__title title">Profile</h2>
-
-        <form class="modal__small-form main-form" action="#" method="post">
-            <div class="main-form__fieldset main-form__fieldset--noborder">
-                <p class="main-form__title">Change email</p>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="email" name="email" placeholder="Email"
-                           required>
-                </label>
-                <button class="main-form__button button button--trans">Save</button>
-            </div>
-        </form>
-
-        <form class="modal__small-form main-form" action="#" method="post">
-            <div class="main-form__fieldset main-form__fieldset--noborder">
-                <p class="main-form__title">Change mobile</p>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="tel" name=mobile" placeholder="Mobile"
-                           required>
-                </label>
-
-                <a href="#" class="main-form__note-link">Already have a code?</a>
-
-                <button class="main-form__button button button--trans">Save</button>
-            </div>
-        </form>
-
-        <form class="modal__small-form main-form" action="#" method="post">
-            <div class="main-form__fieldset main-form__fieldset--noborder">
-                <p class="main-form__title">Change password</p>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name=current-password" placeholder="Current password"
-                           required>
-                </label>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name=new-password" placeholder="New password"
-                           required>
-                </label>
-
-                <label class="main-form__label">
-                    <input class="main-form__input" type="password" name=repeat-new-password" placeholder="Repeat new password"
-                           required>
-                </label>
-
-                <button class="main-form__button button button--trans">Save</button>
-            </div>
-        </form>
-
-        <div class="modal__delete-block main-form">
-            <div class="main-form__fieldset main-form__fieldset--noborder">
-                <p class="main-form__title">Delete account</p>
-
-                <a href="#" class="main-form__button button">Delete my account</a>
+                    <a href="#" class="main-form__button button">Delete my account</a>
+                </div>
             </div>
         </div>
-    </div>
 
-    <div class="modal modal--form modal-notification hide">
-        <button class="modal__btn-close modal-close"></button>
+        <div class="modal modal--form modal-notification hide">
+            <button class="modal__btn-close modal-close"></button>
 
-        <h2 class="modal__title title">Notifications</h2>
+            <h2 class="modal__title title">Notifications</h2>
 
-        <div class="modal__notifications notifications">
-            <ul class="notifications__list">
-                <li class="notifications__item">
-                    <a href="news-item.html" class="notifications__title-block">
-                        <span class="notifications__icon game"></span>
-                        <h3 class="notifications__title">New event come!</h3>
-                        <span class="notifications__tag">New</span>
-                    </a>
+            <div class="modal__notifications notifications">
+                <ul class="notifications__list">
+                    <li class="notifications__item">
+                        <a href="news-item.html" class="notifications__title-block">
+                            <span class="notifications__icon game"></span>
+                            <h3 class="notifications__title">New event come!</h3>
+                            <span class="notifications__tag">New</span>
+                        </a>
 
-                    <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod</p>
+                        <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod</p>
 
-                    <div class="notifications__info">
-                        <p class="notifications__name">Ninja Crazy</p>
-                        <time class="notifications__time">03.02</time>
-                    </div>
-                </li>
+                        <div class="notifications__info">
+                            <p class="notifications__name">Ninja Crazy</p>
+                            <time class="notifications__time">03.02</time>
+                        </div>
+                    </li>
 
-                <li class="notifications__item">
-                    <a href="news-item.html" class="notifications__title-block">
-                        <span class="notifications__icon article"></span>
-                        <h3 class="notifications__title">Updated portal rules</h3>
-                        <span class="notifications__tag">New</span>
-                    </a>
+                    <li class="notifications__item">
+                        <a href="news-item.html" class="notifications__title-block">
+                            <span class="notifications__icon article"></span>
+                            <h3 class="notifications__title">Updated portal rules</h3>
+                            <span class="notifications__tag">New</span>
+                        </a>
 
-                    <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod</p>
+                        <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod</p>
 
-                    <div class="notifications__info">
-                        <time class="notifications__time">03.02</time>
-                    </div>
-                </li>
+                        <div class="notifications__info">
+                            <time class="notifications__time">03.02</time>
+                        </div>
+                    </li>
 
-                <li class="notifications__item">
-                    <a href="news-item.html" class="notifications__title-block">
-                        <span class="notifications__icon megaphone"></span>
-                        <h3 class="notifications__title">20% discount on all products</h3>
-                        <span class="notifications__tag">New</span>
-                    </a>
+                    <li class="notifications__item">
+                        <a href="news-item.html" class="notifications__title-block">
+                            <span class="notifications__icon megaphone"></span>
+                            <h3 class="notifications__title">20% discount on all products</h3>
+                            <span class="notifications__tag">New</span>
+                        </a>
 
-                    <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod</p>
+                        <p class="notifications__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                            do eiusmod</p>
 
-                    <div class="notifications__info">
-                        <time class="notifications__time">30.12.2021</time>
-                    </div>
-                </li>
+                        <div class="notifications__info">
+                            <time class="notifications__time">30.12.2021</time>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="modal modal--pay modal-pay hide">
+            <button class="modal__btn-close modal-close"></button>
+
+            <h2 class="modal__title title">Payment</h2>
+
+            <ul class="modal__payments payments">
+                <li class="payments__item"><a class="payments__link" href="#">
+                    <ul class="payments__systems">
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-american-express.svg" alt="American Express"></li>
+                    </ul>
+
+                    <img class="payments__wallet-icon" src="img/icon-stripe.svg" alt="Stripe">
+                </a></li>
+
+                <li class="payments__item"><a class="payments__link" href="#">
+                    <ul class="payments__systems">
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-bitcoin.svg" alt="Bitcoin"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-ethereum.svg" alt="Ethereum"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-usdt.svg" alt="USDT"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-busd.svg" alt="BUSD"></li>
+                    </ul>
+
+                    <img class="payments__wallet-icon" src="img/icon-depay.svg" alt="DePay">
+                </a></li>
+
+                <li class="payments__item"><a class="payments__link" href="#">
+                    <ul class="payments__systems">
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-paypal.svg" alt="PayPal"></li>
+                    </ul>
+
+                    <img class="payments__wallet-icon" src="img/icon-xsolla.svg" alt="Xsolla">
+                </a></li>
+
+                <li class="payments__item"><a class="payments__link" href="#">
+                    <ul class="payments__systems">
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-bitcoin.svg" alt="Bitcoin"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-ethereum.svg" alt="Ethereum"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-usdt.svg" alt="USDT"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-busd.svg" alt="BUSD"></li>
+                        <li class="payments__system"><span class="payments__system-name">for fiat</span></li>
+                    </ul>
+
+                    <img class="payments__wallet-icon" src="img/icon-ramp.svg" alt="Ramp">
+                </a></li>
+
+                <li class="payments__item"><a class="payments__link" href="#">
+                    <ul class="payments__systems">
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-paypal.svg" alt="PayPal"></li>
+                    </ul>
+
+                    <img class="payments__wallet-icon" src="img/icon-safecharge.svg" alt="SafeCharge">
+                </a></li>
+
+                <li class="payments__item"><a class="payments__link" href="#">
+                    <ul class="payments__systems">
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
+                        <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
+                    </ul>
+
+                    <img class="payments__wallet-icon" src="img/icon-skrill.svg" alt="Skrill">
+                </a></li>
             </ul>
         </div>
-    </div>
-
-    <div class="modal modal--pay modal-pay hide">
-        <button class="modal__btn-close modal-close"></button>
-
-        <h2 class="modal__title title">Payment</h2>
-
-        <ul class="modal__payments payments">
-            <li class="payments__item"><a class="payments__link" href="#">
-                <ul class="payments__systems">
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-american-express.svg" alt="American Express"></li>
-                </ul>
-
-                <img class="payments__wallet-icon" src="img/icon-stripe.svg" alt="Stripe">
-            </a></li>
-
-            <li class="payments__item"><a class="payments__link" href="#">
-                <ul class="payments__systems">
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-bitcoin.svg" alt="Bitcoin"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-ethereum.svg" alt="Ethereum"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-usdt.svg" alt="USDT"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-busd.svg" alt="BUSD"></li>
-                </ul>
-
-                <img class="payments__wallet-icon" src="img/icon-depay.svg" alt="DePay">
-            </a></li>
-
-            <li class="payments__item"><a class="payments__link" href="#">
-                <ul class="payments__systems">
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-paypal.svg" alt="PayPal"></li>
-                </ul>
-
-                <img class="payments__wallet-icon" src="img/icon-xsolla.svg" alt="Xsolla">
-            </a></li>
-
-            <li class="payments__item"><a class="payments__link" href="#">
-                <ul class="payments__systems">
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-bitcoin.svg" alt="Bitcoin"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-ethereum.svg" alt="Ethereum"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-usdt.svg" alt="USDT"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-busd.svg" alt="BUSD"></li>
-                    <li class="payments__system"><span class="payments__system-name">for fiat</span></li>
-                </ul>
-
-                <img class="payments__wallet-icon" src="img/icon-ramp.svg" alt="Ramp">
-            </a></li>
-
-            <li class="payments__item"><a class="payments__link" href="#">
-                <ul class="payments__systems">
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-paypal.svg" alt="PayPal"></li>
-                </ul>
-
-                <img class="payments__wallet-icon" src="img/icon-safecharge.svg" alt="SafeCharge">
-            </a></li>
-
-            <li class="payments__item"><a class="payments__link" href="#">
-                <ul class="payments__systems">
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-visa.svg" alt="Visa"></li>
-                    <li class="payments__system"><img class="payments__system-icon" src="img/icon-mastercard.svg" alt="Mastercard"></li>
-                </ul>
-
-                <img class="payments__wallet-icon" src="img/icon-skrill.svg" alt="Skrill">
-            </a></li>
-        </ul>
-    </div>
 
     <div class="modal modal--table modal-orders hide">
         <button class="modal__btn-close modal-close"></button>
@@ -983,21 +983,23 @@
             </tbody>
         </table>
 
-        <ul class="modal__pagination pagination">
-            <li class="pagination__item-last"><a href="#">Next</a></li>
+        <div class="modal__pagination pagination">
+            <div class="pagination__item-last"><a href="#">Next</a></div>
 
-            <li class="pagination__item active"><a href="#">1</a></li>
-            <li class="pagination__item"><a href="#">2</a></li>
-            <li class="pagination__item"><a href="#">3</a></li>
-            <li class="pagination__item"><a href="#">5</a></li>
-            <li class="pagination__item"><a href="#">6</a></li>
-            <li class="pagination__item"><a href="#">7</a></li>
-            <li class="pagination__item"><a href="#">8</a></li>
-            <li class="pagination__item"><a href="#">9</a></li>
-            <li class="pagination__item"><a href="#">10</a></li>
+            <div class="pagination__sublist">
+                <div class="pagination__item active"><a href="#">1</a></div>
+                <div class="pagination__item"><a href="#">2</a></div>
+                <div class="pagination__item"><a href="#">3</a></div>
+                <div class="pagination__item"><a href="#">5</a></div>
+                <div class="pagination__item"><a href="#">6</a></div>
+                <div class="pagination__item"><a href="#">7</a></div>
+                <div class="pagination__item"><a href="#">8</a></div>
+                <div class="pagination__item"><a href="#">9</a></div>
+                <div class="pagination__item"><a href="#">10</a></div>
+            </div>
 
-            <li class="pagination__item-last"><a href="#">Prev</a></li>
-        </ul>
+            <div class="pagination__item-last"><a href="#">Prev</a></div>
+        </div>
 
     </div>
 
