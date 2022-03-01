@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    $(".phone_mask").mask("+7(999)999-99-99");
+    // $(".phone_mask").mask("+7(999)999-99-99");
 
     // слайдеры
     function slick_mobile(slider, settings, wide) {
@@ -248,9 +248,10 @@ $(document).ready(function () {
         infinite: false,
     });
 
+    // предотвращение трансформации слайдера thumbnails, если кол-во фото товара меньше нужного для скролла
     let slidesCount = $('.product__small-photo').length;
     if (slidesCount < 4) {
-        $('.slick-track').addClass('no-transform');
+        $('.product__small-photos .slick-track').addClass('no-transform');
     }
 
     // плавное пролистывание к якорю
