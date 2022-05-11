@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+
+    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="instagram" viewBox="0 0 24 24">
+            <path d="M18 0H6C2.7 0 0 2.7 0 6v12c0 3.299 2.7 6 6 6h12c3.3 0 6-2.701 6-6V6c0-3.3-2.7-6-6-6zm4 18c0 2.205-1.794 4-4 4H6c-2.205 0-4-1.795-4-4V6c0-2.206 1.795-4 4-4h12c2.206 0 4 1.794 4 4v12z"/>
+            <path d="M18.5 7a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM12 6a6 6 0 1 0 .001 12A6 6 0 0 0 12 6zm0 10a4 4 0 1 1 0-8 4 4 0 0 1 0 8z"/>
+        </symbol>
+        <symbol id="telegram" viewBox="0 0 24 24">
+            <g>
+                <path d="M23.53 1.966a1.45 1.45 0 0 0-1.432-.307L.995 8.615c-.575.19-.965.703-.993 1.308a1.439 1.439 0 0 0 .866 1.395l5.219 2.283 1.574 7.303c.066.304.22.574.546.657.33.084.563-.096.81-.28l3.872-2.9 4.528 3.704a1.44 1.44 0 0 0 1.382.251c.477-.161.83-.55.945-1.04l4.218-17.93a1.45 1.45 0 0 0-.432-1.4zM9.354 14.91a.184.184 0 0 0-.008.021l-.873 3.05-.974-4.518 6.7-3.722-4.685 4.897a.705.705 0 0 0-.16.272zm.277 4.15l.396-1.386.38-1.325 1.358 1.112-2.134 1.599zM22.589 3.043l-4.217 17.93c-.002.01-.005.021-.025.028-.02.007-.03 0-.038-.006l-4.954-4.055-2.296-1.878 7.375-7.711a.705.705 0 0 0-.852-1.103l-10.92 6.067-5.229-2.288c-.016-.007-.025-.011-.023-.038 0-.027.01-.03.026-.035L22.54 2.997c.01-.003.022-.007.039.009.017.015.014.027.011.037z"/>
+            </g>
+        </symbol>
+        <symbol id="facebook" viewBox="0 0 15 15">
+            <path d="M8.662 15V8.158h2.295l.345-2.667h-2.64V3.79c0-.772.213-1.298 1.321-1.298l1.412-.001V.104A19.133 19.133 0 0 0 9.338 0c-2.036 0-3.43 1.243-3.43 3.524v1.967H3.605v2.667h2.303V15h2.754z"
+                  fill="#000"/>
+        </symbol>
+        <symbol id="google" viewBox="0 0 15 15">
+            <path d="M0 7.5C0 3.364 3.365 0 7.5 0a7.43 7.43 0 0 1 4.572 1.554l-1.743 2.264a4.598 4.598 0 0 0-2.829-.96A4.648 4.648 0 0 0 2.857 7.5 4.648 4.648 0 0 0 7.5 12.143a4.651 4.651 0 0 0 4.418-3.214H7.5V6.07H15V7.5c0 4.136-3.364 7.5-7.5 7.5S0 11.636 0 7.5z"
+                  fill="#000"/>
+        </symbol>
+    </svg>
+</div>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+        <nav class="header__nav">
+            <ul class="header__nav-list">
+                <li class="header__nav-item"><a href="#">RINGS</a></li>
+                <li class="header__nav-item active"><a href="#">Earrings</a></li>
+                <li class="header__nav-item"><a href="#">tender ukraine</a></li>
+            </ul>
+
+            <a href="index.html" class="header__logo logo">
+                <img class="logo__image" src="img/logo.svg" alt="2">
+            </a>
+
+            <ul class="header__control-list">
+                <li class="header__control-item"><a>
+                    en / $
+
+                    <div class="header__drop-down">
+                        <div class="header__drop-down-languages">
+                            <form class="header__form-languages main-form" method="post" action="#">
+                                <span class="main-form__label-name">Language</span>
+
+                                <label class="main-form__label-radio label-check">
+                                    <input class="visually-hidden" name="language" type="radio"
+                                           value="English" checked>
+                                    <span class="label-check__radio-indicator"></span>
+                                    <span class="label-check__title">English</span>
+                                </label>
+
+                                <label class="main-form__label-radio label-check">
+                                    <input class="visually-hidden" name="language" type="radio"
+                                           value="Український">
+                                    <span class="label-check__radio-indicator"></span>
+                                    <span class="label-check__title">Український</span>
+                                </label>
+
+                                <label class="main-form__label-radio label-check">
+                                    <input class="visually-hidden" name="language" type="radio"
+                                           value="Русский">
+                                    <span class="label-check__radio-indicator"></span>
+                                    <span class="label-check__title">Русский</span>
+                                </label>
+                            </form>
+
+                            <form class="header__form-languages main-form" method="post" action="#">
+                                <span class="main-form__label-name">Currency</span>
+
+                                <label class="main-form__label-radio label-check">
+                                    <input class="visually-hidden" name="currency" type="radio"
+                                           value="USD" checked>
+                                    <span class="label-check__radio-indicator"></span>
+                                    <span class="label-check__title">USD</span>
+                                </label>
+
+                                <label class="main-form__label-radio label-check">
+                                    <input class="visually-hidden" name="currency" type="radio"
+                                           value="EUR">
+                                    <span class="label-check__radio-indicator"></span>
+                                    <span class="label-check__title">EUR</span>
+                                </label>
+
+                                <label class="main-form__label-radio label-check">
+                                    <input class="visually-hidden" name="currency" type="radio"
+                                           value="UAH">
+                                    <span class="label-check__radio-indicator"></span>
+                                    <span class="label-check__title">UAH</span>
+                                </label>
+                            </form>
+                        </div>
+                    </div>
+                </a></li>
+                <li class="header__control-item"><a>search</a></li>
+                <li class="header__control-item"><a>
+                    account
+                    <div class="header__drop-down">
+                        <ul class="header__drop-down-list">
+                            <li class="header__drop-down-item"><a href="#">Profile</a></li>
+                            <li class="header__drop-down-item"><a href="#">Wishlist</a></li>
+                            <li class="header__drop-down-item"><a href="#">Orders history</a></li>
+                            <li class="header__drop-down-item"><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="header__drop-down">
+                        <form class="header__form main-form" method="post" action="#">
+                            <label class="main-form__label main-form__label--small">
+                                <input class="main-form__input main-form__input--small" type="email" name="email"
+                                       placeholder="Email">
+                            </label>
+
+                            <label class="main-form__label main-form__label--small">
+                                <input class="main-form__input main-form__input--small" type="password" name="password"
+                                       placeholder="Password">
+                            </label>
+
+                            <a href="#" class="main-form__link">Forgot password</a>
+
+                            <button class="main-form__button button button--black">LOGIN</button>
+
+                            <ul class="main-form__socials">
+                                <li class="main-form__social"><a href="#">
+                                    <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="#google"></use>
+                                    </svg>
+                                    <span>Google</span>
+                                </a></li>
+
+                                <li class="main-form__social"><a href="#">
+                                    <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                    <span>Facebook</span>
+                                </a></li>
+                            </ul>
+
+                            <a href="#" class="main-form__link-bottom">Don’t have an account? Register</a>
+                        </form>
+                    </div>
+
+                    <div class="header__drop-down">
+                        <form class="header__form main-form" method="post" action="#">
+                            <label class="main-form__label main-form__label--small">
+                                <input class="main-form__input main-form__input--small" type="text" name="first name"
+                                       placeholder="First Name">
+                            </label>
+
+                            <label class="main-form__label main-form__label--small">
+                                <input class="main-form__input main-form__input--small" type="text" name="last name"
+                                       placeholder="Last Name">
+                            </label>
+
+                            <label class="main-form__label main-form__label--small">
+                                <input class="main-form__input main-form__input--small" type="email" name="email"
+                                       placeholder="Email">
+                            </label>
+
+                            <label class="main-form__label main-form__label--small">
+                                <input class="main-form__input main-form__input--small" type="password" name="password"
+                                       placeholder="Password">
+                            </label>
+
+                            <button class="main-form__button button button--black">Register</button>
+
+                            <ul class="main-form__socials">
+                                <li class="main-form__social"><a href="#">
+                                    <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="#google"></use>
+                                    </svg>
+                                    <span>Google</span>
+                                </a></li>
+
+                                <li class="main-form__social"><a href="#">
+                                    <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                        <use xlink:href="#facebook"></use>
+                                    </svg>
+                                    <span>Facebook</span>
+                                </a></li>
+                            </ul>
+
+                            <a href="#" class="main-form__link-bottom">Already have an account? Login</a>
+                        </form>
+                    </div>
+
+                </a></li>
+                <li class="header__control-item"><a>cart (0)</a></li>
+            </ul>
+        </nav>
+
+        <form class="header__search-form" method="post" action="#">
+            <label class="header__search-label">
+                <input class="header__search-input" placeholder="Search...">
+            </label>
+
+            <button class="header__search-close" type="button">Close</button>
+        </form>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="banner">
+        <div class="banner__wrapper wrapper">
+            <div class="banner__text-block">
+                <h1 class="banner__title">In support of the people of Ukraine
+                    initiative collection in National
+                    <mark>Ukrainian COLORS</mark>
+                </h1>
+                <a href="#" class="banner__button button button--white">see collection</a>
+            </div>
+
+            <img src="img/banner.jpg" alt="banner" class="banner__image">
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="products__wrapper wrapper">
+            <div class="products__nav-block">
+                <h2 class="products__title title">Recommended for you</h2>
+                <a href="#" class="products__link">SEE MORE</a>
+            </div>
+
+            <ul class="products__list">
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-1.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Blue</p>
+                            <p class="product__price">$100</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-2.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">White</p>
+                            <p class="product__price product__price--sold">Sold out</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-3.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Yellow</p>
+                            <p class="product__price">$50</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-4.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Blue</p>
+                            <p class="product__price">$200</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-5.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Red</p>
+                            <p class="product__price">$400</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="products">
+        <div class="products__wrapper wrapper">
+            <div class="products__nav-block">
+                <h2 class="products__title title">new arrivals</h2>
+                <a href="#" class="products__link">SEE MORE</a>
+            </div>
+
+            <ul class="products__list">
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-1.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Blue</p>
+                            <p class="product__price">$100</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-2.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">White</p>
+                            <p class="product__price product__price--sold">Sold out</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-3.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Yellow</p>
+                            <p class="product__price">$50</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-4.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Blue</p>
+                            <p class="product__price">$200</p>
+                        </div>
+                    </a>
+                </li>
+
+                <li class="products__item product">
+                    <a href="#" class="product__link">
+                        <div class="product__photo-block">
+                            <img src="img/product-5.jpg" alt="" class="product__photo">
+                        </div>
+
+                        <div class="product__info-block">
+                            <p class="product__name">Serpenti silver pendant</p>
+                            <p class="product__type">Red</p>
+                            <p class="product__price">$400</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__info">
+            <a class="footer__logo logo">
+                <img class="logo__image" src="img/logo.svg" alt="2">
+            </a>
+
+            <p class="footer__slogan">A platform created by Ukrainians that unites
+                a huge number of jewelry brands in one place</p>
+
+            <ul class="footer__socials socials">
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a></li>
+
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                </a></li>
+            </ul>
+        </div>
+
+        <div class="footer__nav">
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">Account</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Login</a></li>
+                    <li class="footer__nav-item"><a href="#">Register</a></li>
+                    <li class="footer__nav-item"><a href="#">Forgot Password</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">TWO</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">About Us</a></li>
+                    <li class="footer__nav-item"><a href="#">Contact Us</a></li>
+                    <li class="footer__nav-item"><a href="#">Locations</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">LEARN</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">FAQ</a></li>
+                    <li class="footer__nav-item"><a href="#">Delivery</a></li>
+                    <li class="footer__nav-item"><a href="#">Returns</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <p class="footer__nav-title">SUPPORT</p>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item"><a href="#">Privacy Policy</a></li>
+                    <li class="footer__nav-item"><a href="#">Cookie Policy</a></li>
+                    <li class="footer__nav-item"><a href="#">Terms & Conditions</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer__bottom-wrapper wrapper">
+        <a href="#" class="footer__author">Made by teh</a>
+        <img src="img/payments.svg" alt="visa mastercard apple pay" class="footer__payments">
+    </div>
+</footer>
+
+<div class="modal-back">
+
+    <div class="modal-cart">
+        <div class="modal-cart__info">
+            <p class="modal-cart__title">CART (2)</p>
+            <button class="modal-cart__btn-close modal-close-js">CLOSE</button>
+        </div>
+
+        <ul class="modal-cart__cart-list cart">
+            <li class="cart__item">
+                <img src="img/product-1.jpg" alt="" class="cart__photo-big">
+
+                <div class="cart__description">
+                    <p class="cart__name">Serpenti Metal Necklace</p>
+                    <div class="cart__type">
+                        <p class="cart__type-name">Size</p>
+                        <p class="cart__type-value">35</p>
+                    </div>
+                    <div class="cart__type">
+                        <p class="cart__type-name">Color</p>
+                        <p class="cart__type-value">Red</p>
+                    </div>
+
+                    <span class="cart__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="text" value="1" data-price="415"
+                                       onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                                </label><button class="counter__button plus" type="button">+</button>
+                    </span>
+                </div>
+
+                <div class="cart__info">
+                    <p class="cart__price">$100</p>
+                    <p class="cart__remove">REMOVE</p>
+                </div>
+            </li>
+
+            <li class="cart__item">
+                <img src="img/product-2.jpg" alt="" class="cart__photo-big">
+
+                <div class="cart__description">
+                    <p class="cart__name">Serpenti Metal Chain</p>
+
+                    <div class="cart__type">
+                        <p class="cart__type-name">Color</p>
+                        <p class="cart__type-value">Blue</p>
+                    </div>
+
+                    <span class="cart__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="text" value="1" data-price="415"
+                                       onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                                </label><button class="counter__button plus" type="button">+</button>
+                    </span>
+                </div>
+
+                <div class="cart__info">
+                    <p class="cart__price">$2000</p>
+                    <p class="cart__remove">REMOVE</p>
+                </div>
+            </li>
+        </ul>
+
+        <div class="modal-cart__submit-block submit-block">
+            <div class="submit-block__info">
+                <p class="submit-block__title">Subtotal</p>
+                <p class="submit-block__value">$300</p>
+            </div>
+
+            <p class="submit-block__text">Please note: Due to delays at our warehouse, all orders are taking an additional 72 hours of processing time</p>
+
+            <a href="#" class="submit-block__button button button--black">Checkout</a>
+        </div>
+    </div>
+
+    <div class="modal-overlay"></div>
+
+</div>
+<script src="script/swiper/swiper-bundle.min.js"></script>
+<script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
