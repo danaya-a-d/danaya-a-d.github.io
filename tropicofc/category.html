@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index</title>
+    <title>Category</title>
 
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
@@ -95,143 +95,130 @@
 </header>
 
 <main class="page-main">
-    <section class="banner">
-
-        <img src="img/banner-1.jpg" alt="" class="banner__big-photo">
-
-        <div class="banner__wrapper wrapper">
-            <div class="banner__text-block">
-                <h1 class="banner__title title">Hot tropics</h1>
-
-                <p class="banner__text">Adventure awaits in the C set you love: the C bralette & the C bottom in poppy
-                    wave</p>
-
-                <a href="#" class="banner__button button">Shop now</a>
-            </div>
+    <section class="upper-block">
+        <div class="upper-block__wrapper wrapper">
+            <h1 class="upper-block__title title">Collection</h1>
+            <img src="img/banner-6.jpg" alt="" class="upper-block__img">
         </div>
     </section>
 
-    <section class="banners">
-        <div class="banners__wrapper wrapper" id="js-wrapper">
-            <ul class="banners__list" id="js-slideContainer">
+    <section class="category">
+        <div class="category__wrapper wrapper">
 
-                <li class="banners__item">
-                    <a href="#" class="banners__link">
-                        <img src="img/banner-2.jpg" alt="" class="banners__img">
+            <h2 class="category__title visually-hidden">Collection</h2>
 
-                        <div class="banners__text-block">
-                            <p class="banners__text-line">Metamorphosis top in dahlia/red</p>
-                            <p class="banners__text-line">$100</p>
+            <div class="category__nav">
+                <div class="category__breadcrumbs breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumbs__item active"><a>Shop</a></li>
+                    </ul>
+                </div>
+
+                <ul class="category__nav-list">
+                    <li class="category__nav-item">Filters (0)</li>
+                    <li class="category__nav-item">Sorting</li>
+                </ul>
+            </div>
+
+            <ul class="category__list">
+
+                <li class="category__item product">
+                    <a href="#" class="product__link">
+                        <img src="img/product-1.jpg" alt="" class="product__photo">
+
+                        <div class="product__info-block">
+                            <p class="product__name">Metamorphosis top in dahlia/red</p>
+                            <p class="product__price">$100</p>
                         </div>
                     </a>
 
-                    <div class="banners__item-link-block">
-                        <h2 class="banners__item-title title">Joy ride into summer</h2>
-                        <p class="banners__item-text">Feel powerful in our eco sets. Shop our 15 color choices in
-                            sustainable fabrics and prints.</p>
-
-                        <a href="#" class="banners__button button">Shop now</a>
-                    </div>
+                    <ul class="product__types">
+                        <li class="product__type active"><span class="product__color pink"></span></li>
+                        <li class="product__type"><span class="product__color brown"></span></li>
+                        <li class="product__type"><span class="product__color red"></span></li>
+                        <li class="product__type"><span class="product__color black"></span></li>
+                        <li class="product__type"><span class="product__color blue"></span></li>
+                    </ul>
                 </li>
 
-                <li class="banners__item"><a href="#" class="banners__link">
-                    <img src="img/banner-3.jpg" alt="" class="banners__img">
+                <li class="arrivals__item product">
+                    <a href="#" class="product__link">
+                        <img src="img/product-2.jpg" alt="" class="product__photo">
 
-                    <div class="banners__text-block">
-                        <p class="banners__text-line">Metamorphosis top in dahlia/red</p>
-                        <p class="banners__text-line">$100</p>
-                    </div>
-                </a></li>
+                        <div class="product__info-block">
+                            <p class="product__name">Metamorphosis top in dahlia/red</p>
+                            <p class="product__price">$100</p>
+                        </div>
+                    </a>
 
-                <li class="banners__item"><a href="#" class="banners__link">
-                    <img src="img/banner-4.jpg" alt="" class="banners__img">
-
-                    <div class="banners__text-block">
-                        <p class="banners__text-line">Metamorphosis top in dahlia/red</p>
-                        <p class="banners__text-line">$100</p>
-                    </div>
-                </a></li>
-
-                <li class="banners__item"><a href="#" class="banners__link">
-                    <img src="img/banner-2.jpg" alt="" class="banners__img">
-
-                    <div class="banners__text-block">
-                        <p class="banners__text-line">Metamorphosis top in dahlia/red</p>
-                        <p class="banners__text-line">$100</p>
-                    </div>
-                </a></li>
-
-                <li class="banners__item"><a href="#" class="banners__link">
-                    <img src="img/banner-5.jpg" alt="" class="banners__img">
-
-                    <div class="banners__text-block">
-                        <p class="banners__text-line">Metamorphosis top in dahlia/red</p>
-                        <p class="banners__text-line">$100</p>
-                    </div>
-                </a></li>
-
-            </ul>
-        </div>
-    </section>
-
-    <section class="video-banner">
-        <div class="video-banner__wrapper wrapper">
-
-            <div class="video-banner__text-block">
-                <h2 class="video-banner__title title">Wild & Free</h2>
-
-                <p class="video-banner__text">For more than just beach days. The C bralette and bike shorts in zebra
-                    driftwood, printed on our eco-friendly peach perfect fabric.</p>
-
-                <a href="#" class="video-banner__button button">Shop now</a>
-            </div>
-
-            <div class="video-banner__video-block">
-
-                <video class="video-banner__item"
-                       poster="https://cdn.shopify.com/s/files/1/0221/7797/2320/files/Mobile_Plate.png?v=1651844106"
-                       tabindex="-1" loop="" muted="muted" autoplay="">
-                    <source src="https://player.vimeo.com/progressive_redirect/playback/706232370/rendition/1080p?loc=external&amp;signature=a5cf4ef3a942ba08071a7a03d578de28d0da9acd8a3ffdf4e1ee69d682c2e60a"
-                            type="video/mp4">
-                </video>
-
-            </div>
-        </div>
-    </section>
-
-    <section class="fixed-banner">
-        <div class="fixed-banner__wrapper wrapper">
-            <div class="fixed-banner__big-block">
-                <img src="img/banner-5.jpg" alt="" class="fixed-banner__big-photo">
-
-                <div class="fixed-banner__link-block">
-                    <h2 class="fixed-banner__title title">Beyond beach worthy</h2>
-                    <p class="fixed-banner__text">Something more. Layer your swimwear with our selection of coverups.</p>
-
-                    <a href="#" class="fixed-banner__button button">Shop now</a>
-                </div>
-            </div>
-
-            <div class="fixed-banner__photos">
-                <img src="img/fixed-photo-1.jpg" alt="" class="fixed-banner__photo">
-
-                <img src="img/fixed-photo-2.jpg" alt="" class="fixed-banner__photo">
-
-                <img src="img/fixed-photo-1.jpg" alt="" class="fixed-banner__photo">
-
-                <img src="img/fixed-photo-2.jpg" alt="" class="fixed-banner__photo">
-            </div>
-        </div>
-    </section>
-
-    <section class="arrivals">
-        <div class="arrivals__wrapper wrapper">
-
-            <h2 class="arrivals__title">NEW ARRIVALS</h2>
-
-            <ul class="arrivals__list">
+                    <ul class="product__types">
+                        <li class="product__type active"><span class="product__color pink"></span></li>
+                        <li class="product__type"><span class="product__color brown"></span></li>
+                        <li class="product__type"><span class="product__color red"></span></li>
+                        <li class="product__type"><span class="product__color black"></span></li>
+                        <li class="product__type"><span class="product__color blue"></span></li>
+                    </ul>
+                </li>
 
                 <li class="arrivals__item product">
+                    <a href="#" class="product__link">
+                        <img src="img/product-3.jpg" alt="" class="product__photo">
+
+                        <div class="product__info-block">
+                            <p class="product__name">Metamorphosis top in dahlia/red</p>
+                            <p class="product__price">$100</p>
+                        </div>
+                    </a>
+
+                    <ul class="product__types">
+                        <li class="product__type active"><span class="product__color pink"></span></li>
+                        <li class="product__type"><span class="product__color brown"></span></li>
+                        <li class="product__type"><span class="product__color red"></span></li>
+                        <li class="product__type"><span class="product__color black"></span></li>
+                        <li class="product__type"><span class="product__color blue"></span></li>
+                    </ul>
+                </li>
+
+                <li class="arrivals__item product">
+                    <a href="#" class="product__link">
+                        <img src="img/product-4.jpg" alt="" class="product__photo">
+
+                        <div class="product__info-block">
+                            <p class="product__name">Metamorphosis top in dahlia/red</p>
+                            <p class="product__price">$100</p>
+                        </div>
+                    </a>
+
+                    <ul class="product__types">
+                        <li class="product__type active"><span class="product__color pink"></span></li>
+                        <li class="product__type"><span class="product__color brown"></span></li>
+                        <li class="product__type"><span class="product__color red"></span></li>
+                        <li class="product__type"><span class="product__color black"></span></li>
+                        <li class="product__type"><span class="product__color blue"></span></li>
+                    </ul>
+                </li>
+
+                <li class="arrivals__item product">
+                    <a href="#" class="product__link">
+                        <img src="img/product-5.jpg" alt="" class="product__photo">
+
+                        <div class="product__info-block">
+                            <p class="product__name">Metamorphosis top in dahlia/red</p>
+                            <p class="product__price">$100</p>
+                        </div>
+                    </a>
+
+                    <ul class="product__types">
+                        <li class="product__type active"><span class="product__color pink"></span></li>
+                        <li class="product__type"><span class="product__color brown"></span></li>
+                        <li class="product__type"><span class="product__color red"></span></li>
+                        <li class="product__type"><span class="product__color black"></span></li>
+                        <li class="product__type"><span class="product__color blue"></span></li>
+                    </ul>
+                </li>
+
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-1.jpg" alt="" class="product__photo">
 
@@ -329,6 +316,8 @@
 
         </div>
     </section>
+
+    <button class="filters-button"></button>
 </main>
 
 <footer class="footer">
