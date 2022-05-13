@@ -1,96 +1,36 @@
 window.addEventListener('DOMContentLoaded', function (event) {
 
+    // слайдеры
 
-    // кастомный input range
-    let filter_slider = document.getElementById('filter-slider-js');
-    let filter_reset = document.getElementById('filter-reset-js');
-    let filter_form = document.getElementById('filter-form-js');
-    let card_text_block = document.querySelectorAll('.card__text-block');
+    const product_swiper = new Swiper('.arrivals__list-container', {
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 6,
 
 
-    if (filter_slider !== null) {
-        noUiSlider.create(filter_slider, {
-            start: [1, 1000],
-            connect: false,
-            tooltips: true,
+        slidesPerView: 1.24,
 
-            format: {
-                to: (v) => parseFloat(v).toFixed(0),
-                from: (v) => parseFloat(v).toFixed(0)
+        breakpoints: {
+            // when window width is <= 767
+            767: {
+                slidesPerView: 2,
             },
 
+            991: {
+                slidesPerView: 3,
+                spaceBetween: 8,
+            },
 
-            range: {
-                'min': 0,
-                'max': 1000
+            1199: {
+                slidesPerView: 4,
+            },
+
+            1620: {
+                slidesPerView: 5,
             }
-        });
-    }
-
-
-    // сброс формы
-    if (filter_form !== null) {
-        filter_reset.addEventListener('click', function () {
-            filter_form.reset();
-            filter_slider.noUiSlider.reset()
-        });
-    }
-
-
-    // слайдеры
-    const product_swiper = new Swiper('.card__big-photo-block', {
-        direction: 'horizontal',
-        loop: true,
-        speed: 1000,
-        effect: 'fade',
-        fadeEffect: {
-            crossFade: true
-        },
-
-        // Navigation arrows
-        navigation: {
-            nextEl: '.card__slider-button-next',
-            prevEl: '.card__slider-button-prev',
         }
+
     });
-
-
-    // открытие блоков описания товара
-    if (card_text_block !== null) {
-        for (let i = 0; i < card_text_block.length; i++) {
-            let card_text = card_text_block[i].querySelector('.card__text');
-
-            card_text_block[i].addEventListener('click', function () {
-                card_text_block[i].classList.toggle('active');
-                card_text.classList.toggle('active');
-            });
-        }
-    }
-
-
-    // открытие истоии заказов
-    let history_item_content = document.querySelectorAll('.history__item-content');
-
-    if (history_item_content !== null) {
-        for (let i = 0; i < history_item_content.length; i++) {
-
-            let show_btn = history_item_content[i].querySelector('.history-show');
-            let hide_btn = history_item_content[i].querySelector('.history-hide');
-
-            show_btn.addEventListener('click', function (event) {
-                if (!history_item_content[i].classList.contains('active')) {
-                    history_item_content[i].classList.add('active');
-                }
-            });
-
-            hide_btn.addEventListener('click', function (event) {
-                if (history_item_content[i].classList.contains('active')) {
-                    history_item_content[i].classList.remove('active');
-                }
-            });
-        }
-    }
-
 
     // горизонтальный скролл
 
@@ -103,28 +43,106 @@ window.addEventListener('DOMContentLoaded', function (event) {
         sliders_count += 1;
     }
 
-    let more = sliders_count / sliders_to_show;
+    let multiplier = sliders_count / sliders_to_show;
 
-    let controller = new ScrollMagic.Controller();
+    let x = 100 * multiplier;
 
-    let x = 100 * more;
+    let duration = 300 * multiplier;
+    let screen_size = 991;
 
-    let duration = 300 * more;
+    let w = window.innerWidth;
+    let horizontalSlide = new TimelineMax();
+    let controller;
+    let size = w > screen_size ? "big" : "small";
+    if (size === "big") {
+        makeScrollMagic();
+    }
 
-    var horizontalSlide = new TimelineMax()
-        .to("#js-slideContainer", 1, {x: "-" + x +"%"})
+    function makeScrollMagic() {
+        controller = new ScrollMagic.Controller();
+        horizontalSlide.to("#js-slideContainer", 1, {x: "-" + x + "%"})
+
+        // create scene to pin and link animation
+        new ScrollMagic.Scene({
+            triggerElement: "#js-wrapper",
+            triggerHook: "onLeave",
+            duration: duration + "%"
+        })
+            .setPin("#js-wrapper")
+            .setTween(horizontalSlide)
+            //.addIndicators() // add indicators (requires plugin)
+            .addTo(controller)
+    }
 
 
-    // create scene to pin and link animation
-    new ScrollMagic.Scene({
-        triggerElement: "#js-wrapper",
-        triggerHook: "onLeave",
-        duration: duration + "%"
-    })
-        .setPin("#js-wrapper")
-        .setTween(horizontalSlide)
-        //.addIndicators() // add indicators (requires plugin)
-        .addTo(controller)
+    function sizeIt() {
+        w = window.innerWidth;
+        let newSize = w > screen_size ? "big" : "small";
+        if (newSize !== size) {
+            size = newSize;
+            if (newSize === "small") {
+                console.log("The screen is now small - ScrollMagic has been destroyed by aliens.");
+                TweenMax.set("#target", {clearProps: "all"});
+                horizontalSlide.clear();
+                controller.destroy(true);
+            } else {
+                console.log("The screen is now large - ScrollMagic is active.");
+                makeScrollMagic();
+            }
+        }
+    }
 
+    window.addEventListener("resize", sizeIt);
 
+    // мобильное меню
+
+    let header_close_menu_btn = document.querySelector('.header__menu-close-btn');
+    let header_open_menu_btn = document.querySelector('.header__menu-open-btn');
+
+    let header_nav_menu = document.querySelector('.header__nav-menu');
+    let header_overlay = document.querySelector('.header__overlay');
+
+    let header_nav_item = document.querySelectorAll('.header__nav-item');
+
+    function menu_close() {
+        header_nav_menu.classList.remove('opened');
+        header_overlay.classList.remove('opened');
+
+        for (let i = 0; i < header_nav_item.length; i++) {
+            let submenu = header_nav_item[i].querySelector('.header__nav-sublist');
+            if (submenu != null)
+                header_nav_item[i].classList.remove('opened');
+        }
+    }
+
+    function menu_open() {
+        header_nav_menu.classList.add('opened');
+        header_overlay.classList.add('opened');
+    }
+
+    header_open_menu_btn.addEventListener('click', function () {
+        menu_open();
+    });
+
+    header_close_menu_btn.addEventListener('click', function () {
+        menu_close();
+    });
+
+    header_overlay.addEventListener('click', function () {
+        menu_close();
+    });
+
+    header_overlay.addEventListener('touchmove', function () {
+        menu_close();
+    });
+
+    // мобильное подменю
+
+    for (let i = 0; i < header_nav_item.length; i++) {
+        header_nav_item[i].addEventListener('click', function () {
+            let submenu = header_nav_item[i].querySelector('.header__nav-sublist');
+            if (submenu != null)
+                header_nav_item[i].classList.toggle('opened');
+        });
+    }
 });

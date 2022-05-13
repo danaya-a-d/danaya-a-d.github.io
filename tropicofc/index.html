@@ -52,12 +52,53 @@
     <div class="header__wrapper wrapper">
 
         <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#">shop</a></li>
-                <li class="header__nav-item"><a href="#">notebook</a></li>
-                <li class="header__nav-item"><a href="#">about</a></li>
-                <li class="header__nav-item"><a href="#">in the tropics</a></li>
-            </ul>
+
+            <button class="header__menu-open-btn"></button>
+
+            <div class="header__nav-menu">
+
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a class="header__link">shop</a>
+
+                        <ul class="header__nav-sublist">
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">all</a>
+                            </li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">NEW</a>
+                            </li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">the C
+                                collection</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">$100
+                                eco
+                                sets</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">sustainable
+                                styles</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">little
+                                black suits</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">coverups</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">one
+                                pieces</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">two
+                                pieces</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">sale</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="header__nav-item"><a href="#" class="header__link">notebook</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__link">about</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__link">in the tropics</a></li>
+                </ul>
+
+                <ul class="header__nav-list header__nav-list-mob">
+                    <li class="header__nav-item"><a href="#" class="header__link">Favorites</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__link">Login</a></li>
+                </ul>
+
+                <button class="header__menu-close-btn"></button>
+            </div>
+
+            <div class="header__overlay"></div>
 
             <a href="index.html" class="header__logo">
                 <svg class="header__logo-image">
@@ -78,13 +119,13 @@
                     </svg>
                 </a></li>
 
-                <li class="header__control-item"><a href="#">
+                <li class="header__control-item favorite"><a href="#">
                     <svg class="header__control-icon">
                         <use xlink:href="#heart"></use>
                     </svg>
                 </a></li>
 
-                <li class="header__control-item"><a href="#">
+                <li class="header__control-item account"><a href="#">
                     <svg class="header__control-icon">
                         <use xlink:href="#account"></use>
                     </svg>
@@ -189,7 +230,7 @@
             <div class="video-banner__video-block">
 
                 <video class="video-banner__item"
-                       poster="https://cdn.shopify.com/s/files/1/0221/7797/2320/files/Mobile_Plate.png?v=1651844106"
+                       poster="img/video-banner.jpg"
                        tabindex="-1" loop="" muted="muted" autoplay="">
                     <source src="https://player.vimeo.com/progressive_redirect/playback/706232370/rendition/1080p?loc=external&amp;signature=a5cf4ef3a942ba08071a7a03d578de28d0da9acd8a3ffdf4e1ee69d682c2e60a"
                             type="video/mp4">
@@ -206,7 +247,8 @@
 
                 <div class="fixed-banner__link-block">
                     <h2 class="fixed-banner__title title">Beyond beach worthy</h2>
-                    <p class="fixed-banner__text">Something more. Layer your swimwear with our selection of coverups.</p>
+                    <p class="fixed-banner__text">Something more. Layer your swimwear with our selection of
+                        coverups.</p>
 
                     <a href="#" class="fixed-banner__button button">Shop now</a>
                 </div>
@@ -229,103 +271,200 @@
 
             <h2 class="arrivals__title">NEW ARRIVALS</h2>
 
-            <ul class="arrivals__list">
+            <div class="arrivals__list-container swiper-container">
+                <ul class="arrivals__list swiper-wrapper">
 
-                <li class="arrivals__item product">
-                    <a href="#" class="product__link">
-                        <img src="img/product-1.jpg" alt="" class="product__photo">
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-1.jpg" alt="" class="product__photo">
 
-                        <div class="product__info-block">
-                            <p class="product__name">Metamorphosis top in dahlia/red</p>
-                            <p class="product__price">$100</p>
-                        </div>
-                    </a>
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
 
-                    <ul class="product__types">
-                        <li class="product__type active"><span class="product__color pink"></span></li>
-                        <li class="product__type"><span class="product__color brown"></span></li>
-                        <li class="product__type"><span class="product__color red"></span></li>
-                        <li class="product__type"><span class="product__color black"></span></li>
-                        <li class="product__type"><span class="product__color blue"></span></li>
-                    </ul>
-                </li>
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
 
-                <li class="arrivals__item product">
-                    <a href="#" class="product__link">
-                        <img src="img/product-2.jpg" alt="" class="product__photo">
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-2.jpg" alt="" class="product__photo">
 
-                        <div class="product__info-block">
-                            <p class="product__name">Metamorphosis top in dahlia/red</p>
-                            <p class="product__price">$100</p>
-                        </div>
-                    </a>
+                            <div class="product__info-block">
+                                <p class="product__name">Praia top in plum</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
 
-                    <ul class="product__types">
-                        <li class="product__type active"><span class="product__color pink"></span></li>
-                        <li class="product__type"><span class="product__color brown"></span></li>
-                        <li class="product__type"><span class="product__color red"></span></li>
-                        <li class="product__type"><span class="product__color black"></span></li>
-                        <li class="product__type"><span class="product__color blue"></span></li>
-                    </ul>
-                </li>
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
 
-                <li class="arrivals__item product">
-                    <a href="#" class="product__link">
-                        <img src="img/product-3.jpg" alt="" class="product__photo">
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-3.jpg" alt="" class="product__photo">
 
-                        <div class="product__info-block">
-                            <p class="product__name">Metamorphosis top in dahlia/red</p>
-                            <p class="product__price">$100</p>
-                        </div>
-                    </a>
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
 
-                    <ul class="product__types">
-                        <li class="product__type active"><span class="product__color pink"></span></li>
-                        <li class="product__type"><span class="product__color brown"></span></li>
-                        <li class="product__type"><span class="product__color red"></span></li>
-                        <li class="product__type"><span class="product__color black"></span></li>
-                        <li class="product__type"><span class="product__color blue"></span></li>
-                    </ul>
-                </li>
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
 
-                <li class="arrivals__item product">
-                    <a href="#" class="product__link">
-                        <img src="img/product-4.jpg" alt="" class="product__photo">
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-4.jpg" alt="" class="product__photo">
 
-                        <div class="product__info-block">
-                            <p class="product__name">Metamorphosis top in dahlia/red</p>
-                            <p class="product__price">$100</p>
-                        </div>
-                    </a>
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
 
-                    <ul class="product__types">
-                        <li class="product__type active"><span class="product__color pink"></span></li>
-                        <li class="product__type"><span class="product__color brown"></span></li>
-                        <li class="product__type"><span class="product__color red"></span></li>
-                        <li class="product__type"><span class="product__color black"></span></li>
-                        <li class="product__type"><span class="product__color blue"></span></li>
-                    </ul>
-                </li>
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
 
-                <li class="arrivals__item product">
-                    <a href="#" class="product__link">
-                        <img src="img/product-5.jpg" alt="" class="product__photo">
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-5.jpg" alt="" class="product__photo">
 
-                        <div class="product__info-block">
-                            <p class="product__name">Metamorphosis top in dahlia/red</p>
-                            <p class="product__price">$100</p>
-                        </div>
-                    </a>
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
 
-                    <ul class="product__types">
-                        <li class="product__type active"><span class="product__color pink"></span></li>
-                        <li class="product__type"><span class="product__color brown"></span></li>
-                        <li class="product__type"><span class="product__color red"></span></li>
-                        <li class="product__type"><span class="product__color black"></span></li>
-                        <li class="product__type"><span class="product__color blue"></span></li>
-                    </ul>
-                </li>
-            </ul>
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-1.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-2.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-3.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-4.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="arrivals__item product swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-5.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
 
         </div>
     </section>
@@ -382,7 +521,7 @@
         </section>
     </div>
 
-    <div class="footer__wrapper wrapper">
+    <div class="footer__bottom-wrapper wrapper">
         <a href="#" class="footer__copy">copyright tropic of c 2022</a>
         <a href="#" class="footer__copy">made by teh</a>
     </div>

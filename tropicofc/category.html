@@ -52,12 +52,53 @@
     <div class="header__wrapper wrapper">
 
         <nav class="header__nav">
-            <ul class="header__nav-list">
-                <li class="header__nav-item"><a href="#">shop</a></li>
-                <li class="header__nav-item"><a href="#">notebook</a></li>
-                <li class="header__nav-item"><a href="#">about</a></li>
-                <li class="header__nav-item"><a href="#">in the tropics</a></li>
-            </ul>
+
+            <button class="header__menu-open-btn"></button>
+
+            <div class="header__nav-menu">
+
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a class="header__link">shop</a>
+
+                        <ul class="header__nav-sublist">
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">all</a>
+                            </li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">NEW</a>
+                            </li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">the C
+                                collection</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">$100
+                                eco
+                                sets</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">sustainable
+                                styles</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">little
+                                black suits</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">coverups</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">one
+                                pieces</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">two
+                                pieces</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">sale</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <li class="header__nav-item"><a href="#" class="header__link">notebook</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__link">about</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__link">in the tropics</a></li>
+                </ul>
+
+                <ul class="header__nav-list header__nav-list-mob">
+                    <li class="header__nav-item"><a href="#" class="header__link">Favorites</a></li>
+                    <li class="header__nav-item"><a href="#" class="header__link">Login</a></li>
+                </ul>
+
+                <button class="header__menu-close-btn"></button>
+            </div>
+
+            <div class="header__overlay"></div>
 
             <a href="index.html" class="header__logo">
                 <svg class="header__logo-image">
@@ -78,13 +119,13 @@
                     </svg>
                 </a></li>
 
-                <li class="header__control-item"><a href="#">
+                <li class="header__control-item favorite"><a href="#">
                     <svg class="header__control-icon">
                         <use xlink:href="#heart"></use>
                     </svg>
                 </a></li>
 
-                <li class="header__control-item"><a href="#">
+                <li class="header__control-item account"><a href="#">
                     <svg class="header__control-icon">
                         <use xlink:href="#account"></use>
                     </svg>
@@ -142,7 +183,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-2.jpg" alt="" class="product__photo">
 
@@ -161,7 +202,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-3.jpg" alt="" class="product__photo">
 
@@ -180,7 +221,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-4.jpg" alt="" class="product__photo">
 
@@ -199,7 +240,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-5.jpg" alt="" class="product__photo">
 
@@ -237,7 +278,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-2.jpg" alt="" class="product__photo">
 
@@ -256,7 +297,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-3.jpg" alt="" class="product__photo">
 
@@ -275,7 +316,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-4.jpg" alt="" class="product__photo">
 
@@ -294,7 +335,7 @@
                     </ul>
                 </li>
 
-                <li class="arrivals__item product">
+                <li class="category__item product">
                     <a href="#" class="product__link">
                         <img src="img/product-5.jpg" alt="" class="product__photo">
 
@@ -371,7 +412,7 @@
         </section>
     </div>
 
-    <div class="footer__wrapper wrapper">
+    <div class="footer__bottom-wrapper wrapper">
         <a href="#" class="footer__copy">copyright tropic of c 2022</a>
         <a href="#" class="footer__copy">made by teh</a>
     </div>
