@@ -32,6 +32,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     });
 
+
     // горизонтальный скролл
 
     let scroll_items = document.querySelectorAll('.banners__item');
@@ -74,7 +75,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
             .addTo(controller)
     }
 
-
     function sizeIt() {
         w = window.innerWidth;
         let newSize = w > screen_size ? "big" : "small";
@@ -93,6 +93,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
     window.addEventListener("resize", sizeIt);
+
 
     // мобильное меню
 
@@ -145,4 +146,92 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 header_nav_item[i].classList.toggle('opened');
         });
     }
+
+    // фильтр категорий
+
+    let category_filter = document.querySelector('.category__filters');
+
+    document.querySelector('body').addEventListener('click', (e) => {
+
+        const target = e.target;
+        if (target.classList.contains('filters-btn-js')) {
+            category_filter.classList.toggle('open');
+        }
+    });
+
+
+    // видимость кнопки фильтрации
+
+    // Получаем нужный элемент
+    let category_nav = document.querySelector('#category-nav-js');
+    let filters_fixed_btn = document.querySelector('#filters-fixed-btn-js');
+
+    let Visible = function (target) {
+        // Все позиции элемента
+        let targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top &&
+            targetPosition.top < windowPosition.bottom &&
+            targetPosition.right > windowPosition.left &&
+            targetPosition.left < windowPosition.right) {
+            // Если элемент полностью видно, то запускаем следующий код
+            filters_fixed_btn.classList.add('hide');
+        } else {
+            // Если элемент не видно, то запускаем этот код
+            filters_fixed_btn.classList.remove('hide');
+        }
+    };
+
+    // Запускаем функцию
+    window.addEventListener('scroll', function () {
+        Visible(category_nav);
+    });
+
+    Visible(category_nav);
+
+
+    // открытие блоков описания товара
+
+    let filters_section = document.querySelectorAll('.filters__section');
+
+    if (filters_section !== null) {
+        for (let i = 0; i < filters_section.length; i++) {
+            let filters_title = filters_section[i].querySelector('.filters__title');
+
+            filters_title.addEventListener('click', function () {
+                filters_section[i].classList.toggle('active');
+            });
+        }
+    }
+
+
+    // плавная прокрутка к якорю
+
+    const anchors = document.querySelectorAll('a[href*="#"]')
+
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault()
+
+            const blockID = anchor.getAttribute('href').substr(1)
+
+            document.getElementById(blockID).scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            })
+        })
+    }
+
 });

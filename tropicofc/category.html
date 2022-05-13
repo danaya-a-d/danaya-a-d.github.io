@@ -75,7 +75,8 @@
                                 styles</a></li>
                             <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">little
                                 black suits</a></li>
-                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">coverups</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink"
+                                                               href="category.html">coverups</a></li>
                             <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">one
                                 pieces</a></li>
                             <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">two
@@ -143,12 +144,12 @@
         </div>
     </section>
 
-    <section class="category">
+    <section class="category" id="filters">
         <div class="category__wrapper wrapper">
 
             <h2 class="category__title visually-hidden">Collection</h2>
 
-            <div class="category__nav">
+            <div class="category__nav" id="category-nav-js">
                 <div class="category__breadcrumbs breadcrumbs">
                     <ul class="breadcrumbs__list">
                         <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
@@ -157,14 +158,216 @@
                 </div>
 
                 <ul class="category__nav-list">
-                    <li class="category__nav-item">Filters (0)</li>
-                    <li class="category__nav-item">Sorting</li>
+                    <li class="category__nav-item">
+                        <a class="category__nav-link filters-btn-js">Filters (0)</a>
+
+                        <div class="category__filters filters">
+                            <form class="filters__form" action="#" method="get">
+
+                                <button class="filters__button button" type="button">Reset filters</button>
+
+                                <div class="filters__section active">
+                                    <p class="filters__title">Style</p>
+
+                                    <div class="filters__content filters__content-chek">
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="style" type="checkbox"
+                                                   value="Bikinis">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Bikinis</span>
+                                        </label>
+
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="style" type="checkbox"
+                                                   value="Boxers">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Boxers</span>
+                                        </label>
+
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="style" type="checkbox"
+                                                   value="Boy Shorts">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Boy Shorts</span>
+                                        </label>
+
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="style" type="checkbox"
+                                                   value="Briefs">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Briefs</span>
+                                        </label>
+
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="style" type="checkbox"
+                                                   value="Thongs">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Thongs</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="filters__section active">
+                                    <p class="filters__title">Type</p>
+
+                                    <div class="filters__content filters__content-chek">
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="type" type="checkbox"
+                                                   value="Bundle And Save">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Bundle And Save</span>
+                                        </label>
+
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="type" type="checkbox"
+                                                   value="Panties">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Panties</span>
+                                        </label>
+
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="type" type="checkbox"
+                                                   value="Shorts">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Shorts</span>
+                                        </label>
+
+                                        <label class="filters__label-check label-check">
+                                            <input class="visually-hidden" name="type" type="checkbox"
+                                                   value="Tights">
+                                            <span class="label-check__indicator"></span>
+                                            <span class="label-check__title">Tights</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="filters__section active">
+                                    <p class="filters__title">Size</p>
+
+                                    <div class="filters__content filters__content-sizes">
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="xxs">
+                                            <span class="label-size__title">xxs</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="xs" disabled>
+                                            <span class="label-size__title">xs</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="s">
+                                            <span class="label-size__title">s</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="m">
+                                            <span class="label-size__title">m</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="l">
+                                            <span class="label-size__title">l</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="xl">
+                                            <span class="label-size__title">xl</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="2x">
+                                            <span class="label-size__title">2x</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="3x">
+                                            <span class="label-size__title">3x</span>
+                                        </label>
+
+                                        <label class="filters__label-size label-size">
+                                            <input class="visually-hidden" name="size" type="checkbox" value="4x">
+                                            <span class="label-size__title">4x</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="filters__section active">
+                                    <p class="filters__title">Color</p>
+
+                                    <div class="filters__content filters__content-colors">
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="B2B0C2">
+
+                                            <span class="label-color__indicator" style="background-color: #B2B0C2"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="78615C">
+
+                                            <span class="label-color__indicator" style="background-color: #78615C"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="795640">
+
+                                            <span class="label-color__indicator" style="background-color: #795640"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="7D6F76">
+
+                                            <span class="label-color__indicator" style="background-color: #7D6F76"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="A29785">
+
+                                            <span class="label-color__indicator" style="background-color: #A29785"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="555662">
+
+                                            <span class="label-color__indicator" style="background-color: #555662"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="BC588C">
+
+                                            <span class="label-color__indicator" style="background-color: #BC588C"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="D78BB5">
+
+                                            <span class="label-color__indicator" style="background-color: #D78BB5"></span>
+                                        </label>
+
+                                        <label class="filters__label-color label-color">
+                                            <input class="visually-hidden" name="color" type="checkbox" value="BD5362">
+
+                                            <span class="label-color__indicator" style="background-color: #BD5362"></span>
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </li>
+                    <li class="category__nav-item">
+                        <a class="category__nav-link">Sorting</a>
+                    </li>
                 </ul>
             </div>
 
             <ul class="category__list">
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-1.jpg" alt="" class="product__photo">
 
@@ -183,12 +386,12 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-2.jpg" alt="" class="product__photo">
 
                         <div class="product__info-block">
-                            <p class="product__name">Metamorphosis top in dahlia/red</p>
+                            <p class="product__name">Praia top in plum</p>
                             <p class="product__price">$100</p>
                         </div>
                     </a>
@@ -202,7 +405,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-3.jpg" alt="" class="product__photo">
 
@@ -221,7 +424,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-4.jpg" alt="" class="product__photo">
 
@@ -240,7 +443,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-5.jpg" alt="" class="product__photo">
 
@@ -259,7 +462,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-1.jpg" alt="" class="product__photo">
 
@@ -278,7 +481,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-2.jpg" alt="" class="product__photo">
 
@@ -297,7 +500,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-3.jpg" alt="" class="product__photo">
 
@@ -316,7 +519,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-4.jpg" alt="" class="product__photo">
 
@@ -335,7 +538,7 @@
                     </ul>
                 </li>
 
-                <li class="category__item product">
+                <li class="category__item product product--small">
                     <a href="#" class="product__link">
                         <img src="img/product-5.jpg" alt="" class="product__photo">
 
@@ -358,7 +561,7 @@
         </div>
     </section>
 
-    <button class="filters-button"></button>
+    <a href="#filters" class="filters-button filters-btn-js" id="filters-fixed-btn-js"></a>
 </main>
 
 <footer class="footer">
