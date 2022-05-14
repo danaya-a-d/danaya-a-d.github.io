@@ -36,15 +36,20 @@
 <header class="header">
     <div class="header__wrapper wrapper">
         <nav class="header__nav">
+
             <ul class="header__nav-list">
                 <li class="header__nav-item"><a href="#">RINGS</a></li>
                 <li class="header__nav-item active"><a href="#">Earrings</a></li>
                 <li class="header__nav-item"><a href="#">tender ukraine</a></li>
             </ul>
 
+            <button class="header__menu-open-btn">Menu</button>
+
             <a href="index.html" class="header__logo logo">
                 <img class="logo__image" src="img/logo.svg" alt="2">
             </a>
+
+            <button class="header__menu-open-btn">Menu</button>
 
             <ul class="header__control-list">
                 <li class="header__control-item"><a>
@@ -745,32 +750,39 @@
 <footer class="footer">
     <div class="footer__wrapper wrapper">
         <div class="footer__info">
-            <a class="footer__logo logo">
-                <img class="logo__image" src="img/logo.svg" alt="2">
-            </a>
 
-            <p class="footer__slogan">A platform created by Ukrainians that unites
-                a huge number of jewelry brands in one place</p>
+            <p class="footer__nav-title footer__nav-title--mob footer-collapse-btn active">About us</p>
 
-            <ul class="footer__socials socials">
-                <li class="socials__item"><a href="#">
-                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#instagram"></use>
-                    </svg>
-                </a></li>
+            <div class="footer__info-block footer-collapse">
 
-                <li class="socials__item"><a href="#">
-                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
-                        <use xlink:href="#telegram"></use>
-                    </svg>
-                </a></li>
-            </ul>
+                <a class="footer__logo logo">
+                    <img class="logo__image" src="img/logo.svg" alt="2">
+                </a>
+
+                <p class="footer__slogan">A platform created by Ukrainians that unites
+                    a huge number of jewelry brands in one place</p>
+
+                <ul class="footer__socials socials">
+                    <li class="socials__item"><a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a></li>
+
+                    <li class="socials__item"><a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#telegram"></use>
+                        </svg>
+                    </a></li>
+                </ul>
+
+            </div>
         </div>
 
         <div class="footer__nav">
             <div class="footer__nav-block">
-                <p class="footer__nav-title">Account</p>
-                <ul class="footer__nav-list">
+                <p class="footer__nav-title footer-collapse-btn">Account</p>
+                <ul class="footer__nav-list footer-collapse">
                     <li class="footer__nav-item"><a href="#">Login</a></li>
                     <li class="footer__nav-item"><a href="#">Register</a></li>
                     <li class="footer__nav-item"><a href="#">Forgot Password</a></li>
@@ -778,8 +790,8 @@
             </div>
 
             <div class="footer__nav-block">
-                <p class="footer__nav-title">TWO</p>
-                <ul class="footer__nav-list">
+                <p class="footer__nav-title footer-collapse-btn">TWO</p>
+                <ul class="footer__nav-list footer-collapse">
                     <li class="footer__nav-item"><a href="#">About Us</a></li>
                     <li class="footer__nav-item"><a href="#">Contact Us</a></li>
                     <li class="footer__nav-item"><a href="#">Locations</a></li>
@@ -787,8 +799,8 @@
             </div>
 
             <div class="footer__nav-block">
-                <p class="footer__nav-title">LEARN</p>
-                <ul class="footer__nav-list">
+                <p class="footer__nav-title footer-collapse-btn">LEARN</p>
+                <ul class="footer__nav-list footer-collapse">
                     <li class="footer__nav-item"><a href="#">FAQ</a></li>
                     <li class="footer__nav-item"><a href="#">Delivery</a></li>
                     <li class="footer__nav-item"><a href="#">Returns</a></li>
@@ -796,8 +808,8 @@
             </div>
 
             <div class="footer__nav-block">
-                <p class="footer__nav-title">SUPPORT</p>
-                <ul class="footer__nav-list">
+                <p class="footer__nav-title footer-collapse-btn">SUPPORT</p>
+                <ul class="footer__nav-list footer-collapse">
                     <li class="footer__nav-item"><a href="#">Privacy Policy</a></li>
                     <li class="footer__nav-item"><a href="#">Cookie Policy</a></li>
                     <li class="footer__nav-item"><a href="#">Terms & Conditions</a></li>
@@ -807,7 +819,7 @@
     </div>
 
     <div class="footer__bottom-wrapper wrapper">
-        <a href="#" class="footer__author">Made by teh</a>
+        <a href="#" class="footer__author">made by teh</a>
         <img src="img/payments.svg" alt="visa mastercard apple pay" class="footer__payments">
     </div>
 </footer>
@@ -836,7 +848,8 @@
                     </div>
 
                     <span class="cart__counter counter">
-                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <button class="counter__button minus" type="button">–</button><label
+                            class="counter__label">
                                 <input class="counter__input" type="text" value="1" data-price="415"
                                        onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
                                 </label><button class="counter__button plus" type="button">+</button>
@@ -861,7 +874,8 @@
                     </div>
 
                     <span class="cart__counter counter">
-                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <button class="counter__button minus" type="button">–</button><label
+                            class="counter__label">
                                 <input class="counter__input" type="text" value="1" data-price="415"
                                        onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
                                 </label><button class="counter__button plus" type="button">+</button>
@@ -881,7 +895,8 @@
                 <p class="submit-block__value">$300</p>
             </div>
 
-            <p class="submit-block__text">Please note: Due to delays at our warehouse, all orders are taking an additional 72 hours of processing time</p>
+            <p class="submit-block__text">Please note: Due to delays at our warehouse, all orders are taking an
+                additional 72 hours of processing time</p>
 
             <a href="#" class="submit-block__button button button--black">Checkout</a>
         </div>

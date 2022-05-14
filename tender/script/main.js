@@ -6,6 +6,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let filter_reset = document.getElementById('filter-reset-js');
     let filter_form = document.getElementById('filter-form-js');
     let card_text_block = document.querySelectorAll('.card__text-block');
+    let footer_collapse_btn = document.querySelectorAll('.footer-collapse-btn');
 
 
     if (filter_slider !== null) {
@@ -68,6 +69,16 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
 
+    // открытие блоков футера
+    if (footer_collapse_btn !== null) {
+        for (let i = 0; i < footer_collapse_btn.length; i++) {
+            footer_collapse_btn[i].addEventListener('click', function () {
+                footer_collapse_btn[i].classList.toggle('active');
+            });
+        }
+    }
+
+
     // открытие истоии заказов
     let history_item_content = document.querySelectorAll('.history__item-content');
 
@@ -90,4 +101,13 @@ window.addEventListener('DOMContentLoaded', function (event) {
             });
         }
     }
+
+    // фильтр категорий
+
+    document.querySelector('body').addEventListener('click', (e) => {
+        const target = e.target;
+        if (target.classList.contains('filters-btn-js')) {
+            filter_form.classList.toggle('open');
+        }
+    });
 });
