@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Category</title>
+    <title>Product</title>
 
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
@@ -45,10 +45,14 @@
       <path d="M15.398.006L11.56 0C7.248 0 4.462 2.801 4.462 7.137v3.29H.603A.598.598 0 0 0 0 11.02v4.768c0 .327.27.591.603.591h3.859v12.03c0 .327.27.592.603.592H10.1a.597.597 0 0 0 .603-.591V16.38h4.512a.597.597 0 0 0 .603-.592l.002-4.768a.586.586 0 0 0-.177-.418.61.61 0 0 0-.427-.174h-4.513V7.639c0-1.34.326-2.021 2.109-2.021l2.585-.001A.597.597 0 0 0 16 5.024V.597c0-.326-.27-.59-.602-.591z"
             fill="#000"/>
     </symbol>
+    <symbol id="star" viewBox="0 0 28 27">
+      <path d="M17.892 9.106l.113.237.259.042 8.668 1.388-6.345 6.114-.188.18.04.257 1.374 8.75-7.706-4.211-.233-.127-.236.121-7.812 4.025 1.585-8.724.047-.257-.184-.185-6.21-6.245 8.69-1.174.261-.035.118-.236 3.959-7.888 3.8 7.968z"
+            stroke="#DE8426"/>
+    </symbol>
   </svg>
 </div>
 
-<header class="header white">
+<header class="header black">
     <div class="header__wrapper wrapper">
 
         <nav class="header__nav">
@@ -137,7 +141,776 @@
 </header>
 
 <main class="page-main">
-    
+    <section class="card">
+        <div class="card__wrapper wrapper">
+
+            <div class="card__photo-block">
+                <div class="card__breadcrumbs breadcrumbs">
+                    <ul class="breadcrumbs__list">
+                        <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumbs__item"><a href="index.html">The C collection</a></li>
+                        <li class="breadcrumbs__item active"><a>The C bralette</a></li>
+                    </ul>
+                </div>
+
+                <div class="card__photo-container">
+                    <div class="card__thumbs-block swiper-container">
+                        <ul class="card__thumbs swiper-wrapper">
+                            <li class="card__thumb swiper-slide"><img src="img/product-1.jpg" alt=""></li>
+                            <li class="card__thumb swiper-slide"><img src="img/product-2.jpg" alt=""></li>
+                            <li class="card__thumb swiper-slide"><img src="img/product-3.jpg" alt=""></li>
+                            <li class="card__thumb swiper-slide"><img src="img/product-4.jpg" alt=""></li>
+                        </ul>
+                    </div>
+
+                    <div class="card__big-photo-block swiper-container">
+                        <ul class="card__photos swiper-wrapper">
+                            <li class="card__photo swiper-slide"><img src="img/product-1.jpg" alt=""></li>
+                            <li class="card__photo swiper-slide"><img src="img/product-2.jpg" alt=""></li>
+                            <li class="card__photo swiper-slide"><img src="img/product-3.jpg" alt=""></li>
+                            <li class="card__photo swiper-slide"><img src="img/product-4.jpg" alt=""></li>
+                        </ul>
+
+                        <div class="card__slider-button-prev swiper-button-prev"></div>
+                        <div class="card__slider-button-next swiper-button-next"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card__about-block">
+                <div class="card__main-info">
+                    <h1 class="card__title">the C bralette in poppy wave</h1>
+                    <p class="card__price">$85</p>
+                </div>
+
+                <div class="card__rating rating">
+                    <div class="rating__stars">
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--empty">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </div>
+
+                    <p class="rating__text">175 Reviews</p>
+                </div>
+
+                <div class="card__types">
+
+                    <div class="card__type-section">
+                        <div class="card__type-nav">
+                            <p class="card__type-title">Color:</p>
+                        </div>
+
+                        <div class="card__content-color">
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="B2B0C2">
+
+                                <span class="label-color__indicator" style="background-color: #B2B0C2"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="78615C">
+
+                                <span class="label-color__indicator" style="background-color: #78615C"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="795640">
+
+                                <span class="label-color__indicator" style="background-color: #795640"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="7D6F76">
+
+                                <span class="label-color__indicator" style="background-color: #7D6F76"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="A29785">
+
+                                <span class="label-color__indicator" style="background-color: #A29785"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="555662">
+
+                                <span class="label-color__indicator" style="background-color: #555662"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="BC588C">
+
+                                <span class="label-color__indicator" style="background-color: #BC588C"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="D78BB5">
+
+                                <span class="label-color__indicator" style="background-color: #D78BB5"></span>
+                            </label>
+
+                            <label class="card__label-color label-color">
+                                <input class="visually-hidden" name="color" type="radio" value="BD5362">
+
+                                <span class="label-color__indicator" style="background-color: #BD5362"></span>
+                            </label>
+
+                        </div>
+                    </div>
+
+                    <div class="card__type-section">
+                        <div class="card__type-nav">
+                            <p class="card__type-title">Size:</p>
+                            <p class="card__type-link">Size guide</p>
+                        </div>
+
+                        <div class="card__content-size">
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="xxs">
+                                <span class="label-size__title">xxs</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="xs" disabled>
+                                <span class="label-size__title">xs</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="s">
+                                <span class="label-size__title">s</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="m">
+                                <span class="label-size__title">m</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="l">
+                                <span class="label-size__title">l</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="xl">
+                                <span class="label-size__title">xl</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="2x">
+                                <span class="label-size__title">2x</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="3x">
+                                <span class="label-size__title">3x</span>
+                            </label>
+
+                            <label class="card__label-size label-size">
+                                <input class="visually-hidden" name="size" type="radio" value="4x">
+                                <span class="label-size__title">4x</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="card__type-nav">
+                        <p class="card__type-title-big">Only 1 left</p>
+                        <p class="card__type-link">
+                            <svg class="card__type-icon">
+                                <use xlink:href="#heart"></use>
+                            </svg>
+                            add to favorites
+                        </p>
+                    </div>
+
+                </div>
+
+                <button class="card__button button button--black">Add to bag</button>
+
+
+                <div class="card__offers offers">
+                    <p class="offers__title">Complete the Look</p>
+
+                    <div class="offers__item">
+                        <img src="img/product-2.jpg" alt="" class="offers__img">
+
+                        <div class="offers__main-block">
+
+                            <div class="offers__info-block">
+                                <div class="offers__specification-list">
+                                    <p class="offers__specification-item">The C bottom</p>
+                                    <p class="offers__specification-item">Color: poppy wave</p>
+                                </div>
+
+                                <p class="offers__price">$80</p>
+                            </div>
+
+                            <div class="offers__form-block">
+                                <label class="offers__label">
+                                    <select class="offers__select" name="shipping address">
+                                        <option value="Size">Size</option>
+                                    </select>
+                                </label>
+
+                                <button class="offers__button button">Add</button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="offers__item">
+                        <img src="img/product-2.jpg" alt="" class="offers__img">
+
+                        <div class="offers__main-block">
+
+                            <div class="offers__info-block">
+                                <div class="offers__specification-list">
+                                    <p class="offers__specification-item">The C bottom</p>
+                                    <p class="offers__specification-item">Color: poppy wave</p>
+                                </div>
+
+                                <p class="offers__price">$80</p>
+                            </div>
+
+                            <div class="offers__form-block">
+                                <label class="offers__label">
+                                    <select class="offers__select" name="shipping address">
+                                        <option value="Size">Size</option>
+                                    </select>
+                                </label>
+
+                                <button class="offers__button button">Add</button>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="card__description">
+
+                    <div class="card__text-block text-block active">
+                        <h4 class="text-block__title">Details</h4>
+
+                        <div class="text-block__text">
+                            <p>low-rise bottom with minimal back coverage in a digitally printed fabric. adjustable
+                                elastic
+                                cording straps for a custom fit. finished with purl edging. fully lined. pair it with
+                                our C
+                                bralette.</p>
+                        </div>
+                    </div>
+
+                    <div class="card__text-block text-block active">
+                        <h4 class="text-block__title">Shipping & Returns</h4>
+
+                        <div class="text-block__text">
+                            <p>Shipping Policy</p>
+
+                            <small>Free shipping on domestic orders $75+</small>
+                            <small>Please allow up to 2 business days for processing before your order ships</small>
+
+                            <p>Return Policy</p>
+
+                            <small>30-Day Returns For Domestic Orders ($6 return shipping fee)</small>
+                            <small>Products must be returned unworn, unwashed, in their original condition and with all
+                                tags
+                                and liners attached.</small>
+                            <small>We ask that you wear underwear when first trying-on your purchase, as we reserve the
+                                right to refuse returns that show any signs of wear.</small>
+                        </div>
+                    </div>
+
+                </div>
+
+                <ul class="card__socials socials">
+                    <li class="socials__title">Share:</li>
+
+
+                    <li class="socials__item"><a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a></li>
+
+                    <li class="socials__item"><a href="#">
+                        <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                            <use xlink:href="#facebook"></use>
+                        </svg>
+                    </a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="offer">
+        <div class="offer__wrapper wrapper">
+
+            <h2 class="offer__title">Looks Great With</h2>
+
+            <div class="offer__list-container offer-great swiper-container">
+                <ul class="offer__list swiper-wrapper">
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-1.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-2.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Praia top in plum</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-3.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-4.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-5.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="offer">
+        <div class="offer__wrapper wrapper">
+
+            <h2 class="offer__title">you may also like</h2>
+
+            <div class="offer__list-container offer-like great swiper-container">
+                <ul class="offer__list swiper-wrapper">
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-1.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-2.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Praia top in plum</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-3.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-4.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+
+                    <li class="offer__item product product--small swiper-slide">
+                        <a href="#" class="product__link">
+                            <img src="img/product-5.jpg" alt="" class="product__photo">
+
+                            <div class="product__info-block">
+                                <p class="product__name">Metamorphosis top in dahlia/red</p>
+                                <p class="product__price">$100</p>
+                            </div>
+                        </a>
+
+                        <ul class="product__types">
+                            <li class="product__type active"><span class="product__color pink"></span></li>
+                            <li class="product__type"><span class="product__color brown"></span></li>
+                            <li class="product__type"><span class="product__color red"></span></li>
+                            <li class="product__type"><span class="product__color black"></span></li>
+                            <li class="product__type"><span class="product__color blue"></span></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="reviews">
+        <div class="reviews__wrapper wrapper">
+            <h2 class="reviews__title title">Reviews</h2>
+
+            <div class="reviews__nav">
+                <div class="reviews__rating rating">
+                    <div class="rating__stars">
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--fill">
+                            <use xlink:href="#star"></use>
+                        </svg>
+
+                        <svg class="rating__star rating__star--empty">
+                            <use xlink:href="#star"></use>
+                        </svg>
+                    </div>
+
+                    <p class="rating__text">175 Reviews</p>
+                </div>
+
+                <form class="reviews__form">
+                    <button class="reviews__button button">Give feedback</button>
+
+                    <label class="reviews__label">
+                        <select class="reviews__select" name="shipping address">
+                            <option value="Size">Filters</option>
+                        </select>
+                    </label>
+
+                    <label class="reviews__label">
+                        <select class="reviews__select" name="shipping address">
+                            <option value="Size">Most helpful</option>
+                        </select>
+                    </label>
+                </form>
+
+            </div>
+
+            <ul class="reviews__list">
+                <li class="reviews__item review">
+                    <div class="review__user-info">
+                        <p class="review__name">Micha</p>
+                        <p class="review__type">Verified Buyer</p>
+                        <div class="review__rating rating rating--small">
+                            <div class="rating__stars">
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--empty">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="review__size">M</div>
+
+                    </div>
+
+                    <div class="review__content">
+                        <div class="review__text-block">
+                            <h4>Life changing crop</h4>
+
+                            <p>Okay so let me just start with my measurements because I was really worried when I was
+                                picking sizes! I am 5’5 around 115 and a 32DD (with implants) honestly my arms are
+                                chunkier and I have a very small ribcage area so I was thinking of XS or a S. I ended up
+                                going with a small and I’m soooo glad it fits like a glove. I know that if my boobs were
+                                naturally lower or bigger this size would still be perf!</p>
+
+                            <p>I wear this crop like multiple times a week. It is perfect for the gym, for lounging, for
+                                going out!!! It is thin, so beware with the lighter colors but I love a good nip moment
+                                so I didn’t mind. Maybe nipple covers would be perf or a skims seamless bra.</p>
+
+                            <p>Washing I wash with cold/warm and lay to dry, they dry well and fast!! Overall 10/10 and
+                                can’t wait to buy all the colors.</p>
+                        </div>
+
+                        <div class="review__nav-block">
+                            <time class="review__time">11 months ago</time>
+
+                            <div class="review__likes likes">
+                                <div class="likes__like">
+                                    <button class="likes__button up"></button>
+                                    <span class="likes__val">31</span>
+                                </div>
+
+                                <div class="likes__like">
+                                    <button class="likes__button down"></button>
+                                    <span class="likes__val">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="reviews__item review">
+                    <div class="review__user-info">
+                        <p class="review__name">Tai</p>
+                        <p class="review__type">Verified Buyer</p>
+                        <div class="review__rating rating rating--small">
+                            <div class="rating__stars">
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--empty">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="review__size">S</div>
+
+                    </div>
+
+                    <div class="review__content">
+                        <div class="review__text-block">
+                            <h4>SO SEE THROUGH</h4>
+
+                            <p>Im so so so sad. Ive been wanting this top for so long and when it finally came I was so disappointed. This top is extremely see through, and the material is so thin, I feel like it will rip apart. I love skims but I wish it would've been double lined or thicker.</p>
+                        </div>
+
+                        <div class="review__nav-block">
+                            <time class="review__time">11 months ago</time>
+
+                            <div class="review__likes likes">
+                                <div class="likes__like">
+                                    <button class="likes__button up"></button>
+                                    <span class="likes__val">31</span>
+                                </div>
+
+                                <div class="likes__like">
+                                    <button class="likes__button down"></button>
+                                    <span class="likes__val">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+
+                <li class="reviews__item review">
+                    <div class="review__user-info">
+                        <p class="review__name">Micha</p>
+                        <p class="review__type">Verified Buyer</p>
+                        <div class="review__rating rating rating--small">
+                            <div class="rating__stars">
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--fill">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+
+                                <svg class="rating__star rating__star--empty">
+                                    <use xlink:href="#star"></use>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="review__size">M</div>
+
+                    </div>
+
+                    <div class="review__content">
+                        <div class="review__text-block">
+                            <h4>Please restock</h4>
+
+                            <p>This is the best top ever! It’s so comfortable and exceeded my expectations.</p>
+                        </div>
+
+                        <div class="review__nav-block">
+                            <time class="review__time">11 months ago</time>
+
+                            <div class="review__likes likes">
+                                <div class="likes__like">
+                                    <button class="likes__button up"></button>
+                                    <span class="likes__val">31</span>
+                                </div>
+
+                                <div class="likes__like">
+                                    <button class="likes__button down"></button>
+                                    <span class="likes__val">0</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+        </div>
+    </section>
 </main>
 
 <footer class="footer">

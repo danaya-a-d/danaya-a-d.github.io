@@ -2,7 +2,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     // слайдеры
 
-    const product_swiper = new Swiper('.arrivals__list-container', {
+    const arrival_swiper = new Swiper('.arrivals__list-container', {
         direction: 'horizontal',
         loop: false,
         spaceBetween: 6,
@@ -30,6 +30,64 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         }
 
+    });
+
+    const offer_great = new Swiper('.offer-great', {
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 24,
+        slidesPerView: 2,
+
+        breakpoints: {
+            // when window width is <= 767
+            767: {
+                slidesPerView: 4,
+            },
+        }
+
+    });
+
+    const offer_like = new Swiper('.offer-like', {
+        direction: 'horizontal',
+        loop: false,
+        spaceBetween: 24,
+        slidesPerView: 2,
+
+        breakpoints: {
+            // when window width is <= 767
+            767: {
+                slidesPerView: 4,
+            },
+        }
+
+    });
+
+    const product_thumbs_swiper = new Swiper('.card__thumbs-block', {
+        direction: 'vertical',
+        loop: false,
+        speed: 1000,
+        slidesPerView: 6,
+        spaceBetween: 24,
+    });
+
+    const product_swiper = new Swiper('.card__big-photo-block', {
+        direction: 'horizontal',
+        loop: true,
+        speed: 1000,
+        slidesPerView: 1,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+
+        thumbs: {
+            swiper: product_thumbs_swiper
+        },
+
+        navigation: {
+            nextEl: '.card__slider-button-next',
+            prevEl: '.card__slider-button-prev',
+        }
     });
 
 
@@ -195,11 +253,14 @@ window.addEventListener('DOMContentLoaded', function (event) {
     };
 
     // Запускаем функцию
-    window.addEventListener('scroll', function () {
-        Visible(category_nav);
-    });
+    if (category_nav !== null) {
 
-    Visible(category_nav);
+        window.addEventListener('scroll', function () {
+            Visible(category_nav);
+        });
+
+        Visible(category_nav);
+    }
 
 
     // открытие блоков описания товара
@@ -232,6 +293,20 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 block: 'start'
             })
         })
+    }
+
+
+    // открытие блоков описания товара
+
+    let text_block = document.querySelectorAll('.text-block');
+
+    if (text_block !== null) {
+        for (let i = 0; i < text_block.length; i++) {
+
+            text_block[i].addEventListener('click', function () {
+                text_block[i].classList.toggle('active');
+            });
+        }
     }
 
 });
