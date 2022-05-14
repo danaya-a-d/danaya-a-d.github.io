@@ -77,11 +77,19 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
 
     const product_thumbs_swiper = new Swiper('.card__thumbs-block', {
-        direction: 'vertical',
+        direction: 'horizontal',
         loop: false,
         speed: 1000,
-        slidesPerView: 6,
-        spaceBetween: 24,
+        slidesPerView: 3.5,
+        spaceBetween: 15,
+
+        breakpoints: {
+            767: {
+                direction: 'vertical',
+                spaceBetween: 24,
+                slidesPerView: 6,
+            },
+        }
     });
 
     const product_swiper = new Swiper('.card__big-photo-block', {
