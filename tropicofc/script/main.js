@@ -39,12 +39,19 @@ window.addEventListener('DOMContentLoaded', function (event) {
         slidesPerView: 2,
 
         breakpoints: {
-            // when window width is <= 767
-            767: {
-                slidesPerView: 4,
+            991: {
+                slidesPerView: 2,
+                spaceBetween: 8,
             },
-        }
 
+            1199: {
+                slidesPerView: 3,
+            },
+
+            1620: {
+                slidesPerView: 4,
+            }
+        }
     });
 
     const offer_like = new Swiper('.offer-like', {
@@ -54,12 +61,19 @@ window.addEventListener('DOMContentLoaded', function (event) {
         slidesPerView: 2,
 
         breakpoints: {
-            // when window width is <= 767
-            767: {
-                slidesPerView: 4,
+            991: {
+                slidesPerView: 2,
+                spaceBetween: 18,
             },
-        }
 
+            1199: {
+                slidesPerView: 3,
+            },
+
+            1620: {
+                slidesPerView: 4,
+            }
+        }
     });
 
     const product_thumbs_swiper = new Swiper('.card__thumbs-block', {
