@@ -7,6 +7,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let filter_form = document.getElementById('filter-form-js');
     let card_text_block = document.querySelectorAll('.card__text-block');
     let footer_collapse_btn = document.querySelectorAll('.footer-collapse-btn');
+    let checkout_collapse_btn = document.querySelectorAll('.checkout-collapse-btn');
 
 
     if (filter_slider !== null) {
@@ -78,6 +79,15 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     }
 
+    // открытие блоков чекаут
+    if (checkout_collapse_btn !== null) {
+        for (let i = 0; i < checkout_collapse_btn.length; i++) {
+            checkout_collapse_btn[i].addEventListener('click', function () {
+                checkout_collapse_btn[i].classList.toggle('active');
+            });
+        }
+    }
+
 
     // открытие истоии заказов
     let history_item_content = document.querySelectorAll('.history__item-content');
@@ -86,14 +96,24 @@ window.addEventListener('DOMContentLoaded', function (event) {
         for (let i = 0; i < history_item_content.length; i++) {
 
             let show_btn = history_item_content[i].querySelector('.history-show');
-            let hide_btn = history_item_content[i].querySelector('.history-hide');
+            let hide_btn = history_item_content[i].querySelector('.history__item-btn-close');
+            let history_nav = history_item_content[i].querySelector('.history__nav');
 
-            show_btn.addEventListener('click', function (event) {
+            history_nav.addEventListener('click', function (event) {
                 if (!history_item_content[i].classList.contains('active')) {
                     history_item_content[i].classList.add('active');
                 }
+                else if (history_item_content[i].classList.contains('active')) {
+                    history_item_content[i].classList.remove('active');
+                }
             });
-
+            //
+            // show_btn.addEventListener('click', function (event) {
+            //     if (!history_item_content[i].classList.contains('active')) {
+            //         history_item_content[i].classList.add('active');
+            //     }
+            // });
+            //
             hide_btn.addEventListener('click', function (event) {
                 if (history_item_content[i].classList.contains('active')) {
                     history_item_content[i].classList.remove('active');
