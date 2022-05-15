@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" type="text/css" href="script/nouislider/nouislider.min.css">
+    <link rel="stylesheet" type="text/css" href="script/glightbox/css/glightbox.min.css">
+    <link rel="stylesheet" type="text/css" href="script/glightbox/css/plyr.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -35,6 +37,7 @@
 
 <header class="header">
     <div class="header__wrapper wrapper">
+
         <nav class="header__nav">
 
             <ul class="header__nav-list">
@@ -49,13 +52,13 @@
                 <img class="logo__image" src="img/logo.svg" alt="2">
             </a>
 
-            <button class="header__menu-open-btn">Menu</button>
+            <button class="header__menu-open-cart modal-cart-btn">Cart (0)</button>
 
             <ul class="header__control-list">
                 <li class="header__control-item"><a>
-                    en / $
+                    <span class="drop-down-languages-btn">en / $</span>
 
-                    <div class="header__drop-down">
+                    <div class="header__drop-down drop-down drop-down-languages close">
                         <div class="header__drop-down-languages">
                             <form class="header__form-languages main-form" method="post" action="#">
                                 <span class="main-form__label-name">Language</span>
@@ -109,10 +112,10 @@
                         </div>
                     </div>
                 </a></li>
-                <li class="header__control-item"><a>search</a></li>
+                <li class="header__control-item desktop-search-btn"><a>search</a></li>
                 <li class="header__control-item"><a>
-                    account
-                    <div class="header__drop-down">
+                    <span class="drop-down-login-btn">account</span>
+                    <div class="header__drop-down drop-down drop-down-menu close">
                         <ul class="header__drop-down-list">
                             <li class="header__drop-down-item"><a href="#">Profile</a></li>
                             <li class="header__drop-down-item"><a href="#">Wishlist</a></li>
@@ -121,7 +124,7 @@
                         </ul>
                     </div>
 
-                    <div class="header__drop-down">
+                    <div class="header__drop-down drop-down drop-down-login close">
                         <form class="header__form main-form" method="post" action="#">
                             <label class="main-form__label main-form__label--small">
                                 <input class="main-form__input main-form__input--small" type="email" name="email"
@@ -153,11 +156,11 @@
                                 </a></li>
                             </ul>
 
-                            <a href="#" class="main-form__link-bottom">Don’t have an account? Register</a>
+                            <a href="#" class="main-form__link-bottom drop-down-registration-btn">Don’t have an account? Register</a>
                         </form>
                     </div>
 
-                    <div class="header__drop-down">
+                    <div class="header__drop-down drop-down drop-down-registration close">
                         <form class="header__form main-form" method="post" action="#">
                             <label class="main-form__label main-form__label--small">
                                 <input class="main-form__input main-form__input--small" type="text" name="first name"
@@ -197,21 +200,214 @@
                                 </a></li>
                             </ul>
 
-                            <a href="#" class="main-form__link-bottom">Already have an account? Login</a>
+                            <a href="#" class="main-form__link-bottom drop-down-login-btn">Already have an account? Login</a>
                         </form>
                     </div>
 
                 </a></li>
-                <li class="header__control-item"><a>cart (0)</a></li>
+                <li class="header__control-item modal-cart-btn"><a>cart (0)</a></li>
             </ul>
         </nav>
 
-        <form class="header__search-form" method="post" action="#">
+        <div class="header__mobile-menu close">
+
+            <div class="header__mobile-menu-content">
+
+                <button class="header__menu-close-btn">Close</button>
+
+                <form class="header__search-form" method="post" action="#">
+                    <label class="header__search-label">
+                        <input class="header__search-input" placeholder="Search...">
+                    </label>
+
+                    <button class="header__search-submit" type="submit">Apply</button>
+                </form>
+
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#">RINGS</a></li>
+                    <li class="header__nav-item active"><a href="#">Earrings</a></li>
+                    <li class="header__nav-item"><a href="#">tender ukraine</a></li>
+                </ul>
+                <ul class="header__control-list">
+                    <li class="header__control-item"><a>
+                        <span class="drop-down-languages-btn">en / $</span>
+
+                        <div class="header__drop-down drop-down drop-down-languages close">
+
+                            <button class="header__drop-down-close-btn drop-down-close-btn">Close</button>
+                            <p class="header__drop-down-title">Languages</p>
+
+                            <div class="header__drop-down-languages">
+
+                                <form class="header__form-languages main-form" method="post" action="#">
+                                    <span class="main-form__label-name">Language</span>
+
+                                    <label class="main-form__label-radio label-check">
+                                        <input class="visually-hidden" name="language" type="radio"
+                                               value="English" checked>
+                                        <span class="label-check__radio-indicator"></span>
+                                        <span class="label-check__title">English</span>
+                                    </label>
+
+                                    <label class="main-form__label-radio label-check">
+                                        <input class="visually-hidden" name="language" type="radio"
+                                               value="Український">
+                                        <span class="label-check__radio-indicator"></span>
+                                        <span class="label-check__title">Український</span>
+                                    </label>
+
+                                    <label class="main-form__label-radio label-check">
+                                        <input class="visually-hidden" name="language" type="radio"
+                                               value="Русский">
+                                        <span class="label-check__radio-indicator"></span>
+                                        <span class="label-check__title">Русский</span>
+                                    </label>
+                                </form>
+
+                                <form class="header__form-languages main-form" method="post" action="#">
+                                    <span class="main-form__label-name">Currency</span>
+
+                                    <label class="main-form__label-radio label-check">
+                                        <input class="visually-hidden" name="currency" type="radio"
+                                               value="USD" checked>
+                                        <span class="label-check__radio-indicator"></span>
+                                        <span class="label-check__title">USD</span>
+                                    </label>
+
+                                    <label class="main-form__label-radio label-check">
+                                        <input class="visually-hidden" name="currency" type="radio"
+                                               value="EUR">
+                                        <span class="label-check__radio-indicator"></span>
+                                        <span class="label-check__title">EUR</span>
+                                    </label>
+
+                                    <label class="main-form__label-radio label-check">
+                                        <input class="visually-hidden" name="currency" type="radio"
+                                               value="UAH">
+                                        <span class="label-check__radio-indicator"></span>
+                                        <span class="label-check__title">UAH</span>
+                                    </label>
+                                </form>
+                            </div>
+                        </div>
+                    </a></li>
+                    <li class="header__control-item">
+                        <a><span class="drop-down-login-btn">account</span></a>
+
+                        <div class="header__drop-down drop-down drop-down-menu close">
+
+                            <button class="header__drop-down-close-btn drop-down-close-btn">Close</button>
+                            <p class="header__drop-down-title">Account</p>
+
+                            <ul class="header__drop-down-list">
+                                <li class="header__drop-down-item"><a href="#">Profile</a></li>
+                                <li class="header__drop-down-item"><a href="#">Wishlist</a></li>
+                                <li class="header__drop-down-item"><a href="#">Orders history</a></li>
+                                <li class="header__drop-down-item"><a href="#">Logout</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="header__drop-down drop-down drop-down-login close">
+
+                            <button class="header__drop-down-close-btn drop-down-close-btn">Close</button>
+                            <p class="header__drop-down-title">Login</p>
+
+                            <form class="header__form main-form" method="post" action="#">
+                                <label class="main-form__label main-form__label--small">
+                                    <input class="main-form__input main-form__input--small" type="email" name="email"
+                                           placeholder="Email">
+                                </label>
+
+                                <label class="main-form__label main-form__label--small">
+                                    <input class="main-form__input main-form__input--small" type="password" name="password"
+                                           placeholder="Password">
+                                </label>
+
+                                <a href="#" class="main-form__link">Forgot password</a>
+
+                                <button class="main-form__button button button--black">LOGIN</button>
+
+                                <ul class="main-form__socials">
+                                    <li class="main-form__social"><a href="#">
+                                        <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="#google"></use>
+                                        </svg>
+                                        <span>Google</span>
+                                    </a></li>
+
+                                    <li class="main-form__social"><a href="#">
+                                        <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="#facebook"></use>
+                                        </svg>
+                                        <span>Facebook</span>
+                                    </a></li>
+                                </ul>
+
+                                <a href="#" class="main-form__link-bottom drop-down-registration-btn">Don’t have an account? Register</a>
+                            </form>
+                        </div>
+
+                        <div class="header__drop-down drop-down drop-down-registration close">
+
+                            <button class="header__drop-down-close-btn drop-down-close-btn">Close</button>
+                            <p class="header__drop-down-title">Registration</p>
+
+                            <form class="header__form main-form" method="post" action="#">
+                                <label class="main-form__label main-form__label--small">
+                                    <input class="main-form__input main-form__input--small" type="text" name="first name"
+                                           placeholder="First Name">
+                                </label>
+
+                                <label class="main-form__label main-form__label--small">
+                                    <input class="main-form__input main-form__input--small" type="text" name="last name"
+                                           placeholder="Last Name">
+                                </label>
+
+                                <label class="main-form__label main-form__label--small">
+                                    <input class="main-form__input main-form__input--small" type="email" name="email"
+                                           placeholder="Email">
+                                </label>
+
+                                <label class="main-form__label main-form__label--small">
+                                    <input class="main-form__input main-form__input--small" type="password" name="password"
+                                           placeholder="Password">
+                                </label>
+
+                                <button class="main-form__button button button--black">Register</button>
+
+                                <ul class="main-form__socials">
+                                    <li class="main-form__social"><a href="#">
+                                        <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="#google"></use>
+                                        </svg>
+                                        <span>Google</span>
+                                    </a></li>
+
+                                    <li class="main-form__social"><a href="#">
+                                        <svg class="main-form__social-icon" xmlns="http://www.w3.org/2000/svg">
+                                            <use xlink:href="#facebook"></use>
+                                        </svg>
+                                        <span>Facebook</span>
+                                    </a></li>
+                                </ul>
+
+                                <a href="#" class="main-form__link-bottom drop-down-login-btn">Already have an account? Login</a>
+                            </form>
+                        </div>
+
+                    </li>
+                </ul>
+            </div>
+
+            <div class="header__mobile-menu-overlay"></div>
+        </div>
+
+        <form class="header__search-form drop-down desktop-search close" method="post" action="#">
             <label class="header__search-label">
                 <input class="header__search-input" placeholder="Search...">
             </label>
 
-            <button class="header__search-close" type="button">Close</button>
+            <button class="header__search-close header__drop-down-close-btn drop-down-close-btn" type="button">Close</button>
         </form>
     </div>
 </header>
@@ -630,12 +826,12 @@
     </div>
 </footer>
 
-<div class="modal-back">
+<div class="modal-back drop-down close">
 
     <div class="modal-cart">
         <div class="modal-cart__info">
             <p class="modal-cart__title">CART (2)</p>
-            <button class="modal-cart__btn-close modal-close-js">CLOSE</button>
+            <button class="modal-cart__btn-close drop-down-close-btn">CLOSE</button>
         </div>
 
         <ul class="modal-cart__cart-list cart">
@@ -708,11 +904,12 @@
         </div>
     </div>
 
-    <div class="modal-overlay"></div>
+    <div class="modal-overlay drop-down-close-btn"></div>
 
 </div>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/nouislider/nouislider.min.js"></script>
+<script src="script/glightbox/js/glightbox.min.js"></script>
 <script src="script/main.js"></script>
 
 </body>
