@@ -116,13 +116,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
                     history_item_content[i].classList.remove('active');
                 }
             });
-            //
-            // show_btn.addEventListener('click', function (event) {
-            //     if (!history_item_content[i].classList.contains('active')) {
-            //         history_item_content[i].classList.add('active');
-            //     }
-            // });
-            //
+
             hide_btn.addEventListener('click', function (event) {
                 if (history_item_content[i].classList.contains('active')) {
                     history_item_content[i].classList.remove('active');
@@ -199,7 +193,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
         for (let i = 0; i < button.length; i++) {
             button[i].addEventListener('click', function () {
                 for (let i = 0; i < drop_downs.length; i++) {
-                    drop_downs[i].classList.add('close');
+                    if (drop_downs[i] !== block[0] )
+                        drop_downs[i].classList.add('close');
                 }
 
                 for (let i = 0; i < block.length; i++) {
@@ -208,6 +203,4 @@ window.addEventListener('DOMContentLoaded', function (event) {
             });
         }
     }
-
-
 });
