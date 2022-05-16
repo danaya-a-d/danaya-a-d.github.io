@@ -51,6 +51,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
             1620: {
                 slidesPerView: 4,
             }
+        },
+
+        navigation: {
+            nextEl: '#offer-great-next',
         }
     });
 
@@ -73,6 +77,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
             1620: {
                 slidesPerView: 4,
             }
+        },
+
+        navigation: {
+            nextEl: '#offer-like-next',
         }
     });
 
@@ -161,12 +169,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
         if (newSize !== size) {
             size = newSize;
             if (newSize === "small") {
-                console.log("The screen is now small - ScrollMagic has been destroyed by aliens.");
                 TweenMax.set("#target", {clearProps: "all"});
                 horizontalSlide.clear();
                 controller.destroy(true);
             } else {
-                console.log("The screen is now large - ScrollMagic is active.");
                 makeScrollMagic();
             }
         }
@@ -238,6 +244,18 @@ window.addEventListener('DOMContentLoaded', function (event) {
             category_filter.classList.toggle('open');
         }
     });
+
+
+    // сброс формы
+
+    let filter_reset = document.querySelector('.filter-reset-js');
+    let filter_form = document.querySelector('.filter-form-js');
+
+    if (filter_form !== null) {
+        filter_reset.addEventListener('click', function () {
+            filter_form.reset();
+        });
+    }
 
 
     // видимость кнопки фильтрации
@@ -329,6 +347,51 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 text_block[i].classList.toggle('active');
             });
         }
+    }
+
+    // смена цвета меню
+
+    let change_colors = function (target) {
+        // Все позиции элемента
+        let targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top &&
+            targetPosition.top < windowPosition.bottom &&
+            targetPosition.right > windowPosition.left &&
+            targetPosition.left < windowPosition.right) {
+            // Если элемент полностью видно, то запускаем следующий код
+            header.classList.add('white');
+            header.classList.remove('black');
+        } else {
+            // Если элемент не видно, то запускаем этот код
+            header.classList.remove('white');
+            header.classList.add('black');
+        }
+    };
+
+    // Запускаем функцию
+    let header = document.querySelector('.header');
+    let banner_js = document.querySelector('.banner-js');
+
+    if (header !== null && banner_js !== null) {
+
+        window.addEventListener('scroll', function () {
+            change_colors(banner_js);
+        });
+
+        change_colors(banner_js);
     }
 
 });
