@@ -394,4 +394,73 @@ window.addEventListener('DOMContentLoaded', function (event) {
         change_colors(banner_js);
     }
 
+
+    let reviews_toggles = document.querySelectorAll('.sizes__nav-item');
+    let reviews = document.querySelectorAll('.sizes__block');
+
+    if (reviews_toggles !== null) {
+        for (let i = 0; i < reviews_toggles.length; i++) {
+            reviews_toggles[i].addEventListener('click', function () {
+                // В цикле проходимся по всем элементам, видимые скрываем
+                for (let i = 0; i < reviews.length; i++) {
+                    reviews[i].classList.add('visually-hidden');
+                    reviews_toggles[i].classList.remove('active');
+                }
+
+                // Показываем тот, который соответствует нажатой кнопке переключателя
+                reviews[i].classList.remove('visually-hidden');
+                reviews_toggles[i].classList.add('active');
+            });
+        }
+    }
+
+
+
+    // Модальные окна
+
+    let modal_overlay = document.querySelector('.modal-overlay');
+    let modal_back = document.querySelector('.modal-back');
+    let modals = document.querySelectorAll('.modal');
+
+    function close_modal(modal) {
+        modal.addEventListener('click', function (event) {
+            const target = event.target;
+
+            if (target.classList.contains('modal-close')) {
+                modal.classList.add('hide');
+                modal_overlay.classList.add('hide');
+                modal_back.classList.add('hide');
+            }
+        });
+    }
+
+    function open_modal(modal, button) {
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener('click', function (event) {
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].classList.add('hide');
+                    if (modal_overlay.classList.contains('hide') && modal_back.classList.contains('hide')) {
+                        modal_overlay.classList.add('hide');
+                        modal_back.classList.add('hide');
+                    }
+                }
+
+                if (modal.classList.contains('hide')) {
+                    modal.classList.remove('hide');
+                    modal_overlay.classList.remove('hide');
+                    modal_back.classList.remove('hide');
+                }
+            });
+
+        }
+
+        close_modal(modal);
+    }
+
+
+    let modal_orders = document.querySelector('.modal--sizes');
+    let btn_modal_orders = document.querySelectorAll('.button-sizes');
+
+    open_modal(modal_orders, btn_modal_orders);
+
 });

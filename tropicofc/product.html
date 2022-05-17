@@ -276,7 +276,7 @@
                     <div class="card__type-section">
                         <div class="card__type-nav">
                             <p class="card__type-title">Size:</p>
-                            <p class="card__type-link">Size guide</p>
+                            <p class="card__type-link button-sizes">Size guide</p>
                         </div>
 
                         <div class="card__content-size">
@@ -1025,6 +1025,154 @@
     </div>
 
 </footer>
+
+<div class="modal-back hide">
+
+    <div class="modal modal--sizes hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <h2 class="modal__title title">Find My Size</h2>
+
+        <div class="sizes">
+            <ul class="sizes__nav-list">
+                <li class="sizes__nav-item active">Size Chart</li>
+                <li class="sizes__nav-item">Measuring Guide</li>
+                <li class="sizes__nav-item">Fit Finder</li>
+            </ul>
+
+            <ul class="sizes__blocks">
+                <li class="sizes__block">
+
+                    <div class="sizes__tables">
+
+                        <div class="sizes__title-block">
+                            <a class="sizes__toggle active">Inches</a>
+                            <a class="sizes__toggle">Centimeters</a>
+                        </div>
+
+                        <table class="sizes__table">
+                            <tbody>
+                            <tr>
+                                <td>Size</td>
+                                <td>XS</td>
+                                <td>S</td>
+                                <td>M</td>
+                                <td>L</td>
+                                <td>XL</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>US Size</td>
+                                <td>4</td>
+                                <td>6</td>
+                                <td>8</td>
+                                <td>10</td>
+                                <td>12</td>
+                                <td>14</td>
+                            </tr>
+                            <tr>
+                                <td>Underbust</td>
+                                <td>28 - 29</td>
+                                <td>30 - 31</td>
+                                <td>32 - 33</td>
+                                <td>34 - 35</td>
+                                <td>36 - 37</td>
+                                <td>37 - 38</td>
+                            </tr>
+                            <tr>
+                                <td>Cup</td>
+                                <td>A</td>
+                                <td>B</td>
+                                <td>C</td>
+                                <td>D</td>
+                                <td>DD</td>
+                                <td>DD</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="sizes__title-block">Global Conversion Chart</div>
+
+                        <table class="sizes__table">
+                            <tbody>
+                            <tr>
+                                <td>Size</td>
+                                <td>US</td>
+                                <td>UK</td>
+                                <td>EU</td>
+                                <td>AU</td>
+                            </tr>
+                            <tr>
+                                <td><span>XS</span></td>
+                                <td>2 - 4</td>
+                                <td>6 - 8</td>
+                                <td>32 - 34</td>
+                                <td>4 - 6</td>
+                            </tr>
+                            <tr>
+                                <td><span>S</span></td>
+                                <td>6</td>
+                                <td>10</td>
+                                <td>34 - 35</td>
+                                <td>6 - 8</td>
+                            </tr>
+                            <tr>
+                                <td><span>M</span></td>
+                                <td>8</td>
+                                <td>12</td>
+                                <td>35 - 36</td>
+                                <td>10 - 12</td>
+                            </tr>
+                            <tr>
+                                <td><span>L</span></td>
+                                <td>10</td>
+                                <td>14</td>
+                                <td>36 - 37</td>
+                                <td>12 - 14</td>
+                            </tr>
+                            <tr>
+                                <td><span>XL</span></td>
+                                <td>12</td>
+                                <td>16</td>
+                                <td>37 - 38</td>
+                                <td>14 - 16</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </li>
+
+                <li class="sizes__block visually-hidden">
+                    <img class="sizes__image" src="img/sizes.jpg" alt="">
+                </li>
+
+                <li class="sizes__block visually-hidden">
+                    <form class="sizes__form main-form" action="#" method="post">
+
+                        <p class="main-form__note">Enter your measurements below to find your recommended size</p>
+
+                        <div class="main-form__labels">
+                            <label class="main-form__label">
+                                <input class="main-form__input" type="text" name="cup" placeholder="Cup" required>
+                            </label>
+
+                            <label class="main-form__label">
+                                <input class="main-form__input" type="text" name="underbust" placeholder="Underbust"
+                                       required>
+                            </label>
+                        </div>
+
+                        <button class="main-form__button button">Find my size</button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="modal-overlay hide"></div>
+</div>
 
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/nouislider/nouislider.min.js"></script>
