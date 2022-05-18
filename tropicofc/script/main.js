@@ -463,4 +463,19 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     open_modal(modal_orders, btn_modal_orders);
 
+
+    //FAQ
+
+    // Модальные окна
+
+    let faq_item = document.querySelectorAll('.faq__item');
+
+    if (faq_item !== null) {
+        for (i = 0; i < faq_item.length; i++) {
+            faq_item[i].addEventListener('click', function (event) {
+                this.classList.toggle('active');
+            });
+        };
+    }
+
 });
