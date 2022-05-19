@@ -466,8 +466,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     //FAQ
 
-    // Модальные окна
-
     let faq_item = document.querySelectorAll('.faq__item');
 
     if (faq_item !== null) {
