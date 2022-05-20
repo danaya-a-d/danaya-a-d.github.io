@@ -1170,6 +1170,80 @@
 
     </div>
 
+    <div class="modal modal--address hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <div class="add-address">
+
+            <div class="add-address__title-block">
+                <h2 class="add-address__title">Add a new address</h2>
+                <p class="add-address__subtitle">Please fill in the information below:</p>
+            </div>
+
+            <form class="add-address__form main-form" action="#" method="post">
+
+                <div class="main-form__labels">
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="text" name="first-name" placeholder="First name" required>
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="text" name="last-name" placeholder="Last name" required>
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="text" name="company" placeholder="Company" required>
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="text" name="phone" placeholder="Phone" required>
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="text" name="address-1" placeholder="Address 1" required>
+                    </label>
+
+                    <label class="main-form__label">
+                        <input class="main-form__input" type="text" name="address-2" placeholder="Address 2" required>
+                    </label>
+
+                    <label class="main-form__label main-form__label--small">
+                        <input class="main-form__input" type="text" name="city" placeholder="City" required>
+                    </label>
+
+                    <label class="main-form__label main-form__label--small">
+                        <select class="main-form__select" name="country">
+                            <option value="Select 1">United States</option>
+                            <option value="Select 2">Panama</option>
+                        </select>
+                    </label>
+
+                    <label class="main-form__label main-form__label--small">
+                        <input class="main-form__input" type="text" name="Zip code" placeholder="Zip code" required>
+                    </label>
+
+                    <label class="main-form__label main-form__label--small">
+                        <select class="main-form__select" name="city">
+                            <option value="Select 1">Alabama</option>
+                            <option value="Select 2">London</option>
+                        </select>
+                    </label>
+                </div>
+
+                <label class="main-form__label-check label-check">
+                    <input class="visually-hidden" name="default" type="checkbox"
+                           value="default">
+                    <span class="label-check__indicator"></span>
+                    <span class="label-check__title">Set as default address</span>
+                </label>
+
+                <button class="main-form__button button">Add a new address</button>
+            </form>
+
+        </div>
+
+    </div>
+
     <div class="modal-overlay hide"></div>
 </div>
 

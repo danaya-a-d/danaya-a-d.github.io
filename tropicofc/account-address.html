@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News</title>
+    <title>Account</title>
 
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/main.min.css">
@@ -47,7 +47,7 @@
   </svg>
 </div>
 
-<header class="header white">
+<header class="header black">
     <div class="header__wrapper wrapper">
 
         <nav class="header__nav">
@@ -138,55 +138,58 @@
 </header>
 
 <main class="page-main">
-    <section class="upper-block banner-js">
-        <div class="upper-block__wrapper wrapper">
-            <h1 class="upper-block__title title">20 Years of Style + Sustainability</h1>
-            <img src="img/banner-12.jpg" alt="" class="upper-block__img">
+    <section class="my-account">
+        <div class="my-account__wrapper wrapper">
+            <div class="my-account__title-block">
+                <h1 class="my-account__title title">My account</h1>
+                <p class="my-account__subtitle">Welcome back, Nikita!</p>
+            </div>
+
+            <div class="my-account__content-block">
+                <ul class="my-account__links">
+                    <li class="my-account__link"><a href="#">Orders history</a></li>
+                    <li class="my-account__link active"><a href="#">Address edit</a></li>
+                    <li class="my-account__link"><a href="#">Logout</a></li>
+                </ul>
+
+                <div class="my-account__main-block">
+                    <div class="my-account__nav-block">
+                        <h2 class="my-account__nav-title">Your addresses</h2>
+                        <button class="my-account__button button button-address">Add a new address</button>
+                    </div>
+
+                    <div class="my-account__addresses">
+                        <div class="my-account__address">
+
+                            <div class="my-account__address-container">
+                                <div class="my-account__address__line">
+                                    <p class="my-account__address-title">Who you are:</p>
+                                    <p class="my-account__address-value">Ivanov Ivan</p>
+                                </div>
+
+                                <div class="my-account__address__line">
+                                    <p class="my-account__address-title">Phone:</p>
+                                    <p class="my-account__address-value">8 (676) 876-89-78</p>
+                                </div>
+
+                                <div class="my-account__address__line">
+                                    <p class="my-account__address-title">Name company:</p>
+                                    <p class="my-account__address-value">OOO “Ivanov”</p>
+                                </div>
+
+                                <div class="my-account__address__line">
+                                    <p class="my-account__address-title">Address:</p>
+                                    <p class="my-account__address-value">USA, Alabama, st. Moroznaya 35/a</p>
+                                </div>
+                            </div>
+
+                            <button class="my-account__edit-button"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <article class="article">
-        <div class="article__wrapper wrapper">
-            <div class="article__breadcrumbs breadcrumbs">
-                <ul class="breadcrumbs__list">
-                    <li class="breadcrumbs__item"><a href="index.html">Home</a></li>
-                    <li class="breadcrumbs__item"><a href="index.html">Blog</a></li>
-                    <li class="breadcrumbs__item active"><a>20 Years of Style + Sustainability</a></li>
-                </ul>
-            </div>
-
-            <div class="article__content">
-                <h2>The Anniversary Collection</h2>
-
-                <p>We’re excited to introduce our Anniversary Collection - 20 unique, limited-edition designs in our signature neutral color palette, recycled ribbed fabric, and upcycled, golden rings we sourced in the early 2000s. Cue the nostalgia. If you’re new to our community, welcome. This is how it all started…</p>
-                
-                <img class="big-photo" src="img/article-1.jpg" alt="">
-
-                <ul class="small-photos">
-                    <li><img src="img/article-2.jpg" alt=""></li>
-                    <li><img src="img/article-3.jpg" alt=""></li>
-                    <li><img src="img/article-4.jpg" alt=""></li>
-                    <li><img src="img/article-5.jpg" alt=""></li>
-                    <li><img src="img/article-6.jpg" alt=""></li>
-                    <li><img src="img/article-7.jpg" alt=""></li>
-                </ul>
-
-                <p>A little piece of history. Our Designer and Founder Amahlia Stevens grew up on the beach in Southern California, with a love of nature in her DNA. Before Vitamin A, she designed for influential brands Patagonia, Levis Strauss & Co., Hollister, and Stüssy. It was her time with Patagonia Founder, Yvon Chouinard, that inspired her to create her own sustainable swimwear.</p>
-
-                <img class="big-photo" src="img/article-8.jpg" alt="">
-
-                <p>Working with the top mills in Italy, Canada, and California, Amahlia crafted her own material made from recycled nylon after being told by suppliers there was no market for it. In 2010, she introduced EcoLux - the first premium swim fabric made from recycled nylon. Today, she continues to pioneer new eco-friendly materials, while leading the swim industry into a more sustainable future. Now that’s a girl boss if you ask us.</p>
-
-                <ul class="big-photos">
-                    <li><img src="img/article-9.jpg" alt=""></li>
-                    <li><img src="img/article-10.jpg" alt=""></li>
-                </ul>
-
-            </div>
-
-        </div>
-    </article>
-
 </main>
 
 <footer class="footer">

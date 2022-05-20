@@ -320,19 +320,21 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     // плавная прокрутка к якорю
 
-    const anchors = document.querySelectorAll('a[href*="#"]')
+    const anchors = document.querySelectorAll('a[href*="#"]');
 
-    for (let anchor of anchors) {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault()
+    if (anchors != null) {
+        for (let anchor of anchors) {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault()
 
-            const blockID = anchor.getAttribute('href').substr(1)
+                const blockID = anchor.getAttribute('href').substr(1)
 
-            document.getElementById(blockID).scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+                document.getElementById(blockID).scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                })
             })
-        })
+        }
     }
 
 
@@ -461,7 +463,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let modal_orders = document.querySelector('.modal--sizes');
     let btn_modal_orders = document.querySelectorAll('.button-sizes');
 
+    let modal_address = document.querySelector('.modal--address');
+    let btn_modal_address = document.querySelectorAll('.button-address');
+
     open_modal(modal_orders, btn_modal_orders);
+    open_modal(modal_address, btn_modal_address);
 
 
     //FAQ
