@@ -466,8 +466,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let modal_address = document.querySelector('.modal--address');
     let btn_modal_address = document.querySelectorAll('.button-address');
 
+    let modal_cart = document.querySelector('.modal--cart');
+    let btn_modal_cart = document.querySelectorAll('.button-cart');
+
     open_modal(modal_orders, btn_modal_orders);
     open_modal(modal_address, btn_modal_address);
+    open_modal(modal_cart, btn_modal_cart);
 
 
     //FAQ

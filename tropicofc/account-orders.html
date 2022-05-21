@@ -53,13 +53,13 @@
         <nav class="header__nav">
 
             <button class="header__menu-open-btn"></button>
-
+            
             <div class="header__nav-menu">
-
+            
                 <ul class="header__nav-list">
                     <li class="header__nav-item">
                         <a class="header__link">shop</a>
-
+            
                         <ul class="header__nav-sublist">
                             <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">all</a>
                             </li>
@@ -74,8 +74,7 @@
                                 styles</a></li>
                             <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">little
                                 black suits</a></li>
-                            <li class="header__nav-subitem"><a class="header__nav-sublink"
-                                                               href="category.html">coverups</a></li>
+                            <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">coverups</a></li>
                             <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">one
                                 pieces</a></li>
                             <li class="header__nav-subitem"><a class="header__nav-sublink" href="category.html">two
@@ -84,21 +83,49 @@
                             </li>
                         </ul>
                     </li>
-
+            
                     <li class="header__nav-item"><a href="#" class="header__link">notebook</a></li>
                     <li class="header__nav-item"><a href="#" class="header__link">about</a></li>
                     <li class="header__nav-item"><a href="#" class="header__link">in the tropics</a></li>
                 </ul>
-
+            
                 <ul class="header__nav-list header__nav-list-mob">
                     <li class="header__nav-item"><a href="#" class="header__link">Favorites</a></li>
                     <li class="header__nav-item"><a href="#" class="header__link">Login</a></li>
                 </ul>
-
+            
                 <button class="header__menu-close-btn"></button>
             </div>
-
+            
             <div class="header__overlay"></div>
+            
+            <ul class="header__control-list">
+                <li class="header__control-item"><a href="#">
+                    <svg class="header__control-icon">
+                        <use xlink:href="#search"></use>
+                    </svg>
+                </a></li>
+            
+                <li class="header__control-item button-cart"><a href="#">
+                    <svg class="header__control-icon">
+                        <use xlink:href="#basket"></use>
+                    </svg>
+            
+                    <p class="header__cart-count">0</p>
+                </a></li>
+            
+                <li class="header__control-item favorite"><a href="#">
+                    <svg class="header__control-icon">
+                        <use xlink:href="#heart"></use>
+                    </svg>
+                </a></li>
+            
+                <li class="header__control-item account"><a href="#">
+                    <svg class="header__control-icon">
+                        <use xlink:href="#account"></use>
+                    </svg>
+                </a></li>
+            </ul>
 
             <a href="index.html" class="header__logo">
                 <div class="header__logo-block">
@@ -107,32 +134,6 @@
                     </svg>
                 </div>
             </a>
-
-            <ul class="header__control-list">
-                <li class="header__control-item"><a href="#">
-                    <svg class="header__control-icon">
-                        <use xlink:href="#search"></use>
-                    </svg>
-                </a></li>
-
-                <li class="header__control-item"><a href="#">
-                    <svg class="header__control-icon">
-                        <use xlink:href="#basket"></use>
-                    </svg>
-                </a></li>
-
-                <li class="header__control-item favorite"><a href="#">
-                    <svg class="header__control-icon">
-                        <use xlink:href="#heart"></use>
-                    </svg>
-                </a></li>
-
-                <li class="header__control-item account"><a href="#">
-                    <svg class="header__control-icon">
-                        <use xlink:href="#account"></use>
-                    </svg>
-                </a></li>
-            </ul>
         </nav>
     </div>
 </header>
@@ -481,6 +482,57 @@
         </div>
 
     </div>
+
+    <div class="modal modal--cart hide">
+        <button class="modal__btn-close modal-close"></button>
+
+        <div class="modal-cart">
+
+            <p class="modal-cart__title">My Bag (1)</p>
+
+            <ul class="modal-cart__cart-list cart">
+                <li class="cart__item">
+                    <img src="img/product-1.jpg" alt="" class="cart__photo">
+
+                    <div class="cart__description">
+                        <p class="cart__name">Metamorphosis top in dahlia/red</p>
+
+                        <div class="cart__about">
+                            <div class="cart__types">
+                                <div class="cart__type">Size: L</div>
+
+                                <div class="cart__type">Color: Red</div>
+                            </div>
+
+                            <button class="cart__remove">REMOVE</button>
+                        </div>
+
+                        <span class="cart__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label
+                                class="counter__label">
+                                <input class="counter__input" type="text" value="1" data-price="415"
+                                       onkeyup="this.value = this.value.replace(/^0{1}|[^\d]|[^\-]]/g,'');">
+                                </label><button class="counter__button plus" type="button">+</button>
+                    </span>
+
+                    </div>
+
+                    <p class="cart__price">$100</p>
+                </li>
+            </ul>
+
+            <div class="modal-cart__submit-block submit-block">
+                <div class="submit-block__info">
+                    <p class="submit-block__line">Total</p>
+                    <p class="submit-block__line">$100</p>
+                </div>
+
+                <a href="#" class="submit-block__button button">CHECK OUT</a>
+            </div>
+
+        </div>
+    </div>
+
 
     <div class="modal-overlay hide"></div>
 </div>
