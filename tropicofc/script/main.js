@@ -374,11 +374,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
             targetPosition.right > windowPosition.left &&
             targetPosition.left < windowPosition.right) {
             // Если элемент полностью видно, то запускаем следующий код
-            header.classList.add('white');
             header.classList.remove('black');
         } else {
             // Если элемент не видно, то запускаем этот код
-            header.classList.remove('white');
             header.classList.add('black');
         }
     };
