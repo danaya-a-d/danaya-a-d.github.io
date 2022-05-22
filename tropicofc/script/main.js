@@ -1,32 +1,17 @@
 window.addEventListener('DOMContentLoaded', function (event) {
 
-
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
-    document.querySelector('.modal--cart').style.setProperty('--vh', `${vh}px`);
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 
     // We listen to the resize event
     window.addEventListener('resize', () => {
         // We execute the same script as before
         let vh = window.innerHeight * 0.01;
-        document.querySelector('.modal--cart').style.setProperty('--vh', `${vh}px`);
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
-
-    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-    let vh2 = window.innerHeight * 0.01;
-    // Then we set the value in the --vh custom property to the root of the document
-    document.querySelector('.header__nav-menu').style.setProperty('--vh', `${vh2}px`);
-
-    // We listen to the resize event
-    window.addEventListener('resize', () => {
-        // We execute the same script as before
-        let vh = window.innerHeight * 0.01;
-        document.querySelector('.header__nav-menu').style.setProperty('--vh', `${vh2}px`);
-    });
-
-    
 
     // слайдеры
 
