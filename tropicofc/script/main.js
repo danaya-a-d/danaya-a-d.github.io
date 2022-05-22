@@ -1,21 +1,32 @@
 window.addEventListener('DOMContentLoaded', function (event) {
 
-    function adaptiveHeight(element) {
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.querySelector('.modal--cart').style.setProperty('--vh', `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
         let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        element.style.setProperty('--vh', `${vh}px`);
+        document.querySelector('.modal--cart').style.setProperty('--vh', `${vh}px`);
+    });
 
-        // We listen to the resize event
-        window.addEventListener('resize', () => {
-            // We execute the same script as before
-            let vh = window.innerHeight * 0.01;
-            element.style.setProperty('--vh', `${vh}px`);
-        });
-    }
 
-    adaptiveHeight(document.querySelector('.header'));
-    adaptiveHeight(document.querySelector('.modal'));
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh2 = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.querySelector('.header__nav-menu').style.setProperty('--vh', `${vh2}px`);
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.querySelector('.header__nav-menu').style.setProperty('--vh', `${vh2}px`);
+    });
+
+    
 
     // слайдеры
 
@@ -432,7 +443,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
 
-
     // Модальные окна
 
     let modal_overlay = document.querySelector('.modal-overlay');
@@ -498,7 +508,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
             faq_item[i].addEventListener('click', function (event) {
                 this.classList.toggle('active');
             });
-        };
+        }
+        ;
     }
 
 });
