@@ -161,19 +161,21 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
     function makeScrollMagic() {
-        controller = new ScrollMagic.Controller();
-        horizontalSlide.to("#js-slideContainer", 1, {x: "-" + x + "%"})
+        if (sliders_count > 0) {
+            controller = new ScrollMagic.Controller();
+            horizontalSlide.to("#js-slideContainer", 1, {x: "-" + x + "%"})
 
-        // create scene to pin and link animation
-        new ScrollMagic.Scene({
-            triggerElement: "#js-wrapper",
-            triggerHook: "onLeave",
-            duration: duration + "%"
-        })
-            .setPin("#js-wrapper")
-            .setTween(horizontalSlide)
-            //.addIndicators() // add indicators (requires plugin)
-            .addTo(controller)
+            // create scene to pin and link animation
+            new ScrollMagic.Scene({
+                triggerElement: "#js-wrapper",
+                triggerHook: "onLeave",
+                duration: duration + "%"
+            })
+                .setPin("#js-wrapper")
+                .setTween(horizontalSlide)
+                //.addIndicators() // add indicators (requires plugin)
+                .addTo(controller)
+        }
     }
 
     function sizeIt() {
