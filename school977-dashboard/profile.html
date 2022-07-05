@@ -13,17 +13,83 @@
 </head>
 <body>
 
-<div>
-    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
-
+<div style="display: none">
+    <svg xmlns="http://www.w3.org/2000/svg">
+        <symbol id="facebook" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M.563 2.695C0 3.78 0 5.203 0 8.05v7.9c0 2.848 0 4.271.563 5.355a5 5 0 0 0 2.132 2.132C3.78 24 5.203 24 8.05 24h7.9c2.848 0 4.271 0 5.355-.563a5 5 0 0 0 2.132-2.132C24 20.22 24 18.797 24 15.95v-7.9c0-2.847 0-4.271-.563-5.355A5 5 0 0 0 21.305.563C20.22 0 18.797 0 15.95 0h-7.9C5.203 0 3.779 0 2.695.563A5 5 0 0 0 .563 2.695zM17.2 11.997l-.533 3.334H14v8.666h-4v-8.666H7v-3.334h3V9.331c0-3 1.933-4.667 4.667-4.667.866 0 1.8.133 2.666.267v3.066H15.8c-1.467 0-1.8.734-1.8 1.667v2.333h3.2z"/>
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 24 24">
+            <g clip-path="url(#clip0_1413_18322)">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M.579 2.695C.016 3.78.016 5.203.016 8.05v7.9c0 2.848 0 4.271.563 5.355a5 5 0 0 0 2.132 2.132C3.794 24 5.218 24 8.066 24h7.9c2.847 0 4.27 0 5.354-.563a5 5 0 0 0 2.133-2.132c.563-1.084.563-2.508.563-5.355v-7.9c0-2.847 0-4.271-.563-5.355A5 5 0 0 0 21.32.563C20.238 0 18.813 0 15.966 0h-7.9C5.218 0 3.794 0 2.71.563A5 5 0 0 0 .579 2.695zm7.824.631c.93-.042 1.228-.053 3.598-.053h-.003c2.371 0 2.668.01 3.599.053.929.043 1.563.19 2.12.406.574.222 1.06.52 1.545 1.006a4.28 4.28 0 0 1 1.007 1.546c.215.555.362 1.19.405 2.118.042.931.053 1.229.053 3.599s-.01 2.667-.053 3.598c-.043.928-.19 1.563-.405 2.118a4.284 4.284 0 0 1-1.007 1.546 4.27 4.27 0 0 1-1.545 1.007c-.555.216-1.19.363-2.12.405-.93.043-1.227.053-3.597.053s-2.667-.01-3.598-.053c-.929-.042-1.563-.19-2.118-.405a4.273 4.273 0 0 1-1.546-1.008 4.276 4.276 0 0 1-1.006-1.546c-.216-.554-.363-1.189-.406-2.118-.042-.93-.053-1.227-.053-3.597s.011-2.668.053-3.599c.042-.929.19-1.563.405-2.118A4.284 4.284 0 0 1 4.74 4.738a4.273 4.273 0 0 1 1.546-1.006c.555-.216 1.189-.363 2.118-.406zm3.307 1.52h-.492v-.002c-1.626.002-1.938.013-2.743.05-.851.038-1.313.18-1.62.3a2.709 2.709 0 0 0-1.004.653 2.704 2.704 0 0 0-.653 1.004c-.12.307-.262.77-.301 1.62-.042.92-.05 1.195-.05 3.525 0 2.331.008 2.607.05 3.527.039.851.181 1.313.3 1.62.16.408.348.698.654 1.003.305.306.596.495 1.003.653.308.12.77.262 1.62.301.92.042 1.197.051 3.527.051s2.607-.009 3.527-.05c.85-.04 1.313-.182 1.62-.302a2.696 2.696 0 0 0 1.003-.652c.305-.306.495-.596.653-1.003.12-.307.262-.769.3-1.62.042-.92.051-1.196.051-3.525 0-2.33-.009-2.606-.05-3.526-.04-.85-.182-1.312-.301-1.62a2.709 2.709 0 0 0-.653-1.003 2.699 2.699 0 0 0-1.003-.653c-.308-.12-.77-.262-1.62-.3-.92-.042-1.197-.05-3.527-.05h-.29zm3.902 2.496a1.048 1.048 0 1 1 2.094 0 1.048 1.048 0 0 1-2.094 0zM7.52 12.001a4.482 4.482 0 1 1 8.964 0 4.482 4.482 0 0 1-8.964 0zm7.391 0a2.91 2.91 0 1 0-5.818 0 2.91 2.91 0 0 0 5.818 0z"/>
+            </g>
+        </symbol>
+        <symbol id="telegram" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M.563 2.695C0 3.78 0 5.203 0 8.05v7.9c0 2.848 0 4.271.563 5.355a5 5 0 0 0 2.132 2.132C3.78 24 5.203 24 8.05 24h7.9c2.848 0 4.271 0 5.355-.563a5 5 0 0 0 2.132-2.132C24 20.22 24 18.797 24 15.95v-7.9c0-2.847 0-4.271-.563-5.355A5 5 0 0 0 21.305.563C20.22 0 18.797 0 15.95 0h-7.9C5.203 0 3.779 0 2.695.563A5 5 0 0 0 .563 2.695zm3.312 8.492l14.449-5.573c.66-.3 1.297.159 1.045 1.169l-2.46 11.595c-.172.824-.67 1.02-1.36.64l-3.749-2.77-.066.065L10 18l-.014.014c-.203.198-.37.361-.737.361-.38 0-.412-.112-.488-.384a3.61 3.61 0 0 0-.082-.262l-1.38-4.227-3.603-1.125c-.8-.245-.806-.795.18-1.191zM15.987 8.12l-8.123 5.124 1.369 4.197.27-2.889 6.956-6.275c.305-.271-.067-.403-.472-.157z"/>
+        </symbol>
+        <symbol id="whatsapp" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M.563 2.695C0 3.78 0 5.203 0 8.05v7.9c0 2.848 0 4.271.563 5.355a5 5 0 0 0 2.132 2.132C3.78 24 5.203 24 8.05 24h7.9c2.848 0 4.271 0 5.355-.563a5 5 0 0 0 2.132-2.132C24 20.22 24 18.797 24 15.95v-7.9c0-2.847 0-4.271-.563-5.355A5 5 0 0 0 21.305.563C20.22 0 18.797 0 15.95 0h-7.9C5.203 0 3.779 0 2.695.563A5 5 0 0 0 .563 2.695zm17.75 3.098A8.482 8.482 0 0 0 12.696 3.3l-.427-.01c-4.708 0-8.54 3.829-8.542 8.536 0 1.505.393 2.974 1.14 4.268L3.656 20.52l4.528-1.188a8.538 8.538 0 0 0 4.083 1.04h.003c4.708 0 8.54-3.83 8.542-8.538a8.484 8.484 0 0 0-2.5-6.04zm-9.66 12.146l-.259-.153-2.687.704.717-2.618-.168-.269a7.077 7.077 0 0 1-1.086-3.776c.002-3.913 3.187-7.096 7.103-7.096 1.896 0 3.679.74 5.02 2.081a7.051 7.051 0 0 1 2.077 5.02c-.002 3.913-3.187 7.097-7.1 7.097h-.003a7.091 7.091 0 0 1-3.613-.99zm7.628-4.268c.149.072.25.12.292.192.054.09.054.516-.124 1.015-.178.498-1.03.953-1.44 1.014a2.928 2.928 0 0 1-1.345-.085 12.29 12.29 0 0 1-1.217-.449c-2-.864-3.353-2.802-3.608-3.168-.018-.026-.03-.044-.038-.053l-.002-.003c-.113-.15-.87-1.16-.87-2.204 0-.983.484-1.498.706-1.735a5.4 5.4 0 0 0 .042-.045.784.784 0 0 1 .569-.267 8.59 8.59 0 0 1 .457.009c.124-.001.279-.002.432.365l.236.572c.183.447.386.94.422 1.012.053.107.089.232.018.374l-.03.06c-.054.11-.093.19-.184.296a8.055 8.055 0 0 0-.109.13 3.67 3.67 0 0 1-.21.244c-.108.106-.219.221-.094.435.124.213.553.912 1.187 1.478a5.51 5.51 0 0 0 1.575.995c.06.026.107.046.142.064.213.106.337.088.462-.054.124-.142.533-.623.676-.836.142-.214.284-.178.48-.107s1.245.587 1.458.694l.117.057z"/>
+        </symbol>
+        <symbol id="youtube" viewBox="0 0 24 24">
+            <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M.563 2.695C0 3.78 0 5.203 0 8.05v7.9c0 2.848 0 4.271.563 5.355a5 5 0 0 0 2.132 2.132C3.78 24 5.203 24 8.05 24h7.9c2.848 0 4.271 0 5.355-.563a5 5 0 0 0 2.132-2.132C24 20.22 24 18.797 24 15.95v-7.9c0-2.847 0-4.271-.563-5.355A5 5 0 0 0 21.305.563C20.22 0 18.797 0 15.95 0h-7.9C5.203 0 3.779 0 2.695.563A5 5 0 0 0 .563 2.695zm20.066 4.777a2.255 2.255 0 0 0-1.586-1.587C17.634 5.5 12 5.5 12 5.5s-5.634 0-7.043.37a2.302 2.302 0 0 0-1.586 1.602C3 8.881 3 11.802 3 11.802s0 2.935.37 4.329a2.255 2.255 0 0 0 1.587 1.586c1.424.386 7.043.386 7.043.386s5.634 0 7.043-.37a2.255 2.255 0 0 0 1.586-1.587c.37-1.409.37-4.33.37-4.33s.016-2.935-.37-4.344zm-10.423 6.925l4.685-2.699L10.206 9v5.397z"/>
+        </symbol>
+        <symbol id="menu-category" viewBox="0 0 28 28">
+            <path clip-rule="evenodd" fill="none"
+                  d="M3.5 7.583c0-3.062.033-4.083 4.083-4.083s4.084 1.02 4.084 4.083.013 4.084-4.084 4.084c-4.096 0-4.083-1.02-4.083-4.084z"
+                  stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity=".4" clip-rule="evenodd" fill="none"
+                  d="M16.333 7.583c0-3.062.033-4.083 4.084-4.083 4.05 0 4.083 1.02 4.083 4.083s.013 4.084-4.083 4.084c-4.097 0-4.084-1.02-4.084-4.084z" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+            <path clip-rule="evenodd" fill="none"
+                  d="M3.5 20.417c0-3.063.033-4.084 4.083-4.084s4.084 1.02 4.084 4.084c0 3.062.013 4.083-4.084 4.083-4.096 0-4.083-1.02-4.083-4.083zm12.833 0c0-3.063.033-4.084 4.084-4.084 4.05 0 4.083 1.02 4.083 4.084 0 3.062.013 4.083-4.083 4.083-4.097 0-4.084-1.02-4.084-4.083z" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="menu-profile" viewBox="0 0 28 28">
+            <path clip-rule="evenodd" fill="none"
+                  d="M13.982 17.904c-4.512 0-8.365.682-8.365 3.414 0 2.733 3.829 3.44 8.365 3.44 4.512 0 8.365-.684 8.365-3.415s-3.828-3.44-8.365-3.44z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity=".4" clip-rule="evenodd" fill="none"
+                  d="M13.982 14.007A5.362 5.362 0 1 0 8.62 8.645a5.344 5.344 0 0 0 5.324 5.362h.038z"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="menu-document" viewBox="0 0 28 28">
+            <path opacity=".4" d="M18.336 18.927H9.912m8.424-4.884H9.912m3.215-4.873H9.912"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path clip-rule="evenodd" fill="none"
+                  d="M18.56 3.208l-8.97.005c-3.22.02-5.214 2.138-5.214 5.37v10.729c0 3.248 2.009 5.374 5.257 5.374l8.97-.003c3.22-.02 5.215-2.14 5.215-5.371V8.583c0-3.248-2.01-5.375-5.258-5.375z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="menu-chart" viewBox="0 0 28 28">
+            <path opacity=".4" d="M8.6 11.902v8.004m5.444-11.834v11.834m5.356-3.775v3.774"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path clip-rule="evenodd" fill="none"
+                  d="M19.467 2.333H8.533c-3.81 0-6.2 2.698-6.2 6.516v10.302c0 3.818 2.378 6.516 6.2 6.516h10.934c3.822 0 6.2-2.698 6.2-6.516V8.849c0-3.818-2.378-6.516-6.2-6.516z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="menu-plus" viewBox="0 0 28 28">
+            <path clip-rule="evenodd" fill="none"
+                  d="M17.192 3.222h-7.76c-2.402 0-4.473 1.947-4.473 4.35V20.23c0 2.539 1.934 4.404 4.473 4.404h9.319c2.403 0 4.352-2 4.352-4.404V9.378l-5.91-6.156z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M16.886 3.209v3.393a3.004 3.004 0 0 0 2.997 3.005c1.535.003 3.107.004 3.213-.003"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path opacity=".4" fill-rule="evenodd" clip-rule="evenodd"
+                  d="M14.568 12.209a.75.75 0 0 0-1.5 0v2.107h-2.109a.75.75 0 0 0 0 1.5h2.109v2.11a.75.75 0 0 0 1.5 0v-2.11h2.109a.75.75 0 0 0 0-1.5h-2.11V12.21z"/>
+        </symbol>
+        <symbol id="menu-notification" viewBox="0 0 28 28">
+            <path clip-rule="evenodd" fill="none"
+                  d="M14 20.822c6.58 0 9.623-.844 9.917-4.231 0-3.386-2.122-3.168-2.122-7.322 0-3.244-3.076-6.936-7.795-6.936-4.72 0-7.795 3.692-7.795 6.936 0 4.154-2.122 3.936-2.122 7.322.295 3.4 3.34 4.231 9.917 4.231z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path opacity=".4" d="M16.787 24.334c-1.592 1.767-4.074 1.788-5.681 0" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+        </symbol>
+        <symbol id="menu-star" viewBox="0 0 28 28">
+            <path clip-rule="evenodd" fill="none"
+                  d="M15.288 4.873l2.132 4.26c.21.418.612.707 1.08.775l4.77.686c1.178.17 1.647 1.598.794 2.417l-3.449 3.314a1.404 1.404 0 0 0-.413 1.254l.814 4.678c.2 1.158-1.031 2.04-2.084 1.493l-4.263-2.21a1.456 1.456 0 0 0-1.338 0L9.07 23.75c-1.054.548-2.286-.335-2.084-1.492l.813-4.679c.08-.46-.074-.929-.413-1.254l-3.45-3.315c-.853-.819-.384-2.247.794-2.417l4.77-.686a1.435 1.435 0 0 0 1.08-.776l2.132-4.259c.527-1.053 2.05-1.053 2.576 0z" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
     </svg>
 </div>
-
 <header class="header">
     <div class="header__wrapper wrapper">
         <button class="header__menu-btn close"></button>
 
-        <a class="header__logo" href="index.html"><img src="img/logo.svg" alt="977 Школа"></a>
+        <a class="header__logo" href="index.html"><img src="img/logo-small.svg" alt="977 Школа"></a>
 
         <a href="#" class="header__chat-btn"></a>
 
@@ -34,13 +100,99 @@
     </div>
 </header>
 
+<div class="menu close">
+    <nav class="menu__nav">
+        <ul class="menu__nav-list">
+            <li class="menu__nav-item active"><a href="#" class="menu__nav-link">
+                <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-category"></use></svg>
+                <span class="menu__nav-title">Дашборд</span>
+            </a></li>
+
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">
+                <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-profile"></use></svg>
+                <span class="menu__nav-title">Личные данные</span>
+            </a></li>
+
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">
+                <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-document"></use></svg>
+                <span class="menu__nav-title">Расписание занятий</span>
+            </a></li>
+
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">
+                <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-chart"></use></svg>
+                <span class="menu__nav-title">Журнал успеваемости</span>
+            </a></li>
+
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">
+                <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-plus"></use></svg>
+                <span class="menu__nav-title">Доп. активности</span>
+            </a></li>
+
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">
+                <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-notification"></use></svg>
+                <span class="menu__nav-title">Уведомления</span>
+            </a></li>
+
+            <li class="menu__nav-item"><a href="#" class="menu__nav-link">
+                <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-star"></use></svg>
+                <span class="menu__nav-title">Геймификация</span>
+            </a></li>
+        </ul>
+    </nav>
+
+    <div class="menu__overlay"></div>
+</div>
+
 <main class="page-main">
 
 </main>
 
 
-<footer class="footer">
+<footer class="footer footer--white">
+    <div class="footer__wrapper wrapper">
+        <a class="footer__logo" href="index.html">
+            <img src="img/logo-big-white.svg" alt="977 Школа">
+        </a>
 
+        <div class="footer__content">
+
+            <a href="#" class="button button--yellow footer__button">Online - чат</a>
+
+            <ul class="footer__socials socials socials--white">
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon socials__icon--white" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#facebook"></use>
+                    </svg>
+                </a></li>
+
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon socials__icon--white" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a></li>
+
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon socials__icon--white" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#telegram"></use>
+                    </svg>
+                </a></li>
+
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon socials__icon--white" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#whatsapp"></use>
+                    </svg>
+                </a></li>
+
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon socials__icon--white" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#youtube"></use>
+                    </svg>
+                </a></li>
+            </ul>
+
+            <a href="mailto:977@977.com.ua" class="footer__email">977@977.com.ua</a>
+        </div>
+    </div>
 </footer>
 <script src="script/jquery.min.js"></script>
 <script src="script/slick/slick.min.js"></script>
