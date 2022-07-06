@@ -128,4 +128,36 @@ $(document).ready(function () {
             diary_blocks[i].classList.add('active');
         });
     }
+
+    // Открытие сообщения
+    $('.message').on('click', function () {
+        $(this).addClass('open');
+    });
+
+    $('.message__close').on('click', function () {
+        $('.message').hide();
+    });
+
+    $('.message__overlay').on('click', function () {
+        $('.message').hide();
+    });
+
+    $('.message__overlay').on('touchmove', function () {
+        $('.message').hide();
+    });
+
+
+    // Открытие модального календаря
+    $('.calendar-btn').on('click', function () {
+        $('.calendar-modal').addClass('open');
+    });
+
+    $('.calendar-modal__overlay').on('click', function () {
+        $('.calendar-modal').removeClass('open');
+    });
+
+    $('.calendar-modal__overlay').on('touchmove', function () {
+        $('.calendar-modal').removeClass('open');
+    });
+
 });
