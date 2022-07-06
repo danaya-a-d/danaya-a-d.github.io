@@ -34,11 +34,6 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
-    // Сворачивание активных заданий
-    $('.task').on('click', function () {
-        $(this).toggleClass('active');
-    });
-
     // Открытие/закрытие меню
     $('.header__menu-btn').on('click', function () {
         $(this).toggleClass('close');
@@ -58,8 +53,7 @@ $(document).ready(function () {
     // диаграммы
 
     let progress_data = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10];
-    let text_color = 'white'
-    let progress_statistic = $('.statistic')
+    let text_color = 'white';
 
     for (let i = 0; i < progress_data.length; i++) {
 
