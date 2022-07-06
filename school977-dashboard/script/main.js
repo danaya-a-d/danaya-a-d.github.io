@@ -44,4 +44,29 @@ $(document).ready(function () {
         $('.header__menu-btn').toggleClass('close');
         $('.menu').toggleClass('close');
     });
+
+    // диаграммы
+
+    let progress_data = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10];
+
+    let progress_statistic = $('.statistic')
+
+    for (let i = 0; i < progress_data.length; i++) {
+        $('.statistic__list').append(
+            '<div class="statistic__item">\n' +
+            '<div class="statistic__value-block">\n' +
+            '<div class="statistic__value-color"></div>\n' +
+            '<span class="statistic__value-name">Алгебра</span>\n' +
+            '</div>\n' +
+            '<div class="statistic__value-number">100%</div>\n' +
+            '</div>');
+    }
+
+    // var divs = body.selectAll("div")
+    //     .data(data)
+    //     .enter().append("div");
+    //
+    // divs.style("width", function(d) { return d + "px"; })
+    //     .attr("class", "divchart")
+    //     .text(function(d) { return d; });
 });
