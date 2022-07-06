@@ -19,13 +19,19 @@ $(document).ready(function () {
         arrows: false,
     });
 
+    // Слайдер расписания
+    $('.schedule-block__container').slick({
+        dots: false,
+        arrows: false,
+    });
+
     // Сворачивание расписания дашбоард
     $('.schedule-list__item').on('click', function () {
         $(this).toggleClass('active');
     });
 
     // Сворачивание активных заданий
-    $('.task').on('click', function () {
+    $('.task:not(".inactive")').on('click', function () {
         $(this).toggleClass('active');
     });
 
@@ -50,25 +56,26 @@ $(document).ready(function () {
         $('.menu').addClass('close');
     });
 
-    // диаграммы
-
+    // Диаграмма прогресса
     let progress_data = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10];
-    let text_color = 'white';
+
+    let progress_text_color = 'white';
 
     for (let i = 0; i < progress_data.length; i++) {
 
         if (progress_data[i] <= 29) {
-            text_color = '#222529'
+            progress_text_color = '#222529'
         }
 
         $('.statistic__list').append(
             '<div class="statistic__item">\n' +
             '<div class="statistic__value-block">\n' +
             '<div class="statistic__value-color" style="height: ' + progress_data[i] + '%"></div>\n' +
-            '<span class="statistic__value-name" style="color: ' + text_color + '">Алгебра</span>\n' +
+            '<span class="statistic__value-name" style="color: ' + progress_text_color + '">Алгебра</span>\n' +
             '</div>\n' +
             '<div class="statistic__value-number">' + progress_data[i] + '%</div>\n' +
-            '</div>');
+            '</div>'
+        );
     }
 
     $('.statistic__sort-button').on('click', function () {
@@ -76,11 +83,37 @@ $(document).ready(function () {
         $('.statistic__sort-button').toggleClass('reverse');
     });
 
+    // Диаграмма успеваемости
+    let performance_data = [12, 11, 10, 9, 8, 7, 6];
+    let performance_text_color = 'black';
 
-    // переключение вкладок
+    function isScore(data) {
+        if (data === 12)
+            return "star";
+        else return "";
+    }
 
-    let toggles_items = document.querySelectorAll('.toggles__item');
-    let diary_blocks = document.querySelectorAll('.diary__block');
+    for (let i = 0; i < performance_data.length; i++) {
+
+        if (performance_data[i] <= 10) {
+            performance_text_color = '#ff732b'
+        }
+
+        let val = performance_data[i] * 100 / 12;
+
+        $('.statistic-horizontal__list').append(
+            '<div class="statistic-horizontal__item ' + isScore(performance_data[i]) + '">\n' +
+            '<div class="statistic-horizontal__value-block">\n' +
+            '<div class="statistic-horizontal__value-color" style="width: ' + val + '%"></div>\n' +
+            '<span class="statistic-horizontal__value-name">Алгебра</span>\n' +
+            '<div class="statistic-horizontal__value-number" style="color: ' + performance_text_color + '">' + performance_data[i] + '/<small>12</small></div>\n' +
+            '</div>\n' +
+            '</div>');
+    }
+
+    // Переключение вкладок
+    let toggles_items = document.querySelectorAll('.toggles-btn');
+    let diary_blocks = document.querySelectorAll('.toggles-block');
 
     for (let i = 0; i < toggles_items.length; i++) {
 
