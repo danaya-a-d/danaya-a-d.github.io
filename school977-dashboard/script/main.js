@@ -14,9 +14,19 @@ $(document).ready(function () {
 
     // Слайдер новостей дашбоард
     $('.news-sec__list').slick({
-        dots: true,
-        dotsClass: "my-dots",
+        dots: false,
         arrows: false,
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 991,
+                settings: {
+                    slidesToShow: 1,
+                    dots: true,
+                    dotsClass: "my-dots",
+                }
+            }
+        ]
     });
 
     // Слайдер расписания
@@ -27,6 +37,7 @@ $(document).ready(function () {
 
     // Сворачивание расписания дашбоард
     $('.schedule-list__item').on('click', function () {
+        // $('.schedule-list__item').removeClass('active');
         $(this).toggleClass('active');
     });
 
