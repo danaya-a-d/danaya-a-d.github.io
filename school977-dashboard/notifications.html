@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style/main.min.css">
 
 </head>
+
 <body class="green">
 
 <div style="display: none">
@@ -157,7 +158,87 @@
     </div>
 
     <main class="page-main">
+        <section class="inner-section">
 
+            <div class="header-block">
+                <div class="header-block__text">
+                    <a class="header-block__link" href="#"></a>
+                    <h1 class="header-block__title">Уведомления</h1>
+                </div>
+
+                <ul class="header-block__toggles toggles">
+                    <li class="toggles__item active">Все</li>
+                    <li class="toggles__item">Задания</li>
+                    <li class="toggles__item">Рекламные</li>
+                </ul>
+            </div>
+
+            <div class="notifications">
+                <button class="notifications__sort-button">Сортировать по:
+                    От новых к старым</button>
+
+                <div class="notifications__day-block">
+                    <p class="notifications__day-name">Сегодня</p>
+
+                    <ul class="notifications__list">
+                        <li class="notifications__item notification">
+
+                            <div class="notification__head">
+                                <img src="img/icon-undone.svg" alt="" class="notification__icon">
+                                <p class="notification__title">Просроченное задание</p>
+                                <p class="notification__time hit">7 мин назад</p>
+                            </div>
+
+                            <p class="notification__text">Вы не прошли тест по Алгеребре
+                                (Тема: вычесление дробей) ...</p>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="notifications__day-block">
+                    <p class="notifications__day-name">Вчера</p>
+
+                    <ul class="notifications__list">
+                        <li class="notifications__item notification">
+
+                            <div class="notification__head">
+                                <img src="img/icon-undone.svg" alt="" class="notification__icon">
+                                <p class="notification__title">Просроченное задание</p>
+                                <p class="notification__time">1 час назад</p>
+                            </div>
+
+                            <p class="notification__text">Вы не прошли тест по Алгеребре
+                                (Тема: вычесление дробей) ...</p>
+                        </li>
+
+                        <li class="notifications__item notification">
+
+                            <div class="notification__head">
+                                <img src="img/icon-star.svg" alt="" class="notification__icon">
+                                <p class="notification__title">Успешно пройден тест</p>
+                                <p class="notification__time">15:30</p>
+                            </div>
+
+                            <p class="notification__text">Вы прошли успешно тест по Алгебере (Тема: вычесление дробей)...</p>
+                        </li>
+
+                        <li class="notifications__item notification">
+
+                            <div class="notification__head">
+                                <img src="img/icon-mark.svg" alt="" class="notification__icon">
+                                <p class="notification__title">Новогодние каникулы</p>
+                                <p class="notification__time">20.01.22</p>
+                            </div>
+
+                            <p class="notification__text">Ознакомьтесь с графиком работы школы в новогодние праздники!...</p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+
+        </section>
     </main>
 
     <footer class="footer footer--white">
