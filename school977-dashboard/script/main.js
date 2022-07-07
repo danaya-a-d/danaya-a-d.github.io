@@ -14,6 +14,7 @@ $(document).ready(function () {
 
     // Слайдеры
 
+    // Слайдер при ресайзе
     function slick_mobile(slider, settings) {
         // Подпишемся на ресайз и продиспатчим его для запуска
         $(window).on('resize', function (e) {
@@ -39,6 +40,7 @@ $(document).ready(function () {
         }).trigger('resize');
     }
 
+    // Слайдер расписания
     const settings = {
         dots: false,
         arrows: false,
@@ -51,12 +53,6 @@ $(document).ready(function () {
     };
 
     slick_mobile($('.schedule-block__list'), settings);
-
-    // Слайдер расписания
-    // $('.schedule-block__container').slick({
-    //     dots: false,
-    //     arrows: false,
-    // });
 
     // Слайдер новостей дашбоард
     $('.news-sec__list').slick({
