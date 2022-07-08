@@ -94,6 +94,10 @@
             <path d="M6.92 5.492a.622.622 0 0 0 .634-.642V2.309a.623.623 0 0 0-.633-.643.623.623 0 0 0-.634.643v2.54c0 .368.271.643.634.643zm6.16 0a.627.627 0 0 0 .633-.642V2.309a.628.628 0 0 0-.634-.643.623.623 0 0 0-.634.643v2.54c0 .368.272.643.634.643z"
                   fill="#6BBB69"/>
         </symbol>
+        <symbol id="menu-exit" viewBox="0 0 28 28">
+            <path d="M13.5 25C7.156 25 2 19.843 2 13.5c0-3.487 1.558-6.715 4.229-8.94.334-.26.78-.223 1.039.11.26.335.222.78-.112 1.04a10.037 10.037 0 0 0-3.672 7.79c0 5.527 4.489 10.016 10.016 10.016S23.516 19.027 23.516 13.5c0-3.042-1.335-5.861-3.71-7.753a.723.723 0 0 1-.11-1.039.724.724 0 0 1 1.038-.111C23.442 6.785 25 10.013 25 13.5 25 19.843 19.844 25 13.5 25z" stroke-width="0"/>
+            <path d="M13.5 14.242a.744.744 0 0 1-.742-.742V2.742c0-.408.334-.742.742-.742s.742.334.742.742V13.5a.744.744 0 0 1-.742.742z" stroke-width="0.5" opacity=".4"/>
+        </symbol>
     </svg>
 </div>
 
@@ -122,14 +126,14 @@
                     <span class="menu__nav-title">Дашборд</span>
                 </a></li>
     
-                <li class="menu__nav-item"><a href="profile.html" class="menu__nav-link">
-                    <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-profile"></use></svg>
-                    <span class="menu__nav-title">Личные данные</span>
-                </a></li>
-    
                 <li class="menu__nav-item"><a href="schedule.html" class="menu__nav-link">
                     <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-document"></use></svg>
                     <span class="menu__nav-title">Расписание занятий</span>
+                </a></li>
+    
+                <li class="menu__nav-item"><a href="tasks.html" class="menu__nav-link">
+                    <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-plus"></use></svg>
+                    <span class="menu__nav-title">Задания</span>
                 </a></li>
     
                 <li class="menu__nav-item"><a href="diary.html" class="menu__nav-link">
@@ -137,9 +141,9 @@
                     <span class="menu__nav-title">Журнал успеваемости</span>
                 </a></li>
     
-                <li class="menu__nav-item"><a href="tasks.html" class="menu__nav-link">
-                    <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-plus"></use></svg>
-                    <span class="menu__nav-title">Доп. активности</span>
+                <li class="menu__nav-item"><a href="profile.html" class="menu__nav-link">
+                    <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-profile"></use></svg>
+                    <span class="menu__nav-title">Личные данные</span>
                 </a></li>
     
                 <li class="menu__nav-item"><a href="notifications.html" class="menu__nav-link">
@@ -148,8 +152,8 @@
                 </a></li>
     
                 <li class="menu__nav-item"><a href="calculator.html" class="menu__nav-link">
-                    <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-star"></use></svg>
-                    <span class="menu__nav-title">Геймификация</span>
+                    <svg class="menu__nav-icon" xmlns="http://www.w3.org/2000/svg"><use xlink:href="#menu-exit"></use></svg>
+                    <span class="menu__nav-title">Выйти из профиля</span>
                 </a></li>
             </ul>
         </nav>
@@ -175,7 +179,8 @@
 
             <div class="notifications">
                 <button class="notifications__sort-button">Сортировать по:
-                    От новых к старым</button>
+                    От новых к старым
+                </button>
 
                 <div class="notifications__day-block">
                     <p class="notifications__day-name">Сегодня</p>
@@ -220,7 +225,8 @@
                                 <p class="notification__time">15:30</p>
                             </div>
 
-                            <p class="notification__text">Вы прошли успешно тест по Алгебере (Тема: вычесление дробей)...</p>
+                            <p class="notification__text">Вы прошли успешно тест по Алгебере (Тема: вычесление
+                                дробей)...</p>
                         </li>
 
                         <li class="notifications__item notification">
@@ -231,10 +237,21 @@
                                 <p class="notification__time">20.01.22</p>
                             </div>
 
-                            <p class="notification__text">Ознакомьтесь с графиком работы школы в новогодние праздники!...</p>
+                            <p class="notification__text">Ознакомьтесь с графиком работы школы в новогодние
+                                праздники!...</p>
                         </li>
                     </ul>
 
+                </div>
+
+                <div class="notifications__pagination pagination">
+                    <div class="pagination__item prev inactive"><a></a></div>
+                    <div class="pagination__item active"><a href="#">1</a></div>
+                    <div class="pagination__item"><a href="#">2</a></div>
+                    <div class="pagination__item"><a href="#">3</a></div>
+                    <div class="pagination__item"><a href="#">...</a></div>
+                    <div class="pagination__item"><a href="#">15440</a></div>
+                    <div class="pagination__item next"><a href="#"></a></div>
                 </div>
             </div>
 
