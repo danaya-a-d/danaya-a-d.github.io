@@ -12,8 +12,6 @@ $(document).ready(function () {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
-    // Слайдеры
-
     // Слайдер при ресайзе
     function slick_mobile(slider, settings) {
         // Подпишемся на ресайз и продиспатчим его для запуска
@@ -40,12 +38,28 @@ $(document).ready(function () {
         }).trigger('resize');
     }
 
+
     // Слайдер расписания
     const settings = {
         dots: false,
         arrows: false,
         mobileFirst: true,
         settings: 'slick',
+        // asNavFor: $('.schedule-block__dates'),
+        // asNavFor: $(this).parents('.schedule-block').find('.schedule-block__dates'),
+        responsive: [{
+            breakpoint: 991,
+            settings: 'unslick'
+        }]
+    };
+
+    const settings_nav = {
+        dots: false,
+        arrows: false,
+        mobileFirst: true,
+        settings: 'slick',
+        // asNavFor: $('.schedule-block__list'),
+        // asNavFor: $(this).parents('.schedule-block').find('.schedule-block__list'),
         responsive: [{
             breakpoint: 991,
             settings: 'unslick'
@@ -53,6 +67,7 @@ $(document).ready(function () {
     };
 
     slick_mobile($('.schedule-block__list'), settings);
+    slick_mobile($('.schedule-block__dates'), settings_nav);
 
     // Слайдер новостей дашбоард
     $('.news-sec__list').slick({
@@ -182,15 +197,15 @@ $(document).ready(function () {
     });
 
     $('.message__close').on('click', function () {
-        $('.message').hide();
+        $(this).closest('.message').hide();
     });
 
     $('.message__overlay').on('click', function () {
-        $('.message').hide();
+        $(this).closest('.message').hide();
     });
 
     $('.message__overlay').on('touchmove', function () {
-        $('.message').hide();
+        $(this).closest('.message').hide();
     });
 
 
