@@ -160,7 +160,7 @@ $(document).ready(function () {
 
     // Переключение вкладок
     let toggles_items = document.querySelectorAll('.toggles-btn');
-    let diary_blocks = document.querySelectorAll('.toggles-block');
+    let toggles_blocks = document.querySelectorAll('.toggles-block');
 
     for (let i = 0; i < toggles_items.length; i++) {
 
@@ -168,11 +168,11 @@ $(document).ready(function () {
 
             for (let j = 0; j < toggles_items.length; j++) {
                 toggles_items[j].classList.remove('active');
-                diary_blocks[j].classList.remove('active');
+                toggles_blocks[j].classList.remove('active');
             }
 
             toggles_items[i].classList.add('active');
-            diary_blocks[i].classList.add('active');
+            toggles_blocks[i].classList.add('active');
         });
     }
 

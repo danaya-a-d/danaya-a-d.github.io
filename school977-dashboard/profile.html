@@ -177,50 +177,178 @@
             </div>
 
             <div class="profile">
-                <form class="profile__form main-form" method="post" action="#">
-                    <h2 class="main-form__title">Личные данные</h2>
+                <div class="profile__blocks">
+                    <div class="profile__block toggles-block active">
+                        <form class="profile__form main-form" method="post" action="#">
+                            <h2 class="main-form__title">Личные данные</h2>
 
-                    <div class="main-form__photo-block" style="background-image: url(img/teacher-photo.png)">
-                        <input class="main-form__photo-input" type="file" name="file" id="input-file" hidden>
-                        <label class="main-form__photo-btn" for="input-file"></label>
+                            <div class="main-form__photo-block" style="background-image: url(img/teacher-photo.png)">
+                                <input class="main-form__photo-input" type="file" name="file" id="input-file" hidden>
+                                <label class="main-form__photo-btn" for="input-file"></label>
+                            </div>
+
+                            <fieldset class="main-form__fieldset">
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Фамилия</span>
+                                    <input class="main-form__input" placeholder="Введите фамилию" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Имя</span>
+                                    <input class="main-form__input" placeholder="Введите имя" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Отчество</span>
+                                    <input class="main-form__input" placeholder="Введите отчество" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Дата рождения</span>
+                                    <input class="main-form__input main-form__input--date" placeholder="Введите дату" type="text" onfocus="(this.type='date')">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Класс</span>
+                                    <select class="main-form__select" required>
+                                        <option value="" disabled selected>Выберите класс</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+
+                            <div class="main-form__buttons">
+                                <button class="main-form__button button button--white">Отменить</button>
+                                <button class="main-form__button button button--blue">Сохранить</button>
+                            </div>
+                        </form>
                     </div>
 
-                    <fieldset class="main-form__fieldset">
-                        <label class="main-form__label">
-                            <span class="main-form__label-title">Фамилия</span>
-                            <input class="main-form__input" placeholder="Введите фамилию" type="text">
-                        </label>
+                    <div class="profile__block toggles-block">
+                        <form class="profile__form main-form" method="post" action="#">
+                            <h2 class="main-form__title">Контакты</h2>
 
-                        <label class="main-form__label">
-                            <span class="main-form__label-title">Имя</span>
-                            <input class="main-form__input" placeholder="Введите имя" type="text">
-                        </label>
+                            <fieldset class="main-form__fieldset">
+                                <label class="main-form__label main-form__label--tel">
+                                    <span class="main-form__label-title">Телефон</span>
+                                    <input class="main-form__input" placeholder="" type="tel">
+                                </label>
 
-                        <label class="main-form__label">
-                            <span class="main-form__label-title">Отчество</span>
-                            <input class="main-form__input" placeholder="Введите отчество" type="text">
-                        </label>
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Email</span>
+                                    <input class="main-form__input" placeholder="Введите Email" type="email">
+                                </label>
 
-                        <label class="main-form__label">
-                            <span class="main-form__label-title">Дата рождения</span>
-                            <input class="main-form__input main-form__input--date" placeholder="Введите дату" type="text" onfocus="(this.type='date')">
-                        </label>
+                                <label class="main-form__label main-form__label--tel">
+                                    <span class="main-form__label-title">Доп. телефон</span>
+                                    <input class="main-form__input" placeholder="" type="text">
+                                </label>
+                            </fieldset>
 
-                        <label class="main-form__label">
-                            <span class="main-form__label-title">Класс</span>
-                            <select class="main-form__select" required>
-                                <option value="" disabled selected>Выберите класс</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                            </select>
-                        </label>
-                    </fieldset>
-
-                    <div class="main-form__buttons">
-                        <button class="main-form__button button button--white">Отменить</button>
-                        <button class="main-form__button button button--blue">Сохранить</button>
+                            <div class="main-form__buttons">
+                                <button class="main-form__button button button--white">Отменить</button>
+                                <button class="main-form__button button button--blue">Сохранить</button>
+                            </div>
+                        </form>
                     </div>
-                </form>
+
+                    <div class="profile__block toggles-block">
+                        <form class="profile__form main-form" method="post" action="#">
+                            <h2 class="main-form__title">Личные данные</h2>
+
+                            <div class="main-form__photo-block" style="background-image: url(img/teacher-photo.png)">
+                                <input class="main-form__photo-input" type="file" name="file" id="input-file" hidden>
+                                <label class="main-form__photo-btn" for="input-file"></label>
+                            </div>
+
+                            <fieldset class="main-form__fieldset">
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Фамилия</span>
+                                    <input class="main-form__input" placeholder="Введите фамилию" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Имя</span>
+                                    <input class="main-form__input" placeholder="Введите имя" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Отчество</span>
+                                    <input class="main-form__input" placeholder="Введите отчество" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Дата рождения</span>
+                                    <input class="main-form__input main-form__input--date" placeholder="Введите дату" type="text" onfocus="(this.type='date')">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Класс</span>
+                                    <select class="main-form__select" required>
+                                        <option value="" disabled selected>Выберите класс</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+
+                            <div class="main-form__buttons">
+                                <button class="main-form__button button button--white">Отменить</button>
+                                <button class="main-form__button button button--blue">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="profile__block toggles-block">
+                        <form class="profile__form main-form" method="post" action="#">
+                            <h2 class="main-form__title">Личные данные</h2>
+
+                            <div class="main-form__photo-block" style="background-image: url(img/teacher-photo.png)">
+                                <input class="main-form__photo-input" type="file" name="file" id="input-file" hidden>
+                                <label class="main-form__photo-btn" for="input-file"></label>
+                            </div>
+
+                            <fieldset class="main-form__fieldset">
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Фамилия</span>
+                                    <input class="main-form__input" placeholder="Введите фамилию" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Имя</span>
+                                    <input class="main-form__input" placeholder="Введите имя" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Отчество</span>
+                                    <input class="main-form__input" placeholder="Введите отчество" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Дата рождения</span>
+                                    <input class="main-form__input main-form__input--date" placeholder="Введите дату" type="text" onfocus="(this.type='date')">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Класс</span>
+                                    <select class="main-form__select" required>
+                                        <option value="" disabled selected>Выберите класс</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                    </select>
+                                </label>
+                            </fieldset>
+
+                            <div class="main-form__buttons">
+                                <button class="main-form__button button button--white">Отменить</button>
+                                <button class="main-form__button button button--blue">Сохранить</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
             </div>
 
         </section>
