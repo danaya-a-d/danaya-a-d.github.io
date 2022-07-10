@@ -215,7 +215,8 @@
                                 <label class="main-form__label">
                                     <span class="main-form__label-title">Дата рождения</span>
                                     <input class="main-form__input main-form__input--date" placeholder="Введите дату"
-                                           type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
+                                           type="text" onfocus="(this.type='date')"
+                                           onblur="if(this.value==''){this.type='text'}">
                                 </label>
 
                                 <label class="main-form__label">
@@ -280,22 +281,24 @@
                                     <input class="main-form__input" placeholder="" type="text">
                                 </label>
 
+
                                 <label class="main-form__label">
                                     <span class="main-form__label-title">Email</span>
                                     <input class="main-form__input" placeholder="Введите Email" type="email">
                                 </label>
 
-                                <div class="main-form__label">
-                                    <span class="main-form__label-title">Паспорт</span>
+                                <div class="main-form__documents">
+                                    <div class="main-form__label">
+                                        <span class="main-form__label-title">Паспорт</span>
 
-                                    <span class="main-form__file-block">
+                                        <span class="main-form__file-block">
                                         <span class="main-form__document"
-                                              style="background-image: url('img/teacher-photo.png')">
+                                              style="background-image: url('img/passport-photo.png')">
                                             <button class="main-form__btn-delete" type="button"></button>
                                         </span>
 
                                         <span class="main-form__document"
-                                              style="background-image: url('img/teacher-photo.png')">
+                                              style="background-image: url('img/passport-photo.png')">
                                             <button class="main-form__btn-delete" type="button"></button>
                                         </span>
 
@@ -305,9 +308,9 @@
                                         </label>
 
                                     </span>
-                                </div>
+                                    </div>
 
-                                <div class="main-form__label">
+                                    <div class="main-form__label">
                                     <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--purple">
                                             <input type="file" name="file" hidden>
@@ -316,8 +319,8 @@
                                             Договор личного дела
                                         </label>
                                     </span>
+                                    </div>
                                 </div>
-
                             </fieldset>
 
                             <fieldset class="main-form__fieldset">
@@ -338,10 +341,11 @@
                                     <input class="main-form__input" placeholder="Введите Email" type="email">
                                 </label>
 
-                                <div class="main-form__label">
-                                    <span class="main-form__label-title">Паспорт</span>
+                                <div class="main-form__documents">
+                                    <div class="main-form__label">
+                                        <span class="main-form__label-title">Паспорт</span>
 
-                                    <span class="main-form__file-block">
+                                        <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--orange">
                                             <input type="file" name="file" hidden>
                                             <svg class="button__icon" xmlns="http://www.w3.org/2000/svg"><use
@@ -349,9 +353,9 @@
                                             Прикрепить документы
                                         </label>
                                     </span>
-                                </div>
+                                    </div>
 
-                                <div class="main-form__label">
+                                    <div class="main-form__label">
                                     <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--purple">
                                             <input type="file" name="file" hidden>
@@ -360,6 +364,7 @@
                                             Договор личного дела
                                         </label>
                                     </span>
+                                    </div>
                                 </div>
                             </fieldset>
 
@@ -381,10 +386,11 @@
                                     <input class="main-form__input" placeholder="Введите Email" type="email">
                                 </label>
 
-                                <div class="main-form__label">
-                                    <span class="main-form__label-title">Паспорт</span>
+                                <div class="main-form__documents">
+                                    <div class="main-form__label">
+                                        <span class="main-form__label-title">Паспорт</span>
 
-                                    <span class="main-form__file-block">
+                                        <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--orange">
                                             <input type="file" name="file" hidden>
                                             <svg class="button__icon" xmlns="http://www.w3.org/2000/svg"><use
@@ -392,9 +398,9 @@
                                             Прикрепить документы
                                         </label>
                                     </span>
-                                </div>
+                                    </div>
 
-                                <div class="main-form__label">
+                                    <div class="main-form__label">
                                     <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--purple">
                                             <input type="file" name="file" hidden>
@@ -403,6 +409,7 @@
                                             Договор личного дела
                                         </label>
                                     </span>
+                                    </div>
                                 </div>
                             </fieldset>
 
@@ -506,7 +513,6 @@
                                         <span class="main-form__avatar-radio"><img src="img/avatar-4.jpg" alt=""></span>
                                     </label>
                                 </div>
-
                             </fieldset>
 
                             <fieldset class="main-form__fieldset">
@@ -523,19 +529,19 @@
                                         <option value="2">Лига 2</option>
                                     </select>
                                 </label>
-
-                                <div class="main-form__buttons">
-                                    <button class="main-form__button button button--white">Отменить</button>
-                                    <button class="main-form__button button button--blue">Сохранить</button>
-                                </div>
                             </fieldset>
+
+                            <div class="main-form__buttons">
+                                <button class="main-form__button button button--white">Отменить</button>
+                                <button class="main-form__button button button--blue">Сохранить</button>
+                            </div>
                         </form>
                     </div>
 
                     <div class="profile__block toggles-block">
                         <form class="profile__form main-form" method="post" action="#">
                             <h2 class="main-form__title">Безопасность</h2>
-                            <fieldset class="main-form__fieldset">
+                            <fieldset class="main-form__fieldset horizontal">
 
                                 <label class="main-form__label">
                                     <span class="main-form__label-title">Старый пароль</span>
