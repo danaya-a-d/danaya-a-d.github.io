@@ -415,13 +415,35 @@
                                 <button class="main-form__button button button--white">Отменить</button>
                                 <button class="main-form__button button button--blue">Сохранить</button>
                             </div>
-
                         </form>
                     </div>
 
                     <div class="profile__block toggles-block">
                         <form class="profile__form main-form" method="post" action="#">
                             <h2 class="main-form__title">Настройки лиги</h2>
+
+                            <fieldset class="main-form__fieldset">
+                                <h3 class="main-form__title">Выбор аватара</h3>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Никнейм</span>
+                                    <input class="main-form__input" placeholder="Введите никнейм" type="text">
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Выбор лиги</span>
+                                    <select class="main-form__select" required>
+                                        <option value="" disabled selected>Выберите лигу</option>
+                                        <option value="1">Лига 1</option>
+                                        <option value="2">Лига 2</option>
+                                    </select>
+                                </label>
+
+                                <div class="main-form__buttons">
+                                    <button class="main-form__button button button--white">Отменить</button>
+                                    <button class="main-form__button button button--blue">Сохранить</button>
+                                </div>
+                            </fieldset>
                         </form>
                     </div>
 
