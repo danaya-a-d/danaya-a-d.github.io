@@ -214,9 +214,15 @@
 
                                 <label class="main-form__label">
                                     <span class="main-form__label-title">Дата рождения</span>
-                                    <input class="main-form__input main-form__input--date" placeholder="Введите дату"
-                                           type="text" onfocus="(this.type='date')"
-                                           onblur="if(this.value==''){this.type='text'}">
+<!--                                                                        <input class="main-form__input main-form__input&#45;&#45;date" placeholder="Введите дату"-->
+<!--                                                                               type="text" onfocus="(this.type='date')"-->
+<!--                                                                               onblur="if(this.value==''){this.type='text'}">-->
+
+                                    <input class="main-form__input main-form__input--fake-date" placeholder="Введите дату" type="text" >
+                                    <input class="main-form__input main-form__input--date" type="date" onfocus="this.classList.add('_is-visible')"
+                                           oninput="this.value ? this.classList.add('_is-visible') : this.classList.remove('_is-visible')"
+                                           onblur="this.value ? this.classList.add('_is-visible') : this.classList.remove('_is-visible')">
+
                                 </label>
 
                                 <label class="main-form__label">
@@ -243,7 +249,7 @@
                             <fieldset class="main-form__fieldset">
                                 <label class="main-form__label main-form__label--tel">
                                     <span class="main-form__label-title">Телефон</span>
-                                    <input class="main-form__input" placeholder="" type="tel">
+                                    <input class="main-form__input phone_mask" placeholder="" type="tel">
                                 </label>
 
                                 <label class="main-form__label">
@@ -253,7 +259,7 @@
 
                                 <label class="main-form__label main-form__label--tel">
                                     <span class="main-form__label-title">Доп. телефон</span>
-                                    <input class="main-form__input" placeholder="" type="text">
+                                    <input class="main-form__input phone_mask" placeholder="" type="text">
                                 </label>
                             </fieldset>
 
@@ -278,7 +284,7 @@
 
                                 <label class="main-form__label main-form__label--tel">
                                     <span class="main-form__label-title">Телефон</span>
-                                    <input class="main-form__input" placeholder="" type="text">
+                                    <input class="main-form__input phone_mask" placeholder="" type="text">
                                 </label>
 
 
@@ -333,7 +339,7 @@
 
                                 <label class="main-form__label main-form__label--tel">
                                     <span class="main-form__label-title">Телефон</span>
-                                    <input class="main-form__input" placeholder="" type="text">
+                                    <input class="main-form__input phone_mask" placeholder="" type="text">
                                 </label>
 
                                 <label class="main-form__label">
@@ -378,7 +384,7 @@
 
                                 <label class="main-form__label main-form__label--tel">
                                     <span class="main-form__label-title">Телефон</span>
-                                    <input class="main-form__input" placeholder="" type="text">
+                                    <input class="main-form__input phone_mask" placeholder="" type="text">
                                 </label>
 
                                 <label class="main-form__label">
@@ -634,6 +640,7 @@
 <script src="script/slick/slick.min.js"></script>
 <script src="script/fancybox/jquery.fancybox.min.js"></script>
 <script src="script/dragscroll.js"></script>
+<script src="script/phone_mask.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>

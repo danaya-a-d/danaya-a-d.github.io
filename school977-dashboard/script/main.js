@@ -219,4 +219,7 @@ $(document).ready(function () {
         return false;
     });
 
+    // Маска телефона
+    $(".phone_mask").mask("99 999 99 99");
+
 });
