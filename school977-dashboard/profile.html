@@ -215,7 +215,7 @@
                                 <label class="main-form__label">
                                     <span class="main-form__label-title">Дата рождения</span>
                                     <input class="main-form__input main-form__input--date" placeholder="Введите дату"
-                                           type="text" onfocus="(this.type='date')">
+                                           type="text" onfocus="(this.type='date')" onblur="if(this.value==''){this.type='text'}">
                                 </label>
 
                                 <label class="main-form__label">
