@@ -207,4 +207,16 @@ $(document).ready(function () {
         $('.calendar-modal').removeClass('open');
     });
 
+    // Показать / скрыть пароль
+    $('body').on('click', '.password-control', function () {
+        if ($(this).siblings('.password-input').attr('type') == 'password') {
+            $(this).addClass('view');
+            $(this).siblings('.password-input').attr('type', 'text');
+        } else {
+            $(this).removeClass('view');
+            $(this).siblings('.password-input').attr('type', 'password');
+        }
+        return false;
+    });
+
 });

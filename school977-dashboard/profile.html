@@ -420,9 +420,44 @@
                     </div>
 
                     <div class="profile__block toggles-block">
+                        <form class="profile__form main-form" method="post" action="#">
+                            <h2 class="main-form__title">Настройки лиги</h2>
+                        </form>
                     </div>
 
                     <div class="profile__block toggles-block">
+                        <form class="profile__form main-form" method="post" action="#">
+                            <h2 class="main-form__title">Безопасность</h2>
+                            <fieldset class="main-form__fieldset">
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Старый пароль</span>
+                                    <input class="main-form__input password-input" name="password-old" id="password-old"
+                                           placeholder="Введите старый пароль" type="password" required>
+                                    <a href="#" class="password-control"></a>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Новый пароль</span>
+                                    <input class="main-form__input password-input" name="password-old" id="password-new"
+                                           placeholder="Введите новый пароль" type="password" required>
+                                    <a href="#" class="password-control"></a>
+                                </label>
+
+                                <label class="main-form__label">
+                                    <span class="main-form__label-title">Повторите новый пароль</span>
+                                    <input class="main-form__input password-input" name="password-old" id="password-repeat"
+                                           placeholder="Введите новый пароль" type="password" required>
+                                    <a href="#" class="password-control"></a>
+                                </label>
+
+                            </fieldset>
+
+                            <div class="main-form__buttons">
+                                <button class="main-form__button button button--white">Отменить</button>
+                                <button class="main-form__button button button--blue">Сохранить</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
 
