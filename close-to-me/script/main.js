@@ -57,7 +57,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let modal_subscription = document.querySelector('.modal-subscription');
     let btn_modal_subscription = document.querySelectorAll('.button-subscription');
 
+    let modal_attention = document.querySelector('.modal-attention');
+    let btn_modal_attention = document.querySelectorAll('.button-attention');
+
     open_modal(modal_subscription, btn_modal_subscription);
+    open_modal(modal_attention, btn_modal_attention);
 
     //FAQ
     let faq_item = document.querySelectorAll('.faq__item');
