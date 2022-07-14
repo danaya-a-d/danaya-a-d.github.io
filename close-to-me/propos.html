@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
 
-    <!--<link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">-->
+    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -42,8 +42,14 @@
 <header class="header">
     <div class="header__wrapper wrapper">
 
+        <a href="index.html" class="header__logo-mobile logo">
+            <img src="img/logo-small.svg" alt="Close to you" class="logo__image">
+        </a>
+
+        <button class="header__menu-btn"></button>
+
         <nav class="header__nav">
-            <a href="index.html" class="header__logo logo">
+            <a class="header__logo logo" href="index.html">
                 <img src="img/logo.svg" alt="Close to you" class="logo__image">
             </a>
 
@@ -69,13 +75,29 @@
                     </svg>
                 </a></li>
 
-                <li class="header__control"><a href="#">
+                <li class="header__control"><a href="#" class="button-videos">
                     <svg class="header__icon">
                         <use xlink:href="#user"></use>
                     </svg>
                 </a></li>
             </ul>
+
+            <ul class="header__socials socials">
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#instagram"></use>
+                    </svg>
+                </a></li>
+
+                <li class="socials__item"><a href="#">
+                    <svg class="socials__icon" xmlns="http://www.w3.org/2000/svg">
+                        <use xlink:href="#youtube"></use>
+                    </svg>
+                </a></li>
+            </ul>
         </nav>
+
+        <div class="header__overlay"></div>
     </div>
 </header>
 
@@ -85,7 +107,7 @@
 
             <h1 class="visually-hidden">A propos</h1>
 
-            <img class="intro__image" src="img/photo-4.jpg" alt="">
+            <picture class="intro__picture"><img class="intro__image" src="img/photo-4.jpg" alt=""></picture>
 
             <div class="intro__text">
                 <h2 class="intro__title">concept / mission / objectif</h2>
@@ -112,7 +134,7 @@
     </section>
     <section class="intro">
         <div class="intro__wrapper-reverse wrapper">
-            <img class="intro__image" src="img/photo-5.jpg" alt="">
+            <picture class="intro__picture"><img class="intro__image" src="img/photo-2.jpg" alt=""></picture>
 
             <div class="intro__text">
                 <h2 class="intro__title">YUMIE</h2>
@@ -137,7 +159,6 @@
             </div>
         </div>
     </section>
-
     <section class="news">
         <div class="news__wrapper wrapper">
             <ul class="news__list">
@@ -260,6 +281,8 @@
                 </a></li>
             </ul>
 
+            <p class="footer__copy-mob">Copyright © 2022. All rights reserved.</p>
+
             <a href="#" class="footer__author">made by teh</a>
         </div>
     </div>
@@ -271,12 +294,12 @@
         <button class="modal__btn-close btn-close modal-close"></button>
 
         <div class="subscription">
-            <img class="subscription__image" src="img/photo-3.jpg" alt="">
+            <picture><img class="subscription__image" src="img/photo-3.jpg" alt=""></picture>
 
             <div class="subscription__content">
                 <h2 class="subscription__title title title--big">OUPS...</h2>
 
-                <p class="subscription__text">Tu dois avoir l’abonnement curieux pour<br> accéder à  ce contenu.</p>
+                <p class="subscription__text">Tu dois avoir l’abonnement curieux pour<br> accéder à ce contenu.</p>
 
                 <a class="subscription__button button button--white" href="#">M’abonner 9.-/mois</a>
 
@@ -285,17 +308,17 @@
 
                     <ul class="advantages__list">
                         <li class="advantages__item">
-                            <img class="advantages__icon" src="img/advantages-1.svg" alt="">
+                            <picture><img class="advantages__icon" src="img/advantages-1.svg" alt=""></picture>
                             <p class="advantages__description">Thèmes sur la sexualité abordés en profondeur</p>
                         </li>
 
                         <li class="advantages__item">
-                            <img class="advantages__icon" src="img/advantages-2.svg" alt="">
+                            <picture><img class="advantages__icon" src="img/advantages-2.svg" alt=""></picture>
                             <p class="advantages__description">Tutoriels<br> explicites</p>
                         </li>
 
                         <li class="advantages__item">
-                            <img class="advantages__icon" src="img/advantages-3.svg" alt="">
+                            <picture><img class="advantages__icon" src="img/advantages-3.svg" alt=""></picture>
                             <p class="advantages__description">Contenus explicatifs et pédagogiques</p>
                         </li>
                     </ul>
@@ -331,10 +354,216 @@
         </div>
     </div>
 
+    <div class="modal modal-videos hide">
+        <button class="modal__btn-close btn-close modal-close"></button>
+
+        <div class="videos">
+            <div class="videos__wrapper">
+
+                <h2 class="videos__title title">
+                    <img src="img/advantages-4.svg" alt="">
+                    VIDÉOS EXPLICATIVE
+                </h2>
+
+                <div class="videos__list">
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                </div>
+
+            </div>
+
+            <div class="videos__wrapper">
+
+                <h2 class="videos__title title">
+                    <img src="img/advantages-5.svg" alt="">
+                    VIDÉOS EXPLICATIVE
+                </h2>
+
+                <div class="videos__list">
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                    <div class="videos__item video-item"><a href="#" class="video-item__link">
+                        <div class="video-item__img-block">
+                            <picture><img class="video-item__img" src="img/photo.jpg" alt=""></picture>
+                        </div>
+
+                        <div class="video-item__description">
+                            <p class="video-item__name">Lorem ipsum dolor sit amet, consecelit. Aenean commodo </p>
+                            <div class="video-item__controls controls">
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-eye.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__item">
+                                    <img class="controls__icon" src="img/icon-like.svg" alt="">
+                                    125k
+                                </p>
+
+                                <p class="controls__time">2 days ago</p>
+                            </div>
+                        </div>
+                    </a></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
     <div class="modal-overlay hide"></div>
 </div>
 
-<!--<script src="script/swiper/swiper-bundle.min.js"></script>-->
+<script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/main.js"></script>
 
 </body>

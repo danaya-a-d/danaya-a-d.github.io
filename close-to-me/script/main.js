@@ -13,6 +13,39 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
 
 
+    // Tariffs slider
+
+    let init = false;
+
+    function swiperCard() {
+        if (window.innerWidth <= 778) {
+            if (!init) {
+                init = true;
+                swiper = new Swiper(".tariffs__wrapper", {
+                    direction: 'horizontal',
+                    loop: false,
+                    speed: 1000,
+                    slidesPerView: 1,
+                    spaceBetween: 0,
+                });
+            }
+        } else if (init) {
+            swiper.destroy();
+            init = false;
+        }
+    }
+    swiperCard();
+    window.addEventListener("resize", swiperCard);
+
+
+    // const tariffs__wrapper = new Swiper('.tariffs__wrapper', {
+    //     direction: 'horizontal',
+    //     loop: false,
+    //     speed: 1000,
+    //     slidesPerView: 1,
+    //     spaceBetween: 0,
+    // });
+
     // Modals
     let modal_overlay = document.querySelector('.modal-overlay');
     let modal_back = document.querySelector('.modal-back');
@@ -60,8 +93,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let modal_attention = document.querySelector('.modal-attention');
     let btn_modal_attention = document.querySelectorAll('.button-attention');
 
+    let modal_videos = document.querySelector('.modal-videos');
+    let btn_modal_videos = document.querySelectorAll('.button-videos');
+
     open_modal(modal_subscription, btn_modal_subscription);
     open_modal(modal_attention, btn_modal_attention);
+    open_modal(modal_videos, btn_modal_videos);
 
     //FAQ
     let faq_item = document.querySelectorAll('.faq__item');
@@ -73,5 +110,35 @@ window.addEventListener('DOMContentLoaded', function (event) {
             });
         }
     }
+
+    // Mobile menu
+    let header_menu_btn = document.querySelector('.header__menu-btn');
+    let header_nav_menu = document.querySelector('.header__nav');
+    let header_overlay = document.querySelector('.header__overlay');
+
+
+    function menu_open() {
+        if (header_nav_menu.classList.contains('opened')) {
+            header_nav_menu.classList.remove('opened');
+            header_menu_btn.classList.remove('opened');
+            header_overlay.classList.remove('opened');
+        } else {
+            header_nav_menu.classList.add('opened');
+            header_menu_btn.classList.add('opened');
+            header_overlay.classList.add('opened');
+        }
+    }
+
+    header_menu_btn.addEventListener('click', function () {
+        menu_open();
+    });
+
+    header_overlay.addEventListener('click', function () {
+        menu_open();
+    });
+
+    header_overlay.addEventListener('touchmove', function () {
+        menu_open();
+    });
 
 });
