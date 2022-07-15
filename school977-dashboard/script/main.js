@@ -38,35 +38,42 @@ $(document).ready(function () {
         }).trigger('resize');
     }
 
-
-    // Слайдер расписания
-    const settings = {
-        dots: false,
-        arrows: false,
-        mobileFirst: true,
-        settings: 'slick',
-        // asNavFor: $('.schedule-block__dates'),
-        // asNavFor: $(this).parents('.schedule-block').find('.schedule-block__dates'),
-        responsive: [{
-            breakpoint: 991,
-            settings: 'unslick'
-        }]
-    };
+    // Слайдер расписания при ресайзе
+    function slick_mobile_nav(slider) {
+        $(window).on('resize', function (e) {
+            let init = slider.data('init-slider');
+            if (window.innerWidth < 991) {
+                if (init !== 1) {
+                    slider.each(function(){
+                        $(this).slick({
+                            asNavFor: $(this).parents('.schedule-block').find('.schedule-block__dates')
+                        }).data({'init-slider': 1});
+                    });
+                }
+            }
+            else {
+                if (init === 1) {
+                    slider.each(function(){
+                        $(this).slick('unslick').data({'init-slider': 0});
+                    });
+                }
+            }
+        }).trigger('resize');
+    }
 
     const settings_nav = {
         dots: false,
         arrows: false,
         mobileFirst: true,
         settings: 'slick',
-        // asNavFor: $('.schedule-block__list'),
-        // asNavFor: $(this).parents('.schedule-block').find('.schedule-block__list'),
+        swipe: false,
         responsive: [{
             breakpoint: 991,
             settings: 'unslick'
         }]
     };
 
-    slick_mobile($('.schedule-block__list'), settings);
+    slick_mobile_nav($('.schedule-block__list'));
     slick_mobile($('.schedule-block__dates'), settings_nav);
 
     // Слайдер новостей дашбоард
