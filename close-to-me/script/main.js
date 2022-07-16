@@ -14,7 +14,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
 
     // Tariffs slider
-
     let init = false;
 
     function swiperCard() {
@@ -37,14 +36,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
     swiperCard();
     window.addEventListener("resize", swiperCard);
 
-
-    // const tariffs__wrapper = new Swiper('.tariffs__wrapper', {
-    //     direction: 'horizontal',
-    //     loop: false,
-    //     speed: 1000,
-    //     slidesPerView: 1,
-    //     spaceBetween: 0,
-    // });
 
     // Modals
     let modal_overlay = document.querySelector('.modal-overlay');
@@ -86,7 +77,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
         close_modal(modal);
     }
 
-
     let modal_subscription = document.querySelector('.modal-subscription');
     let btn_modal_subscription = document.querySelectorAll('.button-subscription');
 
@@ -100,7 +90,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     open_modal(modal_attention, btn_modal_attention);
     open_modal(modal_videos, btn_modal_videos);
 
-    //FAQ
+    // FAQ
     let faq_item = document.querySelectorAll('.faq__item');
 
     if (faq_item !== null) {
@@ -110,6 +100,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             });
         }
     }
+
 
     // Mobile menu
     let header_menu_btn = document.querySelector('.header__menu-btn');
@@ -141,4 +132,57 @@ window.addEventListener('DOMContentLoaded', function (event) {
         menu_open();
     });
 
+
+    // Phone input
+    let input = document.querySelector(".tel-input");
+
+    if (input !== null) {
+        let iti = intlTelInput(input, {
+            utilsScript: "script/intlTelInput/js/utils.js",
+            initialCountry: "fr"
+        });
+    }
+
+
+    // Change header color
+    let change_colors = function (target) {
+        // Все позиции элемента
+        let targetPosition = {
+                top: window.pageYOffset + target.getBoundingClientRect().top,
+                left: window.pageXOffset + target.getBoundingClientRect().left,
+                right: window.pageXOffset + target.getBoundingClientRect().right,
+                bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+            },
+            // Получаем позиции окна
+            windowPosition = {
+                top: window.pageYOffset,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition.bottom > windowPosition.top &&
+            targetPosition.top < windowPosition.bottom &&
+            targetPosition.right > windowPosition.left &&
+            targetPosition.left < windowPosition.right) {
+            // Если элемент полностью видно, то запускаем следующий код
+            header.classList.add('white');
+
+        } else {
+            // Если элемент не видно, то запускаем этот код
+            header.classList.remove('white');
+        }
+    };
+
+    // Запускаем функцию
+    let header = document.querySelector('.header');
+    let banner_js = document.querySelector('.banner-js');
+
+    if (header !== null && banner_js !== null) {
+        window.addEventListener('scroll', function () {
+            change_colors(banner_js);
+        });
+
+        change_colors(banner_js);
+    }
 });
