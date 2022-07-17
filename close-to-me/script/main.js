@@ -146,14 +146,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     // Change header color
     let change_colors = function (target) {
-        // Все позиции элемента
         let targetPosition = {
                 top: window.pageYOffset + target.getBoundingClientRect().top,
                 left: window.pageXOffset + target.getBoundingClientRect().left,
                 right: window.pageXOffset + target.getBoundingClientRect().right,
                 bottom: window.pageYOffset + target.getBoundingClientRect().bottom
             },
-            // Получаем позиции окна
             windowPosition = {
                 top: window.pageYOffset,
                 left: window.pageXOffset,
@@ -165,11 +163,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
             targetPosition.top < windowPosition.bottom &&
             targetPosition.right > windowPosition.left &&
             targetPosition.left < windowPosition.right) {
-            // Если элемент полностью видно, то запускаем следующий код
             header.classList.add('white');
 
         } else {
-            // Если элемент не видно, то запускаем этот код
             header.classList.remove('white');
         }
     };
@@ -185,4 +181,29 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
         change_colors(banner_js);
     }
+
+
+
+
+    // video player
+    [].forEach.call(document.querySelectorAll('video'), function(el) {
+        let cont = document.createElement('div');
+        cont.className = "video";
+        el.parentNode.insertBefore(cont, el);
+        cont.appendChild(el);
+        cont.insertAdjacentHTML('afterbegin', '<div class="video-overlay"></div>');
+        cont.addEventListener('click', function(e) {
+            let video = cont.querySelector('video');
+            if (video.paused) {
+                cont.classList.add('is-playing');
+                video.play();
+            } else {
+                cont.classList.remove('is-playing');
+                video.pause();
+            }
+            video.onended = function() {
+                cont.classList.remove('is-playing');
+            };
+        });
+    });
 });
