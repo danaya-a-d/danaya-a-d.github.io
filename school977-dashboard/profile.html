@@ -214,21 +214,27 @@
 
                                 <label class="main-form__label">
                                     <span class="main-form__label-title">Дата рождения</span>
-                                    <input class="main-form__input main-form__input--fake-date" placeholder="Введите дату" type="text" >
-                                    <input class="main-form__input main-form__input--date" type="date" onfocus="this.classList.add('_is-visible')"
+                                    <input class="main-form__input main-form__input--fake-date"
+                                           placeholder="Введите дату" type="text">
+                                    <input class="main-form__input main-form__input--date" type="date"
+                                           onfocus="this.classList.add('_is-visible')"
                                            oninput="this.value ? this.classList.add('_is-visible') : this.classList.remove('_is-visible')"
                                            onblur="this.value ? this.classList.add('_is-visible') : this.classList.remove('_is-visible')">
 
                                 </label>
 
-                                <label class="main-form__label">
+                                <div class="main-form__label">
                                     <span class="main-form__label-title">Класс</span>
-                                    <select class="main-form__select" required>
-                                        <option value="" disabled selected>Выберите класс</option>
-                                        <option value="1">1</option>
-                                        <option value="2">2</option>
-                                    </select>
-                                </label>
+                                    <div class="main-form__select select">
+                                        <input type="hidden" name="class" value="По умолчанию" required>
+                                        <div class="select__head">Выберите класс</div>
+                                        <ul class="select__list" style="display: none;">
+                                            <li class="select__item">1</li>
+                                            <li class="select__item">2</li>
+                                            <li class="select__item">3</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </fieldset>
 
                             <div class="main-form__buttons">
@@ -267,33 +273,35 @@
                     </div>
 
                     <div class="profile__block toggles-block">
-                        <form class="profile__form main-form" method="post" action="#">
+                        <form class="profile__form profile__form-contacts main-form" method="post" action="#">
                             <h2 class="main-form__title">Родители и контактные лица</h2>
 
-                            <fieldset class="main-form__fieldset">
-                                <h3 class="main-form__title">Мама</h3>
+                            <div class="main-form__contacts">
 
-                                <label class="main-form__label">
-                                    <span class="main-form__label-title">Имя</span>
-                                    <input class="main-form__input" placeholder="Введите имя" type="text">
-                                </label>
+                                <fieldset class="main-form__fieldset">
+                                    <h3 class="main-form__title">Мама</h3>
 
-                                <label class="main-form__label main-form__label--tel">
-                                    <span class="main-form__label-title">Телефон</span>
-                                    <input class="main-form__input phone_mask" placeholder="" type="text">
-                                </label>
+                                    <label class="main-form__label">
+                                        <span class="main-form__label-title">Имя</span>
+                                        <input class="main-form__input" placeholder="Введите имя" type="text">
+                                    </label>
+
+                                    <label class="main-form__label main-form__label--tel">
+                                        <span class="main-form__label-title">Телефон</span>
+                                        <input class="main-form__input phone_mask" placeholder="" type="text">
+                                    </label>
 
 
-                                <label class="main-form__label">
-                                    <span class="main-form__label-title">Email</span>
-                                    <input class="main-form__input" placeholder="Введите Email" type="email">
-                                </label>
+                                    <label class="main-form__label">
+                                        <span class="main-form__label-title">Email</span>
+                                        <input class="main-form__input" placeholder="Введите Email" type="email">
+                                    </label>
 
-                                <div class="main-form__documents">
-                                    <div class="main-form__label">
-                                        <span class="main-form__label-title">Паспорт</span>
+                                    <div class="main-form__documents">
+                                        <div class="main-form__label">
+                                            <span class="main-form__label-title">Паспорт</span>
 
-                                        <span class="main-form__file-block">
+                                            <span class="main-form__file-block">
                                         <span class="main-form__document"
                                               style="background-image: url('img/passport-photo.png')">
                                             <button class="main-form__btn-delete" type="button"></button>
@@ -310,9 +318,9 @@
                                         </label>
 
                                     </span>
-                                    </div>
+                                        </div>
 
-                                    <div class="main-form__label">
+                                        <div class="main-form__label">
                                     <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--purple">
                                             <input type="file" name="file" hidden>
@@ -321,33 +329,33 @@
                                             Договор личного дела
                                         </label>
                                     </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </fieldset>
+                                </fieldset>
 
-                            <fieldset class="main-form__fieldset">
-                                <h3 class="main-form__title">Папа</h3>
+                                <fieldset class="main-form__fieldset">
+                                    <h3 class="main-form__title">Папа</h3>
 
-                                <label class="main-form__label">
-                                    <span class="main-form__label-title">Имя</span>
-                                    <input class="main-form__input" placeholder="Введите имя" type="text">
-                                </label>
+                                    <label class="main-form__label">
+                                        <span class="main-form__label-title">Имя</span>
+                                        <input class="main-form__input" placeholder="Введите имя" type="text">
+                                    </label>
 
-                                <label class="main-form__label main-form__label--tel">
-                                    <span class="main-form__label-title">Телефон</span>
-                                    <input class="main-form__input phone_mask" placeholder="" type="text">
-                                </label>
+                                    <label class="main-form__label main-form__label--tel">
+                                        <span class="main-form__label-title">Телефон</span>
+                                        <input class="main-form__input phone_mask" placeholder="" type="text">
+                                    </label>
 
-                                <label class="main-form__label">
-                                    <span class="main-form__label-title">Email</span>
-                                    <input class="main-form__input" placeholder="Введите Email" type="email">
-                                </label>
+                                    <label class="main-form__label">
+                                        <span class="main-form__label-title">Email</span>
+                                        <input class="main-form__input" placeholder="Введите Email" type="email">
+                                    </label>
 
-                                <div class="main-form__documents">
-                                    <div class="main-form__label">
-                                        <span class="main-form__label-title">Паспорт</span>
+                                    <div class="main-form__documents">
+                                        <div class="main-form__label">
+                                            <span class="main-form__label-title">Паспорт</span>
 
-                                        <span class="main-form__file-block">
+                                            <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--orange">
                                             <input type="file" name="file" hidden>
                                             <svg class="button__icon" xmlns="http://www.w3.org/2000/svg"><use
@@ -355,9 +363,9 @@
                                             Прикрепить документы
                                         </label>
                                     </span>
-                                    </div>
+                                        </div>
 
-                                    <div class="main-form__label">
+                                        <div class="main-form__label">
                                     <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--purple">
                                             <input type="file" name="file" hidden>
@@ -366,33 +374,33 @@
                                             Договор личного дела
                                         </label>
                                     </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </fieldset>
+                                </fieldset>
 
-                            <fieldset class="main-form__fieldset">
-                                <h3 class="main-form__title">Контактное лицо 1</h3>
+                                <fieldset class="main-form__fieldset main-form__fieldset-clone">
+                                    <h3 class="main-form__title">Контактное лицо 1</h3>
 
-                                <label class="main-form__label">
-                                    <span class="main-form__label-title">Имя</span>
-                                    <input class="main-form__input" placeholder="Введите имя" type="text">
-                                </label>
+                                    <label class="main-form__label">
+                                        <span class="main-form__label-title">Имя</span>
+                                        <input class="main-form__input" placeholder="Введите имя" type="text">
+                                    </label>
 
-                                <label class="main-form__label main-form__label--tel">
-                                    <span class="main-form__label-title">Телефон</span>
-                                    <input class="main-form__input phone_mask" placeholder="" type="text">
-                                </label>
+                                    <label class="main-form__label main-form__label--tel">
+                                        <span class="main-form__label-title">Телефон</span>
+                                        <input class="main-form__input phone_mask" placeholder="" type="text">
+                                    </label>
 
-                                <label class="main-form__label">
-                                    <span class="main-form__label-title">Email</span>
-                                    <input class="main-form__input" placeholder="Введите Email" type="email">
-                                </label>
+                                    <label class="main-form__label">
+                                        <span class="main-form__label-title">Email</span>
+                                        <input class="main-form__input" placeholder="Введите Email" type="email">
+                                    </label>
 
-                                <div class="main-form__documents">
-                                    <div class="main-form__label">
-                                        <span class="main-form__label-title">Паспорт</span>
+                                    <div class="main-form__documents">
+                                        <div class="main-form__label">
+                                            <span class="main-form__label-title">Паспорт</span>
 
-                                        <span class="main-form__file-block">
+                                            <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--orange">
                                             <input type="file" name="file" hidden>
                                             <svg class="button__icon" xmlns="http://www.w3.org/2000/svg"><use
@@ -400,9 +408,9 @@
                                             Прикрепить документы
                                         </label>
                                     </span>
-                                    </div>
+                                        </div>
 
-                                    <div class="main-form__label">
+                                        <div class="main-form__label">
                                     <span class="main-form__file-block">
                                         <label class="main-form__file-btn button button--purple">
                                             <input type="file" name="file" hidden>
@@ -411,9 +419,10 @@
                                             Договор личного дела
                                         </label>
                                     </span>
+                                        </div>
                                     </div>
-                                </div>
-                            </fieldset>
+                                </fieldset>
+                            </div>
 
                             <button class="main-form__add-button button button--white-dark" type="button">
                                 <span class="button__plus">+</span>
@@ -523,14 +532,18 @@
                                     <input class="main-form__input" placeholder="Введите никнейм" type="text">
                                 </label>
 
-                                <label class="main-form__label">
+                                <div class="main-form__label">
                                     <span class="main-form__label-title">Выбор лиги</span>
-                                    <select class="main-form__select" required>
-                                        <option value="" disabled selected>Выберите лигу</option>
-                                        <option value="1">Лига 1</option>
-                                        <option value="2">Лига 2</option>
-                                    </select>
-                                </label>
+                                    <div class="main-form__select select">
+                                        <input type="hidden" name="class" value="По умолчанию" required>
+                                        <div class="select__head">Выберите лигу</div>
+                                        <ul class="select__list" style="display: none;">
+                                            <li class="select__item">Лига 1</li>
+                                            <li class="select__item">Лига 2</li>
+                                            <li class="select__item">Лига 3</li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </fieldset>
 
                             <div class="main-form__buttons">

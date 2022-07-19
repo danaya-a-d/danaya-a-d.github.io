@@ -976,13 +976,17 @@
                 <div class="dashboard-calculator">
                     <div class="dashboard-calculator__head">
                         <p class="dashboard-calculator__title">Предмет</p>
-                        <label class="dashboard-calculator__label">
-                            <select class="dashboard-calculator__select">
-                                <option value="Английский язык">Английский язык</option>
-                                <option value="Математика">Математика</option>
-                                <option value="История Украины">История Украины</option>
-                            </select>
-                        </label>
+
+                        <div class="dashboard-calculator__select select">
+                            <input type="hidden" name="sort" value="Английский язык" required>
+                            <div class="select__head">Английский язык</div>
+                            <ul class="select__list" style="display: none;">
+                                <li class="select__item">Английский язык</li>
+                                <li class="select__item">Математика</li>
+                                <li class="select__item">История Украины</li>
+                            </ul>
+                        </div>
+
                     </div>
 
                     <div class="dashboard-calculator__table">

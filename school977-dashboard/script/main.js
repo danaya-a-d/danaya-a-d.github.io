@@ -46,7 +46,9 @@ $(document).ready(function () {
                 if (init !== 1) {
                     slider.each(function(){
                         $(this).slick({
-                            asNavFor: $(this).parents('.schedule-block').find('.schedule-block__dates')
+                            asNavFor: $(this).parents('.schedule-block').find('.schedule-block__dates'),
+                            arrows: false,
+                            dots: false
                         }).data({'init-slider': 1});
                     });
                 }
@@ -239,6 +241,42 @@ $(document).ready(function () {
             $(this).siblings('.password-input').attr('type', 'password');
         }
         return false;
+    });
+
+    // Кастомный select
+    jQuery(($) => {
+        $('.select').on('click', '.select__head', function () {
+            if ($(this).hasClass('open')) {
+                $(this).removeClass('open');
+                $(this).next().fadeOut();
+            } else {
+                $('.select__head').removeClass('open');
+                $('.select__list').fadeOut();
+                $(this).addClass('open');
+                $(this).next().fadeIn();
+            }
+        });
+
+        $('.select').on('click', '.select__item', function () {
+            $('.select__head').removeClass('open');
+            $(this).parent().fadeOut();
+            $(this).parent().prev().text('');
+            $(this).parent().prev().append($(this).html());
+            $(this).parent().prev().prev().val($(this).text());
+        });
+
+        $(document).click(function (e) {
+            if (!$(e.target).closest('.select').length) {
+                $('.select__head').removeClass('open');
+                $('.select__list').fadeOut();
+            }
+        });
+    });
+
+    // добавить поле формы
+    $('.main-form__add-button').click(function () {
+        let container = $(this).siblings('.main-form__contacts');
+        $('.main-form__fieldset-clone').clone().appendTo(container).removeClass('main-form__fieldset-clone');
     });
 
     // Маска телефона
