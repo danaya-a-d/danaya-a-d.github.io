@@ -294,4 +294,76 @@ $(document).ready(function () {
     // Маска телефона
     // $(".phone_mask").mask("99 999 99 99");
 
+    // Графики дашборда
+
+    function graf(current_val, total_val, unit, arrow = null) {
+        let percent_val = current_val / total_val * 100;
+        let deg_val = current_val / total_val * 360;
+        let coords = deg_val - 87; // 87 градусов для перемещения точки начала вверх
+        if (arrow !== null) {
+            arrow.attr('style', 'transform: rotate(' + coords + 'deg) translate(58px)');
+        }
+        unit.attr('stroke-dasharray', percent_val + ' 100')
+        // // unit.attr('style', 'transform: rotate(' + -deg_val/3 + 'deg)')
+    }
+
+
+    graf(9, 20, $('#unit-0'), $('#arrow-0'));
+    graf(9.68, 12, $('#unit-1'));
+    graf(12, 20, $('#unit-2'));
+    graf(6, 30, $('#unit-3'));
+    graf(16, 20, $('#unit-4'));
+
+
+
+
+
+
+    function graph_octopus(current_val, total_val, unit) {
+
+        let r0 = 180; // Outer radius
+        let r1 = r0 * Math.sqrt(0.75); // Inner radius
+        // alert(r1);
+        let d30 = 22.5 * Math.PI/180; // 30 degrees in radians
+        let d60 = 45 * Math.PI/180; // 60 degrees in radians
+        let theta = current_val / total_val * 6.2832; // 100% = 6.2832
+        let percent_val = current_val / total_val * 320; // 100% = 320
+        let deg_val = current_val / total_val * 360; // 100% = 360
+
+        let r = r1 / Math.cos((theta + d30) % d60 - d30);
+        let x = Math.sin(theta) * r;
+        let y = Math.cos(theta) * r;
+        document.getElementById('dot').style.top=x.toFixed(2)+'px';
+        document.getElementById('dot').style.left=y.toFixed(2)+'px';
+        document.getElementById('dot').style.transform='rotate(' + deg_val + 'deg)';
+
+        unit.attr('stroke-dasharray', percent_val + ' 320')
+    }
+
+    graph_octopus(10, 20, $('#unit-5'));
+
+
+
+
+
 });
+
+
+// let theta=0.0;
+// let r0 = 190.0; // Outer radius
+// let r1 = r0 * Math.sqrt(0.75); // Inner radius
+// let d30 = 22.5 * Math.PI/180; // 30 degrees in radians
+// let d60 = 45 * Math.PI/180; // 60 degrees in radians
+//
+// function move_dot() {
+//     // theta += 0.025;
+//     theta = 6.2832;
+//     let r = r1 / Math.cos((theta + d30) % d60 - d30);
+//     let x = Math.sin(theta) * r;
+//     let y = Math.cos(theta) * r;
+//     document.getElementById('dot').style.top=x.toFixed(2)+'px';
+//     document.getElementById('dot').style.left=y.toFixed(2)+'px';
+//     console.log(theta)
+// }
+//
+// document.body.onload=function(){setInterval(move_dot,30);}

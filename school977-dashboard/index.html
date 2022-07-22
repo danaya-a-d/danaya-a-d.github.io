@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -116,7 +116,7 @@
     
             <a class="header__logo" href="index.html"><img src="img/logo-small.svg" alt="977 Школа"></a>
     
-            <a href="#" class="header__chat-btn"></a>
+            <a href="notifications.html" class="header__chat-btn"></a>
     
             <a href="#" class="header__user-block">
                 <img src="img/teacher-photo.png" alt="" class="header__user-photo">
@@ -174,24 +174,69 @@
             <div class="info-sec">
                 <div class="info-sec__photo-block">
                     <img src="img/teacher-photo.png" alt="" class="info-sec__photo">
+                    <div class="info-sec__inner-statistic">
+                        <svg width="500" height="500" viewBox="0 0 35 35" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle class="circle-back" r="15.9" cx="50%" cy="50%" fill="none" stroke-linecap="round"
+                                    stroke="#FFFFFF" stroke-dasharray="100 100"></circle>
+                            <circle class="circle" id="unit-0" r="15.9" cx="50%" cy="50%" fill="none"
+                                    stroke-linecap="round"
+                                    stroke="#FFED00"></circle>
+                        </svg>
+
+                        <div class="arrow" id="arrow-0"></div>
+                    </div>
+
+                    <div class="info-sec__outer-statistic">
+                        <svg viewBox="0 0 102 102" width="100" height="100%">
+                            <polygon class="octagon-back" points="29.5,2.5 69.5,2.5 99.5,29.5 99.5,69.5 69.5,99.5 29.5,99.5 2.5,69.5 2.5,29.5 "/>
+                            <polygon id="unit-5" class="octagon" points="29.5,2.5 69.5,2.5 99.5,29.5 99.5,69.5 69.5,99.5 29.5,99.5 2.5,69.5 2.5,29.5 "/>
+                        </svg>
+
+                        <div class="arrow" id="dot"></div>
+                    </div>
                 </div>
 
                 <div class="info-sec__numbers">
                     <div class="info-sec__number">
                         <p class="info-sec__number-val yellow">9,68</p>
                         <p class="info-sec__number-name">Ср. бал</p>
+                        <svg class="info-sec__number-statistic" width="500" height="500" viewBox="0 0 35 35" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle class="unit" id="unit-1" r="15.9" cx="50%" cy="50%" fill="none"
+                                    stroke-linecap="round"
+                                    stroke="#FFED00"></circle>
+                        </svg>
                     </div>
                     <div class="info-sec__number">
                         <p class="info-sec__number-val green">12</p>
                         <p class="info-sec__number-name">Оценки</p>
+                        <svg class="info-sec__number-statistic" width="500" height="500" viewBox="0 0 35 35" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle class="unit" id="unit-2" r="15.9" cx="50%" cy="50%" fill="none"
+                                    stroke-linecap="round"
+                                    stroke="#66F8F7"></circle>
+                        </svg>
                     </div>
                     <div class="info-sec__number">
                         <p class="info-sec__number-val blue">6</p>
                         <p class="info-sec__number-name">В рейтинге</p>
+                        <svg class="info-sec__number-statistic" width="500" height="500" viewBox="0 0 35 35" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle class="unit" id="unit-3" r="15.9" cx="50%" cy="50%" fill="none"
+                                    stroke-linecap="round"
+                                    stroke="#33B3FE"></circle>
+                        </svg>
                     </div>
                     <div class="info-sec__number">
                         <p class="info-sec__number-val white">12</p>
                         <p class="info-sec__number-name">Оценки</p>
+                        <svg class="info-sec__number-statistic" width="500" height="500" viewBox="0 0 35 35" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <circle class="unit" id="unit-4" r="15.9" cx="50%" cy="50%" fill="none"
+                                    stroke-linecap="round"
+                                    stroke="#FFFFFF"></circle>
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -206,10 +251,10 @@
                     </li>
 
                     <li class="news-sec__item">
-                        <a href="#" class="news-block blue">
+                        <div class="news-block blue">
                             <h3>Скидки при оплате <br>за семестр</h3>
-                            <span>Подробнее</span>
-                        </a>
+                            <a href="#" class="news-block__link">Подробнее</a>
+                        </div>
                     </li>
 
                     <li class="news-sec__item">
@@ -220,16 +265,16 @@
                     </li>
 
                     <li class="news-sec__item">
-                        <a href="#" class="news-block border-blue">
+                        <div class="news-block border-blue">
                             <h3>Скидки при оплате <br>за семестр</h3>
-                            <span>Подробнее</span>
-                        </a>
+                            <a href="#" class="news-block__link">Подробнее</a>
+                        </div>
                     </li>
                 </ul>
             </div>
 
             <div class="dashboard-sec green">
-                <a href="#" class="dashboard-sec__title">Расписание</a>
+                <a href="schedule.html" class="dashboard-sec__title">Расписание</a>
 
                 <ul class="schedule-list">
                     <li class="schedule-list__item">
@@ -671,10 +716,10 @@
             </div>
 
             <div class="dashboard-sec orange">
-                <a href="#" class="dashboard-sec__title">
+                <a href="tasks.html" class="dashboard-sec__title">
                     Активные задания
-<!--                    <img src="img/icon-exclamation.svg" alt=""> -->
-<!--                    <img src="img/icon-badge-check.svg" alt="">-->
+                    <!--                    <img src="img/icon-exclamation.svg" alt=""> -->
+                    <!--                    <img src="img/icon-badge-check.svg" alt="">-->
                 </a>
 
                 <table class="active-tasks">
@@ -694,7 +739,7 @@
                         <td class="active-tasks__date-cell">
                             <div class="active-tasks__date-cell-container">
                                 <p class="active-tasks__date">09.01.22</p>
-<!--                                <p class="active-tasks__count">2/5</p>-->
+                                <!--                                <p class="active-tasks__count">2/5</p>-->
                             </div>
                         </td>
                     </tr>
@@ -708,7 +753,7 @@
                         <td class="active-tasks__date-cell">
                             <div class="active-tasks__date-cell-container">
                                 <p class="active-tasks__date">Сегодня</p>
-<!--                                <p class="active-tasks__count">2/5</p>-->
+                                <!--                                <p class="active-tasks__count">2/5</p>-->
                             </div>
                         </td>
                     </tr>
@@ -722,7 +767,7 @@
                         <td class="active-tasks__date-cell">
                             <div class="active-tasks__date-cell-container">
                                 <p class="active-tasks__date">09.01.22</p>
-<!--                                <p class="active-tasks__count">2/5</p>-->
+                                <!--                                <p class="active-tasks__count">2/5</p>-->
                             </div>
                         </td>
                     </tr>
@@ -736,7 +781,7 @@
                         <td class="active-tasks__date-cell">
                             <div class="active-tasks__date-cell-container">
                                 <p class="active-tasks__date">09.01.22</p>
-<!--                                <p class="active-tasks__count">2/5</p>-->
+                                <!--                                <p class="active-tasks__count">2/5</p>-->
                             </div>
                         </td>
                     </tr>
@@ -750,7 +795,7 @@
                         <td class="active-tasks__date-cell">
                             <div class="active-tasks__date-cell-container">
                                 <p class="active-tasks__date">09.01.22</p>
-<!--                                <p class="active-tasks__count">2/5</p>-->
+                                <!--                                <p class="active-tasks__count">2/5</p>-->
                             </div>
                         </td>
                     </tr>
@@ -760,7 +805,7 @@
             </div>
 
             <div class="dashboard-sec blue">
-                <a href="#" class="dashboard-sec__title">Дневник успеваемости</a>
+                <a href="diary.html" class="dashboard-sec__title">Дневник успеваемости</a>
 
                 <div class="dashboard-diary">
                     <ul class="dashboard-diary__toggles">
@@ -972,7 +1017,7 @@
             </div>
 
             <div class="dashboard-sec pink">
-                <a href="#" class="dashboard-sec__title">Калькулятор оценки</a>
+                <a href="calculator.html" class="dashboard-sec__title">Калькулятор оценки</a>
 
                 <div class="dashboard-calculator">
                     <div class="dashboard-calculator__head">
