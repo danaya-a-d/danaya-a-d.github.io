@@ -44,7 +44,7 @@ $(document).ready(function () {
             let init = slider.data('init-slider');
             if (window.innerWidth < 991) {
                 if (init !== 1) {
-                    slider.each(function(){
+                    slider.each(function () {
                         $(this).slick({
                             asNavFor: $(this).parents('.schedule-block').find('.schedule-block__dates'),
                             arrows: false,
@@ -52,10 +52,9 @@ $(document).ready(function () {
                         }).data({'init-slider': 1});
                     });
                 }
-            }
-            else {
+            } else {
                 if (init === 1) {
-                    slider.each(function(){
+                    slider.each(function () {
                         $(this).slick('unslick').data({'init-slider': 0});
                     });
                 }
@@ -279,7 +278,20 @@ $(document).ready(function () {
         $('.main-form__fieldset-clone').clone().appendTo(container).removeClass('main-form__fieldset-clone');
     });
 
+
+    // Phone input
+    let inputs = document.querySelectorAll(".tel-input");
+
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i] !== null) {
+            let iti = intlTelInput(inputs[i], {
+                utilsScript: "script/intlTelInput/js/utils.js",
+                separateDialCode: true,
+                initialCountry: "ua"
+            });
+        }
+    }
     // Маска телефона
-    $(".phone_mask").mask("99 999 99 99");
+    // $(".phone_mask").mask("99 999 99 99");
 
 });
