@@ -170,7 +170,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     };
 
-    // Запускаем функцию
     let header = document.querySelector('.header');
     let banner_js = document.querySelector('.banner-js');
 
@@ -182,10 +181,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         change_colors(banner_js);
     }
 
-
-
-
-    // video player
+    // Video player
     [].forEach.call(document.querySelectorAll('video'), function(el) {
         let cont = document.createElement('div');
         cont.className = "video";
@@ -206,4 +202,18 @@ window.addEventListener('DOMContentLoaded', function (event) {
             };
         });
     });
+
+    // Change header on scroll
+    let scrolled;
+    window.onscroll = function() {
+        scrolled = window.pageYOffset || document.documentElement.scrollTop;
+        if(scrolled > 100){
+            header.classList.add('scrolled');
+        }
+        if(100 > scrolled){
+            header.classList.remove('scrolled');
+        }
+
+    }
+
 });
