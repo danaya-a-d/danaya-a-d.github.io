@@ -95,9 +95,8 @@ $(document).ready(function () {
     });
 
     // Сворачивание расписания дашбоард
-    $('.schedule-list__item').on('click', function () {
-        // $('.schedule-list__item').removeClass('active');
-        $(this).toggleClass('active');
+    $('.schedule-list__title').on('click', function () {
+        $(this).closest('.schedule-list__item').toggleClass('active');
     });
 
     // Сворачивание активных заданий
@@ -314,13 +313,6 @@ $(document).ready(function () {
         unit.attr('stroke-dasharray', percent_val + ' 100')
     }
 
-
-    graf(9, 20, $('#unit-0'), $('#arrow-0'));
-    graf(9.68, 12, $('#unit-1'));
-    graf(12, 20, $('#unit-2'));
-    graf(6, 30, $('#unit-3'));
-    graf(16, 20, $('#unit-4'));
-
     function graph_octopus(current_val, total_val, unit) {
         let r0 = 0;
 
@@ -350,6 +342,12 @@ $(document).ready(function () {
     }
 
     graph_octopus(7, 20, $('#unit-5'));
+    graf(9, 20, $('#unit-0'), $('#arrow-0'));
+    graf(9.68, 12, $('#unit-1'));
+    graf(12, 20, $('#unit-2'));
+    graf(6, 30, $('#unit-3'));
+    graf(16, 20, $('#unit-4'));
+
 
 
 });
