@@ -15,26 +15,30 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     // Tariffs slider
     let init = false;
+    let tariffs = document.querySelector('.tariffs');
 
-    function swiperCard() {
-        if (window.innerWidth <= 778) {
-            if (!init) {
-                init = true;
-                swiper = new Swiper(".tariffs__wrapper", {
-                    direction: 'horizontal',
-                    loop: false,
-                    speed: 1000,
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                });
+    if (tariffs !== null) {
+        function swiperCard() {
+            if (window.innerWidth <= 778) {
+                if (!init) {
+                    init = true;
+                    swiper = new Swiper(".tariffs__wrapper", {
+                        direction: 'horizontal',
+                        loop: false,
+                        speed: 1000,
+                        slidesPerView: 1,
+                        spaceBetween: 0,
+                    });
+                }
+            } else if (init) {
+                swiper.destroy();
+                init = false;
             }
-        } else if (init) {
-            swiper.destroy();
-            init = false;
         }
+
+        swiperCard();
+        window.addEventListener("resize", swiperCard);
     }
-    swiperCard();
-    window.addEventListener("resize", swiperCard);
 
 
     // Modals
