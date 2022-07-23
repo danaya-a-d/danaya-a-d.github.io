@@ -349,6 +349,17 @@ $(document).ready(function () {
     graf(16, 20, $('#unit-4'));
 
 
+    //увеличение изображений
+    if ($('[data-fancybox="gallery"]').length > 0) {
+        $('[data-fancybox="gallery"]').fancybox({
+            thumbs: {
+                showOnStart: true,
+            },
+            hash: true,
+            hideOnOverlayClick: true,
+            enableEscapeButton: true,
+        });
+    }
 
 });
 
