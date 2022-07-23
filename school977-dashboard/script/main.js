@@ -297,14 +297,21 @@ $(document).ready(function () {
     // Графики дашборда
 
     function graf(current_val, total_val, unit, arrow = null) {
+
+
         let percent_val = current_val / total_val * 100;
         let deg_val = current_val / total_val * 360;
         let coords = deg_val - 87; // 87 градусов для перемещения точки начала вверх
         if (arrow !== null) {
-            arrow.attr('style', 'transform: rotate(' + coords + 'deg) translate(58px)');
+            $(window).on('resize', function (e) {
+                if (window.innerWidth < 991) {
+                    arrow.attr('style', 'transform: rotate(' + coords + 'deg) translate(45px)');
+                } else {
+                    arrow.attr('style', 'transform: rotate(' + coords + 'deg) translate(58px)');
+                }
+            }).trigger('resize');
         }
         unit.attr('stroke-dasharray', percent_val + ' 100')
-        // // unit.attr('style', 'transform: rotate(' + -deg_val/3 + 'deg)')
     }
 
 
@@ -314,36 +321,35 @@ $(document).ready(function () {
     graf(6, 30, $('#unit-3'));
     graf(16, 20, $('#unit-4'));
 
-
-
-
-
-
     function graph_octopus(current_val, total_val, unit) {
+        let r0 = 0;
 
-        let r0 = 180; // Outer radius
-        let r1 = r0 * Math.sqrt(0.75); // Inner radius
-        // alert(r1);
-        let d30 = 22.5 * Math.PI/180; // 30 degrees in radians
-        let d60 = 45 * Math.PI/180; // 60 degrees in radians
-        let theta = current_val / total_val * 6.2832; // 100% = 6.2832
-        let percent_val = current_val / total_val * 320; // 100% = 320
-        let deg_val = current_val / total_val * 360; // 100% = 360
+        $(window).on('resize', function (e) {
+            if (window.innerWidth < 991) {
+                r0 = 143;
+            } else {
+                r0 = 180;
+            }
 
-        let r = r1 / Math.cos((theta + d30) % d60 - d30);
-        let x = Math.sin(theta) * r;
-        let y = Math.cos(theta) * r;
-        document.getElementById('dot').style.top=x.toFixed(2)+'px';
-        document.getElementById('dot').style.left=y.toFixed(2)+'px';
-        document.getElementById('dot').style.transform='rotate(' + deg_val + 'deg)';
+            let r1 = r0 * Math.sqrt(0.75); // Inner radius
+            let d30 = 22.5 * Math.PI / 180; // 30 degrees in radians
+            let d60 = 45 * Math.PI / 180; // 60 degrees in radians
+            let theta = current_val / total_val * 6.2832; // 100% = 6.2832
+            let percent_val = current_val / total_val * 320; // 100% = 320
+            let deg_val = current_val / total_val * 360; // 100% = 360
 
-        unit.attr('stroke-dasharray', percent_val + ' 320')
+            let r = r1 / Math.cos((theta + d30) % d60 - d30);
+            let x = Math.sin(theta) * r;
+            let y = Math.cos(theta) * r;
+            document.getElementById('dot').style.top = x.toFixed(2) + 'px';
+            document.getElementById('dot').style.left = y.toFixed(2) + 'px';
+            document.getElementById('dot').style.transform = 'rotate(' + deg_val + 'deg)';
+
+            unit.attr('stroke-dasharray', percent_val + ' 320');
+        }).trigger('resize');
     }
 
-    graph_octopus(10, 20, $('#unit-5'));
-
-
-
+    graph_octopus(7, 20, $('#unit-5'));
 
 
 });
