@@ -290,11 +290,11 @@ $(document).ready(function () {
             });
         }
     }
+
     // Маска телефона
     // $(".phone_mask").mask("99 999 99 99");
 
     // Графики дашборда
-
     function graf(current_val, total_val, unit, arrow = null) {
         let percent_val = current_val / total_val * 100;
         let deg_val = current_val / total_val * 360;
@@ -345,11 +345,56 @@ $(document).ready(function () {
     graf(12, 20, $('#unit-2'));
     graf(6, 30, $('#unit-3'));
     graf(16, 20, $('#unit-4'));
+
+    // Анимация увеличения чисел
+    function animate_numbers(val, float, target) {
+        var decimal_places = 2;
+        var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+
+        if (float) {
+            target.animateNumber(
+                {
+                    number: val * decimal_factor,
+
+                    numberStep: function (now, tween) {
+                        var floored_number = Math.floor(now) / decimal_factor,
+                            target = $(tween.elem);
+                        if (decimal_places > 0) {
+                            floored_number = floored_number.toFixed(decimal_places);
+                            // replace '.' separator with ','
+                            floored_number = floored_number.toString().replace('.', ',');
+                        }
+
+                        target.text(floored_number);
+                    }
+                },
+                {
+                    easing: 'swing',
+                    duration: 1000
+                }
+            )
+        }
+
+        else {
+            target.prop('number', 1).animateNumber({
+                        number: val
+                    },
+                1000
+                );
+        }
+    }
+
+    animate_numbers(9.68, true, $('.info-sec__number-val.yellow'));
+    animate_numbers(12, false, $('.info-sec__number-val.green'));
+    animate_numbers(6, false, $('.info-sec__number-val.blue'));
+    animate_numbers(12, false, $('.info-sec__number-val.white'));
+
+
 });
 
 // Увеличение изображений
-$( '[data-fancybox="gallery"]' ).fancybox({
-    buttons : [
+$('[data-fancybox="gallery"]').fancybox({
+    buttons: [
         'del',
         'close'
     ]
@@ -364,7 +409,7 @@ $.fancybox.defaults.btnTpl.del = '<button data-fancybox-del class="fancybox-butt
     '</button>';
 
 // Действие кастомной кнопки "удалить"
-$('body').on('click', '[data-fancybox-del]', function() {
+$('body').on('click', '[data-fancybox-del]', function () {
     alert('удаление')
 });
 
