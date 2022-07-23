@@ -296,8 +296,6 @@ $(document).ready(function () {
     // Графики дашборда
 
     function graf(current_val, total_val, unit, arrow = null) {
-
-
         let percent_val = current_val / total_val * 100;
         let deg_val = current_val / total_val * 360;
         let coords = deg_val - 87; // 87 градусов для перемещения точки начала вверх
@@ -347,38 +345,26 @@ $(document).ready(function () {
     graf(12, 20, $('#unit-2'));
     graf(6, 30, $('#unit-3'));
     graf(16, 20, $('#unit-4'));
-
-
-    //увеличение изображений
-    if ($('[data-fancybox="gallery"]').length > 0) {
-        $('[data-fancybox="gallery"]').fancybox({
-            thumbs: {
-                showOnStart: true,
-            },
-            hash: true,
-            hideOnOverlayClick: true,
-            enableEscapeButton: true,
-        });
-    }
-
 });
 
+// Увеличение изображений
+$( '[data-fancybox="gallery"]' ).fancybox({
+    buttons : [
+        'del',
+        'close'
+    ]
+});
 
-// let theta=0.0;
-// let r0 = 190.0; // Outer radius
-// let r1 = r0 * Math.sqrt(0.75); // Inner radius
-// let d30 = 22.5 * Math.PI/180; // 30 degrees in radians
-// let d60 = 45 * Math.PI/180; // 60 degrees in radians
-//
-// function move_dot() {
-//     // theta += 0.025;
-//     theta = 6.2832;
-//     let r = r1 / Math.cos((theta + d30) % d60 - d30);
-//     let x = Math.sin(theta) * r;
-//     let y = Math.cos(theta) * r;
-//     document.getElementById('dot').style.top=x.toFixed(2)+'px';
-//     document.getElementById('dot').style.left=y.toFixed(2)+'px';
-//     console.log(theta)
-// }
-//
-// document.body.onload=function(){setInterval(move_dot,30);}
+// Кастомная кнопка "удалить"
+$.fancybox.defaults.btnTpl.del = '<button data-fancybox-del class="fancybox-button fancybox-button--del" title="Twitter">' +
+    '<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">' +
+    '<path opacity="0.4" d="M16.3696 7.90705C16.3696 7.96371 15.9255 13.581 15.6718 15.9451C15.513 17.3959 14.5777 18.2759 13.1748 18.3009C12.0969 18.325 11.0417 18.3333 10.0035 18.3333C8.90124 18.3333 7.82333 18.325 6.77703 18.3009C5.42113 18.2684 4.48505 17.3709 4.3343 15.9451C4.07333 13.5727 3.6373 7.96371 3.6292 7.90705C3.62109 7.73622 3.67621 7.57373 3.78805 7.44206C3.89827 7.3204 4.05712 7.24707 4.22408 7.24707H15.7829C15.949 7.24707 16.0998 7.3204 16.2189 7.44206C16.3299 7.57373 16.3858 7.73622 16.3696 7.90705Z" fill="white"/>' +
+    '<path d="M17.5 4.98104C17.5 4.63856 17.2301 4.37023 16.9059 4.37023H14.4762C13.9818 4.37023 13.5522 4.01858 13.442 3.52276L13.3059 2.91528C13.1154 2.18114 12.4581 1.66699 11.7206 1.66699H8.2802C7.53458 1.66699 6.88378 2.18114 6.68603 2.95528L6.55879 3.52359C6.44775 4.01858 6.01821 4.37023 5.52464 4.37023H3.09488C2.76988 4.37023 2.5 4.63856 2.5 4.98104V5.2977C2.5 5.63185 2.76988 5.90851 3.09488 5.90851H16.9059C17.2301 5.90851 17.5 5.63185 17.5 5.2977V4.98104Z" fill="white"/>' +
+    '</svg>' +
+    '</button>';
+
+// Действие кастомной кнопки "удалить"
+$('body').on('click', '[data-fancybox-del]', function() {
+    alert('удаление')
+});
+
