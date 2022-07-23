@@ -322,11 +322,11 @@ $(document).ready(function () {
             }
 
             let r1 = r0 * Math.sqrt(0.75); // Inner radius
-            let d30 = 22.5 * Math.PI / 180; // 30 degrees in radians
-            let d60 = 45 * Math.PI / 180; // 60 degrees in radians
-            let theta = current_val / total_val * 6.2832; // 100% = 6.2832
+            let d30 = 22.5 * Math.PI / 180; // 22.5 degrees in radians
+            let d60 = 45 * Math.PI / 180; // 45 degrees in radians
+            let theta = (current_val / total_val * (6.2832)) - 2; // 100% = 6.2832, 2 - сдвиг
             let percent_val = current_val / total_val * 320; // 100% = 320
-            let deg_val = current_val / total_val * 360; // 100% = 360
+            let deg_val = (current_val / total_val * 360) - 114.59; // 100% = 360, 114.59 - сдвиг
 
             let r = r1 / Math.cos((theta + d30) % d60 - d30);
             let x = Math.sin(theta) * r;
@@ -339,7 +339,7 @@ $(document).ready(function () {
         }).trigger('resize');
     }
 
-    graph_octopus(7, 20, $('#unit-5'));
+    graph_octopus(14, 20, $('#unit-5'));
     graf(9, 20, $('#unit-0'), $('#arrow-0'));
     graf(9.68, 12, $('#unit-1'));
     graf(12, 20, $('#unit-2'));
