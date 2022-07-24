@@ -313,6 +313,7 @@ $(document).ready(function () {
 
     function graph_octopus(current_val, total_val, unit) {
         let r0 = 0;
+        let arrow = $('#dot');
 
         $(window).on('resize', function (e) {
             if (window.innerWidth < 991) {
@@ -324,22 +325,28 @@ $(document).ready(function () {
             let r1 = r0 * Math.sqrt(0.75); // Inner radius
             let d30 = 22.5 * Math.PI / 180; // 22.5 degrees in radians
             let d60 = 45 * Math.PI / 180; // 45 degrees in radians
-            let theta = (current_val / total_val * (6.2832)) - 2; // 100% = 6.2832, 2 - сдвиг
+            let theta = (current_val / total_val * (6.2832)) + 4.3 ; // 100% = 6.2832, 2 - сдвиг
             let percent_val = current_val / total_val * 320; // 100% = 320
             let deg_val = (current_val / total_val * 360) - 114.59; // 100% = 360, 114.59 - сдвиг
+
+
 
             let r = r1 / Math.cos((theta + d30) % d60 - d30);
             let x = Math.sin(theta) * r;
             let y = Math.cos(theta) * r;
-            document.getElementById('dot').style.top = x.toFixed(2) + 'px';
-            document.getElementById('dot').style.left = y.toFixed(2) + 'px';
-            document.getElementById('dot').style.transform = 'rotate(' + deg_val + 'deg)';
 
+            console.log(x);
+            console.log(theta);
+
+            arrow.attr('style',
+                'top:' + x.toFixed(2) + 'px;  ' +
+                'left:' + y.toFixed(2) + 'px; ' +
+                'transform: rotate(' + deg_val + 'deg)');
             unit.attr('stroke-dasharray', percent_val + ' 320');
         }).trigger('resize');
     }
 
-    graph_octopus(14, 20, $('#unit-5'));
+    graph_octopus(4, 20, $('#unit-5'));
     graf(9, 20, $('#unit-0'), $('#arrow-0'));
     graf(9.68, 12, $('#unit-1'));
     graf(12, 20, $('#unit-2'));
@@ -373,14 +380,12 @@ $(document).ready(function () {
                     duration: 1000
                 }
             )
-        }
-
-        else {
+        } else {
             target.prop('number', 1).animateNumber({
-                        number: val
-                    },
+                    number: val
+                },
                 1000
-                );
+            );
         }
     }
 
