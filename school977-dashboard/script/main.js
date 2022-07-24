@@ -319,7 +319,7 @@ $(document).ready(function () {
             if (window.innerWidth < 991) {
                 r0 = 143;
             } else {
-                r0 = 180;
+                r0 = 178;
             }
 
             let r1 = r0 * Math.sqrt(0.75); // Inner radius
@@ -346,7 +346,7 @@ $(document).ready(function () {
         }).trigger('resize');
     }
 
-    graph_octopus(4, 20, $('#unit-5'));
+    graph_octopus(12, 20, $('#unit-5'));
     graf(9, 20, $('#unit-0'), $('#arrow-0'));
     graf(9.68, 12, $('#unit-1'));
     graf(12, 20, $('#unit-2'));
