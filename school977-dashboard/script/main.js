@@ -348,8 +348,8 @@ $(document).ready(function () {
 
     // Анимация увеличения чисел
     function animate_numbers(val, float, target) {
-        var decimal_places = 2;
-        var decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
+        let decimal_places = 2;
+        let decimal_factor = decimal_places === 0 ? 1 : Math.pow(10, decimal_places);
 
         if (float) {
             target.animateNumber(
@@ -357,7 +357,7 @@ $(document).ready(function () {
                     number: val * decimal_factor,
 
                     numberStep: function (now, tween) {
-                        var floored_number = Math.floor(now) / decimal_factor,
+                        let floored_number = Math.floor(now) / decimal_factor,
                             target = $(tween.elem);
                         if (decimal_places > 0) {
                             floored_number = floored_number.toFixed(decimal_places);
