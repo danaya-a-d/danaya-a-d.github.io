@@ -100,8 +100,8 @@ $(document).ready(function () {
     });
 
     // Сворачивание активных заданий
-    $('.task:not(".inactive")').on('click', function () {
-        $(this).toggleClass('active');
+    $('.task:not(".inactive") .task__head').on('click', function () {
+        $(this).closest('.task').toggleClass('active');
     });
 
     // Сворачивание вкладок успеваимости

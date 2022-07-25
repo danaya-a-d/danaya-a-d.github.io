@@ -120,10 +120,24 @@
     
             <a href="notifications.html" class="header__chat-btn"></a>
     
-            <a href="#" class="header__user-block">
+            <div class="header__user-block">
                 <img src="img/teacher-photo.png" alt="" class="header__user-photo">
                 <p class="header__user-name">Алина</p>
-            </a>
+    
+    
+                <div class="header__user-menu user-menu">
+                    <ul class="user-menu__list">
+                        <li class="user-menu__item active"><a href="#">
+                            <img class="user-menu__avatar" src="img/teacher-photo.png" alt="">
+                            Алина Жукова</a></li>
+                        <li class="user-menu__item"><a href="">
+                            <img class="user-menu__avatar" src="img/teacher-photo.png" alt="">
+                            Артем Бондаренко</a></li>
+                    </ul>
+    
+                    <a href="#" class="user-menu__logout">Выход</a>
+                </div>
+            </div>
         </div>
     </header>
     
@@ -187,9 +201,19 @@
             </div>
 
             <div class="notifications">
-                <button class="notifications__sort-button">Сортировать по:
-                    От новых к старым
-                </button>
+                <div class="notifications__sort-button">Сортировать по:
+                    <div class="notifications__select select">
+                        <input type="hidden" name="sort" value="Английский язык" required>
+                        <div class="select__head">От новых к старым</div>
+                        <ul class="select__list" style="display: none;">
+                            <li class="select__item">От новых к старым</li>
+                            <li class="select__item">От старых к новым</li>
+                            <li class="select__item">Только не прочитанные</li>
+                        </ul>
+                    </div>
+
+
+                </div>
 
                 <div class="notifications__day-block">
                     <p class="notifications__day-name">Сегодня</p>
