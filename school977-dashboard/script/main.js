@@ -125,6 +125,11 @@ $(document).ready(function () {
         $('.menu').addClass('close');
     });
 
+    // Открытие/закрытие меню аккаунтов
+    $('.header__user-block').on('click', function () {
+        $(this).toggleClass('active');
+    });
+
     // Диаграмма прогресса
     let progress_data = [100, 90, 80, 70, 60, 50, 40, 30, 20, 10];
 
