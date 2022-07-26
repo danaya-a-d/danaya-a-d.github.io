@@ -211,13 +211,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let scrolled;
     window.onscroll = function() {
         scrolled = window.pageYOffset || document.documentElement.scrollTop;
-        if(scrolled > 100){
+        if(scrolled > 160){
             header.classList.add('scrolled');
         }
-        if(100 > scrolled){
+        if(160 > scrolled){
             header.classList.remove('scrolled');
         }
-
     }
-
 });
