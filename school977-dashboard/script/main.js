@@ -109,6 +109,11 @@ $(document).ready(function () {
         $(this).toggleClass('active');
     });
 
+    // Сворачивание вкладок финансов
+    $('.finance__header').on('click', function () {
+        $(this).closest('.finance__block').toggleClass('active');
+    });
+
     // Открытие/закрытие меню
     $('.header__menu-btn').on('click', function () {
         $(this).toggleClass('close');
