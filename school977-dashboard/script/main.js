@@ -339,14 +339,9 @@ $(document).ready(function () {
             let percent_val = current_val / total_val * 320; // 100% = 320
             let deg_val = (current_val / total_val * 360) - 114.59; // 100% = 360, 114.59 - сдвиг
 
-
-
             let r = r1 / Math.cos((theta + d30) % d60 - d30);
             let x = Math.sin(theta) * r;
             let y = Math.cos(theta) * r;
-
-            console.log(x);
-            console.log(theta);
 
             arrow.attr('style',
                 'top:' + x.toFixed(2) + 'px;  ' +
