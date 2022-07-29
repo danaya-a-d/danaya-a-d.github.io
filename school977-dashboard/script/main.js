@@ -191,22 +191,62 @@ $(document).ready(function () {
     }
 
     // Переключение вкладок
-    let toggles_items = document.querySelectorAll('.toggles-btn');
-    let toggles_blocks = document.querySelectorAll('.toggles-block');
 
-    for (let i = 0; i < toggles_items.length; i++) {
+    // function toggles(toggles, blocks) {
+    //
+    //     let toggles_items = toggles.querySelectorAll('.toggles-btn');
+    //     let toggles_blocks = blocks.querySelectorAll('.toggles-block');
+    //
+    //     for (let i = 0; i < toggles_items.length; i++) {
+    //
+    //         toggles_items[i].addEventListener('click', function () {
+    //
+    //             for (let j = 0; j < toggles_items.length; j++) {
+    //                 toggles_items[j].classList.remove('active');
+    //                 toggles_blocks[j].classList.remove('active');
+    //             }
+    //
+    //             toggles_items[i].classList.add('active');
+    //             toggles_blocks[i].classList.add('active');
+    //         });
+    //     }
+    // }
 
-        toggles_items[i].addEventListener('click', function () {
+    function toggles(toggles, blocks) {
 
-            for (let j = 0; j < toggles_items.length; j++) {
-                toggles_items[j].classList.remove('active');
-                toggles_blocks[j].classList.remove('active');
+
+        for (let i = 0; i < toggles.length; i++) {
+            let toggles_items = toggles[i].querySelectorAll('.toggles-btn');
+            // let toggles_blocks = blocks[i].querySelectorAll('.toggles-block');
+            let toggles_blocks = blocks[i].children;
+            console.log(toggles_blocks);
+
+            for (let n = 0; n < toggles_items.length; n++) {
+
+                toggles_items[n].addEventListener('click', function () {
+
+                    for (let j = 0; j < toggles_items.length; j++) {
+                        toggles_items[j].classList.remove('active');
+                        toggles_blocks[j].classList.remove('active');
+                    }
+
+                    toggles_items[n].classList.add('active');
+                    toggles_blocks[n].classList.add('active');
+                });
             }
-
-            toggles_items[i].classList.add('active');
-            toggles_blocks[i].classList.add('active');
-        });
+        }
     }
+
+
+    let toggles_items = document.querySelectorAll('.header-toggles');
+    let toggles_blocks = document.querySelectorAll('.section-blocks');
+
+    toggles(toggles_items, toggles_blocks);
+
+    let toggles_items_1 = document.querySelectorAll('.finance-toggles');
+    let toggles_blocks_1 = document.querySelectorAll('.finance-blocks');
+
+    toggles(toggles_items_1, toggles_blocks_1);
 
     // Открытие сообщения
     $('.message').on('click', function () {
