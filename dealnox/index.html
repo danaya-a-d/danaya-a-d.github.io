@@ -97,11 +97,13 @@
 
 <header class="header">
     <div class="header__wrapper wrapper">
-        <nav class="header__nav">
-            <a class="header__logo" href="index.html">
-                <img src="img/Logo.svg" alt="Dealnox">
-            </a>
+        <a class="header__logo" href="index.html">
+            <img src="img/Logo.svg" alt="Dealnox">
+        </a>
 
+        <button class="header__menu-btn open"></button>
+
+        <nav class="header__nav open">
             <ul class="header__list">
                 <li class="header__item active"><a class="header__link" href="#">Trade</a></li>
                 <li class="header__item"><a class="header__link" href="#">Derivative</a></li>
@@ -111,9 +113,9 @@
                 <li class="header__item"><a class="header__link" href="#">About us</a></li>
             </ul>
 
-            <ul class="header__list">
-                <li class="header__item"><a class="header__link" href="#">Sign In</a></li>
-                <li class="header__item"><a class="header__link" href="#">Sign Up</a></li>
+            <ul class="header__log-list">
+                <li class="header__log-item"><a class="header__log-link" href="#">Sign In</a></li>
+                <li class="header__log-item"><a class="header__log-link" href="#">Sign Up</a></li>
             </ul>
         </nav>
     </div>
@@ -131,7 +133,7 @@
             <div class="first-screen__text-block">
                 <p class="first-screen__subtitle">Exclusive gift for new users：Get $1288 trial fund for free</p>
                 <h1 class="first-screen__title title">Outstanding Deal in
-                    Crypto&nbspTrading Bots and Exchange
+                    Crypto Trading Bots and Exchange
                     to Skyrocket Your Earnings</h1>
 
                 <div class="first-screen__buttons">
@@ -171,56 +173,68 @@
                 <li class="advantages__item advantage">
                     <div class="advantage__img-block"><img class="advantage__img" src="img/image-advantage-1.png"
                                                            alt=""></div>
-                    <p class="advantage__title">Market Depth</p>
-                    <p class="advantage__description">Minimal slippage is what
-                        characterizes our top market
-                        depth</p>
+                    <div class="advantage__text-block">
+                        <p class="advantage__title">Market Depth</p>
+                        <p class="advantage__description">Minimal slippage is what
+                            characterizes our top market
+                            depth</p>
+                    </div>
                 </li>
 
                 <li class="advantages__item advantage">
                     <div class="advantage__img-block"><img class="advantage__img" src="img/image-advantage-2.png"
                                                            alt=""></div>
-                    <p class="advantage__title">Ultra Fast Engine for Trading</p>
-                    <p class="advantage__description">Utilize our fast engine for trading
-                        at 100 TPS to never encounter
-                        any network congestion</p>
+                    <div class="advantage__text-block">
+                        <p class="advantage__title">Ultra Fast Engine for Trading</p>
+                        <p class="advantage__description">Utilize our fast engine for trading
+                            at 100 TPS to never encounter
+                            any network congestion</p>
+                    </div>
                 </li>
 
                 <li class="advantages__item advantage">
                     <div class="advantage__img-block"><img class="advantage__img" src="img/image-advantage-3.png"
                                                            alt=""></div>
-                    <p class="advantage__title">Fair Pricing System</p>
-                    <p class="advantage__description">We exclude any unfair
-                        liquidness with a revolutionary double-price mechanism</p>
+                    <div class="advantage__text-block">
+                        <p class="advantage__title">Fair Pricing System</p>
+                        <p class="advantage__description">We exclude any unfair
+                            liquidness with a revolutionary double-price mechanism</p>
+                    </div>
                 </li>
 
                 <li class="advantages__item advantage">
                     <div class="advantage__img-block"><img class="advantage__img" src="img/image-advantage-4.png"
                                                            alt=""></div>
-                    <p class="advantage__title">HD Cold Wallet</p>
-                    <p class="advantage__description">Use our offline wallets to ensure
-                        the absolute and uninterrupted
-                        security mechanism to keep
-                        your funds safe</p>
+                    <div class="advantage__text-block">
+                        <p class="advantage__title">HD Cold Wallet</p>
+                        <p class="advantage__description">Use our offline wallets to ensure
+                            the absolute and uninterrupted
+                            security mechanism to keep
+                            your funds safe</p>
+                    </div>
                 </li>
 
                 <li class="advantages__item advantage">
                     <div class="advantage__img-block"><img class="advantage__img" src="img/image-advantage-5.png"
                                                            alt=""></div>
-                    <p class="advantage__title">Smart Trading System</p>
-                    <p class="advantage__description">Get the specially designed
-                        strategic alerts system to set
-                        up your orders just in one tap</p>
+                    <div class="advantage__text-block">
+                        <p class="advantage__title">Smart Trading System</p>
+                        <p class="advantage__description">Get the specially designed
+                            strategic alerts system to set
+                            up your orders just in one tap</p>
+                    </div>
                 </li>
 
                 <li class="advantages__item advantage">
                     <div class="advantage__img-block"><img class="advantage__img" src="img/image-advantage-6.png"
                                                            alt=""></div>
-                    <p class="advantage__title">No Downtime at All</p>
-                    <p class="advantage__description">The so-called “grey releases”
-                        along with the downloading
-                        patches help sustain our server
-                        online with no interruption</p>
+                    <div class="advantage__text-block">
+                        <p class="advantage__title">No Downtime at All</p>
+                        <p class="advantage__description">The so-called “grey releases”
+                            along with the downloading
+                            patches help sustain our server
+                            online with no interruption</p>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -279,13 +293,10 @@
                     <img class="review__image" src="img/image-review-0.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Johanson D.</p>
-                        <p class="review__text">when i started my crypto adventure at Dealnox i did it as a hobby as
-                            my
-                            aim was to save up and earn to buy the last version of macbook. so i spent a week and
-                            traded
-                            crypto they have at the traders' disposal and yesterday i got my payout from the company
-                            and
-                            tomorrow i am gonna have my macbook as i ordered it today!!!</p>
+                        <p class="review__text">i feel good that the account manager i work with at Dealnox
+                            persuaded me
+                            to make the first deposit 4 months ago! now i can deposit up to $1500 so things go
+                            well</p>
                     </div>
                 </li>
 
@@ -304,12 +315,11 @@
                     <img class="review__image" src="img/image-review-2.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Yvan Hoddy</p>
-                        <p class="review__text">As I read the reviews here, all of the users write about the
-                            withdrawals
-                            and so on. Yes, withdrawals are nice and timely. However, I'd like to speak up about the
-                            client support team. Personally, I addressed it just twice. They are super patient, and
-                            I
-                            appreciate it!</p>
+                        <p class="review__text">Dealnox helped me by providing me with everything I needed in
+                            regards to
+                            sharpen my knowledge of the markets very patiently. I am very pleased with your services
+                            so
+                            far.</p>
                     </div>
                 </li>
 
@@ -329,10 +339,8 @@
                     <img class="review__image" src="img/image-review-4.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Sam J.</p>
-                        <p class="review__text">my respect to this company is because of literally a ton of crypto
-                            assets to use for trading! thanks for enabling countless crypto assets! nowadays that's
-                            a
-                            key concern to make money from!</p>
+                        <p class="review__text">My experience so far with igm fx is alright… fast execution, proper
+                            withdraw and deposit timing, and great online trading platform…</p>
                     </div>
                 </li>
 
@@ -340,12 +348,8 @@
                     <img class="review__image" src="img/image-review-5.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Carl Daren</p>
-                        <p class="review__text">No doubts, Dealnox is a top option for newbie crypto holders! my
-                            personal experience: if u dont know whata start off, just do it all gradually. i started
-                            off
-                            the crypto coins like btc and usdt. thanks to the companys support i aint have any
-                            troubles
-                            in trading</p>
+                        <p class="review__text">My experience so far with igm fx is alright… fast execution, proper
+                            withdraw and deposit timing, and great online trading platform…</p>
                     </div>
                 </li>
 
@@ -353,11 +357,8 @@
                     <img class="review__image" src="img/image-review-6.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">John Cameron</p>
-                        <p class="review__text">I always wanted to work on my crypto business as a professional but
-                            was
-                            not aware of some modern techniques through which I could enhance my skills. I am so
-                            happy
-                            at Dealnox they made a good change in my trading technique</p>
+                        <p class="review__text">My experience so far with igm fx is alright… fast execution, proper
+                            withdraw and deposit timing, and great online trading platform…</p>
                     </div>
                 </li>
 
@@ -378,13 +379,10 @@
                     <img class="review__image" src="img/image-review-0.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Johanson D.</p>
-                        <p class="review__text">when i started my crypto adventure at Dealnox i did it as a hobby as
-                            my
-                            aim was to save up and earn to buy the last version of macbook. so i spent a week and
-                            traded
-                            crypto they have at the traders' disposal and yesterday i got my payout from the company
-                            and
-                            tomorrow i am gonna have my macbook as i ordered it today!!!</p>
+                        <p class="review__text">i feel good that the account manager i work with at Dealnox
+                            persuaded me
+                            to make the first deposit 4 months ago! now i can deposit up to $1500 so things go
+                            well</p>
                     </div>
                 </li>
 
@@ -403,12 +401,11 @@
                     <img class="review__image" src="img/image-review-2.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Yvan Hoddy</p>
-                        <p class="review__text">As I read the reviews here, all of the users write about the
-                            withdrawals
-                            and so on. Yes, withdrawals are nice and timely. However, I'd like to speak up about the
-                            client support team. Personally, I addressed it just twice. They are super patient, and
-                            I
-                            appreciate it!</p>
+                        <p class="review__text">Dealnox helped me by providing me with everything I needed in
+                            regards to
+                            sharpen my knowledge of the markets very patiently. I am very pleased with your services
+                            so
+                            far.</p>
                     </div>
                 </li>
 
@@ -428,10 +425,8 @@
                     <img class="review__image" src="img/image-review-4.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Sam J.</p>
-                        <p class="review__text">my respect to this company is because of literally a ton of crypto
-                            assets to use for trading! thanks for enabling countless crypto assets! nowadays that's
-                            a
-                            key concern to make money from!</p>
+                        <p class="review__text">My experience so far with igm fx is alright… fast execution, proper
+                            withdraw and deposit timing, and great online trading platform…</p>
                     </div>
                 </li>
 
@@ -439,12 +434,8 @@
                     <img class="review__image" src="img/image-review-5.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">Carl Daren</p>
-                        <p class="review__text">No doubts, Dealnox is a top option for newbie crypto holders! my
-                            personal experience: if u dont know whata start off, just do it all gradually. i started
-                            off
-                            the crypto coins like btc and usdt. thanks to the companys support i aint have any
-                            troubles
-                            in trading</p>
+                        <p class="review__text">My experience so far with igm fx is alright… fast execution, proper
+                            withdraw and deposit timing, and great online trading platform…</p>
                     </div>
                 </li>
 
@@ -452,11 +443,8 @@
                     <img class="review__image" src="img/image-review-6.png" alt="">
                     <div class="review__text-block">
                         <p class="review__name">John Cameron</p>
-                        <p class="review__text">I always wanted to work on my crypto business as a professional but
-                            was
-                            not aware of some modern techniques through which I could enhance my skills. I am so
-                            happy
-                            at Dealnox they made a good change in my trading technique</p>
+                        <p class="review__text">My experience so far with igm fx is alright… fast execution, proper
+                            withdraw and deposit timing, and great online trading platform…</p>
                     </div>
                 </li>
 

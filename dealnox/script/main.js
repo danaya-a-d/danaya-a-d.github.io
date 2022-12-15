@@ -4,8 +4,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     const reviews_right = new Swiper('.reviews-right', {
         slidesPerView: 'auto',
-        spaceBetween: 60,
-        speed: 20000,
+        speed: 25000,
         loop: true,
 
         freeMode: true,
@@ -21,8 +20,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     const reviews_left = new Swiper('.reviews-left', {
         slidesPerView: 'auto',
-        spaceBetween: 60,
-        speed: 20000,
+        speed: 25000,
         loop: true,
 
         freeMode: true,
