@@ -14,10 +14,15 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     // Slider
     const reviews_right = new Swiper('.reviews-right', {
+        simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
         slidesPerView: 'auto',
         loop: true,
         loopAdditionalSlides: 4,
         speed: 25000,
+
+        freeMode: true,
+        freeModeMomentum: false,
+        freeModeMomentumBounce: false,
 
         autoplay: {
             delay: 0,
@@ -25,15 +30,15 @@ window.addEventListener('DOMContentLoaded', function (event) {
     })
 
     const reviews_left = new Swiper('.reviews-left', {
-
+        simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
         slidesPerView: 'auto',
         loop: true,
         speed: 25000,
 
 
-        // freeMode: true,
-        // freeModeMomentum: false,
-        // freeModeMomentumBounce: false,
+        freeMode: true,
+        freeModeMomentum: false,
+        freeModeMomentumBounce: false,
 
         autoplay: {
             delay: 0,
@@ -44,9 +49,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
     })
 
     reviews_left.autoplay.stop();
-
-
-
 
 
 // Получаем нужный элемент
@@ -79,24 +81,14 @@ window.addEventListener('DOMContentLoaded', function (event) {
         } else {
             // Если элемент не видно, то запускаем этот код
             console.clear();
-        };
+        }
+        ;
     };
 
 // Запускаем функцию при прокрутке страницы
-    window.addEventListener('scroll', function() {
-        Visible (element);
+    window.addEventListener('scroll', function () {
+        Visible(element);
     });
-
-
-
-
-
-
-
-
-
-
-
 
 
     // reviews_left.autoplay.start();
