@@ -15,36 +15,25 @@ window.addEventListener('DOMContentLoaded', function (event) {
     // Slider
     const reviews_right = new Swiper('.reviews-right', {
         slidesPerView: 'auto',
-        speed: 25000,
         loop: true,
-
-        freeMode: true,
-        freeModeMomentum: false,
-        freeModeMomentumBounce: false,
+        centeredSlides: true,
+        loopAdditionalSlides: 4,
+        speed: 25000,
 
         autoplay: {
             delay: 0,
-            disableOnInteraction: true,
-            waitForTransition: false,
         },
     })
 
     const reviews_left = new Swiper('.reviews-left', {
         slidesPerView: 'auto',
-        speed: 25000,
         loop: true,
-        loopAdditionalSlides: 4,
         centeredSlides: true,
-
-        freeMode: true,
-        freeModeMomentum: false,
-        freeModeMomentumBounce: false,
-        grabCursor: false,
+        loopAdditionalSlides: 4,
+        speed: 25000,
 
         autoplay: {
             delay: 0,
-            disableOnInteraction: true,
-            waitForTransition: false,
             reverseDirection: true,
         },
     })
