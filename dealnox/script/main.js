@@ -16,25 +16,30 @@ window.addEventListener('DOMContentLoaded', function (event) {
     const reviews_right = new Swiper('.reviews-right', {
         slidesPerView: 'auto',
         loop: true,
-        centeredSlides: true,
         loopAdditionalSlides: 4,
         speed: 25000,
 
         autoplay: {
-            delay: 0,
+            delay: 1,
         },
     })
 
     const reviews_left = new Swiper('.reviews-left', {
-        slidesPerView: 'auto',
+
+        slidesPerView: 4,
         loop: true,
-        centeredSlides: true,
-        loopAdditionalSlides: 4,
         speed: 25000,
 
+
+        // freeMode: true,
+        // freeModeMomentum: false,
+        // freeModeMomentumBounce: false,
+
         autoplay: {
-            delay: 0,
+            delay: 1,
             reverseDirection: true,
+            disableOnInteraction: false,
+            waitForTransition: false, // иначе улетает при перекл страницы
         },
     })
 
