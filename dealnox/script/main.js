@@ -33,6 +33,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
         slidesPerView: 'auto',
         speed: 25000,
         loop: true,
+        loopAdditionalSlides: 4,
+        centeredSlides: true,
 
         freeMode: true,
         freeModeMomentum: false,
