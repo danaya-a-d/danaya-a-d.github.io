@@ -49,6 +49,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     })
 
     reviews_left.autoplay.stop();
+    reviews_right.autoplay.stop();
 
 
 // Получаем нужный элемент
@@ -76,13 +77,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
             targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
             // Если элемент полностью видно, то запускаем следующий код
             reviews_left.autoplay.start();
-            // console.log('Вы видите элемент :)');
-            // alert(1);
-        } else {
-            // Если элемент не видно, то запускаем этот код
-            console.clear();
+            reviews_right.autoplay.start();
         }
-        ;
     };
 
 // Запускаем функцию при прокрутке страницы
