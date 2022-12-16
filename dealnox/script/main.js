@@ -14,7 +14,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     // Slider
     const reviews_right = new Swiper('.reviews-right', {
-        simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
+        // simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
         slidesPerView: 'auto',
         loop: true,
         loopAdditionalSlides: 4,
@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     })
 
     const reviews_left = new Swiper('.reviews-left', {
-        simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
+        // simulateTouch: false, allowSwipeToNext: false, allowSwipeToPrev: false,
         slidesPerView: 'auto',
         loop: true,
         speed: 25000,
@@ -49,7 +49,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
     })
 
     reviews_left.autoplay.stop();
-    reviews_right.autoplay.stop();
+    // reviews_right.autoplay.stop();
 
 
 // Получаем нужный элемент
@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
             // Если элемент полностью видно, то запускаем следующий код
             reviews_left.autoplay.start();
-            reviews_right.autoplay.start();
+            // reviews_right.autoplay.start();
         }
     };
 
