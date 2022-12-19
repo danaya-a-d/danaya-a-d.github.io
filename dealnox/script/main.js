@@ -87,27 +87,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
 
 
-    // reviews_left.autoplay.start();
-
-    //
-    // document.getElementsByClassName("swiper-container")[0].addEventListener("mouseover", function( ) {
-    //     reviews_right.autoplay.stop();
-    // });
-    //
-    // document.getElementsByClassName("swiper-container")[0].addEventListener("mouseout", function( ) {
-    //     reviews_right.autoplay.start();
-    // });
-    //
-    // document.getElementsByClassName("swiper-container")[0].addEventListener("mouseover", function( ) {
-    //     reviews_left.autoplay.stop();
-    //     reviews_left.speed(0);
-    // });
-    //
-    // document.getElementsByClassName("swiper-container")[0].addEventListener("mouseout", function( ) {
-    //     reviews_left.autoplay.start();
-    //     reviews_left.speed(15000);
-    // });
-
 // Mobile menu
     let header_menu_btn = document.querySelector('.header__menu-btn');
     let header_nav_menu = document.querySelector('.header__nav');
@@ -119,10 +98,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
             header_nav_menu.classList.remove('open');
             header_menu_btn.classList.remove('open');
             header_overlay.classList.remove('open');
+            header.classList.remove('open');
         } else {
             header_nav_menu.classList.add('open');
             header_menu_btn.classList.add('open');
             header_overlay.classList.add('open');
+            header.classList.add('open');
         }
     }
 
@@ -138,5 +119,33 @@ window.addEventListener('DOMContentLoaded', function (event) {
         menu_open();
     });
 
+
+    // Change header color
+    let change_colors = function (target) {
+        let targetPosition = 10,
+            windowPosition = {
+                top: window.pageYOffset,
+                left: window.pageXOffset,
+                right: window.pageXOffset + document.documentElement.clientWidth,
+                bottom: window.pageYOffset + document.documentElement.clientHeight
+            };
+
+        if (targetPosition > windowPosition.top) {
+            header.classList.remove('scroll');
+
+        } else {
+            header.classList.add('scroll');
+        }
+    };
+
+    let header = document.querySelector('.header');
+
+    if (header !== null) {
+        window.addEventListener('scroll', function () {
+            change_colors();
+        });
+
+        change_colors();
+    }
 
 });
