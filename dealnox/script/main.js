@@ -148,4 +148,17 @@ window.addEventListener('DOMContentLoaded', function (event) {
         change_colors();
     }
 
+    // Phone input
+    let inputs = document.querySelectorAll(".tel-input");
+
+    for (let i = 0; i < inputs.length; i++) {
+        if (inputs[i] !== null) {
+            let iti = intlTelInput(inputs[i], {
+                utilsScript: "script/intlTelInput/js/utils.js",
+                separateDialCode: true,
+                initialCountry: "ua"
+            });
+        }
+    }
+
 });
