@@ -83,7 +83,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
 // Запускаем функцию при прокрутке страницы
     window.addEventListener('scroll', function () {
-        Visible(element);
+        if (element) {
+            Visible(element);
+        }
     });
 
 
@@ -159,6 +161,16 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 initialCountry: "ua"
             });
         }
+    }
+
+
+    // Навигация FAQ
+    let faq_nav = document.querySelector('.faq-nav');
+
+    if (faq_nav) {
+        faq_nav.addEventListener('click', function () {
+            this.classList.toggle('open');
+        });
     }
 
 });
