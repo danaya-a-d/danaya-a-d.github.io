@@ -81,13 +81,14 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     };
 
-// Запускаем функцию при прокрутке страницы
-    window.addEventListener('scroll', function () {
-        if (element) {
-            Visible(element);
-        }
-    });
 
+    if (element !== null) {
+        // Запускаем функцию при прокрутке страницы
+        window.addEventListener('scroll', function () {
+
+            Visible(element);
+        });
+    }
 
 // Mobile menu
     let header_menu_btn = document.querySelector('.header__menu-btn');
