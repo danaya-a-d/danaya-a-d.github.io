@@ -1,18 +1,47 @@
 window.addEventListener('DOMContentLoaded', function (event) {
 
+    // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+    let vh = window.innerHeight * 0.01;
+    // Then we set the value in the --vh custom property to the root of the document
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+    // We listen to the resize event
+    window.addEventListener('resize', () => {
+        // We execute the same script as before
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+    });
+
     //слайдеры
     const news_swiper = new Swiper('.news__list-container', {
         direction: 'horizontal',
-        slidesPerView: 4,
+        slidesPerView: 1.12,
         spaceBetween: 12,
 
 
         navigation: {
             nextEl: '.news__slider-button-next',
             prevEl: '.news__slider-button-prev',
+        },
+
+        pagination: {
+            el: '.news__pagination'
+        },
+
+        breakpoints: {
+            561: {
+                slidesPerView: 2.65,
+            },
+
+            1025: {
+                slidesPerView: 3,
+            },
+
+            1281: {
+                slidesPerView: 4,
+            },
         }
     });
-
 
     const partners_swiper = new Swiper('.about-us__container', {
         direction: 'horizontal',
@@ -31,7 +60,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
             prevEl: '.about-us__slider-button-prev',
         }
     });
-
 
     //кастомный select
     jQuery(($) => {
@@ -63,5 +91,32 @@ window.addEventListener('DOMContentLoaded', function (event) {
         });
     });
 
+    //mobile menu
+    let header = document.querySelector('.header');
+    let header_menu_btn = document.querySelector('.header__menu-btn');
+    let header_nav_menu = document.querySelector('.header__nav');
 
+    let header_nav_items = document.querySelectorAll('.main-nav__item');
+
+
+    function menu_open() {
+        if (header_nav_menu.classList.contains('open')) {
+            header_nav_menu.classList.remove('open');
+            header_menu_btn.classList.remove('open');
+        } else {
+            header_nav_menu.classList.add('open');
+            header_menu_btn.classList.add('open');
+        }
+    }
+
+    header_menu_btn.addEventListener('click', function () {
+        menu_open();
+    });
+
+
+    for (let i = 0; i < header_nav_items.length; i++) {
+        header_nav_items[i].addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    }
 });
