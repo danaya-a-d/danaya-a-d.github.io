@@ -29,11 +29,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
         },
 
         breakpoints: {
-            561: {
+            621: {
                 slidesPerView: 2.65,
             },
 
-            1025: {
+            1024: {
                 slidesPerView: 3,
             },
 
@@ -47,6 +47,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
         direction: 'horizontal',
         slidesPerView: 1,
         effect: 'fade',
+        autoHeight: true,
+
         fadeEffect: {
             crossFade: true
         },
