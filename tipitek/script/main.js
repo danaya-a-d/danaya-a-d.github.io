@@ -18,7 +18,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
         slidesPerView: 1.12,
         spaceBetween: 12,
 
-
         navigation: {
             nextEl: '.news__slider-button-next',
             prevEl: '.news__slider-button-prev',
@@ -60,6 +59,37 @@ window.addEventListener('DOMContentLoaded', function (event) {
         navigation: {
             nextEl: '.about-us__slider-button-next',
             prevEl: '.about-us__slider-button-prev',
+        }
+    });
+
+    const cards_swiper = new Swiper('.manager-benefits__list-container', {
+        slidesPerView: 1.05,
+        freeMode: true,
+        spaceBetween: 8,
+
+        scrollbar: {
+            el: '.manager-benefits__scrollbar',
+            hide: false,
+            draggable: true,
+            dragSize: 100,
+            snapOnRelease: false,
+        },
+
+        breakpoints: {
+            621: {
+                slidesPerView: 2.43,
+                spaceBetween: 24,
+            },
+
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+
+            1281: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
         }
     });
 
