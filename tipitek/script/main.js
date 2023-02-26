@@ -89,6 +89,106 @@ window.addEventListener('DOMContentLoaded', function (event) {
             1281: {
                 slidesPerView: 3,
                 spaceBetween: 40,
+                allowSlideNext: false,
+                allowSlidePrev: false,
+            },
+        }
+    });
+
+    const profits_swiper = new Swiper('.profits__list-container', {
+        slidesPerView: 1.05,
+        freeMode: true,
+        spaceBetween: 8,
+
+        scrollbar: {
+            el: '.profits__scrollbar',
+            hide: false,
+            draggable: true,
+            dragSize: 100,
+            snapOnRelease: false,
+        },
+
+        breakpoints: {
+            621: {
+                slidesPerView: 2.43,
+                spaceBetween: 24,
+            },
+
+            1025: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+            },
+
+            1281: {
+                slidesPerView: 3,
+                spaceBetween: 40,
+                allowSlideNext: false,
+                allowSlidePrev: false,
+            },
+        }
+    });
+
+    const app_swiper = new Swiper('.app__list-container', {
+        slidesPerView: 1.3,
+        freeMode: true,
+        spaceBetween: 16,
+
+        scrollbar: {
+            el: '.app__scrollbar',
+            hide: false,
+            draggable: true,
+            dragSize: 100,
+            snapOnRelease: false,
+        },
+
+        breakpoints: {
+            621: {
+                slidesPerView: 3.15,
+            },
+
+            1024: {
+                slidesPerView: 4.25,
+            },
+
+            1281: {
+                slidesPerView: 5,
+                allowSlideNext: false,
+                allowSlidePrev: false,
+            },
+        }
+    });
+
+    const solution_swiper = new Swiper('.solution__list-container', {
+        slidesPerView: 1.1,
+        freeMode: true,
+        spaceBetween: 12,
+
+        scrollbar: {
+            el: '.solution__scrollbar',
+            hide: false,
+            draggable: true,
+            dragSize: 100,
+            snapOnRelease: false,
+        },
+
+        breakpoints: {
+            621: {
+                slidesPerView: 2.5,
+                spaceBetween: 28,
+            },
+
+            1024: {
+                slidesPerView: 'auto',
+                spaceBetween: 12,
+                allowSlideNext: false,
+                allowSlidePrev: false,
+            },
+
+            1281: {
+                slidesPerView: 'auto',
+                spaceBetween: 28,
+                allowSlideNext: false,
+                allowSlidePrev: false,
             },
         }
     });
@@ -150,5 +250,17 @@ window.addEventListener('DOMContentLoaded', function (event) {
         header_nav_items[i].addEventListener('click', function () {
             this.classList.toggle('active');
         });
+    }
+
+    //FAQ
+
+    let faq_item = document.querySelectorAll('.faq__item');
+
+    if (faq_item !== null) {
+        for (let i = 0; i < faq_item.length; i++) {
+            faq_item[i].addEventListener('click', function (event) {
+                this.classList.toggle('active');
+            });
+        }
     }
 });
