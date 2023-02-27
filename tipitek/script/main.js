@@ -178,14 +178,14 @@ window.addEventListener('DOMContentLoaded', function (event) {
             },
 
             1024: {
-                slidesPerView: 'auto',
+                slidesPerView: 4.1,
                 spaceBetween: 12,
                 allowSlideNext: false,
                 allowSlidePrev: false,
             },
 
             1281: {
-                slidesPerView: 'auto',
+                slidesPerView: 4.1,
                 spaceBetween: 28,
                 allowSlideNext: false,
                 allowSlidePrev: false,
