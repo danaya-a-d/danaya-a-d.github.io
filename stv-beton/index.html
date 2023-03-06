@@ -76,7 +76,7 @@
                         <p>Производство и доставка бетона в Москве</p>
                     </div>
 
-                    <a class="first-screen__button button button--trans" href="#">Заказать бетон</a>
+                    <a class="first-screen__button button button--trans button-modal" href="#">Заказать бетон</a>
                 </div>
 
                 <form class="first-screen__form main-form" method="post" action="#">
@@ -686,7 +686,7 @@
                 <img class="logo__img" src="img/Logo-white.svg" alt="STV Бетон">
             </a>
 
-            <p class="footer__note">Бетон от производителя с доставкой по&nbsp;Москве. Низкие цены и гарантия качества.</p>
+                <p class="footer__note">Бетон от производителя с доставкой по&nbsp;Москве. Низкие цены и гарантия качества.</p>
         </div>
 
         <div class="footer__nav-block">
@@ -728,7 +728,35 @@
     </div>
 </footer>
 
+<div class="modal-back hide">
+    <div class="modal hide">
+        <button class="modal__btn-close modal-close"></button>
+        <form class="modal__form main-form" method="post" action="#">
+            <div class="main-form__text-block">
+                <h4>Оставьте заявку</h4>
+                <p>Мы&nbsp;предоставим&nbsp;вам
+                    <mark>самую&nbsp;низкую&nbsp;цену&nbsp;на&nbsp;бетон</mark>
+                    в&nbsp;Москве!
+                </p>
+            </div>
+            <fieldset class="main-form__field">
 
+                <label class="main-form__label">
+                    <input class="main-form__input" name="name" type="text" placeholder="Имя">
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input" name="tel" type="tel" placeholder="Телефон">
+                </label>
+
+                <button class="main-form__button button button--yellow">Отправить</button>
+
+            </fieldset>
+
+        </form>
+    </div>
+    <div class="modal-overlay hide"></div>
+</div>
 
 <script src="script/jquery.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>

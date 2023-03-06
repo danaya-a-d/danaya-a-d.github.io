@@ -42,4 +42,53 @@ window.addEventListener('DOMContentLoaded', function (event) {
     header_menu_btn.addEventListener('click', function () {
         menu_open();
     });
+
+    //Modals
+    function modal_show(modal, button_open) {
+
+        function show() {
+            modal.removeClass('hide');
+            modal.addClass('show');
+            $('.modal-overlay').removeClass('hide');
+            $('.modal-back').removeClass('hide');
+        }
+
+        function hide() {
+            modal.addClass('hide');
+            $('.modal-overlay').addClass('hide');
+            $('.modal-back').addClass('hide');
+        }
+
+        button_open.on('click', function (e) {
+            show();
+        });
+        $('.modal-close').on('click', function (e) {
+            hide();
+        });
+        $('.modal-overlay').on('click', function (e) {
+            modal.addClass('hide');
+            hide();
+        });
+        $(document).keydown(function (e) {
+            if (e.which === 27) {
+                hide();
+            }
+        });
+    }
+
+    modal_show($('.modal'), $('.button-modal'));
+
+    //Input number
+    $('.counter .counter__button').on('click', function () {
+        let input = $(this).closest('.counter').find('input'); // инпут
+        let value = parseInt(input.val()) || 0; // получаем значение инпута или 0
+        if ($(this).hasClass('minus')) {
+            if (value - 1 >= 0)
+                value = value - 1; // вычитаем из значения 1
+        }
+        if ($(this).hasClass('plus')) {
+            value = value + 1; // прибавляем к значению 1
+        }
+        input.val(value).change(); // выводим полученное значение в инпут
+    });
 });
