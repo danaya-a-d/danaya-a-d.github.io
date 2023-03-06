@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__top">
+        <div class="header__wrapper-top wrapper">
+            <ul class="header__contacts">
+                <li class="header__contact"><a href="mailto:sales@stvbeton.com">sales@stvbeton.com</a></li>
+                <li class="header__contact"><span>Диспетчерская</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+                <li class="header__contact"><span>Отдел сбыта</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+            </ul>
+
+            <form class="header__city city-select" method="post" action="#">
+                <label class="city-select__label">
+                    <select class="city-select__item">
+                        <option value="Москва">Москва</option>
+                        <option value="Ростов">Ростов</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="header__main">
+        <div class="header__main-wrapper wrapper">
+            <a href="index.html" class="header__logo logo">
+                <img class="logo__img" src="img/Logo.svg" alt="STV Бетон">
+            </a>
+
+            <button class="header__menu-btn"></button>
+
+            <nav class="header__nav main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Марки бетона</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Услуги</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+                </ul>
+
+                <form class="main-nav__city city-select" method="post" action="#">
+                    <label class="city-select__label">
+                        <select class="city-select__item">
+                            <option value="Москва">Москва</option>
+                            <option value="Ростов">Ростов</option>
+                        </select>
+                    </label>
+                </form>
+
+                <ul class="main-nav__contacts">
+                    <li class="main-nav__contact"><a href="mailto:sales@stvbeton.com"> sales@stvbeton.com</a></li>
+                    <li class="main-nav__contact"><span>Диспетчерская</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+                    <li class="main-nav__contact"><span>Отдел сбыта</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="first-screen">
+        <div class="first-screen__top" style="background-image: url('img/first-screen-bg.jpg')">
+            <div class="first-screen__wrapper wrapper">
+                <div class="first-screen__text-block">
+                    <div class="first-screen__text">
+                        <h1>БЕТОН ОТ ПРОИЗВОДИТЕЛЯ</h1>
+                        <p>Производство и доставка бетона в Москве</p>
+                    </div>
+
+                    <a class="first-screen__button button button--trans" href="#">Заказать бетон</a>
+                </div>
+
+                <form class="first-screen__form main-form" method="post" action="#">
+                    <div class="main-form__text-block">
+                        <h4>Оставьте заявку</h4>
+                        <p>Мы&nbsp;предоставим&nbsp;вам
+                            <mark>самую&nbsp;низкую&nbsp;цену&nbsp;на&nbsp;бетон</mark>
+                            в&nbsp;Москве!
+                        </p>
+                    </div>
+                        <fieldset class="main-form__field">
+
+                            <label class="main-form__label">
+                                <input class="main-form__input" name="name" type="text" placeholder="Имя">
+                            </label>
+
+                            <label class="main-form__label">
+                                <input class="main-form__input" name="tel" type="tel" placeholder="Телефон">
+                            </label>
+
+                            <button class="main-form__button button button--yellow">Отправить</button>
+
+                        </fieldset>
+
+                </form>
+            </div>
+        </div>
+
+        <div class="first-screen__advantages">
+            <div class="first-screen__advantage advantage">
+                <img class="advantage__icon" src="img/advantage-icon-1.svg" alt="">
+                <div class="advantage__text-block">
+                    <h4>Низкие цены</h4>
+                    <p>Magna vitae in id tellus ut habitasse vulputate eleifend viverra. Feugiat cras urna gravida
+                        maecenas nisl nulla sed.</p>
+                </div>
+            </div>
+
+            <div class="first-screen__advantage advantage">
+                <img class="advantage__icon" src="img/advantage-icon-2.svg" alt="">
+                <div class="advantage__text-block">
+                    <h4>Доставка в любую точку</h4>
+                    <p>Enim venenatis maecenas vulputate purus et in nisi et nulla. Feugiat nibh enim eget egestas arcu.
+                        Quam non.</p>
+                </div>
+            </div>
+
+            <div class="first-screen__advantage advantage">
+                <img class="advantage__icon" src="img/advantage-icon-3.svg" alt="">
+                <div class="advantage__text-block">
+                    <h4>Любой объем</h4>
+                    <p>In turpis amet a tortor id mollis. Sit sit vehicula ipsum in. Vitae orci accumsan orci ornare
+                        pretium mauris malesuada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="price">
+        <div class="price__wrapper wrapper">
+            <h2>Прайс-лист на бетонную продукцию</h2>
+            <span class="price__date">26 декабря 2022 года</span>
+
+            <form class="price__content-form calculate" method="post" action="#">
+                <div class="calculate__tables">
+                    <div class="calculate__table-block">
+                        <p class="calculate__table-name">ТОВАРНЫЙ БЕТОН</p>
+                        <table class="calculate__table">
+                            <tr>
+                                <th>Марка</th>
+                                <th>Наименование</th>
+                                <th>Стоимость с НДС за м.<br> куб./руб</th>
+                                <th>Количество кубов</th>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="calculate__table-block">
+                        <p class="calculate__table-name">КЕРАМЗИТОБЕТОН</p>
+                        <table class="calculate__table">
+                            <tr>
+                                <th>Марка</th>
+                                <th>Наименование</th>
+                                <th>Стоимость с НДС за м.<br> куб./руб</th>
+                                <th>Количество кубов</th>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="calculate__table-block">
+                        <p class="calculate__table-name">Тощий бетон</p>
+                        <table class="calculate__table">
+                            <tr>
+                                <th>Марка</th>
+                                <th>Наименование</th>
+                                <th>Стоимость с НДС за м.<br> куб./руб</th>
+                                <th>Количество кубов</th>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="calculate__table-block">
+                        <p class="calculate__table-name">МОНТАЖНЫЙ РАСТВОР</p>
+                        <table class="calculate__table">
+                            <tr>
+                                <th>Марка</th>
+                                <th>Наименование</th>
+                                <th>Стоимость с НДС за м.<br> куб./руб</th>
+                                <th>Количество кубов</th>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>М100</td>
+                                <td>B7,5 (гранит) П4 F100 W2</td>
+                                <td>4920</td>
+                                <td>
+
+                                    <span class="calculate__counter counter">
+                                <button class="counter__button minus" type="button">–</button><label class="counter__label">
+                                <input class="counter__input" type="number" value="0">
+                                </label><button class="counter__button plus" type="button">+</button>
+                                    </span>
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="calculate__total total-block">
+                    <div class="total-block__line">
+                        <p class="total-block__name">Всего выбрано товаров:</p>
+                        <p class="total-block__val">1</p>
+                    </div>
+
+                    <div class="total-block__line">
+                        <p class="total-block__name">На сумму:</p>
+                        <p class="total-block__val">4920 руб</p>
+                    </div>
+
+                    <button class="total-block__button button button--gray">Рассчитать общую скидку</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner__wrapper wrapper">
+            <div class="banner__content">
+                <h3>Узнайте, как получить бетононасос и доставку бетона на&nbsp;объект</h3>
+
+                <div class="banner__text-block">
+                    <p>Бесплатно</p>
+                    <a class="banner__button button button--gray" href="#">получить бетононасос и доставку</a>
+                </div>
+            </div>
+            <img class="banner__image" src="img/banner-image.png" alt="">
+        </div>
+    </section>
+
+    <section class="delivery">
+        <div class="delivery__wrapper wrapper">
+            <h2>Доставка бетона<br>
+                в любую точку Москвы</h2>
+
+            <div class="delivery__content">
+                <img class="delivery__map" src="img/delivery-map.jpg" alt="">
+
+                <div class="delivery__text-block">
+                    <div class="delivery__text">
+                        <p>Строительные объекты, как крупные и грандиозные, так и небольшие частные, в Москве и Московской области появляются на регулярной основе. Соответственно, постоянно требуется товарный бетон.</p>
+                        <p>Наш бетонный завод, являясь производителем, предлагает действительно качественную продукцию при максимально выгодных для клиента условиях доставки.</p>
+
+                        <ul>
+                            <li>Для бетона цена за 1 м3 с доставкой формируется с учетом минимальной торговой наценки. Это выгодно всем: и нам, как поставщику, и потребителям.</li>
+                            <li>Заказать бетон можно круглосуточно, причем в любых необходимых объемах.</li>
+                            <li>На товарный бетон цена может серьезно снижаться за счет скидок при крупном опте или при аутсорсинговом сотрудничестве.</li>
+                            <li>Возможность доставки собственными миксерами в день оформления заявки.</li>
+                        </ul>
+
+                        <p>Хотите купить бетон, просто позвоните менеджерам по указанным телефонам или оставьте заявку в форме обратной связи.</p>
+                    </div>
+
+                    <a class="delivery__button button button--yellow" href="#">Заказать бетон с завода</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cooperation">
+            <div class="cooperation__wrapper wrapper">
+                <h2>5 главных причин начать<br>
+                    сотрудничество с нами</h2>
+
+                <ul class="cooperation__list">
+                    <li class="cooperation__item">
+                        <p>Бесплатный выезд специалиста для точного расчета необходимого объема бетона</p>
+                    </li>
+
+                    <li class="cooperation__item">
+                        <p>Доставим бетон в любую точку Москвы<br>
+                            по лучшей цене</p>
+                    </li>
+
+                    <li class="cooperation__item">
+                        <p>3 собственных аккредитованных
+                            лаборатории</p>
+                    </li>
+
+                    <li class="cooperation__item">
+                        <p>Строгое соблюдение ГОСТа, вся продукция подтверждается сертификатами и проходит лабораторный анализ.</p>
+                    </li>
+                </ul>
+            </div>
+    </section>
+
+    <section class="factories">
+        <div class="factories__wrapper wrapper">
+            <a class="factories__file file-link" href="#">
+                <img class="file-link__icon" src="img/file-link-icon-1.svg" alt="">
+                <p class="file-link__name">Свидетельства<br>
+                    и сертификаты качества</p>
+            </a>
+
+            <div class="factories__info">
+                <div class="factories__text-block">
+                    <h2>Сеть бетонных заводов</h2>
+                    <p>С 2016 года производим и поставляем бетон</p>
+                </div>
+
+                <a class="factories__tel" href="tel:+74957755555">+7 (495) 775 55 55</a>
+
+                <a class="factories__button button button--yellow" href="#">КОНСУЛЬТАЦИЯ С МЕНЕДЖЕРОМ</a>
+            </div>
+
+            <a class="factories__file file-link" href="#">
+                <img class="file-link__icon" src="img/file-link-icon-2.svg" alt="">
+                <p class="file-link__name">Договор<br>
+                    поставки</p>
+            </a>
+        </div>
+    </section>
+
+    <section class="faq">
+        <div class="faq__wrapper wrapper">
+
+            <h2>Частые вопросы</h2>
+
+            <ul class="faq__list">
+                <li class="faq__item">
+                    <p class="faq__item-title">Gravida vitae orci faucibus posuere. Blandit ullamcorper proin?</p>
+                    <div class="faq__item-text">
+                        <p>Vitae amet vestibulum pellentesque habitasse at id. Vestibulum tellus ac est netus varius condimentum semper. Sollicitudin at vestibulum nisi urna nulla. Quis dolor ac gravida iaculis tristique tristique id proin. Ante cursus mauris nunc sit praesent aliquet at eget tortor. Ut in orci volutpat neque non habitasse auctor ullamcorper blandit. Gravida urna semper cursus vulputate amet nibh. Scelerisque egestas aliquet lectus egestas ac mauris vitae tortor amet. Integer pellentesque sit id metus. Elementum nam at habitant risus. Commodo tincidunt fermentum ornare dui. Scelerisque diam congue quisque tellus maecenas enim. Molestie feugiat pretium pharetra.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <p class="faq__item-title">Egestas faucibus feugiat at proin ultrices posuere adipiscing?</p>
+                    <div class="faq__item-text">
+                        <p>Vitae amet vestibulum pellentesque habitasse at id. Vestibulum tellus ac est netus varius condimentum semper. Sollicitudin at vestibulum nisi urna nulla. Quis dolor ac gravida iaculis tristique tristique id proin. Ante cursus mauris nunc sit praesent aliquet at eget tortor. Ut in orci volutpat neque non habitasse auctor ullamcorper blandit. Gravida urna semper cursus vulputate amet nibh. Scelerisque egestas aliquet lectus egestas ac mauris vitae tortor amet. Integer pellentesque sit id metus. Elementum nam at habitant risus. Commodo tincidunt fermentum ornare dui. Scelerisque diam congue quisque tellus maecenas enim. Molestie feugiat pretium pharetra.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <p class="faq__item-title">Gravida vitae orci faucibus posuere. Blandit ullamcorper proin?</p>
+                    <div class="faq__item-text">
+                        <p>Vitae amet vestibulum pellentesque habitasse at id. Vestibulum tellus ac est netus varius condimentum semper. Sollicitudin at vestibulum nisi urna nulla. Quis dolor ac gravida iaculis tristique tristique id proin. Ante cursus mauris nunc sit praesent aliquet at eget tortor. Ut in orci volutpat neque non habitasse auctor ullamcorper blandit. Gravida urna semper cursus vulputate amet nibh. Scelerisque egestas aliquet lectus egestas ac mauris vitae tortor amet. Integer pellentesque sit id metus. Elementum nam at habitant risus. Commodo tincidunt fermentum ornare dui. Scelerisque diam congue quisque tellus maecenas enim. Molestie feugiat pretium pharetra.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <p class="faq__item-title">Egestas faucibus feugiat at proin ultrices posuere adipiscing?</p>
+                    <div class="faq__item-text">
+                        <p>Vitae amet vestibulum pellentesque habitasse at id. Vestibulum tellus ac est netus varius condimentum semper. Sollicitudin at vestibulum nisi urna nulla. Quis dolor ac gravida iaculis tristique tristique id proin. Ante cursus mauris nunc sit praesent aliquet at eget tortor. Ut in orci volutpat neque non habitasse auctor ullamcorper blandit. Gravida urna semper cursus vulputate amet nibh. Scelerisque egestas aliquet lectus egestas ac mauris vitae tortor amet. Integer pellentesque sit id metus. Elementum nam at habitant risus. Commodo tincidunt fermentum ornare dui. Scelerisque diam congue quisque tellus maecenas enim. Molestie feugiat pretium pharetra.</p>
+                    </div>
+                </li>
+                <li class="faq__item">
+                    <p class="faq__item-title">Gravida vitae orci faucibus posuere. Blandit ullamcorper proin?</p>
+                    <div class="faq__item-text">
+                        <p>Vitae amet vestibulum pellentesque habitasse at id. Vestibulum tellus ac est netus varius condimentum semper. Sollicitudin at vestibulum nisi urna nulla. Quis dolor ac gravida iaculis tristique tristique id proin. Ante cursus mauris nunc sit praesent aliquet at eget tortor. Ut in orci volutpat neque non habitasse auctor ullamcorper blandit. Gravida urna semper cursus vulputate amet nibh. Scelerisque egestas aliquet lectus egestas ac mauris vitae tortor amet. Integer pellentesque sit id metus. Elementum nam at habitant risus. Commodo tincidunt fermentum ornare dui. Scelerisque diam congue quisque tellus maecenas enim. Molestie feugiat pretium pharetra.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__main-block">
+            <a href="index.html" class="footer__logo logo">
+                <img class="logo__img" src="img/Logo-white.svg" alt="STV Бетон">
+            </a>
+
+            <p class="footer__note">Бетон от производителя с доставкой по&nbsp;Москве. Низкие цены и гарантия качества.</p>
+        </div>
+
+        <div class="footer__nav-block">
+            <ul class="footer__nav">
+                <li class="footer__item"><a href="#">Марки бетона</a></li>
+                <li class="footer__item"><a href="#">Услуги</a></li>
+                <li class="footer__item"><a href="#">Доставка</a></li>
+                <li class="footer__item"><a href="#">Контакты</a></li>
+                <li class="footer__item"><a href="#">О компании</a></li>
+                <li class="footer__item"><a href="#">Прайс-лист</a></li>
+                <li class="footer__item"><a href="#">Карта доставки</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__city-block">
+            <form class="footer__city city-select" method="post" action="#">
+                <label class="city-select__label">
+                    <select class="city-select__item">
+                        <option value="Москва">Москва</option>
+                        <option value="Ростов">Ростов</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+
+        <div class="footer__address-block">
+            <div class="footer__addresses">
+                <p class="footer__place">Головной офис</p>
+
+                <p class="footer__address">Москва, ул. Ленинская Слобода, стр. 19</p>
+
+                <p class="footer__place">Головной офис</p>
+
+                <p class="footer__address"><a href="mailto:sales@stvbeton.com">sales@stvbeton.com</a></p>
+                <p class="footer__address"><span>Диспетчерская</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></p>
+                <p class="footer__address"><span>Отдел сбыта</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+<script src="script/jquery.min.js"></script>
+<script src="script/swiper/swiper-bundle.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
