@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
       xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
 
-    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -94,7 +93,7 @@
                             </label>
 
                             <label class="main-form__label">
-                                <input class="main-form__input" name="tel" type="tel" placeholder="Телефон">
+                                <input class="main-form__input phone_mask" name="tel" type="tel" placeholder="Телефон">
                             </label>
 
                             <button class="main-form__button button button--yellow">Отправить</button>
@@ -561,7 +560,7 @@
                 в любую точку Москвы</h2>
 
             <div class="delivery__content">
-                <img class="delivery__map" src="img/delivery-map.jpg" alt="">
+                <div class="delivery__map" id="map"></div>
 
                 <div class="delivery__text-block">
                     <div class="delivery__text">
@@ -746,7 +745,7 @@
                 </label>
 
                 <label class="main-form__label">
-                    <input class="main-form__input" name="tel" type="tel" placeholder="Телефон">
+                    <input class="main-form__input phone_mask" name="tel" type="tel" placeholder="Телефон">
                 </label>
 
                 <button class="main-form__button button button--yellow">Отправить</button>
@@ -759,8 +758,39 @@
 </div>
 
 <script src="script/jquery.min.js"></script>
-<script src="script/swiper/swiper-bundle.min.js"></script>
+<script src="script/phone_mask.min.js"></script>
 <script src="script/main.js"></script>
+
+<script src="//api-maps.yandex.ru/2.0/?load=package.standard,package.geoObjects&lang=ru-RU"
+        type="text/javascript"></script>
+
+<script>
+    // яндекс карта
+    ymaps.ready(function () {
+        var myMap = new ymaps.Map('map', {
+                center: [55.751872, 48.752936],
+                zoom: 16
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+
+            // Создаём макет содержимого.
+            myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: 'img/map-marker.svg',
+                // Размеры метки.
+                iconImageSize: [32, 47],
+                // Смещение левого верхнего угла иконки относительно
+                // её "ножки" (точки привязки).
+                iconImageOffset: [-5, -38]
+            });
+
+        myMap.geoObjects.add(myPlacemark);
+    });
+</script>
 
 </body>
 </html>

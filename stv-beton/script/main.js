@@ -91,4 +91,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
         input.val(value).change(); // выводим полученное значение в инпут
     });
+
+    //Phone mask
+    $(".phone_mask").mask("+7(999)999-99-99");
 });

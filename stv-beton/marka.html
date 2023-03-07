@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marka Page</title>
+
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__top">
+        <div class="header__wrapper-top wrapper">
+            <ul class="header__contacts">
+                <li class="header__contact"><a href="mailto:sales@stvbeton.com">sales@stvbeton.com</a></li>
+                <li class="header__contact"><span>Диспетчерская</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+                <li class="header__contact"><span>Отдел сбыта</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+            </ul>
+
+            <form class="header__city city-select" method="post" action="#">
+                <label class="city-select__label">
+                    <select class="city-select__item">
+                        <option value="Москва">Москва</option>
+                        <option value="Ростов">Ростов</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+    </div>
+
+    <div class="header__main">
+        <div class="header__main-wrapper wrapper">
+            <a href="index.html" class="header__logo logo">
+                <img class="logo__img" src="img/Logo.svg" alt="STV Бетон">
+            </a>
+
+            <button class="header__menu-btn"></button>
+
+            <nav class="header__nav main-nav">
+                <ul class="main-nav__list">
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Марки бетона</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Услуги</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Доставка</a></li>
+                    <li class="main-nav__item"><a class="main-nav__link" href="#">Контакты</a></li>
+                </ul>
+
+                <form class="main-nav__city city-select" method="post" action="#">
+                    <label class="city-select__label">
+                        <select class="city-select__item">
+                            <option value="Москва">Москва</option>
+                            <option value="Ростов">Ростов</option>
+                        </select>
+                    </label>
+                </form>
+
+                <ul class="main-nav__contacts">
+                    <li class="main-nav__contact"><a href="mailto:sales@stvbeton.com"> sales@stvbeton.com</a></li>
+                    <li class="main-nav__contact"><span>Диспетчерская</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+                    <li class="main-nav__contact"><span>Отдел сбыта</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__main-block">
+            <a href="index.html" class="footer__logo logo">
+                <img class="logo__img" src="img/Logo-white.svg" alt="STV Бетон">
+            </a>
+
+                <p class="footer__note">Бетон от производителя с доставкой по&nbsp;Москве. Низкие цены и гарантия качества.</p>
+        </div>
+
+        <div class="footer__nav-block">
+            <ul class="footer__nav">
+                <li class="footer__item"><a href="#">Марки бетона</a></li>
+                <li class="footer__item"><a href="#">Услуги</a></li>
+                <li class="footer__item"><a href="#">Доставка</a></li>
+                <li class="footer__item"><a href="#">Контакты</a></li>
+                <li class="footer__item"><a href="#">О компании</a></li>
+                <li class="footer__item"><a href="#">Прайс-лист</a></li>
+                <li class="footer__item"><a href="#">Карта доставки</a></li>
+            </ul>
+        </div>
+
+        <div class="footer__city-block">
+            <form class="footer__city city-select" method="post" action="#">
+                <label class="city-select__label">
+                    <select class="city-select__item">
+                        <option value="Москва">Москва</option>
+                        <option value="Ростов">Ростов</option>
+                    </select>
+                </label>
+            </form>
+        </div>
+
+        <div class="footer__address-block">
+            <div class="footer__addresses">
+                <p class="footer__place">Головной офис</p>
+
+                <p class="footer__address">Москва, ул. Ленинская Слобода, стр. 19</p>
+
+                <p class="footer__place">Головной офис</p>
+
+                <p class="footer__address"><a href="mailto:sales@stvbeton.com">sales@stvbeton.com</a></p>
+                <p class="footer__address"><span>Диспетчерская</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></p>
+                <p class="footer__address"><span>Отдел сбыта</span><a href="tel:+74957755555">+7 (495) 775 55 55</a></p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<div class="modal-back hide">
+    <div class="modal hide">
+        <button class="modal__btn-close modal-close"></button>
+        <form class="modal__form main-form" method="post" action="#">
+            <div class="main-form__text-block">
+                <h4>Оставьте заявку</h4>
+                <p>Мы&nbsp;предоставим&nbsp;вам
+                    <mark>самую&nbsp;низкую&nbsp;цену&nbsp;на&nbsp;бетон</mark>
+                    в&nbsp;Москве!
+                </p>
+            </div>
+            <fieldset class="main-form__field">
+
+                <label class="main-form__label">
+                    <input class="main-form__input" name="name" type="text" placeholder="Имя">
+                </label>
+
+                <label class="main-form__label">
+                    <input class="main-form__input phone_mask" name="tel" type="tel" placeholder="Телефон">
+                </label>
+
+                <button class="main-form__button button button--yellow">Отправить</button>
+
+            </fieldset>
+
+        </form>
+    </div>
+    <div class="modal-overlay hide"></div>
+</div>
+
+<script src="script/jquery.min.js"></script>
+<script src="script/phone_mask.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
