@@ -93,5 +93,5 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
 
     //Phone mask
-    $(".phone_mask").mask("+7 (999) 999 99 99");
+    $(".phone_mask").mask("+7 (999) 999 99-99");
 });
