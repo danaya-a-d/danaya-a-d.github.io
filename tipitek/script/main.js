@@ -193,6 +193,41 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     });
 
+    const coin_swiper = new Swiper('.coin__list-container', {
+        slidesPerView: 1.1,
+        freeMode: true,
+        spaceBetween: 12,
+
+        scrollbar: {
+            el: '.coin__scrollbar',
+            hide: false,
+            draggable: true,
+            dragSize: 100,
+            snapOnRelease: false,
+        },
+
+        breakpoints: {
+            621: {
+                slidesPerView: 2.5,
+                spaceBetween: 28,
+            },
+
+            1024: {
+                slidesPerView: 4.05,
+                spaceBetween: 10,
+                allowSlideNext: false,
+                allowSlidePrev: false,
+            },
+
+            1281: {
+                slidesPerView: 4.1,
+                spaceBetween: 28,
+                allowSlideNext: false,
+                allowSlidePrev: false,
+            },
+        }
+    });
+
     //кастомный select
     jQuery(($) => {
         $('.select').on('click', '.select__head', function () {
