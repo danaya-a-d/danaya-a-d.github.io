@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personal manager</title>
+    <title>Media</title>
 
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/main.css">
+
 </head>
 <body>
 
@@ -98,100 +99,161 @@
 </header>
 
 <main class="page-main">
-    <section class="saving">
-        <div class="saving__wrapper wrapper">
-            <div class="saving__text-block">
-                <h1>Saving Account</h1>
-
-                <p>Tipitek offers investors a profitable and reliable savings account service. It
-                    is a great offer for those who want to multiply their money without any effort. A savings investment
-                    account is like a bank deposit account, but with much better benefits.</p>
+    <section class="media-sec">
+        <div class="media-sec__wrapper wrapper">
+            <div class="media-sec__text-block">
+                <h1>Media</h1>
             </div>
 
-            <img class="saving__image" src="img/saving-banner.png" alt="">
+            <img class="media-sec__image" src="img/media-image.png" alt="">
         </div>
     </section>
 
-    <section class="investment">
-        <div class="investment__wrapper wrapper">
+    <section class="blog-main">
+        <div class="blog-main__wrapper wrapper">
+            <div class="blog-main__nav blog-nav blog-nav--center">
+                <p class="blog-nav__title">Sort by:</p>
 
-            <div class="investment__about">
-                <h2>Who can use an investment&nbsp;savings account?</h2>
+                <span class="blog-nav__item-mob">Sort by date
+                <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3.7604 6.44192C3.91033 6.292 4.14493 6.27837 4.31025 6.40103L4.35761 6.44192L8.00035 10.0845L11.6431 6.44192C11.793 6.292 12.0276 6.27837 12.1929 6.40103L12.2403 6.44192C12.3902 6.59184 12.4039 6.82645 12.2812 6.99176L12.2403 7.03913L8.29896 10.9805C8.14904 11.1304 7.91443 11.144 7.74911 11.0214L7.70175 10.9805L3.7604 7.03913C3.59549 6.87421 3.59549 6.60684 3.7604 6.44192Z"
+      fill="#667C99" stroke="#667C99"/>
+</svg>
+                </span>
 
-                <p>The service is available with a minimum deposit of $25,000 – which means for
-                    clients with START+, PRO, PRO+ and EXTRA accounts.</p>
+                <ul class="blog-nav__list">
+                    <li class="blog-nav__item active">All</li>
+                    <li class="blog-nav__item">This week</li>
+                    <li class="blog-nav__item">Previous week</li>
+                    <li class="blog-nav__item">This month</li>
+                    <li class="blog-nav__item">Previous month</li>
+                </ul>
             </div>
 
-            <div class="investment__statistic">
-                <img class="investment__graphic" src="img/graphic.svg" alt="">
-                <p class="investment__note">*per year</p>
-            </div>
-        </div>
-    </section>
+            <ul class="blog-main__medias">
+                <li class="blog-main__media main-news">
+                    <a class="main-news__link" href="#">
+                        <img class="main-news__image" src="img/blog-8.jpg" alt="">
 
-    <section class="profitability">
-        <div class="profitability__wrapper wrapper">
-            <div class="profitability__about">
-                <div class="profitability__text-block">
-                    <h2>What percentage of profitability can I get?</h2>
+                        <div class="main-news__about">
+                            <p class="main-news__date date date--blue">
+                                <img src="img/icon-calendar.svg" alt="">
+                                24.01.2023
+                            </p>
 
-                    <p>Depending on the type of account you choose, you can earn 18-48% per annum. You must admit that
-                        this is much more profitable than standard bank deposits. For example, if you deposited 500 000
-                        USDT, your passive income for 1 month will be 15 000 USDT.</p>
-                </div>
-            </div>
+                            <div class="main-news__text-block">
+                                <h3>Crypto News</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Sit in auctor est duis egestas purus. Risus
+                                    proin condimentum senectus velit tincidunt amet tellus. Volutpat donec vitae auctor
+                                    diam. Suspendisse sapien tellus lectus volutpat euismod. Risus felis consectetur
+                                    amet in condimentum volutpat ut faucibus viverra.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog-main__media main-news">
+                    <a class="main-news__link" href="#">
+                        <img class="main-news__image" src="img/blog-3.jpg" alt="">
 
-            <form class="profitability__form main-form" method="post" action="#">
-                <h3>Learn how much money you can make</h3>
+                        <div class="main-news__about">
+                            <p class="main-news__date date date--blue">
+                                <img src="img/icon-calendar.svg" alt="">
+                                24.01.2023
+                            </p>
 
-                <div class="main-form__line">
-                    <label class="main-form__label">
-                        <span class="main-form__label-val">Investment amount</span>
-                        <input class="main-form__input-big" type="number" name="buy" placeholder="0">
-                    </label>
-                </div>
+                            <div class="main-news__text-block">
+                                <h3>Crypto News</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Sit in auctor est duis egestas purus. Risus
+                                    proin condimentum senectus velit tincidunt amet tellus. Volutpat donec vitae auctor
+                                    diam. Suspendisse sapien tellus lectus volutpat euismod. Risus felis consectetur
+                                    amet in condimentum volutpat ut faucibus viverra.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog-main__media main-news">
+                    <a class="main-news__link" href="#">
+                        <img class="main-news__image" src="img/blog-4.jpg" alt="">
 
-                <button class="main-form__button-big button button--blue" type="submit">Calculate profit</button>
-            </form>
+                        <div class="main-news__about">
+                            <p class="main-news__date date date--blue">
+                                <img src="img/icon-calendar.svg" alt="">
+                                24.01.2023
+                            </p>
 
-        </div>
-    </section>
+                            <div class="main-news__text-block">
+                                <h3>Crypto News</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Sit in auctor est duis egestas purus. Risus
+                                    proin condimentum senectus velit tincidunt amet tellus. Volutpat donec vitae auctor
+                                    diam. Suspendisse sapien tellus lectus volutpat euismod. Risus felis consectetur
+                                    amet in condimentum volutpat ut faucibus viverra.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog-main__media main-news">
+                    <a class="main-news__link" href="#">
+                        <img class="main-news__image" src="img/blog-5.jpg" alt="">
 
-    <section class="interest">
-        <div class="interest__wrapper wrapper">
-            <div class="interest__text-block">
-                <h2>How often can I withdraw the interest?</h2>
+                        <div class="main-news__about">
+                            <p class="main-news__date date date--blue">
+                                <img src="img/icon-calendar.svg" alt="">
+                                24.01.2023
+                            </p>
 
-                <p>Tipitek really cares about its customers, that's why you have access to weekly withdrawal of interest
-                    rate accruals. And if you leave the accruals on your account, your income level will be even higher
-                    with each new month.</p>
-            </div>
+                            <div class="main-news__text-block">
+                                <h3>Crypto News</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Sit in auctor est duis egestas purus. Risus
+                                    proin condimentum senectus velit tincidunt amet tellus. Volutpat donec vitae auctor
+                                    diam. Suspendisse sapien tellus lectus volutpat euismod. Risus felis consectetur
+                                    amet in condimentum volutpat ut faucibus viverra.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog-main__media main-news">
+                    <a class="main-news__link" href="#">
+                        <img class="main-news__image" src="img/blog-6.jpg" alt="">
 
-            <button class="interest__button button button--blue" type="submit">Open Saving Accounts</button>
-        </div>
-    </section>
+                        <div class="main-news__about">
+                            <p class="main-news__date date date--blue">
+                                <img src="img/icon-calendar.svg" alt="">
+                                24.01.2023
+                            </p>
 
-    <section class="manager">
-        <div class="manager__wrapper wrapper">
-            <h2 class="visually-hidden">Personal manager</h2>
+                            <div class="main-news__text-block">
+                                <h3>Crypto News</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Sit in auctor est duis egestas purus. Risus
+                                    proin condimentum senectus velit tincidunt amet tellus. Volutpat donec vitae auctor
+                                    diam. Suspendisse sapien tellus lectus volutpat euismod. Risus felis consectetur
+                                    amet in condimentum volutpat ut faucibus viverra.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="blog-main__media main-news">
+                    <a class="main-news__link" href="#">
+                        <img class="main-news__image" src="img/blog-7.jpg" alt="">
 
-            <div class="manager__image">
-                <img src="img/manager.jpg" alt="">
-            </div>
+                        <div class="main-news__about">
+                            <p class="main-news__date date date--blue">
+                                <img src="img/icon-calendar.svg" alt="">
+                                24.01.2023
+                            </p>
 
-            <div class="manager__text-block">
-                <p>In addition, Tipitek customers can be accompanied by a personal account manager. The manager can
-                    provide you with the necessary advice on automatic and algorithmic trading, which is also
-                    considered "effortless trading" among traders. A personal manager can also build an effective
-                    investment plan for you, which will help you earn even more. At Tipitek, there are many
-                    opportunities to gain profits. Discover them now.</p>
-            </div>
+                            <div class="main-news__text-block">
+                                <h3>Crypto News</h3>
+                                <p>Lorem ipsum dolor sit amet consectetur. Sit in auctor est duis egestas purus. Risus
+                                    proin condimentum senectus velit tincidunt amet tellus. Volutpat donec vitae auctor
+                                    diam. Suspendisse sapien tellus lectus volutpat euismod. Risus felis consectetur
+                                    amet in condimentum volutpat ut faucibus viverra.</p>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
 
-            <div class="manager__buttons">
-                <button class="manager__button button button--white-blue" type="submit">PERSONAL MANAGER</button>
-
-                <button class="manager__button button button--blue" type="submit">START</button>
-            </div>
+            <a class="blog-main__button button button--blue" href="#">Read More</a>
         </div>
     </section>
 </main>
