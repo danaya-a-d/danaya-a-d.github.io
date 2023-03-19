@@ -8,6 +8,7 @@
 
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/main.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
 </head>
 <body>
 
@@ -136,13 +137,17 @@
     </svg>
 </div>
 
-<header class="header">
+<header class="header wow fadeInDown">
     <div class="header__wrapper wrapper">
         <a href="index.html" class="header__logo logo">
             <img class="logo__img" src="img/logo.svg" alt="">
         </a>
 
         <nav class="header__nav main-nav">
+            <a href="index.html" class="main-nav__logo logo">
+                <img class="logo__img" src="img/logo.svg" alt="">
+            </a>
+
             <ul class="main-nav__list">
                 <li class="main-nav__item active"><a class="main-nav__link" href="#">Главная</a></li>
                 <li class="main-nav__item"><a class="main-nav__link" href="#">О нас</a></li>
@@ -191,7 +196,7 @@
             </div>
         </nav>
 
-<!--        <button class="header__menu-btn"></button>-->
+        <button class="header__menu-btn"></button>
     </div>
 </header>
 
@@ -222,25 +227,29 @@
 
                 <li class="first-screen__slider swiper-slide">
                     <div class="first-screen__wrapper wrapper">
-                        <h1 class="first-screen__title title">Мы - веб-разработчики и веб-дизайнеры</h1>
+                        <h1 class="first-screen__title title wow backInLeft">Мы - веб-разработчики и веб-дизайнеры</h1>
                         <img class="first-screen__image" src="img/slider-bg-4.jpg" alt="">
                     </div>
                 </li>
 
                 <li class="first-screen__slider swiper-slide">
                     <div class="first-screen__wrapper wrapper">
-                        <h1 class="first-screen__title title">Мы - инженеры-программисты</h1>
+                        <h1 class="first-screen__title title wow backInLeft">Мы - инженеры-программисты</h1>
                         <img class="first-screen__image" src="img/slider-bg-5.jpg" alt="">
                     </div>
                 </li>
 
                 <li class="first-screen__slider swiper-slide">
                     <div class="first-screen__wrapper wrapper">
-                        <h1 class="first-screen__title title">Мы - технические консультанты</h1>
+                        <h1 class="first-screen__title title wow backInLeft">Мы - технические консультанты</h1>
                         <img class="first-screen__image" src="img/slider-bg-6.jpg" alt="">
                     </div>
                 </li>
             </ul>
+
+            <!-- Add Pagination -->
+            <div class="first-screen__swiper-pagination wow fadeInLeft"></div>
+            <div class="first-screen__counter counter wow fadeIn"></div>
         </div>
     </section>
 
@@ -248,21 +257,23 @@
         <div class="about__wrapper wrapper">
             <h2 class="visually-hidden">О нас</h2>
 
-            <div class="about__content">
+            <div class="about__content wow fadeInUp hidden">
                 <div class="about__text">
                     <p><strong>Мы – группа энтузиастов</strong>, объеденившихся для того, чтобы выйти за рамки
                         условностей, навязываемых менеджментом больших организаций. <strong>Наша команда</strong>
                         состоит из высококлассных специалистов разнообразных отраслей IT-индустрии. Каждый из нас имеет
                         многолетний опыт в своей сфере.</p>
 
-                    <p>Мы занимаемся всем спектром <strong>IT-услуг</strong>, от консультаций, до разработки
+                    <p class="more">Мы занимаемся всем спектром <strong>IT-услуг</strong>, от консультаций, до разработки
                         веб-проектов и программного обеспечения, а также маркетингом и продвижением продуктов на рынке
                         <strong>IT-технологий</strong>. Пропагандируя отсутствие навязываемых стереотипов, мы готовы
                         создать проект любой сложности, и пройти с Вами весь путь от концепции до релиза, воплощая самые
                         смелые и нестандартные идеи!</p>
                 </div>
 
-                <div class="about__image-block">
+                <div class="about__more"></div>
+
+                <div class="about__image-block wow fadeInUp">
                     <img class="about__image" src="img/about-image.jpg" alt="">
                 </div>
             </div>
@@ -272,9 +283,9 @@
     <section class="path">
         <div class="path__banner">
             <div class="path__banner-wrapper wrapper">
-                <h2 class="path__title title"><strong>Путь от</strong> концепции до релиза</h2>
+                <h2 class="path__title title wow fadeInLeftBig"><strong>Путь от</strong> концепции до релиза</h2>
 
-                <div class="path__text">
+                <div class="path__text wow fadeInRightBig">
                     <p><strong>Мы выслушаем, проконсультируем и, разработаем</strong> для Вас удобные в использовании
                         высококлассные <strong>IT-продукты</strong>.</p>
                     <p>Благодаря нашему опыту и коллективной работе, мы нашли способ приносить пользу нашим клиентам с
@@ -284,9 +295,9 @@
         </div>
 
         <div class="path__list-container">
-            <div class="path__list-wrapper wrapper">
-                <ul class="path__list stages">
-                    <li class="stages__item">
+            <div class="path__list-wrapper wrapper swiper-container">
+                <ul class="path__list stages swiper-wrapper">
+                    <li class="stages__item swiper-slide wow fadeInUp">
                         <div class="stages__icon-block">
                             <img class="stages__icon" src="img/stages-icon-1.svg" alt="">
                         </div>
@@ -299,7 +310,7 @@
                         </p>
                     </li>
 
-                    <li class="stages__item">
+                    <li class="stages__item swiper-slide wow fadeInUp">
                         <div class="stages__icon-block">
                             <img class="stages__icon" src="img/stages-icon-2.svg" alt="">
                         </div>
@@ -312,7 +323,7 @@
                         </p>
                     </li>
 
-                    <li class="stages__item">
+                    <li class="stages__item swiper-slide wow fadeInUp">
                         <div class="stages__icon-block">
                             <img class="stages__icon" src="img/stages-icon-3.svg" alt="">
                         </div>
@@ -324,7 +335,7 @@
                         </p>
                     </li>
 
-                    <li class="stages__item">
+                    <li class="stages__item swiper-slide wow fadeInUp">
                         <div class="stages__icon-block">
                             <img class="stages__icon" src="img/stages-icon-4.svg" alt="">
                         </div>
@@ -336,7 +347,7 @@
                         </p>
                     </li>
 
-                    <li class="stages__item">
+                    <li class="stages__item swiper-slide wow fadeInUp">
                         <div class="stages__icon-block">
                             <img class="stages__icon" src="img/stages-icon-5.svg" alt="">
                         </div>
@@ -351,6 +362,11 @@
                     </li>
                 </ul>
             </div>
+
+            <div class="path__arrows wow fadeInUp">
+                <div class="path__slider-button-prev swiper-button-prev"></div>
+                <div class="path__slider-button-next swiper-button-next"></div>
+            </div>
         </div>
     </section>
 
@@ -359,11 +375,12 @@
             <h2 class="visually-hidden">Наша комманда</h2>
 
             <ul class="team__list team-slider">
-                <li class="team-slider__item active">
-                    <img class="team-slider__image" src="img/team-slider-img-1.jpg" alt="">
-                    <div class="team-slider__content">
+                <li class="team-slider__item">
+                    <img class="team-slider__image wow animLeft" src="img/team-slider-img-1.jpg" alt="">
+                    <div class="team-slider__content wow animRight">
                         <div class="team-slider__text">
-                            <p><strong>Представьте себе команду,</strong> которая расширит возможности Вашего бизнеса.</p>
+                            <p><strong>Представьте себе команду,</strong> которая расширит возможности Вашего бизнеса.
+                            </p>
                         </div>
 
                         <ul class="team-slider__toggles">
@@ -373,7 +390,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="team-slider__item">
+                <li class="team-slider__item visually-hidden">
                     <img class="team-slider__image" src="img/team-slider-img-1.jpg" alt="">
                     <div class="team-slider__content">
                         <div class="team-slider__text">
@@ -388,7 +405,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="team-slider__item">
+                <li class="team-slider__item visually-hidden">
                     <img class="team-slider__image" src="img/team-slider-img-1.jpg" alt="">
                     <div class="team-slider__content">
                         <div class="team-slider__text">
@@ -398,8 +415,8 @@
 
                         <ul class="team-slider__toggles">
                             <li class="team-slider__toggle">01</li>
-                            <li class="team-slider__toggle active">02</li>
-                            <li class="team-slider__toggle">03</li>
+                            <li class="team-slider__toggle">02</li>
+                            <li class="team-slider__toggle active">03</li>
                         </ul>
                     </div>
                 </li>
@@ -409,70 +426,85 @@
 
     <section class="service">
         <div class="service__wrapper wrapper">
-            <h2 class="service__title title"><strong>Основные</strong> услуги</h2>
+            <h2 class="service__title title wow fadeInUp"><strong>Основные</strong> услуги</h2>
 
             <ul class="service__list">
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-1.svg" alt="">
                     <div class="serv-card__text">
                         <h4>Технические консультации</h4>
-                        <p>Высококлассная помощь в выборе технологических решений, необходимых для Вашего бизнеса. Автоматизация бизнес-процессов. Аудит Ваших текущих программных комплексов.</p>
+                        <p>Высококлассная помощь в выборе технологических решений, необходимых для Вашего бизнеса.
+                            Автоматизация бизнес-процессов. Аудит Ваших текущих программных комплексов.</p>
                     </div>
                 </li>
 
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-2.svg" alt="">
                     <div class="serv-card__text">
                         <h4>Веб-разработка</h4>
-                        <p>Мы разработаем для Вас нестандартный дизайн, веб-проекты любой сложности, от сайта-визитки, до информационного портала. Веб приложения для Вашего бизнеса онлайн.</p>
+                        <p>Мы разработаем для Вас нестандартный дизайн, веб-проекты любой сложности, от сайта-визитки,
+                            до информационного портала. Веб приложения для Вашего бизнеса онлайн.</p>
                     </div>
                 </li>
 
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-3.svg" alt="">
                     <div class="serv-card__text">
                         <h4>Разработка программного обеспечения на заказ</h4>
-                        <p>Быстрое и эффективное развёртывание специализированных решений, отвечающих потребностям и возможностям Вашего бизнеса.</p>
+                        <p>Быстрое и эффективное развёртывание специализированных решений, отвечающих потребностям и
+                            возможностям Вашего бизнеса.</p>
                     </div>
                 </li>
 
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-4.svg" alt="">
                     <div class="serv-card__text">
                         <h4>UX/UI дизайн</h4>
-                        <p>Создание дизайна онлайн-продуктов и интерфейсов с максимальным уровнем комфорта, интуитивности и эффективности для пользователей Вашего продукта.</p>
+                        <p>Создание дизайна онлайн-продуктов и интерфейсов с максимальным уровнем комфорта,
+                            интуитивности и эффективности для пользователей Вашего продукта.</p>
                     </div>
                 </li>
 
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-5.svg" alt="">
                     <div class="serv-card__text">
                         <h4>Облачные услуги</h4>
-                        <p>Управляйте своими данными, анализируйте их и получайте необходимые результаты с максимальным уровнем эффективности и безопасности с помощью облачных решений. Максимизируйте ценность информации – одного из Ваших основных активов.</p>
+                        <p>Управляйте своими данными, анализируйте их и получайте необходимые результаты с максимальным
+                            уровнем эффективности и безопасности с помощью облачных решений. Максимизируйте ценность
+                            информации – одного из Ваших основных активов.</p>
                     </div>
                 </li>
 
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-6.svg" alt="">
                     <div class="serv-card__text">
                         <h4>Информационная безопасность</h4>
-                        <p>Невозможно переоценить важность вопроса безопасности. Обеспечьте максимальным уровнем безопасности используемые в Ваших проектах данные. Не дайте шанса недобросовестным конкурентам и другим злоумышленникам.</p>
+                        <p>Невозможно переоценить важность вопроса безопасности. Обеспечьте максимальным уровнем
+                            безопасности используемые в Ваших проектах данные. Не дайте шанса недобросовестным
+                            конкурентам и другим злоумышленникам.</p>
                     </div>
                 </li>
 
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-7.svg" alt="">
                     <div class="serv-card__text">
                         <h4>Маркетинг</h4>
-                        <p>Специалисты по маркетингу нового уровня научат Вас правильно позиционировать Ваш продукт на рынке. Мы проконсультируем Вас и создадим максимально адаптированные рекламные продукты, основанные на результатах анализа рынка и Ваших данных для продвижения Вашей компании и увеличения продаж.</p>
+                        <p>Специалисты по маркетингу нового уровня научат Вас правильно позиционировать Ваш продукт на
+                            рынке. Мы проконсультируем Вас и создадим максимально адаптированные рекламные продукты,
+                            основанные на результатах анализа рынка и Ваших данных для продвижения Вашей компании и
+                            увеличения продаж.</p>
                     </div>
                 </li>
 
-                <li class="service__item serv-card">
+                <li class="service__item serv-card wow fadeInRight">
                     <img class="serv-card__icon" src="img/serv-card-icon-8.svg" alt="">
                     <div class="serv-card__text">
                         <h4>Телемаркетинг</h4>
-                        <p>Увеличьте продажи Вашего продукта или услуги с помощью отдела телемаркетинга. Один из самых эффективны способов продаж – прямое общение по телефону. Найдите самые эффективные способы с помощью нашей команды и баз данных телефонных номеров. Кроме того мы поможем спроектировать, организовать и оборудовать Ваш собственный отдел сотрудников, которые смогут увеличить количество и эффективность продаж.</p>
+                        <p>Увеличьте продажи Вашего продукта или услуги с помощью отдела телемаркетинга. Один из самых
+                            эффективны способов продаж – прямое общение по телефону. Найдите самые эффективные способы с
+                            помощью нашей команды и баз данных телефонных номеров. Кроме того мы поможем спроектировать,
+                            организовать и оборудовать Ваш собственный отдел сотрудников, которые смогут увеличить
+                            количество и эффективность продаж.</p>
                     </div>
                 </li>
             </ul>
@@ -481,38 +513,38 @@
 
     <section class="discuss">
         <div class="discuss__wrapper wrapper">
-            <h2 class="discuss__title title"><strong>Давайте обсудим</strong> Ваш проект</h2>
+            <h2 class="discuss__title title wow fadeInUp"><strong>Давайте обсудим</strong> Ваш проект</h2>
 
             <form class="discuss__form main-form" action="#" method="post">
                 <fieldset class="main-form__field">
                     <label class="main-form__label">
-                        <input class="main-form__input" name="name" type="text" placeholder="Имя">
+                        <input class="main-form__input wow fadeInUp" name="name" type="text" placeholder="Имя">
                     </label>
 
                     <label class="main-form__label">
-                        <input class="main-form__input" name="lastname" type="text" placeholder="Фамилия">
+                        <input class="main-form__input wow fadeInUp" name="lastname" type="text" placeholder="Фамилия">
                     </label>
 
                     <label class="main-form__label">
-                        <input class="main-form__input" name="email" type="email" placeholder=" E-mail">
+                        <input class="main-form__input wow fadeInUp" name="email" type="email" placeholder=" E-mail">
                     </label>
 
                     <label class="main-form__label">
-                        <input class="main-form__input" name="tel" type="tel" placeholder="Номер телефона">
+                        <input class="main-form__input wow fadeInUp" name="tel" type="tel" placeholder="Номер телефона">
                     </label>
                 </fieldset>
 
                 <label class="main-form__label">
-                    <textarea class="main-form__textarea" name="message" placeholder="Опишите Ваши идеи"></textarea>
+                    <textarea class="main-form__textarea wow fadeInUp" name="message" placeholder="Опишите Ваши идеи"></textarea>
                 </label>
 
-                <button class="main-form__button button" type="submit">Отправить</button>
+                <button class="main-form__button button wow fadeInUp" type="submit">Отправить</button>
             </form>
         </div>
     </section>
 </main>
 
-<footer class="footer">
+<footer class="footer wow fadeInUp">
     <div class="footer__wrapper wrapper">
         <a href="index.html" class="footer__logo logo">
             <img class="logo__img" src="img/logo-dark.svg" alt="">
@@ -539,12 +571,12 @@
             </a></li>
         </ul>
 
-        <div class="footer__contacts contacts">
+        <div class="footer__contacts footer__contacts--first contacts">
             <p class="contacts__item">Украина, г. Днепр, ул.Свободы 57</p>
             <a href="mailto:info@gmail.com" class="contacts__item">info@gmail.com</a>
         </div>
 
-        <div class="footer__contacts contacts">
+        <div class="footer__contacts footer__contacts--last contacts">
             <a href="tel:+380680000978" class="contacts__item">+38 (068) 000-09-78</a>
             <a href="tel:+380680000977" class="contacts__item">+38 (068) 000-09-77</a>
         </div>
@@ -557,7 +589,9 @@
 
 
 
+<script src="script/jquery.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
+<script src="script/animate/wow.min.js"></script>
 <script src="script/main.js"></script>
 
 </body>
