@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     main_swiper.init();
 
-    const solution_swiper = new Swiper('.path__list-wrapper', {
+    const path_swiper = new Swiper('.path__list-wrapper', {
         slidesPerView: 1.25,
         spaceBetween: 20,
 
@@ -73,6 +73,28 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 allowSlideNext: false,
                 allowSlidePrev: false,
             },
+        }
+    });
+    const path_swiper_tree = new Swiper('.path__list-wrapper--tree', {
+        slidesPerView: 1.25,
+        spaceBetween: 20,
+
+        navigation: {
+            nextEl: '.path__slider-button-next',
+            prevEl: '.path__slider-button-prev',
+        },
+
+        breakpoints: {
+
+            460: {
+                slidesPerView: 2.5
+            },
+
+            768: {
+                slidesPerView: 3.09,
+                allowSlideNext: false,
+                allowSlidePrev: false,
+            }
         }
     });
 
