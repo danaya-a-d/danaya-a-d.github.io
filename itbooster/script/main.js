@@ -129,12 +129,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     $('.about__more').click(function() {
         let hideText = $('.more');
         hideText.slideToggle(350);
-        $('.about__content').removeClass('hidden');
+        $('.about__content--scroll').removeClass('hidden');
     });
 
     //комманда
-
-    let slider_blocks = document.querySelectorAll('.team-slider__item')
+    let slider_blocks = document.querySelectorAll('.team-slider__item');
 
     for (let i = 0; i < slider_blocks.length; i++) {
         let toggles = slider_blocks[i].querySelectorAll('.team-slider__toggle');
@@ -163,5 +162,23 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 slider_content.classList.add('animRight');
             };
         }
+    }
+
+    // технологии
+
+    let tech_lists = document.querySelectorAll('.using-tech__list');
+    let tech_toggles = document.querySelectorAll('.using-tech__nav-item');
+
+    for (let i = 0; i < tech_toggles.length; i++) {
+        tech_toggles[i].onclick = function() {
+
+            for (let j = 0; j < tech_toggles.length; j++) {
+                tech_toggles[j].classList.remove('active');
+                tech_toggles[i].classList.add('active');
+
+                tech_lists[j].classList.remove('active');
+                tech_lists[i].classList.add('active');
+            }
+        };
     }
 });
