@@ -228,6 +228,64 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     });
 
+    const roadmap_swiper_bottom = new Swiper('.roadmap__bottom-slider-container', {
+        direction: 'horizontal',
+        slidesPerView: 3.2,
+        speed: 500,
+
+        breakpoints: {
+            370: {
+                slidesPerView: 3,
+            },
+
+            621: {
+                allowSlideNext: false,
+                allowSlidePrev: false,
+                slidesPerView: 'auto',
+            },
+        }
+    });
+
+    const roadmap_swiper_top = new Swiper('.roadmap__top-slider-container', {
+        direction: 'horizontal',
+        loop: false,
+        speed: 500,
+        slidesPerView: 1,
+        effect: 'fade',
+        init: false,
+        fadeEffect: {
+            crossFade: true
+        },
+
+        thumbs: {
+            swiper: roadmap_swiper_bottom
+        },
+
+        navigation: {
+            nextEl: '.roadmap__slider-button-next',
+            prevEl: '.roadmap__slider-button-prev',
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '"> 0' + (index + 1) + "</span>";
+            }
+        }
+    });
+
+    roadmap_swiper_top.on("slideChange afterInit init", function () {
+        let currentSlide = this.activeIndex + 1;
+        document.querySelector('.counter').innerHTML = `
+    <span class="counter__current">
+    ${currentSlide}
+    </span>
+    /
+    <span class="counter__total">
+      ${this.slides.length}
+    </span>`;
+    });
+
+    roadmap_swiper_top.controller.control = roadmap_swiper_bottom;
+
+    roadmap_swiper_top.init();
+
     //кастомный select
     jQuery(($) => {
         $('.select').on('click', '.select__head', function () {
