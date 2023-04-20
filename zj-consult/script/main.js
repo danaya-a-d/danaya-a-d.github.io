@@ -79,7 +79,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
 
             if (tech_toggles[i].classList.contains('active')) {
-                if (window.matchMedia('(max-width: 768px)').matches) {
+                if (window.matchMedia('(max-width: 767px)').matches) {
                     $('html, body').animate({
                         scrollTop: $(this).offset().top - 10
                     }, 300);
