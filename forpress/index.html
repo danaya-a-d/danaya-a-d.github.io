@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Главная</title>
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+
+        <button class="header__menu-btn"></button>
+
+        <a href="index.html" class="header__logo logo">
+            <img class="logo__img" src="img/logo.svg" alt="Forpress">
+        </a>
+
+        <form class="header__city city-select" method="post" action="#">
+            <label class="city-select__label">
+                <select class="city-select__item">
+                    <option value="Москва">Москва</option>
+                    <option value="Ростов">Ростов</option>
+                </select>
+            </label>
+        </form>
+
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--big">
+                    <a href="#">каталог пресс-релизов</a>
+                    <div class="nav__sublist-container">
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem"><a href="#">Импортозамещение</a></li>
+                            <li class="nav__subitem">
+                                <a href="#">Производство</a>
+                                <div class="nav__sub-sublist-container">
+                                    <ul class="nav__sub-sublist">
+                                        <li class="nav__sub-subitem"><a href="#">АПК, рыболовство и пищевая промышленность</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Геологоразведка и добыча ресурсов </a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Деревообработка и ЦБК</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Легкая промышленность</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Машиностроение </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav__subitem"><a href="#">Информационные технологии</a></li>
+                            <li class="nav__subitem"><a href="#">Финансы</a></li>
+                            <li class="nav__subitem"><a href="#">Услуги</a></li>
+                            <li class="nav__subitem"><a href="#">Торговля</a></li>
+
+                            <li class="nav__subitem">
+                                <a href="#">Наука и образование</a>
+                                <div class="nav__sub-sublist-container">
+                                    <ul class="nav__sub-sublist">
+                                        <li class="nav__sub-subitem"><a href="#">Вузы</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Курсы, семинары тренинги</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">НИОКР и инновации</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Образование за рубежом</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Школы, гимназии, лицеи</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav__subitem"><a href="#">Отдых и туризм</a></li>
+                            <li class="nav__subitem"><a href="#">Политика</a></li>
+                            <li class="nav__subitem"><a href="#">Общество</a></li>
+                            <li class="nav__subitem"><a href="#">Культура</a></li>
+                            <li class="nav__subitem"><a href="#">Спорт</a></li>
+                            <li class="nav__subitem"><a href="#">красота и здоровье</a></li>
+
+                            <li class="nav__more">
+                                <a class="nav__more-link">Ещё</a>
+
+                                <ul class="nav__more-list">
+                                    <li class="nav__more-item"><a href="#">Финансы</a></li>
+                                    <li class="nav__more-item"><a href="#">Услуги</a></li>
+                                    <li class="nav__more-item"><a href="#">Торговля</a></li>
+                                    <li class="nav__more-item"><a href="#">Наука и образование</a></li>
+                                    <li class="nav__more-item"><a href="#">Отдых и туризм</a></li>
+                                    <li class="nav__more-item"><a href="#">Политика</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav__item nav__item--big"><a class="nav__link" href="#">пиарщикам и журналистам</a></li>
+
+                <li class="nav__item"><a class="nav__link" href="#">база данных компаний</a></li>
+
+                <li class="nav__item"><a class="nav__link" href="#">помощь</a></li>
+            </ul>
+
+            <a class="nav__button button button--trans" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0"
+                     viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                     class=""><g><path d="M405.332 192H234.668V21.332C234.668 9.559 225.109 0 213.332 0 201.559 0 192 9.559 192 21.332V192H21.332C9.559 192 0 201.559 0 213.332c0 11.777 9.559 21.336 21.332 21.336H192v170.664c0 11.777 9.559 21.336 21.332 21.336 11.777 0 21.336-9.559 21.336-21.336V234.668h170.664c11.777 0 21.336-9.559 21.336-21.336 0-11.773-9.559-21.332-21.336-21.332zm0 0" fill="white" data-original="white" class=""></path></g></svg>
+                добавить пресс-релиз
+            </a>
+        </nav>
+
+        <div class="header__manage">
+            <a class="header__button button button--trans" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0"
+                     viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                     class=""><g><path d="M405.332 192H234.668V21.332C234.668 9.559 225.109 0 213.332 0 201.559 0 192 9.559 192 21.332V192H21.332C9.559 192 0 201.559 0 213.332c0 11.777 9.559 21.336 21.332 21.336H192v170.664c0 11.777 9.559 21.336 21.332 21.336 11.777 0 21.336-9.559 21.336-21.336V234.668h170.664c11.777 0 21.336-9.559 21.336-21.336 0-11.773-9.559-21.332-21.336-21.332zm0 0" fill="white" data-original="white" class=""></path></g></svg>
+                добавить пресс-релиз
+            </a>
+            <a class="header__search" href="#"></a>
+            <a class="header__account" href="#"></a>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="first-screen">
+
+        <div class="first-screen__text">
+            <div class="first-screen__text-wrapper wrapper" style="background-image: url(img/forpress-bg.png)">
+                <h1>
+                    <mark>Сервис</mark>
+                    для&nbsp;пиарщиков и журналистов
+                </h1>
+            </div>
+        </div>
+
+        <div class="first-screen__wrapper wrapper">
+            <ul class="first-screen__news news-container">
+                <li class="news-container__item news-block news-block--white">
+                    <span class="news-block__date">19 апр 2023</span>
+
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Как CESCA и VERINT помогают партнерам эффективнее управлять контактными центрами: новые
+                                решения
+                                и обучение от экспертов</h4>
+                            <p>CESCA и VERINT провели обучающее мероприятие по анализу деятельности контактных центров,
+                                на
+                                котором обсудили текущую ситуацию и перспективы рынка, планы расширения программного
+                                обеспечения
+                                VERINT, оптимизацию бизнес-процессов и внедрение искусственного интеллекта.</p>
+                        </div>
+                    </a>
+
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+                </li>
+
+                <li class="news-container__item news-block news-block--black">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Как CESCA и VERINT помогают партнерам эффективнее управлять контактными центрами: новые
+                                решения
+                                и обучение от экспертов</h4>
+                            <p>CESCA и VERINT провели обучающее мероприятие по анализу деятельности контактных центров,
+                                на
+                                котором обсудили текущую ситуацию и перспективы рынка, планы расширения программного
+                                обеспечения
+                                VERINT, оптимизацию бизнес-процессов и внедрение искусственного интеллекта.</p>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+                </li>
+
+                <li class="news-container__item news-block news-block--back">
+
+                    <span class="news-block__date">19 апр 2023</span>
+
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Zavidovo SUP Challenge. Новый рекорд на SUP-соревнованиях!</h4>
+                        </div>
+                    </a>
+
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+
+                    <img class="news-block__back-img" src="img/news-block-1.jpg" alt="">
+                </li>
+
+                <li class="news-container__item news-block news-block--red">
+                    <span class="news-block__date">19 апр 2023</span>
+
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Как CESCA и VERINT помогают партнерам эффективнее управлять контактными центрами</h4>
+                            <p>CESCA и VERINT провели обучающее мероприятие по анализу деятельности контактных центров,
+                                на
+                                котором обсудили текущую ситуацию и перспективы рынка, планы расширения программного
+                                обеспечения
+                                VERINT, оптимизацию бизнес-процессов и внедрение искусственного интеллекта.</p>
+                        </div>
+                    </a>
+
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+                </li>
+
+                <li class="news-container__item news-block news-block--image">
+                    <span class="news-block__date">19 апр 2023</span>
+
+                    <a class="news-block__link" href="#">
+
+                        <div class="news-block__img-container">
+                            <img class="news-block__img" src="img/news-block-2.jpg" alt="">
+                        </div>
+
+                        <div class="news-block__text">
+                            <h4>Zavidovo SUP Challenge. Новый рекорд на SUP-соревнованиях!</h4>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+                </li>
+
+                <li class="news-container__item news-block news-block--white">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Как CESCA и VERINT помогают партнерам эффективнее управлять контактными центрами: новые
+                                решения
+                                и обучение от экспертов</h4>
+                            <p>CESCA и VERINT провели обучающее мероприятие по анализу деятельности контактных центров,
+                                на
+                                котором обсудили текущую ситуацию и перспективы рынка, планы расширения программного
+                                обеспечения
+                                VERINT, оптимизацию бизнес-процессов и внедрение искусственного интеллекта.</p>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner__wrapper wrapper">
+            <div class="banner__content">
+                <div class="banner__text">
+                    <h2>ИНТЕГРАЦИЯ БИТРИКС 24 - CRM №1 в России</h2>
+                    <p>Автоматизция ваших бизнес-процессов</p>
+                </div>
+                <a class="banner__button button button--green" href="#">подробнее</a>
+            </div>
+
+            <img class="banner__image" src="img/banner-image.jpg" alt="">
+        </div>
+    </section>
+
+    <section class="release release--white">
+        <div class="release__wrapper wrapper">
+
+            <div class="release__text">
+                <h2>пресс-релизы:
+                    <mark>МОСКВА</mark>
+                </h2>
+            </div>
+
+            <ul class="release__news news-container">
+                <li class="news-container__item news-block news-block--black">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Северские росгвардейцы стали лучшими в чемпионате «Динамо» по гиревому спорту в
+                                Томске</h4>
+                            <p>Военнослужащие Северского соединения Росгвардии стали победителями соревнований по
+                                гиревому
+                                спорту в зачёт круглогодичной региональной спартакиады Всероссийского
+                                физкультурно-спортивного общества «Динамо».</p>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Общественная безопасность,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Армия,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Спортивные мероприятия</a></li>
+                    </ul>
+                </li>
+
+                <li class="news-container__item news-block news-block--back">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Как CESCA и VERINT помогают партнерам эффективнее управлять контактными центрами: новые
+                                решения и обучение от экспертов</h4>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+
+                    <img class="news-block__back-img" src="img/news-block-3.jpg" alt="">
+                </li>
+
+                <li class="news-container__item news-block news-block--image">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__img-container">
+                            <img class="news-block__img" src="img/news-block-4.jpg" alt="">
+                        </div>
+
+                        <div class="news-block__text">
+                            <h4>Eastdil Secured назначила Юргена Фенка управляющим директором</h4>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Общество,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Недвижимость-продажа,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Аренда</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="release__search search-banner">
+                <div class="search-banner__container">
+                    <h2>
+                        <mark>Базы данных</mark>
+                        компаний
+                    </h2>
+                    <p>(17258)</p>
+
+                    <a class="search-banner__button button button--red button--search" href="#">начать поиск</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="release release--gray">
+        <div class="release__wrapper wrapper">
+
+            <div class="release__text">
+                <h2>пресс-релизы</h2>
+            </div>
+
+            <ul class="release__news news-container">
+                <li class="news-container__item news-block news-block--white">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Северские росгвардейцы стали лучшими в чемпионате «Динамо» по гиревому спорту в
+                                Томске</h4>
+                            <p>Военнослужащие Северского соединения Росгвардии стали победителями соревнований по
+                                гиревому
+                                спорту в зачёт круглогодичной региональной спартакиады Всероссийского
+                                физкультурно-спортивного общества «Динамо».</p>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Общественная безопасность,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Армия,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Спортивные мероприятия</a></li>
+                    </ul>
+                </li>
+
+                <li class="news-container__item news-block news-block--back">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__text">
+                            <h4>Как CESCA и VERINT помогают партнерам эффективнее управлять контактными центрами: новые
+                                решения и обучение от экспертов</h4>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Софт,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                    </ul>
+
+                    <img class="news-block__back-img" src="img/news-block-4.jpg" alt="">
+                </li>
+
+                <li class="news-container__item news-block news-block--image">
+                    <span class="news-block__date">19 апр 2023</span>
+                    <a class="news-block__link" href="#">
+                        <div class="news-block__img-container">
+                            <img class="news-block__img" src="img/news-block-5.jpg" alt="">
+                        </div>
+
+                        <div class="news-block__text">
+                            <h4>Eastdil Secured назначила Юргена Фенка управляющим директором</h4>
+                        </div>
+                    </a>
+                    <ul class="news-block__tags">
+                        <li class="news-block__tag"><a href="#">#&nbsp;Общество,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Недвижимость-продажа,</a></li>
+                        <li class="news-block__tag"><a href="#">#&nbsp;Аренда</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="instruments">
+        <div class="instruments__wrapper wrapper">
+            <img class="instruments__logo" src="img/logo.svg" alt="">
+            <div class="instruments__content">
+                <div class="instruments__line instruments__line--top">
+                    <p>Это эффективный инструмент в арсенале PR-менеджера, оптимизатора или журналиста. Пройдя простую и
+                        быструю
+                        процедуру <a href="#">регистрации</a>, вы сможете</p>
+                </div>
+
+                <div class="instruments__line instruments__line--bottom">
+                    <p><small>Условие только одно - оформление пресс-релизов в рамках <a href="#">правил данного
+                        ресурса.</a></small></p>
+                </div>
+
+                <div class="instruments__buttons">
+                    <a class="instruments__button button button--gray button--plus">добавить компанию</a>
+                    <a class="instruments__button button button--red button--plus">добавить пресс-релиз</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service">
+        <div class="service__wrapper wrapper">
+            <div class="service__block service__block--red">
+                <h4>На портале для пиарщиков и
+                    журналистов Forpress.ru Вы можете воспользоваться дополнительными услугами при размещении
+                    пресс-релизов.</h4>
+                <p>При помощи данных услуг Вы сможете:</p>
+                <ul>
+                    <li>выделить цветом свой материал,</li>
+                    <li>разместить его в топах на главной странице,</li>
+                    <li>разместить его в топе в рубрике,</li>
+                    <li>добавить в релиз необходимое количество</li>
+                    <li>внешних ссылок и т.д.</li>
+                </ul>
+            </div>
+
+            <div class="service__block service__block--white">
+                <h4>О том, как воспользоваться
+                    данными возможностями,
+                    читайте в разделе </h4>
+
+                <a class="service__help" href="#">Помощь</a>
+
+                <p>Пресс-релиз является одной из важнейших основ современного электронного информационного обмена. В
+                    кратком сообщении Вы можете рассказать о деятельности Вашей компании, а также значимом общественном
+                    или экономическом мероприятии, разместив необходимые ссылки.</p>
+            </div>
+
+            <div class="service__block service__block--gray">
+                <div class="service__text">
+                    <p>Мы не только даем возможность опубликовать статью или пресс релиз, но и на регулярной основе
+                        публикуем <a href="#">методические материалы</a>, которые помогут молодому специалисту
+                        структурировать
+                        свои
+                        знания, а для профессионала станут легкодоступным справочным материалом.</p>
+                </div>
+
+                <div class="service__logos">
+                    <img class="service__small-logo" src="img/small-logo.svg" alt="">
+                    <img class="service__big-logo" src="img/title-logo.svg" alt="">
+                </div>
+
+                <div class="service__text">
+                    <p>Даже если Ваша деятельность непосредственно не связана ни с PR, ни с журналистикой в целом, наш
+                        сайт
+                        поможет Вам с помощью <a href="#">емких тематических статей</a> приобрести навыки, необходимые
+                        для
+                        того, чтобы написать пресс-релиза.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__nav">
+            <div class="footer__nav-block">
+                <a class="footer__title" href="#">каталог пресс-релизов</a>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Импортозамещение</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Производство</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Информационные технологии</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Финансы</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Услуги</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Торговля</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Наука и образование</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Отдых и туризм</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Общество</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Культура</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Спорт</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Красота и здоровье</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <a class="footer__title" href="#">пиарщикам и журналистам</a>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">ПР-менеджеру на заметку</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Журналисту на заметку</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Оптимизатору на заметку</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Реклама на сайте</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Справочники и словари</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Правила публикации пресс&#8209;релизов</a>
+                    </li>
+                    <li class="footer__item"><a href="#" class="footer__link">Помощь</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Пользовательское соглашение</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link footer__link--red">Регистрация</a></li>
+                    <li class="footer__item-title"><a href="#" class="footer__title">база данных компаний</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__manage">
+            <a class="footer__button button button--trans" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0"
+                     viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                     class=""><g><path d="M405.332 192H234.668V21.332C234.668 9.559 225.109 0 213.332 0 201.559 0 192 9.559 192 21.332V192H21.332C9.559 192 0 201.559 0 213.332c0 11.777 9.559 21.336 21.332 21.336H192v170.664c0 11.777 9.559 21.336 21.332 21.336 11.777 0 21.336-9.559 21.336-21.336V234.668h170.664c11.777 0 21.336-9.559 21.336-21.336 0-11.773-9.559-21.332-21.336-21.332zm0 0" fill="white" data-original="white" class=""></path></g></svg>
+                добавить пресс-релиз
+            </a>
+            <a class="footer__mail" href="#">info@forpress.ru</a>
+        </div>
+    </div>
+
+
+    <div class="footer__bottom-wrapper wrapper">
+        <a href="index.html" class="footer__logo logo">
+            <img class="logo__img" src="img/logo.svg" alt="Forpress">
+        </a>
+
+        <p class="footer__copy">© 2007-2023 «FORPRESS»</p>
+    </div>
+</footer>
+
+<script src="script/jquery.min.js"></script>
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
+

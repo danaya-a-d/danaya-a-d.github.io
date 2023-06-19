@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Статья</title>
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<header class="header">
+    <div class="header__wrapper wrapper">
+
+        <button class="header__menu-btn"></button>
+
+        <a href="index.html" class="header__logo logo">
+            <img class="logo__img" src="img/logo.svg" alt="Forpress">
+        </a>
+
+        <form class="header__city city-select" method="post" action="#">
+            <label class="city-select__label">
+                <select class="city-select__item">
+                    <option value="Москва">Москва</option>
+                    <option value="Ростов">Ростов</option>
+                </select>
+            </label>
+        </form>
+
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item nav__item--big">
+                    <a href="#">каталог пресс-релизов</a>
+                    <div class="nav__sublist-container">
+                        <ul class="nav__sublist">
+                            <li class="nav__subitem"><a href="#">Импортозамещение</a></li>
+                            <li class="nav__subitem">
+                                <a href="#">Производство</a>
+                                <div class="nav__sub-sublist-container">
+                                    <ul class="nav__sub-sublist">
+                                        <li class="nav__sub-subitem"><a href="#">АПК, рыболовство и пищевая промышленность</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Геологоразведка и добыча ресурсов </a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Деревообработка и ЦБК</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Легкая промышленность</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Машиностроение </a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="nav__subitem"><a href="#">Информационные технологии</a></li>
+                            <li class="nav__subitem"><a href="#">Финансы</a></li>
+                            <li class="nav__subitem"><a href="#">Услуги</a></li>
+                            <li class="nav__subitem"><a href="#">Торговля</a></li>
+
+                            <li class="nav__subitem">
+                                <a href="#">Наука и образование</a>
+                                <div class="nav__sub-sublist-container">
+                                    <ul class="nav__sub-sublist">
+                                        <li class="nav__sub-subitem"><a href="#">Вузы</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Курсы, семинары тренинги</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">НИОКР и инновации</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Образование за рубежом</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Школы, гимназии, лицеи</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                            <li class="nav__subitem"><a href="#">Отдых и туризм</a></li>
+                            <li class="nav__subitem"><a href="#">Политика</a></li>
+                            <li class="nav__subitem"><a href="#">Общество</a></li>
+                            <li class="nav__subitem"><a href="#">Культура</a></li>
+                            <li class="nav__subitem"><a href="#">Спорт</a></li>
+                            <li class="nav__subitem"><a href="#">красота и здоровье</a></li>
+
+                            <li class="nav__more">
+                                <a class="nav__more-link">Ещё</a>
+
+                                <ul class="nav__more-list">
+                                    <li class="nav__more-item"><a href="#">Финансы</a></li>
+                                    <li class="nav__more-item"><a href="#">Услуги</a></li>
+                                    <li class="nav__more-item"><a href="#">Торговля</a></li>
+                                    <li class="nav__more-item"><a href="#">Наука и образование</a></li>
+                                    <li class="nav__more-item"><a href="#">Отдых и туризм</a></li>
+                                    <li class="nav__more-item"><a href="#">Политика</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="nav__item nav__item--big"><a class="nav__link" href="#">пиарщикам и журналистам</a></li>
+
+                <li class="nav__item"><a class="nav__link" href="#">база данных компаний</a></li>
+
+                <li class="nav__item"><a class="nav__link" href="#">помощь</a></li>
+            </ul>
+
+            <a class="nav__button button button--trans" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0"
+                     viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                     class=""><g><path d="M405.332 192H234.668V21.332C234.668 9.559 225.109 0 213.332 0 201.559 0 192 9.559 192 21.332V192H21.332C9.559 192 0 201.559 0 213.332c0 11.777 9.559 21.336 21.332 21.336H192v170.664c0 11.777 9.559 21.336 21.332 21.336 11.777 0 21.336-9.559 21.336-21.336V234.668h170.664c11.777 0 21.336-9.559 21.336-21.336 0-11.773-9.559-21.332-21.336-21.332zm0 0" fill="white" data-original="white" class=""></path></g></svg>
+                добавить пресс-релиз
+            </a>
+        </nav>
+
+        <div class="header__manage">
+            <a class="header__button button button--trans" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0"
+                     viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                     class=""><g><path d="M405.332 192H234.668V21.332C234.668 9.559 225.109 0 213.332 0 201.559 0 192 9.559 192 21.332V192H21.332C9.559 192 0 201.559 0 213.332c0 11.777 9.559 21.336 21.332 21.336H192v170.664c0 11.777 9.559 21.336 21.332 21.336 11.777 0 21.336-9.559 21.336-21.336V234.668h170.664c11.777 0 21.336-9.559 21.336-21.336 0-11.773-9.559-21.332-21.336-21.332zm0 0" fill="white" data-original="white" class=""></path></g></svg>
+                добавить пресс-релиз
+            </a>
+            <a class="header__search" href="#"></a>
+            <a class="header__account" href="#"></a>
+        </div>
+    </div>
+</header>
+
+<main class="page-main">
+    <section class="article-main">
+        <div class="article-main__info">
+            <h1>В Суздале завершились соревнования
+                профмастерства среди работников блока
+                реализации услуг «Россети Центр» и «Россети Центр и Приволжье»</h1>
+
+            <p class="article-main__place"><strong>Владимир,</strong> Владимирская область</p>
+
+            <p class="article-main__date">12 АПР 2023</p>
+
+            <ul class="article-main__tags">
+                <li class="article-main__tag"><a href="#">#&nbsp;Общественная безопасность,</a></li>
+                <li class="article-main__tag"><a href="#">#&nbsp;Армия,</a></li>
+                <li class="article-main__tag"><a href="#">#&nbsp;Спортивные мероприятия</a></li>
+            </ul>
+        </div>
+
+        <div class="article-main__content">
+            <div class="article-main__author author">
+                <div class="author__about">
+                    <img class="author__photo" src="img/author.jpg" alt="">
+                    <p class="author__name">Вербин Михаил</p>
+                </div>
+
+                <div class="author__company">
+                    <img class="author__logo" src="img/company.jpg" alt="">
+                    <p class="author__title">«ВладимирЭнерго»</p>
+                    <a class="author__link" href="https://vizart-ptz.ru/news">https://vizart-ptz.ru/news</a>
+                    <a class="author__doc" href="#">Компания в базе данных</a>
+                </div>
+            </div>
+
+            <div class="article-main__text-block">
+                <div class="article-main__images">
+                    <ul class="article-main__big-images">
+                        <li class="article-main__big-image"><img src="img/art-1.jpg" alt=""></li>
+                        <li class="article-main__big-image"><img src="img/art-2.jpg" alt=""></li>
+                        <li class="article-main__big-image"><img src="img/art-3.jpg" alt=""></li>
+                    </ul>
+                </div>
+
+                <div class="article-main__text">
+                    <p>В течение 4-х дней более 100 участников Межфилиального финала соревнований "Россети Центр" и "Россети Центр и Приволжье" из 20-ти регионов России боролись за звание лучших по учёту электроэнергии и оптимизации потерь.</p>
+                    <p>Состязания состояли из нескольких этапов, на которых команды показывали свои знания в области охраны труда, выявляли факты неучтенного потребления электричества с помощью виртуального тренажера, на специальных стендах оценивали пригодность к работе и осуществляли замену счетчиков, производили монтаж шкафа устройства сбора и передачи данных.</p>
+                    <p>Отдельным этапом профессиональных соревнований стала работа в реальных условиях – в населённых пунктах, которые обслуживает Суздальский РЭС. Участникам необходимо было установить факты незаконного энергопотребления.</p>
+                    <p>В результате упорной борьбы первое место завоевал филиал «Владимирэнерго», вторыми стали – «Белгородэнерго», на третьем месте – энергетики «Смоленскэнерго».</p>
+                </div>
+
+                <div class="article-main__more">
+                    <ul class="article-main__more-list">
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ: «Необходимо расширить ...</a>
+                        </li>
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
+                        </li>
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Владимирская область и СберЛизинг расширяют сотрудничество</a>
+                        </li>
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Новосибирский офис «АльфаСтрахование» теперь работает по новому адресу</a>
+                        </li>
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ</a>
+                        </li>
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
+                        </li>
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ: «Необходимо расширить ...</a>
+                        </li>
+                        <li class="article-main__more-item">
+                            15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner">
+        <div class="banner__wrapper wrapper">
+            <div class="banner__content">
+                <div class="banner__text">
+                    <h2>ИНТЕГРАЦИЯ БИТРИКС 24 - CRM №1 в России</h2>
+                    <p>Автоматизция ваших бизнес-процессов</p>
+                </div>
+                <a class="banner__button button button--green" href="#">подробнее</a>
+            </div>
+
+            <img class="banner__image" src="img/banner-image.jpg" alt="">
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer__wrapper wrapper">
+        <div class="footer__nav">
+            <div class="footer__nav-block">
+                <a class="footer__title" href="#">каталог пресс-релизов</a>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">Импортозамещение</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Производство</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Информационные технологии</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Финансы</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Услуги</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Торговля</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Наука и образование</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Отдых и туризм</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Политика</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Общество</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Культура</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Спорт</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Красота и здоровье</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__nav-block">
+                <a class="footer__title" href="#">пиарщикам и журналистам</a>
+                <ul class="footer__list">
+                    <li class="footer__item"><a href="#" class="footer__link">ПР-менеджеру на заметку</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Журналисту на заметку</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Оптимизатору на заметку</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Реклама на сайте</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Справочники и словари</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Правила публикации пресс&#8209;релизов</a>
+                    </li>
+                    <li class="footer__item"><a href="#" class="footer__link">Помощь</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link">Пользовательское соглашение</a></li>
+                    <li class="footer__item"><a href="#" class="footer__link footer__link--red">Регистрация</a></li>
+                    <li class="footer__item-title"><a href="#" class="footer__title">база данных компаний</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer__manage">
+            <a class="footer__button button button--trans" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" x="0" y="0"
+                     viewBox="0 0 426.667 426.667" style="enable-background:new 0 0 512 512" xml:space="preserve"
+                     class=""><g><path d="M405.332 192H234.668V21.332C234.668 9.559 225.109 0 213.332 0 201.559 0 192 9.559 192 21.332V192H21.332C9.559 192 0 201.559 0 213.332c0 11.777 9.559 21.336 21.332 21.336H192v170.664c0 11.777 9.559 21.336 21.332 21.336 11.777 0 21.336-9.559 21.336-21.336V234.668h170.664c11.777 0 21.336-9.559 21.336-21.336 0-11.773-9.559-21.332-21.336-21.332zm0 0" fill="white" data-original="white" class=""></path></g></svg>
+                добавить пресс-релиз
+            </a>
+            <a class="footer__mail" href="#">info@forpress.ru</a>
+        </div>
+    </div>
+
+
+    <div class="footer__bottom-wrapper wrapper">
+        <a href="index.html" class="footer__logo logo">
+            <img class="logo__img" src="img/logo.svg" alt="Forpress">
+        </a>
+
+        <p class="footer__copy">© 2007-2023 «FORPRESS»</p>
+    </div>
+</footer>
+
+<script src="script/jquery.min.js"></script>
+<script src="script/main.min.js"></script>
+
+</body>
+</html>
+
