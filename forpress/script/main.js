@@ -103,13 +103,26 @@ window.addEventListener('DOMContentLoaded', function (event) {
         loop: false,
         speed: 1000,
         effect: 'fade',
+        allowTouchMove: true,
+
         fadeEffect: {
             crossFade: true
         },
+
         thumbs: {
             swiper: product_thumbs_swiper
-        }
+        },
+
+        pagination: {
+            el: '.article-main__dots',
+            type: 'bullets',
+            clickable: true
+        },
+
+        breakpoints: {
+            992: {
+                allowTouchMove: false,
+            }
+        },
     });
-
-
 });
