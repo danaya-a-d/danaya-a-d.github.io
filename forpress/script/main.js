@@ -88,4 +88,28 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     }
 
+
+    // Sliders
+    const product_thumbs_swiper = new Swiper('.article-main__small-container', {
+        direction: 'horizontal',
+        loop: false,
+        speed: 1000,
+        slidesPerView: 5,
+        spaceBetween: 15,
+    });
+
+    const product_swiper = new Swiper('.article-main__big-container', {
+        direction: 'horizontal',
+        loop: false,
+        speed: 1000,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+        thumbs: {
+            swiper: product_thumbs_swiper
+        }
+    });
+
+
 });

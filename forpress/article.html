@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Статья</title>
+    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -37,8 +38,10 @@
                                 <a href="#">Производство</a>
                                 <div class="nav__sub-sublist-container">
                                     <ul class="nav__sub-sublist">
-                                        <li class="nav__sub-subitem"><a href="#">АПК, рыболовство и пищевая промышленность</a></li>
-                                        <li class="nav__sub-subitem"><a href="#">Геологоразведка и добыча ресурсов </a></li>
+                                        <li class="nav__sub-subitem"><a href="#">АПК, рыболовство и пищевая
+                                            промышленность</a></li>
+                                        <li class="nav__sub-subitem"><a href="#">Геологоразведка и добыча ресурсов </a>
+                                        </li>
                                         <li class="nav__sub-subitem"><a href="#">Деревообработка и ЦБК</a></li>
                                         <li class="nav__sub-subitem"><a href="#">Легкая промышленность</a></li>
                                         <li class="nav__sub-subitem"><a href="#">Машиностроение </a></li>
@@ -117,79 +120,108 @@
 <main class="page-main">
     <section class="article-main">
         <div class="article-main__info">
-            <h1>В Суздале завершились соревнования
-                профмастерства среди работников блока
-                реализации услуг «Россети Центр» и «Россети Центр и Приволжье»</h1>
+            <div class="article-main__info-wrapper wrapper">
+                <h1>В Суздале завершились соревнования
+                    профмастерства среди работников блока
+                    реализации услуг «Россети Центр» и «Россети Центр и Приволжье»</h1>
 
-            <p class="article-main__place"><strong>Владимир,</strong> Владимирская область</p>
+                <p class="article-main__place"><strong>Владимир,</strong> Владимирская область</p>
 
-            <p class="article-main__date">12 АПР 2023</p>
+                <p class="article-main__date">12 АПР 2023</p>
 
-            <ul class="article-main__tags">
-                <li class="article-main__tag"><a href="#">#&nbsp;Общественная безопасность,</a></li>
-                <li class="article-main__tag"><a href="#">#&nbsp;Армия,</a></li>
-                <li class="article-main__tag"><a href="#">#&nbsp;Спортивные мероприятия</a></li>
-            </ul>
+                <ul class="article-main__tags">
+                    <li class="article-main__tag"><a href="#">#&nbsp;Софт,</a></li>
+                    <li class="article-main__tag"><a href="#">#&nbsp;Телекоммуникации,</a></li>
+                    <li class="article-main__tag"><a href="#">#&nbsp;Информационные технологии</a></li>
+                </ul>
+            </div>
         </div>
 
         <div class="article-main__content">
-            <div class="article-main__author author">
-                <div class="author__about">
-                    <img class="author__photo" src="img/author.jpg" alt="">
-                    <p class="author__name">Вербин Михаил</p>
+            <div class="article-main__content-wrapper wrapper">
+                <div class="article-main__author author">
+                    <p class="author__title">Автор релиза</p>
+                    <div class="author__about">
+                        <img class="author__photo" src="img/author.jpg" alt="">
+                        <p class="author__name">Вербин<br> Михаил</p>
+                    </div>
+
+                    <div class="author__company">
+                        <img class="author__logo" src="img/company.jpg" alt="">
+                        <p class="author__company-name">«ВладимирЭнерго»</p>
+                        <a class="author__link" href="https://vizart-ptz.ru/news">https://vizart-ptz.ru/news</a>
+                        <a class="author__doc" href="#">Компания в базе данных</a>
+                    </div>
                 </div>
 
-                <div class="author__company">
-                    <img class="author__logo" src="img/company.jpg" alt="">
-                    <p class="author__title">«ВладимирЭнерго»</p>
-                    <a class="author__link" href="https://vizart-ptz.ru/news">https://vizart-ptz.ru/news</a>
-                    <a class="author__doc" href="#">Компания в базе данных</a>
-                </div>
-            </div>
+                <div class="article-main__text-block">
+                    <div class="article-main__images">
+                        <div class="article-main__big-container swiper-container">
+                            <ul class="article-main__big-images swiper-wrapper">
+                                <li class="article-main__big-image swiper-slide"><img src="img/rt-1.jpg" alt=""></li>
+                                <li class="article-main__big-image swiper-slide"><img src="img/rt-2.jpg" alt=""></li>
+                                <li class="article-main__big-image swiper-slide"><img src="img/rt-3.jpg" alt=""></li>
+                            </ul>
+                        </div>
 
-            <div class="article-main__text-block">
-                <div class="article-main__images">
-                    <ul class="article-main__big-images">
-                        <li class="article-main__big-image"><img src="img/art-1.jpg" alt=""></li>
-                        <li class="article-main__big-image"><img src="img/art-2.jpg" alt=""></li>
-                        <li class="article-main__big-image"><img src="img/art-3.jpg" alt=""></li>
-                    </ul>
-                </div>
 
-                <div class="article-main__text">
-                    <p>В течение 4-х дней более 100 участников Межфилиального финала соревнований "Россети Центр" и "Россети Центр и Приволжье" из 20-ти регионов России боролись за звание лучших по учёту электроэнергии и оптимизации потерь.</p>
-                    <p>Состязания состояли из нескольких этапов, на которых команды показывали свои знания в области охраны труда, выявляли факты неучтенного потребления электричества с помощью виртуального тренажера, на специальных стендах оценивали пригодность к работе и осуществляли замену счетчиков, производили монтаж шкафа устройства сбора и передачи данных.</p>
-                    <p>Отдельным этапом профессиональных соревнований стала работа в реальных условиях – в населённых пунктах, которые обслуживает Суздальский РЭС. Участникам необходимо было установить факты незаконного энергопотребления.</p>
-                    <p>В результате упорной борьбы первое место завоевал филиал «Владимирэнерго», вторыми стали – «Белгородэнерго», на третьем месте – энергетики «Смоленскэнерго».</p>
-                </div>
+                        <div class="article-main__small-container swiper-container">
+                            <ul class="article-main__small-images swiper-wrapper">
+                                <li class="article-main__small-image swiper-slide"><img src="img/rt-1.jpg" alt=""></li>
+                                <li class="article-main__small-image swiper-slide"><img src="img/rt-2.jpg" alt=""></li>
+                                <li class="article-main__small-image swiper-slide"><img src="img/rt-3.jpg" alt=""></li>
+                            </ul>
+                        </div>
+                    </div>
 
-                <div class="article-main__more">
-                    <ul class="article-main__more-list">
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ: «Необходимо расширить ...</a>
-                        </li>
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
-                        </li>
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Владимирская область и СберЛизинг расширяют сотрудничество</a>
-                        </li>
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Новосибирский офис «АльфаСтрахование» теперь работает по новому адресу</a>
-                        </li>
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ</a>
-                        </li>
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
-                        </li>
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ: «Необходимо расширить ...</a>
-                        </li>
-                        <li class="article-main__more-item">
-                            15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
-                        </li>
-                    </ul>
+                    <div class="article-main__text">
+                        <p>В течение 4-х дней более 100 участников Межфилиального финала соревнований "Россети Центр" и
+                            "Россети Центр и Приволжье" из 20-ти регионов России боролись за звание лучших по учёту
+                            электроэнергии и оптимизации потерь.</p>
+                        <p>Состязания состояли из нескольких этапов, на которых команды показывали свои знания в области
+                            охраны труда, выявляли факты неучтенного потребления электричества с помощью виртуального
+                            тренажера, на специальных стендах оценивали пригодность к работе и осуществляли замену
+                            счетчиков, производили монтаж шкафа устройства сбора и передачи данных.</p>
+                        <p>Отдельным этапом профессиональных соревнований стала работа в реальных условиях – в населённых
+                            пунктах, которые обслуживает Суздальский РЭС. Участникам необходимо было установить факты
+                            незаконного энергопотребления.</p>
+                        <p>В результате упорной борьбы первое место завоевал филиал «Владимирэнерго», вторыми стали –
+                            «Белгородэнерго», на третьем месте – энергетики «Смоленскэнерго».</p>
+                    </div>
+
+                    <div class="article-main__more">
+                        <h2>Другие статьи «ВладимирЭнерго»</h2>
+
+                        <ul class="article-main__more-list">
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ: «Необходимо расширить
+                                ...</a>
+                            </li>
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
+                            </li>
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Владимирская область и СберЛизинг расширяют сотрудничество</a>
+                            </li>
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Новосибирский офис «АльфаСтрахование» теперь работает по новому
+                                адресу</a>
+                            </li>
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ</a>
+                            </li>
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
+                            </li>
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Александр Пестов, «Открытие Факторинг» на ПМЭФ: «Необходимо расширить
+                                ...</a>
+                            </li>
+                            <li class="article-main__more-item">
+                                15.06.2023 <a href="#">Россельхозбанк – 23 года на благо отрасли</a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -271,9 +303,11 @@
     </div>
 </footer>
 
-<script src="script/jquery.min.js"></script>
+<script src="script/swiper/swiper-bundle.min.js"></script>
+<script src="script/main.min.js"></script>
+
+<script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/main.min.js"></script>
 
 </body>
 </html>
-
