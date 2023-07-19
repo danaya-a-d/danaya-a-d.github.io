@@ -82,7 +82,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     const platform_swiper = new Swiper('.platform-adv__container', {
         direction: 'horizontal',
-        slidesPerView: 1.4,
+        slidesPerView: 1.25,
         spaceBetween: 16,
 
         pagination: {
@@ -101,7 +101,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     const choosing_swiper = new Swiper('.choosing__container', {
         direction: 'horizontal',
-        slidesPerView: 1.4,
+        slidesPerView: 1.25,
         spaceBetween: 16,
 
         pagination: {
