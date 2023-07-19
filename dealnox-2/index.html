@@ -207,7 +207,23 @@
                 <tbody>
 
                 <tr>
-                    <th>Currency</th>
+                    <th>
+                        <div class="coinlist__select-block">
+                            Currency
+                            <div class="select coinlist__select">
+                                <input type="hidden" name="currency" required="" value="BTC">
+                                <div class="select__head">BTC</div>
+
+                                <ul class="select__list" style="display: none;">
+                                    <li class="select__item">BTC</li>
+
+                                    <li class="select__item">USDC</li>
+
+                                    <li class="select__item">ETH</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </th>
                     <th>Last Price</th>
                     <th>24h Change</th>
                     <th>Market Cap</th>
