@@ -167,14 +167,20 @@ window.addEventListener('DOMContentLoaded', function (event) {
     });
 
     //смена языков
-
     let languages = document.querySelector('.languages');
 
     languages.addEventListener('click', function () {
         languages.classList.toggle('open');
     });
 
-    // плавная прокрутка к якорю
+    //смена страниц новостей
+    let news = document.querySelector('.news-section__buttons-container');
+
+    news.addEventListener('click', function () {
+        news.classList.toggle('open');
+    });
+
+    //плавная прокрутка к якорю
     const anchors = document.querySelectorAll('a[href*="#"]');
 
     if (anchors != null) {
@@ -189,6 +195,17 @@ window.addEventListener('DOMContentLoaded', function (event) {
                     block: 'start'
                 })
             })
+        }
+    }
+
+    //faq
+    let faq_item = document.querySelectorAll('.faq__item');
+
+    if (faq_item !== null) {
+        for (i = 0; i < faq_item.length; i++) {
+            faq_item[i].addEventListener('click', function (event) {
+                this.classList.toggle('active');
+            });
         }
     }
 });
