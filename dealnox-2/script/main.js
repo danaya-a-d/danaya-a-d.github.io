@@ -176,9 +176,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     //смена страниц новостей
     let news = document.querySelector('.news-section__buttons-container');
 
-    news.addEventListener('click', function () {
-        news.classList.toggle('open');
-    });
+    if (news !== null) {
+        news.addEventListener('click', function () {
+            news.classList.toggle('open');
+        });
+    }
 
     //плавная прокрутка к якорю
     const anchors = document.querySelectorAll('a[href*="#"]');
