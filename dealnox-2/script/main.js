@@ -166,6 +166,14 @@ window.addEventListener('DOMContentLoaded', function (event) {
         menu_open();
     });
 
+    let header_nav_items = document.querySelectorAll('.main-nav__item');
+
+    for (let i = 0; i < header_nav_items.length; i++) {
+        header_nav_items[i].addEventListener('click', function () {
+            this.classList.toggle('active');
+        });
+    }
+
     //смена языков
     let languages = document.querySelector('.languages');
 
@@ -190,12 +198,15 @@ window.addEventListener('DOMContentLoaded', function (event) {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault()
 
-                const blockID = anchor.getAttribute('href').substr(1)
+                const blockID = anchor.getAttribute('href').substr(1);
+                const el = document.getElementById(blockID);
 
-                document.getElementById(blockID).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                })
+                if (el !== null) {
+                    el.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    })
+                }
             })
         }
     }
