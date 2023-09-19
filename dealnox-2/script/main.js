@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         },
 
         breakpoints: {
-            768: {
+            767: {
                 slidesPerView: 1.4,
                 spaceBetween: 24,
             },
@@ -39,7 +39,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 spaceBetween: 32,
             },
 
-            1440: {
+            1260.5: {
                 slidesPerView: 2,
                 spaceBetween: 56,
                 loop: false,
@@ -70,12 +70,16 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 slidesPerView: 3.15,
                 slidesPerColumn: 1,
                 spaceBetween: 40,
+                allowSlideNext: false,
+                allowSlidePrev: false,
             },
 
-            1440: {
+            1260.5: {
                 slidesPerView: 4.15,
                 slidesPerColumn: 1,
                 spaceBetween: 40,
+                allowSlideNext: false,
+                allowSlidePrev: false,
             }
         }
     });
