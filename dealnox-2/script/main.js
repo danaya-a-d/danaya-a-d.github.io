@@ -219,10 +219,32 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let faq_item = document.querySelectorAll('.faq__item');
 
     if (faq_item !== null) {
-        for (i = 0; i < faq_item.length; i++) {
+        for (let i = 0; i < faq_item.length; i++) {
             faq_item[i].addEventListener('click', function (event) {
                 this.classList.toggle('active');
             });
+        }
+    }
+
+    //workers
+
+    let worker = document.querySelectorAll('.worker');
+
+    if (worker !== null) {
+        for (let i = 0; i < worker.length; i++) {
+            let btn = worker[i].querySelector('.worker__button');
+            let back = worker[i].querySelector('.worker__back');
+
+            btn.addEventListener('click', function (event) {
+                worker[i].classList.toggle('active');
+            });
+
+            back.addEventListener('click', function (event) {
+                if (worker[i].classList.contains('active')) {
+                    worker[i].classList.toggle('active');
+                }
+            });
+
         }
     }
 });
