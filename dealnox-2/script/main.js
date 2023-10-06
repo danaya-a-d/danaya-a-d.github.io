@@ -227,9 +227,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
     //workers
-
     let worker = document.querySelectorAll('.worker');
 
+    //переворот блока
     if (worker !== null) {
         for (let i = 0; i < worker.length; i++) {
             let btn = worker[i].querySelector('.worker__button');
