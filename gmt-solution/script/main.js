@@ -80,8 +80,11 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
     //скролл по центру блока логотипы
-    window.addEventListener('load', () => {
-        let scrollElement = document.querySelector('.logos__list');
-        scrollElement.scrollLeft =  (scrollElement.scrollWidth - scrollElement.clientWidth ) / 2;
-    });
+    let scrollElement = document.querySelector('.logos__list');
+    if (scrollElement !== null) {
+        window.addEventListener('load', () => {
+            scrollElement.scrollLeft = (scrollElement.scrollWidth - scrollElement.clientWidth) / 2;
+        });
+
+    }
 });
