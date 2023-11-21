@@ -11,6 +11,52 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     });
 
+    const advantages_swiper = new Swiper('.advantages__container', {
+        direction: 'horizontal',
+        slidesPerView: 1.3,
+        spaceBetween: 16,
+
+        breakpoints: {
+            767: {
+                slidesPerView: 'auto',
+                allowSlideNext: false,
+                allowSlidePrev: false,
+                spaceBetween: 'auto',
+            },
+        }
+    });
+
+    const why_us_swiper = new Swiper('.why-us__container', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 16,
+
+        navigation: {
+            nextEl: '.why-us__slider-button-next',
+            prevEl: '.why-us__slider-button-prev',
+        },
+
+        breakpoints: {
+            767: {
+                direction: 'horizontal',
+                slidesPerView: 1,
+                spaceBetween: 16,
+            },
+
+            1023: {
+                direction: 'horizontal',
+                slidesPerView: 2,
+                spaceBetween: 16,
+            },
+
+            1260: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                spaceBetween: 48,
+            },
+        }
+    });
+
     //workers
     let flip_block = document.querySelectorAll('.flip-block');
 
@@ -32,4 +78,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
         }
     }
+
+    //скролл по центру блока логотипы
+    window.addEventListener('load', () => {
+        let scrollElement = document.querySelector('.logos__list');
+        scrollElement.scrollLeft =  (scrollElement.scrollWidth - scrollElement.clientWidth ) / 2;
+    });
 });

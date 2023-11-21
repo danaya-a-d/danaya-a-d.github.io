@@ -87,22 +87,24 @@
 
     <section class="advantages">
         <div class="advantages__wrapper wrapper">
-            <ul class="advantages__list">
-                <li class="advantages__item advantage">
-                    <p class="advantage__value">2021</p>
-                    <p class="advantage__title">открыты с 2021 года</p>
-                </li>
+            <div class="advantages__container swiper-container">
+                <ul class="advantages__list swiper-wrapper">
+                    <li class="advantages__item advantage swiper-slide">
+                        <p class="advantage__value">2021</p>
+                        <p class="advantage__title">открыты с 2021 года</p>
+                    </li>
 
-                <li class="advantages__item advantage">
-                    <p class="advantage__value">15 000</p>
-                    <p class="advantage__title">учеников</p>
-                </li>
+                    <li class="advantages__item advantage swiper-slide">
+                        <p class="advantage__value">15 000</p>
+                        <p class="advantage__title">учеников</p>
+                    </li>
 
-                <li class="advantages__item advantage">
-                    <p class="advantage__value">7 000</p>
-                    <p class="advantage__title">кейсов по индивидуальному обучению</p>
-                </li>
-            </ul>
+                    <li class="advantages__item advantage swiper-slide">
+                        <p class="advantage__value">7 000</p>
+                        <p class="advantage__title">кейсов по индивидуальному обучению</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
@@ -117,7 +119,8 @@
                     <div class="knowledge__text">
                         <h4>Обучающие курсы как для начинающих, так и для опытных трейдеров</h4>
                     </div>
-                    <img class="knowledge__image" src="img/knowledge-2.png" alt="">
+                    <img class="knowledge__image knowledge__image--dec" src="img/knowledge-2.png" alt="">
+                    <img class="knowledge__image knowledge__image--mob" src="img/knowledge-2-2.png" alt="">
                 </div>
 
                 <div class="knowledge__item knowledge__item--col knowledge__item--r-border">
@@ -240,7 +243,8 @@
         <div class="media__wrapper wrapper">
             <h2>Медиа о нас</h2>
         </div>
-            <div class="media__logos logos">
+        <div class="media__logos logos">
+            <div class="logos__container">
                 <div class="logos__list">
                     <img class="logos__item" src="img/logo-1.png" alt="">
                     <img class="logos__item" src="img/logo-2.png" alt="">
@@ -249,6 +253,7 @@
                     <img class="logos__item" src="img/logo-5.png" alt="">
                 </div>
             </div>
+        </div>
 
         <div class="media__wrapper wrapper">
             <div class="media__content">
@@ -372,72 +377,104 @@
             <h2>Почему нас<br>
                 выбирают ученики?</h2>
 
-            <ul class="why-us__list">
-                <li class="why-us__item flip-block">
-                    <div class="flip-block__content">
-                        <div class="flip-block__front">
-                            <img class="flip-block__photo" src="img/flip-block-1.jpg" alt="">
-                        </div>
+            <div class="why-us__content">
+                <div class="why-us__slider-button-prev romb-arrow romb-arrow--prev swiper-button-prev"></div>
 
-                        <div class="flip-block__back">
-                            <div class="flip-block__text">
-                                <h4>Сергей Головков</h4>
-                                <p>Я решил поделиться своим впечатлением о моем опыте обучения в школе. Начну с того,
-                                    что я был абсолютным новичком в этой области, и мой интерес к трейдингу был вызван
-                                    желанием понять, как работает финансовый рынок.</p>
-                                <p>Мне повезло выбрать эту школу, потому что результаты превзошли мои ожидания. Уроки
-                                    были представлены в максимально доступной и понятной для начинающего трейдера форме.
-                                    И особенно мне понравился практический подход к обучению. Я получил знания и навыки,
-                                    которые помогли мне лучше понимать финансовые рынки и конвертировать эти знания в
-                                    результат. Я очень благодарен своим учителям и всей команде школы за их
-                                    профессионализм и поддержку.</p>
+                <div class="why-us__container swiper-container">
+
+                    <ul class="why-us__list swiper-wrapper">
+                        <li class="why-us__item flip-block swiper-slide">
+                            <div class="flip-block__content">
+                                <div class="flip-block__front">
+                                    <img class="flip-block__photo" src="img/first-screen-1.jpg" alt="">
+                                </div>
+
+                                <div class="flip-block__back">
+                                    <div class="flip-block__text">
+                                        <h4>Сергей Головков</h4>
+                                        <p>Я решил поделиться своим впечатлением о моем опыте обучения в школе. Начну с
+                                            того,
+                                            что я был абсолютным новичком в этой области, и мой интерес к трейдингу был
+                                            вызван
+                                            желанием понять, как работает финансовый рынок.</p>
+                                        <p>Мне повезло выбрать эту школу, потому что результаты превзошли мои ожидания.
+                                            Уроки
+                                            были представлены в максимально доступной и понятной для начинающего
+                                            трейдера
+                                            форме.
+                                            И особенно мне понравился практический подход к обучению. Я получил знания и
+                                            навыки,
+                                            которые помогли мне лучше понимать финансовые рынки и конвертировать эти
+                                            знания
+                                            в
+                                            результат. Я очень благодарен своим учителям и всей команде школы за их
+                                            профессионализм и поддержку.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </li>
+                        </li>
 
-                <li class="why-us__item flip-block">
-                    <div class="flip-block__content">
-                        <div class="flip-block__front">
-                            <img class="flip-block__photo" src="img/flip-block-2.jpg" alt="">
-                        </div>
+                        <li class="why-us__item flip-block swiper-slide">
+                            <div class="flip-block__content">
+                                <div class="flip-block__front">
+                                    <img class="flip-block__photo" src="img/first-screen-1.jpg" alt="">
+                                </div>
 
-                        <div class="flip-block__back">
-                            <div class="flip-block__text">
-                                <h4>Павел Корниенко</h4>
-                                <p>Могу сказать, что мое обучение в «The GMT Solution» было полностью правильным
-                                    решением. Профессиональные преподаватели и практический подход к учебе помогли мне
-                                    быстро освоить основы трейдинга. Я получил своего рода инструмент, который уже
-                                    пригодился мне на финансовых рынках. Начиная с основ и дойдя до изучения торговых
-                                    стратегий, я ощутимо прокачал свой профессиональный уровень. Теперь у меня есть
-                                    уверенность в свои результатах работы на финансовых рынках. Рекомендую эту школу
-                                    всем, кто интересуется трейдингом.</p>
+                                <div class="flip-block__back">
+                                    <div class="flip-block__text">
+                                        <h4>Павел Корниенко</h4>
+                                        <p>Могу сказать, что мое обучение в «The GMT Solution» было полностью правильным
+                                            решением. Профессиональные преподаватели и практический подход к учебе
+                                            помогли
+                                            мне
+                                            быстро освоить основы трейдинга. Я получил своего рода инструмент, который
+                                            уже
+                                            пригодился мне на финансовых рынках. Начиная с основ и дойдя до изучения
+                                            торговых
+                                            стратегий, я ощутимо прокачал свой профессиональный уровень. Теперь у меня
+                                            есть
+                                            уверенность в свои результатах работы на финансовых рынках. Рекомендую эту
+                                            школу
+                                            всем, кто интересуется трейдингом.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </li>
+                        </li>
 
-                <li class="why-us__item flip-block">
-                    <div class="flip-block__content">
-                        <div class="flip-block__front">
-                            <img class="flip-block__photo" src="img/flip-block-3.jpg" alt="">
-                        </div>
+                        <li class="why-us__item flip-block swiper-slide">
+                            <div class="flip-block__content">
+                                <div class="flip-block__front">
+                                    <img class="flip-block__photo" src="img/first-screen-1.jpg" alt="">
+                                </div>
 
-                        <div class="flip-block__back">
-                            <div class="flip-block__text">
-                                <h4>Анатолий Подольский</h4>
-                                <p>В эту школу трейдинга я пришел уже на в качестве новичка, а трейдера с пятилетним
-                                    стажем. Целью моего обучения было разнообразить свой арсенал торговых стратегий и
-                                    углубиться в тему торговли на уровнях поддержки и сопротивления. Что касается
-                                    торговли на уровнях поддержки и сопротивления, я получил неоценимый опыт, поскольку
-                                    эта тема является одной из ведущих в школе. Соответственно, и уровень преподавателей
-                                    в этой теме, и само наполнение курсов приятно радует. Также было не менее интересно
-                                    прочесть книгу от основателя школы – тоже хороший опыт в копилку моих знаний.</p>
+                                <div class="flip-block__back">
+                                    <div class="flip-block__text">
+                                        <h4>Анатолий Подольский</h4>
+                                        <p>В эту школу трейдинга я пришел уже на в качестве новичка, а трейдера с
+                                            пятилетним
+                                            стажем. Целью моего обучения было разнообразить свой арсенал торговых
+                                            стратегий
+                                            и
+                                            углубиться в тему торговли на уровнях поддержки и сопротивления. Что
+                                            касается
+                                            торговли на уровнях поддержки и сопротивления, я получил неоценимый опыт,
+                                            поскольку
+                                            эта тема является одной из ведущих в школе. Соответственно, и уровень
+                                            преподавателей
+                                            в этой теме, и само наполнение курсов приятно радует. Также было не менее
+                                            интересно
+                                            прочесть книгу от основателя школы – тоже хороший опыт в копилку моих
+                                            знаний.</p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+
+                <div class="why-us__slider-button-next romb-arrow romb-arrow--next swiper-button-next"></div>
+            </div>
         </div>
     </section>
 
@@ -549,6 +586,7 @@
 
 
 
+<script src="script/jquery.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/main.js"></script>
 
