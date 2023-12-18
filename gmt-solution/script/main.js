@@ -57,6 +57,30 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     });
 
+    const reviews_swiper = new Swiper('.reviews__container', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 29,
+        allowSlideNext: false,
+        allowSlidePrev: false,
+
+        navigation: {
+            nextEl: '.reviews__slider-button-next',
+            prevEl: '.reviews__slider-button-prev',
+        },
+
+        breakpoints: {
+            767: {
+                allowSlideNext: true,
+                allowSlidePrev: true,
+            },
+
+            1260: {
+                slidesPerView: 2
+            },
+        }
+    });
+
     //workers
     let flip_block = document.querySelectorAll('.flip-block');
 
@@ -85,6 +109,5 @@ window.addEventListener('DOMContentLoaded', function (event) {
         window.addEventListener('load', () => {
             scrollElement.scrollLeft = (scrollElement.scrollWidth - scrollElement.clientWidth) / 2;
         });
-
     }
 });
