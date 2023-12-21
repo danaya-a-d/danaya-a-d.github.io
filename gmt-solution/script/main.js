@@ -73,10 +73,13 @@ window.addEventListener('DOMContentLoaded', function (event) {
             767: {
                 allowSlideNext: true,
                 allowSlidePrev: true,
+                slidesPerView: 1,
             },
 
             1260: {
-                slidesPerView: 2
+                slidesPerView: 2,
+                allowSlideNext: true,
+                allowSlidePrev: true,
             },
         }
     });
