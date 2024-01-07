@@ -283,7 +283,7 @@ function initMap(center) {
 
     const infowindow = new google.maps.InfoWindow({
         content: popupContent,
-        pixelOffset: new google.maps.Size(200, 100)
+        pixelOffset: new google.maps.Size(200, 90)
     });
 
     infowindow.open(map, marker);
