@@ -11,7 +11,7 @@ function initMap(center) {
     }
 
     // The map, centered at Uluru
-    const mapOptions =  {
+    const mapOptions = {
         zoom: 12,
         fullscreenControl: false,
         center: center,
@@ -290,7 +290,6 @@ function initMap(center) {
 }
 
 
-
 window.addEventListener('DOMContentLoaded', function (event) {
     //слайдеры
     const first_screen_swiper = new Swiper('.first-screen__sliders', {
@@ -377,6 +376,30 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     });
 
+    const all_reviews_swiper = new Swiper('.all-reviews__container', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        spaceBetween: 24,
+        autoHeight: true,
+
+        navigation: {
+            nextEl: '.all-reviews__slider-button-next',
+            prevEl: '.all-reviews__slider-button-prev',
+        },
+
+        pagination: {
+            el: '.all-reviews__pagination'
+        },
+
+        breakpoints: {
+            1260: {
+                slidesPerView: 2,
+                spaceBetween: 24,
+                autoHeight: false
+            },
+        }
+    });
+
     //workers
     let flip_block = document.querySelectorAll('.flip-block');
 
@@ -406,4 +429,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
             scrollElement.scrollLeft = (scrollElement.scrollWidth - scrollElement.clientWidth) / 2;
         });
     }
+
+    //masonry offer page
+    const grid = document.querySelector('.recommendation__list');
+
+    const masonry = new Masonry(grid, {
+        itemSelector: '.recommendation__item',
+        horizontalOrder: true
+    });
 });
