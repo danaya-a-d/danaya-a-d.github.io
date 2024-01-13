@@ -432,9 +432,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     //masonry offer page
     const grid = document.querySelector('.recommendation__list');
-
-    const masonry = new Masonry(grid, {
-        itemSelector: '.recommendation__item',
-        horizontalOrder: true
-    });
+    if (grid !== null) {
+        const masonry = new Masonry(grid, {
+            itemSelector: '.recommendation__item',
+            horizontalOrder: true
+        });
+    }
 });
