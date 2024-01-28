@@ -492,4 +492,56 @@ window.addEventListener('DOMContentLoaded', function (event) {
             nav_btn.classList.remove('open');
         }
     })
+
+    // Modals
+    let modal_overlay = document.querySelector('.modal-overlay');
+    let modal_back = document.querySelector('.modal-back');
+    let modals = document.querySelectorAll('.modal');
+
+    function close_modal(modal) {
+        modal.addEventListener('click', function (event) {
+            const target = event.target;
+
+            if (target.classList.contains('modal-close') || target.classList.contains('modal-overlay')) {
+                modal.classList.add('hide');
+                modal_overlay.classList.add('hide');
+                modal_back.classList.add('hide');
+            }
+        });
+    }
+
+    function open_modal(modal, button) {
+        for (let i = 0; i < button.length; i++) {
+            button[i].addEventListener('click', function (event) {
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].classList.add('hide');
+                    if (modal_overlay.classList.contains('hide') && modal_back.classList.contains('hide')) {
+                        modal_overlay.classList.add('hide');
+                        modal_back.classList.add('hide');
+                    }
+                }
+
+                if (modal.classList.contains('hide')) {
+                    modal.classList.remove('hide');
+                    modal_overlay.classList.remove('hide');
+                    modal_back.classList.remove('hide');
+                }
+            });
+        }
+
+        close_modal(modal);
+    }
+
+    let modal_plan_basic = document.querySelector('.modal-plan-basic');
+    let btn_plan_basic = document.querySelectorAll('.btn-plan-basic');
+
+    let modal_plan_advanced = document.querySelector('.modal-plan-advanced');
+    let btn_plan_advanced = document.querySelectorAll('.btn-plan-advanced');
+
+    let modal_plan_professional = document.querySelector('.modal-plan-professional');
+    let btn_plan_professional = document.querySelectorAll('.btn-plan-professional');
+
+    open_modal(modal_plan_basic, btn_plan_basic);
+    open_modal(modal_plan_advanced, btn_plan_advanced);
+    open_modal(modal_plan_professional, btn_plan_professional);
 });
