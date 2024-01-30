@@ -464,11 +464,14 @@ window.addEventListener('DOMContentLoaded', function (event) {
             header_nav_menu.classList.add('open');
             header_menu_btn.classList.add('open');
         }
+
     }
 
-    header_menu_btn.addEventListener('click', function () {
-        menu_open();
-    });
+    if (header_nav_menu) {
+        header_menu_btn.addEventListener('click', function () {
+            menu_open();
+        });
+    }
 
     let header_nav_items = document.querySelectorAll('.main-nav__item');
 
@@ -481,17 +484,21 @@ window.addEventListener('DOMContentLoaded', function (event) {
     //обучение
     let nav_btn = document.querySelector('.nav-btn');
 
-    nav_btn.addEventListener('click', function () {
-        nav_btn.classList.toggle('open');
-    });
+    if (nav_btn) {
+        nav_btn.addEventListener('click', function () {
+            nav_btn.classList.toggle('open');
+        });
+    }
 
-    document.addEventListener( 'click', (e) => {
-        const withinBoundaries = e.composedPath().includes(nav_btn);
+    if (nav_btn) {
+        document.addEventListener('click', (e) => {
+            const withinBoundaries = e.composedPath().includes(nav_btn);
 
-        if (!withinBoundaries) {
-            nav_btn.classList.remove('open');
-        }
-    })
+            if (!withinBoundaries) {
+                nav_btn.classList.remove('open');
+            }
+        })
+    }
 
     // Modals
     let modal_overlay = document.querySelector('.modal-overlay');
@@ -511,25 +518,37 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
     function open_modal(modal, button) {
-        for (let i = 0; i < button.length; i++) {
-            button[i].addEventListener('click', function (event) {
-                for (let i = 0; i < modals.length; i++) {
-                    modals[i].classList.add('hide');
-                    if (modal_overlay.classList.contains('hide') && modal_back.classList.contains('hide')) {
-                        modal_overlay.classList.add('hide');
-                        modal_back.classList.add('hide');
-                    }
-                }
+        if (modal) {
+            if (button !== null) {
+                for (let i = 0; i < button.length; i++) {
+                    button[i].addEventListener('click', function (event) {
+                        for (let i = 0; i < modals.length; i++) {
+                            modals[i].classList.add('hide');
+                            if (modal_overlay.classList.contains('hide') && modal_back.classList.contains('hide')) {
+                                modal_overlay.classList.add('hide');
+                                modal_back.classList.add('hide');
+                            }
+                        }
 
+                        if (modal.classList.contains('hide')) {
+                            modal.classList.remove('hide');
+                            modal_overlay.classList.remove('hide');
+                            modal_back.classList.remove('hide');
+                        }
+                    });
+                }
+            }
+
+            if (button === null) {
                 if (modal.classList.contains('hide')) {
                     modal.classList.remove('hide');
                     modal_overlay.classList.remove('hide');
                     modal_back.classList.remove('hide');
                 }
-            });
-        }
+            }
 
-        close_modal(modal);
+            close_modal(modal);
+        }
     }
 
     let modal_plan_basic = document.querySelector('.modal-plan-basic');
@@ -541,7 +560,61 @@ window.addEventListener('DOMContentLoaded', function (event) {
     let modal_plan_professional = document.querySelector('.modal-plan-professional');
     let btn_plan_professional = document.querySelectorAll('.btn-plan-professional');
 
+    let modal_questions = document.querySelector('.modal-questions');
+
     open_modal(modal_plan_basic, btn_plan_basic);
     open_modal(modal_plan_advanced, btn_plan_advanced);
     open_modal(modal_plan_professional, btn_plan_professional);
+
+    //quiz
+    let question_steps = document.querySelectorAll('.question-step');
+    let quiz_steps_count = document.querySelector('.quiz-steps__item.active');
+    let quiz_stage = document.querySelector('.quiz__stage');
+    let quiz_counter = 1;
+    let quiz__total_counter = question_steps.length;
+    let percent_val = quiz_counter / quiz__total_counter * 100
+
+    for (let i = 0; i < question_steps.length; i++) {
+        let radio_arr = question_steps[i].querySelectorAll('input[type="radio"]');
+        let input = question_steps[i].querySelector('input[type="text"]');
+
+        for (let j = 0; j < radio_arr.length; j++) {
+            radio_arr[j].addEventListener('click', function (event) {
+                if (question_steps[i + 1] !== undefined) {
+                    question_steps[i].classList.remove('active');
+                    question_steps[i + 1].classList.add('active');
+                    quiz_counter = quiz_counter + 1;
+                    quiz_steps_count.innerHTML = quiz_counter;
+                    percent_val = quiz_counter / quiz__total_counter * 100
+                    quiz_stage.style.width = percent_val + '%';
+                }
+
+                if (question_steps[i + 1] === undefined) {
+                    question_steps[i].classList.remove('active');
+                    open_modal(modal_questions, null);
+                }
+            });
+        }
+
+        if (input) {
+            input.addEventListener("keyup", ({key}) => {
+                if (key === "Enter") {
+                    if (question_steps[i + 1] !== undefined) {
+                        question_steps[i].classList.remove('active');
+                        question_steps[i + 1].classList.add('active');
+                        quiz_counter = quiz_counter + 1;
+                        quiz_steps_count.innerHTML = quiz_counter;
+                        percent_val = quiz_counter / quiz__total_counter * 100
+                        quiz_stage.style.width = percent_val + '%';
+                    }
+
+                    if (question_steps[i + 1] === undefined) {
+                        question_steps[i].classList.remove('active');
+                        open_modal(modal_questions, null);
+                    }
+                }
+            })
+        }
+
+    }
 });

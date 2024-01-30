@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns="http://www.w3.org/1999/html"
+      xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions</title>
+
+    <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style/main.min.css">
+</head>
+<body>
+
+<main class="page-quiz">
+    <header class="quiz-header">
+        <div class="quiz-header__wrapper wrapper">
+            <a class="quiz-header__info-btn btn-questions" href="#"></a>
+
+            <a href="index.html" class="quiz-header__logo logo">
+                <img class="logo__img" src="img/logo.svg" alt="GMT">
+            </a>
+
+            <div class="quiz-header__steps quiz-steps">
+                <span class="quiz-steps__item active">1</span>/<span class="quiz-steps__item">20</span>
+            </div>
+        </div>
+    </header>
+
+    <form class="quiz" action="#" method="post">
+        <div class="quiz__wrapper wrapper">
+            <div class="quiz__stages">
+                <span class="quiz__stage"></span>
+            </div>
+
+            <h1>Опросник для трейдера</h1>
+
+            <fieldset class="quiz__step question-step active">
+                <legend class="question-step__legend">Сколько времени вы уже занимаетесь трейдингом?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__tiles">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>Менее 6 месяцев</span>
+                        <img src="img/quiz-1.svg" alt="">
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required="" checked="">
+                            <span class="question-step__radio-big">
+                        <span>От 6 месяцев<br> до 1 года</span>
+                        <img src="img/quiz-2.svg" alt="">
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>От 1 до 3 лет</span>
+                        <img src="img/quiz-3.svg" alt="">
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>Более 3 лет</span>
+                        <img src="img/quiz-4.svg" alt="">
+                    </span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Каков ваш уровень знаний о финансовых рынках и трейдинге?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-5.svg" alt="">
+                        <span>Начинающий</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-6.svg" alt="">
+                        <span>Средний</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-7.svg" alt="">
+                        <span>Продвинутый</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required="" checked="">
+                            <span class="question-step__radio-small">
+                                <img src="img/quiz-8.svg" alt="">
+                                <span>Эксперт</span>
+                            </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Какие финансовые рынки вас интересуют?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-13.svg" alt="">
+                        <span>Акции</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-14.svg" alt="">
+                        <span>Форекс</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-15.svg" alt="">
+                        <span>Криптовалюты</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-16.svg" alt="">
+                        <span>Фьючерсы</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-17.svg" alt="">
+                        <span>Опционы</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Какие торговые инструменты вы используете в своей стратегии?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-18.svg" alt="">
+                        <span>Технический анализ</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-19.svg" alt="">
+                        <span>Фундаментальный анализ</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-20.svg" alt="">
+                        <span>Смешанный подход</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-21.svg" alt="">
+                        <span>Автоматизированные<br> торговые системы</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Каков ваш ежемесячный бюджет для торговли?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Менее $100</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>От $100 до $500</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>От $500 до $1000</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Более $1000</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Какие цели вы ставите перед собой в трейдинге?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-22.svg" alt="">
+                        <span>Приумножение капитала</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-23.svg" alt="">
+                        <span>Обучение и накопление опыта</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-24.svg" alt="">
+                        <span>Построение долгосрочного<br> инвестиционного портфеля</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-25.svg" alt="">
+                        <span>Достижение финансовой<br> независимости</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы оцениваете свои навыки управления рисками?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__image-block">
+                        <img class="question-step__image question-step__image--left" src="img/question-step-image-1.png"
+                             alt="">
+                    </div>
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Не имею опыта в этой области</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Имею базовое представление</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Средний уровень знаний</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Глубокое понимание</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как часто вы обновляете свои торговые стратегии и подходы?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Ежедневно</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Еженедельно</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Ежемесячно</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Реже одного раза в месяц</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как часто вы обновляете свои торговые стратегии и подходы?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Не имею опыта в этой области</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Имею базовое представление</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Средний уровень знаний</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Глубокое понимание</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                    <div class="question-step__image-block">
+                        <img class="question-step__image question-step__image--right"
+                             src="img/question-step-image-2.png" alt="">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы реагируете на неудачи и убытки в трейдинге?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-26.svg" alt="">
+                        <span>Очень негативно, теряю контроль над ситуацией</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-27.svg" alt="">
+                        <span>Негативно, но учусь на своих ошибках</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-28.svg" alt="">
+                        <span>Спокойно, анализирую и корректирую стратегию</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-29.svg" alt="">
+                        <span>Позитивно, вижу в этом возможность для улучшения</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы оцениваете свою способность анализировать рынки и принимать
+                    решения?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Слабо</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Средне</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Хорошо</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Отлично</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы оцениваете важность обучения и самообразования в
+                    трейдинге?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Не имею опыта в этой области</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Имею базовое представление</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Средний уровень знаний</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Глубокое понимание</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                    <div class="question-step__image-block">
+                        <img class="question-step__image question-step__image--right"
+                             src="img/question-step-image-3.png" alt="">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы планируете использовать полученные знания и опыт в
+                    трейдинге?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Для личных инвестиций</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Для профессиональной деятельности</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Для обучения других</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Какие препятствия вы видите
+                    на своем пути к успеху в трейдинге?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-30.svg" alt="">
+                        <span>Недостаток знаний и опыта</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-31.svg" alt="">
+                        <span>Эмоциональное управление</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-32.svg" alt="">
+                        <span>Сложности с анализом рынка</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-33.svg" alt="">
+                        <span>Недостаток времени и ресурсов</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы считаете, сколько времени в день стоит уделять трейдингу
+                    для достижения успеха?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__tiles">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>Менее 6 месяцев</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required="" checked="">
+                            <span class="question-step__radio-big">
+                        <span>От 1 до 2 часов</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>От 2 до 4 часов</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>Более 4 часов</span>
+                    </span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Какие показатели успеха в трейдинге для вас наиболее важны?
+                </legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-34.svg" alt="">
+                        <span>Недостаток знаний и опыта</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-35.svg" alt="">
+                        <span>Эмоциональное управление</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-36.svg" alt="">
+                        <span>Сложности с анализом рынка</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-37.svg" alt="">
+                        <span>Недостаток времени и ресурсов</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как часто вы совершаете сделки?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__tiles">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>Несколько раз в день</span>
+                        <img src="img/quiz-9.svg" alt="">
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required="" checked="">
+                            <span class="question-step__radio-big">
+                        <span>Несколько раз в<br> неделю</span>
+                        <img src="img/quiz-10.svg" alt="">
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>Несколько раз в<br> месяц</span>
+                        <img src="img/quiz-11.svg" alt="">
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Более 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-big">
+                        <span>Реже одного раза в<br> месяц</span>
+                        <img src="img/quiz-12.svg" alt="">
+                    </span>
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы определяете точки входа и выхода из позиций?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-38.svg" alt="">
+                        <span>По техническим сигналам</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-39.svg" alt="">
+                        <span>По фундаментальным данным</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-40.svg" alt="">
+                        <span>По интуиции</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы контролируете риски в своей торговле?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Стоп-лосс</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Тейк-профит</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Размер позиции</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <span>Диверсификация</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="quiz__step question-step">
+                <legend class="question-step__legend">Как вы оцениваете эффективность своей торговли?</legend>
+
+                <div class="question-step__container">
+                    <div class="question-step__lines">
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="Менее 6 месяцев" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-41.svg" alt="">
+                        <span>По размеру дохода</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 6 месяцев до 1 года"
+                                   required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-42.svg" alt="">
+                        <span>По проценту прибыльных сделок</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="visually-hidden" type="radio" name="time" value="От 1 до 3 лет" required=""
+                                   checked="">
+                            <span class="question-step__radio-small">
+                        <img src="img/quiz-43.svg" alt="">
+                        <span>По общему уровню риска и доходности</span>
+                    </span>
+                        </label>
+
+                        <label class="question-step__label">
+                            <input class="question-step__input" type="text" name="another" placeholder="Другое (указать)">
+                        </label>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </form>
+
+    <footer class="quiz-footer">
+        <div class="quiz-footer__wrapper wrapper">
+            <p class="quiz-footer__copy">All rights reserved (c) GMT Solutions Group.</p>
+        </div>
+    </footer>
+</main>
+
+<div class="modal-back hide">
+    <div class="modal modal-questions hide">
+        <div class="questions-mod">
+            <div class="questions-mod__text-block">
+                <div class="questions-mod__text">
+                    <h2>Всего несколько шагов отделяет вас от успеха на финансовых рынках! Регистрируйтесь в школе трейдинга <a href="index.html">The GMT Solution</a> и становитесь профессиональным трейдером!</h2>
+
+                    <p>🚀 У нас вы получите:</p>
+
+                    <ul>
+                        <li>Эксклюзивные знания от опытных трейдеров;</li>
+                        <li>Практические уроки с реальными кейсами и стратегиями;</li>
+                        <li>Индивидуальный подход к каждому ученику;</li>
+                        <li>Обучение на актуальных торговых платформах;</li>
+                        <li>И многое другое!</li>
+                    </ul>
+                </div>
+
+                <a href="#" class="questions-mod__button button button--darkblue button--plus button--border"><span>📚 Зарегистрироваться</span></a>
+            </div>
+
+            <img class="questions-mod__image" src="img/questions-mod.png" alt="">
+        </div>
+    </div>
+
+    <div class="modal-overlay hide"></div>
+</div>
+
+<script src="script/jquery.min.js"></script>
+<script src="script/swiper/swiper-bundle.min.js"></script>
+<script src="script/masonry.pkgd.min.js"></script>
+<script src="script/main.js"></script>
+
+</body>
+</html>
