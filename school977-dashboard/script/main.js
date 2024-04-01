@@ -104,6 +104,10 @@ $(document).ready(function () {
         $(this).closest('.task').toggleClass('active');
     });
 
+    $('.task__item').on('click', function () {
+        $(this).toggleClass('active');
+    });
+
     // Сворачивание вкладок успеваимости
     $('.performance__item').on('click', function () {
         $(this).toggleClass('active');
@@ -321,7 +325,7 @@ $(document).ready(function () {
         });
     });
 
-    // добавить поле формы
+    // Добавить поле формы
     $('.main-form__add-button').click(function () {
         let container = $(this).siblings('.main-form__contacts');
         $('.main-form__fieldset-clone').clone().appendTo(container).removeClass('main-form__fieldset-clone');
@@ -438,8 +442,6 @@ $(document).ready(function () {
     animate_numbers(12, false, $('.info-sec__number-val.green'));
     animate_numbers(6, false, $('.info-sec__number-val.blue'));
     animate_numbers(12, false, $('.info-sec__number-val.white'));
-
-
 });
 
 // Увеличение изображений
