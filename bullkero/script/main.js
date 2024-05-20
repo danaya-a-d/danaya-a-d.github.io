@@ -60,4 +60,20 @@ window.addEventListener('DOMContentLoaded', function (event) {
     languages.addEventListener('click', function () {
         languages.classList.toggle('open');
     });
+
+    //search
+    let news_form = document.querySelector('.news__form');
+
+    // news_form.onblur = function () {
+    //     this.classList.remove('active');
+    // };
+    //
+    // news_form.onfocus = function () {
+    //     this.classList.add('active');
+    // };
+    //
+
+
+    news_form.addEventListener('focus', e => news_form.classList.add('active'), true)
+    news_form.addEventListener('blur', e => news_form.classList.remove('active'), true)
 });
