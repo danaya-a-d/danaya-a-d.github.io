@@ -63,17 +63,96 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     //search
     let news_form = document.querySelector('.news__form');
+    let faq_form = document.querySelector('.faq__form');
 
-    // news_form.onblur = function () {
-    //     this.classList.remove('active');
-    // };
-    //
-    // news_form.onfocus = function () {
-    //     this.classList.add('active');
-    // };
-    //
+    function open_form(form) {
+        if (form) {
+            form.addEventListener('focus', e => form.classList.add('active'), true)
+            form.addEventListener('blur', e => form.classList.remove('active'), true)
+        }
+    }
 
+    open_form(news_form);
+    open_form(faq_form);
 
-    news_form.addEventListener('focus', e => news_form.classList.add('active'), true)
-    news_form.addEventListener('blur', e => news_form.classList.remove('active'), true)
+    //contact us
+    let phone_items = document.querySelectorAll('.support-phones__country');
+    let country_items = document.querySelectorAll('.support-countries__item');
+
+    if (phone_items) {
+        for (let i = 0; i < country_items.length; i++) {
+            country_items[i].addEventListener('click', function (e) {
+                e.preventDefault();
+
+                for (let j = 0; j < country_items.length; j++) {
+                    phone_items[j].classList.remove('active');
+                    country_items[j].classList.remove('active');
+                }
+
+                phone_items[i].classList.add('active');
+                country_items[i].classList.add('active');
+            });
+        }
+    }
+
+    //sliders
+    const invest_swiper = new Swiper('.invest-slider__container', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        loop: true,
+        effect: 'fade',
+        fadeEffect: {
+            crossFade: true
+        },
+
+        navigation: {
+            nextEl: '.invest-slider__slider-button-next',
+            prevEl: '.invest-slider__slider-button-prev',
+        },
+
+        pagination: {
+            el: '.invest-slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="invest-slider__pagination-item ' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+    });
+
+    const our_people_swiper = new Swiper('.our-people__container', {
+        direction: 'horizontal',
+        slidesPerView: 3,
+        spaceBetween: 16,
+        loop: true,
+
+        navigation: {
+            nextEl: '.our-people__slider-button-next',
+            prevEl: '.our-people__slider-button-prev'
+        },
+
+        pagination: {
+            el: '.our-people__pagination',
+            clickable: true
+        },
+    });
+
+    //webinars
+    let webinars__buttons = document.querySelectorAll('.webinars__button');
+    let webinars_sections = document.querySelectorAll('.webinars__section');
+
+    if (webinars__buttons) {
+        for (let i = 0; i < webinars__buttons.length; i++) {
+            webinars__buttons[i].addEventListener('click', function (e) {
+                e.preventDefault();
+
+                for (let j = 0; j < webinars__buttons.length; j++) {
+                    webinars__buttons[j].classList.remove('active');
+                    webinars_sections[j].classList.remove('active');
+                }
+
+                webinars__buttons[i].classList.add('active');
+                webinars_sections[i].classList.add('active');
+            });
+        }
+    }
 });
