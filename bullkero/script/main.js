@@ -121,9 +121,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
 
     const our_people_swiper = new Swiper('.our-people__container', {
         direction: 'horizontal',
-        slidesPerView: 3,
+        slidesPerView: 2,
         spaceBetween: 16,
         loop: true,
+        centeredSlides: true,
 
         navigation: {
             nextEl: '.our-people__slider-button-next',
@@ -134,6 +135,40 @@ window.addEventListener('DOMContentLoaded', function (event) {
             el: '.our-people__pagination',
             clickable: true
         },
+
+        breakpoints: {
+            1023: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                spaceBetween: 16,
+            }
+        }
+    });
+
+    const stocks_swiper = new Swiper('.stocks__container', {
+        direction: 'horizontal',
+        slidesPerView: 1.1,
+        spaceBetween: 12,
+        loop: true,
+
+        navigation: {
+            nextEl: '.stocks__slider-button-next',
+            prevEl: '.stocks__slider-button-prev',
+        },
+
+        breakpoints: {
+            767: {
+                direction: 'horizontal',
+                slidesPerView: 1.5,
+                spaceBetween: 16,
+            },
+
+            1023: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                spaceBetween: 16,
+            }
+        }
     });
 
     //webinars
