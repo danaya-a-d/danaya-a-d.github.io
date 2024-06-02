@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -251,7 +252,8 @@
                 <div class="why-us__text-block">
                     <div class="why-us__text">
                         <h1>Invest, trade, copy — all in
-                            <mark>Bull</mark>kero App
+                            <mark>Bull</mark>
+                            kero App
                         </h1>
                         <p>At Bullkero, we believe that everyone should have easy, fast and free access to the global
                             financial markets</p>
@@ -264,9 +266,12 @@
                     </div>
                 </div>
 
-                <img class="why-us__image" src="img/why-us.png" alt="">
+                <div class="why-us__images">
+                    <img class="why-us__image-first wow slideInUp" src="img/why-us.png" alt="">
+                    <img class="why-us__image-last wow slideInUp" data-wow-delay=".1s" src="img/why-us-2.png" alt="">
+                </div>
 
-                <div class="why-us__ban">
+                <div class="why-us__ban wow slideInRight">
                     <p>1+ million users choose Bullkero</p>
                     <img class="why-us__logo" src="img/bull-logo.svg" alt="">
                 </div>
@@ -280,7 +285,11 @@
                 <div class="invest-slider__container swiper-container">
                     <ul class="invest-slider__wrapper swiper-wrapper">
                         <li class="invest-slider__item swiper-slide">
-                            <img class="invest-slider__image" src="img/invest-slider-1.png" alt="">
+                            <div class="invest-slider__image-block">
+                                <div class="wow re-wow zoomIn">
+                                    <img class="invest-slider__image invest-slider__image--1 wow re-wow rotateInDownRight" src="img/invest-slider-1.png" alt="">
+                                </div>
+                            </div>
 
                             <div class="invest-slider__text-block">
                                 <div class="invest-slider__text">
@@ -293,24 +302,45 @@
                             </div>
                         </li>
                         <li class="invest-slider__item swiper-slide">
-                            <img class="invest-slider__image" src="img/invest-slider-2.png" alt="">
+                            <div class="invest-slider__image-block">
+                                <img class="invest-slider__image invest-slider__image--2 wow re-wow slideInUp" src="img/invest-slider-2.png"
+                                     alt="">
+
+                                <img class="invest-slider__image invest-slider__image--3 wow re-wow rotateInUpLeft" src="img/invest-slider-3.png"
+                                     alt="">
+                                <img class="invest-slider__image invest-slider__image--4 wow re-wow rotateInDownLeft" src="img/invest-slider-4.png"
+                                     alt="">
+                                <img class="invest-slider__image invest-slider__image--5 wow re-wow rotateInUpLeft" src="img/invest-slider-5.png"
+                                     alt="">
+                                <img class="invest-slider__image invest-slider__image--6 wow re-wow rotateInDownLeft" src="img/invest-slider-6.png"
+                                     alt="">
+
+                                <div class="invest-slider__line wow re-wow fadeIn"></div>
+                            </div>
 
                             <div class="invest-slider__text-block">
                                 <div class="invest-slider__text">
                                     <h2>Dive into stock trading with low fees and completely free account</h2>
-                                    <p>Try trading Real Stocks with a Top Rated Broker and leading Social Investing platform</p>
+                                    <p>Try trading Real Stocks with a Top Rated Broker and leading Social Investing
+                                        platform</p>
                                 </div>
 
                                 <a class="invest-slider__button button button--blue button--arrow">Invest now</a>
                             </div>
                         </li>
                         <li class="invest-slider__item swiper-slide">
-                            <img class="invest-slider__image" src="img/invest-slider-3.png" alt="">
+                            <div class="invest-slider__image-block">
+                                <img class="invest-slider__image invest-slider__image--7 wow re-wow fadeInUp" src="img/invest-slider-7.png"
+                                     alt="">
+                                <img class="invest-slider__image invest-slider__image--8 wow re-wow fadeInDown" src="img/invest-slider-8.png"
+                                     alt="">
+                            </div>
 
                             <div class="invest-slider__text-block">
                                 <div class="invest-slider__text">
                                     <h2>Enjoy the simplicity of money management with
-                                        <mark>Bull</mark>kero Pay
+                                        <mark>Bull</mark>
+                                        kero Pay
                                     </h2>
                                     <p>Use your own Virtual Bullkero Card, IBAN Account, send and receive money, and
                                         much more!</p>
@@ -351,17 +381,22 @@
                         </p>
                     </div>
 
-                    <img class="level-block__image" src="img/level-image-1.png" alt="">
+                    <div class="level-block__image-block">
+                        <img class="level-block__image level-block__image--1" src="img/level-image-1.png" alt="">
+                    </div>
                 </li>
 
                 <li class="next-level__item level-block">
                     <div class="level-block__text">
                         <p>Advanced
-                            <mark>charts</mark>, price alerts and professional trading tools
+                            <mark>charts</mark>
+                            , price alerts and professional trading tools
                         </p>
                     </div>
 
-                    <img class="level-block__image" src="img/level-image-2.png" alt="">
+                    <div class="level-block__image-block">
+                        <img class="level-block__image level-block__image--2" src="img/level-image-2.png" alt="">
+                    </div>
                 </li>
 
                 <li class="next-level__item level-block">
@@ -372,7 +407,9 @@
                         </p>
                     </div>
 
-                    <img class="level-block__image" src="img/level-image-3.png" alt="">
+                    <div class="level-block__image-block">
+                        <img class="level-block__image level-block__image--3" src="img/level-image-3.png" alt="">
+                    </div>
                 </li>
 
                 <li class="next-level__item level-block">
@@ -383,7 +420,9 @@
                         </p>
                     </div>
 
-                    <img class="level-block__image" src="img/level-image-4.png" alt="">
+                    <div class="level-block__image-block">
+                        <img class="level-block__image level-block__image--4" src="img/level-image-4.png" alt="">
+                    </div>
                 </li>
 
                 <li class="next-level__item level-block">
@@ -393,7 +432,11 @@
                         </p>
                     </div>
 
-                    <img class="level-block__image" src="img/level-image-5.png" alt="">
+                    <div class="level-block__image-block">
+                        <img class="level-block__image level-block__image--5" src="img/level-image-5.png" alt="">
+                        <img class="level-block__image level-block__image--6" src="img/level-image-6.png" alt="">
+                        <img class="level-block__image level-block__image--7" src="img/level-image-7.png" alt="">
+                    </div>
                 </li>
 
                 <li class="next-level__item level-block">
@@ -404,7 +447,10 @@
                         </p>
                     </div>
 
-                    <img class="level-block__image" src="img/level-image-6.png" alt="">
+                    <div class="level-block__image-block">
+                        <img class="level-block__image level-block__image--8" src="img/level-image-8.png" alt="">
+                        <img class="level-block__image level-block__image--9" src="img/level-image-9.png" alt="">
+                    </div>
                 </li>
             </ul>
         </div>
@@ -414,13 +460,18 @@
         <div class="ready-banner__wrapper wrapper">
             <div class="ready-banner__container">
                 <div class="ready-banner__content">
-                    <img class="ready-banner__image" src="img/ready-banner.png" alt="">
+                    <div class="ready-banner__image-block wow slideInUp">
+                        <img class="ready-banner__image wow rotateInUpLeft" src="img/ready-banner.png" alt="">
+                    </div>
 
                     <div class="ready-banner__text">
                         <h2>Ready start trading with Bullkero?</h2>
                         <a href="#" class="ready-banner__button button button--white button--arrow">Create an
                             Account</a>
                     </div>
+
+                    <div class="ready-banner__lines-fist wow slideInLeft"></div>
+                    <div class="ready-banner__lines-last wow slideInRight"></div>
                 </div>
             </div>
         </div>
@@ -530,8 +581,10 @@
 
 
 
+<script src="script/jquery.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/main.js"></script>
+<script src="script/animate/wow.min.js"></script>
 
 </body>
 </html>

@@ -12,6 +12,8 @@ window.addEventListener('DOMContentLoaded', function (event) {
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
 
+    new WOW().init();
+
     //mobile menu
     let header_menu_btn = document.querySelector('.header__menu-btn');
     let header = document.querySelector('.header');
@@ -100,9 +102,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
         direction: 'horizontal',
         slidesPerView: 1,
         loop: true,
+        speed: 0,
         effect: 'fade',
         fadeEffect: {
-            crossFade: true
+            crossFade: true,
         },
 
         navigation: {
@@ -117,6 +120,21 @@ window.addEventListener('DOMContentLoaded', function (event) {
                 return '<span class="invest-slider__pagination-item ' + className + '">' + (index + 1) + '</span>';
             },
         },
+    });
+
+    let invest_swiper_imgs = document.querySelectorAll(".invest-slider__image");
+
+    invest_swiper.on('slideChange', function () {
+        re_wow = new WOW(
+            {
+                boxClass:     're-wow',      // default
+                animateClass: 'animated', // default
+                offset:       0,          // default
+                mobile:       true,       // default
+                live:         true        // default
+            }
+        )
+        re_wow.init();
     });
 
     const our_people_swiper = new Swiper('.our-people__container', {
@@ -170,6 +188,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
             }
         }
     });
+
 
     //webinars
     let webinars__buttons = document.querySelectorAll('.webinars__button');

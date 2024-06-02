@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -497,7 +498,13 @@
 
                         <a class="learn-trading__button button button--white button--arrow">Get started</a>
                     </div>
-                    <img class="learn-trading__image" src="img/learn-trading.png" alt="">
+
+                    <div class="learn-trading__image-block wow slideInUp">
+                        <img class="learn-trading__image wow rotateInUpRight" src="img/learn-trading.png" alt="">
+                    </div>
+
+                    <div class="learn-trading__lines-fist wow slideInLeft"></div>
+                    <div class="learn-trading__lines-last wow slideInRight"></div>
                 </div>
             </div>
         </div>
@@ -529,7 +536,9 @@
                     <a class="companies__button button button--blue button--arrow">Get started</a>
 
 
-                    <img class="companies__image" src="img/companies-image.svg" alt="">
+                    <div class="companies__image-block">
+                        <img class="companies__image wow slideInRightBack" data-wow-duration="5s" src="img/companies-images-str.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -617,8 +626,10 @@
 
 
 
+<script src="script/jquery.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/main.js"></script>
+<script src="script/animate/wow.min.js"></script>
 
 </body>
 </html>

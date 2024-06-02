@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -260,7 +261,13 @@
                     </div>
                 </div>
 
-                <img class="partners__image" src="img/partners.png" alt="">
+                <div class="partners__lines-block wow slideInRight">
+                    <div class="partners__lines wow slideInDown"></div>
+                </div>
+
+                <div class="partners__image-block wow slideInUp">
+                    <img class="partners__image wow rotateInUpRight" src="img/partners.png" alt="">
+                </div>
             </div>
         </div>
     </section>
@@ -319,7 +326,9 @@
     <section class="educational">
         <div class="educational__wrapper wrapper">
             <div class="educational__container">
-                <img class="educational__image" src="img/educational.png" alt="">
+                <div class="educational__image-block wow slideInUp">
+                    <img class="educational__image wow rotateInUpRight" src="img/educational.png" alt="">
+                </div>
 
                 <div class="educational__text-block">
                     <div class="educational__text">
@@ -352,9 +361,11 @@
                         <a class="methods__button button button--white button--arrow">Get started</a>
                     </div>
 
-                    <img class="methods__image" src="img/methods.png" alt="">
+                    <div class="methods__image-block wow slideInUp">
+                        <img class="methods__image wow rotateInUpRight" src="img/methods.png" alt="">
+                    </div>
 
-                    <ul class="methods__list">
+                    <ul class="methods__list wow slideInUp">
                         <li class="methods__item">
                             <img class="methods__logo" src="img/payment-logo-visa.svg" alt="">
                         </li>
@@ -383,6 +394,9 @@
                             <img class="methods__logo" src="img/payment-logo-sepa.svg" alt="">
                         </li>
                     </ul>
+
+                    <div class="methods__lines-fist wow slideInLeft"></div>
+                    <div class="methods__lines-last wow slideInRight"></div>
                 </div>
             </div>
         </div>
@@ -470,8 +484,10 @@
 
 
 
+<script src="script/jquery.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/main.js"></script>
+<script src="script/animate/wow.min.js"></script>
 
 </body>
 </html>

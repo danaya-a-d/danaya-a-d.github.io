@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -249,14 +250,16 @@
             <div class="careers__container">
                 <div class="careers__banner">
                     <div class="careers__text-block">
-                        <h1>Spice up your career with
-                            <mark>Bull</mark>kero
+                        <h1>Spice up your career with <mark>Bull</mark>kero
                         </h1>
                         <a class="careers__button button button--arrow button--blue">Explore vacancies</a>
                     </div>
 
-                    <img class="careers__image" src="img/careers.png" alt="">
-                    <img class="careers__logo" src="img/bull-logo-blue.svg" alt="">
+                    <img class="careers__image wow rotateInUpRight" src="img/careers.png" alt="">
+
+                    <div class="careers__logo-block wow slideInRight">
+                        <img class="careers__logo wow rotateInDownRight" src="img/bull-logo-blue.svg" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -321,7 +324,10 @@
                     <a href="#" class="work-for__button button button--blue button--arrow">Explore all jobs</a>
                 </div>
 
-                <img class="work-for__image" src="img/work-for.png" alt="">
+                <div class="work-for__lines-block wow slideInRight">
+                    <div class="work-for__lines wow slideInDown"></div>
+                </div>
+                <img class="work-for__image wow slideInUp" src="img/work-for.png" alt="">
             </div>
         </div>
     </section>
@@ -401,16 +407,22 @@
                 <p class="positions__category">Client Relations & Buss. Development</p>
                 <ul class="positions__list">
                     <li class="positions__item"><a class="positions__link" href="#">
-                        <h3>Client Relations and Support Officer (German Speaker)</h3>
-                        <p>Limassol, Central</p>
+                        <div class="positions__item-text">
+                            <h3>Client Relations and Support Officer (German Speaker)</h3>
+                            <p>Limassol, Central</p>
+                        </div>
                     </a></li>
                     <li class="positions__item"><a class="positions__link" href="#">
-                        <h3>Client Relations and Support Officer (Italian Speaker)</h3>
-                        <p>Limassol, Central</p>
+                        <div class="positions__item-text">
+                            <h3>Client Relations and Support Officer (Italian Speaker)</h3>
+                            <p>Limassol, Central</p>
+                        </div>
                     </a></li>
                     <li class="positions__item"><a class="positions__link" href="#">
-                        <h3>Client Relations and Support Officer (Spanish Speaker)</h3>
-                        <p>Limassol, Central</p>
+                        <div class="positions__item-text">
+                            <h3>Client Relations and Support Officer (Spanish Speaker)</h3>
+                            <p>Limassol, Central</p>
+                        </div>
                     </a></li>
                 </ul>
             </div>
@@ -419,12 +431,15 @@
                 <p class="positions__category">Compliance</p>
                 <ul class="positions__list">
                     <li class="positions__item"><a class="positions__link" href="#">
-                        <h3>Compliance Officer</h3>
-                        <p>Limassol, Central</p>
+                        <div class="positions__item-text">
+                            <h3>Compliance Officer</h3>
+                            <p>Limassol, Central</p>
+                        </div>
                     </a></li>
                     <li class="positions__item"><a class="positions__link" href="#">
-                        <h3>Senior Compliance Officer</h3>
-                        <p>Limassol, Central</p>
+                        <div class="positions__item-text">
+                            <h3>Senior Compliance Officer</h3>
+                            <p>Limassol, Central</p></div>
                     </a></li>
                 </ul>
             </div>
@@ -467,13 +482,14 @@
         <div class="explore__wrapper wrapper">
             <div class="explore__container">
                 <div class="explore__banner">
-                    <img class="explore__logo" src="img/bull-logo-blue.svg" alt="">
-                    <img class="explore__image" src="img/bull-explore.svg" alt="">
+                    <div class="explore__logo-block wow slideInLeft">
+                        <img class="explore__logo wow rotateInDownLeft" src="img/bull-logo-blue.svg" alt="">
+                    </div>
+
+                    <img class="explore__image wow rotateInUpRight" src="img/bull-explore.svg" alt="">
 
                     <div class="explore__text">
-                        <h2>Take your career to the next level with
-                            <mark>Bull</mark>kero!
-                        </h2>
+                        <h2>Take your career to the next level with <mark>Bull</mark>kero!</h2>
                         <a class="explore__button button button--blue button--arrow">Explore all jobs</a>
                     </div>
                 </div>
@@ -563,8 +579,10 @@
 
 
 
+<script src="script/jquery.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/main.js"></script>
+<script src="script/animate/wow.min.js"></script>
 
 </body>
 </html>
