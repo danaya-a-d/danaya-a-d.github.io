@@ -1,6 +1,8 @@
-window.addEventListener('DOMContentLoaded', function (event) {
+$(window).on('load', function(){
 
-    new WOW().init();
+    $(function(){
+        new WOW().init();
+    });
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -128,12 +130,13 @@ window.addEventListener('DOMContentLoaded', function (event) {
         re_wow = new WOW(
             {
                 boxClass:     're-wow',      // default
-                animateClass: 'animated', // default
+                animateClass: 'animated-re', // default
                 offset:       0,          // default
                 mobile:       true,       // default
                 live:         true        // default
             }
         )
+
         re_wow.init();
     });
 
