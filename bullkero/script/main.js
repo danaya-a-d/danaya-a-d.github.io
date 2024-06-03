@@ -1,3 +1,5 @@
+new WOW().init();
+
 window.addEventListener('DOMContentLoaded', function (event) {
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -11,9 +13,7 @@ window.addEventListener('DOMContentLoaded', function (event) {
         let vh = window.innerHeight * 0.01;
         document.documentElement.style.setProperty('--vh', `${vh}px`);
     });
-
-    new WOW().init();
-
+    
     //mobile menu
     let header_menu_btn = document.querySelector('.header__menu-btn');
     let header = document.querySelector('.header');
