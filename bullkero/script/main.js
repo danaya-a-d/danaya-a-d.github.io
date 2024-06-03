@@ -1,8 +1,6 @@
 $(window).on('load', function(){
 
-    $(function(){
-        new WOW().init();
-    });
+    new WOW().init();
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -130,7 +128,7 @@ $(window).on('load', function(){
         re_wow = new WOW(
             {
                 boxClass:     're-wow',      // default
-                animateClass: 'animated-re', // default
+                animateClass: 'animated', // default
                 offset:       0,          // default
                 mobile:       true,       // default
                 live:         true        // default
