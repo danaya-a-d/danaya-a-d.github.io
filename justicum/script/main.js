@@ -1,3 +1,29 @@
+//Map
+function initMap() {
+    // The location of Uluru
+    const uluru = {lat: 50.438549, lng: 30.416071};
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 16,
+        fullscreenControl: false,
+        center: uluru,
+    });
+
+    const icon = {
+        url: "img/map-marker.svg", // url
+        scaledSize: new google.maps.Size(80, 80), // scaled size
+        origin: new google.maps.Point(0, 0), // origin
+        anchor: new google.maps.Point(40, 40) // anchor
+    };
+
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+        position: uluru,
+        map: map,
+        icon: icon
+    });
+}
+
 window.addEventListener('DOMContentLoaded', function (event) {
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
@@ -33,6 +59,27 @@ window.addEventListener('DOMContentLoaded', function (event) {
             });
         }
     }
+
+    //Banking
+
+    let overview__buttons = document.querySelectorAll('.overview__nav');
+    let overview__blocks = document.querySelectorAll('.overview__item')
+
+    if (overview__buttons !== null) {
+        for (let i = 0; i < overview__buttons.length; i++) {
+            overview__buttons[i].addEventListener('click', function (event) {
+
+                for (let j = 0; j < overview__buttons.length; j++) {
+                    overview__buttons[j].classList.remove('active');
+                    overview__blocks[j].classList.remove('active');
+                }
+
+                overview__buttons[i].classList.add('active');
+                overview__blocks[i].classList.add('active');
+            });
+        }
+    }
+
 
     //Sliders
     const related_swiper = new Swiper('.related__container', {
