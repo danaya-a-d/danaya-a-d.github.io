@@ -61,7 +61,6 @@ window.addEventListener('DOMContentLoaded', function (event) {
     }
 
     //Banking
-
     let overview__buttons = document.querySelectorAll('.overview__nav');
     let overview__blocks = document.querySelectorAll('.overview__item')
 
@@ -103,6 +102,54 @@ window.addEventListener('DOMContentLoaded', function (event) {
                     swiper.el.classList.remove('-non-slider')
                 }
             },
+        }
+    });
+
+    const reviews_swiper = new Swiper('.reviews__container', {
+        direction: 'horizontal',
+        slidesPerView: 1.13,
+        spaceBetween: 8,
+        loop: true,
+
+        navigation: {
+            nextEl: '.reviews__slider-button-next',
+            prevEl: '.reviews__slider-button-prev',
+        },
+
+        breakpoints: {
+            1123: {
+                slidesPerView: 2,
+                spaceBetween: 16
+            },
+
+            767: {
+                slidesPerView: 1.25,
+                spaceBetween: 16,
+            }
+        }
+    });
+
+    const history_swiper = new Swiper('.history__container', {
+        direction: 'horizontal',
+        slidesPerView: 1.13,
+        spaceBetween: 8,
+        loop: false,
+
+        navigation: {
+            nextEl: '.history__slider-button-next',
+            prevEl: '.history__slider-button-prev',
+        },
+
+        breakpoints: {
+            1123: {
+                slidesPerView: 2.4,
+                spaceBetween: 16,
+            },
+
+            767: {
+                slidesPerView: 1.5,
+                spaceBetween: 16,
+            }
         }
     });
 
