@@ -153,6 +153,12 @@ window.addEventListener('DOMContentLoaded', function (event) {
         }
     });
 
+    //Languages
+    let languages = document.querySelector('.languages');
+
+    languages.addEventListener('click', function () {
+        languages.classList.toggle('open');
+    });
 
     //Mobile menu
     let header_menu_btn = document.querySelector('.header__menu-btn');
@@ -165,6 +171,10 @@ window.addEventListener('DOMContentLoaded', function (event) {
             header_menu_btn.classList.remove('open');
             header.classList.remove('open');
 
+            if (languages.classList.contains('open')) {
+                languages.classList.remove('open');
+            }
+
             for (let i = 0; i < header_nav_section.length; i++) {
                 header_nav_section[i].classList.remove('active');
             }
@@ -173,6 +183,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
             header_nav_menu.classList.add('open');
             header_menu_btn.classList.add('open');
             header.classList.add('open');
+            if (languages.classList.contains('open')) {
+                languages.classList.remove('open');
+            }
         }
     }
 
