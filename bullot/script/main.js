@@ -1,4 +1,4 @@
-$(window).on('load', function(){
+$(window).on('load', function () {
 
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
@@ -13,8 +13,8 @@ $(window).on('load', function(){
     });
 
     //mobile menu
-    let header_menu_btn = document.querySelector('.header__menu-btn');
     let header = document.querySelector('.header');
+    let header_menu_btn = document.querySelector('.header__menu-btn');
     let header_nav_menu = document.querySelector('.header__nav');
 
     function menu_open() {
@@ -42,6 +42,29 @@ $(window).on('load', function(){
         menu_open();
     });
 
+    //header scroll
+    function initHeaderScrollEffect(header) {
+
+        if (window.scrollY > 50) {
+            header.classList.add('header_scrolled');
+            header.classList.remove('header_transparent');
+        } else {
+            header.classList.add('header_transparent');
+            header.classList.remove('header_scrolled');
+        }
+
+        document.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('header_scrolled');
+                header.classList.remove('header_transparent');
+            } else {
+                header.classList.add('header_transparent');
+                header.classList.remove('header_scrolled');
+            }
+        });
+    }
+
+    initHeaderScrollEffect(header);
 
     //submenu
     let header_nav_section = document.querySelectorAll('.main-nav__section');
@@ -61,7 +84,65 @@ $(window).on('load', function(){
         languages.classList.toggle('open');
     });
 
+    //search
+    let news_form = document.querySelector('.top-news__form');
+
+    function open_form(form) {
+        if (form) {
+            form.addEventListener('focus', e => form.classList.add('active'), true)
+            form.addEventListener('blur', e => form.classList.remove('active'), true)
+        }
+    }
+
+    open_form(news_form);
+
     //sliders
+    function updateMask(swiper) {
+        const container = document.querySelector('.news-slider__container');
+
+        if (swiper.isEnd) {
+            container.classList.add('mask-left');
+            container.classList.remove('mask-right');
+        } else {
+            container.classList.remove('mask-left');
+            container.classList.add('mask-right');
+        }
+    }
+
+    const news_slider = new Swiper('.news-slider__container', {
+        direction: 'horizontal',
+        slidesPerView: 1.14,
+        spaceBetween: 16,
+
+        navigation: {
+            nextEl: '.news-slider__slider-button-next',
+            prevEl: '.news-slider__slider-button-prev'
+        },
+
+        breakpoints: {
+            767: {
+                direction: 'horizontal',
+                slidesPerView: 1.5,
+                spaceBetween: 32,
+            },
+
+            1023: {
+                direction: 'horizontal',
+                slidesPerView: 2.4,
+                spaceBetween: 24,
+            }
+        },
+
+        on: {
+            init: function () {
+                updateMask(this);
+            },
+            slideChange: function () {
+                updateMask(this);
+            },
+        },
+    });
+
     const our_people_swiper = new Swiper('.our-people__container', {
         direction: 'horizontal',
         slidesPerView: 1.46,
