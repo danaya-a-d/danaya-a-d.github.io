@@ -86,6 +86,7 @@ $(window).on('load', function () {
 
     //search
     let news_form = document.querySelector('.top-news__form');
+    let faq_form = document.querySelector('.faq-head__form');
 
     function open_form(form) {
         if (form) {
@@ -95,6 +96,7 @@ $(window).on('load', function () {
     }
 
     open_form(news_form);
+    open_form(faq_form);
 
     //sliders
     function updateMask(swiper) {
