@@ -98,6 +98,26 @@ $(window).on('load', function () {
     open_form(news_form);
     open_form(faq_form);
 
+    //contact us
+    let phone_items = document.querySelectorAll('.support-phones__country');
+    let country_items = document.querySelectorAll('.support-countries__item');
+
+    if (phone_items) {
+        for (let i = 0; i < country_items.length; i++) {
+            country_items[i].addEventListener('click', function (e) {
+                e.preventDefault();
+
+                for (let j = 0; j < country_items.length; j++) {
+                    phone_items[j].classList.remove('active');
+                    country_items[j].classList.remove('active');
+                }
+
+                phone_items[i].classList.add('active');
+                country_items[i].classList.add('active');
+            });
+        }
+    }
+
     //sliders
     function updateMask(swiper) {
         const container = document.querySelector('.news-slider__container');
