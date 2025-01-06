@@ -118,6 +118,26 @@ $(window).on('load', function () {
         }
     }
 
+    //webinars
+    let webinars__buttons = document.querySelectorAll('.webinars__button');
+    let webinars_sections = document.querySelectorAll('.webinars__section');
+
+    if (webinars__buttons) {
+        for (let i = 0; i < webinars__buttons.length; i++) {
+            webinars__buttons[i].addEventListener('click', function (e) {
+                e.preventDefault();
+
+                for (let j = 0; j < webinars__buttons.length; j++) {
+                    webinars__buttons[j].classList.remove('active');
+                    webinars_sections[j].classList.remove('active');
+                }
+
+                webinars__buttons[i].classList.add('active');
+                webinars_sections[i].classList.add('active');
+            });
+        }
+    }
+
     //sliders
     function updateMask(swiper) {
         const container = document.querySelector('.news-slider__container');
@@ -196,5 +216,67 @@ $(window).on('load', function () {
                 centeredSlides: true,
             }
         }
+    });
+
+    const stocks_swiper = new Swiper('.stocks__container', {
+        direction: 'horizontal',
+        slidesPerView: 1.1,
+        spaceBetween: 16,
+        loop: true,
+        centeredSlides: false,
+
+        navigation: {
+            nextEl: '.stocks__slider-button-next',
+            prevEl: '.stocks__slider-button-prev',
+        },
+
+        pagination: {
+            el: '.stocks__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
+
+        breakpoints: {
+            767: {
+                direction: 'horizontal',
+                slidesPerView: 1.9,
+                spaceBetween: 24,
+                centeredSlides: true
+            },
+
+            1023: {
+                direction: 'horizontal',
+                slidesPerView: 3,
+                spaceBetween: 24,
+                centeredSlides: false
+            }
+        }
+    });
+
+    const invest_swiper = new Swiper('.invest-slider__container', {
+        direction: 'horizontal',
+        slidesPerView: 1,
+        loop: true,
+        speed: 0,
+        effect: 'fade',
+        autoHeight: true,
+        fadeEffect: {
+            crossFade: true,
+        },
+
+        navigation: {
+            nextEl: '.invest-slider__slider-button-next',
+            prevEl: '.invest-slider__slider-button-prev',
+        },
+
+        pagination: {
+            el: '.invest-slider__pagination',
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<span class="' + className + '">' + (index + 1) + '</span>';
+            },
+        },
     });
 });
