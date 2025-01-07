@@ -38,13 +38,15 @@ $(window).on('load', function () {
         }
     }
 
-    header_menu_btn.addEventListener('click', function () {
-        menu_open();
-    });
+    if (header_menu_btn) {
+        header_menu_btn.addEventListener('click', function () {
+            menu_open();
+        });
+    }
+
 
     //header scroll
     function initHeaderScrollEffect(header) {
-
         if (window.scrollY > 50) {
             header.classList.add('header_scrolled');
             header.classList.remove('header_transparent');
@@ -64,7 +66,9 @@ $(window).on('load', function () {
         });
     }
 
-    initHeaderScrollEffect(header);
+    if (header) {
+        initHeaderScrollEffect(header);
+    }
 
     //submenu
     let header_nav_section = document.querySelectorAll('.main-nav__section');
@@ -80,9 +84,11 @@ $(window).on('load', function () {
     //languages
     let languages = document.querySelector('.languages');
 
-    languages.addEventListener('click', function () {
-        languages.classList.toggle('open');
-    });
+    if (languages) {
+        languages.addEventListener('click', function () {
+            languages.classList.toggle('open');
+        });
+    }
 
     //search
     let news_form = document.querySelector('.top-news__form');
@@ -134,6 +140,36 @@ $(window).on('load', function () {
 
                 webinars__buttons[i].classList.add('active');
                 webinars_sections[i].classList.add('active');
+            });
+        }
+    }
+
+    //account types
+    const container = document.querySelector('.acc-types__list');
+
+    if (container) {
+        const cards = container.querySelectorAll('.acc-types__item');
+
+        if (cards.length > 0) {
+            function removeActiveClasses() {
+                cards.forEach(card => {
+                    card.classList.remove('active');
+                });
+            }
+
+            function makeActive(card) {
+                removeActiveClasses();
+                card.classList.add('active');
+            }
+
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    makeActive(card);
+                });
+            });
+
+            container.addEventListener('mouseleave', () => {
+                makeActive(cards[0]);
             });
         }
     }
