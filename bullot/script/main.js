@@ -1,5 +1,7 @@
 $(window).on('load', function () {
 
+    new WOW().init();
+
     // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
     let vh = window.innerHeight * 0.01;
     // Then we set the value in the --vh custom property to the root of the document
@@ -315,4 +317,37 @@ $(window).on('load', function () {
             },
         },
     });
+
+    //animations
+    const ticker = document.querySelector('.ticker');
+    const rows = document.querySelectorAll('.ticker__row');
+
+    ticker.addEventListener('animationend', () => {
+        rows.forEach(row => {
+            row.style.animationPlayState = 'running';
+        });
+    });
+
+    const elements = document.querySelectorAll(".ticker");
+    const wowInstance = new WOW();
+    wowInstance.init();
+
+    const updateAnimationClasses = () => {
+        const screenWidth = window.innerWidth;
+
+        elements.forEach((element) => {
+            element.classList.remove("slideInRight", "fadeInFromUpMargin");
+
+            if (screenWidth > 768) {
+                element.classList.add("slideInRight");
+            } else {
+                element.classList.add("fadeInFromUpMargin");
+            }
+        });
+
+        wowInstance.sync();
+    };
+
+    updateAnimationClasses();
+    window.addEventListener("resize", updateAnimationClasses);
 });
