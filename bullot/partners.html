@@ -9,6 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -262,14 +263,21 @@
                 </div>
 
                 <div class="partners__images">
-                    <img class="partners__image" src="img/bear-3.png" alt="">
-                    <img class="partners__card-left" src="img/card-left.png" alt="">
-                    <img class="partners__card-right" src="img/card-right.png" alt="">
-                    <img class="partners__lines" src="img/lines.svg" alt="">
+                    <div class="partners__image-block wow slideInUp">
+                        <img class="partners__image wow rotateInUpLeft" src="img/bear-3.png" alt="">
+                    </div>
+
+                    <img class="partners__card-left wow slideInUp" src="img/card-left.png" alt="">
+                    <img class="partners__card-right wow slideInUp" src="img/card-right.png" alt="">
+
+                    <div class="partners__lines animated-container">
+                        <img class="scaling-img" src="img/small-circles-2.svg" alt=""/>
+                        <img class="lines-img" src="img/lines.svg" alt=""/>
+                    </div>
                 </div>
             </div>
         </div>
-        <a class="partners__explore circle-btn circle-btn--big circle-btn--arrow" href="#">Get<br> started</a>
+        <a class="partners__explore circle-btn circle-btn--big circle-btn--arrow" href="#"><span></span>Get<br> started</a>
     </section>
 
     <section class="strongest">
@@ -349,7 +357,7 @@
                 <img class="education__lines" src="img/lines.svg" alt="">
             </div>
 
-            <a class="education__explore circle-btn circle-btn--medi circle-btn--arrow" href="#">Create an <br> account</a>
+            <a class="education__explore circle-btn circle-btn--medi circle-btn--arrow" href="#"><span></span>Create an <br> account</a>
         </div>
     </section>
 
@@ -402,7 +410,7 @@
                     </div>
                 </div>
             </div>
-            <a class="methods__join circle-btn circle-btn--big circle-btn--arrow" href="#">Join<br> Today!</a>
+            <a class="methods__join circle-btn circle-btn--big circle-btn--arrow" href="#"><span></span>Join<br> Today!</a>
         </div>
     </section>
 </main>
@@ -489,6 +497,7 @@
 
 
 <script src="script/jquery.min.js"></script>
+<script src="script/animate/wow.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/dragscroll.js"></script>
 <script src="script/main.js"></script>

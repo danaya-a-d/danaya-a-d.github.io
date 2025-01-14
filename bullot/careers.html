@@ -9,6 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -279,13 +280,19 @@
                     </ul>
                 </div>
 
-                <div class="upper-block__images">
-                    <img class="upper-block__bear upper-block__image" src="img/bear.png" alt="">
-                    <img class="upper-block__lines-bear" src="img/lines.svg" alt="">
+                <div class="upper-block__images upper-block__images--bear">
+                    <div class="upper-block__image-block wow slideInUp">
+                        <img class="upper-block__bear upper-block__image wow rotateInUpLeft" src="img/bear.png" alt="">
+                    </div>
+
+                    <div class="upper-block__lines-bear animated-container">
+                        <img class="scaling-img" src="img/small-circles-2.svg" alt=""/>
+                        <img class="lines-img" src="img/lines.svg" alt=""/>
+                    </div>
                 </div>
             </div>
         </div>
-        <a class="upper-block__explore circle-btn circle-btn--arrow" href="#">Explore<br> vacancies</a>
+        <a class="upper-block__explore circle-btn circle-btn--arrow" href="#"><span></span>Explore<br> vacancies</a>
     </section>
 
     <div class="text-section">
@@ -323,7 +330,7 @@
             </div>
         </div>
 
-        <a class="work-for__join circle-btn circle-btn--arrow" href="#">Explore<br> vacancies</a>
+        <a class="work-for__join circle-btn circle-btn--arrow" href="#"><span></span>Explore<br> vacancies</a>
     </section>
 
     <section class="priority">
@@ -509,7 +516,7 @@
                 </div>
             </div>
 
-            <a class="bear__join circle-btn circle-btn--small circle-btn--arrow" href="#">Explore<br> vacancies</a>
+            <a class="bear__join circle-btn circle-btn--small circle-btn--arrow" href="#"><span></span>Explore<br> vacancies</a>
         </div>
     </section>
 
@@ -597,6 +604,7 @@
 
 
 <script src="script/jquery.min.js"></script>
+<script src="script/animate/wow.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/dragscroll.js"></script>
 <script src="script/main.js"></script>

@@ -3,12 +3,13 @@
       xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <title>Index</title>
 
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -250,14 +251,33 @@
                     </div>
                 </div>
 
-                <div class="upper-block__images">
-                    <img class="upper-block__bull upper-block__image" src="img/bull.png" alt="">
-                    <img class="upper-block__logos" src="img/companies-logos.svg" alt="">
-                    <img class="upper-block__lines-bull" src="img/lines.svg" alt="">
+                <div class="upper-block__images upper-block__images--bull">
+                    <div class="upper-block__image-block wow slideInUp">
+                        <img class="upper-block__bull upper-block__image wow rotateInUpLeft" src="img/bull.png" alt="">
+                    </div>
+
+                    <div class="upper-block__logos ticker wow slideInRight">
+                        <div class="ticker__row ticker__row--top">
+                            <img src="img/logos-line-1.svg" alt="">
+                        </div>
+                        <div class="ticker__row ticker__row--middle">
+                            <img src="img/logos-line-2.svg" alt="">
+                        </div>
+                        <div class="ticker__row ticker__row--bottom">
+                            <img src="img/logos-line-3.svg" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="upper-block__lines-bull animated-container">
+                        <img class="scaling-img" src="img/small-circles.svg" alt=""/>
+                        <img class="lines-img" src="img/lines.svg" alt=""/>
+                    </div>
                 </div>
             </div>
         </div>
         <a class="upper-block__join circle-btn circle-btn--arrow circle-btn--big" href="#">
+            <span></span>
             Join<br> Today!
         </a>
     </section>
@@ -529,6 +549,7 @@
             </div>
         </div>
         <a class="discover__join circle-btn circle-btn--lines circle-btn--arrow circle-btn--big" href="#">
+            <span></span>
             Join<br> Today!
         </a>
     </section>
@@ -625,8 +646,8 @@
         <div class="best__wrapper wrapper">
             <div class="best__description">
                 <div class="best__text">
-                    <h2>Stay with a
-                        <mark>True</mark>, <mark>Simple</mark> and <mark>Genuine</mark> Broker
+                    <h2>Stay with a <mark>True</mark>,
+                        <mark>Simple</mark> and <mark>Genuine</mark> Broker
                     </h2>
                     <p>Go short or long on Stocks of the biggest companies and benefit from falling prices,
                         Go short or long on Stocks of the biggest companies</p>
@@ -660,8 +681,10 @@
                 </ul>
             </div>
 
-            <a class="best__join circle-btn circle-btn--lines circle-btn--arrow circle-btn--medi" href="#">Create an
-                account</a>
+            <a class="best__join circle-btn circle-btn--lines circle-btn--arrow circle-btn--medi" href="#">
+                <span></span>
+                Create an account
+            </a>
         </div>
     </section>
 
@@ -687,7 +710,10 @@
                     </div>
                 </div>
             </div>
-            <a class="bull__join circle-btn circle-btn--medi circle-btn--arrow" href="#">Join<br> Today!</a>
+            <a class="bull__join circle-btn circle-btn--medi circle-btn--arrow" href="#">
+                <span></span>
+                Join<br> Today!
+            </a>
         </div>
     </section>
 
@@ -835,6 +861,7 @@
 
 
 <script src="script/jquery.min.js"></script>
+<script src="script/animate/wow.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/dragscroll.js"></script>
 <script src="script/main.js"></script>

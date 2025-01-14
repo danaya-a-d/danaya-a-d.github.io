@@ -9,6 +9,7 @@
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
     <link rel="icon" type="image/png" href="favicon/favicon.png">
     <link rel="stylesheet" type="text/css" href="script/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="script/animate/animate.css">
     <link rel="stylesheet" href="style/main.min.css">
 </head>
 <body>
@@ -256,15 +257,18 @@
                     <p class="acc-cat-head__price">$500</p>
                 </div>
 
-                <div class="acc-cat-head__images">
-                    <img class="acc-cat-head__image" src="img/acc-type-1.png" alt="">
+                <div class="acc-cat-head__images wow slideInUp">
+                    <img class="acc-cat-head__image wow rotateInUpLeft" src="img/acc-type-1.png" alt="">
                 </div>
 
-                <img class="acc-cat-head__lines" src="img/lines.svg" alt="">
+                <div class="acc-cat-head__lines animated-container">
+                    <img class="scaling-img" src="img/small-circles-2.svg" alt=""/>
+                    <img class="lines-img" src="img/lines.svg" alt=""/>
+                </div>
             </div>
         </div>
 
-        <a class="acc-cat-head__explore circle-btn circle-btn--big circle-btn--arrow" href="#">Join<br> Today!</a>
+        <a class="acc-cat-head__explore circle-btn circle-btn--big circle-btn--arrow" href="#"><span></span>Join<br> Today!</a>
     </section>
 
     <section class="acc-cat">
@@ -351,7 +355,7 @@
                     </div>
                 </div>
             </div>
-            <a class="bull__join circle-btn circle-btn--medi circle-btn--arrow" href="#">Join<br> Today!</a>
+            <a class="bull__join circle-btn circle-btn--medi circle-btn--arrow" href="#"><span></span>Join<br> Today!</a>
         </div>
     </section>
 </main>
@@ -438,6 +442,7 @@
 
 
 <script src="script/jquery.min.js"></script>
+<script src="script/animate/wow.min.js"></script>
 <script src="script/swiper/swiper-bundle.min.js"></script>
 <script src="script/dragscroll.js"></script>
 <script src="script/main.js"></script>
