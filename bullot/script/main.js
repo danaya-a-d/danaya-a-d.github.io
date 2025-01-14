@@ -322,32 +322,38 @@ $(window).on('load', function () {
     const ticker = document.querySelector('.ticker');
     const rows = document.querySelectorAll('.ticker__row');
 
-    ticker.addEventListener('animationend', () => {
-        rows.forEach(row => {
-            row.style.animationPlayState = 'running';
+    // Проверка на существование элементов перед работой с ними
+    if (ticker && rows.length > 0) {
+        ticker.addEventListener('animationend', () => {
+            rows.forEach(row => {
+                row.style.animationPlayState = 'running';
+            });
         });
-    });
+    }
 
     const elements = document.querySelectorAll(".ticker");
-    const wowInstance = new WOW();
-    wowInstance.init();
 
-    const updateAnimationClasses = () => {
-        const screenWidth = window.innerWidth;
+    if (elements.length > 0) {
+        const wowInstance = new WOW();
+        wowInstance.init();
 
-        elements.forEach((element) => {
-            element.classList.remove("slideInRight", "fadeInFromUpMargin");
+        const updateAnimationClasses = () => {
+            const screenWidth = window.innerWidth;
 
-            if (screenWidth > 768) {
-                element.classList.add("slideInRight");
-            } else {
-                element.classList.add("fadeInFromUpMargin");
-            }
-        });
+            elements.forEach((element) => {
+                element.classList.remove("slideInRight", "fadeInFromUpMargin");
 
-        wowInstance.sync();
-    };
+                if (screenWidth > 1123) {
+                    element.classList.add("slideInRight");
+                } else {
+                    element.classList.add("fadeInFromUpMargin");
+                }
+            });
 
-    updateAnimationClasses();
-    window.addEventListener("resize", updateAnimationClasses);
+            wowInstance.sync();
+        };
+
+        updateAnimationClasses();
+        window.addEventListener("resize", updateAnimationClasses);
+    }
 });
