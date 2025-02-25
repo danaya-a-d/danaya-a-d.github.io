@@ -36,46 +36,6 @@ $(window).on('load', function () {
         menu_open();
     });
 
-    //scroll
-    let scrollbarInstance;
-
-    function toggleScrollbar() {
-        const scroll_container = document.querySelector("#scroll-container");
-        const scroll_content = document.querySelector("#scroll-content");
-
-        if (!scroll_container) return;
-
-        if (window.innerWidth <= 1123 && window.innerWidth >= 767) {
-            if (!scrollbarInstance) {
-                scrollbarInstance = Scrollbar.init(scroll_container, {
-                    damping: 0.1,
-                    alwaysShowTracks: true,
-                    continuousScrolling: true
-                });
-            }
-        } else {
-            if (scrollbarInstance) {
-                scrollbarInstance.destroy();
-                scrollbarInstance = null;
-
-                scroll_container.classList.remove("scrollbar-scroll_container", "scrollbar-horizontal", "scrollbar-vertical");
-
-                scroll_container.style.overflow = "";
-                scroll_container.style.overflowX = "";
-                scroll_container.style.transform = "";
-                scroll_content.style.display = ""
-
-                const wrapper = scroll_container.querySelector(".scroll-content-wrapper");
-                if (wrapper) {
-                    scroll_container.innerHTML = wrapper.innerHTML;
-                }
-            }
-        }
-    }
-
-    document.addEventListener("DOMContentLoaded", toggleScrollbar);
-    window.addEventListener("resize", toggleScrollbar);
-
     //header scroll
     function initHeaderScrollEffect(header) {
         if (window.scrollY > 50) {
@@ -101,3 +61,43 @@ $(window).on('load', function () {
         initHeaderScrollEffect(header);
     }
 });
+
+//scroll
+let scrollbarInstance;
+
+function toggleScrollbar() {
+    const scroll_container = document.querySelector("#scroll-container");
+    const scroll_content = document.querySelector("#scroll-content");
+
+    if (!scroll_container) return;
+
+    if (window.innerWidth <= 1123 && window.innerWidth >= 767) {
+        if (!scrollbarInstance) {
+            scrollbarInstance = Scrollbar.init(scroll_container, {
+                damping: 0.1,
+                alwaysShowTracks: true,
+                continuousScrolling: true
+            });
+        }
+    } else {
+        if (scrollbarInstance) {
+            scrollbarInstance.destroy();
+            scrollbarInstance = null;
+
+            scroll_container.classList.remove("scrollbar-scroll_container", "scrollbar-horizontal", "scrollbar-vertical");
+
+            scroll_container.style.overflow = "";
+            scroll_container.style.overflowX = "";
+            scroll_container.style.transform = "";
+            scroll_content.style.display = ""
+
+            const wrapper = scroll_container.querySelector(".scroll-content-wrapper");
+            if (wrapper) {
+                scroll_container.innerHTML = wrapper.innerHTML;
+            }
+        }
+    }
+}
+
+document.addEventListener("DOMContentLoaded", toggleScrollbar);
+window.addEventListener("resize", toggleScrollbar);
