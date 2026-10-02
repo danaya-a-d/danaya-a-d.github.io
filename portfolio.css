@@ -167,6 +167,7 @@ h1 {
 
 .project-card {
     position: relative;
+    scroll-margin-top: 24px;
     min-width: 0;
     overflow: hidden;
     border: 1px solid var(--line);
