@@ -2,57 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Frontend layout projects by Danaya Davydenko — responsive landing pages and multi-page websites.">
+    <title>Layout Projects — Danaya Davydenko</title>
+    <link rel="stylesheet" href="./portfolio.css">
 </head>
 <body>
-    <main>
-        <ul style="font-size: 35px">
-            <li><a href="https://danaya-a-d.github.io/levelup-space/">levelup-space</a></li>
-            <li><a href="https://danaya-a-d.github.io/bullot/">bullot</a></li>
-            <li><a href="https://danaya-a-d.github.io/justicum/">justicum</a></li>
-            <li><a href="https://danaya-a-d.github.io/bullkero/">bullkero</a></li>
-            <li><a href="https://danaya-a-d.github.io/gmt-solution/">gmt-solution</a></li>
-            <li><a href="https://danaya-a-d.github.io/dealnox-2/">dealnox-2</a></li>
-            <li><a href="https://danaya-a-d.github.io/face-home/">face-home</a></li>
-            <li><a href="https://danaya-a-d.github.io/forpress/">forpress</a></li>
-            <li><a href="https://danaya-a-d.github.io/zj-consult/">zj-consult</a></li>
-            <li><a href="https://danaya-a-d.github.io/itbooster/">itbooster</a></li>
-            <li><a href="https://danaya-a-d.github.io/tipitek/">tipitek</a></li>
-            <li><a href="https://danaya-a-d.github.io/stv-beton/">stv-beton</a></li>
-            <li><a href="https://danaya-a-d.github.io/dealnox/">dealnox</a></li>
-            <li><a href="https://danaya-a-d.github.io/close-to-me/">close-to-me</a></li>
-            <li><a href="https://danaya-a-d.github.io/school977-dashboard/">school977-dashboard</a></li>
-            <li><a href="https://danaya-a-d.github.io/tropicofc/">tropicofc</a></li>
-            <li><a href="https://danaya-a-d.github.io/tender/">tender</a></li>
-            <li><a href="https://danaya-a-d.github.io/aliba-games/">aliba-games</a></li>
-            <li><a href="https://danaya-a-d.github.io/road/">road</a></li>
-            <li><a href="https://danaya-a-d.github.io/alice-marine/">alice-marine</a></li>
-            <li><a href="https://danaya-a-d.github.io/montees/">montees</a></li>
-            <li><a href="https://danaya-a-d.github.io/russian-contour/">russian-contour</a></li>
-            <li><a href="https://danaya-a-d.github.io/abel/">abel</a></li>
-            <li><a href="https://danaya-a-d.github.io/moscow-sport/">moscow-sport</a></li>
-            <li><a href="https://danaya-a-d.github.io/bestmine/">bestmine</a></li>
-            <li><a href="https://danaya-a-d.github.io/fitness-opt/">fitness-opt</a></li>
-            <li><a href="https://danaya-a-d.github.io/smartwash/">smartwash</a></li>
-            <li><a href="https://danaya-a-d.github.io/my-proof/">my-proof</a></li>
-            <li><a href="https://danaya-a-d.github.io/super-ege/">super-ege</a></li>
-            <li><a href="https://danaya-a-d.github.io/osteopathy/">osteopathy</a></li>
-            <li><a href="https://danaya-a-d.github.io/bronedveri/">bronedveri</a></li>
-            <li><a href="https://danaya-a-d.github.io/ultima-forms/">ultima-forms</a></li>
-            <li><a href="https://danaya-a-d.github.io/floristman/">floristman</a></li>
-            <li><a href="https://danaya-a-d.github.io/podium/">podium</a></li>
-            <li><a href="https://danaya-a-d.github.io/meat/">meat</a></li>
-            <li><a href="https://danaya-a-d.github.io/school977/">school977</a></li>
-            <li><a href="https://danaya-a-d.github.io/speaky-school/">speaky-school</a></li>
-            <li><a href="https://danaya-a-d.github.io/nark/">nark</a></li>
-            <li><a href="https://danaya-a-d.github.io/cakes/">cakes</a></li>
-            <li><a href="https://danaya-a-d.github.io/msv/">msv</a></li>
-            <li><a href="https://danaya-a-d.github.io/pink/">pink</a></li>
-            <li><a href="https://danaya-a-d.github.io/sedona/">sedona</a></li>
-            <li><a href="https://danaya-a-d.github.io/device/">device</a></li>
-            <li><a href="https://danaya-a-d.github.io/mobapp/">mobapp</a></li>
-            <li><a href="https://danaya-a-d.github.io/financial/">financial</a></li>
-        </ul>
-    </main>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero__topline">
+                <a class="brand" href="./all.html" aria-label="Layout archive home">Danaya Davydenko</a>
+                <span class="hero__count" id="projectCount">45 projects</span>
+            </div>
+
+            <div class="hero__content">
+                <p class="eyebrow">Frontend / Layout Projects</p>
+                <h1>Layout archive.</h1>
+                <p class="hero__intro">
+                    A collection of responsive landing pages and multi-page websites built with HTML, CSS and JavaScript.
+                </p>
+            </div>
+
+            <div class="toolbar">
+                <label class="search">
+                    <span class="sr-only">Search projects</span>
+                    <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="m21 21-4.35-4.35m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/>
+                    </svg>
+                    <input id="searchInput" type="search" placeholder="Search projects..." autocomplete="off">
+                </label>
+
+                <p class="toolbar__meta"><span id="pageCount">418</span> pages in total</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="projects" id="projects" aria-label="Layout projects"></section>
+            <p class="empty-state" id="emptyState" hidden>No projects found.</p>
+        </main>
+
+        <footer class="footer">
+            <span>Danaya Davydenko</span>
+            <span>HTML · CSS · JavaScript</span>
+        </footer>
+    </div>
+
+    <script src="./portfolio.js"></script>
 </body>
 </html>
