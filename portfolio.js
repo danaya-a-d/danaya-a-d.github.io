@@ -4,10 +4,35 @@ const $=(s)=>document.querySelector(s),projectsEl=$("#projects"),search=$("#sear
 const external='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 16 16 8M10 8h6v6" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 const arrow='<svg viewBox="0 0 18 18" aria-hidden="true"><path d="M6 12 12 6M7.5 6H12v4.5" fill="none" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 
+const pageAliases={
+  "index.html":"Home",
+  "index-login.html":"Login",
+  "404.html":"404",
+  "about-us.html":"About Us",
+  "contact-us.html":"Contact Us",
+  "сontact-us.html":"Contact Us",
+  "privacy-policy.html":"Privacy Policy",
+  "public-offer.html":"Public Offer",
+  "terms-of-service.html":"Terms of Service",
+  "user-conduct-code.html":"User Conduct Code",
+  "ordering-complete.html":"Order Complete",
+  "order-thanks.html":"Order Complete",
+  "get-free-trial-fund.html":"Free Trial Fund",
+  "propos.html":"About",
+  "politica.html":"Privacy Policy",
+  "usluga.html":"Service",
+  "marka.html":"Product Grade",
+  "page.html":"Content Page"
+};
+
 function label(file){
-  if(file==="index.html")return"Home";
-  if(file==="404.html")return"404";
-  return file.replace(/\.html?$/i,"").replace(/[-_]+/g," ").replace(/\b(lk)\b/gi,"Account").replace(/\bfaq\b/gi,"FAQ").replace(/\b([a-z])/g,l=>l.toUpperCase());
+  if(pageAliases[file])return pageAliases[file];
+  return file
+    .replace(/\.html?$/i,"")
+    .replace(/[-_]+/g," ")
+    .replace(/^lk\b/i,"Account")
+    .replace(/\bfaq\b/gi,"FAQ")
+    .replace(/\b([a-z])/g,l=>l.toUpperCase());
 }
 function url(project,file){return file==="index.html"?`./${project.slug}/`:`./${project.slug}/${file}`;}
 function card(project,index){
